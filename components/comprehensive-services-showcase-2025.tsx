@@ -1,11 +1,14 @@
+
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+
 import Layout from '../components/layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -71,6 +74,7 @@ import { emergingTechServicesEnhanced2025 } from '../data / emerging - tech - se
 ;
 
 
+
   Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
   ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
@@ -80,7 +84,6 @@ import { innovativeRealMicroSaasServices2025  } from '../data/2025-innovative-re
 import { innovativeAIServicesEnhanced2025  } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025  } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
-
 
   id: string;
   name: string;
@@ -98,7 +101,9 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
   growth_rate: string;
   launch_date: string;
   badge?: string;
+
   icon?: React.ReactNode;
+
 
   icon?: React.ReactNode;
 
@@ -181,6 +186,7 @@ const categories = [
 ];
 
 const priceRanges = [
+
   { label: 'All Prices', value: 'all' }
   { label: 'Under $50/month', value: 'under-50' }
   { label: '$50 - $200/month', value: '50-200' }
@@ -196,6 +202,7 @@ const priceRanges = [
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -292,6 +299,7 @@ const sortOptions = [;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -301,6 +309,7 @@ const sortOptions = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -518,6 +527,7 @@ if ( {) {
     });
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
   const getCategoryColor = (category: string) => {
+
     switch (category) {        case 'price-low':
           return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
         case 'price-high':
@@ -604,6 +614,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return (
     <Layout>;
       <Head>;
@@ -643,7 +654,9 @@ if ( {) {
               }}            />
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -884,6 +897,7 @@ if ( {) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 
+
             </div>;
 
 
@@ -895,6 +909,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
                     {stat.icon}
@@ -902,6 +917,7 @@ if ( {) {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
+
                   <div className='text-sm text-cyan-300'>{stat.label}</div>                </motion.div>                >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400">
                     {stat.icon}
@@ -925,10 +941,12 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Search Bar */}
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+
 
 
 
@@ -942,6 +960,7 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <input
                   type='text'
                   placeholder='Search for services, features, or solutions...'
@@ -1010,6 +1029,7 @@ if ( {) {
 
 
       {/* Filters and Controls */}
+
 
             </div>;
 
@@ -1093,6 +1113,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   key={category.name}
                   on_click={() => setSelectedCategory (category.name)}
                   className={`flex items - center space - x-2 px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 200 ${
@@ -1103,6 +1124,7 @@ if ( {) {
                 >;
                   {category.icon}
                   <span>{category.name}</span>
+
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {category.count}
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>                    {category.count}
@@ -1116,10 +1138,12 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   </span>
                 </button>
               ))}
             </div>
+
             {/* Price and Sort Controls */}
             <div className='flex flex-wrap items-center space-x-4'>
 
@@ -1136,9 +1160,11 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Price Range Filter */}
               <select;
                 value={selectedPriceRange}
+
 
               </select>;
 
@@ -1157,6 +1183,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               {/* Sort Options */}
               <select
                 value={sortBy}
@@ -1164,6 +1191,7 @@ if ( {) {
 
                 ))}
               </select>
+
 
 
 {/* View Mode Toggle */}
@@ -1249,6 +1277,7 @@ if ( {) {
 
 
 
+
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${
                     viewMode === 'grid'
@@ -1295,8 +1324,10 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -1322,6 +1353,7 @@ if ( {) {
                   </span>
                 </div>
                 {/* Service Icon */}
+
                 <div className='mb-4'>
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300'>                <div className="mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
@@ -1340,10 +1372,12 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                 </div>
                 {/* Service Info */}
                 <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
+
 
 
 
@@ -1406,6 +1440,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {service.name}
                 </h3>;
                 <p className='text - gray - 400 mb - 3 line - clamp - 2'>;
@@ -1413,6 +1448,7 @@ if ( {) {
                 </p>
                 <p className='text-sm text-gray-500 mb-4 line-clamp-3'>                  {service.description}
                 </p>
+
                 {/* Price */}                  {service.name}
                 </h3>
                 <p className="text-gray-400 mb-3 line-clamp-2">
@@ -1460,6 +1496,7 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     <span>{service.customers.toLocaleString()}</span>
                   </div>
                 </div>
@@ -1514,13 +1551,26 @@ if ( {) {
                 </div>;
                 {/* Features Preview */}
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-                <div className="mb-4 text-xs text-gray-500">
-
-                  <div className="flex items-center justify-between">
+                <div className='mb-4'>
+                  <div className='text-xs text-gray-500 mb-2'>
+                    Key Features:
+                  </div>
+                  <div className='space-y-1'>
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <div
+                        key={idx}
+                        className='flex items-center space-x-2 text-sm text-gray-400'
+                      >
+                        <CheckCircle className='w-3 h-3 text-cyan-400' />
+                        <span className='line-clamp-1'>{feature}</span>
+                      </div>
+                    ))}
+                    {service.features.length > 3 && (
+                      <div className='text-xs text-cyan-400'>                        +{service.features.length - 3} more features                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                        <CheckCircle className="w-3 h-3 text-cyan-400" />
+                        <span className="line-clamp-1">{feature}</span>
+                      </div>
 
 
                     <span>Market Size: {service.marketSize}</span>
@@ -1551,6 +1601,7 @@ if ( {) {
           <div className="space-y-6">
             {filteredServices.map((service, index) => (
               <motion.div
+
                 </p>;
                 {/* Price */}
                 <div className='mb - 4'>;
@@ -1632,6 +1683,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}
@@ -1641,6 +1693,7 @@ if ( {) {
                       {service.icon}
                     </div>
                   </div>
+
 
                   <div className="flex-shrink-0">;
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">;
@@ -1672,6 +1725,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                         <h3 className='text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200'>
                           {service.name}
@@ -1713,6 +1767,7 @@ if ( {) {
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
+
                           {service.category}
 
 
@@ -1721,6 +1776,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                         </span>
                       </div>
@@ -1736,6 +1792,7 @@ if ( {) {
                           ({service.reviews} reviews)
                         </span>
 
+
                       </div>
 
 
@@ -1749,6 +1806,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
                         <span className='text-white font-medium'>
@@ -1776,6 +1834,7 @@ if ( {) {
                         <span className="text-gray-500">market</span>
                       </div>
                     </div>
+
                           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white mt-2`}>                          {service && service.category}                      <div className="text-right">;
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service && service.price}</div>;
                         <div className="text-gray-500 text-sm">/month</div>;
@@ -1837,6 +1896,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     {/* CTA */}
                     <div className='flex items-center justify-between'>
                       <button className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105'>
@@ -1880,6 +1940,7 @@ if ( {) {
               onClick={() => {;
                 setSearchTerm('');
                 setSelectedCategory('All Services');
+
 
 
 
@@ -1935,6 +1996,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1969,8 +2031,10 @@ if ( {) {
       </div>
     </Layout>
   );
+
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) |service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () )
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
+
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
   case 'popular': return b.customers - a.customers;
@@ -1988,7 +2052,62 @@ top: `$ {
 }/>) )
 }</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {
 
+  {
+  opacity: 0, y: 30
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}> <h1 className=" text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6"> <span className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Comprehensive </span> <br /> <span className=" text-white">Services Showcase</span> </h1> </motion.div>) )
+}</div> /> </div> </div> </motion.div> </div> </div> key= {
+  category.name
+}onClick= {
+  () => setSelectedCategory (category.name)
+}className= {
+  `flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 $ {
+  selectedCategory === category.name ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25' : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+}`
+}> </span> </button>) )
+}</div> </option>) )
+}</select> {
+  /* Sort Options */
+}<select </option>) )
+}</select> <button onClick= {
+  () => setViewMode ('grid')
+}className= {
+  `p-2 rounded-md transition-all duration-200 $ {
+  viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+}`
+}> <Grid3X3 className=" w-4 h-4"/> </button> <button onClick= {
+  () => setViewMode ('list')
+}className= {
+  `p-2 rounded-md transition-all duration-200 $ {
+  viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white'
+}`
+}> <List className=" w-4 h-4"/> </button> </div> </div> </div> </div> </div> + {
+  service.features.length - 3
+}more features </div>)
+}</div> </div> Learn More </button> </motion.div>) )
+}</div> </span> </div> </div> </div>) )
+}</div> </div> </div> </div> </div> </div> </motion.div>) )
+}</div>)
+}</div> <h3 className=" text-2xl font-bold text-white mb-2">No services found</h3> <p className=" text-gray-400 mb-6"> Try adjusting your search terms or filters to find what you're looking for. </p> <button onClick= {
+  () => {
+  > Clear All Filters </button> </div>)
+}</div> <motion.div initial= {
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}viewport= {
+  {
 
+  once: true 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

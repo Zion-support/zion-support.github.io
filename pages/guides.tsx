@@ -1,3 +1,4 @@
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -225,6 +226,7 @@ import {
 
 
 
+
 } from "lucide-react";
 const guides = [
 
@@ -329,6 +331,7 @@ const categories = [;
   { name: "Database", count: 1, icon: Database },
   { name: "Performance", count: 1, icon: Zap },
 ];
+
 export default function GuidesPage() {
 
 interface GuidesProps {
@@ -336,6 +339,7 @@ interface GuidesProps {
 }
 
 const Guides: React.FC<GuidesProps> = ({ className }) => {
+
   return (
     <Layout>;
       <Head>;
@@ -581,6 +585,7 @@ const Guides: React.FC<GuidesProps> = ({ className }) => {
             </motion.div>
           </div>
         </section>
+
 import Layout from '../components/Layout';
 
 export default function GuidesPage() {
@@ -602,6 +607,7 @@ export default function GuidesPage() {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
       </div>
     </Layout>
 

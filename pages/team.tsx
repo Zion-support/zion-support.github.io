@@ -4,6 +4,8 @@
 
 
 
+
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,6 +16,7 @@ import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+
 
 
 
@@ -34,6 +37,7 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -43,8 +47,10 @@ import {
     linkedin: "https://linkedin.com/in/klebersantos",
     twitter: "https://twitter.com/klebersantos",
     github: "https://github.com/klebersantos",
+
     expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
   },
+
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -56,6 +62,8 @@ import {
     github: "https://github.com/klebersantos"
 
 
+
+
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -63,7 +71,9 @@ import {
       "Business Development"
     ]
   }
+
 origin/main
+
   {
     id: 2
     name: "Sarah Johnson"
@@ -118,7 +128,83 @@ origin/main
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
 
+  {
 
+  }
+
+    id: 6
+    name: "Lisa Wang"
+    position: "Head of Product Development"
+    department: "Product"
+    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit."
+    image: "/api/placeholder/300/300"
+    linkedin: "https://linkedin.com/in/lisawang"
+    twitter: "https://twitter.com/lisawang"
+    github: "https://github.com/lisawang"
+    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+
+  }
+
+];
+const departments = [
+  {
+    name: "Leadership"
+    description: "Strategic vision and company direction"
+    icon: "👑"
+    count: 1
+  }
+  {
+    name: "Technology"
+    description: "Engineering and technical innovation"
+    icon: "💻"
+    count: 15
+  }
+  {
+    name: "AI & Machine Learning"
+    description: "Artificial intelligence and data science"
+    icon: "🤖"
+    count: 12
+  }
+  {
+    name: "Cybersecurity"
+    description: "Security and compliance solutions"
+    icon: "🛡️"
+    count: 8
+  }
+  {
+    name: "Data & Analytics"
+    description: "Business intelligence and analytics"
+    icon: "📊"
+    count: 10
+  }
+  {
+    name: "Product"
+    description: "Product development and design"
+    icon: "🎨"
+    count: 6
+  }
+  {
+    name: "Sales & Marketing"
+    description: "Business development and growth"
+    icon: "📈"
+    count: 8
+  }
+  {
+    name: "Operations"
+    description: "Project management and delivery"
+    icon: "⚙️"
+    count: 5
+  }
+];
+const stats = [
+  { number: "65+", label: "Team Members" }
+  { number: "15+", label: "Years Experience" }
+  { number: "25+", label: "Countries Represented" }
+  { number: "95%", label: "Employee Satisfaction" }
+];
+
+export default function TeamPage() {
+  return (
 
 
     <Layout
@@ -364,55 +450,98 @@ origin/main
             <Link
               href="/contact"
 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Work with Our Expert Team?
+          </h2>
+          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">
+            Let's discuss how our experienced team can help transform your
+            business with cutting-edge technology solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
+            <Link
+              href="/contact"
+              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
+            >
+              Get Free Consultation
+            </Link>
+          </div>
+          {/* Contact Information */}
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="flex items-center justify-center">
+              <Phone className="w-6 h-6 mr-2" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <Mail className="w-6 h-6 mr-2" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <MapPin className="w-6 h-6 mr-2" />
+              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
+    </Layout>;
 
+  );
+}
+import Head from "next/head";
+import { motion } from "framer-motion";
+import { Brain, Cloud, Shield, Users } from "lucide-react";
+const teamMembers = [
+  {
+    name: "Dr. Sarah Johnson"
+    role: "Chief Technology Officer"
+    expertise: "AI & Machine Learning"
+    icon: Brain
+    description:
+      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
+  }
+  {
+    name: "Michael Chen"
+    role: "Cloud Solutions Architect"
+    expertise: "Cloud Infrastructure"
+    icon: Cloud
+    description:
+      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
+  }
+  {
+    name: "Emily Rodriguez"
+    role: "Security Specialist"
+    expertise: "Cybersecurity"
+    icon: Shield
+    description:
+      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
+  }
+  {
+    name: "David Thompson"
+    role: "Team Lead"
+    expertise: "Project Management"
+    icon: Users
+    description:
+      "Leading our development teams with agile methodologies and client-focused delivery."
+  }
 
-            </div>;
-          </div>;
-        </div>;
-      </section>;
-
-
-const teamMembers = [;
-  {;
-    name: "Dr. Sarah Johnson",;
-    role: "Chief Technology Officer",;
-    expertise: "AI & Machine Learning",;
-    icon: Brain,;
-    description:;
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science.",;
-  },;
-  {;
-    name: "Michael Chen",;
-    role: "Cloud Solutions Architect",;
-    expertise: "Cloud Infrastructure",;
-    icon: Cloud,;
-    description:;
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.",;
-  },;
-  {;
-    name: "Emily Rodriguez",;
-    role: "Security Specialist",;
-    expertise: "Cybersecurity",;
-    icon: Shield,;
-    description:;
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention.",;
-  },;
-  {;
-    name: "David Thompson",;
-    role: "Team Lead",;
-    expertise: "Project Management",;
-    icon: Users,;
-    description:;
-      "Leading our development teams with agile methodologies and client-focused delivery.",;
-  },;
 ];
 
 export default function TeamPage() {;
 
   return (
+
 ursor/integrate-build-improve-and-re-verify-8f7d
+
     <>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <SEO
@@ -431,6 +560,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
     </>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -441,6 +571,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </>;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
   return (
@@ -458,10 +589,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       </div>;
     </>;
   );
+
 }
 
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
+
 
 
 
@@ -473,6 +606,7 @@ export default function TeamPage() {	return (
 			</div>
 		</>
 	)
+
 
 
 }
@@ -568,3 +702,4 @@ function TeamPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

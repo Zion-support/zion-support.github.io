@@ -66,6 +66,7 @@ max_life: number,
         const types = ['quantum', 'neural', 'data', 'energy'];
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;        ;
         const types = ['quantumneuraldataenergy'];
+
         this && this.type = types[Math && Math.floor(Math && Math.random() * types && types.length)] as any;
           case 'quantum':;
             this && this.color = `hsl(${180 + Math && Math.random() * 60}, 70%, 60%)`;
@@ -80,6 +81,7 @@ max_life: number,
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
+
 
 
 
@@ -637,6 +639,7 @@ if ( {) {
           ],
         }}
         transition={{
+
           duration: 10
           repeat: Infinity
           ease: 'easeInOut'
@@ -657,6 +660,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -684,10 +688,12 @@ if ( {) {
             key={i}
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               rotate: [0, 360]
@@ -759,6 +765,7 @@ if ( {) {
           transition={{
 
 
+
             duration: 3,
             repeat: Infinity,
             ease: 'easeInOut',
@@ -791,4 +798,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

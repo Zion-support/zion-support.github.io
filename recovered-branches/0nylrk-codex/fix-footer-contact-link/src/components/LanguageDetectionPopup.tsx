@@ -3,6 +3,7 @@
 
 
 
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -16,6 +17,7 @@ import {
   useLanguage,
   SupportedLanguage,
   LanguageContextType,;
+
 
 
 
@@ -63,6 +65,8 @@ export function LanguageDetectionPopup() {
 
 
 
+
+
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -105,6 +109,8 @@ export function LanguageDetectionPopup() {;
 
 
 
+
+
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
     setOpen(false)
@@ -118,16 +124,20 @@ export function LanguageDetectionPopup() {;
             {t('language.switch_to_detected', { language: languageName })}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
+
             {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
+
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+
             {t("general.no")}
           </AlertDialogCancel>
           <AlertDialogAction
             onClick={handleAccept}
+
 
 
 
@@ -144,6 +154,7 @@ export function LanguageDetectionPopup() {;
       </AlertDialogContent>;
     </AlertDialog>;
   );
+
 
 
 import { useState, useEffect  } from './react';
@@ -183,3 +194,4 @@ if (return) {
 
 
 }
+

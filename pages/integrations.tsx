@@ -5,11 +5,13 @@
 
 
 
+
 export default function IntegrationsRedirect() {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const router = useRouter();
   useEffect(() => {;
@@ -20,7 +22,9 @@ export default function IntegrationsRedirect() {;
 
 
 
+
 }
+
 
 
 
@@ -32,6 +36,7 @@ export default function IntegrationsRedirect() {
   useEffect(() => { router.replace('/admin/integrations') }, [router]);
   return null
 }
+
 
 
 
@@ -57,4 +62,5 @@ function IntegrationsRedirect() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

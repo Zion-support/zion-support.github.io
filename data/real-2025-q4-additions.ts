@@ -1,5 +1,7 @@
+
 export interface Q4Service {;
 export interface Q4Service {
+
   id: string;
   name: string;
   tagline: string;
@@ -20,8 +22,10 @@ export interface Q4Service {
   realService: boolean;
   technology?: string[];
   integrations?: string[];
+
   useCases?: string[],
   useCases?: string[];
+
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -40,6 +44,7 @@ export interface Q4Service {
   customers?: number;
   rating?: number;
   reviews?: number;
+
 
 
 
@@ -278,6 +283,7 @@ export const real2025Q4Additions = [;
     reviews: 9
   }
 ];
+
 
 
 
@@ -683,3 +689,5 @@ export const real2025Q4Additions = [;
     reviews: 9
   }
 ];
+
+

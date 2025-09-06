@@ -8,6 +8,7 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 
 
 
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -19,6 +20,7 @@ const contactInfo = null;
   ];
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
 
 
   const company = null;
@@ -97,6 +99,7 @@ export default function EnhancedFooter() {
 
 
 
+
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
@@ -157,6 +160,7 @@ export default function EnhancedFooter() {
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform
               their digital presence.
+
             </p>
             <div className="flex space-x-4">
 
@@ -348,22 +352,47 @@ function EnhancedFooter() {
           </div>;
           {/* Contact Info */}
 
-          <div className="space-y-4">;
-            <h3 className="text-lg font-semibold">Contact</h3>;
-            <div className="space-y-2">;
-              <div className="flex items-center space-x-2">;
-                <Mail className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">info@ziontechgroup && ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <Phone className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">+1 (555) 123-4567</span>;
-              </div>;
-              <div className="flex items-center space-x-2">;
-                <MapPin className="h-4 w-4 text-gray-400" />;
-                <span className="text-gray-300">New York, NY</span>;
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact</h3>
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2">
+                <Mail className="h-4 w-4 text-gray-400" />
+                <span className="text-gray-300">info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-gray-400" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="h-4 w-4 text-gray-400" />
+                <span className="text-gray-300">New York, NY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+<p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link
+                href="/privacy"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

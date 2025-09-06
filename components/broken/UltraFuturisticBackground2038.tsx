@@ -19,11 +19,13 @@ import { motion } from 'framer-motion';
 
 
 
+
   children?: React && React.ReactNode;
 export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
+
 
 
 
@@ -232,6 +234,7 @@ if ( {) {
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
+
               ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
       if (theme === 'consciousness' |theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -336,6 +339,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             }
           }
@@ -544,6 +548,7 @@ if ( {) {
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.beginPath();
+
 
 
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
@@ -806,6 +811,7 @@ if (> 0.8) { // Quantum tunneling) {
         }
 
 
+
         // Regenerate particles
         if (particle.life <= 0) {
           particle.x = Math.random() * canvas.width;
@@ -911,6 +917,8 @@ if ( {) {
 
 
 
+
+
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32];
@@ -921,10 +929,12 @@ if ( {) {
                   ease: "easeInOut"
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -937,6 +947,7 @@ if ( {) {
                 transition={{
                   duration: 3 + i * 0.2
                   repeat: Infinity
+
 
 
                 key={i}
@@ -967,6 +978,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -1007,6 +1019,7 @@ if ( {) {
 
 
 
+
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
               <motion&& motion.div
@@ -1014,6 +1027,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 key={i}
                 className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
@@ -1027,6 +1041,7 @@ if ( {) {
 
 
 
+
                   left: `${(i * 12) % 100}%`,
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1037,6 +1052,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 }}
                 animate={{
@@ -1068,6 +1084,7 @@ if ( {) {
 
 
 
+
       </div>;
 
 
@@ -1076,6 +1093,7 @@ if ( {) {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {children}
     </div>;
   );
@@ -1101,6 +1119,7 @@ fieldSize) ;
 };
 initParticles ();
 animate ();
+
 />) ) ;
 }</div>) ;
 }/>) ) ;
@@ -1182,3 +1201,4 @@ animate ();
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

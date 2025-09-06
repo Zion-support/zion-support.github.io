@@ -1,12 +1,15 @@
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Head from 'next/head',
 import Link from 'next/link',
+
 export default function GovernanceTrustPage() {
   return (
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+
         <meta name;
         <meta name="description" content="Governance, legal registry options, and public trust commitments for the Zion Protocol." />
       </Head>
@@ -31,11 +34,13 @@ export default function GovernanceTrustPage() {
               desc: 'Business league for industry coordination and standards, disclosure-focused.'
             }, {
               title: 'DAO-native Wrapper',
+
               desc: 'LLC/wrapper (e.g., Otoco) for on-chain governance with minimized off-chain overhead.'
             }].map((opt) => (
               <div key={opt.title} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
                 <div className="font-medium">{opt.title}</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">{opt.desc}</div>
+
 
 
 
@@ -249,6 +254,7 @@ export default function GovernanceTrustPage(req, res) {
     </>);
 ;
 
+
               </div>
             ))  } catch (error) {
     console.error("Error:", error);
@@ -257,6 +263,7 @@ export default function GovernanceTrustPage(req, res) {
 }
           </div>
         </section>
+
 
         <section className='space-y-4'>
           <h2 className='text-2xl font-semibold'>Governance</h2>
@@ -267,6 +274,7 @@ export default function GovernanceTrustPage(req, res) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             </div>
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Delegated Voting</div>
@@ -282,6 +290,7 @@ export default function GovernanceTrustPage(req, res) {
             </div>
           </div>
         </section>
+
 
         <section className="space-y-2">
           <h2 className="text-2xl font-semibold">Operator Prompt</h2>
@@ -367,4 +376,5 @@ export default function GovernanceTrustPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

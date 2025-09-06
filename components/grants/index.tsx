@@ -1,3 +1,4 @@
+
 import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -9,6 +10,7 @@ import type {
   GrantCategory,;
   GrantStatus,;
 } from '../../types/grants';
+
 
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -35,6 +37,12 @@ export default function GrantsPage() {;
   }>({});
 
 
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+  useEffect(() => {
+
+
+
 
 
       .catch(() => setItems([]));  }, [filters]);
@@ -47,6 +55,7 @@ export default function GrantsPage() {;
   }, [filters]);
 
   return (
+
 
 
 
@@ -194,6 +203,7 @@ export default function GrantsPage() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

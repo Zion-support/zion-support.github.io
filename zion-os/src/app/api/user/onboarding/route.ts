@@ -1,3 +1,4 @@
+
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
@@ -27,6 +28,7 @@ if (!session?.user?.email) {
       { status: 200 }
     );
   } catch (error) {
+
 
 
 
@@ -71,12 +73,14 @@ export async function POST(request: NextRequest) {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       { status: 500 }
     );
   }

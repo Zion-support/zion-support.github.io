@@ -13,6 +13,8 @@ interface State {
 
 
 
+
+
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -28,9 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
     this.setState({
       error,
@@ -44,6 +44,7 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
+
 
 
 
@@ -77,6 +78,7 @@ class ErrorBoundary extends Component<Props, State> {
 
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
 
+
                 <summary className="cursor-pointer text-sm font-medium text-gray-700">
                   Error Details (Development)
                 </summary>
@@ -86,6 +88,8 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
+
+
 
 
 
@@ -165,4 +169,5 @@ export { ErrorBoundary };
   }
 }
 
+export { ErrorBoundary };
 export default ErrorBoundary;

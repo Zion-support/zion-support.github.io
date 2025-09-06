@@ -2,6 +2,7 @@
 
 
 
+
 }
 try {
     // Ensure clean working directory;
@@ -48,6 +49,7 @@ try {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -84,6 +86,7 @@ try {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -103,15 +106,19 @@ try {;
                         execSync(`git checkout --ours "${file}"`);
                     } catch (e) {;
                         execSync(`git checkout --theirs "${file}"`);
+
                     }
                     exec_sync (`git add "${file}"`);
                 }
             }
+
 ;
+
             // Commit the merge;
             exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
+
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -157,6 +164,7 @@ try {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;
@@ -185,6 +193,8 @@ try {;
     console.log('✅ Repository is now clean and up to date');
 } catch (error) {;
     console.error('❌ Error during merge process:', error.message),;
+
+
     process.exit(1);
 }
 

@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -50,6 +51,7 @@ export function ServiceProviderRegistrationForm() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -59,6 +61,7 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
+
     message: "Rate must be a number"})
   availability: z.enum(["available", "limited", "unavailable"]);
   enhancedProfile: z.boolean().default(true)
@@ -91,6 +94,7 @@ export function ServiceProviderRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
+
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -111,6 +115,7 @@ export function ServiceProviderRegistrationForm() {
 
 
 
+
   },
 
   // Handle removing service tags
@@ -119,17 +124,78 @@ export function ServiceProviderRegistrationForm() {
   },
 
 
+
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
 
-  };
 
+import React, { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Switch } from "@/components/ui/switch",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { useAuth } from "@/hooks/useAuth",;
+// Define form schema;
+const serviceProfileSchema = z.object({;
+  name: z.string().min(2, "Name must be at least 2 characters long"),;
+  title: z.string().min(5, "Business name/title is required"),;
+  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters"),;
+  location: z.string().min(2, "Location is required"),;
+  services: z.string().min(2, "Enter at least one service"),;
+  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {;
+    message: "Rate must be a number"}),;
+  availability: z.enum(["available", "limited", "unavailable"]),;
+  enhancedProfile: z.boolean().default(true),;
+  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),;
+type ServiceFormValues = z.infer<typeof serviceProfileSchema>,;
+export function ServiceProviderRegistrationForm() {;
+  const { user } = useAuth(),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const [serviceTags, setServiceTags] = useState<string[]>([]),;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
+  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),;
+  // Initialize form with default values;
+  const form = useForm<ServiceFormValues>({;
+    resolver: zodResolver(serviceProfileSchema),;
+    defaultValues: {;
+      name: user?.displayName || "",;
+      title: "",;
+      bio: "",;
+      location: "",;
+      services: "",;
+      hourlyRate: "",;
+      availability: "available",;
+      enhancedProfile: true,;
+      website: ""}}),;
+  // Handle adding service tags;
+  const handleAddService = () => {;
+    const serviceInput = form.getValues("services"),;
+    if (serviceInput && !serviceTags.includes(serviceInput)) {;
+      setServiceTags([...serviceTags, serviceInput]),;
+      form.setValue("services", "");
 
-      setServiceTags([...serviceTags, serviceInput]);
-      form && form.setValue("services", "");
     }
 
   },;
@@ -170,10 +236,14 @@ export function ServiceProviderRegistrationForm() {
   const generateEnhancedProfile = async () => {
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
+
+
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+
+
 
 
 
@@ -209,6 +279,7 @@ export function ServiceProviderRegistrationForm() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -216,6 +287,7 @@ export function ServiceProviderRegistrationForm() {
 
       setGeneratedContent(data as { summary: string, services: string[] }),
       
+
       toast({
         title: "Enhanced Profile Generated"
         description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -228,6 +300,7 @@ export function ServiceProviderRegistrationForm() {
     } finally {
       setIsGenerating(false)
     }
+
   }
   // Apply generated content to form
   const applyGeneratedContent = () => {
@@ -249,14 +322,17 @@ export function ServiceProviderRegistrationForm() {
           service => typeof service === 'string' && service && !serviceTags.includes(service)
         ),
         
+
         if (newServices.length > 0) {
           setServiceTags([...serviceTags, ...newServices])
 
         }
       }
     }
+
   }
   },
+
 
   // Handle form submission
   const onSubmit = async (values: ServiceFormValues) => {
@@ -267,13 +343,16 @@ export function ServiceProviderRegistrationForm() {
         variant: "destructive"})
       return
     }
+
     setIsSubmitting(true);
+
 
 
     try {
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
+
       }
       // Enhance profile if not already done
       let finalSummary = values.bio;
@@ -413,6 +492,7 @@ if ( {) {
 
 
 
+
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
@@ -424,7 +504,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
@@ -439,6 +521,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -446,6 +529,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       }
 
@@ -463,11 +547,13 @@ if ( {) {
           // Additional fields that might be in profiles table
         })
         .eq('id', user.id)
+
         .select();
       if (error) throw error;
         .select(),
 
       if (error) throw error,
+
 
       // Store service-specific data in service_profiles table
       // (This assumes you have a service_profiles table in your database)
@@ -475,6 +561,7 @@ if ( {) {
       const { error: serviceError } = await supabase
         .from('service_profiles')
         .insert({
+
           user_id: user.id
           services: finalServices
           hourly_rate: Number(values.hourlyRate)
@@ -651,6 +738,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -799,6 +887,7 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
+
                   </div>
                 </div>
                   </div>;
@@ -815,6 +904,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
@@ -928,6 +1018,8 @@ if ( {) {
       </Card>
     </div>
   )
+
 }
 }
 ;
+

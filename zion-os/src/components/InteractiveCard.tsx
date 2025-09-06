@@ -1,3 +1,4 @@
+
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -40,6 +41,7 @@ export default function InteractiveCard({;
   children;
 }: InteractiveCardProps) {;
   const [isHovered, setIsHovered] = useState(false),;
+
   return (;
     <Link;
       href={href}
@@ -47,6 +49,7 @@ export default function InteractiveCard({;
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
+
 >
       <div className=&quot;relative&quot;>
     >
@@ -61,11 +64,13 @@ export default function InteractiveCard({;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+
 <div className=&quot;relative z-10 text-6xl mb-6 group-hover:scale-110 transition-transform duration-300&quot;>
           {icon}
         </div>;
@@ -89,12 +94,15 @@ export default function InteractiveCard({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+
+
 
 
 
@@ -110,6 +118,7 @@ export default function InteractiveCard({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -118,10 +127,12 @@ export default function InteractiveCard({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
                   isHovered ? 'translate-x-2' : ''
+
                 }`}
                 fill=&quot;none&quot;
                 stroke=&quot;currentColor&quot;
@@ -130,6 +141,7 @@ export default function InteractiveCard({;
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"
+
               >
                 <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M13 7l5 5m0 0l-5 5m5-5H6&quot; />
               </svg>
@@ -139,14 +151,17 @@ export default function InteractiveCard({;
         {/* Hover effect overlay */}
         <div;
           className={`absolute inset-0 border-2 border-transparent rounded-xl bg-gradient-to-r ${color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+
           style={{background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
+
           }}
         />;
       </div>;
     </Link>);
 }
+
 export function FeatureCard({title;
   description;
   icon;
@@ -164,6 +179,7 @@ export function FeatureCard({;
   className = '';
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
+
     <InteractiveCard;
       title={title}
       description={description}
@@ -187,6 +203,7 @@ export function FeatureCard({;
         </div>)}
     </InteractiveCard>);
 }
+
 export function TestimonialCard({quote;
   author;
   position;
@@ -232,6 +249,7 @@ export function TestimonialCard({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (
@@ -241,6 +259,7 @@ export function TestimonialCard({;
         ))}
       </div>;
       {/* Quote */}
+
 <blockquote className=&quot;text-gray-300 text-lg leading-relaxed mb-6 italic&quot;>
         &quot;{quote}&quot;
       <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
@@ -255,6 +274,7 @@ export function TestimonialCard({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       </blockquote>
+
 
       </blockquote>
       {/* Author info */}

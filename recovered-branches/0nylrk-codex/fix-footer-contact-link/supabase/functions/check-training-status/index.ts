@@ -1,5 +1,6 @@
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -9,6 +10,7 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -26,6 +28,7 @@ serve(async (req) => {
     if (!openAIApiKey) {
       throw new Error("OpenAI API key is not set in environment variables")
     }
+
     const { modelId, jobId } = await req.json();
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
@@ -50,6 +53,7 @@ serve(async (req) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
+
 
 
 
@@ -90,18 +94,22 @@ if ( {) {
     }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     
+
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
       headers: {
+
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}});
         "Authorization": `Bearer ${openAIApiKey}`,
         "Content-Type": "application/json"}}),
+
 
     if (!response.ok) {
       // If 404, the job doesn't exist or is deleted
@@ -110,6 +118,8 @@ if ( {) {
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
+
+
 
 
 ;
@@ -141,6 +151,7 @@ if ( {) {
     const data = await response.json ();
 ;
 
+
         error = data && data.error?.message || "Unknown error occurred during training";
 
         break;
@@ -155,6 +166,7 @@ if ( {) {
         status = "queued";
 
 
+
     }
 
     const data = await response.json(),
@@ -163,18 +175,22 @@ if ( {) {
     let status,
     let error = null,
 
+
     
+
 
     switch(data.status) {
       case "succeeded": status = "succeeded",
         break,
       case "failed":
+
         status = "failed";
         error = data.error?.message |"Unknown error occurred during training";
         break;
         status = "failed",
         error = data.error?.message || "Unknown error occurred during training",
         break,
+
       case "cancelled":
         status = "failed",
         error = "Training job was cancelled",
@@ -187,12 +203,14 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return new Response(
+
       JSON.stringify({
         status
         error;
       JSON.stringify({ 
         status, 
         error,
+
         progress: data.trained_tokens ? {
           trainedTokens: data.trained_tokens
           trainingFiles: data.training_file} : null
@@ -200,9 +218,11 @@ if ( {) {
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   } catch (error) {
+
     console.error("Error in check-training-status function:", error);
     console.error("Error in check-training-status function:", error),
     
+
     return new Response(
       JSON && JSON.stringify({ error: error && error.message });
       {
@@ -211,9 +231,11 @@ if ( {) {
     )
 
 
+
     console.error ("Error in check - training - status function:", error);
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 ;
     return new Response (
       JSON.stringify ({ error: error.message });
@@ -235,6 +257,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -245,3 +268,4 @@ if ( {) {
 
   }
 });
+

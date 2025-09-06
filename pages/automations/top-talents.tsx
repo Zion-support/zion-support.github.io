@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -16,6 +18,7 @@ type TalentItem = {;
   talentName: string;
   averageRating: number;
   totalReviews: number;
+
 
 
 
@@ -45,6 +48,7 @@ type Props = { items: TalentItem[] },
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -64,6 +68,7 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
         {!items.length && <div className="enhanced-card">No data yet.</div>}
       </div>
     </main>
+
   );
 }
 export const getServerSideProps: GetServerSideProps = async () => {
@@ -119,3 +124,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default TopTalentsPage;
+

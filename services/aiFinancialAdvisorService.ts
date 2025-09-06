@@ -1,5 +1,13 @@
 
 
+  id: string;
+  userId: string;
+  name: string;
+  totalValue: number;
+  currency: string;
+
+
+
 
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
@@ -13,6 +21,8 @@
   updated_at: Date;
 
 }
+
+
 
 
 
@@ -39,6 +49,9 @@
 }
 
 
+  totalReturn: number;
+  annualizedReturn: number;
+
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -50,6 +63,8 @@
   sortino_ratio: number;
 
 }
+
+
 
 
 
@@ -78,6 +93,8 @@
 
 
 
+
+
   id: string;
   user_id: string;
   name: string;
@@ -99,6 +116,8 @@
 
 
 
+
+
   id: string;
   market: string;
 
@@ -115,6 +134,8 @@
   next_update: Date;
 
 }
+
+
 
 
 
@@ -162,6 +183,15 @@
 }
 
 
+  userId: string;
+
+  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
+  parameters: Record<string, any>;
+
+  preferences?: Record<string, any>
+}
+
+
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -172,6 +202,11 @@
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+
+  estimatedFees: number
+}
+
+  private apiKey: string;
 
 
   }
@@ -395,8 +430,19 @@
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
 
-
-
+  id: string,;
+  userId: string,;
+  name: string,;
+  totalValue: number,;
+  currency: string,;
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive',;
+  investmentHorizon: number, // in years;
+  targetReturn: number,;
+  assets: PortfolioAsset[],;
+  lastRebalanced: Date,;
+  performance: PortfolioPerformance,;
+  createdAt: Date,;
+  updatedAt: Date;
 
 }
         throw new Error (`HTTP error! status: ${response.status}`);
@@ -442,9 +488,11 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.
 ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+

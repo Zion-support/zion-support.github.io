@@ -10,6 +10,7 @@ export default function PressPage() {
 			</div>
 		</>
 	)
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -17,3 +18,4 @@ export default function PressPage() {
   }
 }
 ;
+

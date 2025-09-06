@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -24,11 +25,14 @@ import {toast} from 'sonner';
 
 
 
+
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
 
 
 
@@ -65,17 +69,40 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 
 
+import { useState, useEffect } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from "lucide-react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useState(false),;
+  const [didHandle, setDidHandle] = useState(''),;
+  const [enableBackup, setEnableBackup] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  useEffect(() => {;
+    try {;
+      const saved = localStorage.getItem('account_settings'),;
+      if (saved) {;
+        const parsed = JSON.parse(saved),;
+        setDisplayWeb3(!!parsed.displayWeb3),;
+        setDidHandle(parsed.didHandle || ''),;
+        setEnableBackup(!!parsed.enableBackup);
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -86,6 +113,7 @@ export default function AccountSettings() {
 
 
 
+
   const handleSave = () => {
     setIsSubmitting(true),
 
@@ -93,6 +121,7 @@ export default function AccountSettings() {
     setTimeout(() => {
       try {
         localStorage.setItem(
+
 
 
   const handleSave = () => {;
@@ -156,6 +185,7 @@ export default function AccountSettings() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
@@ -167,6 +197,7 @@ export default function AccountSettings() {
       toast && toast.error(error && error.message || 'Failed to connect wallet');
 
     }
+
 
   },
 
@@ -186,6 +217,7 @@ export default function AccountSettings() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
   return (
 
@@ -379,6 +411,7 @@ export default function AccountSettings() {
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
+
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
@@ -408,5 +441,4 @@ export default function AccountSettings() {
     </>);
 }
 
-=======
-;
+

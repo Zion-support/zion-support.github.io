@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -101,6 +104,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -138,12 +142,68 @@ import { motion, AnimatePresence } from 'framer-motion';
       { name: 'Corporate Training AI', href: '/corporate-training-ai', description: 'Intelligent employee training', price: '$2,499/month' };
       { name: 'Language Learning AI', href: '/language-learning-ai', description: 'AI-powered language acquisition', price: '$1,299/month' }
 
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+    ]
+  }
+    title: '⚖️ Legal & Compliance'
+    icon: Scale
+    color: 'from-slate-600 to-gray-600'
+    description: 'Legal technology solutions'
+    services: [
+      {
+        name: 'Contract Analysis AI'
+        href: '/contract-analysis-ai'
+        description: 'Intelligent contract review'
+        price: '$2,999/month'
+      }
+      {
+        name: 'Compliance Monitoring Platform'
+        href: '/compliance-monitoring-platform'
+        description: 'Automated compliance tracking'
+        price: '$3,999/month'
+      }
+      {
+        name: 'Legal Document Automation'
+        href: '/legal-document-automation'
+        description: 'Automated legal documents'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Regulatory Change Tracker'
+        href: '/regulatory-change-tracker'
+        description: 'Monitor regulatory updates'
+        price: '$1,499/month'
+      }
+    ]
+  },  {      { name: 'Contract Analysis AI', href: '/contract-analysis-ai', description: 'Intelligent contract review', price: '$2,999/month' }
+      { name: 'Compliance Monitoring Platform', href: '/compliance-monitoring-platform', description: 'Automated compliance tracking', price: '$3,999/month' }
+      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automated legal documents', price: '$1,999/month' }
+      { name: 'Regulatory Change Tracker', href: '/regulatory-change-tracker', description: 'Monitor regulatory updates', price: '$1,499/month' }
+    ]
+  }
+    title: '🌍 Sustainability & Green Tech'
+    icon: Leaf
+    color: 'from-emerald-600 to-green-600'
+    description: 'Environmental solutions'
+    services: [
+      {
+        name: 'Carbon Footprint Tracking'
+        href: '/carbon-footprint-tracking'
+        description: 'Monitor environmental impact'
+        price: '$1,499/month'
+      }
+      {
+        name: 'Renewable Energy Management'
+        href: '/renewable-energy-management'
+        description: 'Optimize green energy'
+        price: '$2,999/month'
+      }
+      {
+        name: 'Waste Management AI'
+        href: '/waste-management-ai'
+        description: 'Intelligent waste optimization'
+        price: '$1,999/month'
+      }
+      {
 
 
 const companyLinks = [
@@ -170,6 +230,7 @@ const companyLinks = [
   { name: '📞 Contact', href: '/contact', icon: MessageCircle }
   { name: '🔒 Support', href: '/support', icon: ShieldCheck },  { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
+
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -207,6 +268,7 @@ const companyLinks = [
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -235,7 +297,9 @@ const companyLinks = [
   return (
 
 
+
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
+
 
 
   const handleCategoryLeave = () => {
@@ -245,6 +309,8 @@ const companyLinks = [
     category.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
+
+
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
     )
@@ -281,6 +347,7 @@ const companyLinks = [
           </div>
         </div>
       </div>
+
 
                 href={contactInfo && contactInfo.website}
                 className='text-purple-300 hover:text-white transition-colors'>                {contactInfo && contactInfo.website}      {/* Top Contact Bar */}
@@ -415,6 +482,7 @@ function UltraFuturisticNavigation2028() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -495,6 +563,7 @@ function UltraFuturisticNavigation2028() {
                                 </div>
                                 <span className='text-xs text-purple-400 font-medium'>
                                   {service.price}
+
                                 </span>                              </div>            {/* Service Categories */}
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
@@ -553,6 +622,7 @@ function UltraFuturisticNavigation2028() {
 
 
 
+
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           ))}
@@ -560,8 +630,27 @@ function UltraFuturisticNavigation2028() {
                       </div>
                     ))}
 
-
+                  </div>
+                  <div className='mt-6 pt-6 border-t border-purple-500/20'>
+                    <div className='flex items-center justify-between'>
+                      <p className='text-purple-300'>
+                        Explore all our cutting-edge services
+                      </p>
+                      <Link
+                        href='/services'
+                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                  <div className="mt-6 pt-6 border-t border-purple-500/20">
+                    <div className="flex items-center justify-between">
+                      <p className="text-purple-300">Explore all our cutting-edge services</p>
+                      <Link
+                        href="/services"
+                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                         View All Services
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
             {/* Company Links */}
@@ -611,6 +700,7 @@ function UltraFuturisticNavigation2028() {
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
+
             ))}
           </div>
           {/* Search and Actions */}
@@ -622,6 +712,7 @@ function UltraFuturisticNavigation2028() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -666,7 +757,9 @@ function UltraFuturisticNavigation2028() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -688,7 +781,9 @@ function UltraFuturisticNavigation2028() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -738,6 +833,7 @@ function UltraFuturisticNavigation2028() {
                           key={service && service.name}
                           href={service && service.href}
                           onClick={closeMenu}
+
                           className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                         >
                           <h4 className='text-sm font-medium text-white'>
@@ -783,11 +879,13 @@ function UltraFuturisticNavigation2028() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
+
 
 
 
@@ -798,6 +896,7 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -816,6 +915,7 @@ function UltraFuturisticNavigation2028() {
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
+
                       className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                     >
                       <link.icon className='w-5 h-5 text-purple-400' />
@@ -846,6 +946,7 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -883,7 +984,9 @@ function UltraFuturisticNavigation2028() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -909,6 +1012,7 @@ function UltraFuturisticNavigation2028() {
                     </div>
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
+
                     </span>                  </div>                <Link
                   key={service.name}
                   href={service.href}
@@ -933,6 +1037,7 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
@@ -940,6 +1045,7 @@ function UltraFuturisticNavigation2028() {
           </div>;
         </div>;
       )}
+
 
 
   );
@@ -1000,3 +1106,4 @@ function UltraFuturisticNavigation2028() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

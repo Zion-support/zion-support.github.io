@@ -41,6 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     id: e.id;
     title: e.title;
 
+
   ensureStorage(),
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes && episodes.map(e => ({
@@ -70,3 +71,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

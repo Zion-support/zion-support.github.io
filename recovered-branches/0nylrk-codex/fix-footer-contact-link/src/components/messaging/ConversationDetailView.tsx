@@ -3,6 +3,7 @@
 
 
 
+
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -13,6 +14,7 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
+
 
 
 
@@ -36,15 +38,33 @@ export function ConversationDetailView() {;
   }, [activeConversation?.id, loadMessages]);
 
 
+import React, { useState, useEffect, useRef } from 'react',;
+import { format } from 'date-fns',;
+import { MessageSquare } from 'lucide-react',;
+import { useMessaging } from '@/context/MessagingContext',;
+import { Button } from '@/components/ui/button',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessageBubble } from './MessageBubble',;
+import { DateDivider } from './DateDivider',;
+export function ConversationDetailView() {;
+  const { user } = useAuth(),;
+  const {;
+    activeConversation,;
+    activeMessages,;
+    sendMessage,;
+    loadMessages;
+  } = useMessaging(),;
+  const [messageText, setMessageText] = useState(''),;
+  const messagesEndRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (activeConversation) {;
+      loadMessages(activeConversation.id);
+    }
+  }, [activeConversation?.id, loadMessages]),
 
-import {format} from 'date-fns';
 
-
-
-
-
-
-  
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
@@ -61,7 +81,9 @@ import {format} from 'date-fns';
     await sendMessage(activeConversation.id, messageText),
     setMessageText('')
   },
+
   
+
   if (!activeConversation) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center p-8">;
@@ -73,6 +95,8 @@ import {format} from 'date-fns';
       </div>;
     );
   }
+
+
 
 
 
@@ -94,6 +118,8 @@ import {format} from 'date-fns';
       })
     }
   });
+
+
 
 
 
@@ -124,10 +150,12 @@ import {format} from 'date-fns';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
 
@@ -150,10 +178,12 @@ import {format} from 'date-fns';
               {activeConversation.other_user.name}
             </div>
             <div className="text-xs text-zion-slate">
+
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' :
                activeConversation.other_user.user_type === 'employer' ? 'Employer' :
               {activeConversation.other_user.user_type === 'talent' ? 'Talent' : 
                activeConversation.other_user.user_type === 'employer' ? 'Employer' : 
+
                activeConversation.other_user.user_type === 'admin' ? 'Admin' : 'User'}
             </div>
           </div>
@@ -227,7 +257,20 @@ import {format} from 'date-fns';
           <textarea
             value={messageText}
 
-
+            onChange={(e) => setMessageText(e.target.value)}
+            placeholder="Type a message..."
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+          />
+          <Button
+            type="submit"
+            className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+          >
+            Send
+          </Button>
+        </form>
+      </div>
+    </div>
+  )
 
 
       <div className="p-3 border-t border-zion-purple/20">;
@@ -254,9 +297,11 @@ import {format} from 'date-fns';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

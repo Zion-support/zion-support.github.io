@@ -3,12 +3,14 @@
 
 
 
+
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 /**
  * Creates an onboarding notification for a user
@@ -81,6 +83,11 @@ export async function createOnboardingNotification({
   });
 
 
+
+
+
+    actionText
+  })
 
 
 import { createNotification } from './createNotification',;
@@ -156,7 +163,9 @@ export async function createOnboardingNotification({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

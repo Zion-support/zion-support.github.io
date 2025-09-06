@@ -2,11 +2,14 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -60,6 +63,7 @@ export default function AdminKycPage() {
   }
 
 }
+
   return (
     <>
       <Head>
@@ -78,6 +82,7 @@ export default function AdminKycPage() {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
+
                   <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
                   <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
                   {p.flags && p.flags.length > 0 && (
@@ -94,6 +99,7 @@ export default function AdminKycPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -104,8 +110,10 @@ export default function AdminKycPage() {
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+
                   {(p.documents |[]).map((d) => (
                   {(p.documents || []).map((d) => (
+
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
@@ -119,6 +127,7 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
+
 
 
 
@@ -192,4 +201,5 @@ function act() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

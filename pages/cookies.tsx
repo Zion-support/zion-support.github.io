@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -9,10 +10,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
+
 
 
   Shield,
@@ -24,14 +27,17 @@ import {
   XCircle,
   AlertTriangle;
 
+
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
+
 
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
+
 
 
 
@@ -516,24 +522,71 @@ export default function CookiePolicyPage() {;
                   <p className="text-sm text-gray-500">;
                     Last updated: {new Date().toLocaleDateString()}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </MainLayout>
+
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+export default function CookiesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <SEO
+        title='Cookie Policy | Zion Tech Group'
+        description='Information about cookies used by Zion Tech Group.'
+        canonical='https://ziontechgroup.com/cookies/'
+      />
+      <div className='container mx-auto px-4 py-24 text-white'>
+        <div className='max-w-3xl mx-auto space-y-6'>
+          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
+          <p className='text-gray-300'>
+            We use minimal, privacy‑respecting analytics. Some third‑party
+            embeds may set cookies. You can block non‑essential cookies via your
+            browser.
+          </p>
+          <ul className='list-disc list-inside text-gray-300 space-y-1'>
+
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+
 
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
+
 origin/automation-improvements-final
+
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
           <h1 className="text-4xl md:text-5xl font-bold">Cookie Policy</h1>
           <p className="text-gray-300">We use minimal, privacy‑respecting analytics. Some third‑party embeds may set cookies. You can block non‑essential cookies via your browser.</p>
           <ul className="list-disc list-inside text-gray-300 space-y-1">
+
 origin/automation-improvements-final
             <li>Purpose: performance and security</li>
 <li>Purpose: performance and security</li>
+
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+
 
 
 
@@ -559,4 +612,5 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

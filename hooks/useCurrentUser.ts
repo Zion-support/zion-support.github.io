@@ -3,6 +3,8 @@ import useSWR from 'swr';
 
 
 
+
+
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
     user: data?.user |null
@@ -24,9 +26,11 @@ function useCurrentUser() {
     mutate,
   }
     loading: !data && !error;
+
     error
 
     error,
+
     mutate}
 
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),

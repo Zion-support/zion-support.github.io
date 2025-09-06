@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 interface NotificationHeaderProps {;
@@ -12,7 +14,9 @@ interface NotificationHeaderProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -32,6 +36,7 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
 
 
 
+
           onClick={onMarkAllAsRead}
           className="text-xs text-zion-cyan hover:text-white hover:bg-zion-blue-dark">;
           Mark all as read;
@@ -46,3 +51,4 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
     </div>;
   );
 };
+

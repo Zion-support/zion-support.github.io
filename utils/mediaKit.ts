@@ -2,6 +2,7 @@
 
 
 
+
   };
 
 
@@ -29,6 +30,7 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
+
 
 
 
@@ -68,12 +70,14 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
 
+
   type: PressReleaseType
 
 
 
   type: PressReleaseType,
   params: {;
+
 
 
     companyName: string;
@@ -123,6 +127,7 @@ function titleCase(s: string) {
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );}
+
 
 
 
@@ -177,6 +182,7 @@ function title_case() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

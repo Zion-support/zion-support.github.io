@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+
   reactStrictMode: true
   compress: true
   poweredByHeader: false
@@ -53,5 +54,6 @@ const nextConfig = {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

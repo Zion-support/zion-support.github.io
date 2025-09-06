@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -41,6 +42,7 @@ export default function QuoteManager() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
   
+
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
@@ -59,8 +61,10 @@ export default function QuoteManager() {
     updateStatus,
     toggleArchive,
     deleteQuote
+
   } = useAdminQuotes();
   } = useAdminQuotes(),
+
 
   // Count quotes by status
   const statusCounts = {
@@ -69,22 +73,28 @@ export default function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length
     responded: quotes.filter(q => q.status === 'responded').length
     closed: quotes.filter(q => q.status === 'closed').length
+
   }
   },
+
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote)
     setShowDetails(true)
+
   }
   },
+
 
   const handleResetFilters = () => {
     setStatusFilter('all');
     setArchiveFilter('all');
     setSearchQuery('');
     setDateRange({ from: undefined, to: undefined })
+
   }
   },
+
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
@@ -103,6 +113,7 @@ export default function QuoteManager() {
               </div>
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
             </div>
+
             
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -194,6 +205,7 @@ export default function QuoteManager() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />;
 
@@ -243,6 +255,7 @@ export default function QuoteManager() {;
                     isArchived={true}
 
 
+
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -266,10 +279,12 @@ export default function QuoteManager() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+
           onClose={() => {
             setShowDetails(false);
 
@@ -288,6 +303,7 @@ export default function QuoteManager() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           }}
         />
         <Footer />

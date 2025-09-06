@@ -21,10 +21,12 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 import {;
   LineChart,;
   BarChart,;
   DonutChart,;
+
 
 
 
@@ -37,9 +39,20 @@ type InsightResponse = {;
   maxHourlyUsd: number;
   confidence: number;
 
+  trendMonthly: { label: string; value: number }[];
+  regionalComparison: { region: string; medianHourlyUsd: number }[];
+  tags: string[];
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
+  gptRecommendation?: string
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -123,6 +136,7 @@ function SalaryInsightsPage() {
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
+
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
@@ -141,6 +155,7 @@ function SalaryInsightsPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
       setLoading(false);    }
+
 
     }
   }
@@ -197,6 +212,8 @@ function SalaryInsightsPage() {
 
 
         alert('Insight saved locally');
+
+
 
 
 
@@ -664,6 +681,7 @@ function SalaryInsightsPage() {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
+
               {data && (
                 <table className="w-full mt-3 text-sm">
                   <thead>
@@ -778,6 +796,7 @@ function SalaryInsightsPage() {
 
 
 
+
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -787,6 +806,7 @@ function SalaryInsightsPage() {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+
 
 
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -863,7 +883,10 @@ function SalaryInsightsPage() {
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

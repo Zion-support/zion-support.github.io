@@ -1,5 +1,6 @@
 
 
+
 import {useState, useEffect} from 'react';
 import { supabase } from '@/integrations / supabase / client';
 
@@ -29,6 +30,7 @@ import { supabase } from "@/integrations/supabase/client",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
   acceptanceRate: number,
@@ -45,6 +47,7 @@ interface PricingSuggestionAnalytics {
     type: 'client' | 'talent'
   }[],
   isLoading: boolean,
+
 
 
   error: string | null
@@ -70,6 +73,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     averagePriceGap: 0,
     suggestionsByCategory: [],
     recentSuggestions: [],
+
     isLoading: true,
     error: null
   }),
@@ -80,6 +84,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
     const fetchAnalytics = async () => {
       try {
         // Simulate API delay
+
         await new Promise(resolve => setTimeout(resolve, 1000));
         // Mock data for demonstration
         const mockData = {
@@ -139,10 +144,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
           error: null
         }),
 
+
         // In a real implementation with Supabase, you might do:
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+
         //   .gte('created_at', `now() - interval '${days} days'`);
         // if (error) throw error;
         //   .gte('created_at', `now() - interval '${days} days'`),
@@ -167,6 +174,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
 
 };
+
 
 
 
@@ -276,9 +284,11 @@ if (throw error) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

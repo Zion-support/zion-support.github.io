@@ -1,6 +1,7 @@
 
 
 
+
 export interface HelpArticle {
   id: string;
   title: string;
@@ -32,12 +33,15 @@ export interface HelpCategory {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   name: string;
   description: string;
   icon: ReactNode;
   articles: HelpArticle[]
 }
+
+
 
 
 
@@ -53,6 +57,8 @@ export interface HelpCategory {;
   created_at: string;
   updated_at: string;
 }
+
+
 
 
 
@@ -105,9 +111,11 @@ export interface SupportTicket {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

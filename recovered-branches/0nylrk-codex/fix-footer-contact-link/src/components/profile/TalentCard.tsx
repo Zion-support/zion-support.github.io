@@ -1,12 +1,19 @@
 
 
 
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
-import {Link} from "react-router-dom";
-import {TalentProfile} from "@/types/talent";
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
 
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { Link } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
 
 export interface TalentCardProps {;
   talent: TalentProfile,;
@@ -40,7 +47,14 @@ export function TalentCard(): any ({;
       onRequestHire(talent);
     }
 
-
+  },;
+  const handleToggleSave = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onToggleSave) {;
+      onToggleSave(talent.id, !isSaved);
+    }
+  },
 
 
   // Extract skills - limit to 5 for display
@@ -91,6 +105,7 @@ export function TalentCard(): any ({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
+
             
 
 
@@ -102,6 +117,7 @@ export function TalentCard(): any ({;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -116,6 +132,7 @@ export function TalentCard(): any ({;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
+
             </div>
           </div>
         </div>
@@ -200,6 +217,7 @@ export function TalentCard(): any ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
 

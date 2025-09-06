@@ -4,6 +4,7 @@
 
 
 
+
   method,
   path,
   requiresAuth,
@@ -18,10 +19,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+
 
 
 
@@ -51,6 +54,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
@@ -89,13 +93,15 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   }
   return (
 
+    <div className='space-y-2'>
 
-
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
 
       const res = await fetch(url, {
 
         method;
         headers;
+
 
 
 
@@ -112,11 +118,13 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
   }
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
         <div>
 
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
@@ -131,6 +139,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
+
 
 
 
@@ -206,6 +215,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   )
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
@@ -213,4 +223,5 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,10 +1,15 @@
 
 
-import { GetServerSideProps } from 'next';
-import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/context/auth/AuthProvider';
-
+import ProductCard from '@/components/ProductCard';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface BaseSearchResult {
 
   id: string;
   title: string;
@@ -54,6 +59,7 @@ type SearchResult =;
 
 
 
+
   initialResults: SearchResult[];
   query: string;
   slug: string;
@@ -65,6 +71,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+
 
 
 import { Search, Filter, Grid, List } from 'lucide-react';
@@ -129,12 +136,15 @@ const hasRating = (result: SearchResult): result is ProductSearchResult | Talent
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+
 
 
 interface OfflineFilters {
@@ -153,6 +163,7 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+
 
 
 
@@ -323,12 +334,14 @@ function offlineSearch(;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           return bRating - aRating;
         });
         break;
@@ -336,6 +349,7 @@ function offlineSearch(;
         break;
     }
   } else {;
+
 
 
 
@@ -350,6 +364,7 @@ export default function SearchResultsPage(): any ({;
 
 
 }: SearchResultsPageProps) {  const router = useRouter();
+
 
 
 
@@ -374,12 +389,14 @@ export default function SearchResultsPage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -393,6 +410,7 @@ export default function SearchResultsPage(req, res) {
   const [maxPrice, setMaxPrice] = useState('');
   const [minRating, setMinRating] = useState('');
   const [totalResults, setTotalResults] = useState(totalCount);
+
   // Fetch search results
   const fetchResults = async (searchTerm: string, page = 1) => {
     try {
@@ -415,10 +433,12 @@ export default function SearchResultsPage(req, res) {
         limit: '12';
         sort: sortBy});
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
+
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
       if (minRating) params.append('minRating', minRating);
       const response = await fetch(`/api/search?${params.toString()}`);
+
       if (!response.ok) {
         throw new Error(`Search API error: ${response.status}`);
       }
@@ -568,6 +588,7 @@ export default function SearchResultsPage(req, res) {
       if ((r.price ?? 0) < Number(minPrice)) {;
         return false;
 
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -576,6 +597,32 @@ export default function SearchResultsPage(req, res) {
     if (minPrice && r.type === 'product') {;
       if ((r.price ?? 0) < Number(minPrice)) {;
         return false;
+
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minRating && (r.type === 'product' || r.type === 'talent')) {;
+      if ((r.rating ?? 0) < Number(minRating)) {;
+        return false;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return true
+  }),
 
 
   // Group results by type for better display
@@ -588,6 +635,8 @@ export default function SearchResultsPage(req, res) {
       return acc
     },
     {} as Record<string SearchResult[]>),
+
+
   const renderResultCard = (result: SearchResult) => {
     switch (result.type) {
       case 'product':
@@ -614,6 +663,7 @@ export default function SearchResultsPage(req, res) {
 
 
               product={{
+
                 id: result.id
                 name: result.title
                 title: result.title
@@ -650,11 +700,13 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             />
           </div>
         ),
       case 'talent':
         return (
+
 
                 id: result && result.id,
                 user_id: result && result.id,
@@ -677,11 +729,13 @@ export default function SearchResultsPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             />
           </div>
         ),
       case 'category':
         return (
+
           <div key={result.id} data-testid='result-card'>            <CategoryCard
               title={result.title}
               description={result.description |''}
@@ -697,6 +751,7 @@ export default function SearchResultsPage(req, res) {
             </p>
           </div>
         );    }
+
 
 
           <div key={result.id} data-testid="result-card">
@@ -760,6 +815,7 @@ export default function SearchResultsPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -767,6 +823,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <>;
@@ -792,6 +849,7 @@ export default function SearchResultsPage(req, res) {
   }
 }
       />
+
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
 
@@ -802,6 +860,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -826,6 +885,7 @@ export default function SearchResultsPage(req, res) {
 }
                 </p>
               </div>
+
               {/* Search Input */}
 
 
@@ -843,6 +903,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 <Input
                   type="text"
                   value={searchQuery}
@@ -853,11 +914,13 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
             </div>
+
             {/* Controls */}
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 <Button
@@ -872,9 +935,19 @@ export default function SearchResultsPage(req, res) {
                 </Button>
                 <select
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  data-testid="sort-select"
+                >
 
 
                 <select
@@ -909,6 +982,7 @@ export default function SearchResultsPage(req, res) {
                   onChange={(e) => setCategoryFilter(e.target.value)}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
                 >
+
                   <option value='all'>All Categories</option>
                   {categories.map(c => (                    <option key={c} value={c}>
                       {c}
@@ -941,6 +1015,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <input
                     type="number"
                     placeholder="Min $"
@@ -959,6 +1034,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
                 <select
+
                   value={minRating}
 
                     onChange={e => setMaxPrice(e && e.target.value)}
@@ -972,10 +1048,12 @@ export default function SearchResultsPage(req, res) {
             </div>;
           </div>;
           {/* Loading State */  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
           {loading && results.length === 0 && (
 
 
@@ -983,25 +1061,52 @@ export default function SearchResultsPage(req, res) {
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
           )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-          {/* Empty State */  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                >
+                  <option value="">All Ratings</option>
+                  <option value="4">4★ & up</option>
+                  <option value="3">3★ & up</option>
+                  <option value="2">2★ & up</option>
+                </select>
+              </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
+
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+                  size="sm"
+                  onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  data-testid="view-mode-grid"
+                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                >
+                  <Grid className="h-4 w-4" />
+                </Button>
+                <Button
+
 
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
+
           )}
           {/* Results */}
           {filteredResults.length > 0 && (
@@ -1094,6 +1199,7 @@ export default function SearchResultsPage(req, res) {
     };  }
 
 }
+
 
 
 
@@ -1218,7 +1324,9 @@ export const getServerSideProps: GetServerSideProps<;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       const data = await response.json();
       results = data.results || [];
@@ -1226,13 +1334,46 @@ export const getServerSideProps: GetServerSideProps<;
       logInfo(`Server-side fetch successful: ${results.length} results`);
 
 
+    } else {;
+      logErrorToProduction(;
+        `Search API error: ${response.status} ${response.statusText}`);
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return {;
+      props: {;
+        initialResults: results;
+        query,;
+        slug,;
+        totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+    return {;
+      props: {;
+        initialResults: offline.results,;
+        query,;
+        slug;
+        totalCount: offline.totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -13,6 +14,7 @@ import {MainNavigation} from './MainNavigation';
 import {Logo} from '@/components / header / Logo';
 import {ModeToggle} from '@/components / ModeToggle';
 import {Menu, X} from 'lucide-react';
+
 
 
 
@@ -38,6 +40,7 @@ function AppHeader() {
     unread_count = count;
 
   } catch (error) {
+
     console.warn ('Messaging context not available');
 
 
@@ -51,13 +54,16 @@ function AppHeader() {
   return (
 
 
+
   // Try to access the messaging context, but provide a fallback value if it's not available;
   let unreadCount = 0;
   try {;
     const { unreadCount: count } = useMessaging(),;
     unreadCount = count;
   } catch (error) {;
+
     console && console.warn('Messaging context not available');
+
   }
 
   return (

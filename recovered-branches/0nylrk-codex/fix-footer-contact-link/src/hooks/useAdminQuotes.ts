@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -19,6 +20,7 @@ export const useAdminQuotes = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -37,6 +39,8 @@ export const useAdminQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+
+
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -65,6 +69,7 @@ export const useAdminQuotes = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -72,6 +77,7 @@ export const useAdminQuotes = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     // Archive filter
@@ -81,6 +87,8 @@ export const useAdminQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+
+
 
 
 
@@ -118,6 +126,8 @@ export const useAdminQuotes = () => {;
 
 
 
+
+
 ;
     // Search filter;
     if (searchQuery) {;
@@ -148,6 +158,7 @@ export const useAdminQuotes = () => {;
         return false;
       }
     }
+
     
 
 
@@ -155,6 +166,7 @@ export const useAdminQuotes = () => {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     return true
@@ -165,12 +177,15 @@ export const useAdminQuotes = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
+
+
     onSuccess: () => {
       toast({
         title: "Status updated"
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+
     }
     onError: (error: Error) => {
       toast({
@@ -199,6 +214,7 @@ export const useAdminQuotes = () => {;
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
+
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
@@ -207,6 +223,7 @@ export const useAdminQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+
     }
     onError: (error: Error) => {
       toast({
@@ -227,6 +244,7 @@ export const useAdminQuotes = () => {;
     }
   }),
 
+
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
@@ -234,6 +252,7 @@ export const useAdminQuotes = () => {;
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
+
 
 
 
@@ -246,6 +265,7 @@ export const useAdminQuotes = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -256,11 +276,20 @@ export const useAdminQuotes = () => {;
     }
   });
 
-
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
-
+  return {
+    quotes: filteredQuotes;
+    isLoading;
+    error;
+    statusFilter;
+    setStatusFilter;
+    archiveFilter;
+    setArchiveFilter;
+    searchQuery;
+    setSearchQuery;
+    dateRange;
+    setDateRange
+    updateStatus: (id: string, status: QuoteStatus) =>
+      updateStatusMutation.mutate({ id, status });
 
 
     },
@@ -351,6 +380,7 @@ export const useAdminQuotes = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -358,6 +388,7 @@ export const useAdminQuotes = () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}

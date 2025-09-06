@@ -4,6 +4,8 @@
 
 
 
+
+
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
 
@@ -21,17 +23,29 @@ export default function AdminLearn() {
       body: JSON.stringify(form)
 
 
-    })
-    const data = await resp.json()
-    if (data.ok) setMessage('Saved')
-    else setMessage('Error: ' + (data.error |'unknown'))
-
-  }
-
-
+import { useEffect, useState } from 'react';
+export default function AdminLearn(req, res) {
+  try {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),;
+  const [message, setMessage] = useState('');
+  async function saveCourse() {;
+    setMessage('');
+    const resp = await fetch('/api/admin/learn/course', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(form);
+    }),;
+    const data = await resp.json();
+    if (data.ok) setMessage('Saved');
+    else setMessage('Error: ' + (data.error || 'unknown'));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
+
+
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -57,6 +71,7 @@ export default function AdminLearn() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -65,6 +80,7 @@ export default function AdminLearn() {
     </div>
   );
 };
+
 
 
 

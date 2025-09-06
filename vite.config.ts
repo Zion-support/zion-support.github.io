@@ -1,5 +1,6 @@
 
 
+
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
@@ -146,6 +147,7 @@ export default defineConfig({
 			'@types': path && path.resolve(__dirname, './src/types'),
 			'@styles': path && path.resolve(__dirname, './src/styles'),
 			'@assets': path && path.resolve(__dirname, './src/assets')
+
 		}
 	},
 	css: {
@@ -171,16 +173,6 @@ export default defineConfig({
 				entryFileNames: 'js/[name]-[hash].js',
 				assetFileNames: (assetInfo) => {
 
-});
-
->>>>>>> origin/automation-improvements-final
-
-
-
-
-
-
-=======
 =======
 
     },
@@ -290,4 +282,31 @@ export default defineConfig({
       } else {
         return { relative: true };
       }
+
+=======
+					const name = assetInfo.name || ''
+					if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]'
+					if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]'
+					if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]'
+					return 'assets/[name]-[hash].[ext]'
+				}
+			}
+		},
+		chunkSizeWarningLimit: 1000
+	},
+	optimizeDeps: {
+		include: [
+			'react',
+			'react-dom',
+			'react-router-dom',
+			'framer-motion',
+			'lucide-react',
+			'clsx',
+			'tailwind-merge'
+		],
+		exclude: ['@radix-ui/react-icons']
+	},
+	server: { port: 3000, host: true, open: true },
+	preview: { port: 4173, host: true, open: true }
+})
 

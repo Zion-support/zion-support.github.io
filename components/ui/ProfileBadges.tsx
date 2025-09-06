@@ -1,3 +1,4 @@
+
 import React from 'react',
 import React from 'react';
 import type { KycProfile } from '../../utils / kyc';
@@ -17,6 +18,7 @@ function ProfileBadges() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 

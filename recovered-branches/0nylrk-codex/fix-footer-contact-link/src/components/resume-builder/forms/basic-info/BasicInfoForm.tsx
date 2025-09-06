@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -50,11 +51,13 @@ export interface BasicInfoFormProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   onComplete
 }: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
     resolver: zodResolver(basicInfoSchema)
     defaultValues: {
+
       fullName: ""
       title: ""
       email: ""
@@ -76,11 +79,13 @@ export interface BasicInfoFormProps {
       hourlyRate: 0,
       ...initialData}}),
 
+
   useEffect(() => {
     if (initialData) {
       Object.entries(initialData).forEach(([key, value]) => {
         if (value !== undefined) {
           form.setValue(key as keyof BasicInfoFormData, value as any)
+
 import React, { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -134,9 +139,11 @@ export function BasicInfoForm({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         }
       });
     }
+
   }, [initialData, form]);
   const handleSubmit = (data: BasicInfoFormData) => {
     onSave(data)
@@ -161,6 +168,7 @@ export function BasicInfoForm({;
 
 
 
+
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
@@ -176,11 +184,13 @@ export function BasicInfoForm({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
 
@@ -197,8 +207,10 @@ export function BasicInfoForm({;
               control={form && form.control}
               setValue={form && form.setValue}
               skills={skills}
+
               yearsExperience={yearsExperience |0}
               yearsExperience={yearsExperience || 0}
+
               location={form.getValues("location")}
               rateType="hourly"
             />
@@ -210,10 +222,7 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -250,3 +259,6 @@ function BasicInfoForm() {
       hourly_rate: 0,
       ...initial_data}});
 ;
+=======
+
+

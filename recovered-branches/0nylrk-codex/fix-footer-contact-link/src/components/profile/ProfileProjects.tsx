@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ProfileProjectsProps {
   projects: ProfileProject[];
@@ -33,11 +35,27 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   src={project.image_url}
                   alt={project.title}
 
-import {Card, CardContent} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {ProfileProject} from "@/types/profile";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {FileText} from "lucide-react";
+                  className="w-full h-full object-cover"
+                />
+              </AspectRatio>
+            ) : (
+              <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
+                <FileText className="text-zion-purple h-12 w-12 opacity-50" />
+              </div>
+            )}
+            <CardContent className="p-4">
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>
+
+              {project.tags && project.tags.length > 0 && (
+                <div className="flex flex-wrap gap-1 mb-2">
+                  {project.tags.map((tag, i) => (
+
+import { Card, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { ProfileProject } from "@/types/profile",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { FileText } from "lucide-react";
+
 interface ProfileProjectsProps {;
   projects: ProfileProject[];
 }
@@ -95,17 +113,21 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                       {tag}
                     </Badge>;
                   ))}
                 </div>;
               )}
+
               
+
               <div className="text-xs text-zion-slate-light mt-2">
                 {project.date}
               </div>
@@ -114,6 +136,7 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
     </div>
+
 
 
 
@@ -137,4 +160,5 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

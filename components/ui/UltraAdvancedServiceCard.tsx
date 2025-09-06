@@ -26,6 +26,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
+
 import {
   ArrowRight
   ExternalLink
@@ -63,6 +65,7 @@ import {
 ;
 interface UltraAdvancedServiceCardProps {
   service: {import {
+
 
 
 
@@ -125,9 +128,16 @@ interface UltraAdvancedServiceCardProps {;
       email: string;
       address: string;
 
+
       website: string;
     }
 
+
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
 
 
     reviews: number;
@@ -227,6 +237,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       }
     },  }
   const contentVariants = {
+
     hidden: { opacity: 0, height: 0 }
     visible: {    if (category.includes('AI') |category.includes('Machine Learning')) return <Brain className="w-4 h-4" />;
     if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
@@ -333,6 +344,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     >;
 
 
+
       {/* Glow Effect */}
       <div  return (
     <motion.div;
@@ -372,6 +384,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
       <div 
 
 
@@ -390,10 +403,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
         }`}
       >
+
         <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
           {/* Header */}
           <div className='flex items - start justify - between mb - 4'>;
@@ -487,6 +502,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 
+
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
@@ -494,6 +510,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               </motion.div>
             )}
           </div>
+
           {/* Tagline */}
           <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service.tagline}
           </p>
@@ -537,6 +554,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </div>
           {/* Quick Stats */}
@@ -551,6 +569,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               <Clock className="w-4 h-4 text-green-400" />
               <span className="text-gray-300">{service.trialDays} day trial</span>
           </div>
+
           {/* Market Data */}
           <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>
             <div className='flex items-center justify-between text-sm'>
@@ -592,6 +611,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* Expandable Content */}
           <AnimatePresence>;
             {isExpanded && (;
@@ -605,6 +625,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
                   </p>
                 </div>
+
 
 
 
@@ -648,10 +669,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 {/* ROI */}
                 <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
                   <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
                   <p className='text-gray-300 text-sm'>{service.roi}</p>
+
 
 
 
@@ -669,6 +692,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 </div>
                 {/* Contact Info */}
@@ -694,6 +718,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                       <span className='text-white text-xs'>
                         {service.contactInfo.address}
                       </span>                    </div>                </div>
+
 
                   </div>;
                 </div>;
@@ -764,6 +789,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
@@ -943,6 +969,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
             <motion.button
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -955,6 +982,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
@@ -965,12 +993,14 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           </div>
 
 
+
             </motion && motion.button>;
           </div>;
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           {/* Expand/Collapse Indicator */}
           <motion.div
             className='flex justify-center mt-4'
@@ -984,7 +1014,10 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
   );
 
 
+
+
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1023,4 +1056,5 @@ export default UltraAdvancedServiceCard;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

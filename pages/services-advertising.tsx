@@ -1,5 +1,7 @@
+
 import React from 'react';
 import SEO from '../components/SEO';
+
 
 
 
@@ -19,11 +21,11 @@ export default function ServicesAdvertisingPage() {
     'Flexible deployment: SaaS or self-hosted options'
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-  ],
+				{/* New: Core micro SaaS and AI additions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 				<section className="space-y-6">
@@ -32,6 +34,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
 
@@ -45,12 +48,14 @@ export default function ServicesAdvertisingPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
   const pricingRefs = [
     {
       title: 'AI Platforms'
       links: [
+
         { name: 'OpenAI', href: 'https://openai.com/api/pricing' }
         { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' }
         { name: 'Google Vertex AI', href: 'https://cloud.google.com/vertex-ai/pricing' }
@@ -303,12 +308,14 @@ export default function ServicesAdvertisingPage(req, res) {
 
 
 
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
+
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</a></li>
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
 
@@ -322,6 +329,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -346,7 +354,9 @@ export default function ServicesAdvertisingPage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
@@ -358,12 +368,15 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+
                     {o.points.map((p) => (<li key={p}>{p}</li>))}
                   </ul>
                 </a>
@@ -391,6 +404,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </section>
           <section>
@@ -412,6 +426,7 @@ export default function ServicesAdvertisingPage(req, res) {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $40–$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
+
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</a></li>
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
 
@@ -425,6 +440,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -433,6 +449,7 @@ export default function ServicesAdvertisingPage(req, res) {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $30–$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
+
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</a></li>
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
 
@@ -446,6 +463,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -454,6 +472,7 @@ export default function ServicesAdvertisingPage(req, res) {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $15–$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
+
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</a></li>
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
 
@@ -467,6 +486,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -475,6 +495,7 @@ export default function ServicesAdvertisingPage(req, res) {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10–$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
+
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</a></li>
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
 
@@ -488,6 +509,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -542,6 +564,7 @@ export default function ServicesAdvertisingPage(req, res) {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
+
                 { name: 'Affiliate Marketing Tracker Pro', price: '$99/mo', href: '/affiliate-marketing-tracker-pro', refs: [{ n: 'Refersion', u: 'https://www.refersion.com/pricing' }] }
                 { name: 'SMB Privacy Web Analytics', price: '$12/mo', href: '/smb-privacy-web-analytics', refs: [{ n: 'Plausible', u: 'https://plausible.io/#pricing' }] }
                 { name: 'MSP Helpdesk & ITSM', price: '$149/mo', href: '/msp-helpdesk-itsm', refs: [{ n: 'Freshdesk', u: 'https://freshdesk.com/pricing' }] }
@@ -566,6 +589,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
               ].map((o) => (
                 <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <a href={o.href} className="block group">
@@ -574,6 +598,7 @@ export default function ServicesAdvertisingPage(req, res) {
                       <div className="text-white font-semibold text-lg group-hover:text-cyan-300">{o.name}</div>
                       <div className="text-cyan-300 font-medium">{o.price}</div>
                     </div>
+
                   </a>
                   <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
                     {o.refs.map((r) => (
@@ -617,11 +642,13 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
 
 
 
@@ -715,6 +742,7 @@ export default function ServicesAdvertisingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
               ].map((group) => (
                 <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-center justify-between mb-2">
@@ -723,6 +751,7 @@ export default function ServicesAdvertisingPage(req, res) {
                   </div>
                   <ul className="text-slate-300 space-y-1">
                     {group.links.map((l) => (
+
                       <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>
                     ))}
                   </ul>
@@ -752,6 +781,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -762,6 +792,7 @@ export default function ServicesAdvertisingPage(req, res) {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
+
                   {a.title}
                 </a>
               ))}
@@ -787,6 +818,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </section>
           <section>
@@ -795,6 +827,7 @@ export default function ServicesAdvertisingPage(req, res) {
               <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-gray-200">{contact.mobile}</span>
+
               </a>
               <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
                 <Mail className="w-5 h-5 text-purple-400" />
@@ -824,12 +857,14 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
+
                 { name: 'Email Deliverability Monitor', price: '$149/mo', href: '/email-deliverability-monitor' }
                 { name: 'API Security Scanner', price: '$799/mo', href: '/api-security-scanner' }
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' }
@@ -849,6 +884,7 @@ export default function ServicesAdvertisingPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -856,12 +892,24 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-gray-200 mt-2">{o.name}</div>
 
 
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>;
+          </section>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+;
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

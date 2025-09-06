@@ -1,6 +1,7 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {processJobMatching, storeMatchResults} from "./job-matching ;
@@ -20,6 +21,7 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 
 
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
@@ -30,7 +32,9 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -47,9 +51,11 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+
     const { jobId } = await req.json();
     const { jobId } = await req.json(),
     
+
     if (!jobId) {
       throw new Error("Job ID is required")
     }
@@ -58,8 +64,10 @@ serve(async (req) => {
       .from("jobs")
       .select("*")
       .eq("id", jobId)
+
       .single();
       .single(),
+
 
     if (jobError) {
       throw new Error(`Failed to fetch job: ${jobError && jobError.message}`)
@@ -68,8 +76,10 @@ serve(async (req) => {
     const { data: talents, error: talentsError } = await supabase
       .from("talent_profiles")
       .select("*")
+
       .eq("is_published", true);
       .eq("is_published", true),
+
 
     if (talentsError) {
       throw new Error(`Failed to fetch talent profiles: ${talentsError && talentsError.message}`)
@@ -84,6 +94,7 @@ serve(async (req) => {
       )
     }
     // 3. Use AI to normalize skills and find matches
+
     const matchedTalents = await processJobMatching(job, talents);
     // 4. Store matches in database and create notifications
     await storeMatchResults(jobId, matchedTalents, job.title);
@@ -105,9 +116,11 @@ serve(async (req) => {
     console && console.error("Error in job-talent-matcher:", error);
 
 
+
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   } catch (error) {
+
 
     console.error("Error in job-talent-matcher:", error),
 
@@ -125,6 +138,7 @@ const cors_headers = {
   "Access - Control - Allow - Origin": "*";
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
+
 
 // Initialize the Supabase client;
 const supabase_url = Deno.env.get ("SUPABASE_URL") || "";
@@ -208,6 +222,7 @@ if ( {) {
     );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -215,3 +230,4 @@ if ( {) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 });
+

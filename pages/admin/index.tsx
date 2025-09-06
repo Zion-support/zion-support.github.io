@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default function AdminIndex() {
@@ -12,6 +14,7 @@ export default function AdminIndex() {
         <li><Link href="/admin/partners"><a className="text-blue-600 underline">Partners</a></Link></li>
       </ul>
     </div>
+
   )
 };
   );
@@ -20,3 +23,4 @@ export default function AdminIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+

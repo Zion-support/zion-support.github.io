@@ -9,7 +9,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
   try {
     const data = fs && fs.readFileSync(CONTENT_PATH, 'utf8');

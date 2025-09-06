@@ -2,10 +2,12 @@
 
 
 
+
 import {Link} from 'react-router-dom';
 import {Logo} from './Logo';
 import {UserMenu} from './UserMenu';
 import {LanguageSelector} from './LanguageSelector';
+
 
 
 
@@ -27,9 +29,11 @@ import { useState } from "react",
 
 
 
+
 export interface HeaderProps {
   hideLogin?: boolean,
   customLogo?: string,
+
   customTheme?: {
 
     primaryColor: string
@@ -39,20 +43,25 @@ export interface HeaderProps {
 }
 
 
+export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {
 
+  // If we have a white-label tenant and no specific customTheme is provided,
+  // use the tenant's primary color
+  const effectiveTheme = customTheme || (isWhitelabel ? {
+    primaryColor,
+    backgroundColor: '#0f172a', // Default dark background
+    textColor: '#ffffff', // Default light text
+  } : undefined),
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const headerStyle = effectiveTheme ? {
     backgroundColor: effectiveTheme.backgroundColor
     color: effectiveTheme.textColor
     borderColor: `${effectiveTheme.primaryColor}20`
+
   } : {}
   } : {},
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -61,10 +70,12 @@ export interface HeaderProps {
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
+
   }
 
   },
   
+
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md"
@@ -83,7 +94,10 @@ export interface HeaderProps {
             onChange={setQuery}
             searchSuggestions={searchSuggestions}
 
-
+          />
+        </form>
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
 
 
 import React from 'react',;
@@ -159,6 +173,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -167,6 +182,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           {!hideLogin && <UserMenu />}
         </div>;
@@ -202,3 +218,5 @@ function Header() {
   const [query, set_query] = useState ("");
   const search_suggestions = generateSearchSuggestions ();
 ;
+
+

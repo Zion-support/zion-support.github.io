@@ -3,9 +3,12 @@
 
 
 
+
+
 export interface StepProps {
   id: string;
   label: string
+
 }
 
 
@@ -28,10 +31,12 @@ export interface NavigationButtonsProps {;
 
 
 
+
   onBack?: () => void;
   onNext?: () => void;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isNextDisabled?: boolean;
+
 
 
 
@@ -55,6 +60,7 @@ export interface StepProps {
 
 
 
+
 import { Resume } from "@/types/resume",;
 export interface StepProps {;
   id: string,;
@@ -70,6 +76,7 @@ export interface NavigationButtonsProps {;
   isLoading?: boolean;
 
 
+
 }
 ;
 export interface ResumeProgressProps {;
@@ -81,11 +88,13 @@ export interface ResumeProgressProps {;
 
 
 
+
 ;
 export interface CreateResumeFormProps {;
   onCreateResume: (title: string) => Promise<void>;
   onCancel: () => void;
   isLoading: boolean;
+
 
 
 
@@ -106,4 +115,5 @@ export interface EmptyResumeProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

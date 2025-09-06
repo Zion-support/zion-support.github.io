@@ -3,6 +3,7 @@
 import Link from 'next/link';
 
 
+
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
   return { props: { articles } };
@@ -25,6 +26,7 @@ export async function getStaticProps() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="space-y-8">
       <h1 className="text-2xl font-semibold">Help Center</h1>
@@ -42,11 +44,13 @@ export async function getStaticProps() {;
                   </a>
                 </Link>
 
+
               ))}
           </div>
         </div>
       ))}
     </div>
+
 
 
 
@@ -75,9 +79,11 @@ export async function getStaticProps() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

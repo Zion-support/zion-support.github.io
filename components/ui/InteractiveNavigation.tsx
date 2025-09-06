@@ -7,11 +7,13 @@ import { motion } from 'framer-motion';
 
 
 
+
 ;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface NavigationItem {
   name: string, href: string
@@ -64,10 +66,12 @@ interface NavigationItem {;
 
 
 
+
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
 
 
 
@@ -87,6 +91,7 @@ const InteractiveNavigation: React.FC: = () => {";
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
+
 
 
 
@@ -177,4 +182,5 @@ export default Component}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

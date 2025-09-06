@@ -3,7 +3,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export function LoginCard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -23,12 +25,14 @@ export function LoginCard() {
         <LoginForm />
         <SocialLogin />
       </div>
+
     </div>
 
   );
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   )
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
@@ -64,7 +68,11 @@ export function LoginCard() {
         <LoginForm />;
         <SocialLogin />;
       </div>;
+
+
     </div>;
   );
 }
 ;
+
+

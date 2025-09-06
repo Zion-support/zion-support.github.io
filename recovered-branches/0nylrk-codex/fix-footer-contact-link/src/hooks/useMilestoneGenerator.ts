@@ -2,12 +2,14 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {toast} from 'sonner';
 export interface MilestoneInput {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   scope: string;
   start_date: string;
@@ -20,12 +22,19 @@ export interface MilestoneInput {
 
 
 
+
+
   title: string;
   description: string;
 
       setIsGenerating(true),
 
 
+
+  isAiGenerated: boolean
+}
+
+  const [isGenerating, setIsGenerating] = useState(false);
 
 
         body: input
@@ -54,6 +63,8 @@ export interface MilestoneInput {
   }
   return {
     generateMilestones;
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from 'sonner',;
@@ -106,7 +117,9 @@ export function useMilestoneGenerator() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     generatedMilestones;

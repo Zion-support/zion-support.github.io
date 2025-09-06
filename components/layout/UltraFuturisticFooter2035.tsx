@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
   Zap
   Globe
   Phone
@@ -112,6 +115,7 @@ import {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
@@ -290,6 +294,7 @@ import {
       { name: 'Energy & Utilities', href: '/energy-utilities-solutions' }
       { name: 'Biotech AI Research', href: '/biotech-ai-research-platform' }
     ]
+
   }
   {
     title: 'Resources'
@@ -398,6 +403,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
   },
 ];
 
+
 const socialLinks = [
   {
     name: 'Twitter',
@@ -442,6 +448,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
+
   return (
     <footer className='relative bg - black text - white overflow - hidden'>;
       {/* Background Effects */}
@@ -465,6 +473,8 @@ const UltraFuturisticFooter2035: React.FC = () => {
             duration: 20,
             repeat: Infinity,
             ease: 'linear',          }}
+
+
 
 
         />
@@ -503,6 +513,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6 }}
+
                 className='space - y-6';
               >;
                 <div className='flex items - center gap - 3'>;
@@ -601,6 +612,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                       {social.icon}
                     </a>
                   ))}
@@ -611,7 +623,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
@@ -625,7 +639,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               >
                 <div className='flex items-center gap-2'>
@@ -668,11 +684,13 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                           link && link.featured
                             ? 'text-cyan-400 hover:text-cyan-300'                          link && link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
+
 
 
 
@@ -687,6 +705,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </motion && motion.div>;
             ))}
           </div>
+
 
 
 
@@ -732,6 +751,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
               <div className='flex items-center gap-6 text-sm text-gray-400'>;
 
 
+
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -742,7 +762,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -813,6 +835,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
       </div>
     </footer>
   );
+
 }
 /* Animated grid */
 };
@@ -821,6 +844,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
@@ -845,6 +869,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
 
 
 
+
 };
   /* Animated grid */ ;
 }<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {;
@@ -861,3 +886,4 @@ const UltraFuturisticFooter2035: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

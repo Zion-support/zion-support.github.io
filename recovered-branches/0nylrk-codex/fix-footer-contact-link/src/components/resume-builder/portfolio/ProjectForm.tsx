@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -13,6 +14,7 @@ import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 import {useAuth} from '@/hooks/useAuth';
+
 
 
 
@@ -50,6 +52,7 @@ interface ProjectFormProps {;
   onCancel: () => void;
 }
 
+
 export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
 
@@ -63,6 +66,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
@@ -102,6 +106,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {
         onSuccess();
         form.reset()
+
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -187,12 +193,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {;
 
         onSuccess();
+
         form && form.reset();
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
     } catch (error) {;
       console && console.error('Error saving project:', error);
@@ -200,11 +208,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false);
     }
 
-
-  };
-  },
-
-=======
 import {PortfolioProject} from '@/types / resume';
 import {use_portfolio} from '@/hooks / use_portfolio';
 import {use_auth} from '@/hooks / use_auth';
@@ -223,3 +226,117 @@ const project_schema = z.object ({
   pdf_url: z.string ().optional ()}),
 type ProjectFormValues = z.infer < typeof project_schema>;
 ;
+=======
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <FormField
+          control={form.control}
+          name="title"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Project Title</FormLabel>
+              <FormControl>
+                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="description"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Project Description</FormLabel>
+              <FormControl>
+                <Textarea
+                  placeholder="Describe what the project does and your role in it..."
+                  className="min-h-[100px]"
+                  {...field}
+                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="technologies"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Technologies Used</FormLabel>
+              <FormControl>
+                <Input placeholder="React, Node.js, MongoDB, etc. (comma separated)" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <FormField
+            control={form.control}
+            name="github_url"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Github className="h-4 w-4" />
+                  GitHub URL
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="https://github.com/yourusername/project" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="demo_url"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="flex items-center gap-2">
+                  <Link className="h-4 w-4" />
+                  Demo URL
+                </FormLabel>
+                <FormControl>
+                  <Input placeholder="https://your-project-demo.com" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+        <FormField
+          control={form.control}
+          name="image_url"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="flex items-center gap-2">
+                <FileImage className="h-4 w-4" />
+                Screenshot URL
+              </FormLabel>
+              <FormControl>
+                <Input placeholder="https://example.com/screenshot.jpg" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* Future file upload field would go here */}
+
+        <div className="flex justify-end space-x-2 pt-4">
+          <Button type="button" variant="outline" onClick={onCancel}>
+            Cancel
+          </Button>
+          <Button type="submit" disabled={isLoading}>
+            {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+            {isEditing ? 'Update' : 'Add'} Project
+          </Button>
+        </div>
+      </form>
+    </Form>
+  )
+
+

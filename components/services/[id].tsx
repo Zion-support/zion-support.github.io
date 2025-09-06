@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,11 +20,13 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { getServiceById  } from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail',
 import Button from '../../components/ui/Button';
+
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 import {ArrowLeft, ExternalLink} from 'lucide-react';
 
@@ -63,6 +66,7 @@ export default function ServiceDetailPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
   const router = useRouter();
   const { id } = router.query;
@@ -145,6 +149,7 @@ export default function ServiceDetailPage() {
             </div>
           </div>
         </nav>
+
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
 
@@ -163,10 +168,12 @@ export default function ServiceDetailPage() {
 
 
 
+
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
+
 
               Looking for Something Else?
 
@@ -197,6 +204,7 @@ export default function ServiceDetailPage() {
 
 
 
+
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -221,6 +229,7 @@ export default function ServiceDetailPage() {
               >
                 View All Services
               </Button>
+
 
 
               <Button
@@ -254,4 +263,5 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

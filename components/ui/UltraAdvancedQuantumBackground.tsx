@@ -84,26 +84,37 @@ if (return) {
       color: string;
       life: number;
 
-    let animationFrameId: number,
-    let particles: Particle[] = [];
-    let quantumFields: QuantumField[] = [];
-    let neuralNetworks: NeuralNetwork[] = [];
-    class Particle {
-      x: number,
-      y: number,
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
-
+      maxLife: number;      x: number
+      y: number
+      vx: number
+      vy: number
+      size: number
+      color: string
+      life: number
+      maxLife: number
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
+        this.color = `hsl(${Math.random() * 360}, 70%, 60%)`;
+        this.life = Math.random() * 100;
+        this.maxLife = 100;      }        this.maxLife = 100
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life--;
+        if (this.x < 0 |this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 |this.y > canvas.height) this.vy *= -1;
+        if (this.life <= 0) {
+          this.life = this.maxLife;
+          this.x = Math.random() * canvas.width;
 
         }
       }
-      draw() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+      draw() {
 
         if (!ctx) return;
 
@@ -316,6 +327,7 @@ if (return) {
             ctx.lineTo(p2.x, p2.y);
 
 
+
             ctx.stroke()
 
 
@@ -329,6 +341,7 @@ if (return) {
       animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -598,6 +611,7 @@ if ( {) {
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
+
           duration: 6
           repeat: Infinity
           ease: 'easeInOut'
@@ -607,6 +621,7 @@ if ( {) {
           repeat: Infinity,
           ease: 'easeInOut',
           delay: 2,
+
 
         }}
         transition={{
@@ -643,7 +658,9 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -663,6 +680,7 @@ if ( {) {
       />;
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
+
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
         <motion.div
@@ -692,12 +710,14 @@ if ( {) {
 
 
 
+
 }
 ;
 export default UltraAdvancedQuantumBackground);
 }
 ;
 export default UltraAdvancedQuantumBackground;
+
 
 
 
@@ -712,3 +732,4 @@ export default UltraAdvancedQuantumBackground;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

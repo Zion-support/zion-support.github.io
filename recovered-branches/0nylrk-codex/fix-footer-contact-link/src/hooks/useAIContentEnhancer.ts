@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -17,10 +19,12 @@ type EnhancementType =
 
 
 
+
 export interface AIEnhancementOptions {
 
 
 export interface AIEnhancementOptions {;
+
 
   enhancementType: EnhancementType;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -29,6 +33,7 @@ export interface AIEnhancementOptions {;
   context?: string
   instructions?: string
 }
+
 
 export function useAIContentEnhancer() {
 
@@ -47,6 +52,7 @@ export function useAIContentEnhancer() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const [isEnhancing, setIsEnhancing] = useState(false);
@@ -73,6 +79,7 @@ export function useAIContentEnhancer() {;
       if (error) {
 
 
+
       
       return data && data.enhancedContent
 
@@ -83,6 +90,7 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+
 
 
 
@@ -130,7 +138,9 @@ export function useAIContentEnhancer() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       }
       
@@ -141,6 +151,8 @@ export function useAIContentEnhancer() {;
       toast({
         title: "AI Enhancement Failed",
         description: errorMessage,
+
+
         variant: "destructive"
       });
       console && console.error('Enhancement error:', err);
@@ -148,11 +160,13 @@ export function useAIContentEnhancer() {;
     } finally {
       setIsEnhancing(false)
 
+
     }
   }
   return {
     enhanceContent;
     isEnhancing;
+
 
 
 
@@ -207,6 +221,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -215,5 +230,8 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   }
 ;
+
+

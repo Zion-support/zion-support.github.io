@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useForm  } from 'react-hook-form';
 import { z  } from 'zod';
@@ -27,6 +28,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 
 
+
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -44,6 +46,8 @@ import { supabase } from '@/integrations/supabase/client';
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+
+
 
 
 
@@ -133,11 +137,13 @@ export function WhitelabelRequestForm() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <Card className="w-full max-w-2xl">
@@ -290,6 +296,8 @@ export function WhitelabelRequestForm() {;
       </CardFooter>
     </Card>
   )
+
 }
 }
 ;
+

@@ -3,6 +3,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +32,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 
 
@@ -38,10 +40,12 @@ import Button from '../components/ui/Button';
 import {
 
 
+
   GitPullRequest,;
   Cpu,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
+
 
 
 
@@ -58,6 +62,42 @@ import {
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
 
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    }
+    {
+      icon: <BarChart3 className="w-6 h-6" />
+      title: 'Performance Monitoring'
+      description: 'Real-time performance insights and optimization'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+      title: 'CI/CD Pipelines'
+      description: 'Automated build, test, and deployment workflows'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    }
+    {
+      icon: <Zap className='w-6 h-6' />
+      title: 'Infrastructure as Code'
+      description: 'Terraform, CloudFormation, and Kubernetes automation'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+    }
+    {
+      icon: <Shield className='w-6 h-6' />
+      title: 'Security Automation'
+      description: 'Automated security scanning and compliance checks'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+    }
+    {
+      icon: <BarChart3 className='w-6 h-6' />
+      title: 'Performance Monitoring'
+      description: 'Real-time performance insights and optimization'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    },  ];      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+    }
+
+      icon: <GitBranch className='w-6 h-6' />,
+
+
+
 
 
   GitBranch,
@@ -66,6 +106,7 @@ import {
   BarChart3,
   Check,
   Star,
+
 
 
 
@@ -503,6 +544,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
       <div className="min-h-screen bg-black">
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900/20 to-cyan-900/20">
@@ -551,10 +593,12 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -575,6 +619,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -588,8 +633,10 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 What You Can Automate
               </h2>
@@ -612,6 +659,7 @@ export default function DevOpsAutomationPage() {_const _features = [
                   <h3 className='text-xl font-semibold text-white mb-4'>
                     {example.title}
                   </h3>
+
                   <p className='text-gray-400'>{example.description}</p>                </Card>                What You Can Automate
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -739,10 +787,12 @@ export default function DevOpsAutomationPage() {_const _features = [
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
 
+
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -756,11 +806,13 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
 
 
@@ -774,6 +826,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 Simple, Transparent Pricing
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -806,6 +859,7 @@ export default function DevOpsAutomationPage() {_const _features = [
                       </span>
                     </div>
                   )}
+
                   <div className='text-center'>
                     <h3 className='text-2xl font-bold text-white mb-2'>
                       {plan.name}
@@ -841,14 +895,18 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
                         </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
                     </ul>;
                     <Button
 
-
-
+                      href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
+                      variant={plan.popular ? 'primary' : 'outline'}
+                      size='lg'
+                      className={`w-full ${
+                        plan.popular
 
 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white'                          : 'border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white'
@@ -860,10 +918,12 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       }`}
                     >;
                       {plan.cta}
@@ -930,13 +990,17 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
+
 
 
 
@@ -1002,6 +1066,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -1012,6 +1077,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
         {/* Testimonials Section */}
+
 
 
 
@@ -1029,8 +1095,10 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 Trusted by DevOps Teams Worldwide
               </h2>
@@ -1057,6 +1125,7 @@ export default function DevOpsAutomationPage() {_const _features = [
                     <p className='text-sm text-gray-400'>{testimonial.role}</p>
                     <p className='text-sm text-blue-400'>
                       {testimonial.company}
+
                     </p>                  </div>                Trusted by DevOps Teams Worldwide
               </h2>
             </div>
@@ -1080,11 +1149,13 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
                 </Card>
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -1107,10 +1178,12 @@ export default function DevOpsAutomationPage() {_const _features = [
         {/* CTA Section */}
 
 
+
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-blue-600 to-cyan-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
               Ready to Automate Your DevOps?
 
@@ -1152,6 +1225,7 @@ export default function DevOpsAutomationPage() {_const _features = [
 
 
 
+
             </h2>
             <p className='text-xl text-blue-100 mb-12'>
               Join thousands of teams who trust Zion for their DevOps automation
@@ -1176,6 +1250,7 @@ export default function DevOpsAutomationPage() {_const _features = [
               >
                 Start Free Trial
               </Button>
+
 
 
               <Button
@@ -1383,4 +1458,5 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

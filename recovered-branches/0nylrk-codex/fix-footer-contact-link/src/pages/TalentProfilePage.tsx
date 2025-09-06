@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {TalentProfile} from "@/components/profile/TalentProfile";
@@ -49,6 +50,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
+
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user ? {
     id: user.id |''
@@ -68,8 +70,10 @@ export default function TalentProfilePage() {
     createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
     role: '' // Default empty string since userDetails doesn't have this property
+
   }
   },
+
 
   // Handle loading error gracefully
   useEffect(() => {
@@ -78,6 +82,7 @@ export default function TalentProfilePage() {
         title: "Error loading profile"
         description: "There was a problem loading this talent profile. Please try again."
         variant: "destructive"})
+
     }
   }, [error]);
   if (isLoading) {
@@ -149,6 +154,7 @@ export default function TalentProfilePage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
   if (error |!profile) {
     return <ProfileErrorState error={error} />
@@ -164,8 +170,10 @@ export default function TalentProfilePage() {;
       return
     }
     setIsHireModalOpen(true)
+
   }
   },
+
 
   const handleMessageTalent = () => {
     if (!isAuthenticated) {
@@ -177,23 +185,35 @@ export default function TalentProfilePage() {;
       return
     }
     setIsMessageModalOpen(true)
-  }
-
-  return (
-    <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile
-        profile={profile}
-  },
-
-  return (
-    <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile 
-        profile={profile} 
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+;
+  const handleRequestHire = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to hire this talent.",;
+        variant: "default"}),;
+      navigate('/login', { state: { from: `/talent/${id}` } }),;
+      return;
+    }
+    setIsHireModalOpen(true);
+  },;
+  const handleMessageTalent = () => {;
+    if (!isAuthenticated) {;
+      toast({;
+        title: "Authentication required",;
+        description: "Please sign in to message this talent.",;
+        variant: "default"}),;
+      navigate('/login', { state: { from: `/talent/${id}` } });
+      return;
+    }
+    setIsMessageModalOpen(true);
+  };
+  return (;
+    <div className="min-h-screen bg-zion-blue pb-12">;
+      <TalentProfile;
+        profile={profile} ;
 
 
         onRequestHire={handleRequestHire}
@@ -223,6 +243,7 @@ export default function TalentProfilePage() {;
           </Button>
         </div>
       </StickyAction>
+
       
 
 
@@ -235,6 +256,7 @@ export default function TalentProfilePage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Request to Hire Modal */}
       <HireRequestModal
         talent={profile}
@@ -247,6 +269,7 @@ export default function TalentProfilePage() {;
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
+
       />
     </div>
   )
@@ -265,5 +288,4 @@ export default function TalentProfilePage() {;
     </div>);
 }
 
-=======
-;
+

@@ -1,3 +1,4 @@
+
 export default function FiveHundred() {
 import React from 'react';
 
@@ -14,12 +15,14 @@ import React from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className='min-h-screen flex items-center justify-center'>;
       Something went wrong.;
     </div>;
   );export default function FiveHundred() {;
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
+
 
 }
 
@@ -38,3 +41,4 @@ import React from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

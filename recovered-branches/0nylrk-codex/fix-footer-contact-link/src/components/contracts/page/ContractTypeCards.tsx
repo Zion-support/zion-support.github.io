@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
 
 
+
   Card,
   CardContent,
   CardDescription,
@@ -26,6 +27,7 @@ export function ContractTypeCards({
 }
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
+
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10">
       <Card>
@@ -52,6 +54,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>
         </CardFooter>
       </Card>
+
       
 
 
@@ -64,6 +67,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -89,6 +93,8 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+
+
 
 
 
@@ -178,5 +184,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

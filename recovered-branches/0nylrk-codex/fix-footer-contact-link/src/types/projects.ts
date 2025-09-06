@@ -1,6 +1,8 @@
 
 
 
+
+
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -8,6 +10,32 @@
   | 'completed'
   | 'canceled';
 
+
+  id: string;
+  client_id: string;
+  talent_id: string;
+  job_id: string;
+  start_date: string;
+  scope_summary: string;
+  payment_terms: 'hourly' | 'fixed' | 'milestone';
+  agreement_url?: string;
+  status: ProjectStatus;
+  created_at: string;
+  updated_at: string;
+  job?: {
+    title: string
+    description: string
+  }
+  talent_profile?: {
+    full_name: string;
+    professional_title?: string
+    profile_picture_url?: string
+  }
+  client_profile?: {
+    display_name: string
+    avatar_url?: string
+  }
+}
 
 
   id: string;
@@ -18,6 +46,8 @@
   created_by_profile?: {
 
     avatar_url?: string
+
+
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -50,11 +80,19 @@ export interface Project {;
     display_name: string,;
     avatar_url?: string;
 
+  }
+}
+;
+export interface ProjectNote {;
+  id: string,;
+  project_id: string,;
+  user_id: string,;
+  content: string,;
+  created_at: string,;
+  created_by_profile?: {;
+    display_name: string;
+    avatar_url?: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 }

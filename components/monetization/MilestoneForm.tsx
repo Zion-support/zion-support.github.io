@@ -23,6 +23,7 @@ import React, { useState } from 'react';
 
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
 
+
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
@@ -30,6 +31,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -60,6 +62,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setError(err?.message |'Failed to create milestone');
     } finally {
       setLoading(false);    }
+
   }
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>
@@ -78,6 +81,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
     }
   }
   };
+
 
   return (
 
@@ -167,6 +171,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -188,4 +193,5 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

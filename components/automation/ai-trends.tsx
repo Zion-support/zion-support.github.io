@@ -1,6 +1,7 @@
 
 
 
+
 }</div> </div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
@@ -28,6 +29,7 @@ function getServerSideProps() {
 
  </div> </div>) ) ;
  </div> </div>) ) 
+
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {
@@ -40,6 +42,7 @@ export type Trend = {
 }
 export async function getServerSideProps() {
 
+
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 export type Trend = {;
@@ -50,6 +53,7 @@ export type Trend = {;
   summary: string,;
   tags: string[];
 };
+
 
 
 
@@ -66,6 +70,8 @@ export type Trend = {
 };
 
 export async function getServerSideProps() {;
+
+
   const file = path.join(process.cwd(), 'dataai-trends.json');
   let items: Trend[] = [];  try {
     const raw = fs.readFileSync(file, 'utf-8');
@@ -78,6 +84,7 @@ export async function getServerSideProps() {;
   items && items.sort((a, b) => (a && a.date < b && b.date ? 1 : -1));
   return { props: { items } }
 }
+
 
 
 export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
@@ -101,6 +108,7 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
             </div>;
           </div>;
         ))}
+
 
 
 
@@ -129,21 +137,6 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
       </div>
 
 
-
-    </div>;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-);
-}
-  );
-}
-
-
-
-=======
   items.sort ((a, b) => (a.date < b.date ? 1 : -1));
   return { props: { items } }
 }
@@ -198,5 +191,13 @@ export default function AiTrendsPage({ items }: { items: Trend[] }) {
         ))}
       </div>
 
+
+
+=======
+);
+}
+
+  );
+}
 
 

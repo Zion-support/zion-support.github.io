@@ -1,6 +1,7 @@
 
 
 
+
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -10,6 +11,7 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
+
 
 
 
@@ -60,6 +62,7 @@ export function TransactionHistory() {;
                         +{tx.amount} ZION$
                       </Badge>
                     </div>
+
 import React from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -122,6 +125,7 @@ export function TransactionHistory() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   ))}
                 </div>
               )}

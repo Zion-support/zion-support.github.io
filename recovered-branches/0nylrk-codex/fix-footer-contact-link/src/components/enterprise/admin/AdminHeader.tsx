@@ -6,6 +6,7 @@
 
 
 
+
 export function AdminHeader() {;
 
 
@@ -15,6 +16,7 @@ export function AdminHeader() {;
 
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
+
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
@@ -78,6 +80,7 @@ export function AdminHeader() {
       </div>
     </div>
   )
+
 }
 import React from "react",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -145,6 +148,7 @@ export function AdminHeader() {;
     </div>);
 
 }
+
 
 
 

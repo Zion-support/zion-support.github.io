@@ -3,8 +3,10 @@
 
 
 
+
 import { useState } from "react",
 import { Link } from "react-router-dom",
+
 import { 
   DropdownMenu;
   DropdownMenuContent;
@@ -12,6 +14,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",
+
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
@@ -28,6 +31,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs",
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -36,6 +40,7 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
+
 
 
 
@@ -56,6 +61,7 @@ export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
+
 
 
 
@@ -87,16 +93,33 @@ export function ApplicationActions({;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
 
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "shortlisted")}
+          >
+            Shortlist
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "interview")}
+          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "hired")}
+          >
+            Hire
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => onStatusChange(application.id, "rejected")}
+            className="text-red-600"
+          >
+            Reject
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
 
-
-
-
-      <Button 
-        variant="default" 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
         size="sm"
         asChild
@@ -107,6 +130,7 @@ export function ApplicationActions({;
       </Button>
     </div>
   )
+
 }
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -198,3 +222,4 @@ function ApplicationActions() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

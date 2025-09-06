@@ -37,11 +37,13 @@ import OpenAI from 'openai';
 
 
 
+
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         { role: 'user', content: prompt }];
       temperature: 0.2});
@@ -60,11 +62,10 @@ import OpenAI from 'openai';
 }
 
 
+      return res.status(200).json(json);
 
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

@@ -1,3 +1,4 @@
+
 // Fraud detection types
 export type AdminActionType =
   | 'ban_user'
@@ -11,9 +12,11 @@ export type AdminActionType =
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   id: string;
   case_id: string;
   type: AdminActionType;
+
 
 
 ;
@@ -41,6 +44,7 @@ export interface FraudDetectionResult {
   is_fraud: boolean;
 
 
+
   isFraud: boolean;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
@@ -48,10 +52,12 @@ export interface FraudDetectionResult {
 
 
 
+
 export interface FraudDetectionConfig {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   enabled: boolean;
   rules: {
@@ -78,6 +84,7 @@ export interface FraudDetectionConfig {
     actions: AdminActionType[];
 
 
+
   }
 
 
@@ -94,3 +101,4 @@ export interface FraudDetectionConfig {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

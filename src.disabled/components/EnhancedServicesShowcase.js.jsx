@@ -6,12 +6,14 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 "const EnhancedServicesShowcase = () => {" const [selectedCategory,setSelectedCategory] = useState ("all") " const [searchTerm,setSearchTerm] = useState (") " const categories = [" { id: "all,",name: "All: Services,",icon: "},{ id: ",micro: "- saas",",name: "Micro: SAAS,",icon: "}," { id: "it: - services,",name: "IT: Services,",icon: "},{ id: ",ai: "- services",",name: "AI: Services,",icon: "}," { id: "emerging: - tech,",name: "Emerging: Tech,",icon: "}]" const filteredServices = enhancedServices2025.filter (service => {" const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) |"";"""";"""
 =======

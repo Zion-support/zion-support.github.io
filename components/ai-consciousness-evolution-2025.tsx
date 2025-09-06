@@ -23,7 +23,15 @@ import Layout from '../components / layout / Layout';
 import { motion } from 'framer-motion';
 
 
+import {
 
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
 
   website: 'https://ziontechgroup.com'
 }
@@ -185,6 +193,7 @@ const technology = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
   Brain,
@@ -301,6 +310,7 @@ const testimonials = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 export default function AIConsciousnessEvolution2025() {
 
   return (
@@ -353,18 +363,21 @@ export default function AIConsciousnessEvolution2025() {
               key={i}
               className='absolute w-2 h-2 bg-purple-400 rounded-full opacity-30'
               animate={{
+
                 x: [0, 100, 0]
                 y: [0, -100, 0]
                 opacity: [0.3, 0.8, 0.3]
                 x: [0, 100, 0],
                 y: [0, -100, 0],
                 opacity: [0.3, 0.8, 0.3],
+
               }}              transition={{
                 duration: 8 + i * 2
                 repeat: Infinity
                 delay: i * 0.3
               }}
               style={{
+
 
 
 
@@ -391,6 +404,7 @@ export default function AIConsciousnessEvolution2025() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}>;
@@ -404,7 +418,9 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <Sparkles className='w-4 h-4 mr-2' />
@@ -503,7 +519,8 @@ export default function AIConsciousnessEvolution2025() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
 
-
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+                  className='text-center'
 
 
                 >
@@ -513,6 +530,7 @@ export default function AIConsciousnessEvolution2025() {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
+
                   <div className='text-sm text-purple-300'>{stat.label}</div>                </motion.div>                >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
                     {stat.icon}
@@ -531,11 +549,13 @@ export default function AIConsciousnessEvolution2025() {
 
 
 
+
             {/* CTA Buttons */}
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
+
 
                 className='bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-200 hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'              >
 
@@ -548,6 +568,7 @@ export default function AIConsciousnessEvolution2025() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* CTA Buttons */}
+
 
 
 
@@ -653,12 +674,14 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -672,7 +695,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -734,7 +759,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Brain className='w-8 h-8 text-purple-400' />
@@ -744,6 +771,7 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Advanced AI algorithms guide you through personalized
+
                   consciousness development exercises.                </p>              >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Brain className="w-8 h-8 text-purple-400" />
@@ -769,12 +797,14 @@ label: 'Success Rate',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -789,6 +819,7 @@ label: 'Success Rate',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* How It Works Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -809,12 +840,14 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -828,7 +861,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -855,7 +890,33 @@ label: 'Success Rate',
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
 
+              {
 
+                description:
+                  'Our AI analyzes your current consciousness level and creates a personalized development plan.'
+                icon: <Brain className='w-12 h-12' />
+              }
+              {
+                step: '02'
+                title: 'Personalized Training'
+                description:
+                  'AI-generated exercises and experiences tailored to your specific needs and goals.'
+                icon: <Target className='w-12 h-12' />
+              }
+              {
+                step: '03'
+                title: 'Continuous Evolution'
+                description:
+                  'Real-time feedback and adaptation ensure continuous growth and development.'
+                icon: <TrendingUp className='w-12 h-12' />
+              },            ].map((step, index) => (              {
+
+              {
+                step: '03'
+                title: 'Continuous Evolution'
+                description: 'Real-time feedback and adaptation ensure continuous growth and development.'
+                icon: <TrendingUp className="w-12 h-12" />
+              }
 
 
             ].map((step, index) => (
@@ -864,6 +925,7 @@ label: 'Success Rate',
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
                 viewport={{ once: true }}
@@ -926,6 +988,7 @@ label: 'Success Rate',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
               >
                 <div className='relative mb-8'>
                   <div className='w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -943,6 +1006,7 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {step.description}
+
                 </p>              </motion.div>              >
                 <div className="relative mb-8">
                   <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -970,10 +1034,12 @@ label: 'Success Rate',
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -988,6 +1054,7 @@ label: 'Success Rate',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Use Cases Section */}
       <section className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-black">;
@@ -1008,12 +1075,14 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1027,7 +1096,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1088,7 +1159,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
                   <Lightbulb className='w-8 h-8 text-purple-400' />
@@ -1098,6 +1171,7 @@ label: 'Success Rate',
                 </h3>
                 <p className='text-gray-400'>
                   Leverage AI-powered consciousness development for enhanced
+
                   personal and professional growth.                </p>              >
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Lightbulb className="w-8 h-8 text-purple-400" />
@@ -1123,12 +1197,14 @@ label: 'Success Rate',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1143,6 +1219,7 @@ label: 'Success Rate',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Technology Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -1163,12 +1240,14 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1182,7 +1261,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1367,6 +1448,7 @@ label: 'Success Rate',
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 
+
                 className='text-center group'
 
 
@@ -1413,6 +1495,7 @@ label: 'Success Rate',
 
 
 
+
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300'>
                   <Cpu className='w-10 h-10 text-purple-400' />
@@ -1427,12 +1510,15 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1443,10 +1529,12 @@ label: 'Success Rate',
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
 
 
 
@@ -1457,6 +1545,7 @@ label: 'Success Rate',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1470,7 +1559,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1533,7 +1624,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1562,6 +1655,7 @@ label: 'Success Rate',
                     />
                   ))}
                 </div>
+
                 <p className='text-gray-300 italic'>"{testimonial.content}"</p>              </motion.div>              >
                 <div className="flex items-center mb-4">
                   <div className="text-3xl mr-3">{testimonial.avatar}</div>
@@ -1592,10 +1686,12 @@ label: 'Success Rate',
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1610,6 +1706,7 @@ label: 'Success Rate',
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Pricing Section */}
       <section className='py-20 bg-gradient-to-b from-black to-purple-900/20'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-purple-900/20">;
@@ -1630,12 +1727,14 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -1649,7 +1748,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1715,9 +1816,43 @@ label: 'Success Rate',
                 period: '/month',                  'Basic AI assessment10 consciousness exercisesProgress trackingEmail supportMobile app access';
                 ];
 
+                popular: false
 
-
-
+                description:
+                  'Advanced features for serious consciousness development'
+                features: [
+                  'Advanced AI assessment'
+                  'Unlimited exercises'
+                  'Personalized coaching'
+                  'Priority support'
+                  'Advanced analytics'
+                  'Integration with wearables'
+                  'Group sessions'
+                ]
+                popular: true
+              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
+                ];
+                popular: true
+              }
+                name: 'Enterprise'
+                price: '$799'
+                period: '/month'
+                description: 'Complete solution for organizations and teams'
+                features: [
+                  'Everything in Professional'
+                  'Team management'
+                  'Custom integrations'
+                  'Dedicated support'
+                  'White-label options'
+                  'Advanced reporting'
+                  'API access'
+                ]
+                popular: false
+              },            ].map((plan, index) => (                  'Everything in ProfessionalTeam managementCustom integrationsDedicated supportWhite-label optionsAdvanced reportingAPI access'
+                ];
+                popular: false
+              }
+              <motion.div
 
                 key={plan.name}
                 initial={{ opacity: 0, coordinate_y: 30 }}
@@ -1725,7 +1860,9 @@ label: 'Success Rate',
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                className={`relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border rounded-2xl p-8 ${
+                  plan.popular
+                    ? 'border-purple-500/50 shadow-2xl shadow-purple-500/20'                    : 'border-purple-500/20'
 
 
                 }`}
@@ -1748,6 +1885,7 @@ label: 'Success Rate',
                     </span>
                   </div>
                 )}
+
 
 
 
@@ -1818,11 +1956,13 @@ label: 'Success Rate',
                     <li key={featureIndex} className="flex items-center text-gray-300">;
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />;
 
+
                       {feature}
                     </li>;
                   ))}
 
                 </ul>;
+
 
 
 
@@ -1838,6 +1978,7 @@ label: 'Success Rate',
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </li>
                   ))}
@@ -1860,6 +2001,7 @@ label: 'Success Rate',
 
 
 
+
           </div>;
         </div>;
       </section>;
@@ -1878,11 +2020,13 @@ label: 'Success Rate',
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-t border-purple-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+
 
 
 
@@ -1917,6 +2061,7 @@ label: 'Success Rate',
 
 
 
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1940,6 +2085,7 @@ label: 'Success Rate',
               </button>
             </div>
             {/* Contact Info */}
+
 
 
 
@@ -1978,6 +2124,7 @@ label: 'Success Rate',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 <motion.div
                   key={contact.label}
                 Consciousness?;
@@ -2046,7 +2193,9 @@ label: 'Success Rate',
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -2058,6 +2207,7 @@ label: 'Success Rate',
                   <div className='text-sm text-purple-300 mb-1'>
                     {contact.label}
                   </div>
+
                   <div className='text-white font-medium'>{contact.value}</div>                </motion.div>                >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400">
                     {contact.icon}
@@ -2079,12 +2229,14 @@ label: 'Success Rate',
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
+
 );  )
 }
 
@@ -2098,4 +2250,5 @@ label: 'Success Rate',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

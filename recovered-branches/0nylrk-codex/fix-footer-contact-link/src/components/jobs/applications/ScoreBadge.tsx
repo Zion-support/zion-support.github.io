@@ -3,6 +3,7 @@ import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
   application: JobApplication;
 }
+
 export function ScoreBadge({ application }: ScoreBadgeProps) {
 
   const score = application.match_score |0;
@@ -22,6 +23,7 @@ interface ScoreBadgeProps {
 
 
 
+
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",
@@ -33,6 +35,7 @@ interface ScoreBadgeProps {
     <span className={`rounded-full px-2 py-1 text-xs font-medium ${className}`}>
       {score ? `${score}%` : "Not scored"}
     </span>
+
   );
 }
   )
@@ -92,6 +95,7 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
     </span>);
 
 }
+
 
 
 

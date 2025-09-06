@@ -1,6 +1,7 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 
@@ -17,10 +18,12 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
+
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
+
 
 
 
@@ -56,6 +59,7 @@ serve(async (req) => {
             "Content-Type": "image/gif",
             "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
             "Pragma": "no-cache",
+
             "Expires": "0"}}
       )
     } else if (type === "click") {
@@ -63,6 +67,7 @@ serve(async (req) => {
         .from("email_campaigns")
         .update({ clicked_at: new Date().toISOString() })
         .eq("id", campaignId)
+
         .eq("user_id", userId);
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl |`${supabaseUrl}/dashboard`;
@@ -70,6 +75,7 @@ serve(async (req) => {
 
       // Redirect to the specified URL or default to dashboard
       const destination = redirectUrl || `${supabaseUrl}/dashboard`,
+
       return new Response(null, {
         status: 302
         headers: {
@@ -77,17 +83,20 @@ serve(async (req) => {
     }
     return new Response("Invalid event type", { status: 400 })
   } catch (error) {
+
     console.error("Error tracking email event:", error);
     console.error("Error tracking email event:", error),
     
+
     // If it was a click event, still try to redirect the user
     if (type === "click" && redirectUrl) {
       return new Response(null, {
         status: 302
 
-
-
-    return new Response ("Error processing event", { status: 500 });
+        headers: {
+          Location: redirectUrl}})
+    }
+    return new Response("Error processing event", { status: 500 })
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -161,6 +170,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -171,3 +181,4 @@ serve(async (req) => {;
 
   }
 });
+

@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -38,6 +39,7 @@ import {PreviewResume} from '../PreviewResume';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -45,6 +47,7 @@ interface ResumeStepContentProps {
   onNextStep: () => void
   onPrevStep: () => void
 }
+
 export const ResumeStepContent = ({
   activeTab;
   resume
@@ -58,6 +61,7 @@ export const ResumeStepContent = ({
   resume, 
   onNextStep, 
   onPrevStep 
+
 }: ResumeStepContentProps) => {
   return (
     <>
@@ -73,8 +77,10 @@ export const ResumeStepContent = ({
         />
       </TabsContent>
       <TabsContent value="work-experience">
+
         <WorkExperienceForm
         <WorkExperienceForm 
+
 
 
 import { TabsContent } from "@/components/ui/tabs",;
@@ -131,7 +137,9 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="work-experience">;
 
 
+
         <WorkExperienceForm
+
 
 
           resumeId={resume?.id!}
@@ -141,8 +149,10 @@ export const ResumeStepContent = ({ ;
         />
       </TabsContent>
       <TabsContent value="education">
+
         <EducationForm
         <EducationForm 
+
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
@@ -161,21 +171,23 @@ export const ResumeStepContent = ({ ;
         />
       </TabsContent>
       <TabsContent value="certifications">
+
         <CertificationsForm
         <CertificationsForm 
+
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
 
+        />
+      </TabsContent>
+      <TabsContent value="preview">
 
-
-        <PreviewResume 
-          resume={resume as Resume} 
-          onBack={onPrevStep}
-
-
-
+        />
+      </TabsContent>
+    </>
+  )
 
 
         />;
@@ -184,8 +196,10 @@ export const ResumeStepContent = ({ ;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 };
+

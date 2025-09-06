@@ -1,5 +1,6 @@
 
 
+
 import {
   DropdownMenu
   DropdownMenuContent
@@ -60,11 +61,13 @@ export function UserMenu() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
 
+
   const handleSignOut = async () => {
     try {
       await logout()
     } catch (error) {
       toast({
+
         title: "Error signing out"
         description: "There was an error signing you out. Please try again."
         variant: "destructive"
@@ -76,6 +79,7 @@ export function UserMenu() {
         variant: "destructive"})
     }
   },
+
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
@@ -99,6 +103,7 @@ export function UserMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
+
             <AvatarImage
               src={user.avatarUrl |""}
               alt={user.displayName |"User Avatar"}
@@ -108,12 +113,14 @@ export function UserMenu() {
             </AvatarFallback>
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
+
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
+
           <div className="text-sm font-medium leading-none">
             {user.displayName |"User"}
           </div>
@@ -122,6 +129,7 @@ export function UserMenu() {
           </div>
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
+
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -140,6 +148,7 @@ export function UserMenu() {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+
   );
 }
   )
@@ -292,6 +301,7 @@ if ( {) {
     </DropdownMenu>);
 
 }
+
 
 
 

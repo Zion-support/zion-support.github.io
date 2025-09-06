@@ -5,6 +5,8 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -17,6 +19,7 @@ import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {HireNowCTA} from "@/components/profile/HireNowCTA";
 import {Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2} from "lucide-react";
+
 
 
 
@@ -35,6 +38,7 @@ export default function ProfilePage() {
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+
 import { useState, useEffect } from "react",
 import { useParams } from "react-router-dom",
 import { supabase } from "@/integrations/supabase/client",
@@ -67,6 +71,7 @@ export default function ProfilePage() {
 
   useEffect(() => {
     const fetchProfile = async () => {
+
 
 
 
@@ -165,6 +170,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -172,6 +178,7 @@ if ( {) {
       </div>;
     );
   }
+
 
 
   if (isError || !profileData) {;
@@ -188,13 +195,16 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   return (
     <>;
       <SEO
 
         title={`${profileData.full_name} | Talent Profile`}
 
+
         description={profileData.bio || "View the profile of this talented individual."}
+
 
 
       />
@@ -252,6 +262,7 @@ if ( {) {
                       </div>;
                     )}
 
+
                   </div>;
                 </div>;
               </div>;
@@ -261,6 +272,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
@@ -277,8 +289,10 @@ if ( {) {
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
+
               <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+
             </div>
 
             {/* Portfolio Section */}
@@ -305,8 +319,10 @@ if ( {) {
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
+
               <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
+
             </div>
 
             {/* Social Links */}
@@ -322,6 +338,7 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
+
                   </a>
                   </Link>
 
@@ -335,6 +352,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -345,6 +363,7 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Twitter className="h-6 w-6" />
+
                   </a>
                   </Link>
 
@@ -358,6 +377,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -368,6 +388,7 @@ if ( {) {
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
+
                   </a>
                   </Link>
 
@@ -381,6 +402,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 )}
 
               </div>;
@@ -392,6 +414,7 @@ if ( {) {
           <div className="col-span-12 lg:col-span-4 space-y-6">;
             <HireNowCTA
               talentProfile={{
+
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
@@ -421,3 +444,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

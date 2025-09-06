@@ -4,7 +4,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default function Placeholder() {
   return (
@@ -22,8 +24,10 @@ export default function Placeholder() {
           <a className='text-blue-600 hover:underline'>Back to Home</a>
         </Link>
       </div>
+
     </main>;
     </main>
+
   );export default function Placeholder() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -61,6 +65,7 @@ export default function Placeholder() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -68,3 +73,4 @@ export default function Placeholder() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

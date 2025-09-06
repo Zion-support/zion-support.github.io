@@ -2,11 +2,13 @@
 
 
 
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
+
 
 
 
@@ -80,6 +82,8 @@ export function useMessagingOperations(user: UserWithProfile) {
     fetchConversations;
 
     loadMessages
+
+
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { Message, Conversation, ConversationContextData } from '@/types/messaging',;
 import { useConversationState } from './useConversationState',;
@@ -164,10 +168,12 @@ function useMessagingOperations() {
     markAsRead;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }

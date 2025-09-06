@@ -1,10 +1,13 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
 import {
+
 
 
 
@@ -53,6 +56,7 @@ import {
   MessageCircle as MessageCircleIcon,;
   Star as StarIcon,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+
 
 
 
@@ -471,6 +475,7 @@ const contactInfo = {;
 const itemVariants = {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const itemVariants = {
@@ -760,12 +765,16 @@ export default function UltraFuturisticFooter2032() {;
 
 
 
+
 const itemVariants = {
   hidden: { opacity: 0, y: 20 }
   visible: { opacity: 1, y: 0 },  visible: { opacity: 1, y: 0 }
 }
 export default function UltraFuturisticFooter2032() {
 
+  return (
+
+                    {contactInfo.website}
 
 
                   </a>
@@ -828,7 +837,9 @@ export default function UltraFuturisticFooter2032() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 Our Revolutionary Services
@@ -854,6 +865,7 @@ export default function UltraFuturisticFooter2032() {
                       {category && category.services.map((service, serviceIndex) => (;
                         <li key={serviceIndex}>;
                           <Link
+
                             href={service && service.href}
                             className='text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform'                            className="text-slate-300 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform">;
                             {service && service.name}
@@ -865,6 +877,7 @@ export default function UltraFuturisticFooter2032() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 Quick Access
               </h3>
 
@@ -882,6 +895,7 @@ export default function UltraFuturisticFooter2032() {
                     <li key={index}>
                       <Link
                         href={link.href}
+
                         className='flex items - center space - x-2 text - slate - 300 hover:text - purple - 300 transition - colors duration - 200 text - sm group';
                       >;
                         <link.icon className='w - 4 h - 4 group - hover:scale - 110 transition - transform' />                        <span>{link.name}</span>                Quick Access;
@@ -907,6 +921,7 @@ export default function UltraFuturisticFooter2032() {
 
 
 
+
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -914,6 +929,7 @@ export default function UltraFuturisticFooter2032() {
                     <li key={index}>
                       <Link
                         href={item.href}
+
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
@@ -982,6 +998,7 @@ export default function UltraFuturisticFooter2032() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -997,6 +1014,7 @@ export default function UltraFuturisticFooter2032() {
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1007,6 +1025,7 @@ export default function UltraFuturisticFooter2032() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               {/* Social Links */}
@@ -1042,6 +1061,7 @@ export default function UltraFuturisticFooter2032() {
                     <a
                       key={index}
                       href={social.href}
+
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
@@ -1058,11 +1078,13 @@ export default function UltraFuturisticFooter2032() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
+
 
 
 
@@ -1078,6 +1100,7 @@ export default function UltraFuturisticFooter2032() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -1085,6 +1108,8 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
+
+
 
 
 
@@ -1208,6 +1233,7 @@ export default function UltraFuturisticFooter2032() {
       </div>;
     </footer>;
   );
+
 }        <motion&& motion.button
           whileHover={{ scale: 1 && 1.1 }}
           whileTap={{ scale: 0 && 0.9 }}
@@ -1225,5 +1251,6 @@ export default function UltraFuturisticFooter2032() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

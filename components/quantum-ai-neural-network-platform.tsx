@@ -21,12 +21,9 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 
+import {
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+} from 'lucide-react';
 
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -199,6 +196,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         </div>
       </section>
 
+
       />;
 
       {/* Hero Section */}
@@ -287,6 +285,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
   Atom,
@@ -351,6 +350,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+
             className='text - center'      <section className="relative py - 20 overflow - hidden">;
         <div className="absolute inset - 0 bg - gradient - to - br from - blue - 900 / 20 via - cyan - 900 / 20 to - indigo - 900 / 20"></div>;
         <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (6, 182, 212, 0.1), transparent_50%)]"></div>;
@@ -436,6 +436,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features
@@ -487,6 +488,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='bg-gray-800/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300'
+
 
 
 
@@ -553,6 +555,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
               >
                 <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>
                   <Check className='w-6 h-6 text-white' />
@@ -567,12 +570,15 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -583,6 +589,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -590,7 +597,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -642,7 +651,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -664,6 +675,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -673,10 +685,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -699,11 +713,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
       {/* Pricing Section */}
       <section className='py-20 bg-gray-900/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
 
 
 
@@ -717,11 +733,13 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+
 
 
 
@@ -739,6 +757,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -803,7 +822,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -819,6 +840,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -827,6 +849,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -856,10 +879,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

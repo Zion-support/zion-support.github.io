@@ -1,5 +1,7 @@
 
 
+
+
 type Metrics = {
   updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
@@ -29,11 +31,13 @@ export default function DaoMetrics(req, res) {
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -94,6 +98,7 @@ export default function DaoMetrics(req, res) {
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>
+
           )}
           )  } catch (error) {
     console.error("Error:", error);
@@ -111,6 +116,7 @@ export default function DaoMetrics(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         </div>
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
@@ -126,10 +132,12 @@ export default function DaoMetrics(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import _React from';react' const UltraFuturisticBackground2034 = ({ intensity = 0.8,theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff',#ff00ff',#ffff00',#00ff00'],neon['#ff0080',#8000ff',#00ffff',#ffff00'],holographic['#ff6b6b',#4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]'';
 =======

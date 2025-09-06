@@ -2,6 +2,8 @@
 
 
 
+
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend } from 'recharts',
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
@@ -12,7 +14,9 @@ import { useState } from "react",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface AnalyticsChartProps {
   title: string,
@@ -24,10 +28,12 @@ interface AnalyticsChartProps {
   onTimeRangeChange?: (range: string) => void
 }
 
+
 export function AnalyticsChart({ ;
   title;
 export function AnalyticsChart({ 
   title,
+
   description, 
   data, 
   type = 'line',
@@ -40,6 +46,7 @@ export function AnalyticsChart({
   const colors = [
     '#8884d8#82ca9d#ffc658#ff8042#0088fe#00C49F#FFBB28#FF8042', '#a4de6c#d0ed57'
   ],
+
   
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
@@ -85,6 +92,7 @@ export function AnalyticsChart({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   height={50}
 
                 />;
@@ -181,6 +189,7 @@ export function AnalyticsChart({
                 ))}
               </BarChart>
             )}
+
           </ResponsiveContainer>
         </div>
       </CardContent>
@@ -193,5 +202,4 @@ export function AnalyticsChart({
     </Card>);
 }
 
-=======
-;
+

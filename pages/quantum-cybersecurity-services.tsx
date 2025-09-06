@@ -1,5 +1,37 @@
 
 
+import Head from 'next/head';
+import { motion  } from 'framer-motion';
+import { quantumCybersecurityServices  } from '../data/2026-quantum-cybersecurity-services';
+import UltraFuturisticBackground2026 from '../components/ui/UltraFuturisticBackground2026';
+import UltraFuturisticServiceCard2026 from '../components/ui/UltraFuturisticServiceCard2026';
+
+export default function QuantumCybersecurityServices() {
+  return (
+    <>
+      <Head>
+        <title>Quantum Cybersecurity Services - ZionTech Group | Unbreakable Security Solutions</title>
+        <meta name="description" content="Protect your business with unbreakable quantum cybersecurity. Quantum encryption, threat detection, identity verification, and network security powered by quantum computing. Contact us at +1 302 464 0950" />
+        <meta name="keywords" content="quantum cybersecurity, quantum encryption, quantum threat detection, quantum identity verification, quantum network security, ZionTech Group" />
+        <meta name="author" content="ZionTech Group" />
+        <meta name="robots" content="index, follow" />
+
+        <meta property="og:title" content="Quantum Cybersecurity Services - ZionTech Group" />
+        <meta property="og:description" content="Unbreakable security powered by quantum computing and advanced AI algorithms." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity-services" />
+        <meta property="og:site_name" content="ZionTech Group" />
+
+        <meta name="contact:phone" content="+1 302 464 0950" />
+        <meta name="contact:email" content="kleber@ziontechgroup.com" />
+        <meta name="contact:address" content="364 E Main St STE 1008 Middletown DE 19709" />
+        <meta name="contact:website" content="https://ziontechgroup.com" />
+      </Head>
+
+        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
+          <div className="text-center z-10 max-w-6xl mx-auto">
+
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -40,6 +72,7 @@
 }
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed"
             >
+
               Unbreakable security powered by quantum computing and advanced AI
               algorithms. Protect your business from tomorrow's threats today.            </motion.p>
               Unbreakable security powered by quantum computing and advanced AI algorithms. Protect your business from tomorrow's threats today.
@@ -65,6 +98,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             <motion.div
@@ -98,6 +132,7 @@
                 Get Started
               </Link>
             </motion.div>
+
             {/* Key Benefits */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -106,6 +141,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             >
@@ -127,6 +163,7 @@
             </motion.div>
           </div>
         </section>
+
         {/* Services Section */}
         <section id='services' className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div
@@ -160,6 +197,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -170,6 +208,7 @@
                 Protect your digital assets with the most advanced security technology available, powered by quantum computing and AI.
               </p>
             </motion.div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {quantumCybersecurityServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -236,9 +275,11 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <UltraFuturisticServiceCard2026
+
                     service={service}
                     variant='premium'
                     theme='cyberpunk'                  />;
@@ -268,6 +309,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -275,6 +317,7 @@
                 </span>
               </h2>
             </motion.div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -287,6 +330,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -303,6 +347,7 @@
                 </ul>
               </motion.div>
               <motion.div
+
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -311,6 +356,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -329,6 +375,7 @@
             </div>
           </div>
         </section>
+
         {/* Security Features Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion&& motion.div
@@ -361,6 +408,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -368,6 +416,7 @@
                 </span>
               </h2>
             </motion.div>
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -457,6 +506,7 @@
           <div className='max-w-4xl mx-auto text-center'>            <motion&& motion.div
 
 
+
               >
                 <div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
@@ -465,6 +515,7 @@
             </div>
           </div>
         </section>
+
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div
@@ -511,6 +562,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
@@ -520,6 +572,7 @@
               <p className="text-xl text-gray-300 mb-8">
                 Don't wait for quantum computers to break your security. Contact us now to implement quantum-resistant protection.
               </p>
+
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>
                 <div className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6'>
                   <div className='text-3xl mb-4'>📱</div>
@@ -563,6 +616,7 @@
                   </a>
 
 
+
                     +1 302 464 0950
                   </Link>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -584,6 +638,7 @@
                   </p>
                 </div>
               </div>
+
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
@@ -597,6 +652,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
@@ -616,6 +672,7 @@
         </section>
       </UltraFuturisticBackground2026>
     </>
+
   );
   )
             >;
@@ -674,4 +731,5 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

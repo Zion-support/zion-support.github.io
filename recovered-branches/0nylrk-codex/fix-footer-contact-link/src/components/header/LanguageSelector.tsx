@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Globe } from "lucide-react";
 
 
+
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
@@ -61,6 +62,9 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 
 
+
+
+
   return (
     <DropdownMenu>;
       <DropdownMenuTrigger as_child>;
@@ -80,6 +84,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
         {supported_languages.map ((lang) => (
           <DropdownMenuItem;
             key={lang.code}
+
             className={`cursor-pointer ${
               currentLanguage === lang.code
                 ? "bg-zion-purple/20 text-zion-cyan"
@@ -93,6 +98,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             }`}
             onClick={() => changeLanguage(lang.code)}
           >
@@ -102,6 +108,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
             </div>
           </DropdownMenuItem>
         ))}
+
       </DropdownMenuContent>
     </DropdownMenu>
       </DropdownMenuContent>;
@@ -112,6 +119,7 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

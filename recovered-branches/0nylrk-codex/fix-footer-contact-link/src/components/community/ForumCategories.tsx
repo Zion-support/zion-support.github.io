@@ -1,7 +1,15 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { Link } from "react-router-dom",
+
+import {
+  MessageSquare;
+  Briefcase;
+  Code;
+  FileText;
+  Megaphone
+} from "@/components/icons",
 
 
 const categories: ForumCategoryInfo[] = [
@@ -12,6 +20,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
+
+
   {
 
     id: "project-help"
@@ -20,6 +30,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
+
   }
   {
 
@@ -34,6 +45,7 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Code"
   },
+
   {
 
     id: "feedback"
@@ -42,8 +54,10 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
+
   }
   },
+
   {
 
     id: "announcements"
@@ -52,8 +66,10 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
+
 ];
 ],
+
 
 const iconMap = {
   Briefcase,
@@ -61,6 +77,7 @@ const iconMap = {
   Code,
   FileText,
   Megaphone
+
 }
 export const ForumCategories = () => {
   const { user } = useAuth();
@@ -76,6 +93,7 @@ export const ForumCategories = () => {;
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
+
 
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
@@ -100,6 +118,7 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
+
       })}
     </div>
   )
@@ -209,3 +228,4 @@ export const ForumCategories = () => {;
 
 
 export default ForumCategories;
+

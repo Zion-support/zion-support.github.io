@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
@@ -12,6 +14,8 @@ import EnhancedButton from "../../components/ui/EnhancedButton";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = ["Account", "Profile", "Preferences", "Preview"];
+
+
 
 
 
@@ -28,12 +32,16 @@ const steps = ['AccountProfilePreferencesPreview'],
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0),
   const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
   const prev = () => setStep((s) => Math.max(s - 1, 0)),
+
+
   return (
 
 
@@ -51,6 +59,7 @@ const Onboarding: NextPage = () => {
         <EnhancedButton onClick={next} disabled={step === steps.length - 1}>{step === steps.length - 1 ? 'Done' : 'Next'}</EnhancedButton>
       </div>
     </div>
+
 
 
 
@@ -117,3 +126,4 @@ export default Onboarding;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

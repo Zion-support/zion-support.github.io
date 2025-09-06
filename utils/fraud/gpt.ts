@@ -1,3 +1,4 @@
+
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -82,6 +83,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   label: string;
   confidence: number;
   reasoning: string
@@ -121,6 +123,7 @@ if ( {) {
 
 
 
+
 }
 
 
@@ -134,4 +137,5 @@ if ( {) {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,10 +33,13 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager";
+
+
 import React from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -45,7 +49,9 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const AppMetadataManager: React.FC = () => {
@@ -65,11 +71,15 @@ const AppMetadataManager: React.FC = () => {
       </div>
     </AppLayout>
   )
-}
-export default AppMetadataManager;
 
 
-
+export default AppMetadataManager,
+import React from "react",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;
+const AppMetadataManager: React.FC = () => {;
+  return (;
 
     <AppLayout>;
       <SEO;
@@ -84,6 +94,7 @@ export default AppMetadataManager;
 
 
 
+
     </AppLayout>);
 }
 ;
@@ -92,3 +103,4 @@ export default AppMetadataManager;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default AppMetadataManager;
+

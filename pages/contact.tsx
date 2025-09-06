@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -44,6 +45,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default function Contact() {
@@ -105,6 +107,7 @@ export default function Contact() {
 }
   };
   return (
+
     <Layout
       title="Contact Us - Zion Tech Group"
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
@@ -128,6 +131,7 @@ origin/main
 
 import React from "react";
 import Layout from "../components/Layout";
+
 export default function Contact() {
   return (
     <>
@@ -150,6 +154,8 @@ export default function Contact() {
             {/* A placeholder for a contact form could go here */}
             <p className="text-gray-500 text-sm">
               (Contact form functionality would be implemented here)
+
+
             </p>
           </div>
           <Link href="/services" className="btn-secondary">
@@ -159,8 +165,10 @@ export default function Contact() {
       </div>
     </>
   );
+
 }
 }
+
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -245,6 +253,8 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+
+
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
@@ -558,10 +568,13 @@ const ContactPage: React.FC = () => {
               </div>
 
 
+
+
             </div>
           </div>
         </div>
       </div>
+
 
     </Layout>;
     </>
@@ -569,6 +582,7 @@ const ContactPage: React.FC = () => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
 }
 
   } catch (error) {
@@ -576,3 +590,5 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

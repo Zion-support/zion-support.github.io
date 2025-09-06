@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface FraudFiltersProps {
 
@@ -26,6 +28,7 @@ interface FraudFiltersProps {
 
   resetFilters: () => void
 }
+
 
 
 
@@ -71,6 +74,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
+
   resetFilters}) => {
 
   return (
@@ -85,11 +89,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
 
 
+
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
@@ -107,6 +113,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
 
 
+
+
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -117,6 +125,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
+
+
 
 
 
@@ -141,7 +151,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   )
 
 
+
 };
+
 
 
 },
@@ -242,7 +254,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 export default FraudFilters;
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

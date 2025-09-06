@@ -2,6 +2,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -15,6 +16,7 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
@@ -35,6 +37,8 @@ export default async function handler(
         payout_amount: 210
         currency: "USD"
       });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,6 +59,7 @@ if ( {) {
         conversion_rate: 7 / 12,
         payout_amount: 210,
         currency: 'USD'})
+
     }
 
 
@@ -122,6 +127,7 @@ export default async function handler(req, res) {
 
 
 
+
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
 
@@ -140,6 +146,7 @@ export default async function handler(req, res) {
     const total_profile_completions = counts['profile_completed'] || 0;
     const total_job_creations = counts['job_created'] || 0;
 
+
     const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -153,8 +160,10 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
+
   }
 }
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -162,3 +171,4 @@ export default async function handler(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

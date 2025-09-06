@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 } from 'lucide-react';
@@ -84,6 +87,7 @@ import Link from 'next/link';import {
 
 
 
+
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
 
@@ -99,6 +103,7 @@ import Link from 'next/link';import {
 import Link from 'next/link';
 
 // Import our new innovative services
+
 
 
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
@@ -120,6 +125,7 @@ import { innovative2046ITServices } from '../data/innovative-2046-it-services';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
 
@@ -139,12 +145,14 @@ const QuantumLoadingFallback = () => (
             scale: [0, 1, 0]
           }}
           transition={{
+
             duration: Math.random() * 4 + 3
             repeat: Infinity
             ease: 'easeInOut'
             duration: Math.random() * 4 + 3,
             repeat: Infinity,
             ease: 'easeInOut',
+
           }}
           style={{
             left: Math.random() * 100 + '%'
@@ -152,6 +160,7 @@ const QuantumLoadingFallback = () => (
         />
       ))}
     </div>
+
 
 
 
@@ -189,6 +198,7 @@ const QuantumLoadingFallback = () => (
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     {/* Quantum loading animation */}
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -203,7 +213,9 @@ const QuantumLoadingFallback = () => (
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -402,6 +414,7 @@ const Homepage2046: React.FC = () => {;
         <div className='absolute inset-0'>;
           {/* Quantum grid effect */}
 
+
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
   const filteredServices = allServices && allServices.filter(service => {;
     const matchesCategory = selectedCategory === 'all' || service && service.category === selectedCategory;
@@ -424,6 +437,7 @@ const Homepage2046: React.FC = () => {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
@@ -433,15 +447,18 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
                 opacity: [0.3, 0.8, 0.3]
               }}
               transition={{
+
                 duration: Math.random() * 10 + 10
                 repeat: Infinity
                 ease: 'easeInOut'
@@ -601,6 +618,7 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
               }}
               style={{
                 left: Math.random() * 100 + '%'
@@ -621,17 +639,21 @@ const Homepage2046: React.FC = () => {;
 
 
 
+
           ))}
         </div>
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
         {/* Hero Section */}
         <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
+
+
 
 
 
@@ -656,34 +678,96 @@ const Homepage2046: React.FC = () => {;
                   Zion Tech Group
                 </span>
               </motion.h1>
-              
-              <motion.p 
-                className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;
 
+              <motion.p
+                className='text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto'                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </motion.h1>
 
+                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1 }}
+              >
+                Revolutionary{' '}
+                <span className='text-cyan-400 font-semibold'>Quantum AI</span>
+                <span className='text-purple-400 font-semibold'>
+                  {' '}
+                  Neural Interfaces
+                </span>
+                , and
+                <span className='text-cyan-400 font-semibold'>
+                  {' '}
+                  Space Technology
+                </span>{' '}
+                Solutions
+              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 1.5 }}
+              >
+                <Link href='/services'>                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
-                <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
-                <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
-              </motion.p>
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+
+                <Link href='/services'>
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05
+                      boxShadow: '0 0 30px rgba(6, 182, 212, 0.5)'
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'
+                  >
+                    Explore Services <ArrowRight className='w-5 h-5' />
+                  </motion.button>
+                </Link>
+                <Link href='/contact'>
+                  <motion.button
+                    whileHover={{
+                      scale: 1.05
+                      boxShadow: '0 0 30px rgba(168, 85, 247, 0.5)'
+                    }}
+                    whileTap={{ scale: 0.95 }}
+                    className='border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300'
+                  >
+                    Get Started <Rocket className='w-5 h-5' />                  </motion.button>                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6, 182, 212, 0.5)" }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  >
+                    Explore Services <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+                </Link>
+                <Link href="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(168, 85, 247, 0.5)" }}
+                    whileTap={{ scale: 0.95 }}
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold flex items-center gap-2 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
+                  >
+                    Get Started <Rocket className="w-5 h-5" />
+                  </motion.button>
+                </Link>
+              </motion.div>
+            </motion.div>
+            {/* Contact Information */}
+            <motion.div
+              className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30'              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2 }}
+            >              className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 max-w-2xl mx-auto border border-cyan-400/30"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 2 }}
+            >
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
@@ -697,7 +781,9 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -728,10 +814,12 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -752,7 +840,9 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -771,6 +861,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                   />
                 </div>
                 <div className='flex gap-2'>
+
                   {categories.map(category => (                    <button            >
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
@@ -807,6 +898,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -821,6 +913,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 </div>
               </div>
             </motion.div>
+
 
 
 
@@ -840,12 +933,14 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Services Grid */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >
 
@@ -861,6 +956,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
 
 
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -871,14 +967,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
-
-
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className='group'
 
 
                 >
@@ -891,6 +981,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                         <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>
                           {service.category}
                         </span>
+
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -917,6 +1008,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -931,6 +1023,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                           </span>                        </div>
                       </div>
                     </div>
+
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>                          <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
 
 
@@ -942,6 +1035,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1079,6 +1173,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -1086,6 +1181,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Call to Action */}
@@ -1103,7 +1199,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1175,6 +1273,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
   );
 
 
+
 }
 
 
@@ -1189,4 +1288,5 @@ export default Homepage2046;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

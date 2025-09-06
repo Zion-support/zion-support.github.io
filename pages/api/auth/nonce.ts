@@ -1,6 +1,8 @@
 
 
 
+
+
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let res = ''
@@ -10,6 +12,7 @@ function randomString(length: number) {
   return res
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
 
@@ -31,3 +34,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

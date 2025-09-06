@@ -14,7 +14,9 @@ function ensure() {
 
 
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
 
 
 
@@ -39,12 +41,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+
+
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
 
   res.status(200).json({ ok: true })
 }
+
 
 
 
@@ -85,4 +90,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 export default function DocsPage() {
 	return (
+
 		<Layout>
 			<Head>
 				<title>Documentation | Zion Tech Group</title>
@@ -24,6 +26,7 @@ export default function DocsPage() {
 			</section>
 		</Layout>
 	)
+
 }
   } catch (error) {
     console.error("Error:", error);
@@ -31,3 +34,4 @@ export default function DocsPage() {
   }
 }
 ;
+

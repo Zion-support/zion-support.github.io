@@ -27,16 +27,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       ],
       response_format: { type: 'json_object' },
 
-=======
-        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
-        { role: 'user', content: prompt }];
-      response_format: {
-       type: 'json_object' 
-    },
-    temperature: 0.6
-      });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
@@ -58,6 +49,8 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
+
   }
 
 }
+

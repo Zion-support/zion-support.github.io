@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -35,10 +36,12 @@ import { motion } from 'framer-motion';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
 import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 import Link from 'next/link';
+
 const Services2024Page: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -74,6 +77,7 @@ const Services2024Page: React.FC = () => {
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+
 
 
 
@@ -156,6 +160,7 @@ const Services2024Page: React.FC = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const getVariantIcon = (variant: string) => {
@@ -186,6 +191,7 @@ const Services2024Page: React.FC = () => {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
@@ -208,6 +214,7 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
     return 'from-gray-500 to-slate-500'
   },
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   return (
@@ -255,11 +262,13 @@ const Services2024Page: React.FC = () => {;
 
 
 
+
             >
               <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
               </div>
+
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -289,11 +298,13 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
                   Future-Ready
                 </span>
                 <br />
                 <span className="text-white">Solutions</span>
               </h1>
+
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and
                 enterprise IT solutions. Transform your business with our
@@ -329,6 +340,7 @@ const Services2024Page: React.FC = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
@@ -347,6 +359,7 @@ const Services2024Page: React.FC = () => {;
             </motion.div>
           </div>
         </section>
+
         {/* Search and Filters */}
 
 
@@ -380,6 +393,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                     <input
                       type="text"
                       placeholder="Search services by name, features, or description..."
@@ -389,6 +403,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 </div>
+
                 {/* Category Filter */}
                 <div>;
                   <select
@@ -490,6 +505,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
@@ -500,6 +516,7 @@ const Services2024Page: React.FC = () => {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <motion.div
+
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -544,9 +561,11 @@ const Services2024Page: React.FC = () => {;
                         <div className="text-right">
                           <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
                           <div className="text-sm text-gray-400">per month</div>
+
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
+
                       {/* Service Info */}
                       <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
                         {service.name}
@@ -588,10 +607,12 @@ const Services2024Page: React.FC = () => {;
 
 
 
+
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
                             </div>
+
                           )}
                         </div>
                       </div>
@@ -638,6 +659,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           </div>
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>
@@ -651,6 +673,7 @@ const Services2024Page: React.FC = () => {;
                         </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
+
                       {/* CTA */}
                       <div className='flex items-center justify-between'>
                       {/* CTA */  } catch (error) {
@@ -670,6 +693,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         <Link
                           href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
                           <span className="font-medium">Learn More</span>
@@ -681,6 +705,7 @@ const Services2024Page: React.FC = () => {;
                       </div>
                     </div>
                   </motion.div>
+
                 ))}
               </div>
             )}
@@ -790,6 +815,7 @@ const Services2024Page: React.FC = () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -814,6 +840,7 @@ const Services2024Page: React.FC = () => {;
         </section>
       </div>
     </>
+
 
 
 
@@ -883,3 +910,4 @@ export default Services2024Page,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default Services2024Page;
+

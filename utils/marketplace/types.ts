@@ -4,6 +4,7 @@ export interface Offer {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@ export interface Offer {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -19,6 +21,7 @@ export interface Offer {;
 
   scopeSummary: string;
   paymentTerms: PaymentTerms;
+
   agreementUrl?: string;
   status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
   changeRequestNote?: string;
@@ -45,6 +48,7 @@ export interface Project {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   id: string;
   title: string;
   summary: string;
@@ -53,10 +57,17 @@ export interface Project {
   startDateIso: string;
 
 
+  id: string;
+  name: string;
+  url?: string;
+  uploadedAtIso: string;
+}
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
 
 

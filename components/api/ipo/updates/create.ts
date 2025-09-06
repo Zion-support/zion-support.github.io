@@ -44,10 +44,12 @@ function handler() {
 
 
 
+
   res.status(200).json(update)
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

@@ -15,6 +15,7 @@ animate ();
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +34,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 import React, { useEffect, useRef } from 'react';
+
 
 
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
@@ -271,9 +273,11 @@ if (return) {
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
 
+
       {/* Gradient Overlays */}  }, []);
 
       {/* Gradient Overlays */}  }, []);
+
 
 
 
@@ -467,6 +471,18 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut'
 
+      {/* Floating Geometric Shapes */}
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
+        {/* Animated Hexagons */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-purple-500/30 rotate-45"
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.1, 1];
+            opacity: [0.3, 0.6, 0.3]
+
+      {/* Gradient Overlays */}
+
 
 
       />
@@ -475,6 +491,7 @@ if ( {) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(147,51,234,0.15),transparent_50%)]" style={{ zIndex: 1 }} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.15),transparent_50%)]" style={{ zIndex: 1 }} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" style={{ zIndex: 1 }} />
+
 
 
       {/* Floating Geometric Shapes */}
@@ -490,6 +507,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           }}
           transition={{
             duration: 8
@@ -562,6 +580,7 @@ if ( {) {
           transition={{
 
 
+
         />;
         <motion&& motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45'
@@ -581,6 +600,7 @@ if ( {) {
         />
             duration: 12,
             repeat: Infinity,
+
 
             ease: 'easeInOut',            ease: "easeInOut"
           }}
@@ -696,6 +716,7 @@ if ( {) {
           transition={{
 
 
+
             duration: 5,
             repeat: Infinity,
 
@@ -722,6 +743,7 @@ if ( {) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
         />
       </div>
+
 
 
 
@@ -800,9 +822,52 @@ if ( {) {
             y: [0, 1000]
             opacity: [0, 1, 0]
 
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'linear'
+            delay: 2,            ease: "linear"
+            delay: 2
+          }}
+        />
+        <motion.div
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500 to-transparent'
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'linear'
+            delay: 2,          }}
+        />
+        <motion.div
+          className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent'
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0],          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'linear'
+            delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          animate={{
+            y: [0, 1000];
+            opacity: [0, 1, 0]
+          transition={{
 
+            duration: 8,
+            repeat: Infinity,
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+        />
+      </div>
+      {/* Quantum Particles */}
+      <div
+        className='absolute inset-0 pointer-events-none'
+        style={{ zIndex: 4 }}
+      >
+
 
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -810,10 +875,12 @@ if ( {) {
             key={i}
             className='absolute w - 2 h - 2 bg - purple - 400 rounded - full';
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               scale: [0, 1, 0]
@@ -852,7 +919,9 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -861,6 +930,7 @@ if ( {) {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+
 
 
         ))}
@@ -877,6 +947,7 @@ if ( {) {
 
 
 
+
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
@@ -885,9 +956,11 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
@@ -901,6 +974,7 @@ if ( {) {
           />
         ))}
       </div>
+
 
 
 
@@ -944,3 +1018,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

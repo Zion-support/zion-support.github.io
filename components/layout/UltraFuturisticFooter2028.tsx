@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -69,6 +70,7 @@ import {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code
@@ -217,6 +219,7 @@ const service_categories = [;
     ];
   }
 ];
+
 
 
 
@@ -387,6 +390,7 @@ export default function UltraFuturisticFooter2028() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                 </a>
               </div>
             </div>
@@ -397,7 +401,9 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                 <a
                   key={social.name}
@@ -406,6 +412,7 @@ export default function UltraFuturisticFooter2028() {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
                 >
+
 
 
                   <social.icon className='w-5 h-5' />                </a>                <a
@@ -440,6 +447,7 @@ export default function UltraFuturisticFooter2028() {
           {/* Service Categories */}
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+
 
 
 
@@ -480,6 +488,7 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
                       href={link && link.href}
                       className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'>;
                       <link && link.icon className='w-4 h-4' />                      <span>{link && link.name}</span>              Quick Links;
@@ -502,6 +511,7 @@ export default function UltraFuturisticFooter2028() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Quick Links
             </h3>
@@ -560,6 +570,8 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
+
             {/* Resource Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
@@ -568,7 +580,9 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -589,6 +603,7 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -596,6 +611,7 @@ export default function UltraFuturisticFooter2028() {
 
               </ul>;
             </div>;
+
 
 
 
@@ -612,8 +628,10 @@ export default function UltraFuturisticFooter2028() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 Get the latest insights on future technology and AI innovations.
               </p>
@@ -623,20 +641,99 @@ export default function UltraFuturisticFooter2028() {
                   type='email'
                   placeholder='Enter your email'
                   className='flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
-                />;
-                <button className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe                Get the latest insights on future technology and AI innovations.;
-              </p>;
-              <div className="flex space-x-2">;
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                />
+                <button className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe                Get the latest insights on future technology and AI innovations.
+              </p>
+              <div className="flex space-x-2">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-purple-900/30 border border-purple-500/30 rounded text-white placeholder-purple-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                />
+                <button className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded text-sm hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Bottom Bar */}
+      <div className='border-t border-purple-500/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+          <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+            {/* Copyright */}
+            <div className='text-sm text-purple-300'>
+              © 2028 Zion Tech Group. All rights reserved. Leading the future
+              of technology.
+            </div>
+            {/* Legal Links */}
+            <div className='flex items-center space-x-6 text-sm'>
+              <Link
+                href='/privacy'
+                className='text-purple-300 hover:text-white transition-colors'
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href='/terms'
+                className='text-purple-300 hover:text-white transition-colors'
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href='/cookies'
+                className='text-purple-300 hover:text-white transition-colors'
+              >
+                Cookie Policy
+              </Link>
+              <Link
+                href='/security'
+                className='text-purple-300 hover:text-white transition-colors'
+              >                Security            {/* Copyright */}
+            <div className="text-sm text-purple-300">
+              © 2028 Zion Tech Group. All rights reserved. Leading the future of technology.
+            </div>
+            {/* Legal Links */}
+            <div className="flex items-center space-x-6 text-sm">
+              <Link href="/privacy" className="text-purple-300 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="text-purple-300 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/cookies" className="text-purple-300 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+              <Link href="/security" className="text-purple-300 hover:text-white transition-colors">
+                Security
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Floating Action Button */}
+      <div className='fixed bottom-6 right-6 z-50'>
+        <Link
+          href='/contact'
+          className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'
+        >
+          <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>
+      </div>
+      {/* Background Effects */}        <Link
+          href="/contact"
+          className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group"
+        >
+          <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
+        </Link>
+      </div>
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+}
+}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+      {/* Background Effects */}
+
 

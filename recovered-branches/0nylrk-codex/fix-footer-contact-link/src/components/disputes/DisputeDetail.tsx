@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -53,6 +54,7 @@ export function DisputeDetail() {
   const { user } = useAuth(),
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
   
+
   const [dispute, setDispute] = useState<any>(null),
   const [messages, setMessages] = useState<DisputeMessage[]>([]),
   const [isLoading, setIsLoading] = useState(true),
@@ -111,17 +113,21 @@ export function DisputeDetail() {
           navigate("/dashboard/disputes"),
           return
         }
+
         setDispute(disputeData);
         const messagesData = await getDisputeMessages(disputeId);
         setDispute(disputeData),
         
         const messagesData = await getDisputeMessages(disputeId),
+
         setMessages(messagesData)
       } catch (error) {
         console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
+
+
 
 
 
@@ -199,16 +205,20 @@ export function DisputeDetail() {;
 
 
 
+
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     
+
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
     }
+
     const success = await resolveDispute(disputeId, resolution);
     
     const success = await resolveDispute(disputeId, resolution),
+
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -218,6 +228,7 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
+
   }
   const handleSendMessage = async () => {
     if (!disputeId |!message.trim()) return;
@@ -228,6 +239,7 @@ export function DisputeDetail() {;
     if (!disputeId || !message.trim()) return,
     
     setIsSending(true),
+
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
@@ -240,6 +252,8 @@ export function DisputeDetail() {;
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
+
+
 
 
   },;
@@ -298,6 +312,7 @@ export function DisputeDetail() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -306,6 +321,7 @@ export function DisputeDetail() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 
@@ -321,6 +337,7 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
+
       case "open": return "default";
       case "under_review": return "secondary"
       case "open": return "default",
@@ -382,6 +399,7 @@ export function DisputeDetail() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -409,7 +427,9 @@ export function DisputeDetail() {;
           </AlertDescription>
         </Alert>
       )}
+
       
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -792,6 +812,7 @@ export function DisputeDetail() {;
                         </div>
                       </div>
                     )}
+
                     <div>
                       <h3 className="font-medium mb-2">Admin Notes</h3>
                       <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
@@ -827,6 +848,7 @@ export function DisputeDetail() {;
                                 </Avatar>
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
+
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -851,6 +873,7 @@ export function DisputeDetail() {;
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
+
                                 getDisputeMessages(disputeId!).then(setMessages);
 
 
@@ -922,6 +945,7 @@ export function DisputeDetail() {;
 
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
+
                       </div>;
                     )}
 
@@ -974,7 +998,9 @@ export function DisputeDetail() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                             }
                           }}
@@ -1053,6 +1079,8 @@ export function DisputeDetail() {;
       </div>
     </div>
   )
+
 }
 }
 ;
+

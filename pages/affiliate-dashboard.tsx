@@ -2,6 +2,8 @@
 
 
 
+
+
   useEffect(() => {
     if (!code) return
     (async () => {
@@ -25,6 +27,8 @@
     }
 
 
+
+
 function getRefCode(): string {;
   if (typeof window === 'undefined') return '',;
   return localStorage.getItem('ref_code') || '';
@@ -34,12 +38,14 @@ function getRefCode(): string {;
 
 
 
+
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
@@ -92,6 +98,8 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
+
+
   if (!code) {
     return (
       <div className="space-y-4">
@@ -100,7 +108,9 @@ export default function AffiliateDashboard(req, res) {
       </div>
     )
   }
+
 }
+
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>
@@ -114,12 +124,15 @@ export default function AffiliateDashboard(req, res) {
         <div className="flex items-center justify-between">
           <div>
             <div className="text-sm text-gray-600 dark:text-gray-300">Estimated Payout</div>
+
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency |'USD'}</div>
             <div className="text-2xl font-bold">{metrics?.payout_amount ?? 0} {metrics?.currency || 'USD'}</div>
+
           </div>
           <div className="flex gap-2">
             <input className="border rounded px-3 py-2" placeholder="Amount (optional)" value={amount} onChange={e=>setAmount(e.target.value)} />
             <button className="px-3 py-2 rounded bg-indigo-600 text-white" onClick={requestPayout}>Request Payout</button>
+
             <a href={exportUrl} className="px-3 py-2 rounded border">Export CSV</a>
           </div>
         </div>
@@ -143,6 +156,7 @@ export default function AffiliateDashboard(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       </div>
     </div>
   )
@@ -155,10 +169,26 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     </div>
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  )
+;
+  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]);
+  if (!code) {;
+    return (;
+      <div className="space-y-4">;
+        <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
+        <p className="text-gray-600 dark: text-gray-300">No referral code found. Visit your referral link first or register on the Partners page.</p>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  return (;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">Affiliate Dashboard</h1>;
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">;
 
         <Stat label="Total Visits" value={metrics?.total_visits ?? '-'} />;
         <Stat label="Total Signups" value={metrics?.total_signups ?? '-'} />;
@@ -182,6 +212,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       </div>;
     </div>);
 }
+
 /**
  * Stat - Function description
  */
@@ -199,4 +230,5 @@ function Stat() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,7 +1,10 @@
+
+
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+
 
 
   Brain,
@@ -17,6 +20,7 @@ import {
   Star,
   Award,
   Clock,
+
 
 
   {
@@ -101,6 +105,7 @@ import {
   },
 ];
 const stats = [
+
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24 / 7", label: "Support Available" },
@@ -168,10 +173,12 @@ const stats = [
   { number: '24/7', label: 'Support Available' },
   { number: '50+', label: 'Countries Served' }
 origin/automation-improvements-final
+
   { number: "500+", label: "Projects Completed" }
   { number: "99.9%", label: "Uptime Guarantee" }
   { number: "24/7", label: "Support Available" }
   { number: "50+", label: "Countries Served" }
+
 ];
 const benefits = [
   {
@@ -183,6 +190,7 @@ const benefits = [
     description: "Experienced professionals with deep industry knowledge"
     icon: Users
   }
+
   {
 
     title: "Cutting - Edge Technology",
@@ -196,6 +204,7 @@ const benefits = [
     icon: Globe
   }
   {
+
     title: "Proven Results",
     description: "Track record of successful implementations",
     icon: Award,
@@ -220,16 +229,29 @@ const benefits = [
     icon: Award
   }
 origin/automation-improvements-final
+
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
+
+
 ];
 export default function ServicesOverviewPage() {
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+  return (
+    <Layout
+      title="Services Overview - Zion Tech Group"
+      description="Comprehensive overview of our technology services and solutions designed to transform your business."
+      keywords="services, technology solutions, AI, IT, micro SAAS, security, automation, analytics"
+    >
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
+          </div>
 
 
           <div className="container mx-auto px-4 relative z-10">
@@ -240,6 +262,8 @@ export default function ServicesOverviewPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
+
+
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Services
@@ -249,12 +273,14 @@ export default function ServicesOverviewPage() {
                 Comprehensive technology services designed to transform your
                 business operations, enhance security, and drive innovation
                 across all technology domains.
+
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
 origin/automation-improvements-final
+
               </p>
             </motion.div>
           </div>
@@ -284,10 +310,13 @@ origin/automation-improvements-final
                   <div className="text - 3xl md:text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.number}
 
-                  <div className="text-gray-600 font-medium">
-                    {stat.label}
                   </div>
 
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Service Categories */}
         <section className="py-16">;
@@ -302,15 +331,18 @@ origin/automation-improvements-final
                 Service Categories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
                 We offer a comprehensive range of technology services to meet
                 all your business needs.
                 We offer a comprehensive range of technology services to meet all your business needs.
 origin/automation-improvements-final
+
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <motion.div
+
 
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -339,10 +371,12 @@ origin/automation-improvements-final
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
+
 
 
 
@@ -355,6 +389,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -369,6 +404,7 @@ origin/automation-improvements-final
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
+
                     
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -380,12 +416,14 @@ origin/automation-improvements-final
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
 origin/automation-improvements-final
+
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
 
 
                             {service}
                           </li>
                         ))}
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -395,6 +433,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     <Link
                       href={category && category.link}
@@ -424,11 +463,13 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
                 We deliver exceptional results through innovation, expertise,
                 We deliver exceptional results through innovation, expertise
                 and unwavering commitment to your success.
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
 origin/automation-improvements-final
+
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -444,6 +485,7 @@ origin/automation-improvements-final
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>
+
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
@@ -452,6 +494,7 @@ origin/automation-improvements-final
                   </h3>
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
 origin/automation-improvements-final
+
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -471,12 +514,14 @@ origin/automation-improvements-final
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
+
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
                 Let's discuss how our comprehensive services can help you achieve your business goals.
 origin/automation-improvements-final
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 

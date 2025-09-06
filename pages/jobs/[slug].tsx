@@ -1,5 +1,6 @@
 
 
+
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -20,10 +21,12 @@ export default function JobDetailsPage() {;
 
 
 
+
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
+
 
 
 
@@ -60,6 +63,7 @@ export default function JobDetailsPage() {;
 
   useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []);
 
+
 import { useRouter } from 'next/router',
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -74,9 +78,11 @@ export default function JobDetailsPage() {
   const { notify } = useToast(),
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
+
   const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
+
   return (
     <div className="relative">
       {loading ? (
@@ -86,6 +92,7 @@ export default function JobDetailsPage() {
           <EnhancedCard>
             <div className="flex items-start justify-between gap-3">
               <div>
+
                 <h1 className='text-xl font-semibold'>
                   {slug?.replace(/-/g, ' ') |'Job Title'}
                 </h1>
@@ -94,6 +101,7 @@ export default function JobDetailsPage() {
                 </p>
                 <h1 className="text-xl font-semibold">{slug?.replace(/-/g, ' ') || 'Job Title'}</h1>
                 <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
+
               </div>
               {!isMobile && (
                 <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
@@ -123,10 +131,12 @@ export default function JobDetailsPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
@@ -134,6 +144,7 @@ export default function JobDetailsPage() {
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
+
 
 
 
@@ -160,6 +171,7 @@ export default function JobDetailsPage() {
 
 
 
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -176,9 +188,11 @@ export default function JobDetailsPage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

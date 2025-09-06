@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface SpaceColonization2029Service {;
   id: string;
@@ -108,6 +109,7 @@ export interface SpaceColonization2029Service {
     reviews: 45,
   },
   {
+
 
 
 
@@ -332,7 +334,9 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   }
 ];
+

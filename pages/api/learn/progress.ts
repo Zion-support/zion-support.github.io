@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+import fs from 'fs';
+import path from 'path';
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-
+      const { userId = 'demo-user' } = req.query;
 
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
@@ -39,10 +37,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (typeof percent === 'number') {
         courseProgress.percent = Math.max(courseProgress.percent, percent);      }
+
+
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
 }
+
 
 
 
@@ -73,5 +74,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

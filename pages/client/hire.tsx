@@ -3,6 +3,7 @@
 
 
 
+
 import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -56,12 +57,17 @@ import {useState} from 'react';
 
 
 
+
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
 
 
+      termsType === "hourly"
+        ? { type: "hourly", hourlyRateUsd   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 
   }
@@ -93,6 +99,7 @@ import {useState} from 'react';
 
   }
   return (
+
     <div className='max-w-3xl mx-auto p-6 space-y-6'>
       <h1 className='text-xl font-semibold'>Hire Talent</h1>
       <div className='space-y-4 border rounded p-4'>
@@ -112,6 +119,7 @@ import {useState} from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <div>
           <label className="block text-sm font-medium">Talent</label>
@@ -136,6 +144,7 @@ import {useState} from 'react';
             <option value="milestone">Milestone</option>
           </select>
         </div>
+
         {termsType === 'hourly' && (
         {termsType === "hourly" && (
 
@@ -151,10 +160,12 @@ import {useState} from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
           </div>
+
         )}
         {termsType === 'fixed' && (
           <div>
@@ -185,10 +196,12 @@ import {useState} from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div>
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>
+
         <div className='flex justify-end'>
           <button
             onClick={sendOffer}
@@ -241,6 +254,7 @@ import {useState} from 'react';
           'x - demo - user - role': 'client',
           'x - demo - user - id': 'client - 1',
         }}
+
 
 
 
@@ -375,9 +389,11 @@ import {useState} from 'react';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,6 +1,7 @@
 
 
 
+
   FormField,
   FormItem,
   FormLabel,
@@ -16,6 +17,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -27,6 +29,7 @@ interface DescriptionFieldsProps {;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+
 
 
 
@@ -48,6 +51,7 @@ export function DescriptionFields(): any ({;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
               <Textarea
+
 
 
 import React from 'react',
@@ -79,7 +83,9 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         control={control}
@@ -93,13 +99,17 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
                   field.onChange(e.target.value);
+
+
                 }}
                 className="min-h-[200px]";
 
@@ -221,6 +231,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
             <FormMessage />
           </FormItem>
         )}
+
       />
     </>
       />;
@@ -232,6 +243,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   );
 >>>>>>> origin/feature/merge-conflicts-and-improvements

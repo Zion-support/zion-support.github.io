@@ -1,5 +1,6 @@
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -31,4 +32,5 @@ export function getShared(id: string) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

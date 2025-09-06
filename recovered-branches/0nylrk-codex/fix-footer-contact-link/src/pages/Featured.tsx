@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default function Featured() {
   return (
@@ -28,6 +30,7 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.
             </p>
           </div>
+
           
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -63,3 +66,4 @@ export default function Featured() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -3,6 +3,8 @@
 
 
 
+
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -11,6 +13,7 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
 
 
 
@@ -31,6 +34,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -42,6 +46,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
+
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
@@ -63,6 +68,7 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 
+
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -77,6 +83,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Marcus Johnson"
       title: "Marketing Strategist"
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
+
     }
     publishedDate: "Apr 10, 2025";
     readTime: "8 min read"
@@ -116,6 +123,7 @@ const BLOG_POSTS: BlogPost[] = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -130,6 +138,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Sophia Chen"
       title: "Sustainability Engineer"
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
+
     }
     publishedDate: "Apr 5, 2025";
     readTime: "6 min read"
@@ -144,6 +153,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
   },
+
   {
     id: "ai-ethics-frameworks"
     title: "Implementing Ethical AI Frameworks in Enterprise Applications"
@@ -164,6 +174,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Dr. James Peterson"
       title: "AI Ethics Officer"
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
+
     }
     publishedDate: "Mar 30, 2025";
     readTime: "7 min read"
@@ -178,6 +189,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
   },
+
   {
     id: "ai-talent-acquisition"
     title: "Winning the AI Talent War: Recruitment Strategies for 2025"
@@ -198,6 +210,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Elena Rodriguez"
       title: "Head of AI Talent"
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
+
     }
     publishedDate: "Mar 22, 2025";
     readTime: "9 min read"
@@ -212,6 +225,7 @@ const BLOG_POSTS: BlogPost[] = [
     tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
   },
+
   {
     id: "ai-compute-optimization"
     title: "AI Compute Optimization: Balancing Performance and Cost"
@@ -232,6 +246,7 @@ const BLOG_POSTS: BlogPost[] = [
       name: "Michael Wong"
       title: "ML Infrastructure Architect"
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+
     }
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read",;
@@ -250,6 +265,7 @@ const BLOG_POSTS: BlogPost[] = [
   }
 ],
 
+
 // Categories for filtering
 const CATEGORIES = [
   "All Categories",
@@ -259,6 +275,7 @@ const CATEGORIES = [
   "Ethics",
   "Recruitment",
   "Infrastructure"
+
 ];
 export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -283,6 +300,7 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedCategory, setSelectedCategory] = useState("All Categories"),
   
+
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch = 
@@ -297,7 +315,9 @@ export default function Blog() {
   
   // Get featured posts
   const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
+
   
+
   return (
     <>
       <SEO
@@ -315,6 +335,7 @@ export default function Blog() {
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
+
           
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
@@ -554,6 +575,7 @@ export default function Blog() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -616,6 +638,7 @@ export default function Blog() {;
                   type="text"
                   placeholder="Search articles..."
                   value={searchQuery}
+
 
                   onChange={(e) => setSearchQuery(e && e.target.value)}
                   className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
@@ -757,6 +780,7 @@ export default function Blog() {;
                 }}
 
                   setSearchQuery(""),
+
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -764,6 +788,8 @@ export default function Blog() {;
                 Clear all filters
               </Button>
             </div>
+
+
 
 
 
@@ -812,7 +838,9 @@ export default function Blog() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           )}
@@ -824,3 +852,5 @@ export default function Blog() {;
   );
 }
 ;
+
+

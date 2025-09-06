@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
@@ -30,11 +32,13 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
       color: "from-blue-500 to-cyan-500";
     };
+
 
 
 
@@ -78,6 +82,19 @@ import EnhancedFooter from '../components/EnhancedFooter';
     "Reduce security incidents by 90% with AI-powered threat detection";
 
 
+  return (
+    <>
+      <Head>
+        <title>Quantum Cybersecurity - Zion Tech Group</title>
+        <meta name="description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection. Protect your business against tomorrow's cyber threats today." />
+        <meta name="keywords" content="quantum cybersecurity, quantum-resistant encryption, AI threat detection, zero-trust security, cybersecurity platform, threat intelligence" />
+        <meta property="og:title" content="Quantum Cybersecurity - Zion Tech Group" />
+        <meta property="og:description" content="Future-proof your security with quantum-resistant encryption and AI-powered threat detection." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/quantum-cybersecurity" />
+      </Head>
+      <EnhancedNavigation />
+
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
@@ -119,6 +136,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
                 Security Assessment;
               </a>;
@@ -138,6 +156,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Features */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -156,6 +175,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -169,6 +189,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -188,6 +209,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>
         </div>
       </section>
+
 
           </div>;
         </div>;
@@ -209,6 +231,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -220,6 +243,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
             >
               <h2 className="text-4xl font-bold text-slate-900 mb-6">Why Choose Quantum Cybersecurity?</h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
+
+
 
 
                 Stay ahead of the curve with quantum-resistant technology.
@@ -245,6 +270,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -258,6 +284,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -284,6 +311,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>
         </div>
       </section>
+
 
 
 
@@ -327,6 +355,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Threat Landscape */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -345,6 +374,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -358,6 +388,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
@@ -378,6 +409,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
         </div>
       </section>
 
+
           </div>;
         </div>;
       </section>;
@@ -391,6 +423,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
@@ -406,6 +439,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
               Meet and exceed industry security standards with our comprehensive compliance framework.
             </p>
           </motion.div>
+
 
 
 
@@ -430,6 +464,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
@@ -451,6 +486,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -459,6 +495,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -479,6 +516,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -487,6 +525,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -507,6 +546,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -515,6 +555,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -531,6 +572,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
           </div>
         </div>
       </section>
+
 
 
 
@@ -606,6 +648,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Pricing */}
       <section className="py-20 bg-white">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -624,6 +667,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -637,6 +681,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
@@ -653,7 +698,9 @@ import EnhancedFooter from '../components/EnhancedFooter';
                     Most Popular;
                   </div>;
                 )}
+
                 
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-slate-900 mb-2">
@@ -666,9 +713,11 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center space-x-3">
@@ -704,9 +753,11 @@ import EnhancedFooter from '../components/EnhancedFooter';
         </div>
       </section>
 
+
           </div>;
         </div>;
       </section>;
+
 
 
 
@@ -731,6 +782,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
               <a
                 href="/contact"
 
+
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200">;
                 Schedule Consultation;
               </a>;
@@ -746,4 +798,5 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

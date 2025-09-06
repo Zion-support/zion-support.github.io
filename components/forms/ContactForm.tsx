@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,12 +23,14 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 'use client';
 'use client';
 'use client';
 ;
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 
 
 import {;
@@ -39,6 +42,7 @@ import {;
   AlertCircle,;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
@@ -66,11 +70,70 @@ import {;
       setSubmitStatus('success');
       setFormData({
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);    }
+  }
+  const services = [    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  const services = [
+    'AI Development'
+    'Cloud Architecture'
+    'Digital Transformation'
+    'IoT Platforms'
+    'Blockchain Solutions'
+    'Data Analytics'
+    'Other',  ];    'AI DevelopmentCloud ArchitectureDigital TransformationIoT PlatformsBlockchain SolutionsData AnalyticsOther'
+  ];
+  const contactInfo = [
+    {
+      icon: Mail
+      title: 'Email Us'
+      content: 'contact@ziontechgroup.com'
+      href: 'mailto:contact@ziontechgroup.com'
+    },    {
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567',      href: 'mailto:contact@ziontechgroup.com'
+    }
+    {
+      icon: Phone
+      title: 'Call Us'
+      content: '+1 (555) 123-4567'
+      href: 'tel:+15551234567'
+    },    {
+      icon: MapPin
+      title: 'Visit Us'
+      content: '123 Tech Street, Innovation City, IC 12345'
+      href: '#'
+    }
+  return (
+    <section className='py-20 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden'>
+      {/* Background Elements */}
+      <div className='absolute inset-0'>
+        <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]' />
+        <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_50%)]' />
+      </div>
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}      <div className="relative container mx-auto px-4">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className='text-center mb-16'
 
 
         >
@@ -86,6 +149,7 @@ import {;
             goals.
           </p>
         </motion.div>
+
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>          {/* Contact Information */}        >
           <h2 className="text-4xl md: text-6xl font-bold text-white mb-6">
             Let&apos,s Start a
@@ -173,6 +237,7 @@ import {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -30 }}
@@ -216,7 +281,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -239,6 +306,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+
             </div>;
 
 
@@ -252,6 +320,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -306,7 +375,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -318,6 +389,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
@@ -329,6 +401,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -383,9 +456,95 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                       placeholder="Enter your full name"
                     />
 
-
-
-
+                  </div>
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+                  <div>
+                    <label
+                      htmlFor='company'
+                      className='block text-white font-medium mb-2'
+                    >
+                      Company
+                    </label>
+                    <input
+                      type='text'
+                      id='company'
+                      name='company'
+                      value={formData.company}
+                      onChange={handleChange}
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
+                      placeholder='Enter company name'                    />
+                  </div>
+                  <div>
+                    <label
+                      htmlFor='phone'
+                      className='block text-white font-medium mb-2'
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type='tel'
+                      id='phone'
+                      name='phone'
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors'
+                      placeholder='Enter phone number'                    />                      className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors"
+                      placeholder="Enter phone number"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    htmlFor='service'
+                    className='block text-white font-medium mb-2'
+                  >
+                    Service of Interest
+                  </label>
+                  <select
+                    id='service'
+                    name='service'
+                    value={formData.service}
+                    onChange={handleChange}
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors'
+                  >
+                    <option value=''>Select a service</option>
+                    {services.map(service => (
+                      <option
+                        key={service}
+                        value={service}
+                        className='bg-gray-800 text-white'
+                      >                        {service}                    Service of Interest
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-blue-500 transition-colors"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service} className="bg-gray-800 text-white">
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label
+                    htmlFor='message'
+                    className='block text-white font-medium mb-2'
+                  >
+                    Message *
+                  </label>
+                  <textarea
+                    id='message'
+                    name='message'                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className='w-full px-4 py-3 bg-white/10 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none'
 
 
                   />
@@ -419,6 +578,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
   );
 
 
+
 };
 export default ContactForm;  );
 };
@@ -431,9 +591,11 @@ export default ContactForm;
 
 
 
+
 export default ContactForm;  )
 }
 export default ContactForm;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -443,3 +605,4 @@ export default ContactForm;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

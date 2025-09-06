@@ -7,10 +7,12 @@ import fs from 'fs';
 import path from 'path';
 
 
+
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 export async function getServerSideProps() {;
+
 
 
   const file = path.join(process.cwd(), 'datadep-radar.json');
@@ -18,6 +20,7 @@ export async function getServerSideProps() {;
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
+
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
 
@@ -69,6 +72,7 @@ function getServerSideProps() {
     generated_at = json.generated_at || '';
 
 }
+
 
 
 

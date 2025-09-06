@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -20,12 +22,14 @@ export default async function handler(
 
 
 
+
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   await ensure();
@@ -44,6 +48,8 @@ export default async function handler(
       text: body.text |""
       createdAt: new Date().toISOString()
     }
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -71,6 +77,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text: body.text || '',
       createdAt: new Date().toISOString()
     };
+
+
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -79,7 +87,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
   res.status(405).json({ error: 'Method not allowed' })
+
 
 
 }
@@ -87,6 +97,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 res.status(405).json({ error: "Method not allowed" });
 
 }
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -104,16 +116,84 @@ async function ensure() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-  res.status(405).json({ error: 'Method not allowed' })
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default async function handler(req, res) {
+  try {
+  await ensure(),;
+  if (req.method === 'GET') {
+    const data = await fs.readJson(FILE_PATH);
+    return res.status(200).json(data);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  if (req.method === 'GET') {
+    const body = req.body || {};
+    const data = await fs.readJson(FILE_PATH);
+    const comment = {;
+      id: Date.now().toString();
+      proposalId: body.proposalId;
+      region: body.region || 'Global';
+      author: body.author || 'anon';
+      text: body.text || '',;
+      createdAt: new Date().toISOString()},;
+    data.comments.push(comment);
+    await fs.writeJson(FILE_PATH, data, { spaces: 2 });
+    return res.status(201).json(comment);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  res.status(405).json({ error: 'Method not allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

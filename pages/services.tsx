@@ -8,6 +8,7 @@
 
 
 
+
 origin/main
 origin/automation-improvements-final
 
@@ -36,6 +37,7 @@ type Service = {
   pricing: string;
   link: string;
 }
+
 
 
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
@@ -100,6 +102,72 @@ type Service = {
   );
   return (
 
+    <main style={{
+      background: 'linear-gradient(135deg, #f8fafc, #f1f5f9)'
+      minHeight: 'calc(100vh - 120px)'
+    }}>
+      {/* Header */}
+      <section style={{
+        background: 'linear-gradient(135deg, #0b1220, #1e293b)'
+        color: 'white', padding: '60px 20px', textAlign: 'center'
+      }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <h1 style={{
+            fontSize: 48, fontWeight: 800, marginBottom: 16
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)'
+            WebkitBackgroundClip: 'text'
+            WebkitTextFillColor: 'transparent'
+            backgroundClip: 'text'
+          }}>Our Services</h1>
+          <p style={{
+            fontSize: 20, opacity: 0.9, marginBottom: 24
+            lineHeight: 1.6
+          }}>
+            Comprehensive technology solutions to transform your business
+          </p>
+          <div style={{
+            display: 'flex', gap: 16, justifyContent: 'center'
+            flexWrap: 'wrap', marginBottom: 32
+          }}>
+            <div style={{
+              background: 'rgba(59, 130, 246, 0.1)', padding: '12px 20px'
+              borderRadius: 12, border: '1px solid rgba(59, 130, 246, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#3b82f6' }}>60+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>Micro SaaS</div>
+            </div>
+            <div style={{
+              background: 'rgba(139, 92, 246, 0.1)', padding: '12px 20px'
+              borderRadius: 12, border: '1px solid rgba(139, 92, 246, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#8b5cf6' }}>40+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>AI Services</div>
+            </div>
+            <div style={{
+              background: 'rgba(34, 197, 94, 0.1)', padding: '12px 20px'
+              borderRadius: 12, border: '1px solid rgba(34, 197, 94, 0.2)'
+            }}>
+              <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
+              <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+export default function Services() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
 
 
   }, []);
@@ -108,6 +176,7 @@ type Service = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+
     site: 'https://ziontechgroup.com',
   };
 
@@ -192,6 +261,7 @@ origin/automation-improvements-final
 
 origin/automation-improvements-final
 
+
       <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
       <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
       <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
@@ -230,16 +300,20 @@ origin/automation-improvements-final
         </div>
       </section>
     </main>
+
   );
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-242d
+
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
     icon: Brain,
 
     description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics"
     icon: Brain
+
 origin/main
+
 export default function Services() {
   const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
@@ -254,6 +328,7 @@ export default function Services() {
             </div>
           </div>
         </section>
+
 
 
 
@@ -391,9 +466,11 @@ function Services() {
               ))}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
             </div>
           </div>
         </section>
+
 
 
 
@@ -450,6 +527,7 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -490,10 +568,12 @@ origin/automation-improvements-final
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -504,6 +584,7 @@ import Footer from '../components/Footer';
 
   const serviceCategories = [
     {
+
 
 
       title: 'Micro SaaS Products'
@@ -605,6 +686,7 @@ import Footer from '../components/Footer';
       ],
       href: '/it-services',;
 
+
     },  ];
   const getColorClasses = (color: string) => {
     const colors = {
@@ -621,6 +703,7 @@ import Footer from '../components/Footer';
         border: 'border-purple-500/40'
         ring: 'focus:ring-purple-500'
       },      green: {
+
         bg: 'bg-green-600'
         hover: 'hover:bg-green-700'
         text: 'text-green-400'
@@ -637,6 +720,7 @@ import Footer from '../components/Footer';
       },
     };
     return colors[color as keyof typeof colors] || colors.blue;  };
+
 
 
 
@@ -712,6 +796,7 @@ import Footer from '../components/Footer';
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -719,6 +804,7 @@ import Footer from '../components/Footer';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <>
       <Head>
@@ -728,7 +814,9 @@ import Footer from '../components/Footer';
         <meta name="description" content="Explore the advanced IT and AI services offered by Zion Tech Group." />
       </Head>
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
@@ -740,6 +828,7 @@ import Footer from '../components/Footer';
 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
+
 
 
 
@@ -761,6 +850,7 @@ import Footer from '../components/Footer';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 Our Services
               </h1>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -770,10 +860,12 @@ import Footer from '../components/Footer';
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 350+ Innovative Solutions for Modern Businesses
+
               </p>
             </div>
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </section>
           {/* Service Categories */}
@@ -962,8 +1054,10 @@ import Footer from '../components/Footer';
               Contact our experts to discuss your project requirements and discover
               how our solutions can drive your business forward.
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -979,6 +1073,7 @@ import Footer from '../components/Footer';
       </main>
       <Footer />
     </>
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
@@ -995,8 +1090,10 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 }
 
 
+
   )
 }
+
 
 
 
@@ -1344,4 +1441,5 @@ export default function Services() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

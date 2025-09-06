@@ -1,4 +1,5 @@
 
+
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 
 
@@ -46,6 +47,7 @@ import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
 
 
+
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -69,6 +71,7 @@ export default function ServicesPage() {
       </div>
     </EnhancedLayout>
 
+
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -82,3 +85,4 @@ export default function ServicesPage() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

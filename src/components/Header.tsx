@@ -1,45 +1,5 @@
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import { Menu, X } from 'lucide-react';
-
-
-
-import React from 'react';
-
-import { Link } from 'react-router-dom';
-
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-
-
-import { Menu, X } from 'lucide-react';
-
-interface HeaderProps {
-  onMenuClick: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' }
-  ];
-
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-      <div className="container flex h-16 items-center px-4 sm:px-6">
-        {/* Logo */}
-        <div className="flex items-center">
-          <Link to="/" className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
           </Link>
 
           {/* Desktop Navigation */}
@@ -86,11 +46,6 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           </div>
         )}
 
-      </div>
+      </nav>
     </header>
-  );
-};
-
-
-export default Header;
 

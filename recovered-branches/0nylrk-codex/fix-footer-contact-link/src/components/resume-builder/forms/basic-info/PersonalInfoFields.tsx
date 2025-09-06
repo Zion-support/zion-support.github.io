@@ -3,10 +3,12 @@
 
 
 
+
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+
 
 
 
@@ -20,7 +22,9 @@ import { BasicInfoFormData } from "./schema",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface PersonalInfoFieldsProps {
@@ -40,6 +44,7 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
@@ -94,6 +99,7 @@ function PersonalInfoFields() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         )}
 
       />;
@@ -135,6 +141,7 @@ function PersonalInfoFields() {
         name="phone"
 
 
+
             <FormControl>;
               <Input placeholder="+1 234 567 8900" {...field} />;
             </FormControl>;
@@ -159,3 +166,4 @@ function PersonalInfoFields() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

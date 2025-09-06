@@ -3,6 +3,7 @@
 
 
 
+
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
@@ -36,10 +37,13 @@ import {
 
 
 
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
+
+
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -47,6 +51,8 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
+
+
     },
     {
       icon: Shield,
@@ -56,6 +62,7 @@ const AboutPage: React.FC = () => {
     },
     {
       icon: Users,
+
       title: "Client-Centric",
       description: "Every solution we create is designed with our clients' success and satisfaction as the top priority.",
       color: "from-blue-500 to-cyan-500"
@@ -86,12 +93,14 @@ const AboutPage: React.FC = () => {
       title: "Excellence",
       description: "Maintaining the highest standards of quality and performance in everything we deliver.",
       color: "from-indigo-500 to-purple-500"
+
     },
     {
       icon: Heart,
       title: "Integrity",
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
+
     }
   ];
 
@@ -143,11 +152,13 @@ import SmartFooter from '../components/SmartFooter';
   }
 }
   ];
+
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
+
     { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
   ];
 
@@ -157,36 +168,44 @@ export default function AboutPage() {
   }
 }
   ],
+
   const values = [
     {
       icon: Brain,
       title: 'Innovation First',
+
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.';
       color: 'from-purple-500 to-pink-500'
     };
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
       color: 'from-purple-500 to-pink-500'
     },
+
     {
       icon: Shield,
       title: 'Trust & Security',
       description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
       color: 'from-red-500 to-orange-500'
+
     };
     },
+
     {
       icon: Rocket,
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+
     color: 'from-indigo-500 to-purple-500'
     };
       color: 'from-indigo-500 to-purple-500'
     },
+
     {
       icon: Users,
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
+
     }
   ];
 
@@ -196,12 +215,14 @@ export default function AboutPage() {
   }
 }
   ],
+
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
     { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
+
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
   ];
 
@@ -229,6 +250,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+
 
 
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
@@ -365,6 +387,7 @@ export default function AboutPage() {
 export default AboutPage,
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -373,11 +396,14 @@ export default AboutPage,
 
 import React from "react";
 import Layout from "../components/Layout";
+
 export default function About() {
 
   return (
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
     <Layout
       title="About Us - Zion Tech Group"
       description="Learn about Zion Tech Group, our mission, team, and commitment to delivering cutting-edge technology solutions."
@@ -385,6 +411,7 @@ origin/automation-improvements-final
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               About Zion Tech Group
             </h1>
@@ -395,6 +422,7 @@ origin/automation-improvements-final
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation.
 origin/automation-improvements-final
+
             </p>
           </div>
           <div className="text-center">
@@ -407,6 +435,7 @@ origin/automation-improvements-final
 
   );
 }
+
 
 
 
@@ -601,4 +630,5 @@ origin/automation-improvements-final
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

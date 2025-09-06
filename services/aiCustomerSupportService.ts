@@ -1,10 +1,21 @@
 
 
+  id: string;
+  filename: string;
+  originalName: string;
+  mimeType: string;
+  size: number;
+  url: string;
+
+
+
 
   uploaded_at: Date,
   uploaded_by: string;
 
 }
+
+
 
 
 
@@ -32,6 +43,8 @@
 
 
 
+
+
   id: string;
   content: string;
 
@@ -42,6 +55,8 @@
   attachments: Attachment[];
 
 }
+
+
 
 
 
@@ -64,11 +79,14 @@
 
 
 
+
+
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
+
 
 
 
@@ -266,6 +284,7 @@ class AICustomerSupportService {
 
 
 
+
             attachments: [];
           }
         ];
@@ -276,6 +295,7 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize knowledge base;
+
 
 
     this.knowledge_base = [;
@@ -303,18 +323,21 @@ export interface Attachment {;
 
 
 
-      }
-    ]
-  }
-
-
-
-
-
 
       }
     ]
   }
+
+
+
+
+
+
+
+      }
+    ]
+  }
+
 
 
 
@@ -356,6 +379,8 @@ export interface Attachment {;
         ticket.resolvedAt = new Date()
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
+
+
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -396,6 +421,7 @@ export interface Attachment {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -404,12 +430,15 @@ export interface Attachment {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       }
       this.updateAnalytics()
 
     }
   }
+
+
 
 
 
@@ -483,6 +512,8 @@ export interface Attachment {;
       session.confidence = intent.confidence
 
 
+
+
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -542,6 +573,7 @@ export interface Attachment {;
       session.confidence = intent.confidence;
 
 
+
     }
     return message
   }
@@ -570,10 +602,12 @@ export interface Attachment {;
 
 
 
+
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+
 
 
 
@@ -584,6 +618,7 @@ export interface Attachment {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -597,6 +632,8 @@ export interface Attachment {;
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
+
+
 
 
 
@@ -630,6 +667,8 @@ export interface Attachment {;
     this && this.knowledgeBase.push(article);
 
     return article
+
+
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -656,7 +695,9 @@ export interface Attachment {;
     return article;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -666,6 +707,7 @@ export interface Attachment {;
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
+
 
 
 
@@ -689,6 +731,7 @@ export interface Attachment {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
@@ -729,6 +772,8 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
         ]
       })
+
+
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -779,6 +824,7 @@ if ( {) {
         ];
       });
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -792,15 +838,18 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
     return recommendations
   }
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   private updateAnalytics(): void {
 
     const totalTickets = this && this.tickets.length;
@@ -863,6 +912,8 @@ if ( {) {
       agentPerformance
 
 
+
+
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -915,6 +966,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -922,6 +974,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   }
@@ -961,13 +1014,17 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
+
+

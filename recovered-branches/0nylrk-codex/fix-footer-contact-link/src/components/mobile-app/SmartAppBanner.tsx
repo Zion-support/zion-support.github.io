@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
@@ -19,6 +20,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface SmartAppBannerProps {
   app_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -29,6 +31,13 @@ interface SmartAppBannerProps {
 }
 
 
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+
+  googlePlayUrl = "/download",
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
 
 
   useEffect(() => {
@@ -36,6 +45,7 @@ interface SmartAppBannerProps {
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
         setIsVisible(true)
+
       }, delay);
       return () => clearTimeout(timer)
     }
@@ -46,18 +56,23 @@ interface SmartAppBannerProps {
     }
   }, [isMobile, delay]),
   
+
   const dismissBanner = () => {
     setIsVisible(false);
     localStorage.setItem("smartBannerDismissed", "true")
+
   }
   },
+
 
   const resetBanner = () => {
     localStorage.removeItem("smartBannerDismissed");
     setIsVisible(true)
+
   }
   },
   
+
   // Only render on mobile devices
   if (!isMobile |!isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -67,6 +82,7 @@ interface SmartAppBannerProps {
     ) : null
   }
   // Detect iOS or Android
+
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
@@ -76,6 +92,7 @@ interface SmartAppBannerProps {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
       <div className="flex items-center">;
@@ -111,6 +128,7 @@ interface SmartAppBannerProps {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
@@ -121,6 +139,7 @@ interface SmartAppBannerProps {
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+
 
 
 
@@ -210,6 +229,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 };
 
 
+
 export const SmartAppBanner: React.FC < SmartAppBannerProps> = ({
   app_name = "Zion Marketplace";
   appIconSrc;
@@ -289,4 +309,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

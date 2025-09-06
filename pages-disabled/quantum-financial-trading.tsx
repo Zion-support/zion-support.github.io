@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 import SEO from "../components/SEO";
+
 export default function AISustainabilityPlatformPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -65,8 +67,10 @@ function AISustainabilityPlatformPage() {
           soon.
         </p>
       </div>
+
     </div>;
     </div>
   );
 }
 }
+

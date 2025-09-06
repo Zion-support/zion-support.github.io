@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -48,11 +49,14 @@ export default function ContentGenerator() {
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
 
+
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
+
+
 
 
 
@@ -127,13 +131,17 @@ export default function ContentGenerator() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       
+
       if (error) throw error,
       
       setPreviewContent(data),
+
+
 
 
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
@@ -143,8 +151,10 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
+
   }
   },
+
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
@@ -154,6 +164,8 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return
+
+
 
 
 
@@ -197,17 +209,20 @@ export default function ContentGenerator() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       
       if (error) throw error,
       
 
+
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")
     }
+
   }
   },
 
@@ -253,11 +268,13 @@ export default function ContentGenerator() {;
                   <div className="space-y-2">;
                     <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>;
 
+
                     <Textarea
                       id="customPrompt"
                       placeholder="Enter a custom prompt for the AI..."
                       className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
                       value={customPrompt}
+
 
                       onChange={(e) => setCustomPrompt(e && e.target.value)}
                     />;
@@ -268,10 +285,12 @@ export default function ContentGenerator() {;
                       <div className="flex items-center justify-between">;
                         <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
 
+
                         <Switch
                           id="autoPublish"
                           checked={autoPublish}
                           onCheckedChange={setAutoPublish}
+
 
                         />;
                       </div>;
@@ -286,6 +305,7 @@ export default function ContentGenerator() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -293,7 +313,9 @@ export default function ContentGenerator() {;
                       </div>
                     </>
                   )}
+
                   
+
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -495,6 +517,7 @@ export default function ContentGenerator() {;
                       </p>;
                     </div>;
                   )}
+
                 </CardContent>
               </Card>
             </div>
@@ -516,5 +539,4 @@ export default function ContentGenerator() {;
     </>);
 }
 
-=======
-;
+

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -32,6 +33,7 @@ export default function Placeholder() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -47,9 +49,11 @@ export default function Placeholder() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,9 +1,11 @@
 
 
 
+import {Badge} from "@/components/ui/badge";
+import {ProfileSkill} from "@/types/profile";
 
-
-
+import { Badge } from "@/components/ui/badge",
+import { ProfileSkill } from "@/types/profile",
 
 
 interface ProfileSkillsProps {
@@ -26,6 +28,17 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
             </div>
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
 
+
+                style={{ width: `${(skill.level / 5) * 100}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+import { Badge } from "@/components/ui/badge",;
+import { ProfileSkill } from "@/types/profile";
 
 interface ProfileSkillsProps {;
   skills: ProfileSkill[];
@@ -58,6 +71,7 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
         ))}
       </div>;
     </div>;
+
   );
 
 
@@ -98,4 +112,5 @@ function ProfileSkills() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

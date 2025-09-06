@@ -1,7 +1,21 @@
 
 
+import Link from 'next/link';
+import Head from 'next/head';
 
 
+
+
+        {/* Features Section */}
+        <section className="py-20 bg-slate-900/50">
+
+import Link from 'next/link',
+import Head from 'next/head';
+import { useState, useEffect, Suspense  } from 'react';
+import { ContactInfo, AnimationState  } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary',
+import LoadingSpinner from '../components/LoadingSpinner';
+// import PerformanceMonitor from '../components/PerformanceMonitor';
 
 
 import Link from 'next/link';
@@ -13,12 +27,14 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
 
+
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
 import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState, Service } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
+
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
@@ -27,7 +43,9 @@ export default function Home() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   });
   useEffect(() => {
@@ -51,8 +69,10 @@ export default function Home() {
       </div>
 
 
+
     ),
   };
+
 
 
   return (;
@@ -81,6 +101,7 @@ export default function Home() {
         <meta name="twitter:creator" content="@ziontechgroup" />;
         <script;
           type="application/ld+json";
+
           dangerouslySetInnerHTML={{__html:JSON.stringify({;
               "@context":"https://schema.org";
               "@type":"Organization";
@@ -122,6 +143,7 @@ export default function Home() {
                 "contactType":"customer service",;
                 "email":contact.email;
               },;
+
               "sameAs":[contact.site];
             });
           }}
@@ -200,8 +222,10 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-blue-400">Micro SaaS Products</h3>;
                 <p className="text-slate-300 mb-6">;
+
                   Innovative, focused software solutions including AI-Powered Video Clip Maker;
                   Innovative, focused software solutions including AI-Powered Video Clip Maker, ;
+
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -218,8 +242,10 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">AI Services</h3>;
                 <p className="text-slate-300 mb-6">;
+
                   Advanced artificial intelligence solutions including autonomous AI agents;
                   Advanced artificial intelligence solutions including autonomous AI agents, ;
+
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -236,8 +262,10 @@ export default function Home() {
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">;
                 <h3 className="text-2xl font-bold mb-4 text-green-400">IT & Cloud Services</h3>;
                 <p className="text-slate-300 mb-6">;
+
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions;
                   Comprehensive IT solutions including quantum computing consulting, blockchain & Web3 solutions, ;
+
                   DevSecOps automation, and 40+ more enterprise-grade services.;
                 </p>;
                 <ul className="text-slate-400 space-y-2 mb-6">;
@@ -285,6 +313,7 @@ export default function Home() {
         </Suspense>;
         {/* <PerformanceMonitor ;          showMetrics={process.env.NODE_ENV === 'development'}
           logMetrics={true}
+
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           }}
         /> */}
@@ -292,6 +321,7 @@ export default function Home() {
     </>;
   );}
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -312,7 +342,9 @@ export default function HomePage() {
     </div>
   );
 }
+
 import React from 'react';
+
 import MainLayout from '../components/layout/MainLayout';
 import SEOHead from '../components/SEOHead';
 import { motion } from 'framer-motion';
@@ -451,9 +483,11 @@ export default function HomePage() {
                   </div>
                 </motion.div>
               ))}
+
             </div>
 origin/automation-improvements-final
 import React from 'react';
+
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -483,7 +517,9 @@ export default function Home() {
       </div>
     );
   };
+
 ursor/integrate-build-improve-and-re-verify-8f7d
+
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -501,6 +537,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -559,10 +596,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
             </div>
           </div>
         </section>
         {/* Services Overview */}
+
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">;
           <div className="max-w-4xl mx-auto">;
             <h1 ;
@@ -730,6 +769,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           onThresholdExceeded={(metrics) => {console.warn('Performance thresholds exceeded:', metrics);
           onThresholdExceeded={(metrics) => {;
             console.warn('Performance thresholds exceeded:', metrics);
+
           }}
         /> */}
       </ErrorBoundary>;
@@ -757,6 +797,7 @@ function HomePage() {
       </div>
     </div>;
   );
+
         <section className="py-20 px-4 text-center" role="banner" aria-labelledby="hero-title">
           <div className="max-w-4xl mx-auto">
             <h1 
@@ -814,10 +855,13 @@ function HomePage() {
                 <p className="text-slate-300">IT Solutions</p>
               </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
             </div>
           </div>
         </section>
         {/* Services Overview */}
+
+
 
 
         <section className="py-16 px-4" role="main">
@@ -920,6 +964,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     </>
   )
 
+
 origin/automation-improvements-final
 
 }
@@ -935,6 +980,7 @@ import {Button} from '../src/components/ui/button';
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 ursor/integrate-build-improve-and-re-verify-8f7d
+
   return (
     <>
       <Head>
@@ -951,14 +997,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-7xl mx-auto text-center">
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
 origin/automation-improvements-final
+
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -966,7 +1016,9 @@ origin/automation-improvements-final
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
+
 ursor/integrate-build-improve-and-re-verify-8f7d
+
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -1005,6 +1057,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                 </div>
               ))}
             </motion.div>
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           </div>
         </section>
@@ -1025,6 +1078,7 @@ origin/main
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -1038,6 +1092,7 @@ origin/main
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Our <span className="text-cyan-400">Services</span>
               </h2>
+
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1061,6 +1116,7 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <motion.div
@@ -1068,8 +1124,10 @@ origin/automation-improvements-final
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
                   <div className="text-4xl mb-4">;
@@ -1096,9 +1154,11 @@ origin/automation-improvements-final
 
 
 
+
         {/* Services Preview */}
         <section className="py-20">
             </motion.div>
+
 
 
 
@@ -1128,6 +1188,8 @@ origin/automation-improvements-final
 
 
 
+
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
                 <motion.div
@@ -1148,6 +1210,7 @@ origin/automation-improvements-final
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
+
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1173,11 +1236,13 @@ origin/automation-improvements-final
                   </Card>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -1197,9 +1262,13 @@ origin/automation-improvements-final
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+
         {/* Why Choose Us */}
         <section className="py-16 bg-gray-50">
+
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -1210,6 +1279,7 @@ origin/automation-improvements-final
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
                 We deliver exceptional results through innovation, expertise, and dedication
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4 gradient-text">Our Services</h2>
@@ -1263,10 +1333,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 We deliver exceptional results through innovation, expertise, and dedication
               </p>
 origin/automation-improvements-final
+
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
+
 
         <section className="py-16 bg-gray-50">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -1286,6 +1358,7 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {whyChooseUs && whyChooseUs.map((item, index) => (;
                 <motion&& motion.div
+
 
 
 
@@ -1315,9 +1388,36 @@ origin/automation-improvements-final
                   </Card>
 
 
+<p className="text-gray-600">{item.description}</p>
 
+                </motion.div>
+              ))}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+
+                We deliver exceptional results through innovation, expertise, and dedication              </p>
+
 
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -1334,8 +1434,10 @@ origin/automation-improvements-final
                     <item.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
+
                   <p className="text-gray-600">{item.description}</p>
 ursor/integrate-build-improve-and-re-verify-8f7d
+
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -1448,6 +1550,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                       <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                     </div>
                   </Card>
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1460,11 +1563,13 @@ origin/automation-improvements-final
                 </motion.div>
                   <p className="text-gray-600">{item.description}</p>                </motion.div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
+
               ))}
             </div>
           </div>
         </section>
         {/* CTA Section */}
+
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <section className="py-16 bg-blue-600 text-white">
@@ -1474,13 +1579,16 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -1498,6 +1606,10 @@ origin/automation-improvements-final
                 <Link
                   href="tel:+13024640950"
 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center"
+                >
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call Now
 
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -1514,6 +1626,7 @@ origin/automation-improvements-final
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1525,6 +1638,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
             </motion.div>
         {/* CTA Section */}
+
         <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold mb-6 gradient-text">Ready to Transform Your Business?</h2>
@@ -1539,6 +1653,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 Learn More About Us
               </Link>
             </div>
+
 
 
 origin/main
@@ -1650,6 +1765,7 @@ origin/main
                     </Link>
                   </div>
                 </div>
+
               </div>
             </section>
             {/* Stats Section */  } catch (error) {
@@ -1657,6 +1773,7 @@ origin/main
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 </main>
     </>
             <section className="py-16 bg-slate-900/50">
@@ -1818,11 +1935,13 @@ origin/main
 
 
 
+
           </div>
         </section>
 
           </div>
         </section>
+
 origin/automation-improvements-final
       </div>
 
@@ -1865,3 +1984,4 @@ origin/main
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

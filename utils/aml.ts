@@ -1,6 +1,7 @@
 
 
 
+
 }
 ;
 
@@ -17,10 +18,13 @@ export type AmlCheckResult = {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
+
+
 
 
 
@@ -108,6 +112,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 }
+
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
@@ -115,4 +120,5 @@ export function getAmlProvider (): AmlProvider {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

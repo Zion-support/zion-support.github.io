@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 type ProposalListItem = {
   id: string
   title: string
@@ -17,6 +19,7 @@ type ProposalListItem = {
   type: string
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
+
 }
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([])
@@ -27,15 +30,18 @@ export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
   const [filter, setFilter] = useState('All'),
   useEffect__(() => {
+
     fetch('/api/proposals')
       .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
+
   }, [])
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
 
   }, []),
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter))
+
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -61,6 +67,7 @@ export default function InternationalProposalsPage() {
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
+
                 <a className="text-blue-600 underline" href={`/api/proposals?id=${i.id}`} target="_blank" rel="noreferrer">JSON</a>
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.md`} target="_blank" rel="noreferrer">Markdown</a>
                 <a className="text-blue-600 underline" href={`/proposals/${i.id}.pdf`} target="_blank" rel="noreferrer">PDF</a>
@@ -94,10 +101,12 @@ export default function InternationalProposalsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
+
 
 
 }
@@ -120,4 +129,5 @@ type ProposalListItem = {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

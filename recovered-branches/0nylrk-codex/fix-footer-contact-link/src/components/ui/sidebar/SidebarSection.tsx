@@ -1,7 +1,12 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import {cn} from "@/lib/utils";
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   title?: string,
@@ -33,6 +38,7 @@ import { cn } from "@/lib/utils",
 export function SidebarSection(): any ({ className, title, children, ...props }: SidebarSectionProps) {;
 
   return (
+
     <div className={cn("py-2", className)} {...props}>;
       {title && (;
         <h3 className="px-3 mb-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">;
@@ -56,11 +62,13 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           {title}
         </h3>;
       )}
       <div className="space-y-1">{children}</div>
     </div>
+
   );
 }
   )
@@ -71,4 +79,5 @@ export function SidebarSection({ className, title, children, ...props }: Sidebar
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

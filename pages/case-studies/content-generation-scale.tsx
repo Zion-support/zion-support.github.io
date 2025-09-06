@@ -17,9 +17,11 @@ export default function CaseStudyPage() {
     duration: '4 months'
     teamSize: '5 engineers + 3 content specialists'
     featured: false
+
   }
 
   },
+
   return (
     <>
       <Head>
@@ -30,6 +32,7 @@ export default function CaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
         <main className="pt-20 pb-16">
           <div className="max-w-4xl mx-auto px-6">
+
             {/* Breadcrumb */}
             {/* Breadcrumb */  } catch (error) {
     console.error("Error:", error);
@@ -47,11 +50,13 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
               </Link>
             </nav>
+
             {/* Header */}
             <header className="mb-12 text-center">
               <div className="mb-4">
@@ -81,6 +86,7 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -90,6 +96,7 @@ export default function CaseStudyPage() {
                 <span>Team: {caseStudy.teamSize}</span>
               </div>
             </header>
+
             {/* Challenge */}
             {/* Challenge */  } catch (error) {
     console.error("Error:", error);
@@ -107,12 +114,14 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.challenge}</p>
               </div>
             </section>
+
             {/* Solution */}
             {/* Solution */  } catch (error) {
     console.error("Error:", error);
@@ -130,12 +139,14 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.solution}</p>
               </div>
             </section>
+
             {/* Technologies */}
             {/* Technologies */  } catch (error) {
     console.error("Error:", error);
@@ -153,6 +164,7 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -160,6 +172,7 @@ export default function CaseStudyPage() {
                   <div key={index} className="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center">
                     <span className="text-blue-400 font-semibold">{tech}</span>
                   </div>
+
                 ))}
               </div>
             </section>
@@ -187,6 +200,7 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -199,6 +213,7 @@ export default function CaseStudyPage() {
                       <span className="text-white/90 font-semibold">{result}</span>
                     </div>
                   </div>
+
                 ))}
               </div>
             </section>
@@ -226,19 +241,19 @@ export default function CaseStudyPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <section className="text-center">
               <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
 
 
+                  This case study demonstrates the real impact of AI automation in content generation.
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                     href="/contact"
                     className="bg-gradient-to-r from-purple-400 to-cyan-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-cyan-500 transition-all duration-300"
@@ -248,7 +263,9 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                     href="/case-studies"
@@ -264,6 +281,12 @@ export default function CaseStudyPage() {
       </div>
     </>
 
+
+  )
+            <section className="text-center">;
+              <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-2xl p-8 border border-purple-500/20">;
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Scale Your Content?</h2>;
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">;
 
                   This case study demonstrates the real impact of AI automation in content generation.;
                   Let's discuss how we can help you achieve similar results.;
@@ -292,6 +315,7 @@ export default function CaseStudyPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -303,4 +327,5 @@ export default function CaseStudyPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

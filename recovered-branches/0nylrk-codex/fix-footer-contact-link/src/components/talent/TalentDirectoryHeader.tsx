@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import React from "react",
 
@@ -11,6 +12,7 @@ import React from "react",
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface TalentDirectoryHeaderProps {
   title: string;
   description: string
@@ -20,6 +22,14 @@ export function TalentDirectoryHeader({
   description
 }: TalentDirectoryHeaderProps) {
 
+  return (
+    <div className="bg-zion-blue-dark border-b border-zion-blue-light">
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          {title}
+        </h1>
+
+import React from "react",;
 
 interface TalentDirectoryHeaderProps {;
   title: string,;
@@ -33,6 +43,7 @@ interface TalentDirectoryHeaderProps {;
       </div>;
     </div>;
   );
+
 }
 ;
 
@@ -45,3 +56,4 @@ interface TalentDirectoryHeaderProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

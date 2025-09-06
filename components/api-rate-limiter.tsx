@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -26,6 +27,7 @@ export default function APIRateLimiterPage() {;
 
 
 
+
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
   const [timeWindow, setTimeWindow] = useState('1m');
@@ -44,6 +46,7 @@ export default function APIRateLimiterPage() {;
 
 
 
+
   ];
 
     { value: '10', label: '10 requests', description: 'Very strict' },
@@ -56,10 +59,13 @@ export default function APIRateLimiterPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
   }
+
+
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 
 
@@ -157,6 +163,8 @@ export default function APIRateLimiterPage() {;
 
 
 
+
+
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
@@ -166,7 +174,9 @@ export default function APIRateLimiterPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   };
@@ -179,38 +189,118 @@ export default function APIRateLimiterPage() {;
         return 'text-red-400'
       default:
 
-
-
-  };
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case 'success':;
-        return 'text-green-400';
-      case 'rate_limited':;
-        return 'text-red-400',;
-      default:;
-        return 'text-yellow-400';    }        return 'text-yellow-400';
-
-
+        return 'text-yellow-400';    }        return 'text-yellow-400'
     }
-  }
 
-                        key={limit.value}
-                        on_click={() => setRateLimit (limit.value)}
-                        className={`p - 3 rounded - lg border text - left transition - all ${
-                          rate_limit === limit.value;
-                            ? 'border - green - 500 bg - green - 500 / 10 text - green - 300';
-                            : 'border - gray - 600 hover:border - gray - 500 text - gray - 300 hover:text - white';
-                        }`}
-                      >
-                        <div className='font-medium'>{limit.label}</div>
-                        <div className='text-xs text-gray-400 mt-1'>
-                          {limit.description}
-                        </div>                      </button>                        <div className="font-medium">{limit.label}</div>
-                        <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
-                      </button>
-                    ))}
-                  </div>
+  return (
+    <>
+      <Head>
+        <title>API Rate Limiter - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Protect your APIs with intelligent rate limiting. Prevent abuse, ensure fair usage, and maintain optimal performance for all users.'
+        />
+        <meta
+          property='og:title'
+          content='API Rate Limiter - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Protect your APIs with intelligent rate limiting and prevent abuse.'
+        />
+      </Head>
+      {/* Hero Section */}
+      <section className='pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='mb-8'>
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6'>
+              <Shield className='w-4 h-4 mr-2' />
+              API Protection & Security
+            </div>
+          </div>
+          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
+            API Rate Limiter
+          </h1>
+          <p className='text-xl text-green-200 max-w-4xl mx-auto leading-relaxed'>
+            Protect your APIs from abuse with intelligent rate limiting. Ensure
+            fair usage, prevent DDoS attacks, and maintain optimal performance
+            for all your users with our enterprise-grade rate limiting solution.          </p>      </Head>
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-400/30 text-green-300 text-sm font-medium mb-6">
+              <Shield className="w-4 h-4 mr-2" />
+              API Protection & Security
+            </div>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+            API Rate Limiter
+          </h1>
+          <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
+          </p>
+        </div>
+      </section>
+      {/* Rate Limiter Configuration */}
+      <section className='py-20 bg-gray-900'>
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+              Configure Your Rate Limiting
+            </h2>
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
+              Set up intelligent rate limiting rules to protect your APIs and
+              ensure fair usage across all users.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+            {/* Configuration Form */}
+            <Card className='p-8 bg-gray-800 border border-gray-700'>
+              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
+                <Code className='w-6 h-6 mr-3 text-green-400' />
+                Rate Limiting Rules
+              </h3>
+              <div className='space-y-6'>
+                {/* API Endpoint */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    API Endpoint
+                  </label>
+                  <input
+                    type='text'
+                    value={endpoint}
+                    onChange={e => setEndpoint(e.target.value)}
+                    placeholder='e.g., /api/users, /api/data, /api/analytics'
+                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'                  />              Configure Your Rate Limiting
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Set up intelligent rate limiting rules to protect your APIs and ensure fair usage across all users.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Configuration Form */}
+            <Card className="p-8 bg-gray-800 border border-gray-700">
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                <Code className="w-6 h-6 mr-3 text-green-400" />
+                Rate Limiting Rules
+              </h3>
+              <div className="space-y-6">
+                {/* API Endpoint */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Endpoint
+                  ">
+                    API Endpoint
+                  </label>
+                  <input
+                    type="text"
+                    value={endpoint}
+                    onChange={(e) => setEndpoint(e.target.value)}
+                    placeholder="e.g., /api/users, /api/data, /api/analytics"
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  />
+
                 </div>
 
                   </div>;
@@ -234,6 +324,7 @@ export default function APIRateLimiterPage() {;
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+
                     {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Time Window
                   ">
@@ -439,6 +530,7 @@ export default function APIRateLimiterPage() {;
                         <div className=&quot;text-xs text-gray-400 mt-1&quot;>{limit.description}</div>
 
 
+
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -455,11 +547,13 @@ export default function APIRateLimiterPage() {;
                       </button>
 
 
+
                     ))}
                   </div>
                 </div>
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                 {/* Time Window */}
                 <div>
@@ -472,7 +566,9 @@ export default function APIRateLimiterPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
@@ -492,10 +588,12 @@ export default function APIRateLimiterPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
                 {/* API Key Generation */}
 
 
@@ -547,6 +645,7 @@ export default function APIRateLimiterPage() {;
 
 
 
+
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
               <div className='flex items-center justify-between mb-6'>;
@@ -560,6 +659,7 @@ export default function APIRateLimiterPage() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -568,6 +668,7 @@ export default function APIRateLimiterPage() {;
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
+
 
                   Test Results
 
@@ -765,6 +866,7 @@ export default function APIRateLimiterPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
+
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -786,6 +888,7 @@ export default function APIRateLimiterPage() {;
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
+
 
 
                       </div>
@@ -870,6 +973,7 @@ export default function APIRateLimiterPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       )}
                     </div>;
                   ))}
@@ -887,6 +991,7 @@ export default function APIRateLimiterPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -896,11 +1001,13 @@ export default function APIRateLimiterPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
 
               Advanced Rate Limiting Features
 
@@ -915,6 +1022,7 @@ export default function APIRateLimiterPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -1292,6 +1400,7 @@ console && console.log('Rate Limit Info:', {;
               <Button
                 onClick={() => copyToClipboard(`const axios = require('axios');
 
+
 const apiKey = '${apiKey || 'your_api_key_here'}';
 const endpoint = '${endpoint || '/api/users'}';
 
@@ -1309,6 +1418,7 @@ const response = await axios && axios.get(\`https://api && api.zion.tech\${endpo
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 });
 
@@ -1351,10 +1461,12 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
+
     'Authorization': f'Bearer {api_key}'
     'X-RateLimit-Limit': '${rateLimit}'
     'Authorization': f'Bearer {api_key}',
     'X-RateLimit-Limit': '${rateLimit}',
+
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
@@ -1364,7 +1476,9 @@ response = requests.get(
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     f'https://api.zion.tech{endpoint}';
 
@@ -1443,7 +1557,9 @@ response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
 
+
 response = requests.get(
+
 
 
 
@@ -1587,14 +1703,36 @@ console.log ('Rate Limit Info:', {
       </section>
       {/* CTA Section */}
 
+      <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-green-100 mb-8'>
+            Join thousands of developers and companies who trust our rate
+            limiting service to protect their APIs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-green-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-green-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

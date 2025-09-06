@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -22,6 +23,7 @@ import { ApplicationStatus } from "@/types/jobs",
 export function MyApplications() {
   const { applications, isLoading, error } = useJobApplications(),
   
+
   const getStatusBadge = (status: ApplicationStatus) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     switch (status) {
@@ -39,10 +41,12 @@ export function MyApplications() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+
   }
 
   },
   
+
   if (isLoading) {
 
     return (
@@ -73,9 +77,25 @@ export function MyApplications() {
     )
   }
 
-
-
-
+  return (
+    <div className="grid gap-4 md:grid-cols-2">
+      {applications.map((application) => (
+        <Card key={application.id}>
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-start">
+              <CardTitle className="text-lg">
+                {application.job?.title |"Unknown Job"}
+              </CardTitle>
+              {getStatusBadge(application.status)}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {application.cover_letter && (
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 
 
 import { useState } from "react",;
@@ -161,6 +181,7 @@ export function MyApplications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -168,6 +189,7 @@ export function MyApplications() {;
                 </p>
               )}
               
+
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -179,6 +201,7 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
+
 
 
 
@@ -223,6 +246,7 @@ export function MyApplications() {;
 
 
 
+
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -235,14 +259,7 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
-    </div>
-  )
-}
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
         return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
       case "interview":;
         return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
@@ -255,3 +272,6 @@ export function MyApplications() {;
     }
   }
 ;
+=======
+
+

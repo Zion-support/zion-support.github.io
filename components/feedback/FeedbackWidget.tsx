@@ -20,6 +20,20 @@ import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 
+export type FeedbackWidgetProps = {;
+  responseId?: string;
+  aiModel?: string;
+}
+export default function FeedbackWidget({
+
+  const [rating, setRating] = useState<null | 'up' | 'down'>(null);
+  const [comment, setComment] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const effectiveResponseId = useMemo(
+    () => responseId |uuidv4()
+    [responseId]
 
   );
   const submit = async () => {;
@@ -61,6 +75,7 @@ import { v4 as uuidv4 } from 'uuid';
     } finally {;
 
       setSubmitting(false);    }
+
   }
   return (
     <div className='mt-6 rounded-lg border p-4 bg-white/60 dark:bg-neutral-900/60'>
@@ -89,6 +104,7 @@ import { v4 as uuidv4 } from 'uuid';
     }
   }
   };
+
 
   return (
 
@@ -341,9 +357,15 @@ if ( {) {
     </div>
 
 
+}
+
+}
+
 
   );
 }
+
+
 
 
 

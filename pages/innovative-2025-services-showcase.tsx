@@ -1,7 +1,7 @@
 
 
-
-
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 
   ],
@@ -36,6 +36,8 @@
 
 
 
+
+
   const fadeInUp = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0 },
@@ -49,14 +51,17 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const staggerContainer = {
     animate: {
       transition: {
         staggerChildren: 0.1
+
       }
     }
   }
@@ -71,6 +76,7 @@
   }
 }
   },
+
   return (
     <>
       <Head>
@@ -81,6 +87,7 @@
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-black text-white overflow-hidden">
+
         {/* Animated Background */}
         {/* Animated Background */  } catch (error) {
     console.error("Error:", error);
@@ -98,11 +105,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(120,219,255,0.3),transparent_50%)]"></div>
+
           {/* Floating Particles */}
           <div className="absolute inset - 0 overflow - hidden">;
             {[...Array (20)].map ((_, i) => (
@@ -128,6 +137,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 style={{
@@ -135,6 +145,7 @@
                   top: `${Math.random() * 100}%`
                   animationDelay: `${Math.random() * 2}s`
                   animationDuration: `${2 + Math.random() * 3}s`
+
                 }}
               />))}
           </div>;
@@ -287,6 +298,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -296,6 +308,8 @@
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+
+
 
 
 
@@ -319,15 +333,18 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
+
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -367,11 +384,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
                     type="text"
                     placeholder="Search innovative services..."
+
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     value={searchTerm  } catch (error) {
@@ -395,11 +414,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
+
               {/* Category Filters */}
               {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
@@ -411,6 +432,7 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -439,6 +461,7 @@
                     <category.icon className="w-5 h-5" />
                     <span>{category.name}</span>
                     <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
+
                       {category.count}
                     </span>
                   </button>
@@ -487,6 +510,7 @@
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial="initial"
             animate="animate"
           >
@@ -494,22 +518,36 @@
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
                   <motion.div
-                    key={service.id}
-                    className="group relative";
-                    variants={fadeInUp}
-                    while_hover={{ coordinate_y: -10 }}
-                    transition={{ duration: 0.3 }}
-                  >;
-                    <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
-                      {/* Service Icon and Header */}
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="group relative"
+                    variants={fadeInUp  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    whileHover={{ y: -10 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  >
+                    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm">
+                      {/* Service Icon and Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
                       <div className="p-8">
@@ -520,11 +558,14 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           </div>
                                                       {(service as any).popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
+
                           )}
                         </div>
                         {/* Service Name and Tagline */}
@@ -536,6 +577,7 @@
                           {(service as any).tagline || service.description?.substring (0, 100) || 'Innovative service solution'}
                         </p>;
                         {/* Price */}
+
 
 
 
@@ -575,7 +617,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                         <div className="flex items-baseline mb-6">
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
@@ -583,9 +627,11 @@
                         </div>
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                        {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
                         <div className="space-y-3 mb-8">
@@ -604,6 +650,7 @@
                             <div className="text-gray-500 text-sm">
                               +{service.features.length - 5} more features
                             </div>
+
                           )}
                         </div>
                         {/* Service Stats */}
@@ -614,6 +661,7 @@
                           href={`/services/${service.id}`}
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -636,22 +684,26 @@
                         </div>
 
 
+                        {/* CTA Button */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <Link;
+                          href={`/services/${service.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
+
                       {/* Hover Overlay */}
                       {/* Hover Overlay */  } catch (error) {
     console.error("Error:", error);
@@ -669,12 +721,14 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
                 ))}
               </div>
               {filteredServices.length === 0 && (
+
 
 
 
@@ -690,6 +744,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -700,6 +755,7 @@
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
+
                     }}
                     }  } catch (error) {
     console.error("Error:", error);
@@ -717,11 +773,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
                   </button>
                 </motion.div>
+
               )}
             </div>
           </motion.section>
@@ -771,12 +829,15 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
+
+
 
 
 
@@ -816,6 +877,7 @@
               </div>
             </div>
           </motion.section>
+
           {/* Footer */}
           <motion.footer
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
@@ -855,6 +917,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -906,12 +969,14 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
@@ -922,8 +987,10 @@
       </div>
     </>
   )
+
 }
 export default Innovative2025ServicesShowcase;
+
 
 
 
@@ -1039,6 +1106,7 @@ export default Innovative2025ServicesShowcase;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1050,4 +1118,5 @@ export default Innovative2025ServicesShowcase,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,5 +1,7 @@
+
 import React from 'react',
 import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -11,10 +13,12 @@ export default function TechnologyInsightsPage() {
       description:
 
 
+
         'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
       readTime: '15 min read',
       featured: true;
     };
+
 
 
 
@@ -200,6 +204,7 @@ class ErrorBoundary extends React.Component {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
+
                       Read More <span className='ml-1'>→</span>                    </Link>      </Head>
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
@@ -253,6 +258,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   </div>
                 ))}
               </div>
@@ -262,7 +268,9 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -281,8 +289,10 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {researchAreas.map((area, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -329,10 +339,12 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -351,8 +363,10 @@ class ErrorBoundary extends React.Component {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {whitepapers.map((paper, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -376,6 +390,7 @@ class ErrorBoundary extends React.Component {
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
+
                       Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
                     <div className="flex items-center justify-between mb-3">
@@ -404,10 +419,12 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                 ))}
               </div>
             </div>
+
 
 
 
@@ -424,6 +441,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Innovation Lab */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-blue-400'>
@@ -431,6 +449,7 @@ class ErrorBoundary extends React.Component {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
+
 
 
 
@@ -448,6 +467,7 @@ class ErrorBoundary extends React.Component {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
@@ -732,6 +752,7 @@ href={paper && paper.downloadUrl}
       </div>
     </>
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
@@ -756,3 +777,4 @@ href={paper && paper.downloadUrl}
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

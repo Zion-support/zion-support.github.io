@@ -12,11 +12,13 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
@@ -27,12 +29,12 @@ document && document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'post-job' })
   })
 
-
-
-
-}),
-;
-
+  document.getElementById('resume-search')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'resume-search' })
+  })
+  document.getElementById('view-notifications')?.addEventListener('click', () => {
+    chrome.runtime.sendMessage({ type: 'view-notifications' })
+  })
 
 
 ;
@@ -53,9 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

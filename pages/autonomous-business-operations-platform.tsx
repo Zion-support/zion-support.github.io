@@ -2,6 +2,7 @@
 
 
 
+
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
@@ -29,6 +30,7 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
+
 
 
   Rocket, Target, TrendingUp, Users, CheckCircle,
@@ -70,8 +72,11 @@ const AutonomousBusinessOperationsPlatform = () => {
       color: "from-red-500 to-orange-500"
 
 
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   ],
@@ -85,10 +90,8 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Performance monitoring",
     "Risk assessment",
 
-
-
-
-
+    "Compliance automation"
+  ],
 
 
   const industries = [
@@ -109,8 +112,11 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Inventory management, customer service, and sales optimization"
 
 
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   ],
@@ -140,11 +146,15 @@ const AutonomousBusinessOperationsPlatform = () => {
       description: "Increase in team productivity"
 
 
-
-
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ],
+
+
   return (
     <>
       <Head>
@@ -157,6 +167,7 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+
         {/* Hero Section */}
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -174,10 +185,12 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -202,6 +215,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -216,6 +230,7 @@ const AutonomousBusinessOperationsPlatform = () => {
             </motion.div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -437,6 +452,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -449,6 +465,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <motion.div
+
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -464,6 +481,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -472,6 +490,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -531,6 +550,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -543,6 +563,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {capabilities.map((capability, index) => (
                 <motion.div
+
                   key={index}
                   initial={{ opacity: 0, coordinate_x: -20 }}
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
@@ -558,11 +579,13 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -622,6 +645,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -636,6 +660,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
+
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -651,6 +676,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -662,6 +688,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
                     <p className="text-gray-400 text-sm">{benefit.description}</p>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -721,6 +748,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -733,6 +761,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {industries.map((industry, index) => (
                 <motion.div
+
                   key={index}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -748,11 +777,13 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
                   <p className="text-gray-400 text-lg">{industry.description}</p>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -782,6 +813,7 @@ const AutonomousBusinessOperationsPlatform = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -827,12 +859,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
       </div>
     </>
   )
+
 }
 export default AutonomousBusinessOperationsPlatform;
 
 
 
 },
+
 
 export default AutonomousBusinessOperationsPlatform,
 
@@ -861,6 +895,7 @@ export default AutonomousBusinessOperationsPlatform,
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -872,4 +907,5 @@ export default AutonomousBusinessOperationsPlatform,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

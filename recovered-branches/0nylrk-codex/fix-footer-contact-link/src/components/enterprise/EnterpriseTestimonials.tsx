@@ -5,6 +5,7 @@ import { Quote } from "lucide-react";
 
 
 
+
   Carousel,
   CarouselContent,
   CarouselItem,
@@ -85,6 +86,7 @@ const testimonials = [
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+
 export function EnterpriseTestimonials() {;
   return (
 
@@ -96,9 +98,13 @@ export function EnterpriseTestimonials() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+
+

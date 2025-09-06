@@ -1,6 +1,30 @@
 
 
 
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
+  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
+} from 'lucide-react',;
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
+import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+
+
+
 
 
 
@@ -37,10 +61,13 @@
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
 
 
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain
   Atom, Rocket, Target, Microscope, DollarSign, Phone
@@ -51,12 +78,14 @@ import {;
   Atom, Rocket, Target, Microscope, DollarSign, Phone,;
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase;
 } from 'lucide-react',;
+
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -168,6 +197,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
   },
+
   return (
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
@@ -178,6 +208,7 @@ export default function ComprehensivePricing2029(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/2029-comprehensive-pricing" />
       </Head>
       <UltraFuturisticNavigation2029 />
+
       {/* Hero Section */}
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -187,6 +218,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
@@ -210,6 +242,7 @@ export default function ComprehensivePricing2029(req, res) {
               2029 Comprehensive Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+
 
 
               Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
@@ -241,6 +274,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
@@ -278,6 +312,7 @@ export default function ComprehensivePricing2029(req, res) {
           </motion.div>
         </div>
       </section>
+
       {/* Category Filter */}
       {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
@@ -295,6 +330,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -333,6 +369,7 @@ export default function ComprehensivePricing2029(req, res) {
                 <category.icon className="w-5 h-5" />
                 <span>{category.name}</span>
                 <span className="px-2 py-1 bg-gray-700 rounded-full text-xs">
+
                   {category.count}
                 </span>
               </motion.button>
@@ -393,6 +430,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
@@ -401,7 +439,9 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               Each service includes comprehensive features, support, and implementation.
@@ -410,6 +450,7 @@ export default function ComprehensivePricing2029(req, res) {
           <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
+
                 key={service.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -457,6 +498,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -464,6 +506,7 @@ export default function ComprehensivePricing2029(req, res) {
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                   </div>
+
                   {/* Pricing */}
                   <div className="text-center mb-6">
                     <div className="text-4xl font-bold text-purple-400 mb-2">
@@ -491,10 +534,12 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </div>
                     <div className="text-sm text-gray-400">
                       {billingCycle === 'annual' && (
                         <span className="text-green-400">Save 20% with annual billing</span>
+
                       )}
                     </div>
                   </div>
@@ -522,10 +567,12 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
+
                         {cat}
                       </span>
                     ))}
@@ -559,6 +606,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -567,6 +615,7 @@ export default function ComprehensivePricing2029(req, res) {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
+
                       ))}
                     </ul>
                   </div>
@@ -594,6 +643,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
@@ -602,6 +652,7 @@ export default function ComprehensivePricing2029(req, res) {
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
+
                       ))}
                     </ul>
                   </div>
@@ -629,6 +680,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
                       <div className="text-gray-400 text-xs mb-1">Market Size</div>
@@ -639,6 +691,7 @@ export default function ComprehensivePricing2029(req, res) {
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
+
                   {/* CTA Buttons */}
                   {/* CTA Buttons */  } catch (error) {
     console.error("Error:", error);
@@ -656,6 +709,7 @@ export default function ComprehensivePricing2029(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   <div className="flex gap-3">
                     <Link
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
@@ -668,6 +722,7 @@ export default function ComprehensivePricing2029(req, res) {
                   </div>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -689,6 +744,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -719,6 +775,7 @@ export default function ComprehensivePricing2029(req, res) {
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 
 
+
               Need a custom solution or enterprise package? We offer tailored solutions
 
 
@@ -739,6 +796,7 @@ export default function ComprehensivePricing2029(req, res) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
 
 
 
@@ -800,6 +858,7 @@ export default function ComprehensivePricing2029(req, res) {
           </motion.div>
         </div>
       </section>
+
       {/* Contact CTA */}
       {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
@@ -809,6 +868,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -839,6 +899,7 @@ export default function ComprehensivePricing2029(req, res) {
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 
 
+
               Contact our team to discuss your specific needs and get a personalized quote
 
 
@@ -859,6 +920,7 @@ export default function ComprehensivePricing2029(req, res) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
 
 
 
@@ -913,6 +975,8 @@ export default function ComprehensivePricing2029(req, res) {
     </div>
 
 
+
+
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
@@ -965,6 +1029,7 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -976,4 +1041,5 @@ export default function ComprehensivePricing2029(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

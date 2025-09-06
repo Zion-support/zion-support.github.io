@@ -1,6 +1,7 @@
 
 
 
+
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
 export /**
@@ -15,9 +16,11 @@ if ( {) {
     const role = request.cookies.get ('user_role')?.value || 'talent',
     const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
     return NextResponse.redirect (new URL (target, request.url));
+
   }
   return NextResponse.next ();
 }
+
 export const config = {
   matcher: ['/dashboard / dashboard/']}
 
@@ -26,6 +29,9 @@ export const config = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};
+
+

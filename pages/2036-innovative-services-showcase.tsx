@@ -1,6 +1,7 @@
 
 
 
+
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -26,6 +27,7 @@
 
 
 
+
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
@@ -38,10 +40,32 @@ import { real2036InnovativeServices } from '../data/real-2036-innovative-service
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
 
 
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
+const categories = [
+  'All ServicesAI & DataQuantum TechnologySpace TechnologyIT InfrastructureCybersecurityEdge ComputingBlockchain',
+  'ManufacturingHealthcare AIEmerging TechnologyBiotechnologyHuman-Computer InteractionMetaverseAutonomous SystemsClimate Technology'
+],
+const categoryIcons: { [key: string]: React.ReactNode } = {
 
-  const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;
-      case 'price':;
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+    return matchesCategory && matchesSearch
+  }),
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+      case 'rating':
+
 
         return (
           parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
@@ -87,17 +111,33 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 
 
         {/* Floating Elements */}
-        <div className='absolute inset-0 overflow-hidden'>;
-          {[...Array(20)].map((_, i) => (;
-            <motion&& motion.div
 
+        <div className='absolute inset-0 overflow-hidden'>
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className='absolute w-2 h-2 bg-cyan-400/30 rounded-full'
+              style={{
+                left: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`
+              }}
+              animate={{
+                y: [0, -100, 0]
+                opacity: [0.3, 1, 0.3]
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2
+                repeat: Infinity
+                delay: Math.random() * 2
+              }}            />
+          ))}
+        </div>
+        <div className='relative z-10 text-center max-w-6xl mx-auto'>
+          <motion.h1
+            className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           >
             2036 Innovative Services
@@ -127,24 +167,52 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
           </motion.div>
         </div>
       </section>
-      {/* Contact Information */}
-      <section className='py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800'>;
-        <div className='max-w-6xl mx-auto'>;
-          <motion&& motion.div
-            className='grid grid-cols-1 md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}
+
+
+          >
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Phone</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+            </div>
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <Mail className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Email</h3>
+              <p className="text-gray-300">{contactInfo.email}</p>
+            </div>
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <MapPin className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Address</h3>
+              <p className="text-gray-300">{contactInfo.address}</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Revolutionary Services
+            </h2>
+
+          {/* Filters and Controls */}
+          <motion.div
+            className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-      {/* Contact Information */  } catch (error) {
+          >
+            {/* Search and View Controls */}
+            <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+
+          {/* Filters and Controls */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-      <section className="py-12 px-4 bg-gradient-to-r from-gray-900 to-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          <motion.div
+            className="mb-12 space-y-6"
 
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -166,6 +234,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -210,6 +279,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -226,6 +296,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
                   className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 />
               </div>
+
               <div className='flex gap-4 items-center'>
               <div className="flex gap-4 items-center">
 
@@ -257,6 +328,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
@@ -267,6 +339,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
                   <option value="rating">Sort by Rating</option>
                   <option value="marketSize">Sort by Market Size</option>
                 </select>
+
                 <div className='flex bg-gray-800/50 border border-gray-700 rounded-lg p-1'>                  <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-black' : 'text-gray-400 hover:text-white'}`}
@@ -279,6 +352,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                   <button
                     onClick={() => setViewMode('grid')  } catch (error) {
@@ -308,6 +382,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
                 </div>
               </div>
             </div>
+
 
 
             {/* Category Filters */}
@@ -344,6 +419,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
                 className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 ${
                   viewMode === 'list' ? 'flex gap-6' : ''
                 }`}
+
 
 
 
@@ -483,7 +559,9 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
   }
 }
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               >
                 {viewMode === 'list' && (
                   <div className="flex-shrink-0">
@@ -514,6 +592,8 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       </div>
                     </div>
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
@@ -523,7 +603,9 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 
 
 
+
                     {/* Features */}
+
                   {/* Service Details */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -544,27 +626,33 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 
                     </div>;
 
-
-                    {/* Market Size */}
-
-                    {/* Market Size */}
-
-                    {service && service.marketSize && (;
-                      <div className='text-sm text-gray-400'>;
-                        Market Size:{' '}
-                        <span className='text-green-400 font-medium'>;
-                          {service && service.marketSize}
-                        </span>                      </div>;
-                    )}
-                    {/* Features */}
-
-
+                    {/* Market Size */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    {service.marketSize && (
+                      <div className="text-sm text-gray-400">
+                        Market Size: <span className="text-green-400 font-medium">{service.marketSize}</span>
+                      </div>
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                    {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
                         {service.features.slice(0, 4).map((feature, idx) => (
+
                           <div
                             key={idx}
                             className='flex items-center gap-2 text-sm text-gray-400'
@@ -596,10 +684,12 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
                           </div>
+
                         )}
                       </div>
                     </div>
@@ -652,6 +742,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -667,6 +758,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
                   </div>
                 </div>
               </motion.div>
+
             ))}
 
             whileInView={{ opacity: 1 }}
@@ -788,6 +880,7 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -815,6 +908,8 @@ import { real2036SpecializedServices } from '../data/real-2036-specialized-servi
         </div>
       </section>
     </Layout>
+
+
 
 
 
@@ -918,6 +1013,8 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
   {
   once: true
 }> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a
+
+
   )
           >;
             Showing {sorted_services.length} of {all_services.length} services;
@@ -969,6 +1066,7 @@ visible: {
 
 
 
+
   {
 
   duration: 0 && 0.6 
@@ -993,3 +1091,4 @@ visible: {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

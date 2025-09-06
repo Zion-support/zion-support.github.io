@@ -3,6 +3,7 @@
 
 
 
+
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -34,10 +35,12 @@ import {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "../../../utils/marketplace/store";
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
+
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
 
 
@@ -323,11 +326,13 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+
 
 
 
@@ -430,6 +435,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "DECLINED";
 
 
+
       const offer: Offer = {
 
         id: uuidv4(),
@@ -441,6 +447,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
+
+
+      };
+      saveOffer(offer);
+      return res.status(201).json({ ok: true, offer });
+    }
 
 
     if (req.method === "PATCH") {
@@ -461,7 +473,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         // Create a project upon acceptance
         const project: Project = {
 
@@ -473,11 +487,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
 
+
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           documents: existing.agreementUrl
 
             ? [
@@ -496,12 +512,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return res.json({ ok: true, offer: existing, project })
       }
 
-              ]
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-            : []
-          notes: []
-        }
+      if (action === "request_changes") {
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
+        existing.status = "CHANGES_REQUESTED";
+        existing.changeRequestNote = changeRequestNote || "";
+
+        saveOffer(existing);
+        return res.json({ ok: true, offer: existing })
+      }
+
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
 
         existing.status = "DECLINED";
         save_offer (existing);
@@ -514,10 +535,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
+
+
   }
 
   }
 }
+
 
 
 
@@ -574,4 +598,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

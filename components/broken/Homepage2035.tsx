@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
   ArrowRight
   Play
   Star
@@ -56,10 +59,12 @@ import {
   Satellite,
 
 
+
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -252,6 +257,7 @@ if ( {) {
 
   }
 
+
   return (
     <Layout>
       <UltraFuturisticBackground2035>
@@ -261,11 +267,13 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
               className='mb-8'        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             <motion.div
@@ -304,6 +312,7 @@ if ( {) {
                 </motion.button>
               </div>
             </motion.div>
+
 
 
 
@@ -355,6 +364,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -364,6 +374,7 @@ if ( {) {
                   key={index}
                   initial={{ opacity: 0, scale: 0 && 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
+
                   transition={{ duration: 0 && 0.5, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   className='text-center'>;
                   <div className='text-cyan-400 mb-2 flex justify-center'>;
@@ -385,10 +396,12 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -408,6 +421,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -420,6 +434,8 @@ if ( {) {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
+
 
 
 
@@ -436,7 +452,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -462,10 +480,12 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -491,7 +511,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -513,6 +535,7 @@ if ( {) {
               ))}
             </motion.div>
 
+
             </motion && motion.div>;
 
 
@@ -529,6 +552,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Services Grid */}
@@ -573,6 +597,7 @@ if ( {) {
             </motion.div>
 
 
+
             </motion && motion.div>;
 
 
@@ -586,6 +611,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* View All Services Button */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -599,6 +625,7 @@ if ( {) {
                 className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
               >
                 <span>View All Services</span>
+
                 <ArrowRight className='w-5 h-5' />              </motion.button>              className="text-center mt-16"
                 <ArrowRight className='w-5 h-5' />              </motion.button>
 
@@ -613,10 +640,12 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+
 
 
               className='text-center mt-16'>;
@@ -654,6 +683,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -667,7 +697,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -687,6 +719,7 @@ if ( {) {
                   icon: <Brain className='w-12 h-12' />
                   title: 'AI-Powered Solutions'
                   description:
+
                     'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
                 }
                 {
@@ -721,6 +754,7 @@ if ( {) {
                 {
                   icon: <Target className='w-12 h-12' />,
                   title: 'Results-Driven',
+
                   description:
                     'Military-grade security protocols and compliance standards to protect your business'
                 }
@@ -762,6 +796,7 @@ if ( {) {
                   title: 'AI-Powered Solutions'
                   description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'
                 }
+
 
 
               className='text-center mb-16'>;
@@ -853,6 +888,7 @@ if ( {) {
 
 
 
+
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -860,6 +896,7 @@ if ( {) {
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
+
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -881,10 +918,12 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </div>
           </div>
         </section>
+
 
 
 
@@ -907,11 +946,13 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -925,6 +966,7 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -976,6 +1018,7 @@ if ( {) {
 
 
 
+
 };
 
 animate: {
@@ -989,6 +1032,7 @@ animate: {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2
 }
@@ -1038,6 +1082,7 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
   duration: 0 && 0.8 
 }viewport= {
   {
+
   once: true
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button
 }
@@ -1103,3 +1148,4 @@ export default Homepage2035;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

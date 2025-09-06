@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -43,6 +44,7 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function WebsitePerformanceMonitorPage() {
+
 
 
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -119,6 +121,7 @@ export default function WebsitePerformanceMonitorPage() {
     {
       name: 'User Experience'
       description:
+
         'Real user experience metrics and conversion impact analysis.'
       icon: '👥'
       color: 'text-pink-400'
@@ -183,6 +186,7 @@ export default function WebsitePerformanceMonitorPage() {
       color: 'text-pink-400',
     },  ];
 
+
   ];
   const pricing = [
     {
@@ -224,6 +228,7 @@ export default function WebsitePerformanceMonitorPage() {
       period: '/month',        '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
       ];
       popular: true
+
 
 
 
@@ -278,6 +283,7 @@ export default function WebsitePerformanceMonitorPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const handleAnalyzeWebsite = async () => {
     setIsAnalyzing(true);
     // Simulate website analysis
@@ -320,6 +326,8 @@ export default function WebsitePerformanceMonitorPage() {;
       });
       setIsAnalyzing(false)
     }, 4000)
+
+
     };
 
     {
@@ -337,6 +345,8 @@ export default function WebsitePerformanceMonitorPage() {;
       period: '/month',
 
   };
+
+
 
 
 
@@ -485,6 +495,7 @@ export default function WebsitePerformanceMonitorPage() {;
                     <h3 className='text-2xl font-bold mb-4 text-white'>
                       {feature.title}
                     </h3>
+
                     <p className='text-gray-400 leading-relaxed'>                      {feature.description}              Powerful Monitoring Features
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -567,6 +578,7 @@ export default function WebsitePerformanceMonitorPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                     </p>
                   </div>
                 </div>
@@ -579,7 +591,9 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Metrics Section */}
       <section className='section-padding bg-gradient-cursor'>
@@ -590,7 +604,9 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               Comprehensive Performance Metrics
             </h2>
@@ -612,6 +628,7 @@ export default function WebsitePerformanceMonitorPage() {;
                 </h3>;
                 <p className='text - gray - 400 text - sm leading - relaxed'>;
                   {metric.description}
+
                 </p>              </Card>              Comprehensive Performance Metrics
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -671,10 +688,12 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -716,6 +735,7 @@ export default function WebsitePerformanceMonitorPage() {;
                   {analysisResults && analysisResults.overallScore}/100;
                 </div>;
                 <div className='w-32 h-32 mx-auto mb-6'>;
+
 
 
       {/* Demo Analysis Section */}
@@ -833,19 +853,52 @@ export default function WebsitePerformanceMonitorPage() {;
                       strokeDasharray={`${(analysisResults && analysisResults.overallScore / 100) * 100}, 100`}
                       className="text-blue-500"
 
-                    />;
-                  </svg>;
-                </div>;
-                <p className="text-gray-400">Good performance with room for improvement</p>;
-              </Card>;
+                    />
+                  </svg>
+                </div>
+                <p className="text-gray-400">Good performance with room for improvement</p>
+              </Card>
+              {/* Metrics Card */}
+              <Card className="border-gradient-blue">
+                <h3 className="text-2xl font-bold mb-6 text-white">Core Web Vitals</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">LCP (Largest Contentful Paint)</span>
+                    <span className={`font-bold ${parseFloat(analysisResults.lcp) < 2.5 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {analysisResults.lcp}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">FID (First Input Delay)</span>
+                    <span className={`font-bold ${parseFloat(analysisResults.fid) < 100 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {analysisResults.fid}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">CLS (Cumulative Layout Shift)</span>
+                    <span className={`font-bold ${parseFloat(analysisResults.cls) < 0.1 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {analysisResults.cls}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Page Load Time</span>
+                    <span className={`font-bold ${parseFloat(analysisResults.loadTime) < 2 ? 'text-green-400' : 'text-orange-400'}`}>
+                      {analysisResults.loadTime}
+                    </span>
+                  </div>
+                </div>
+              </Card>
+            </div>
+            {/* Recommendations */}
+            <Card className='border-gradient-blue mt-8'>
+              <h3 className='text-2xl font-bold mb-6 text-white'>
+                Optimization Recommendations
+              </h3>
+              <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                {analysisResults.recommendations.map((rec, index) => (
+                  <div key={index} className='flex items-start space-x-3'>
+                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 ))}
               </div>
@@ -867,7 +920,9 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1138,6 +1193,8 @@ export default function WebsitePerformanceMonitorPage() {;
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1152,6 +1209,8 @@ export default function WebsitePerformanceMonitorPage() {;
                 </div>;
 
 
+
+
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1164,16 +1223,15 @@ export default function WebsitePerformanceMonitorPage() {;
                   href='/contact'
                   size='lg'
 
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+
 
           </div>;
         </div>;
@@ -1188,11 +1246,13 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-blue-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
 
             Ready to Monitor Your Website Performance?
 
@@ -1203,6 +1263,7 @@ export default function WebsitePerformanceMonitorPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1224,6 +1285,7 @@ export default function WebsitePerformanceMonitorPage() {;
               size='lg'
 
 
+
               Schedule Demo;
             </Button>;
           </div>;
@@ -1242,4 +1304,5 @@ export default function WebsitePerformanceMonitorPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

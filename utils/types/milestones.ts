@@ -1,6 +1,8 @@
 
 
 
+
+
   clientUserId: string;
   talentUserId: string;
 }
@@ -21,6 +23,7 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 
 
+
     value === 'Pending' ||
     value === 'In Progress' ||
     value === 'Submitted' ||
@@ -36,11 +39,13 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
+
 
   uploaded_at: string,
 
@@ -70,6 +75,7 @@ export interface UpdateMilestoneRequest {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   title?: string;
   description?: string;
   dueDate?: string;
@@ -85,6 +91,8 @@ export interface UpdateMilestoneRequest {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

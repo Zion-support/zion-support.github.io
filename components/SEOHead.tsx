@@ -255,7 +255,9 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <link rel="preconnect" href="https://images.unsplash.com" />
     </Head>
   );
+
 }
 };
+
 
 export default SEOHead;

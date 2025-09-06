@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +37,7 @@ function ApiPerformanceTestingPage() {
   const features = [;
     "k6 / Gatling - compatible test runner",
     "SLO - aware latency reports",
+
     "Regression baselines per endpoint",
     "CI checks and PR annotations",
     "Synthetic traffic for staging",
@@ -95,6 +97,7 @@ function ApiPerformanceTestingPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
 
+
             </a>;
           </div>;
         </section>;
@@ -119,7 +122,6 @@ function ApiPerformanceTestingPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-=======
 
     <>
       <SEO

@@ -1,5 +1,6 @@
 
 
+
 #!/usr / bin / env node;
 const { exec_sync } = require ('child_process'),
 const fs = require ('fs'),
@@ -34,11 +35,13 @@ const fs = require('fs');
 const path = require('path');
 
 
+
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
   try {;
     let content = fs.readFileSync(filePath, 'utf8'),;
+
 
 
     const originalContent = content,;
@@ -104,6 +107,7 @@ function getAllFiles() {
         files.push (full_path);
 function getAllFiles(dir, extensions) {let files = [];
 
+
     if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -121,11 +125,14 @@ function getAllFiles(dir, extensions) {;
 
 
 
+
+
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+
 
 
 
@@ -267,15 +274,19 @@ async function main() {;
               execSync(`git checkout --ours "${file}"`);
             } catch (e) {;
               execSync(`git checkout --theirs "${file}"`);
+
             }
             exec_sync (`git add "${file}"`);
           }
         }
+
 ;
+
         // Commit the merge;
         exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
       }
     }
+
     // Now scan for and fix any remaining merge conflicts in files;
     console.log('🔍 Scanning for merge conflicts in files...');
     const files = getAllFiles(process.cwd(), ['.tsx.ts.jsx.js', '.json.md.css']);
@@ -299,3 +310,4 @@ async function main() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

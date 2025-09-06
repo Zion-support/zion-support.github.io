@@ -1,4 +1,5 @@
 
+
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -12,6 +13,7 @@ export default [
   {
     files: ['src/App.tsx', 'src/main.tsx', 'src/components/Header.tsx', 'src/components/Footer.tsx', 'src/components/Sidebar.tsx', 'src/components/PerformanceMonitor.tsx', 'src/components/ErrorBoundary.tsx', 'src/pages/Home.tsx', 'src/pages/About.tsx', 'src/pages/Services.tsx', 'src/pages/Pricing.tsx', 'src/pages/Contact.tsx'],
 
+
     ignores: [
       '.next/**',
       'out/**',
@@ -21,11 +23,13 @@ export default [
 
 
 
+
       '.eslintrc.js',
 
 
 
       'coverage/**',
+
       '*.config.js',
       '*.config.cjs',
       '*.config.mjs',
@@ -40,6 +44,7 @@ export default [
       '**/*.temp.*',
       '**/*.test.*',
       '**/*.spec.*',
+
 
 
 
@@ -393,6 +398,7 @@ export default [
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -401,9 +407,11 @@ export default [
         }
 
 
+
       }
     },
     plugins: {
+
 
 
 
@@ -430,6 +438,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+
 
         React: "readonly",
         jest: "readonly",
@@ -459,6 +468,7 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+
       },
       globals: {
         React: 'readonly',
@@ -475,6 +485,7 @@ export default [
         performance: 'readonly',
         module: 'readonly',
         require: 'readonly',
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -483,11 +494,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
 
         afterAll: 'readonly'
+
 
         React: "readonly",
         jest: "readonly",
@@ -506,6 +519,7 @@ origin/automation-improvements-final
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
       },
 
@@ -595,22 +609,37 @@ origin/automation-improvements-final
       ],
 
 
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
 
+        jest: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
 
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
 
-
-
-
-ursor/integrate-build-improve-and-re-verify-8f7d
 
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off'
+
 
 
       "@typescript-eslint/no-unused-vars": "warn",
@@ -630,6 +659,7 @@ origin/automation-improvements-final
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
 
     },
@@ -676,15 +706,54 @@ origin/automation-improvements-final
     },
     rules: {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'no-undef': 'error'
+    }
 
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-undef': 'off',
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+      'no-unused-vars': 'warn'
+    }
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
+    ]
+
 
   }
 ];
+
 
 >>>>>>> origin/automation-improvements-final
 
@@ -692,6 +761,7 @@ origin/automation-improvements-final
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

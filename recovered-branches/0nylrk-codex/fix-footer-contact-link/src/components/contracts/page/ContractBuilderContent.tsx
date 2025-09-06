@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -11,6 +12,7 @@ import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
 
 // Mock data for demo purposes
+
 
 
 
@@ -37,6 +39,8 @@ import {useAuth} from '@/hooks/useAuth';
       isSmartContract: false
     }
   ]);
+
+
 
 
 
@@ -87,6 +91,8 @@ export function ContractBuilderContent() {;
 
 
 
+
+
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
@@ -94,12 +100,15 @@ export function ContractBuilderContent() {;
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
+
   }
   },
+
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
+
       <ContractTypeCards
       
       <ContractTypeCards 
@@ -108,6 +117,7 @@ export function ContractBuilderContent() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         onStandardClick={() => setShowBuilderType('standard')}

@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -22,6 +23,7 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const fetchProfile = async () => {
@@ -36,8 +38,10 @@ export default function ProfileDetail() {;
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
+
           .single();
           .single(),
+
 
         if (error) {
           throw new Error(error.message)
@@ -56,6 +60,7 @@ export default function ProfileDetail() {;
       } finally {
         setIsLoading(false)
       }
+
     }
     fetchProfile()
   }, [profileId]);
@@ -63,6 +68,7 @@ export default function ProfileDetail() {;
 
     fetchProfile()
   }, [profileId]),
+
 
   if (isLoading) {
     return (
@@ -84,6 +90,7 @@ export default function ProfileDetail() {;
         <p>Profile not found.</p>
       </div>
     )
+
   }
 import { useState, useEffect } from "react",;
 import { useParams } from "react-router-dom",;
@@ -190,10 +197,12 @@ export default function ProfileDetail() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
+
 
         description={profileData.bio |"Check out this talent's profile on Zion!"}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -208,6 +217,7 @@ export default function ProfileDetail() {;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio |"Check out this talent's profile on Zion!"}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
+
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -256,6 +266,7 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
+
                 </div>
               </CardContent>
             </Card>
@@ -273,6 +284,7 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -333,10 +345,12 @@ export default function ProfileDetail() {;
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
+
                         {link.title |link.url}
                       </a>
                         {link.title || link.url}
                       </Link>
+
                     ))}
                   </div>
                 ) : (
@@ -349,6 +363,7 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
+
                 id: profileData?.id |''
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
@@ -358,6 +373,7 @@ export default function ProfileDetail() {;
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0
+
               }}
             />;
             {/* Contact Information */}
@@ -384,6 +400,7 @@ export default function ProfileDetail() {;
                     </a>;
                   </div>;
                 )}
+
               </div>
             </div>
               </div>;
@@ -401,6 +418,7 @@ export default function ProfileDetail() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -417,6 +435,7 @@ export default function ProfileDetail() {;
                     Twitter;
                   </a>;
                 )}
+
                 {profileData && profileData.linkedin_url && (;
                   <a href={profileData && profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">;
                     <Linkedin className="h-4 w-4" />;
@@ -443,3 +462,4 @@ export default function ProfileDetail() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

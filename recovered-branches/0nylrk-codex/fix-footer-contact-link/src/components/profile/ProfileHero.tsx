@@ -4,6 +4,7 @@
 
 
 
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
@@ -39,6 +40,7 @@ export function ProfileHero(): any ({;
 }: ProfileHeroProps) {;
 
 
+
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -51,6 +53,17 @@ interface ProfileHeroProps {
 
   profileType: 'service' | 'talent'
 }
+
+
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
 
 
   profileType
@@ -78,6 +91,7 @@ interface ProfileHeroProps {
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { Badge } from "@/components/ui/badge",;
@@ -138,6 +152,7 @@ export function ProfileHero({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
@@ -148,6 +163,7 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+
 
 
 
@@ -188,6 +204,7 @@ export function ProfileHero({;
 
 
 
+
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -214,8 +231,10 @@ export function ProfileHero({;
 
 
 
+
                 )}
                 
+
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
                     AI Match: {aiScore}%

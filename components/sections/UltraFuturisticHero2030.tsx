@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
   ArrowRight,
@@ -25,6 +28,7 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
+
 
 
 
@@ -91,6 +95,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
   };
   {;
     icon: Rocket,;
@@ -118,6 +123,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
         {/* Main Heading */}
         <motion&& motion.div
 
@@ -126,13 +132,16 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+
           className='mb-8'        >          className="mb-8"
           className='mb-8'        >
 
@@ -144,6 +153,7 @@ export default function UltraFuturisticHero2030() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -177,6 +187,7 @@ export default function UltraFuturisticHero2030() {
             </span>
           </motion.h1>
           <motion.p
+
 
 
 
@@ -217,6 +228,7 @@ export default function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -231,7 +243,9 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -284,16 +298,19 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
+
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
 
@@ -306,6 +323,7 @@ export default function UltraFuturisticHero2030() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -575,6 +593,7 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -583,6 +602,7 @@ function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -597,6 +617,7 @@ function UltraFuturisticHero2030() {
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
+
           ))}
         </motion.div>
 
@@ -614,11 +635,13 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Stats Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
+
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
 
@@ -630,6 +653,7 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -674,9 +698,11 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -688,6 +714,7 @@ function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
+
           ))}
         </motion.div>
 
@@ -705,6 +732,7 @@ function UltraFuturisticHero2030() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -716,7 +744,9 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
           </h3>
@@ -766,10 +796,12 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -789,7 +821,9 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1002,10 +1036,12 @@ function UltraFuturisticHero2030() {
             opacity: [0.2, 0.6, 0.2]
           }}
           transition={{
+
             duration: 5
             repeat: Infinity
             duration: 5,
             repeat: Infinity,
+
             ease: 'easeInOut',          }}
         />
       </div>
@@ -1015,6 +1051,7 @@ function UltraFuturisticHero2030() {
           }}
         />
       </div>
+
 
         />;
       </div>;
@@ -1039,3 +1076,4 @@ function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

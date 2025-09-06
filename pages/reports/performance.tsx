@@ -2,6 +2,7 @@ import React from 'react';
 
 
 
+
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -13,9 +14,11 @@ import Link from 'next / link';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
+
       category: 'System Performance'
       metrics: [
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' }
@@ -75,6 +78,7 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
       ]
 
     },
@@ -87,8 +91,12 @@ const PerformancePage: React.FC = () => {
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 
 
+        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       ]
 
@@ -100,6 +108,8 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
+
+
 
 
 
@@ -115,6 +125,7 @@ const PerformancePage: React.FC = () => {
   }
 }
   ];
+
 
 
 
@@ -146,6 +157,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -157,7 +169,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -168,10 +182,12 @@ const PerformancePage: React.FC = () => {
       default: return 'text-gray-400';
 
 
+
     }
   }
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
+
 
 
 
@@ -188,11 +204,13 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -201,6 +219,7 @@ const PerformancePage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+
         {/* Header */}
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -216,6 +235,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -227,6 +247,7 @@ const PerformancePage: React.FC = () => {
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
+
         {/* Performance Overview */}
         {/* Performance Overview */  } catch (error) {
     console.error("Error:", error);
@@ -242,6 +263,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -259,6 +281,7 @@ const PerformancePage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Real-time monitoring</p>
           </div>
         </div>
+
         {/* Performance Metrics */}
         {/* Performance Metrics */  } catch (error) {
     console.error("Error:", error);
@@ -272,6 +295,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -284,6 +308,7 @@ const PerformancePage: React.FC = () => {
                       <span className="text-gray-300">{metric.name}</span>
                       <div className="flex items-center space-x-3">
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
+
                           {metric.value}
                         </span>
                         <span className={`text-sm ${getTrendColor(metric.trend)}`}>
@@ -339,6 +364,7 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -347,6 +373,7 @@ const PerformancePage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{report.title}</h3>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+
                     {report.status}
                     {report.status  } catch (error) {
     console.error("Error:", error);
@@ -363,11 +390,13 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
+
 
 
 
@@ -383,12 +412,14 @@ const PerformancePage: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
                   </Link>
                 </div>
               </div>
+
             ))}
           </div>
         </div>
@@ -416,6 +447,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -428,6 +460,7 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -435,6 +468,7 @@ const PerformancePage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -461,11 +495,14 @@ const PerformancePage: React.FC = () => {
 
 
 
+
+
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
@@ -478,6 +515,7 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -486,7 +524,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/reports/updates"
@@ -497,7 +537,9 @@ const PerformancePage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/automation-health"
@@ -509,6 +551,7 @@ const PerformancePage: React.FC = () => {
       </div>
     </div>
   );
+
 }
 
 
@@ -520,5 +563,6 @@ const PerformancePage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default PerformancePage;

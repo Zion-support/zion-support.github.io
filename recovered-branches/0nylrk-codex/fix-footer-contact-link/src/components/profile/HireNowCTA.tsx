@@ -4,6 +4,7 @@
 
 
 
+
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
@@ -48,14 +49,18 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
 
 
 
+
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
     full_name?: string,
     professional_title?: string,
+
+
     hourly_rate?: number
   }
 }
+
 
 
   const handleOpenModal = () => {
@@ -89,6 +94,7 @@ interface HireNowCTAProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       <div className="mb-4">
         <div className="flex justify-between mb-2">
           <span>Profile Completeness</span>
@@ -114,6 +120,33 @@ interface HireNowCTAProps {
         </Button>
       </div>
 
+
+import { Button } from "@/components/ui/button",;
+import { HireRequestModal } from "./hire-request",;
+import { useState } from "react",;
+import { TalentProfile } from "@/types/talent",;
+interface HireNowCTAProps {;
+  talentProfile: {;
+    id: string,;
+    full_name?: string,;
+    professional_title?: string,;
+    hourly_rate?: number;
+  }
+}
+;
+export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
+  const [modalOpen, setModalOpen] = useState(false),;
+  const handleOpenModal = () => {;
+    setModalOpen(true);
+  },;
+  const handleCloseModal = () => {;
+    setModalOpen(false);
+  },;
+  // Check if we have minimum required data;
+  const canHire = talentProfile && talentProfile.id && talentProfile.full_name,;
+  // Calculate talent profile completeness (simplified);
+  const profileCompleteness = calculateProfileCompleteness(talentProfile),;
+  return (;
 
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">;
       <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>;
@@ -145,7 +178,9 @@ interface HireNowCTAProps {
       </div>;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
@@ -171,6 +206,7 @@ interface HireNowCTAProps {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -182,11 +218,16 @@ interface HireNowCTAProps {
       <HireRequestModal 
 
 
+
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
   const fields = [
 
+
+  return Math.min(Math.round((completedFields / totalFields) * 100), 100)
+
+;
 
 // Helper function to calculate profile completeness;
 function calculateProfileCompleteness(): any (profile: any) {;
@@ -211,6 +252,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -218,6 +260,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 
@@ -241,3 +284,5 @@ if (return 0) {
     'availability_type';
   ];
 ;
+
+

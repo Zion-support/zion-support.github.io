@@ -1,5 +1,6 @@
 
 
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -16,6 +17,7 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+
 
 
 
@@ -39,6 +41,8 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
+
+
 
 
 
@@ -88,6 +92,8 @@ interface WorkExperienceFormProps {
           description: ''
           location: ''})
         setEditingId(null)
+
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -178,6 +184,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -186,10 +193,12 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+
 
 
 
@@ -202,6 +211,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -213,6 +223,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
+
+
 
 
 
@@ -229,6 +241,8 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
+
+
 
 
 
@@ -339,6 +353,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
+
                       <Input
                         type="date"
                         {...field}
@@ -347,6 +362,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                         type="date" 
                         {...field} 
                         value={field.value || ''}
+
                       />
                     </FormControl>
                     <FormMessage />
@@ -456,6 +472,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
+
                       company_name: ''
                       role_title: ''
                       start_date: format(new Date(), 'yyyy-MM-dd');
@@ -467,6 +484,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+
                       location: ''})
                   } else {
                     onBack()
@@ -489,6 +507,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     Next;
                   </Button>;
                 )}
+
               </div>
             </div>
           </form>
@@ -506,5 +525,4 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>);
 }
 
-=======
-;
+

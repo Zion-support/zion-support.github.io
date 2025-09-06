@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from 'react';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
@@ -9,6 +10,7 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {ResumeWizard} from '@/components/resume-builder/ResumeWizard';
 import {PortfolioBuilder, as, PortfolioSection} from '@/components/resume-builder/portfolio/PortfolioBuilder';
+
 
 
 
@@ -25,12 +27,14 @@ import { PortfolioBuilder as PortfolioSection } from '@/components/resume-builde
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 function PortfolioBuilderContent() {
   const [activeTab, setActiveTab] = useState('resume'),
   
+
   return (
     <>
       <SEO
@@ -57,6 +61,7 @@ function PortfolioBuilderContent() {
     </>
   )
 }
+
 export default function PortfolioBuilder() {
   return (
     <>;
@@ -110,4 +115,5 @@ export default function PortfolioBuilder() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

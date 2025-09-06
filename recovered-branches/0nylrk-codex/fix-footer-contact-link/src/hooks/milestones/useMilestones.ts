@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
@@ -46,7 +48,10 @@ if (return null, ) {
     create_milestone;
     updateMilestoneStatus;
 
-
+    updateMilestone;
+    deleteMilestone;
+    uploadDeliverable: handleUploadDeliverable
+    refetch
 
 
 import { useState } from 'react',;
@@ -86,6 +91,7 @@ export const useMilestones = (projectId?: string) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -96,3 +102,4 @@ export const useMilestones = (projectId?: string) => {;
 
   }
 };
+

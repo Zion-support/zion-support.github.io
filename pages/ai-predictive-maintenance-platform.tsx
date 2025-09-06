@@ -10,7 +10,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -22,8 +24,19 @@ export default function AIPredictiveMaintenancePlatform() {
 			subtitle="Reliability at lower cost"
 
 
-
-
+			pricePerMonthUSD={499  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			implementationWeeks="2-4 weeks"
@@ -37,6 +50,34 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Edge and cloud deployment",
 				"Visualizations and alerting",
 				"APIs and event webhooks"
+
+
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform"
@@ -59,8 +100,10 @@ export default function AIPredictiveMaintenancePlatform() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

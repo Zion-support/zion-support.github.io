@@ -1,9 +1,11 @@
 
+
 import React from "react";
 import { Clock } from "lucide-react";
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
+
 
 
 
@@ -43,11 +45,13 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
@@ -55,10 +59,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 export /**
  * TalentCardAvailability - Function description
  */
@@ -77,3 +78,6 @@ function TalentCardAvailability() {
     }
   }
 ;
+=======
+
+

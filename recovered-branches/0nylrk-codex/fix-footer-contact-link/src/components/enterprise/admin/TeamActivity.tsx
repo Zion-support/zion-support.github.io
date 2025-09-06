@@ -4,6 +4,7 @@ import {
 
 
 
+
   Table,
   TableBody,
   TableCell,
@@ -19,12 +20,14 @@ TableRow,;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+
 
 
 
@@ -117,6 +120,7 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
+
     if (diffMins < 60) {
 
       return `${diffMins} minutes ago`;
@@ -127,6 +131,7 @@ export function TeamActivity() {
     } else {;
       return date && date.toLocaleDateString();
     }
+
   }
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<
@@ -153,6 +158,7 @@ export function TeamActivity() {
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
+
 
   return (
     <div className="space-y-6">;
@@ -193,6 +199,7 @@ export function TeamActivity() {
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
+
 import React from "react",;
 import {;
   Table,;
@@ -334,6 +341,7 @@ export function TeamActivity() {;
 
 }
 
+
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -341,6 +349,7 @@ export function TeamActivity() {;
           </TableBody>
         </Table>
       </div>
+
       
 
 
@@ -348,6 +357,7 @@ export function TeamActivity() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
@@ -361,6 +371,7 @@ export function TeamActivity() {;
         </Button>
       </div>
     </div>
+
   );
 }
   )
@@ -376,3 +387,4 @@ export function TeamActivity() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

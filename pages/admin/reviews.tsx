@@ -3,10 +3,12 @@
 
 
 
+
     if (res.ok) refresh()
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 }
@@ -29,6 +31,8 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -62,6 +66,8 @@
   )
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

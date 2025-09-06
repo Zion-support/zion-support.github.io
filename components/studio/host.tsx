@@ -20,17 +20,24 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
+type PersonaConfig = {
+  voice: 'Visionary' | 'Grounded' | 'Technical';
+  language: string;
+  cloneStyleText?: string;
+}
+export default function StudioHostPage() {
+  const [persona, setPersona] = useState<PersonaConfig>({
+
 
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+  const [operatorPrompt, setOperatorPrompt] = useState(
+    'Generate a 15-minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.'
+  );}
+export default function StudioHostPage() {
 
 
   const [inviteeName, setInviteeName] = useState('');
@@ -386,6 +393,7 @@ import React, { useState } from 'react';
   },
 
   return (
+
     <div className=&quot;space-y-8&quot;>
       <h1 className=&quot;text-3xl font-bold&quot;>Podcast Studio Host</h1>
 
@@ -450,6 +458,7 @@ import React, { useState } from 'react';
               <h4 className=&quot;font-semibold&quot;>Questions</h4>
               <ol className=&quot;list-decimal list-inside space-y-1&quot;>
                 {episode.questions?.map((q: string, idx: number) => (
+
 
 
       <section className='space-y-3'>
@@ -566,10 +575,14 @@ import React, { useState } from 'react';
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText |''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
 
 
+
+
     }
   };
 
   return (
+
+
 
 
           </div>
@@ -615,6 +628,7 @@ import React, { useState } from 'react';
                   <li key={idx}>{q}</li>
 
                 ))}
+
 
 
 
@@ -825,6 +839,7 @@ import React, { useState } from 'react';
                 {publishing ? 'Publishing…' : 'Update RSS'}
               </button>;
             </div>;
+
             {episode.audio && (
 
 }
@@ -863,9 +878,11 @@ import React, { useState } from 'react';
 
 
 
+
 ;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+
 type ProgressBarProps = { value: number }
 type ProgressBarProps = { value: number };
 
@@ -27,6 +28,7 @@ type ProgressBarProps = { value: number };
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export default function ProgressBar({ value }: ProgressBarProps) {
+
 
   const pct = Math.max(0, Math.min(100, value));
   return (
@@ -46,11 +48,13 @@ export default function ProgressBar({ value }: ProgressBarProps) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

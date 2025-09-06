@@ -2,6 +2,7 @@
 
 
 
+
 import React from 'react',
 
 
@@ -13,6 +14,7 @@ import React from 'react',
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const EquipmentPage = () => {
 
@@ -30,6 +32,7 @@ const EquipmentPage = () => {
       </div>
     </div>
   )
+
 }
 export default EquipmentPage;
 
@@ -45,3 +48,4 @@ export default EquipmentPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

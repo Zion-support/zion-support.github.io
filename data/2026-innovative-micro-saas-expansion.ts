@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -54,6 +55,7 @@ const contact = {
 
 
 
+
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
@@ -61,6 +63,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category;
   );
+
 
 }
 export const getPopularInnovativeMicroSaasServices2026 = () => {
@@ -75,12 +78,14 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
 
 
 
+
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+
 
 
 
@@ -381,6 +386,7 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number,
 
     return price >= minPrice && price <= maxPrice;
   });
+
 
 
 
@@ -782,13 +788,17 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 },;
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number, maxPrice: number) => {;
+
+
   return innovativeMicroSaasServices2026.filter(service => {;
     const price = parseInt(service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 };
+

@@ -1,5 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { authenticateRequest } from '@/utils/auth';
+import { generateText } from '@/utils/ai';
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+
 
   if (method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -7,6 +13,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
 
 
 
@@ -52,6 +60,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     prompt
     'You are a recruiting ops specialist with excellent writing skills.'
   );
+
   return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
 
@@ -70,5 +79,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

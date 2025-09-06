@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -26,6 +27,7 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { id } = req.query;
 
@@ -109,6 +111,32 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
     );
   });
 
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.setHeader('Allow', ['POST']);
+  return res.status(405).end('Method Not Allowed');
+import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+export const config = {;
+  api: { bodyParser: { sizeLimit: '20mb' } }};
+export default async function handler(req, res) {
+  try {
+  const { id } = req.query;
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    } catch (error) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 
@@ -212,5 +240,7 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

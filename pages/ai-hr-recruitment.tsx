@@ -2,6 +2,7 @@
 
 
 
+
   Phone,
   Mail,
   MapPin,
@@ -124,6 +125,7 @@ if (return null) {
 
 
 
+
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Users } from 'lucide-react',
@@ -135,9 +137,11 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 
 
 
+
 export default function AIHRRecruitmentPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-hr-recruitment'))
   if (!service) return null,
+
   return (
     <Layout>
       <Head>
@@ -181,10 +185,13 @@ export default function AIHRRecruitmentPage() {
 
 
 
+
+
       </div>
     </Layout>
   )
 }
+
 
 
 
@@ -200,4 +207,5 @@ export default function AIHRRecruitmentPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

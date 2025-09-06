@@ -1,20 +1,43 @@
 
 
+import ProgressBar from '../../components/learn/ProgressBar';
+import Quiz from '../../components/learn/Quiz';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+import CoachWidget from '../../components/learn/CoachWidget';
+
+export default function CourseView(req, res) {
+  try {
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string };
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),;
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
+  useEffect(() => {;
+    if (!courseId) return,;
+    async function load() {;
+      const [courseResp, progResp] = await Promise.all([;
+        fetch(`/api/learn/courses/${courseId}`);
+        fetch(`/api/learn/progress?userId=demo-user`);
+      ]),;
+      const courseData = await courseResp.json();
+      const progData = await progResp.json();
+      setCourse(courseData.course);
+      const cp = (progData.progress && progData.progress[courseId]) || { percent: 0, completedLessons: [] },;
       setProgress(cp);
-      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
-    }
+      setCurrentLessonId(courseData?.course?.lessons?.[0]?.id || null);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     load();
-  }, [courseId]);
+  }, [courseId]),;
+  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]),;
+  async function markLessonComplete(lessonId: string) {;
+    const completedCount = (progress.completedLessons || []).includes(lessonId);
+      ? (progress.completedLessons || []).length;
 
-  async function onFinalQuizComplete(score: number) {
-    const needed = course?.finalQuiz?.passThreshold |0;
-
-
-  const currentLesson = useMemo(() => course?.lessons?.find((l: any) => l.id === currentLessonId), [course, currentLessonId]);
-
-  async function markLessonComplete(lessonId: string) {
-    const completedCount = (progress.completedLessons || []).includes(lessonId)
-      ? (progress.completedLessons || []).length
       : (progress.completedLessons || []).length + 1;
     const percent = Math.round((completedCount / (course?.lessons?.length || 1)) * 100);
     const resp = await fetch('/api/learn/progress', {
@@ -71,6 +94,7 @@
     const needed = course?.finalQuiz?.passThreshold || 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const passed = score >= needed;
+
     setFinalPassed(passed);  }
 
   if (!course) return <div>Loading...</div>;
@@ -91,10 +115,12 @@
 
 
 
+
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
+
           <h1 className='text-2xl font-semibold'>{course.title}</h1>
           <div className='text-gray-500 text-sm'>
             {course.category} • {course.level}
@@ -132,6 +158,7 @@
         </div>
 
 
+
                   </button>;
                 </li>;
               ))  } catch (error) {
@@ -139,6 +166,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
     async /**
  * load - Function description
@@ -291,6 +319,7 @@ if (return <div > Loading...</div>) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -304,6 +333,7 @@ if (return <div > Loading...</div>) {
                 )}
               </div>
             ) : (
+
               <div className='text-sm text-gray-500'>Select a lesson</div>
             )}
               <div className="text-sm text-gray-500">Select a lesson</div>
@@ -312,11 +342,13 @@ if (return <div > Loading...</div>) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             {course.finalQuiz?.questions?.length ? (
               <div className="border rounded p-4">
                 <div className="font-medium mb-2">Final Certification Quiz</div>
                 <Quiz questions={course.finalQuiz.questions} onComplete={onFinalQuizComplete} />
                 {finalPassed && (
+
                   <div className='mt-3 text-green-700'>
                     Passed! You can download your certificate below.
                   </div>                )}
@@ -365,6 +397,7 @@ if (return <div > Loading...</div>) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -379,10 +412,12 @@ if (return <div > Loading...</div>) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

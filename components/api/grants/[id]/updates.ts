@@ -39,6 +39,7 @@ function writeGrant(record: GrantApplication) {
 
 
 
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
@@ -48,6 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
@@ -100,6 +102,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(405).end('Method Not Allowed')
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -108,5 +111,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   res.status(405).end('Method Not Allowed')
 }
+
 
 

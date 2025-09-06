@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -25,6 +26,7 @@ import type { QuoteStatus } from "@/types/quotes",
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 type RequestsHeaderProps = {
   unreadCount: number,
   statusFilter: QuoteStatus | 'all',
@@ -32,6 +34,7 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all',
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
+
 
 
 
@@ -45,6 +48,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   statusFilter,
   setStatusFilter,
   archiveFilter,
+
   setArchiveFilter
 }) => {
   return (
@@ -81,6 +85,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
         </Select>
 
 
+
   setArchiveFilter
 
 }) => {
@@ -103,6 +108,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -117,6 +123,8 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
       </div>
     </div>
   )
+
+
 
 
 
@@ -211,7 +219,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 export default RequestsHeader;
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

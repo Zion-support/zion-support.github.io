@@ -1,11 +1,13 @@
 
 
 
+
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
+
 
 
 
@@ -19,15 +21,18 @@ import { Check, Pencil } from "lucide-react",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
+
 
 
 
@@ -50,16 +55,19 @@ interface GeneratedDescriptionDisplayProps {
 
 
 
+
   const handleSave = () => {
     onSave(editedDescription),
     setIsEditing(false),
     toast({
       title: "Description Saved"
       description: "Your edited description has been saved."
+
     });
   }
     })
   },
+
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -69,6 +77,7 @@ interface GeneratedDescriptionDisplayProps {
           <Button
             variant="outline"
             size="sm"
+
 
 
             onClick={() => setIsEditing(!isEditing)}
@@ -96,6 +105,7 @@ interface GeneratedDescriptionDisplayProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
 

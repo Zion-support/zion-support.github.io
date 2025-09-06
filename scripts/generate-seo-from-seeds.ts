@@ -2,12 +2,15 @@
 
 
 
+
+
 import fs from 'fs';
 import path from 'path';
 
 
   const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
   return await res.json()
+
 
 
 
@@ -30,6 +33,7 @@ async function post(url: string, body: any) {
 
 
 
+
 }
 
 async function main() {
@@ -47,8 +51,8 @@ async function main() {
     if (gen?.slug && gen?.payload) {
 
 
-
-
+      fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
+      // // // console.log('Generated', gen.slug)
 
 ;
 import fs from 'fs';
@@ -98,6 +102,7 @@ main().catch((e) => { console.error(e), process.exit(1) });
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -105,4 +110,5 @@ main().catch((e) => { console.error(e), process.exit(1) });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

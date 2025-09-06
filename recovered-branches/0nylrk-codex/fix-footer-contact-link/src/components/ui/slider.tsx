@@ -1,11 +1,13 @@
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
+
 
 
 
@@ -19,8 +21,10 @@ const Slider = React.forwardRef<
 
     ref={ref}
     className={cn(
+
       'relative flex w-full touch-none select-none items-center'
       "relative flex w-full touch-none select-none items-center",
+
       className
     )}
     {...props}
@@ -30,6 +34,7 @@ const Slider = React.forwardRef<
     </SliderPrimitive.Track>
     <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
+
 ));
 Slider.displayName = SliderPrimitive.Root.displayName
 export { Slider }
@@ -46,3 +51,4 @@ Slider.displayName = SliderPrimitive.Root.displayName
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

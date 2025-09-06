@@ -1,12 +1,15 @@
 
 
 
+
+
   id: string;
   user_id: string;
   code: string;
   created_at: string
   updated_at: string
 }
+
 
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
@@ -19,6 +22,7 @@ export interface ReferralCode {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -33,6 +37,7 @@ export interface ReferralCode {
 
 
 
+
 export interface ReferralReward {
 
 export interface ReferralReward {;
@@ -44,11 +49,13 @@ export interface ReferralReward {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   user_id: string;
   referral_id: string;
   reward_type: 'credit' | 'visibility';
   amount: number | null;
+
 
 
 
@@ -61,12 +68,15 @@ export interface ReferralStats {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
 
   totalRewards: number
 }
+
+
 export type ReferralStatus = 'pending' | 'completed' | 'expired',;
 export interface ReferralCode {;
   id: string,;
@@ -115,6 +125,7 @@ export interface ReferralStats {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -122,4 +133,5 @@ export interface ReferralStats {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

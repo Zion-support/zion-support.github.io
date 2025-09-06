@@ -1,13 +1,40 @@
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
 
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  description: string,;
+  features: string[],;
+  link: string,;
+  category: string,;
+  realImplementation: boolean,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string;
+  }
+}
 
 
     address: string;
   }
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {
+
     id: 'next-gen-ai-suite'
     name: 'Next-Gen AI Suite'
     tagline: 'Future-ready AI solutions'
@@ -59,6 +86,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
@@ -66,8 +94,10 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

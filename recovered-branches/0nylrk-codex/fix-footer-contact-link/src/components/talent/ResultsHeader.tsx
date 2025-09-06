@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -10,6 +11,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 interface ResultsHeaderProps {
   isLoading: boolean;
   resultCount: number
@@ -24,6 +26,8 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         </div>
       ) : (
         <span>
+
+
 
 
 interface ResultsHeaderProps {;
@@ -47,6 +51,7 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           )}
         </span>;
@@ -67,4 +72,5 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

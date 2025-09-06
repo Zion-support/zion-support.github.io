@@ -51,6 +51,7 @@ import Link from 'next / link';
 import {
 
 
+
   ArrowRight
   Star
   TrendingUp
@@ -80,6 +81,7 @@ import {
 
   Mail,;
   MapPin,;
+
 
 
 } from 'lucide-react';
@@ -128,6 +130,7 @@ function UltraAdvancedHero2026() {
       opacity: 1
       y: 0
       transition: {
+
         duration: 0.8
       }
     }
@@ -155,6 +158,7 @@ export default function UltraAdvancedHero2026() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709';
   };
+
 
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
@@ -191,6 +195,7 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
             <span className='text-purple-300 text-sm font-medium'>;
@@ -209,6 +214,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -220,6 +226,7 @@ export default function UltraAdvancedHero2026() {;
             <br />
             <span className='text-white'>is Now</span>
           </motion.h1>
+
 
 
 
@@ -243,6 +250,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -255,6 +263,7 @@ export default function UltraAdvancedHero2026() {;
             </span>{' '}
             with our revolutionary solutions.
           </motion.p>
+
 
 
 
@@ -273,6 +282,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
@@ -474,6 +484,7 @@ export default function UltraAdvancedHero2026() {;
           </motion.div>
           {/* Key Benefits */}
           <motion.div
+
             variants={itemVariants}
             className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
           >
@@ -504,6 +515,7 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -511,6 +523,7 @@ export default function UltraAdvancedHero2026() {;
                 24/7 Autonomous Operation
               </span>            </div>
           </motion.div>
+
           {/* Call to Action Buttons */}
           <motion.div            variants={itemVariants}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
@@ -563,6 +576,7 @@ export default function UltraAdvancedHero2026() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -574,14 +588,17 @@ export default function UltraAdvancedHero2026() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               Get Started Today
             </Link>
           </motion.div>
+
 
 
 
@@ -592,6 +609,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Contact Information */}
 
           <motion.div 
@@ -630,6 +648,7 @@ export default function UltraAdvancedHero2026() {;
               </div>
             </div>
           </motion.div>
+
 
 
 
@@ -715,6 +734,7 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Trust Indicators */}
 
           <motion.div 
@@ -1148,6 +1168,7 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
         </motion.div>
       </div>
     </section>
+
 );  )
 }
           className='absolute bottom - 1/3 right - 10 text - 5xl opacity - 20'        >        <motion.div;
@@ -1220,4 +1241,5 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

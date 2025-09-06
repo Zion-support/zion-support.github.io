@@ -1,6 +1,9 @@
 
 
 
+
+
+
   useMemo,;
   useState,;} from 'react';} from 'react';
 
@@ -10,10 +13,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   name: string;
   email: string;
   role: UserRole;
+
 
   avatar?: string;
   createdAt: string;
@@ -22,10 +27,12 @@
 
 export interface UserContextType {
 
+
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+
 
 
 
@@ -77,25 +84,31 @@ export function useUser() {;
 
 
   updateUser: (userData: Partial<User>) => Promise<void>;
+
 }
-
-const UserContext = createContext<UserContextType | undefined>(undefined);
-
-export const useUser = () => {
-  const context = useContext(UserContext);
-  if (context === undefined) {
-    throw new Error('useUser must be used within a UserProvider');
-  }
-  return context;
-};
-
-interface UserProviderProps {
-  children: React.ReactNode;
-}
-
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+;
+const UserContext = createContext<UserContextValue | undefined>(undefined);
+const DEFAULT_USER: User = {;
+  id: 'u_001',;
+  name: 'Jordan Lee',;
+  role: 'client',;
+  onboardingCompleted: false}
+;
+export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    try {;
+
+      const raw = localStorage.getItem('zion.user');
+      if (raw) {
+        setUser(JSON.parse(raw));
+      } else {
+        setUser(DEFAULT_USER);
+      }
+    } catch {
+      setUser(DEFAULT_USER);
+    }
+  }, []);
 
 
   useEffect(() => {
@@ -165,8 +178,25 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     [user, loading]
   );
 
-  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
-};
+  useEffect(() => {;
+    try {;
+      if (user) localStorage.setItem('zion.user', JSON.stringify(user));
+      else localStorage.removeItem('zion.user');
+    } catch {}
+  }, [user]);
+  const value = useMemo<UserContextValue>(() => ({;
+    user,;
+    setUser;
+    logout: () => setUser(null);
+    completeOnboarding: () => setUser(prev => prev ? { ...prev, onboardingCompleted: true } : prev)}), [user]);
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
+
+export function useUser() {;
+  const ctx = useContext(UserContext);
+  if (!ctx) throw new Error('useUser must be used within UserProvider');
+  return ctx;
+
 
 
 export default UserProvider;
@@ -184,4 +214,5 @@ export function useUser() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

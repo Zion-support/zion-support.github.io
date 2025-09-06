@@ -4,6 +4,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -15,6 +16,7 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
+
 
 
 interface Transaction {
@@ -35,6 +37,8 @@ interface Transaction {
   },
   service?: {
     title?: string
+
+
 
 
 import React, { useState } from "react",;
@@ -112,11 +116,13 @@ export function TransactionHistory() {;
       
 
 
+
       
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -128,9 +134,11 @@ export function TransactionHistory() {;
         description: error.message |"Failed to update transaction"
         variant: "destructive"})
     }
+
   }
   },
   
+
   const getStatusBadge = (status: string, inEscrow: boolean) => {
     switch(status) {
       case 'pending':
@@ -168,16 +176,20 @@ export function TransactionHistory() {;
           </Badge>
         )
     }
+
   }
   },
   
+
   const formatCurrency = (amount: number, currency: string) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
       currency: currency.toUpperCase()
     }).format(amount)
+
   }
   },
+
 
   if (error) {
 
@@ -259,6 +271,7 @@ export function TransactionHistory() {;
         ) : transactions && transactions.length > 0 ? (
           <div className="space-y-4">
             {transactions.map((transaction) => {
+
               const isClient = user?.id === transaction.user_id;
               const isPending = transaction.status === 'pending';
               const isInEscrow = transaction.in_escrow;
@@ -279,6 +292,7 @@ export function TransactionHistory() {;
                 ? transaction.provider?.display_name || 'Service Provider' 
                 : 'Client',
 
+
               return (
                 <Card key={transaction.id} className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
                   <CardHeader className="pb-3">
@@ -292,6 +306,7 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>
                           ) : (
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>
+
       }),;
       if (error) throw error,;
       toast({;
@@ -465,6 +480,7 @@ export function TransactionHistory() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           )}
                         </CardDescription>
                       </div>
@@ -485,6 +501,8 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
+
+
 
 
 
@@ -561,6 +579,7 @@ export function TransactionHistory() {;
             </p>;
           </div>;
         )}
+
       </div>
     </div>
   )
@@ -570,5 +589,4 @@ export function TransactionHistory() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
+

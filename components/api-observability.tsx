@@ -2,11 +2,13 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   service.name 
 }- Zion Tech Group</title>) ) 
+
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
@@ -15,6 +17,7 @@ import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
+
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
@@ -24,6 +27,7 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -46,6 +50,7 @@ import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-se
                 {service && service.features.slice(0, 12).map((feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5" /><span>{feat}</span></li>;
                 ))}
+
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
@@ -125,4 +130,5 @@ if (return null) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

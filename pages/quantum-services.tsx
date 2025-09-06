@@ -3,6 +3,7 @@
 
 
 
+
   ];
 ;
   const solutions = [;
@@ -23,15 +24,19 @@ import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react',
 export default function QuantumServicesPage() {
   const features = [
     'Quantum-inspired optimization & annealing strategiesHybrid quantum-classical pipelines (QAOA, VQE) where applicableQuantum-safe cryptography assessments and roadmapsR&D ideation for quantum-ready workloads'],
+
   const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
+
+
   return (
 
 
           </header>
           <section>
+
 
 
                 className='px-8 py-4'>;
@@ -75,6 +80,7 @@ export default function QuantumServicesPage() {
                     <span className='font-semibold'>{s && s.name}</span>;
                   </div>;
                   <p className='text-gray-300 text-sm'>Learn more</p>                </a>;
+
 
 
 

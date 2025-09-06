@@ -4,7 +4,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -13,6 +15,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+
 export default function ToolResourcePage() {
   const router = useRouter()
   const { id } = router.query
@@ -197,6 +200,7 @@ export default function ToolResourcePage() {
 
 
 
+
 export default function ToolResourcePage(req, res) {
   try {
   const router = useRouter();
@@ -374,10 +378,12 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   ],
   const tool = tools.find(t => t.id === id),
+
   if (!tool) {
     return (
       <>
@@ -394,7 +400,9 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 href="/resources"
@@ -408,7 +416,9 @@ export default function ToolResourcePage(req, res) {
       </>
     )
   }
+
 }
+
   return (
     <>
       <Head>
@@ -428,6 +438,7 @@ export default function ToolResourcePage(req, res) {
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
+
                   {tool.type}
                   {tool.type  } catch (error) {
     console.error("Error:", error);
@@ -445,6 +456,7 @@ export default function ToolResourcePage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -462,6 +474,7 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -470,6 +483,7 @@ export default function ToolResourcePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   />
                 </div>
@@ -483,6 +497,7 @@ export default function ToolResourcePage(req, res) {
                     {tool.features.map((feature, index) => (
                       <li key={index} className="text-white/80 flex items-center gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+
                         {feature}
                       </li>
                     ))}
@@ -592,6 +607,7 @@ export default function ToolResourcePage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </ul>
                 </div>
 
@@ -617,7 +633,9 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 href="/contact"
@@ -630,6 +648,8 @@ export default function ToolResourcePage(req, res) {
         </main>
       </div>
     </>
+
+
 
 
                   </ul>;
@@ -665,6 +685,7 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -676,4 +697,5 @@ export default function ToolResourcePage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

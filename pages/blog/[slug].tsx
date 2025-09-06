@@ -4,6 +4,8 @@
 
 
 
+
+
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -21,6 +23,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
     return null
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -28,6 +31,7 @@ function parseMarkdown(filePath: string): BlogPost | null {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -42,6 +46,7 @@ import type { BlogPost } from '@/types/blog';
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
@@ -99,6 +104,7 @@ function parseMarkdown(filePath: string): BlogPost | null {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   }
 
 }
@@ -117,6 +123,8 @@ interface BlogPostPageProps {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
   }
 }
 ;
@@ -157,6 +165,7 @@ if ( {) {
     return <div>{error}</div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
+
   const articleLd = {
     author: post.author.name
     publishedTime: post.publishedDate
@@ -261,6 +270,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
@@ -275,6 +285,7 @@ if ( {) {
             <p className="m-0 font-medium">{post.author.name}</p>
             {post.author.title && (
               <p className="m-0 text-sm text-zion-slate-light">
+
                 {post.author.title}
               </p>
             )}
@@ -300,11 +311,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
         </div>
         {post.featuredImage && (
           <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
             <img
+
               src={post.featuredImage}
               alt={post.title}
               src={post.featuredImage  } catch (error) {
@@ -328,10 +341,12 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
                 target.src = '/images/blog-placeholder.svg'
+
               }}
             />;
           </div>)}
@@ -362,10 +377,12 @@ export const getStaticProps: GetStaticProps < BlogPostPageProps> = async ({
 }
 
               }  } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
             />;
           </div>;
         )  } catch (error) {
@@ -382,3 +399,4 @@ export const getStaticProps: GetStaticProps < BlogPostPageProps> = async ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

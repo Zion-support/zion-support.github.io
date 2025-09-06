@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 import {useNavigate} from "react-router-dom";
@@ -38,6 +39,7 @@ import { Star, DollarSign } from "lucide-react",
 
 
 
+
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -45,10 +47,12 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({ 
+
   listing, ;
   view = 'grid';
   listing, 
   view = 'grid',
+
   onRequestQuote
 }: ProductListingCardProps) {
   const isGrid = view === 'grid',
@@ -58,11 +62,14 @@ export function ProductListingCard({
   const imageUrl = listing.images && listing.images.length > 0 
     ? listing.images[0] 
     : '/placeholder.svg',
+
     
+
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
     return `${listing.currency}${listing.price.toLocaleString()}`
+
   }
   // Handle image loading errors
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
@@ -93,11 +100,13 @@ export function ProductListingCard({
     e.preventDefault(),
     e.stopPropagation(),
     
+
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
       navigate(`/request-quote?listing=${listing.id}`)
+
     }
   }
   return (
@@ -211,6 +220,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Image */}
 
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
@@ -249,11 +259,13 @@ if ( {) {
                 )}
               </div>;
             )}
+
           </div>
           </div>;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -288,6 +300,7 @@ if ( {) {
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
+
               </span>
               </span>;
 
@@ -295,12 +308,14 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             )}
           </div>
           <div className="flex gap-2">
             <Button
               size="sm"
               onClick={(e) => {
+
                 e.stopPropagation();
 
 
@@ -365,6 +380,7 @@ if ( {) {
 
 
                 e.stopPropagation(),
+
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"

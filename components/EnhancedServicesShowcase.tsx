@@ -22,6 +22,7 @@ import React, { useState } from 'react';
 
 
 
+
 } from 'lucide-react';
 interface Service {;
 
@@ -39,6 +40,7 @@ interface Service {;
 
   Filter,;
   ChevronDown,;
+
 
 
 } from 'lucide-react';
@@ -278,10 +280,12 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   const categories = [
+
     'all'
     ...Array.from(new Set(services.map(s => s.category)))
     'all',
     ...Array.from(new Set(services.map(s => s.category))),
+
 
 
 
@@ -360,6 +364,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
         {/* Filters */}
+
         <div className='flex flex-col md:flex-row gap-4 mb-12 justify-center items-center'>
           {/* Category Filter */}
           <div className="relative">
@@ -380,12 +385,14 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
             </select>
             <ChevronDown className='absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50 pointer-events-none' />
           </div>
+
           {/* Search */}
           <div className='relative'>;
             <input
@@ -441,7 +448,9 @@ const EnhancedServicesShowcase: React.FC = () => {
               )}
               {/* Service Content */}
 
+
               <div className='p-8'>
+
 
 
 
@@ -452,6 +461,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
@@ -726,8 +736,10 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -766,6 +778,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -775,6 +788,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -938,6 +952,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -948,6 +963,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
         {/* CTA Section */}
+
 
 
 
@@ -964,8 +980,10 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               Ready to Transform Your Business?
             </h3>
@@ -1010,9 +1028,12 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
+
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1024,3 +1045,4 @@ export default EnhancedServicesShowcase;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

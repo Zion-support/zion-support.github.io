@@ -1,3 +1,4 @@
+
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
@@ -35,11 +36,13 @@ function buildZionSourceMap(): SourceNode[] {
       ]
     }
   ];
+
 }
 
 function markExistenceRecursive(node: SourceNode): SourceNode {
   const exists = fs.existsSync(node.path);
   return {
+
     ...node,
     exists,
     children: node.children?.map(markExistenceRecursive)
@@ -67,6 +70,7 @@ export interface DeployTemplateResult {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   createdPaths: string[];
   skippedPaths: string[];
@@ -106,6 +110,7 @@ export function deployBasicTemplateForPath(
   }
 
 
+
   return { createdPaths, skippedPaths }
 
 
@@ -118,4 +123,5 @@ export function deployBasicTemplateForPath(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

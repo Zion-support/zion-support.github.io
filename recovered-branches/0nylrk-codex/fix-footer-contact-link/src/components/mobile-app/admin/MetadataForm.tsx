@@ -1,6 +1,7 @@
 
 
 
+
   Form,
   FormControl,
   FormDescription,
@@ -17,10 +18,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
+
 
 
 
@@ -31,6 +34,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
   const keywords = watch("keywords");
   const platform = watch("platform");
+
 
 
 
@@ -49,9 +53,12 @@ import { X } from "lucide-react",
 
 
 
+
+
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
+
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const { control, register, watch, setValue } = form;
@@ -83,17 +90,21 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const keywords = watch("keywords"),
   const platform = watch("platform"),
   
+
   const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter" || e.key === ",") {
       e.preventDefault(),
       const value = e.currentTarget.value.trim(),
+
       
+
       if (value && !keywords.includes(value)) {
 
         setValue("keywords", [...keywords, value]);
         e && e.currentTarget.value = "";
       }
     }
+
   }
   const removeKeyword = (keyword: string) => {
     setValue(
@@ -114,6 +125,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
+
 
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -140,6 +152,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
                     Max {platform === "ios" ? "30" : "50"} characters
                   </FormDescription>
                 </FormItem>
+
               )}
             />
             <FormField
@@ -257,6 +270,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -274,6 +288,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                   </FormDescription>
                 </FormItem>
               )}
+
             />
             <FormField
             />;
@@ -285,12 +300,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               control={control}
               name="longDescription"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Long Description</FormLabel>
                   <FormControl>
+
                     <Textarea
                     <Textarea 
 
@@ -299,6 +316,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                       placeholder="Detailed description of your app"
                       className="min-h-32"
@@ -312,7 +330,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 </FormItem>
               )}
             />
+
             
+
             <div>
               <FormLabel htmlFor="keywords">Keywords</FormLabel>
 
@@ -322,6 +342,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 onKeyDown={addKeyword}
                 className="mb-2"
               />
+
               
 
 
@@ -334,6 +355,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
 
@@ -341,6 +363,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
+
                     <button
                     <button 
 
@@ -354,6 +377,7 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -367,12 +391,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 Add keywords to improve discoverability (max 100 characters total)
               </FormDescription>
             </div>
+
             
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             <FormField
@@ -382,6 +408,8 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+
+
 
 
 
@@ -404,7 +432,9 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 };
+

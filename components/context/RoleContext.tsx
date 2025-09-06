@@ -3,12 +3,14 @@
 
 
 
+
 import React, {;
   createContext,;
   useContext,;
   useEffect,;
   useMemo,;
   useState,;
+
 
 
 } from 'react';
@@ -21,15 +23,23 @@ const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 
-
 }) => {  const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
-
+    try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+export type UserRole = 'client' | 'talent';
+type RoleContextValue = {
+  role: UserRole;
+  setRole: (role: UserRole) => void;  role: UserRole
+  setRole: (role: UserRole) => void
+}
+const RoleContext = createContext<RoleContextValue | undefined>(undefined);
+export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
+
       const saved =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_user_role')
@@ -55,12 +65,14 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
     } catch {}
   }, []);
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
+
 
 
 type RoleContextValue = {;
@@ -101,10 +113,12 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
+
 
 
 
@@ -133,3 +147,4 @@ export function useRole(): any (): RoleContextValue {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

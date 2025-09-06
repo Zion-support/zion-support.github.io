@@ -12,6 +12,7 @@ if () mkdir_sync (out_dir, { recursive: true }), ) {
 }
 const sizes = [16, 32, 48, 128];
 for (const size of sizes) {
+
   const out = resolve(outDir, `icon-${size}.png`)
   await sharp(svgPath).resize(size, size).png().toFile(out)
 
@@ -31,3 +32,4 @@ for (const size of sizes) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

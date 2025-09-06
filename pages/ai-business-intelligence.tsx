@@ -1,6 +1,7 @@
 
 
 
+
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
@@ -14,10 +15,12 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default function AIBusinessIntelligencePage() {
 
   const features = [
     {
+
       icon: Brain
       title: 'Predictive Analytics'
       description:
@@ -192,6 +195,7 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
   ],
+
   const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
     "Reduce operational costs by 15-30% with process optimization",
@@ -278,10 +282,13 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
   ],
+
+
   return (
     <>
       <Head>
         <title>AI Business Intelligence - Zion Tech Group</title>
+
         <meta
           name='description'
           content='Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency.'
@@ -654,6 +661,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -683,6 +691,7 @@ const AIBusinessIntelligence: React.FC = () => {
             </div>
           </motion.div>
         </div>
+
       {/* Features */}
 
 
@@ -1087,6 +1096,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </ul>
 
                 <a
@@ -1097,6 +1107,7 @@ const AIBusinessIntelligence: React.FC = () => {
                   Get Started
                 </a>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -1119,6 +1130,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           >
@@ -1151,6 +1163,7 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
 
+
 }
 }
 
@@ -1169,4 +1182,5 @@ const AIBusinessIntelligence: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,5 +1,7 @@
+
 import React from 'react',
 import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -11,10 +13,12 @@ export default function AutomationInsightsPage() {
       description:
 
 
+
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
       readTime: '8 min read',
       featured: true;
     };
+
 
 
 
@@ -204,6 +208,7 @@ import React from 'react';
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
+
                 ))}
               </div>
             </div>
@@ -231,6 +236,7 @@ import React from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -245,8 +251,10 @@ import React from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {automationTrends.map((trend, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -270,6 +278,7 @@ import React from 'react';
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
+
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
@@ -298,6 +307,7 @@ import React from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                 ))}
               </div>
@@ -306,8 +316,10 @@ import React from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -347,6 +359,7 @@ import React from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -362,6 +375,7 @@ import React from 'react';
 
 
             {/* Call to Action */}
+
 
 
 
@@ -385,8 +399,10 @@ import React from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
@@ -423,6 +439,7 @@ import React from 'react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
@@ -447,3 +464,4 @@ import React from 'react';
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

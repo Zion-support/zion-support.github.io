@@ -1,6 +1,7 @@
 
 
 
+
 export async /**
  * fetch_milestones - Function description
  */
@@ -60,6 +61,7 @@ export async function fetchMilestones(projectId: string) {;
     headers: { 'Content-Type': 'application/json' },;
 
 
+
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -75,6 +77,7 @@ export async function createMilestone(projectId: string, payload: any) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 export async function updateMilestoneStatus() {
@@ -115,6 +118,7 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 
 
+
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -130,6 +134,7 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
@@ -137,3 +142,4 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

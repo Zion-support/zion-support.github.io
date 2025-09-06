@@ -1,7 +1,10 @@
+
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -30,6 +33,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "lucide-react";
 const helpArticles = [
@@ -60,6 +64,7 @@ const helpArticles = [
         type: "Technical"
       }
       {
+
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
         readTime: "6 min read",
@@ -85,6 +90,7 @@ const helpArticles = [
 origin/automation-improvements-final
     icon: Cloud,
     color: "blue",
+
         title: "AI Best Practices"
         description: "Tips and best practices for AI development"
         readTime: "6 min read"
@@ -98,6 +104,8 @@ origin/automation-improvements-final
     description: "Cloud infrastructure and deployment solutions."
     icon: Cloud
     color: "blue"
+
+
     articles: [
       {
         title: "Cloud Migration Guide"
@@ -108,6 +116,7 @@ origin/automation-improvements-final
 
     articles: [;
       {
+
         title: "Cloud Security",
         description: "Best practices for securing your cloud infrastructure",
         readTime: "9 min read",
@@ -123,6 +132,7 @@ origin/automation-improvements-final
     ]
   }
 origin/automation-improvements-final
+
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -130,12 +140,15 @@ origin/automation-improvements-final
       }
     ]
   }
+
+
 ];
 
 ;
 const help_categories = [;
 
   {
+
     title: "Getting Started",
     description: "New to our platform? Start here.",
     icon: BookOpen,
@@ -246,6 +259,7 @@ const helpCategories = [;
 export default function HelpPage() {;
 
 
+
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
@@ -255,6 +269,7 @@ export default function HelpPage() {;
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
+
 origin/automation-improvements-final
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
@@ -262,6 +277,7 @@ origin/automation-improvements-final
   };
 
   }
+
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -272,6 +288,7 @@ origin/automation-improvements-final
       )
     }))
     .filter((category) => category.articles.length > 0);
+
   const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
@@ -280,6 +297,7 @@ origin/automation-improvements-final
     )
   })).filter(category => category.articles.length > 0);
 origin/automation-improvements-final
+
 
   return (
     <>;

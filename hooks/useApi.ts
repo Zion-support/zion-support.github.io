@@ -1,14 +1,20 @@
+
+
       setLoading(false)};
 
   return { data, loading, error, execute }};
 };
 };
 };
-      setLoading(false)}
 
+
+      setLoading(false)}
+  return { data, loading, error, execute }}
+}
+}
+}
 
 };import { useState, useEffect } from 'react';
-
 
 
 interface ApiState<T> {
@@ -16,6 +22,12 @@ interface ApiState<T> {
   loading: boolean;
   error: string | null;
 }
+
+
+export function useApi<T>(url: string, options?: RequestInit) {
+  const [state, setState] = useState<ApiState<T>>({
+
+  });
 
 
 
@@ -61,6 +73,7 @@ if ( {) {
 
   return state;
 }
+
 };
 ursor/integrate-build-improve-and-re-verify-8f7d
 import { useState,useEffect,useCallback } from &apos;react&apos;; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
@@ -73,9 +86,11 @@ origin/automation-improvements-final
 };
 
 
+
 interface UseApiProps {
   // Add props here as needed
 }
+
 ursor/add-new-services-and-deploy-updates-0462
 import { useState, useEffect, useCallback } from 'react';
 
@@ -94,6 +109,7 @@ interface UseApiProps {
   // Add props here as needed
 }
 origin/main
+
 interface UseApiOptions {
   immediate?: boolean;
   onSuccess?: (data: any) => void;
@@ -148,6 +164,7 @@ export const use_api = <T = any>(
   }, [execute, options.immediate]);
   return { data, loading, error, execute }}
 export default useApi;
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
@@ -156,6 +173,7 @@ import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 export default function UseApi({ }: UseApiProps) {
   return (
@@ -164,6 +182,13 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>;
   );
+
+
+}
+
+}
+}
+
 
 
 
@@ -193,10 +218,13 @@ export function useApi<T>(
       fetchData();
     }
   }, [fetchData, options.immediate]);
+
+
     fetchData();
   }, [url, options]);
   return state;
 }
+
 ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -245,3 +273,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

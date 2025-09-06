@@ -5,6 +5,7 @@ import {
 
 
 
+
   Card,
   CardContent,
   CardDescription,
@@ -20,6 +21,7 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -28,6 +30,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
+
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 
@@ -38,11 +41,13 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
+
       
 
 
@@ -55,6 +60,7 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -84,6 +90,7 @@ export function IntegrationsHub() {;
             </div>
           </CardContent>
         </Card>
+
         
 
 
@@ -96,6 +103,7 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -134,6 +142,7 @@ export function IntegrationsHub() {;
           </CardFooter>
         </Card>
       </div>
+
       
 
 
@@ -146,12 +155,14 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
+
         
 
 
@@ -164,10 +175,12 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
+
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
@@ -187,6 +200,7 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -200,6 +214,7 @@ export function IntegrationsHub() {;
                 <WebhookManager />
               </CardContent>
             </Card>
+
             
 
 
@@ -212,6 +227,7 @@ export function IntegrationsHub() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -228,6 +244,8 @@ export function IntegrationsHub() {;
         </div>
       </Tabs>
     </div>
+
+
 
 
 
@@ -390,6 +408,7 @@ export function IntegrationsHub() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -401,3 +420,4 @@ export function IntegrationsHub() {;
   );
 }
 ;
+

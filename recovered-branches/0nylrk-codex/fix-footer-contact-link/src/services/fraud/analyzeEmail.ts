@@ -4,11 +4,13 @@
 
 
 
+
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
@@ -19,6 +21,8 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
+
+
 // Email analysis functionality;
 import { suspiciousEmailDomains } from './constants',;
 import { EmailAnalysisResult } from './types',;
@@ -39,6 +43,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -46,6 +51,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   }
@@ -55,6 +61,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 
     reasons
   }
+
 }
   // Check for suspicious domains;
   for (const suspicious_domain of suspiciousEmailDomains) {
@@ -73,3 +80,4 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
 ;
 
 };
+

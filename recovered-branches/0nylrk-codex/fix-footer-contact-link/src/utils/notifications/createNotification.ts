@@ -3,6 +3,7 @@
 
 
 
+
 import {supabase} from "@/integrations/supabase/client";
 import {CreateNotificationParams, CreateNotificationResult} from './types';
 /**
@@ -19,10 +20,12 @@ export async function createNotification({;
 
 
 
+
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
 export async function createNotification({
+
   userId;
   title;
   message;
@@ -49,6 +52,7 @@ export async function createNotification({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl;
@@ -57,6 +61,7 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+
       _user_id: userId;
       _title: title;
       _message: message;
@@ -73,10 +78,12 @@ export async function createNotification({
     
     if (error) throw error,
     
+
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
+
 import { supabase } from "@/integrations/supabase/client",;
 import { CreateNotificationParams, CreateNotificationResult } from './types',;
 /**;
@@ -119,10 +126,12 @@ export async function createNotification({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+
   } catch (error) {
   } catch (error) {;
 
@@ -136,12 +145,15 @@ export async function createNotification({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     console.error('Error creating notification:', error);
 
 
 
     return { success: false, error }
   }
+
 }
 }
 ;
+

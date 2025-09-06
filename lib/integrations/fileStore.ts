@@ -17,6 +17,8 @@ import { IntegrationsState } from "./types";
 
 
 
+
+
   ensureDataDir();
   const current = readState();
   (mutator(current),
@@ -34,8 +36,10 @@ import { IntegrationsState } from "./types";
 
 export function writeState(
 
+
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
+
 
 
 
@@ -47,6 +51,7 @@ export function writeState(
 
   return current;
 }
+
 
 
 
@@ -68,4 +73,5 @@ export function write_state (
   return current;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

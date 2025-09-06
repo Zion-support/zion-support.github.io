@@ -3,11 +3,13 @@
 
 
 
+
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {ContractBuilderContent} from '@/components/contracts/page/ContractBuilderContent';
+
 
 
 
@@ -22,6 +24,7 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -29,6 +32,7 @@ import { ContractBuilderContent } from '@/components/contracts/page/ContractBuil
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 function ContractBuilderPage() {
   return (
@@ -54,13 +58,17 @@ function ContractBuilderPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default ContractBuilderPage;
 
 ;
 export default ContractBuilderPage;
+
+

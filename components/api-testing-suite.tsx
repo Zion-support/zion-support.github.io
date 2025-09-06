@@ -29,6 +29,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
+
   Code
   Zap
   Shield
@@ -57,6 +58,7 @@ import { Zap, Star } from 'lucide-react';
 
 
 export default function APITestingSuitePage() {
+
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -130,6 +132,7 @@ export default function APITestingSuitePage() {
       ]
     }
     {
+
       name: 'Integration Testing'
       description:
         'Test how your APIs integrate with other systems and services.'
@@ -152,6 +155,7 @@ export default function APITestingSuitePage() {
         'Error propagation',
       ],
     },  ];
+
 
   ];
   const pricing = [
@@ -437,6 +441,7 @@ function APITestingSuitePage() {
             threshold: 'Authenticated'
           }
           {
+
             name: 'Rate Limiting'
             status: 'pass'
             value: 'Within limits'
@@ -449,6 +454,7 @@ function APITestingSuitePage() {
             threshold: 'No throttling',
           },
         ],
+
 
         recommendations: [
 
@@ -514,6 +520,7 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
+
 
 
 
@@ -586,6 +593,7 @@ function APITestingSuitePage() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -657,6 +665,7 @@ function APITestingSuitePage() {
               View Pricing
             </Button>
             <Button
+
 href="/contact"
               variant="outline"
               size="lg"
@@ -797,6 +806,7 @@ href="/contact"
 
 
 
+
                     </p>
                   </div>
                 </div>
@@ -810,9 +820,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -822,9 +834,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -906,6 +920,7 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -915,6 +930,7 @@ href="/contact"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Demo Test Results */}
       {testResults && (
 
@@ -1012,30 +1028,36 @@ href="/contact"
               </Card>;
               {/* Test Results */}
 
-
-                        </span>                      </div>
-
-                      </div>
+              <Card className='border-gradient-indigo'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Test Results
+                </h3>
+                <div className='space-y-3'>
+                  {testResults.tests.map((test, index) => (
+                    <div
+                      key={index}
+                      className='flex items-center justify-between'
+                    >
+                      <span className='text-gray-300 text-sm'>{test.name}</span>
+                      <div className='flex items-center space-x-2'>
+                        <span
+                          className={`text-xs px-2 py-1 rounded ${
+                            test.status === 'pass'
+                              ? 'bg-green-500/20 text-green-400'
+                              : 'bg-red-500/20 text-red-400'
+                          }`}
+                        >
+                          {test.status}
+                        </span>
+                        <span className='text-xs text-gray-400'>
+                          {test.value}
 
 
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
                   ))}
                 </div>
               </Card>
 
-
-
-
-
-                    </div>
-                  ))}
-                </div>
-              </Card>
 
 
 
@@ -1051,6 +1073,7 @@ href="/contact"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1062,6 +1085,7 @@ href="/contact"
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
+
 
 
 
@@ -1079,6 +1103,7 @@ href="/contact"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   </div>
                   <div className='flex justify-between items-center'>
@@ -1111,6 +1136,7 @@ href="/contact"
                 </div>;
               </Card>;
             {/* Recommendations */}
+
             <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1128,6 +1154,7 @@ href="/contact"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 ))}
               </div>
             </Card>
@@ -1148,7 +1175,9 @@ href="/contact"
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1440,6 +1469,8 @@ href="/contact"
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1454,6 +1485,8 @@ href="/contact"
                 </div>;
 
 
+
+
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1466,16 +1499,15 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+
 
           </div>;
         </div>;
@@ -1490,11 +1522,13 @@ href="/contact"
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
 
             Ready to Test Your APIs?
 
@@ -1505,6 +1539,7 @@ href="/contact"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1524,6 +1559,7 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
+
 
 
 
@@ -1556,3 +1592,4 @@ href="/contact"
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

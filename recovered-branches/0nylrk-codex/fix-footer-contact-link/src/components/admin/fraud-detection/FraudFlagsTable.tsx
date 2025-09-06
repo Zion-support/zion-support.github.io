@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface FraudFlagsTableProps {
 
@@ -26,10 +28,12 @@ interface FraudFlagsTableProps {
 
 
 
+
   flags,
   isLoading,
   hasFilters,
   resetFilters,
+
   onAction
 }) => {
   if (isLoading) {
@@ -39,6 +43,7 @@ interface FraudFlagsTableProps {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
       </div>
     )
+
 import React from "react",;
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Badge } from "@/components/ui/badge",;
@@ -74,6 +79,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
@@ -113,8 +119,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
             </TableCell>
             <TableCell className="max-w-xs truncate">{flag.reason}</TableCell>
             <TableCell className="max-w-xs truncate">
+
               {flag.gpt_explanation |(
               {flag.gpt_explanation || (
+
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
 
               )}
@@ -148,14 +156,18 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         ))}
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       </TableBody>;
     </Table>;
   );
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

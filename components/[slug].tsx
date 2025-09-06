@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,6 +20,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo } from 'react';
+
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -45,6 +47,8 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+
+
 
 
 
@@ -315,6 +319,7 @@ if ( {) {
                 href='/contact'
                 variant='quantum'
                 size='lg'
+
                 className='w-full'>;
                 Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />;
@@ -411,6 +416,7 @@ if ( {) {
 
 
 // Static export support: generate root-level pages for service slugs
+
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -436,14 +442,20 @@ function normalizeSlug(value: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
 
-
+  if (!link) return null;
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
 
 export const getStaticPaths: GetStaticPaths = async () => {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+export const getStaticPaths: GetStaticPaths = async () => {;
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const services = collectAllServices();
 
@@ -458,10 +470,15 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
 
-  const staticSlugs = new Set<string>();
-  try {
-    const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-
+      const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
+    for (const entry of entries) {
+      if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
+        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
+        if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
+          staticSlugs.add(base.toLowerCase())
+        }
+    }
+  } catch {}
 
 
   // Exclude any slug that conflicts with an existing root page file
@@ -469,6 +486,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     slug => !staticSlugs.has(slug)
   );
   return {
+
 
 
 
@@ -486,6 +504,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+
 
 
 
@@ -513,10 +532,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

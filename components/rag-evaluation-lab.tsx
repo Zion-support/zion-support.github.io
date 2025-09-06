@@ -1,3 +1,4 @@
+
 import React from 'react',
 import SEO from '../components/SEO';
 import Link from 'next/link';
@@ -5,6 +6,7 @@ import Link from 'next/link';
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
+
 
   return (
     <>;
@@ -227,5 +229,7 @@ import Link from 'next / link';
 			</section>
 		</>
 	)
+
 }
 }
+

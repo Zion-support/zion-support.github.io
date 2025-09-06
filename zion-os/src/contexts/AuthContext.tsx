@@ -1,4 +1,5 @@
 
+
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
 import { use_session, sign_in, sign_out  } from './next - auth / react';,
@@ -9,4 +10,4 @@ interface User {
   email: string,
   role: string,
   onboarding_completed: boolean;
-=======
+

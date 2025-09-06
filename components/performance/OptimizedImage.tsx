@@ -16,6 +16,7 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
+
 }
 import React from 'react';
 
@@ -43,9 +44,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
   );
 };
 
 export default OptimizedImage;
+
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

@@ -2,6 +2,7 @@
 
 
 
+
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -16,6 +17,7 @@ import { readJson } from '../../utils/fsDb',;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
@@ -32,6 +34,8 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
 
 
 
+
+
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -43,12 +47,14 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   }
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }
 },;
@@ -63,6 +69,7 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
   return (
@@ -82,6 +89,7 @@ export default function SupportRequests(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {requests.map((r) => (
           <div key={r.id} className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex items-center justify-between">
             <div className="text-sm">
@@ -93,6 +101,8 @@ export default function SupportRequests(req, res) {
             </div>
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
+
+
 
 
 
@@ -118,11 +128,13 @@ export default function SupportRequests(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

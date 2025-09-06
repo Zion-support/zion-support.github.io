@@ -1,7 +1,12 @@
 
 
-
-
+import React, { useState, useEffect } from "react",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { toast } from "@/hooks/use-toast",
 
 
 // Import refactored components
@@ -11,6 +16,7 @@ import {
   FraudFlagsTable,
   FraudTabContent
 } from "@/components/admin/fraud-detection",
+
 
 export default function FraudDetection() {;
   const [flags, setFlags] = useState<FraudFlag[]>([]);
@@ -30,6 +36,7 @@ export default function FraudDetection() {
   const [statusFilter, setStatusFilter] = useState<string | null>(null),
   const [severityFilter, setSeverityFilter] = useState<string | null>(null),
   const [contentTypeFilter, setContentTypeFilter] = useState<string | null>(null),
+
   const [stats, setStats] = useState<FraudStats>({
 
     total_flags: 0
@@ -45,6 +52,7 @@ export default function FraudDetection() {
       const { data, error } = await supabase
         .from("fraud_flags")
         .select("*")
+
         .order("timestamp", { ascending: false })
       if (error) throw error;
       setFlags(data |[]);
@@ -56,6 +64,7 @@ export default function FraudDetection() {
       setFlags(data || []),
       setFilteredFlags(data || []),
       
+
       // Calculate stats
       const newStats: FraudStats = {
         total_flags: data?.length |0
@@ -73,6 +82,7 @@ export default function FraudDetection() {
         variant: "destructive"})
     } finally {
       setIsLoading(false)
+
     }
   }
   useEffect(() => {
@@ -177,6 +187,7 @@ export default function FraudDetection() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     }
     // Apply status filter
     if (statusFilter) {
@@ -190,6 +201,7 @@ export default function FraudDetection() {;
     if (contentTypeFilter) {
       result = result.filter((flag) => flag.content_type === contentTypeFilter)
     }
+
     setFilteredFlags(result)
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
   const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {
@@ -264,6 +276,7 @@ export default function FraudDetection() {;
 
 
 
+
       toast({
         title: "Flag updated"
         description: `Action '${action}' was applied successfully.`})
@@ -276,19 +289,23 @@ export default function FraudDetection() {;
         description: "Failed to update flag"
         variant: "destructive"})
     }
+
   }
   },
+
 
   const resetFilters = () => {
     setSearchQuery("");
     setStatusFilter(null);
     setSeverityFilter(null);
     setContentTypeFilter(null)
+
   }
   const hasFilters = !!(searchQuery |statusFilter |severityFilter |contentTypeFilter);
   },
 
   const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter),
+
 
   return (
     <AppLayout>
@@ -307,17 +324,66 @@ export default function FraudDetection() {;
             </p>
           </div>
           <div className="mt-4 md:mt-0">
-            <Button
-              onClick={fetchFraudFlags}
-              className="bg-zion-purple hover:bg-zion-purple-light"
-            <Button 
-              onClick={fetchFraudFlags} 
-              className="bg-zion-purple hover:bg-zion-purple-light"
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+;
+    setFilteredFlags(result);
+  }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
+  const handleAction = async (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => {;
+    try {;
+      const status = action === 'ignore' ? 'ignored' : 'actioned',;
+      const actionTaken = action === 'ignore' ? 'none' : action,;
+      const { error } = await supabase;
+        .from("fraud_flags");
+        .update({;
+          status,;
+          action_taken: actionTaken,;
+          reviewed_at: new Date().toISOString(),;
+          // In a real app, you'd get the current user's ID;
+          reviewed_by: 'admin';
+        });
+        .eq("id", flagId),;
+      if (error) throw error,;
+      toast({;
+        title: "Flag updated",;
+        description: `Action '${action}' was applied successfully.`}),;
+      // Refresh the data;
+      fetchFraudFlags();
+    } catch (error) {;
+      console.error("Error updating fraud flag:", error),;
+      toast({;
+        title: "Error",;
+        description: "Failed to update flag",;
+        variant: "destructive"});
+    }
+  },;
+  const resetFilters = () => {;
+    setSearchQuery(""),;
+    setStatusFilter(null),;
+    setSeverityFilter(null),;
+    setContentTypeFilter(null);
+  };
+  const hasFilters = !!(searchQuery || statusFilter || severityFilter || contentTypeFilter);
+  return (;
+    <AppLayout>;
+      <SEO;
+        title="Fraud Detection | Admin Dashboard";
+        description="Monitor and manage fraud detection alerts on the Zion AI Marketplace";
+      />;
+      <div className="container mx-auto px-4 py-8">;
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">;
+          <div>;
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+              Fraud Detection;
+            </h1>;
+            <p className="text-zion-slate-light mt-2">;
+              Monitor suspicious activities and protect the marketplace from fraud and abuse;
+            </p>;
+          </div>;
+          <div className="mt-4 md:mt-0">;
+            <Button;
+              onClick={fetchFraudFlags} ;
+              className="bg-zion-purple hover:bg-zion-purple-light";
 
 
               disabled={isLoading}
@@ -335,6 +401,7 @@ export default function FraudDetection() {;
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
+
           
 
 
@@ -347,6 +414,7 @@ export default function FraudDetection() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           <TabsContent value="all" className="mt-6">
 
           <TabsList>;
@@ -398,6 +466,8 @@ export default function FraudDetection() {;
       </div>
     </AppLayout>
   )
+
 }
 }
 ;
+

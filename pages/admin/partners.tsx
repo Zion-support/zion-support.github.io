@@ -1,6 +1,8 @@
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
@@ -17,7 +19,42 @@ interface Partner {
       setLoading(false);
     }, 1000);  }, []);
 
-  async function updatePartner(): any (code: string, updates: any) {;
+  async function updatePartner(code: string, updates: any) {
+    await fetch('/api/admin/partners/update', {
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code, ...updates })
+    });
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
+    setPartners(json.partners |[]);  }
+  async function viewFlags(code: string) {
+    setSelected(code)
+    const res = await fetch(
+      `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
+    );
+
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
+  useEffect(() => {;
+    (async () => {;
+      try {
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
+        setPartners(json.partners || []);
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    })();
+  }, []),;
+  async function updatePartner(code: string, updates: any) {;
+
     await fetch('/api/admin/partners/update', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
@@ -41,7 +78,9 @@ interface Partner {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     const json = await res.json();
@@ -50,6 +89,8 @@ interface Partner {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 
   return (
@@ -74,6 +115,7 @@ interface Partner {
                 <td className="py-2 pr-4">{p.status}</td>
                 <td className="py-2 pr-4">
                   <input
+
                     type='number'                    defaultValue={p.commission_rate}
                     min={0}
                     max={1}
@@ -155,6 +197,7 @@ interface Partner {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -195,6 +238,7 @@ interface Partner {
 }
           </ul>
         </div>
+
 {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
           <div className="bg-white rounded-lg shadow p-4">
@@ -510,6 +554,7 @@ interface Partner {
 
 
 
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -526,9 +571,11 @@ interface Partner {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

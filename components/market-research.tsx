@@ -19,9 +19,10 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
-
-
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import {
 
 
 export default function MarketResearchPage() {
@@ -39,6 +40,7 @@ export default function MarketResearchPage() {
       ]
       topPlayers: ['OpenAI', 'Anthropic', 'Google AI', 'Microsoft Azure AI']
       opportunities: [
+
         'AI content generation tools'
         'Predictive analytics platforms'
         'Automated customer service'
@@ -193,9 +195,103 @@ export default function MarketResearchPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+    {
+
+      name: 'Security & Identity',
+      marketSize: '$12.3B',
+      growthRate: '21.2% CAGR',
+      keyTrends: [
+        'Zero-trust security adoption',
+        'Multi-factor authentication growth',
+        'API security concerns',
+        'Compliance requirements increasing',
+      ],
+      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+
+      opportunities: [
+        'Identity verification platforms',
+        'API security gateways',
+        'Compliance monitoring tools',
+        'Threat detection systems',
+      ],
+      color: 'from-green-500 to-emerald-600',
+      icon: <Target className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'Business Intelligence',
+      marketSize: '$22.1B',
+      growthRate: '19.8% CAGR',
+      keyTrends: [
+        'Self-service BI adoption',
+        'Real-time data integration',
+        'Mobile BI growth',
+        'Predictive analytics demand',
+      ],
+      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+
+      opportunities: [
+        'Custom dashboard builders',
+        'Data integration platforms',
+        'Mobile analytics solutions',
+        'Predictive modeling tools',
+      ],
+      color: 'from-orange-500 to-red-600',
+      icon: <Activity className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'API Management',
+      marketSize: '$6.8B',
+      growthRate: '24.1% CAGR',
+      keyTrends: [
+        'Microservices architecture growth',
+        'API-first development',
+        'Rate limiting importance',
+        'Developer experience focus',
+      ],
+      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+
+      opportunities: [
+        'API rate limiting services',
+        'Developer portal platforms',
+        'API analytics tools',
+        'Webhook management systems',
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      icon: <Globe className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'User Experience Analytics',
+      marketSize: '$9.4B',
+      growthRate: '20.5% CAGR',
+      keyTrends: [
+        'Privacy-compliant tracking',
+        'Real-time user insights',
+        'Conversion optimization focus',
+        'Mobile app analytics growth',
+      ],
+      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+
+      opportunities: [
+        'Heatmap and session recording',
+        'A/B testing platforms',
+        'User journey mapping tools',
+        'Conversion funnel analytics',
+      ],
+      color: 'from-teal-500 to-cyan-600',
+      icon: <Users className='w-8 h-8 text-white' />,
+    },  ];
+
+
   ];
   const competitiveAnalysis = [
     {
@@ -325,14 +421,17 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -367,6 +466,7 @@ import { Zap } from 'lucide-react';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               Market Segment Analysis
             </h2>
@@ -536,6 +636,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
                           </ul>;
                         </div>;
 
@@ -550,6 +651,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         {/* Top Players */}
 
 
@@ -559,6 +661,7 @@ import { Zap } from 'lucide-react';
                           </ul>
                         </div>
                       </div>
+
 
 
 
@@ -578,6 +681,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>
                         <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -603,6 +707,7 @@ import { Zap } from 'lucide-react';
                             </div>
                           ))}
 
+
                         </div>
 
 
@@ -616,6 +721,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       </div>
                     </div>
                   </div>
@@ -630,6 +736,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -643,6 +750,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -653,6 +761,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -666,6 +775,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Competitive Landscape Analysis
             </h2>
@@ -678,7 +788,69 @@ import { Zap } from 'lucide-react';
             {competitiveAnalysis.map((analysis, index) => (
               <Card
 
-
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-bold text-white mb-4'>
+                    {analysis.company}
+                  </h3>
+                  {/* Examples */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
+                      Examples:
+                    </h4>
+                    <div className='text-sm text-gray-300'>
+                      {analysis.examples.join(', ')}
+                    </div>
+                  </div>
+                  {/* Market Share & Pricing */}
+                  <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                    <div>
+                      <span className='text-gray-400'>Market Share:</span>
+                      <div className='text-white font-semibold'>
+                        {analysis.marketShare}
+                      </div>
+                    </div>
+                    <div>
+                      <span className='text-gray-400'>Pricing:</span>
+                      <div className='text-white font-semibold'>
+                        {analysis.pricing}
+                      </div>                    </div>
+                  </div>
+                  {/* Strengths */}              Competitive Landscape Analysis
+            </h2>
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              Understanding the competitive landscape and positioning strategies for different types of SaaS companies.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {competitiveAnalysis.map((analysis, index) => (
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">{analysis.company}</h3>
+                  {/* Examples */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
+                    <div className="text-sm text-gray-300">{analysis.examples.join()}</div>
+                  </div>
+                  {/* Market Share & Pricing */}
+                  <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
+                    <div>
+                      <span className="text-gray-400">Market Share:</span>
+                      <div className="text-white font-semibold">{analysis.marketShare}</div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Pricing:</span>
+                      <div className="text-white font-semibold">{analysis.pricing}</div>
+                    </div>
+                  </div>
+                  {/* Strengths */}
 
 
                         </li>
@@ -688,7 +860,9 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                   {/* Weaknesses */}
                   <div>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -743,6 +917,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -756,6 +931,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Market Trends */}
       <section className='section-padding bg-gradient-cursor'>
@@ -766,6 +942,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -779,6 +956,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Emerging Market Trends
             </h2>
@@ -818,6 +996,7 @@ import { Zap } from 'lucide-react';
                       </span>
                     </div>
                   </div>
+
                   <p className='text-gray-300 mb-4'>{trend.description}</p>
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-gray-400 mb-2'>
@@ -844,6 +1023,7 @@ import { Zap } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         </li>
                       ))}
                     </ul>
@@ -867,6 +1047,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -876,11 +1057,13 @@ import { Zap } from 'lucide-react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -909,6 +1092,7 @@ import { Zap } from 'lucide-react';
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
             {pricingStrategies.map((strategy, index) => (
               <Card
+
 
 
 
@@ -951,6 +1135,7 @@ import { Zap } from 'lucide-react';
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-white mb-3">{strategy.strategy}</h3>
                   <p className="text-gray-300 mb-6">{strategy.description}</p>
+
 
 
                       }`}>;
@@ -996,6 +1181,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
                   {/* Cons */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -1019,6 +1205,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1035,6 +1222,7 @@ import { Zap } from 'lucide-react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -1047,6 +1235,7 @@ import { Zap } from 'lucide-react';
           </div>
         </div>
       </section>
+
 
 
 
@@ -1168,6 +1357,7 @@ import { Zap } from 'lucide-react';
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
@@ -1181,8 +1371,10 @@ import { Zap } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             Ready to Apply This Market Intelligence?
           </h2>
@@ -1211,6 +1403,7 @@ import { Zap } from 'lucide-react';
             <Button
               href="/contact"
               size="lg"
+
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow">;
               Get Strategic Consultation;
             </Button>;
@@ -1236,4 +1429,5 @@ import { Zap } from 'lucide-react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

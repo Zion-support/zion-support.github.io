@@ -1,4 +1,12 @@
+
+
+
 import React from "react";
+export default function GlowCard({
+
+  title: string;
+  children: React.ReactNode;
+}) {
 
 
   return (
@@ -53,6 +61,8 @@ function GlowCard() {
     </div>);
       </div>
     </div>
+
   )
 
 }
+

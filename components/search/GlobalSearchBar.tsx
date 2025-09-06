@@ -1,5 +1,16 @@
 
 
+import { useRouter } from 'next/router';
+
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return
 
     }
     
@@ -136,6 +147,7 @@ export default function GlobalSearchBar() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -147,6 +159,7 @@ export default function GlobalSearchBar() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
@@ -178,6 +191,7 @@ export default function GlobalSearchBar() {;
                   }}
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
@@ -194,6 +208,7 @@ export default function GlobalSearchBar() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   {s}
                 </button>
               </li>
@@ -202,6 +217,7 @@ export default function GlobalSearchBar() {;
         </div>
       )}
     </form>
+
 );  )
 }
   );
@@ -215,3 +231,4 @@ export default function GlobalSearchBar() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -2,12 +2,14 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+
 
 
 
@@ -22,6 +24,8 @@ export function useResumeActions() {;
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
+
+
 
 
 
@@ -45,18 +49,23 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
+
           user_id: user.id;
           title: basicInfo.title;
           headline: basicInfo.headline
@@ -78,11 +87,14 @@ export function useResumeActions() {;
       
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
+
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
+
+
 
 
 ;
@@ -117,18 +129,23 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
+
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
@@ -148,6 +165,7 @@ export function useResumeActions() {;
       if (error) throw error,
       
       return showSuccessToast("Resume updated", "Your resume information has been updated")
+
 
 
 
@@ -181,41 +199,50 @@ export function useResumeActions() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
+
         .eq('user_id', user.id);
       if (resetError) throw resetError;
         .eq('user_id', user.id),
       
       if (resetError) throw resetError,
       
+
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
+
         .eq('user_id', user.id);
       if (error) throw error;
         .eq('user_id', user.id),
       
       if (error) throw error,
       
+
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {
       return handleResumeError(e, 'Could not set active resume')
     } finally {
       setIsLoading(false)
+
     }
   }
   return {
@@ -275,10 +302,13 @@ if (throw error) {
 }
 
 
+
     createResume;
     updateBasicInfo;
 
     setActiveResume}
+
 }
 }
 ;
+

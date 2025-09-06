@@ -1,6 +1,8 @@
 
 
 
+
+
       const res = await fetch('/api/proposals/list');
       const data = await res.json();
       setItems(data.proposals || []);
@@ -11,19 +13,31 @@
   async function updateStatus(id: string, status: string) {
 
 
-    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) })
-    const res = await fetch('/api/proposals/list')
-    const data = await res.json()
-    setItems(data.proposals |[])
-
-
-  }
-
-
-
+export default function InternationalProposals(req, res) {
+  try {
+  const [items, setItems] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {;
+    (async () => {;
+      const res = await fetch('/api/proposals/list');
+      const data = await res.json();
+      setItems(data.proposals || []);
+      setLoading(false);
+    })();
+  }, []),;
+  async function updateStatus(id: string, status: string) {;
+    await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),;
+    const res = await fetch('/api/proposals/list');
+    const data = await res.json();
+    setItems(data.proposals || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
+
+
   return (
     <div className="space - y-6">;
       <h1 className="text - 2xl font - semibold">International Proposals</h1>;
@@ -41,6 +55,7 @@
                 <div className="text-sm">Status: <span className="font-medium">{p.status}</span></div>
               </div>
               <div className="mt-2 flex items-center gap-3 text-sm">
+
                 {p.artifacts?.markdownPath && <a href={p.artifacts.markdownPath} target="_blank" rel="noreferrer" className="underline">Markdown</a>}
                 {p.artifacts?.pdfPath && <a href={p.artifacts.pdfPath} target="_blank" rel="noreferrer" className="underline">PDF</a>}
                 {p.artifacts?.ipfsCid && <span>IPFS: {p.artifacts.ipfsCid}</span>}
@@ -76,6 +91,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
               <div className="mt-3 flex items-center gap-2 text-xs">
                 <button onClick={() => updateStatus(p.id, 'Under Review')} className="px-2 py-1 border rounded">Mark Under Review</button>
@@ -85,11 +101,13 @@
             </div>
 
 
+
         </div>
       )}
     </div>
   );
 };
+
 
 
 
@@ -105,6 +123,8 @@
 }
 
 
+
+
         </div>
       )  } catch (error) {
     console.error("Error:", error);
@@ -118,11 +138,13 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

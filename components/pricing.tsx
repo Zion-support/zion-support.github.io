@@ -1,14 +1,17 @@
 
 
 
+
 import React, { useState } from 'react';
 import Head from 'next/head';
+
 
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -36,6 +39,7 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
   Check, Star, Users, TrendingUp, DollarSign, Clock, ;
 
 
+
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -48,27 +52,53 @@ import { innovativeAIServices2029  } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029  } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovations';
 
-    'AllContent & MarketingDevelopment & DevOpsSales & CRMLegal & ComplianceHuman ResourcesAnalytics & DataFinance & Accounting';
-    'Project ManagementCustomer ExperienceSecurity & Compliance'
+
+  const allServices = [
+    ...enhancedRealMicroSaasServices
+    ...innovativeAIServices2029
+    ...quantumSpaceInnovations2029
+    ...enterpriseITInnovations2029
+    ...innovativeMicroSaas2029
   ];
-  const filteredServices = selectedCategory === 'All'
-    ? microSaasServices
-    : microSaasServices.filter(service => service.category === selectedCategory);
+  // Get unique services by ID
+  const uniqueServices = allServices.filter(
+    (service, index, self) => index === self.findIndex(s => s.id === service.id)
+  );
+  // Get all categories
+  const categories = [
+    'All'
+    ...Array.from(
+      new Set(
+        uniqueServices.map(s =>
+          Array.isArray(s.category) ? s.category[0] : s.category
+        )
+      )
+    )
+  ];  ];
+  // Get unique services by ID
+  const uniqueServices = allServices.filter((service, index, self) =>
+    index === self.findIndex(s => s.id === service.id)
+  );
+  // Get all categories
+  const categories = ['All', ...Array.from(new Set(uniqueServices.map(s =>
+    Array.isArray(s.category) ? s.category[0] : s.category
+  )))];
+  // Price ranges
+  const priceRanges = [
+    { id: 'All', name: 'All Prices', range: 'All' }
+    { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' }
+    { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' }
+    { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' }
+    { id: '$20K+', name: '$20K+/month', range: '$20K+' },  ];
+  // Filter services
+  const filteredServices = uniqueServices.filter(service => {    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
+  ];
+  // Filter services
+  const filteredServices = uniqueServices.filter(service => {
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
 
 
-
-
-
-  const filteredServices = selectedCategory === 'All' ;
-    ? microSaasServices ;
-    : microSaasServices && microSaasServices.filter(service => service && service.category === selectedCategory);
-
-  const yearlyDiscount = 0 && 0.2, // 20% discount for yearly billing;
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
 
         />;
@@ -161,6 +191,7 @@ import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovat
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
             className='max-w-4xl mx-auto'
           >
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
@@ -257,6 +288,7 @@ import { enterpriseITInnovations2029  } from '../data/2029-enterprise-it-innovat
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 ))}
 
@@ -790,6 +822,7 @@ if ( {) {
                             </p>
                           </div>
                         )}
+
                         {/* CTA */}
                         <div className="flex items-center justify-between">
                           <Link href={service.link |`/services/${service.id}`}>
@@ -797,6 +830,7 @@ if ( {) {
                         {/* CTA */}
                         <div className="flex items-center justify-between">
                           <Link href={service.link || `/services/${service.id}`}>
+
                             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                               <span className="flex items-center">
                                 Learn More
@@ -829,10 +863,12 @@ if ( {) {
             ))}
 
 
+
           </div>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         </section>
         {/* Contact CTA Section */}
@@ -840,6 +876,7 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -878,6 +915,7 @@ if ( {) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -961,11 +999,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
   );
+
 
 }whileInView= {
   {
@@ -975,6 +1015,7 @@ if ( {) {
   duration: 0.8
 }viewport= {
   {
+
 
                   Revolutionary Technology?;
                 </span>;
@@ -1098,3 +1139,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

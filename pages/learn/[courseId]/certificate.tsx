@@ -15,6 +15,7 @@ export default function CertificatePage() {
 
 
 
+
 }
 
 }
@@ -29,4 +30,5 @@ export default function CertificatePage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

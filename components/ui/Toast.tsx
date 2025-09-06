@@ -1,13 +1,17 @@
+
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+
 
 
 interface ToastProps {
   toast: Toast;
 
   onRemove: (id: string) => void;
+
   id: string,
   type: ToastType,
   title: string,;
+
   message?: string;
   duration?: number
 }
@@ -15,6 +19,7 @@ interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
 }
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -59,6 +64,7 @@ interface ToastProps {
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -105,62 +111,116 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
 
 
+
+
+
+
   };
 
   const getBorderColor = () => {
     switch (toast.type) {
       case 'success':
 
-
-  };
-  const getBorderColor = () => {;
-    switch (toast && toast.type) {;
-      case 'success':;
         return 'border-green-500/20';
-      case 'error':;
+      case 'error':
         return 'border-red-500/20';
-      case 'warning':;
+      case 'warning':
         return 'border-yellow-500/20';
-      case 'info':;
+      case 'info':
         return 'border-blue-500/20';
-      default:;
-        return 'border-blue-500/20';    }      default: return 'border-blue-500/20';
+      default:
+        return 'border-blue-500/20';    }      default: return 'border-blue-500/20'
     }
-
-  };
-  const getBackgroundColor = () => {;
-    switch (toast && toast.type) {;
-      case 'success':;
-
+  }
+  const getBackgroundColor = () => {
+    switch (toast.type) {
+      case 'success':
         return 'bg-green-500/10';
-      case 'error':;
+      case 'error':
         return 'bg-red-500/10';
-      case 'warning':;
+      case 'warning':
         return 'bg-yellow-500/10';
-      case 'info':;
+      case 'info':
         return 'bg-blue-500/10';
-      default:;
+      default:
         return 'bg-blue-500/10';
     }
 
+    >
+      <div className='flex items-start space-x-3'>
+        <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
+        <div className='flex-1 min-w-0'>
+          <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>
+          {toast.message && (
 
-
-
-
-interface ToastContainerProps {
-  toasts: Toast[]
-  onRemove: (id: string) => void
+        </div>
+        <button
+          onClick={() => {
+            setIsVisible(false);
+            setTimeout(() => onRemove(toast.id), 300);
+          }}
+          className='flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200'
+        >
+          <X className='w-4 h-4 text-white/60 hover:text-white' />
+        </button>
+      </div>
+      {/* Progress bar */}
+      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>
+        <motion.div
+          className={`h-full ${
+            toast.type === 'success'
+              ? 'bg-green-400'
+              : toast.type === 'error'
+                ? 'bg-red-400'
+                : toast.type === 'warning'
+                  ? 'bg-yellow-400'
+                  : 'bg-blue-400'
+          }`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+          transition={{ duration: toast.duration |5000, ease: 'linear' }}
+        />
+      </div>
+    </motion.div>
+  );
 }
-export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
-
-
-
-
-
-          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
+interface ToastContainerProps {
+  toasts: Toast[];
+  onRemove: (id: string) => void;
+export const ToastContainer: React.FC<ToastContainerProps> = ({
+  toasts
+  onRemove
+}) => {
+  return (
+    <div className='fixed top-4 right-4 z-50 space-y-3'>
+      <AnimatePresence>
+        {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
-    </div>
+
+  );};          }}
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
+        >
+          <X className="w-4 h-4 text-white/60 hover:text-white" />
+        </button>
+      </div>
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
+        <motion.div
+          className={`h-full ${
+            toast.type === 'success' ? 'bg-green-400' :
+            toast.type === 'error' ? 'bg-red-400' :
+            toast.type === 'warning' ? 'bg-yellow-400' :
+            'bg-blue-400'
+          }`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
+          transition={{ duration: toast.duration |5000, ease: "linear" }}
+        />
+      </div>
+    </motion.div>
+  )
+
 
 interface ToastContainerProps {
   toasts: Toast[]
@@ -171,6 +231,8 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
         {toasts.map((toast) => (
+
+
 
 
 

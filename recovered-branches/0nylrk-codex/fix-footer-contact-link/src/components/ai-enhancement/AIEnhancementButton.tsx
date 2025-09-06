@@ -2,6 +2,8 @@
 
 
 
+
+
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
@@ -12,7 +14,9 @@ import { toast } from '@/hooks/use-toast',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface AIEnhancementButtonProps {
@@ -22,6 +26,7 @@ interface AIEnhancementButtonProps {
   className?: string,
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link",
   size?: "default" | "sm" | "lg" | "icon",
+
 
 
   contentLength?: number
@@ -36,6 +41,7 @@ interface AIEnhancementButtonProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -43,6 +49,8 @@ interface AIEnhancementButtonProps {
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+
+
 
 
 
@@ -103,10 +111,12 @@ export function AIEnhancementButton({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -116,6 +126,7 @@ export function AIEnhancementButton({;
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+
   }
   const handleRegenerate = async () => {
     await handleEnhance()
@@ -126,13 +137,16 @@ export function AIEnhancementButton({;
     await handleEnhance()
   },
   
+
   const handleCancel = () => {
     setShowActions(false);
     setGeneratedContent(null)
+
   }
 
   },
   
+
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">
@@ -177,6 +191,7 @@ export function AIEnhancementButton({;
   return (
     <Button
       type="button"
+
   },;
 
   const handleAccept = () => {;
@@ -258,6 +273,7 @@ export function AIEnhancementButton({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       variant={variant}
       size={size}
       className={`gap-1 ${className}`}
@@ -272,6 +288,8 @@ export function AIEnhancementButton({;
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
+
 }
 }
 ;
+

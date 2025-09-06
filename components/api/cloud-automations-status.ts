@@ -12,6 +12,7 @@
           const fp = path.join(dir, f);
 
 
+
   const dir = path && path.resolve(process && process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {};
   try {
@@ -42,11 +43,13 @@ function handler() {
           data[f.replace (".json", "")] = JSON.parse (
             fs.readFileSync (fp, "utf8"),
 
+
           );
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           );
+
 
 data[f && f.replace(".json", "")] = JSON && JSON.parse(
             fs && fs.readFileSync(fp, "utf8"),
@@ -68,12 +71,14 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         }
       }
     }
   } catch (e) {
 // ignore;
   }
+
 
 
 
@@ -87,4 +92,5 @@ data[f && f.replace(".json", "")] = JSON && JSON.parse(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

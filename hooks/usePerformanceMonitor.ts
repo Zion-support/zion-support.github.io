@@ -1,7 +1,25 @@
 ;
 interface PerformanceMetrics {
 
+  loadTime: number, firstContentfulPaint: number
+  largestContentfulPaint: number, firstInputDelay: number
+  cumulativeLayoutShift: number
+}
 
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isSupported, setIsSupported] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    // Check if Performance Observer is supported
+    if (!('PerformanceObserver' in window)) {
+    setIsSupported(false)
+    return
+  }
+    setIsSupported(true);
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
 
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({

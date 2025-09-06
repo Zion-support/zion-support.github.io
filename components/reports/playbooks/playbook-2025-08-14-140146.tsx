@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
@@ -40,6 +41,7 @@ export default function Page() {
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Playbook — Autonomous Delivery</title>
@@ -58,9 +60,11 @@ export default function Page() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

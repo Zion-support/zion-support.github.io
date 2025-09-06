@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -15,6 +16,7 @@ import {Link} from "react-router-dom";
 export default function ZionHireAI() {;
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
+
 
 
   return (
@@ -251,6 +253,23 @@ export default function ZionHireAI() {;
               Join leading companies using Zion Hire AI to find better talent faster
 
 
+              reduce time-to-hire, and improve candidate experience.
+            </p>
+            <Button
+              size="lg"
+              className="bg-zion-purple hover: bg-zion-purple-light text-white"
+              asChild
+            >
+              <Link to="/enterprise/demo">
+                Schedule a Demo
+              </Link>
+            </Button>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
 
 
 import React from "react",;
@@ -523,9 +542,11 @@ export default function ZionHireAI() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

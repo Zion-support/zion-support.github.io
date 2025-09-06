@@ -1,5 +1,6 @@
 
 
+
 interface UploadSectionProps {;
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -15,6 +16,9 @@ import { Upload, FileText } from "lucide-react";
 
 
 
+
+
+
 interface UploadSectionProps {
   customFile: File | null,
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -22,6 +26,8 @@ interface UploadSectionProps {
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+
+
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -39,6 +45,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
+
       
 
 
@@ -51,6 +58,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -63,6 +71,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>
           </div>
         </div>
+
+
 
 
 
@@ -106,6 +116,8 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>;
           </div>;
         </div>;
+
+
       )}
     </div>;
   );
@@ -138,5 +150,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

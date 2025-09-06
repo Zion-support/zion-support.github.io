@@ -1,11 +1,13 @@
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
@@ -21,6 +23,9 @@ async function mockProviderCall<T>(
 // CRM actions;
 export const crm = {
 
+  async syncContact(
+
+    return mockProviderCall(connection, "sync_contact", { contact });
 
   }
 
@@ -28,6 +33,7 @@ export const crm = {
 
 // ATS actions
 export const ats = {
+
 
 
 
@@ -51,3 +57,4 @@ export const ats = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

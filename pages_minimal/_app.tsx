@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 
 
+
 export default MyApp,
 ;
 ;
@@ -21,4 +22,5 @@ export default MyApp,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

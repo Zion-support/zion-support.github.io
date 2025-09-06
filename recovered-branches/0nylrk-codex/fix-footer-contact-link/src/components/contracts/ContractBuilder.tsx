@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -30,7 +31,9 @@ import {SmartContractBuilder} from "./SmartContractBuilder";
 
 
 
+
 }
+
 
 
 
@@ -47,6 +50,7 @@ export function ContractBuilder({;
 
 
 
+
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -54,6 +58,7 @@ export function ContractBuilder({;
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
+
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
 
@@ -97,6 +102,7 @@ export function ContractBuilder({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         }}
         talent={talent}
         client_name={client_name}
@@ -139,8 +145,10 @@ export function ContractBuilder({;
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
+
             <ContractForm
             <ContractForm 
+
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -170,6 +178,7 @@ export function ContractBuilder({;
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
+
         />
       </DialogContent>
     </Dialog>
@@ -203,5 +212,4 @@ export function ContractBuilder({;
     </Dialog>);
 }
 
-=======
-;
+

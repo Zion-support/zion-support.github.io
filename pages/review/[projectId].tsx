@@ -4,6 +4,8 @@
 
 
 
+
+
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
 import ReviewForm from "../../components/reviews/ReviewForm";
@@ -25,6 +27,8 @@ const ReviewSubmitPage: NextPage<Props> = ({
   valid
   reason
 }) => {
+
+
 import React from 'react',
 import type { NextPage, GetServerSideProps } from 'next',
 import ReviewForm from '../../components/reviews/ReviewForm',
@@ -41,16 +45,19 @@ type Props = {
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+
 
 
 };
@@ -102,3 +109,4 @@ export default ReviewSubmitPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default ReviewSubmitPage;
+

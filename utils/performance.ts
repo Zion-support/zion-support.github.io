@@ -1,6 +1,8 @@
 
 
 
+
+
     return null;
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -29,6 +31,7 @@
 
 
 
+
 }
 ;
 
@@ -43,6 +46,7 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {
 };
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {;
+
 
 
 
@@ -92,9 +96,11 @@ export const getPerformanceScore = (metrics: PerformanceMetrics): {;
 
 
 
+
   return { overall, scores }
 }
 export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') => {
+
 
 
   console.group(`🚀 ${label}`);
@@ -104,6 +110,7 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.cls !== undefined) console.log('Cumulative Layout Shift:', metrics.cls.toFixed(4));
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
+
 
 
 
@@ -131,4 +138,5 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

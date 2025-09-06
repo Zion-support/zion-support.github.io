@@ -2,10 +2,12 @@
 
 
 
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
+
 
 
 
@@ -44,6 +46,8 @@ export function useMessages(
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
+
+
 
 
 import { UserProfile, UserDetails } from '@/types/auth',;
@@ -92,7 +96,9 @@ export function useMessages(;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       }
@@ -101,6 +107,7 @@ export function useMessages(;
     } finally {
       setIsLoading(false)
     }
+
 
 
 
@@ -113,6 +120,7 @@ export function useMessages(;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   /**
    * Send a message to an existing conversation
@@ -145,6 +153,8 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
+
+
 
 
 
@@ -185,6 +195,7 @@ export function useMessages(;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -192,6 +203,7 @@ export function useMessages(;
       // Update conversations list
       await fetchConversations(),
       
+
       // Return the sent message
       return data
     } catch (error) {
@@ -199,6 +211,25 @@ export function useMessages(;
       toast({
 
 
+    }
+  }
+  /**
+   * Mark messages as read
+   */
+  const markAsRead = async (conversationId: string) => {
+    if (!user |!conversationId) return
+    try {
+      const { error } = await supabase
+        .from('messages')
+        .update({ read: true })
+        .eq('conversation_id', conversationId)
+        .eq('recipient_id', user.id)
+        .eq('read', false);
+      if (error) throw error;
+      // Update active messages to show they've been read
+      setActiveMessages(prev =>
+        prev.map(msg =>
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg
 
         )
       );
@@ -236,6 +267,8 @@ export function useMessages(;
     sendMessage;
 
     markAsRead
+
+
 
 
 
@@ -295,12 +328,55 @@ if ( {) {
       });
     }
 
+  },;
+  /**;
+   * Mark messages as read;
+   */;
+  const markAsRead = async (conversationId: string) => {;
+    if (!user || !conversationId) return,;
+    try {;
+      const { error } = await supabase;
+        .from('messages');
+        .update({ read: true });
+        .eq('conversation_id', conversationId);
+        .eq('recipient_id', user.id);
+        .eq('read', false),;
+      if (error) throw error,;
+      // Update active messages to show they've been read;
+      setActiveMessages(prev =>;
+        prev.map(msg =>;
+          msg.recipient_id === user.id ? { ...msg, read: true } : msg;
+        );
+      ),;
+      // Update conversations to reflect read messages;
+      setConversations(prev =>;
+        prev.map(conv =>;
+          conv.id === conversationId;
+            ? { ...conv, unread_count: 0 }
+            : conv;
+        );
+      ),;
+      // Recalculate unread count;
+      setUnreadCount(prev => {;
+        const updatedConversations = conversations.map(conv =>;
+          conv.id === conversationId;
+            ? { ...conv, unread_count: 0 }
+            : conv;
+        ),;
+        return updatedConversations.reduce(;
+          (total, conv) => total + (conv.unread_count || 0),;
+          0;
+        );
+      });
+    } catch (error) {;
+      console.error('Error marking messages as read:', error);
+    }
+  },;
+  return {;
+    loadMessages;
+    sendMessage;
+    markAsRead;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
 ;

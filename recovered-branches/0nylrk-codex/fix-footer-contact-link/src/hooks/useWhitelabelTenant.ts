@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export interface WhitelabelTenant {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   brand_name: string;
@@ -34,12 +36,14 @@ export interface WhitelabelTenant {
 
 
 
+
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -84,6 +88,8 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
           console.warn('No tenant data received');
           setTenant(null);
           return
+
+
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface WhitelabelTenant {;
@@ -157,13 +163,16 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
           setTenant(data.tenant)
+
 
 
       } finally {
@@ -249,6 +258,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   return { isAdmin, isLoading }

@@ -1,12 +1,15 @@
 
+
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
+
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
@@ -71,6 +74,7 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 
 
 
+
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim(),
   if (!prompt) return,
@@ -107,7 +111,9 @@ document && document.getElementById('viewNotifications').addEventListener('click
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.'),
   const res = await fetch(`${API_BASE}/notifications`, {
     headers: { 'x-user-id': userId }
+
   }),
   const data = await res && res.json(),
   document && document.getElementById('result').textContent = JSON && JSON.stringify(data && data.items || [], null, 2)
 }),
+

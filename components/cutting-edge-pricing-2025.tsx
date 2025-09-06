@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -19,12 +20,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+
 import Head from 'next/head';
 
 
 
 
 import { motion } from 'framer-motion';
+
 
 
 } from 'lucide-react';
@@ -34,6 +37,7 @@ import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-service
 import { cuttingEdgeQuantumServices2025  } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025  } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
 
 
 
@@ -72,6 +76,7 @@ const stats = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -82,6 +87,7 @@ export default function CuttingEdgePricing2025() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
@@ -229,6 +235,8 @@ export default function CuttingEdgePricing2025() {;
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : allServices.filter(service => service.category === selectedCategory);
+
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -250,6 +258,7 @@ export default function CuttingEdgePricing2025() {;
       y: 0
       opacity: 1
       transition: {
+
         duration: 0.5
       }
     },  };        duration: 0.5
@@ -261,6 +270,7 @@ export default function CuttingEdgePricing2025() {;
     },  };
 
   };
+
 
   return (
     <>
@@ -326,9 +336,11 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -344,10 +356,12 @@ export default function CuttingEdgePricing2025() {;
               </motion.h1>
 
 
+
               <motion.p
               <motion.p 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
@@ -355,6 +369,7 @@ export default function CuttingEdgePricing2025() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
+
                 Experience revolutionary technology at competitive prices. Our
                 cutting-edge services are designed to give you a competitive
                 advantage while maintaining affordability and value.
@@ -400,6 +415,7 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
@@ -414,6 +430,7 @@ export default function CuttingEdgePricing2025() {;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.number}
                     </div>
+
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>                  <div key={index} className="text-center">
                     <div className="flex justify-center mb-2">
                       <div className="p-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
@@ -432,11 +449,13 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 ))}
               </motion.div>
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -452,6 +471,7 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Pricing Tiers Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
@@ -486,12 +506,14 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -527,6 +549,24 @@ export default function CuttingEdgePricing2025() {;
                   viewport={{ once: true }}
                   className={`relative group ${
 
+                    tier.popular ? 'scale-105' : ''
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
+                      <span className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold'>                        Most Popular
+                      </span>
+                    </div>
+                  )}                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+
+                        </li>
+
+
 
 
 
@@ -540,6 +580,7 @@ export default function CuttingEdgePricing2025() {;
                       }`}
                     >
                       {tier.cta}
+
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>                      <ArrowRight className="ml-2 w-4 h-4" />
                       <ArrowRight className='ml-2 w-4 h-4' />                    </a>
 
@@ -550,6 +591,7 @@ export default function CuttingEdgePricing2025() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
                     </a>
                   </div>
                 </motion.div>
@@ -558,6 +600,7 @@ export default function CuttingEdgePricing2025() {;
             </div>
           </div>
         </section>
+
 
 
 
@@ -572,6 +615,7 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Service Categories Section */}
         <section className='py-20 bg-gradient-to-b from-black via-purple-900/10 to-black'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section className="py-20 bg-gradient-to-b from-black via-purple-900/10 to-black">;
@@ -593,12 +637,14 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -644,6 +690,7 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -653,12 +700,14 @@ export default function CuttingEdgePricing2025() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                 }`}
+
 
 
 
@@ -670,6 +719,7 @@ export default function CuttingEdgePricing2025() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   key={category.name}
@@ -685,6 +735,7 @@ export default function CuttingEdgePricing2025() {;
                 </button>;
               ))}
             </div>
+
 
             </div>;
 
@@ -702,6 +753,7 @@ export default function CuttingEdgePricing2025() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Services Grid */}
@@ -885,6 +937,7 @@ export default function CuttingEdgePricing2025() {;
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={tagIndex}
+
                           className='px-2 py-1 text-xs font-medium bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20'                        >                    <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
                         <span
@@ -903,10 +956,12 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           {tag}
                         </span>;
                       ))}
                     </div>
+
                     {/* Market Info */}
                     <div className='flex items-center justify-between text-sm text-white/60 mb-4'>
 
@@ -919,6 +974,7 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <span>Market: {service.marketSize}</span>
                       <span className='text-cyan-400'>{service.category}</span>
                     </div>
@@ -992,6 +1048,7 @@ export default function CuttingEdgePricing2025() {;
                         </span>                      </div>;
                     </div>;
                     {/* CTA */}
+
                     <div className='flex items - center justify - between'>                      <span > Market: {service.market_size}</span>;
                       <span className="text - cyan - 400">{service.category}</span>;
                     </div>;
@@ -1032,10 +1089,12 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               ))}
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -1051,6 +1110,7 @@ export default function CuttingEdgePricing2025() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Contact CTA Section */}
         <section className='py-20 bg-gradient-to-br from-black via-purple-900/20 to-black'>;
@@ -1074,6 +1134,7 @@ export default function CuttingEdgePricing2025() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1082,6 +1143,7 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1170,6 +1232,7 @@ export default function CuttingEdgePricing2025() {;
         </section>
       </Layout>
     </>
+
 
 
                     href={`mailto:${contactInfo && contactInfo.email}`}
@@ -1383,3 +1446,4 @@ export default function CuttingEdgePricing2025() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

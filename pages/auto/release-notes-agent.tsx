@@ -12,10 +12,13 @@ const ReleaseNotesAgent: NextPage = () => {
         <p>Summarizes the last 24 hours of commits into human-friendly release notes.</p>
 
 
+
+
       </main>
     </div>
   )
 },
+
 
 
 
@@ -27,4 +30,5 @@ const ReleaseNotesAgent: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,5 +1,6 @@
 
 
+
 import React, { useEffect, useState } from 'react',;
 import type { NextPage, GetServerSideProps } from 'next',;
 import ReviewSummary from '../../components/reviews/ReviewSummary',;
@@ -25,15 +26,19 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
 
 
+
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
+
 
 
 
@@ -82,6 +87,7 @@ function handle_report() {
 
 
 
+
       {summary && <ReviewSummary summary={summary} />  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -102,7 +108,9 @@ function handle_report() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
       </section>
@@ -114,6 +122,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 
+
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -121,6 +131,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 };
 export default ClientPage;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -141,3 +152,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

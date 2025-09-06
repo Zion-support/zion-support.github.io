@@ -1,5 +1,19 @@
 
 
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+
+
+
 
 
   {
@@ -348,6 +362,8 @@
     support:
 
 
+
+
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
 
     ];
@@ -454,7 +470,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string,;
   name: string,;
@@ -719,5 +737,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
     reviews: 18000;
 
 
+
   }
 ];
+

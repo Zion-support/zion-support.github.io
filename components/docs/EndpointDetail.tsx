@@ -1,3 +1,4 @@
+
 import React from 'react',
 import CodeSamples from './CodeSamples',
 import React from 'react';
@@ -21,8 +22,10 @@ import TryItConsole from './TryItConsole';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   endpoint: EndpointSpec;
 }) {
+
 
   return (
 
@@ -37,6 +40,7 @@ import TryItConsole from './TryItConsole';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     <div className='space-y-4'>
 
       <div>
@@ -68,6 +72,7 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
+
 
 
 class ErrorBoundary extends React.Component {
@@ -183,6 +188,8 @@ export default function EndpointDetail(): any ({;
 
 
 
+
+
       {endpoint && endpoint.errors && endpoint && endpoint.errors.length > 0 && (;
         <div>;
           <div className='font-medium mb-2'>Error Codes</div>;
@@ -240,6 +247,7 @@ export default function EndpointDetail(): any ({;
 
 
 
+
           </ul>
         </div>
       )}
@@ -259,17 +267,20 @@ export default function EndpointDetail(): any ({;
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           </ul>
         </div>
       )}
     </div>
   );
+
 
 
           </span>        </div>;
@@ -333,3 +344,4 @@ export default function EndpointDetail(): any ({;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -55,6 +55,7 @@ if ( {) {
     writeJsonFile('deal/offerings && offerings.json', offerings);
     return res && res.status(200).json(offerings)
   }
+
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 
@@ -72,3 +73,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -90,6 +90,7 @@ const implementation_steps = [;
     title: 'Ongoing Support'
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
     icon: ShieldCheckIcon}]
+
 export default function SolutionsPage() {
 
 export default function SolutionsPage() {;
@@ -98,6 +99,7 @@ export default function SolutionsPage() {;
 const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -108,16 +110,48 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Every Industry
               </span>
             </h1>
+
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               Discover our cutting-edge AI and technology solutions designed to transform your business
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Discover our cutting-edge AI and technology solutions designed to transform your business 
+
               operations and drive unprecedented growth and innovation.
             </p>
           </div>
         </div>
       </div>
 
+      {/* Flagship Solutions */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Solutions</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Flagship AI Platforms
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Revolutionary technology that pushes the boundaries of what's possible in artificial intelligence.
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+            {flagshipSolutions.map((solution) => (
+              <div key={solution.name} className="bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105">
+                <div className="flex items-center gap-x-3 mb-4">
+                  <solution.icon className="h-8 w-8 text-blue-400" />
+                  <h3 className="text-xl font-semibold text-white">{solution.name}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{solution.description}</p>
+                <div className="space-y-3 mb-6">
+                  {solution.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2">
+                      <div className="h-2 w-2 bg-blue-400 rounded-full"></div>
+                      <span className="text-sm text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>;
+                <a;
+                  href={solution.href}
 
 
                 >
@@ -132,17 +166,57 @@ const Page: React.FC<PageProps> = ({ className }) => {
       {/* Industry Applications */}
 
 
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            Transforming Every Sector
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our AI solutions are designed to adapt and excel across diverse industries, 
+
+
             delivering measurable results and competitive advantages.
           </p>
         </div>
         <div className=&quot;mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none&quot;>
           <dl className=&quot;grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2&quot;>
             {industryApplications.map((industry) => (
-              <div key={industry.name} className=&quot;flex flex-col group&quot;>
-                <dt className=&quot;flex items-center gap-x-3 text-base font-semibold leading-7 text-white&quot;>
-                  <industry.icon className=&quot;h-5 w-5 flex-none text-blue-400&quot; aria-hidden=&quot;true&quot; />
+
+              <div key={industry.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <industry.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {industry.name}
+                </dt>
+                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
+                  <p className="flex-auto mb-4">{industry.description}</p>
+                  <div className="space-y-2">
+                    {industry.useCases.map((useCase) => (
+                      <div key={useCase} className="flex items-center gap-2">
+                        <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>
+                        <span className="text-sm text-gray-400">{useCase}</span>
+                      </div>
+                    ))}
+                  </div>;
+                </dd>;
+              </div>;
+            ))}
+          </dl>;
+        </div>;
+      </div>;
+      {/* Implementation Process */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+            Our Proven Process
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            From initial assessment to ongoing optimization, we guide you through every step 
+
 
             of your AI transformation journey.
           </p>
@@ -206,9 +280,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>;
         </div>;
       </div>;
-    </div>);
-}
-=======
+
 
 
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
@@ -216,11 +288,20 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
 
 
+=======
+      {/* CTA section */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
+
+
 
 
 

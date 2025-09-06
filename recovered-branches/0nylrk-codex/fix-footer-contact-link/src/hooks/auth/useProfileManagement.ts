@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,11 +14,13 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
       setIsLoading(true)
       if (!data.id) {
+
         return { error: "User ID is required" }
       }
       // Update user metadata
@@ -54,10 +57,12 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 
 
 
+
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
+
           display_name: data.displayName;
           user_type: data.userType;
           bio: data.bio;
@@ -120,10 +125,12 @@ if ( {) {
         title: "Profile updated",
         description: "Your profile has been updated successfully."}),
 
+
       return { success: true }
     } catch (error: any) {
       console && console.error("Profile update error:", error);
       toast({
+
         title: "Profile update failed";
 
         description: error && error.message || "An unexpected error occurred",
@@ -153,3 +160,4 @@ if ( {) {
 
   return { updateProfile }
 };
+

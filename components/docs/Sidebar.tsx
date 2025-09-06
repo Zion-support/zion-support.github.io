@@ -108,6 +108,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
 
 
 
+
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
   onChangeVersion: (v: string) => void;
@@ -224,4 +225,5 @@ function Sidebar() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

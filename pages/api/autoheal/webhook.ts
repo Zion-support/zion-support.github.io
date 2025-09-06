@@ -1,10 +1,15 @@
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { Octokit } from '@octokit/rest';
+
 
   }
 }
 ;
   try {
+
+
 
 
     const { app, severity, message, stack, metadata } = req.body || {};
@@ -70,10 +75,18 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
-  try {
 
+    return res.status(200).json({ ok: true, issue: issue.data.number });
+  } catch (error) {
+    console.error(e);
+    return res.status(500).json({ error: 'Failed to process webhook' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

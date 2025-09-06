@@ -10,6 +10,7 @@ export default function PerformanceDocRedirect() {
       </main>
     </>
   )
+
 }
 import Head from 'next/head';
 export default function PerformanceDocRedirect(req, res) {
@@ -28,5 +29,6 @@ export default function PerformanceDocRedirect(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

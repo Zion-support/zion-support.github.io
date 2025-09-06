@@ -1,7 +1,7 @@
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 
 import { 
@@ -18,7 +18,9 @@ import {
   ArrowRight ;
 } from 'lucide-react';
 
+
 origin/main
+
 
 import {
   Home
@@ -119,6 +121,8 @@ const sitemapData = [;
 
 
 
+
+
 export default function SitemapPage() {
   return (
     <>
@@ -181,9 +185,31 @@ export default function SitemapPage() {
                 </motion && motion.div>;
               ))}
 
+            </div>
+          </div>
+        </section>
+      </div>
 
+}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {
+  Home
+  Search
+  Rocket
+  FileText
+  Users
+  Mail
+  Map
+  ArrowRight
+  ExternalLink
+  ChevronRight
+  Globe
+  Building;
+
+    </>;
+  );
+}
+
 import {
 
 import { 
@@ -211,7 +237,9 @@ export default function SitemapPage() {
   Globe,;
   Building,;
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 } from 'lucide-react';
 import SmartHeader from '../components / SmartHeader';
@@ -246,10 +274,12 @@ function SitemapPage() {
     {
 
 
+
       href: '/contact',
       label: '📧 Contact',
       description: 'Get in touch and start your project',
     },;
+
 
 
 
@@ -413,6 +443,8 @@ function SitemapPage() {
       action: 'https://maps.google.com/?q=Middletown,DE'
     }
   ];
+
+
 
 
 
@@ -608,6 +640,7 @@ export default function SitemapPage() {;
 
   const contactInfo = [;
     { type: 'Phone', value: '+1 (302) 464-0950', action: 'tel:+13024640950' },;
+
     {;
       type: 'Email',;
       value: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -639,10 +672,33 @@ export default function SitemapPage() {;
 
 
 
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>
         <title>Sitemap | Zion Tech Group</title>
+
+
+        <meta
+          name='description'
+          content="Complete sitemap of Zion Tech Group's website. Find all pages, services, and resources organized by category."
+        />
+        <meta property='og:title' content='Sitemap | Zion Tech Group' />
+        <meta
+          property='og:description'
+          content='Complete website sitemap and navigation guide.'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/sitemap' />      </Head>
+
+          >
+            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+              Site Map
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
+              Navigate our comprehensive website and discover all the AI-powered
+              technology solutions, resources, and information available at Zion
+              Tech Group.
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -670,14 +726,25 @@ export default function SitemapPage() {;
               <a
                 href='/search'
 
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Search Site
+                <Search className='w-5 h-5 ml-2' />              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+      {/* Main Pages */}
+      <section id='main-pages' className='py-20 px-6'>
+        <div className='max-w-7xl mx-auto'>          <motion.div
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+
+
 
 
           >
@@ -689,6 +756,8 @@ export default function SitemapPage() {;
               and services
             </p>
           </motion.div>
+
+
 
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {mainPages.map((page, index) => (
@@ -723,6 +792,8 @@ export default function SitemapPage() {;
                 viewport={{ once: true }}
 
 
+
+
               >
                 <Link
                   href={page.href}
@@ -740,6 +811,8 @@ export default function SitemapPage() {;
               </motion.div>
 
 
+
+
             ))}
           </div>
         </div>
@@ -747,7 +820,9 @@ export default function SitemapPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       {/* Service Categories */}
 
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
@@ -757,6 +832,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -781,6 +857,7 @@ export default function SitemapPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Service Categories
@@ -792,10 +869,37 @@ export default function SitemapPage() {;
           </motion.div>
 
 
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={category.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+
+              >
+                <Link
+                  href={category.href}
+                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                >
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {category.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/70 text-sm leading-relaxed'>
+                    {category.description}
+                  </p>                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Featured Services */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -804,6 +908,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -834,6 +939,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Featured Services
@@ -843,10 +949,35 @@ export default function SitemapPage() {;
           </motion.div>
 
 
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {featuredServices.map((service, index) => (
+              <motion.div
+                key={service.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+
+              >
+                <Link
+                  href={service.href}
+                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
+                >
+                  <div className='flex items-center justify-between mb-3'>
+                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate'>
+                      {service.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0' />
+                  </div>
+                  <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Resources & Tools */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -855,6 +986,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -885,6 +1017,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Resources & Tools
@@ -894,10 +1027,37 @@ export default function SitemapPage() {;
           </motion.div>
 
 
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>            {resources.map((resource, index) => (
+              <motion.div
+                key={resource.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+
+              >
+                <Link
+                  href={resource.href}
+                  className='block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105'
+                >
+                  <div className='flex items-center justify-between mb-3'>
+                    <h3 className='text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {resource.label}
+                    </h3>
+                    <ChevronRight className='w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/60 text-xs leading-relaxed'>
+                    {resource.description}
+                  </p>                </Link>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* External Resources */}
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>          <motion.div
@@ -906,6 +1066,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -936,6 +1097,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               External Resources
@@ -945,10 +1107,39 @@ export default function SitemapPage() {;
           </motion.div>
 
 
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {externalLinks.map((link, index) => (
+              <motion.div
+                key={link.href}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='group'
+
+              >
+                <a
+                  href={link.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+                >
+                  <div className='flex items-center justify-between mb-4'>
+                    <h3 className='text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300'>
+                      {link.label}
+                    </h3>
+                    <ExternalLink className='w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300' />
+                  </div>
+                  <p className='text-white/70 text-sm leading-relaxed'>
+                    {link.description}
+                  </p>                </a>
+              </motion.div>
+
+            ))}
+          </div>
+        </div>
+      </section>
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Contact Information */}
       <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
         <div className='max-w-4xl mx-auto'>          <motion.div
@@ -957,6 +1148,7 @@ export default function SitemapPage() {;
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mb-16'
+
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -987,6 +1179,7 @@ export default function SitemapPage() {;
 
 
 
+
           >
             <h2 className='text-3xl font-bold text-white mb-4 text-center'>
               Contact Information
@@ -996,6 +1189,7 @@ export default function SitemapPage() {;
               project
             </p>
           </motion.div>
+
 
 
             className="mb-16"
@@ -1025,15 +1219,18 @@ export default function SitemapPage() {;
                 key={contact && contact.type}
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+                className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
 
-
-
-
+              >
+                <h3 className='text-lg font-bold text-white mb-3'>
+                  {contact.type}
+                </h3>
 
                 <a
                   href={contact && contact.action}
@@ -1045,12 +1242,16 @@ export default function SitemapPage() {;
                       ? 'noopener noreferrer'
                       : ''
                   }
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'>;
-                  {contact && contact.value}
-                </a>;
-              </motion && motion.div>;
 
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'                >
+                  {contact.value}
+                </a>
+              </motion.div>
 
+            ))}
+          </div>
+        </div>
+      </section>
 
 
       {/* Quick Navigation */}
@@ -1060,6 +1261,7 @@ export default function SitemapPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+
 
 
 
@@ -1104,6 +1306,7 @@ export default function SitemapPage() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               Need Help Finding Something?
@@ -1122,12 +1325,22 @@ export default function SitemapPage() {;
               <Link
                 href='/contact'
 
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'
+              >
+                Contact Support
+                <Mail className='w-5 h-5 ml-2' />              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      <SmartFooter />
+    </div>
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  );
 
   )
+
+
 }animate= {
   {
   opacity: 1, y: 0
@@ -1179,6 +1392,7 @@ export default function SitemapPage() {;
 
 
   )
+
           >;
             <h1 className='text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6'>;
               Site Map;
@@ -1506,3 +1720,4 @@ export default function SitemapPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 }
+

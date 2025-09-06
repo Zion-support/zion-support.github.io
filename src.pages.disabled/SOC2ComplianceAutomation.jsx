@@ -1,9 +1,11 @@
 import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
+
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
   return (
     <div>
@@ -13,11 +15,11 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
   );
 
 
-
-
-
-
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
 }
-
+}
+}
+}
+}
 
 

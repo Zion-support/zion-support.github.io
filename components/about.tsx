@@ -3,12 +3,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }return ({
   /* Mission & Vision */
 }<> <Head> <title>About Zion Tech Group | Autonomous Innovation Hub</title> <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through autonomous innovation and AI-powered solutions." /> <meta property="og:title" content="About Zion Tech Group" /> <meta property="og:description" content="Learn about Zion Tech Group's mission and vision." /> <meta name="twitter:card" content="summary large image" /> <link rel="canonical" href="https://ziontechgroup.com/about" /> </Head> <section className="relative section-padding bg-gradient-cursor overflow-hidden" > <div className="absolute inset-0 bg-[radial-gradient (circle at 30% 20%, rgba (0, 122, 204, 0.08), transparent 50%) ]" /> <div className="absolute inset-0 bg-[radial-gradient (circle at 70% 80%, rgba (0, 122, 204, 0.06), transparent 50%) ]" /> <div className="absolute inset-0 bg-grid opacity-10" /> <div className="relative z-10 container-cursor text-center" > <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" /> About Our Company </div> <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg" > About Zion Tech Group </h1> <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed" > Pioneering the future of autonomous technology and AI-driven innovation </p> </div> </section> <section className="section-padding bg-gradient-cursor-accent" > <div className="container-cursor" > <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20" > <Card className="card-hover group border-gradient-blue hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-400/20" > <h2 className="text-3xl font-bold mb-6 text-cyan-400" >Our Mission</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To create a world where technology operates autonomously, continuously improving and innovating without human intervention. </p> <p className="text-gray-400 leading-relaxed" > We believe in the power of AI to solve complex problems, automate routine tasks, and unlock new possibilities for humanity. </p> </Card> <Card className="card-hover group border-gradient-purple hover:border-fuchsia-400/40 hover:shadow-2xl hover:shadow-fuchsia-400/20" > <h2 className="text-3xl font-bold mb-6 text-fuchsia-400" >Our Vision</h2> <p className="text-lg text-gray-300 mb-4 leading-relaxed" > To be the leading force in autonomous technology, creating systems that think, learn, and evolve independently. </p> <p className="text-gray-400 leading-relaxed" > We envision a future where AI and automation work seamlessly together to enhance human capabilities and drive progress. </p> </Card> </div> </div> </section> <section className="section-padding bg-gradient-cursor" > <div className="container-cursor" > <div className="text-center mb-20" > <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow" >Our Core Values</h2> <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed" > The principles that guide our innovation and shape our future </p> </div> </Card>) )
@@ -28,6 +30,8 @@ import Card from '../components/ui/Card';
 
 
 
+
+
 import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
 export default function AboutPage() {
 	const contactInfo = {
@@ -38,6 +42,18 @@ export default function AboutPage() {
 	}
 
 
+import Button from '../components/ui/Button',;
+
+import Button from '../components/ui/Button',
+
+import {Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain} from 'lucide-react';
+export default function AboutPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
+		website: 'https://ziontechgroup.com';
+	};
 
 
 	const pillars = [
@@ -126,13 +142,42 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com';
-  };
-
-
+  const values = [
+    {
+      icon: '🚀'
+      title: 'Innovation'
+      description: 'Constantly pushing boundaries and exploring new frontiers in technology'
+      color: 'text-cyan-400'
+      gradient: 'from-cyan-400 to-blue-500'}
+    {
+      icon: '🤖'
+      title: 'Autonomy'
+      description: 'Building systems that can operate independently and make intelligent decisions'
+      color: 'text-fuchsia-400'
+      gradient: 'from-fuchsia-400 to-purple-500'}
+    {
+      icon: '🌍'
+      title: 'Impact'
+      description: 'Creating technology that makes a positive difference in the world'
+      color: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'}]
+  const services = [
+    {
+      title: 'AI Development'
+      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.'
+    icon: '🧠',      color: 'text-cyan-400'
+      gradient: 'from-cyan-400 to-blue-500'}
+    {
+      title: 'Automation Systems'
+      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.'
+    icon: '⚙️',      color: 'text-fuchsia-400'
+      gradient: 'from-fuchsia-400 to-purple-500'}]
+  const achievements = [
+    { number: '600+', label: 'Services', color: 'text-cyan-400' }
+    { number: '1000%', label: 'ROI', color: 'text-fuchsia-400' }
+    { number: '24/7', label: 'Support', color: 'text-green-400' }
+    { number: '99.9%', label: 'SLA', color: 'text-blue-400' }]
+  const contactInfo = {
 
 
   return (
@@ -304,6 +349,7 @@ import Button from '../components/ui/Button';
     </>
 
 
+
 	return (
 		<UltraFuturisticBackground variant=&quot;holographic&quot; intensity=&quot;high&quot;>
 			<Head>
@@ -339,6 +385,7 @@ import Button from '../components/ui/Button';
 							<ul className=&quot;list-disc list-inside text-gray-300 space-y-2&quot;>
 								<li>Productized service tiers with clear SLAs</li>
 								<li>Security, _compliance, _and FinOps baked in</li>
+
 
 
 

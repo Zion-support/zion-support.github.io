@@ -1,5 +1,6 @@
 
 
+
 }
 
 
@@ -7,6 +8,7 @@
 canvas.width = window.inner_width;
 canvas.height = window.inner_height;
 let animation_id: number;
+
 let particles: Array< {
 const UltraFuturisticBackground2030: React.FC<;
   UltraFuturisticBackground2030Props;
@@ -73,9 +75,48 @@ if (return) {
 
 
             opacity: [0.3, 0.6, 0.3]
+
+          }}
+          animate={{
+            rotate: 360
+            scale: [1, 1.1, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
+          style={{
+            clipPath:
+              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
+          }}
+          animate={{
+            rotate: -360
+            scale: [1, 0.9, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
+          transition={{
+
+            ease: 'linear',          }}          }}
+        />
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
+          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+          animate={{
+            rotate: -360
+            scale: [1, 0.9, 1];
+            opacity: [0.3, 0.6, 0.3]
+
+          }}
+          transition={{
             duration: 25,
             repeat: Infinity,
-            ease: 'linear',          }}
+
+          }}
+
+        />
 
 
         {/* Floating Circles */}
@@ -146,6 +187,12 @@ if (return) {
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+
+
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -233,6 +280,7 @@ ease: "easeInOut"
 
 
 
+
           }}
 
         />;
@@ -262,14 +310,17 @@ ease: "easeInOut"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
         />
       </div>
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
+
         {/* Top gradient */}
 
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />;
+
 
 
 
@@ -328,6 +379,7 @@ ease: "easeInOut"
             key={i}
             className='absolute w-1 h-1 bg-cyan-400 rounded-full'
             style={{
+
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
 
@@ -343,6 +395,7 @@ ease: "easeInOut"
 
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               y: [0, -100, 0]
@@ -407,6 +460,7 @@ ease: "easeInOut"
             }}
 
 
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 
@@ -462,10 +516,13 @@ export default UltraFuturisticBackground2030;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -478,13 +535,17 @@ export default UltraFuturisticBackground2030;
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
 
-
+      </div>
+    </div>
+  );
+}
 
 
       </div>
     </div>
   );
 };
+
 
 
 
@@ -497,3 +558,4 @@ export default UltraFuturisticBackground2030;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

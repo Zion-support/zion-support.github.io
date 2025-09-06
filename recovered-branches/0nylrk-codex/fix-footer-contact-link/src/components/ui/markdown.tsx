@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface MarkdownProps {
   content: string;
@@ -24,6 +26,10 @@ export function Markdown({ content, className }: MarkdownProps) {
     </div>
 
 
+import React from "react",;
+import ReactMarkdown from "react-markdown",;
+import { cn } from "@/lib/utils",;
+
 interface MarkdownProps {;
   content: string,;
   className?: string;
@@ -35,6 +41,7 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
       <ReactMarkdown>{content}</ReactMarkdown>;
     </div>;
   );
+
 }
 
 
@@ -48,4 +55,5 @@ export function Markdown(): any ({ content, className }: MarkdownProps) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

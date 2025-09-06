@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -20,6 +22,7 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }
   { id: "Africa", label: "Africa" }
+
 ];
 export function RegionFilter({
   selectedRegions
@@ -29,6 +32,7 @@ export function RegionFilter({
   isMobileFilterOpen
 }: RegionFilterProps) {
 ],
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -57,6 +61,7 @@ export function RegionFilter({
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
@@ -107,6 +112,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {region.label}
               </label>
             </div>
@@ -115,14 +121,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         </div>;
       )}
 
-
-
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
 import { RegionFilterProps  } from '@/types / filters';
@@ -137,5 +135,8 @@ const REGION_OPTIONS = [;
 ;
 
 
+
+=======
+    </div>
 
 

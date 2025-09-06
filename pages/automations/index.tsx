@@ -1,10 +1,12 @@
 
 const AutomationsIndex: NextPage = () => {
   const items = [
+
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' }
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }]
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
+
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -17,12 +19,14 @@ const AutomationsIndex: NextPage = () => {
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
             </div>
           </Link>
+
         ))}
       </div>
     </main>
   )
 }
 export default AutomationsIndex;
+
 
 
 
@@ -39,6 +43,7 @@ export default AutomationsIndex;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -46,4 +51,5 @@ export default AutomationsIndex;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

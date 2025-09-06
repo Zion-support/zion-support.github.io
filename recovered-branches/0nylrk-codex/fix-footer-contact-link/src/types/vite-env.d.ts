@@ -1,4 +1,5 @@
 ;
+
 interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
   readonly VITE_SUPABASE_URL: string;
   readonly VITE_SUPABASE_ANON_KEY: string;
@@ -52,9 +53,12 @@ declare module 'path' {;
 ;
 declare module 'lovable-tagger' {;
   import { Plugin } from 'vite',;
+
   export function componentTagger(): Plugin;
 }
 // Add Node.js globals
+
+
 
 
 
@@ -78,6 +82,7 @@ declare let process: {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -86,3 +91,4 @@ declare let process: {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 };
+

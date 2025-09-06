@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -30,12 +31,14 @@ import React from 'react';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+
 
 
 
@@ -68,6 +71,7 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
+
 
 
 const TalentProfile: NextPage = () => {
@@ -115,6 +119,8 @@ const TalentProfile: NextPage = () => {
   },
 
 
+
+
   return (
     <div className="space-y-6 pb-20">
       <Head>
@@ -160,6 +166,7 @@ const TalentProfile: NextPage = () => {
             <ul className="space-y-1 text-sm">
 
 
+
             </ul>;
           </div>;
         </aside>;
@@ -174,3 +181,4 @@ const TalentProfile: NextPage = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export default TalentProfile;
+

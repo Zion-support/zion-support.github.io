@@ -1,3 +1,4 @@
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
@@ -25,6 +26,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {;
 
@@ -35,6 +37,7 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+
 
 
 
@@ -54,6 +57,7 @@ export type AIAssistantProps = {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -61,11 +65,46 @@ export type AIAssistantProps = {;
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-
+  useEffect(() => {
+    setPrompt(defaultPrompt);
+  }, [defaultPrompt]);
+  const callOperator = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/ai/operator", {
+        method: "POST"
+        headers: {
+          "Content-Type": "application/json"
+          ...(authorizationToken
+            ? { Authorization: `Bearer ${authorizationToken}` }
+            : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
+              ? {
+                  Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}`
+                }
+              : {})
+        }
+        body: JSON.stringify({ prompt, system: systemPrompt })
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data?.error |"Failed to generate");
+      }
+      setOutput(String(data.text |""));
+      setIsEditing(false);
+    } catch (e: any) {
+      setError(e.message |"Request failed");
+    } finally {
+      setLoading(false);
+    }
+  }, [authorizationToken, prompt, systemPrompt]);
+  const onCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(output);
     } catch {}
-}, [output]);
-  const onOpen = useCallback(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  }, [output]);
+
+  const onOpen = useCallback(() => {
 
     setIsOpen(true);
     setOutput("");
@@ -192,5 +231,7 @@ export type AIAssistantProps = {;
       )}
     </>
   );
+
 }
 }
+

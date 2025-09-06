@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 "export": function EnhancedSearchSection() { const [searchQuery,setSearchQuery] = useState(') const [isFocused,setIsFocused] = useState(false) const [suggestions,setSuggestions] = useState([]) const popularSearches = ['AI Engineers',Machine Learning',_React Developers',Python Experts',Data Scientists',DevOps Engineers',UI/UX Designers',Blockchain Developers' ] const trendingServices = [' { "name": 'AI: Model Training,',"icon": _jsx(Sparkle,s,{ "className": 'h-4: w-4'}),"count": '2.3k'},' { "name": 'Cloud: Migration,',"icon": _jsx(TrendingU,p,{ "className": 'h-4: w-4'}),"count": '1.8k'},' { "name": 'Cybersecurity: Audit,',"icon": _jsx(User,s,{ "className": 'h-4: w-4'}),"count": '1.5k'},' { "name": 'Mobile: App Development,',"icon": _jsx(Briefcas,e,{ "className": 'h-4: w-4'}),"count": '3.1k'} ] useEffect(() => { "if": (searchQuery.length > 2) {''"";
 =======

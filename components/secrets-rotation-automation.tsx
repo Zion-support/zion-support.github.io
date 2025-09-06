@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ export default /**
  */
 function SecretsRotationAutomationPage() {
   const features = [;
+
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",
@@ -95,6 +97,7 @@ function SecretsRotationAutomationPage() {
             >;
               <ExternalLink className="w - 4 h - 4" /> Google Cloud KMS;
 
+
             </a>;
           </div>;
         </section>;
@@ -119,7 +122,6 @@ function SecretsRotationAutomationPage() {
           <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
             {features.map ((f) => (
               <div;
-=======
 
     <>
       <SEO

@@ -3,6 +3,7 @@
 
 
 
+
 import {useState} from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -17,6 +18,7 @@ import z from "zod";
 import {ChatAssistant} from "@/components/ChatAssistant";
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
 import {AppLayout} from "@/layout/AppLayout";
+
 
 
 export default function Contact() {
@@ -42,6 +44,8 @@ export default function Contact() {
 
 
 
+
+
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -50,14 +54,17 @@ export default function Contact() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
+
   }
   },
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     try {
       // Basic validation with Zod
       const schema = z.object({
+
         name: z.string().min(2, "Name must be at least 2 characters");
         email: z.string().email("Invalid email address")
         subject: z.string().min(2, "Subject must be at least 2 characters");
@@ -77,6 +84,7 @@ export default function Contact() {
       // Simulate form submission
       setIsSubmitting(true),
       
+
       setTimeout(() => {
         setIsSubmitting(false);
         toast({
@@ -105,8 +113,10 @@ export default function Contact() {
         })
       }
     }
+
   }
   },
+
 
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -114,6 +124,7 @@ export default function Contact() {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
@@ -123,6 +134,7 @@ export default function Contact() {
           messages: [{ role: "user", content: message }] 
         })}),
       
+
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -134,9 +146,10 @@ export default function Contact() {
         description: "There was an error communicating with our AI assistant. Please try again."
         variant: "destructive"
 
+      }),
+      return Promise.resolve()
+    }
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
 
@@ -224,6 +237,7 @@ export default function Contact() {
                     placeholder="Tell us what you'd like to know..."
                     required
 
+
                   />;
                 </div>;
 
@@ -233,6 +247,7 @@ export default function Contact() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
@@ -325,6 +340,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
+
 
 
 import { useState } from "react",;
@@ -623,6 +639,7 @@ export default function Contact() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant
@@ -639,6 +656,7 @@ export default function Contact() {;
           onSendMessage={handleSendMessage}
         />;
       )}
+
     </AppLayout>
   )
 }
@@ -662,5 +680,4 @@ export default function Contact() {;
     </AppLayout>);
 }
 
-=======
-;
+

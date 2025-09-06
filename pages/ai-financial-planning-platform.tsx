@@ -5,9 +5,11 @@ export default function AiFinancialPlanningPlatform() {
 		<ServiceLanding
 
 
-
-
-
+			pricePerMonthUSD={349  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
 			implementationWeeks="1-2 weeks"
@@ -23,6 +25,18 @@ export default function AiFinancialPlanningPlatform() {
 				"Headcount planning and hiring plans"
 
 
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
@@ -35,8 +49,10 @@ export default function AiFinancialPlanningPlatform() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

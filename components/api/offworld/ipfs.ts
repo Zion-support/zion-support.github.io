@@ -2,11 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 import {
   addJSON,
   publishManifesto,
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
+
 
 
 
@@ -20,6 +22,8 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+
+
 
 
 
@@ -71,6 +75,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
 }
+
   }
 
 }
+

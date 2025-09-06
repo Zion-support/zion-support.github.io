@@ -1,3 +1,4 @@
+
 export class TestingSystem {
   static async testUserInteraction(
     element: HTMLElement
@@ -24,4 +25,5 @@ export class TestingSystem {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,8 +1,11 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
+
 
 
 
@@ -32,6 +35,7 @@ import { motion } from 'framer-motion';
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+
 
 
 
@@ -562,6 +566,7 @@ function UltraFuturisticFooter2030() {
 export default function UltraFuturisticFooter2030() {
   return (
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
       {/* Animated Background */}
@@ -640,10 +645,13 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </a>
                 </div>
               </div>
@@ -790,7 +798,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 <span>Our Services</span>
@@ -854,6 +864,7 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
               </div>;
             </div>;
 
@@ -868,6 +879,7 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Quick Links */}
 
 
@@ -911,13 +923,16 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+
 
 
 
@@ -940,6 +955,7 @@ export default function UltraFuturisticFooter2030() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                 <span>Connect & Trust</span>
               </h4>
@@ -964,6 +980,7 @@ export default function UltraFuturisticFooter2030() {
                     <a
                       key={index}
                       href={social.href}
+
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'>;
@@ -975,6 +992,7 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
@@ -983,7 +1001,9 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                   <span>Certifications</span>
                 </h5>
@@ -1065,6 +1085,7 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -1110,12 +1131,15 @@ export default function UltraFuturisticFooter2030() {
 
 
 
+
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+
               <div className='flex items-center space-x-6 text-sm text-gray-400'>;
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
+
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -1219,6 +1243,7 @@ export default function UltraFuturisticFooter2030() {
 
   );
 
+
   );
 
 
@@ -1231,3 +1256,4 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

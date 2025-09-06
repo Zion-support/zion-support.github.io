@@ -1,6 +1,7 @@
 
 
 
+
   id: string;
   userId: string;
 
@@ -16,10 +17,12 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 
 // Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
+
 
 
 
@@ -38,6 +41,7 @@ let transactions: TokenTransaction[] = [];
 
 
 
+
   transactions.push(transaction);
   return transaction;
 }
@@ -46,6 +50,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+
 
 
 ;
@@ -89,5 +94,6 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

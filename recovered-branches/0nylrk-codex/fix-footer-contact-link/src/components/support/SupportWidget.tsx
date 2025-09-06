@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -15,6 +16,7 @@ export function SupportWidget() {;
   return (
 
 
+
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
@@ -23,9 +25,11 @@ export function SupportWidget() {;
 
 
 
+
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button
+
           onClick={() => setIsOpen(true)}
           size="icon";
           className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
@@ -40,6 +44,7 @@ export function SupportWidget() {;
       {isOpen && (;
         <div
           className={cn(
+
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col";
             theme === "dark"
               ? "bg-zion-blue-dark border border-zion-blue-light"
@@ -47,6 +52,7 @@ export function SupportWidget() {;
             "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
             theme === "dark" 
               ? "bg-zion-blue-dark border border-zion-blue-light" 
+
               : "bg-white border border-gray-200"
           )}
           style={{ height: "600px", maxHeight: "80vh" }}>;

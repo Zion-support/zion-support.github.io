@@ -26,6 +26,7 @@ import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
 
+
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
@@ -35,6 +36,7 @@ export default function TrustPage() {;
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
+
 
 
 
@@ -65,6 +67,7 @@ export default function TrustPage() {;
   useEffect(() => {;
     async function load() {;
       setLoading(true);
+
 
 
     });
@@ -167,6 +170,8 @@ export default function TrustPage() {;
 
 
 
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>;
@@ -183,6 +188,7 @@ export default function TrustPage() {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     ))}
                   </ul>
                 </div>
@@ -191,6 +197,7 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
+
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
@@ -472,5 +479,6 @@ function submit_appeal() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

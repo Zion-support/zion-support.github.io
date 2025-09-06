@@ -1,5 +1,6 @@
 
 
+
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 
 export type TrackEventPayload = {
@@ -25,6 +26,7 @@ function track_event() {
 
 
 
+
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
@@ -32,12 +34,16 @@ function track_event() {
       keepalive: true as any});
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  } catch (error) {
+    // swallow;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
 
   }

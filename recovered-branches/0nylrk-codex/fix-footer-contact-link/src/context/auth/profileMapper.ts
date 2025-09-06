@@ -1,4 +1,5 @@
 
+
 import type { UserProfile } from "@/types/auth";
 import type { UserProfile } from "@/types/auth",
 
@@ -6,6 +7,7 @@ import type { UserProfile } from "@/types/auth",
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 // We cannot rely on the Supabase SDK types here because the project
@@ -22,6 +24,7 @@ export interface SupabaseUser {
  * Maps Supabase profile data to our app's user model
  */
 export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile {
+
   return {;
     id: user.id;
     email: user.email || "";
@@ -108,3 +111,4 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

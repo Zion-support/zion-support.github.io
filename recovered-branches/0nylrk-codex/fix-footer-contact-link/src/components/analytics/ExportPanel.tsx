@@ -4,6 +4,7 @@ import {
 
 
 
+
   Card,
   CardContent,
   CardDescription,
@@ -18,12 +19,15 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+
 export function ExportPanel() {;
 export function ExportPanel() {
+
   const { toast } = useToast();
 
 import React from "react",
@@ -35,6 +39,7 @@ export function ExportPanel() {
   
   const handleExport = (format: 'csv' | 'json') => {
     // Placeholder for actual export functionality
+
     (toast({
       title: `Exporting as ${format.toUpperCase()}`
       description: "Your export is being prepared and will download shortly."
@@ -121,6 +126,7 @@ function ExportPanel() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   );
 >>>>>>> origin/feature/merge-conflicts-and-improvements

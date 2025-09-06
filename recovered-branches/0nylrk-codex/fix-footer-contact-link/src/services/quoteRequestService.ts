@@ -1,13 +1,10 @@
 
 
 
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import { supabase } from "@/integrations/supabase/client",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
 
 export const quoteRequestService = {
@@ -15,14 +12,17 @@ export const quoteRequestService = {
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
+
       .select(`;
         *;
       .select(`
         *,
+
         talent:talent_id (
           display_name
         )
       `)
+
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
@@ -41,12 +41,14 @@ export const quoteRequestService = {
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
+
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
+
       .order('created_at', { ascending: false });
     if (error) throw error;
     return data as QuoteRequest[]
@@ -57,6 +59,7 @@ export const quoteRequestService = {
     return data as QuoteRequest[]
   },
   
+
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -68,6 +71,7 @@ export const quoteRequestService = {
         )
       `)
       .eq('id', id)
+
       .single();
     if (error) throw error;
     return {
@@ -179,3 +183,4 @@ if (throw error) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 };
+

@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from 'next';
 
 
+
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
 
@@ -11,6 +12,7 @@ export default function VendorProfilePage({ vendor }: Props) {;
 
 
 export default function VendorProfilePage({ vendor }: Props) {
+
 
 
   const [message, setMessage] = useState<string | null>(null);
@@ -30,6 +32,7 @@ export default function VendorProfilePage({ vendor }: Props) {
     <div className='space-y-8'>;
       <div className='flex items-center gap-4'>      if (!res && res.ok) throw new Error('Failed to submit');
       setMessage('Thanks! We will contact you soon.');
+
       form && form.reset();
     } catch (e: any) {;
       setMessage(e && e.message);
@@ -84,7 +87,17 @@ export default function VendorProfilePage({ vendor }: Props) {
       )}
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
 
               </div>
             ))}
@@ -116,6 +129,7 @@ export default function VendorProfilePage({ vendor }: Props) {
           <button disabled={loading} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">
             {loading ? 'Submitting...' : 'Send'}
           </button>
+
 
           {message && <div className="text-sm">{message}</div>}
 
@@ -267,6 +281,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
 
 
 
+
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -277,6 +292,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async ctx => {
   );
 }
 
+
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = String(ctx.params?.slug |'');
 
@@ -284,6 +300,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const slug = String(ctx.params?.slug || '');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) |null : null;
   return { props: { vendor } }
@@ -292,6 +309,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
 };
+
 
 };
 
@@ -304,3 +322,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

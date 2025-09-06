@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
 
@@ -31,6 +34,7 @@ import Layout from '../components/layout/Layout';import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
@@ -106,12 +110,101 @@ const pricingPlans = [
     popular: false
 
 
+export default function AIDiagnosticPlatform() {
+  return (
+    <Layout>
+      <Head>
+        <title>AI Diagnostic Pro Platform | Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.'
+        />
+        <meta
+          name='keywords'
+          content='AI diagnostics, medical AI, healthcare technology, medical imaging, Zion Tech Group'
+        />
+        <meta
+          property='og:title'
+          content='AI Diagnostic Pro Platform - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Advanced medical diagnostic platform with AI integration.'
+        />
+        <meta
+          property='og:url'
+          content='https://ziontechgroup.com/ai-diagnostic-platform'
+        />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>
+        {/* Background Elements */}
+        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
+          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse'></div>
+          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
+          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>
+        </div>
+        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'      </Head>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='mb-8'
+          >
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>
+              <Stethoscope className='w-4 h-4 mr-2' />
+              Healthcare Technology
+            </div>
+            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
+              <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>
+                AI Diagnostic
+              </span>
+              <br />
+              <span className='text-white'>Pro Platform</span>
+            </h1>
+            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
+              Advanced medical diagnostic platform using AI and machine learning
+              to provide accurate disease detection and treatment
+              recommendations.            </p>          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+              <Stethoscope className="w-4 h-4 mr-2" />
+              Healthcare Technology
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                AI Diagnostic
+              </span>
+              <br />
+              <span className="text-white">Pro Platform</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.
+            </p>
+          </motion.div>
+
+
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'
+
 
 
 
@@ -150,6 +243,7 @@ const pricingPlans = [
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
           >
             <a
               href='#pricing'
@@ -173,6 +267,7 @@ const pricingPlans = [
               href="#contact"
 
 
+
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-slate-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-black to-slate-900">;
@@ -186,6 +281,7 @@ const pricingPlans = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -199,7 +295,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -263,7 +361,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -275,6 +375,7 @@ const pricingPlans = [
                 <h3 className='text-lg font-semibold text-white mb-2'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {feature}
+
                 </h3>              </motion && motion.div>              >;
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">;
                   <CheckCircle className="w-6 h-6 text-white" />;
@@ -291,10 +392,12 @@ const pricingPlans = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -309,6 +412,7 @@ const pricingPlans = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section id="pricing" className="py-20 bg-black">;
@@ -329,12 +433,14 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -348,7 +454,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -417,6 +525,7 @@ const pricingPlans = [
                     </span>
                   </div>
                 )}
+
 
 
 
@@ -502,6 +611,7 @@ const pricingPlans = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     </li>
                   ))}
                 </ul>
@@ -515,6 +625,7 @@ const pricingPlans = [
           </div>
         </div>
       </section>
+
 
 
 
@@ -541,6 +652,7 @@ const pricingPlans = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Contact Section */}
       <section
         id='contact'
@@ -557,7 +669,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -576,7 +690,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -600,6 +716,7 @@ const pricingPlans = [
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
+
 
 
             className='text-center mb-16'>;
@@ -640,6 +757,7 @@ const pricingPlans = [
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -653,7 +771,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -700,7 +820,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -747,7 +869,9 @@ const pricingPlans = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -767,6 +891,7 @@ const pricingPlans = [
           </div>
         </div>
       </section>
+
 
 
 
@@ -900,5 +1025,6 @@ const pricingPlans = [
   );
 
 }
+
 
 

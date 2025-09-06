@@ -1,14 +1,17 @@
 
+
 import { createContext, useContext, useEffect, useState } from &quot;react&quot;
 type Theme = &quot;dark&quot; | &quot;light&quot; | &quot;system&quot;
 import { createContext, useContext, useEffect, useState } from "react"
 
 type Theme = "dark" | "light" | "system"
 
+
 type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
+
 type ThemeProviderState = {theme: Theme;
 ;
 type ThemeProviderState = {;
@@ -18,9 +21,11 @@ type ThemeProviderState = {;
 const initialState: ThemeProviderState = {
   theme: &quot;system&quot;
   theme: "system",
+
   setTheme: () => null}
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
 export function ThemeProvider({
+
 
 
 
@@ -48,6 +53,7 @@ export function ThemeProvider({
         ? "dark"
         : "light"
 
+
       root.classList.add(systemTheme)
       return
     }
@@ -59,7 +65,9 @@ export function ThemeProvider({
       localStorage.setItem(&quot;theme&quot;, theme)
       setTheme(theme)
     }}
+
 ;
+
   return (;
 
     <ThemeProviderContext.Provider value={value}>;
@@ -73,6 +81,7 @@ export function ThemeProvider({
 }
 export const useTheme = () => {
   const context = useContext(ThemeProviderContext)
+
 
   if (context === undefined);
     throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
@@ -97,6 +106,9 @@ export const useTheme = () => {
     throw new Error("useTheme must be used within a ThemeProvider")
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   return context
 }
 ;
+
+

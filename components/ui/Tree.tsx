@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import React, { useState } from 'react';
 
@@ -11,11 +12,13 @@ export interface TreeNode {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   name: string;
   path: string;
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
+
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
@@ -23,6 +26,7 @@ interface TreeProps {
 interface TreeProps {
   nodes: TreeNode[];
   onDeploy?: (path: string) => void;
+
 
 function NodeItem({
   node
@@ -36,6 +40,7 @@ import React, { useState } from "react";
 export interface TreeNode {
 
 
+
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
@@ -44,6 +49,7 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
+
 
 
 
@@ -91,12 +97,15 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
               on_deploy={on_deploy}
             />          ))}
 
+        </div>
+      )}
 
 
           ))}
         </div>
       )}
     </div>
+
   );
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
@@ -116,6 +125,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   );
 
 
@@ -151,6 +161,7 @@ export default Tree;
 
 
 
+
   onDeploy 
 }/>) ) ;
 }</div>) ;
@@ -170,6 +181,7 @@ export default Tree;
       ))}
     </div>
   );
+
 
 
 

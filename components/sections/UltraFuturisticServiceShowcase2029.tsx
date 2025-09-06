@@ -1,5 +1,7 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 import { motion  } from 'framer-motion';
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react';
@@ -51,6 +53,7 @@ interface UltraFuturisticServiceShowcase2029Props {
   subtitle?: string;
 
 
+
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
 
@@ -75,6 +78,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({;
   title?: string;
 
 
+
   title?: string;
   subtitle?: string
 }
@@ -93,6 +97,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+
           className='text-center mb-16'
         >
           <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
@@ -143,6 +148,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               <div className='flex items-center justify-between mb-4'>
                 <div className='flex items-center space-x-2'>
@@ -205,6 +211,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
             </motion.div>
           ))}
         </div>
+
 
               <Link
                 href={service && service.link}
@@ -281,16 +288,19 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
 
 
+
           className=&quot;text-center mt-12&quot;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         >
           <Link
@@ -303,6 +313,7 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           </Link>
         </motion.div>
       </div>
+
     </section>;
   );
 
@@ -371,4 +382,5 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

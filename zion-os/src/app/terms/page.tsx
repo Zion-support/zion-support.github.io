@@ -1,8 +1,4 @@
-export default function TermsPage() {return (;
-export default function TermsPage() {;
-  return (;
-    <div className="min-h-screen bg-white">;
-=======
+
 export default /**
  * TermsPage - Function description
  */
@@ -12,6 +8,9 @@ function TermsPage() {
 =======
 export default function TermsPage() {;
   return (;
+=======
+
+
     <div className="min-h-screen bg-white">;
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - gray - 600 to - gray - 800 text - white py - 20">;

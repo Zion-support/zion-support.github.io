@@ -1,8 +1,11 @@
+
 import React from 'react',
 import React from 'react';
+
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
+
 
 
 
@@ -34,6 +37,7 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
@@ -202,11 +206,182 @@ const serviceCategories = [;
       { name: 'DevOps Automation', href: '/devops-automation' }
     ]
 
+  },];      { name: 'DevOps Automation', href: '/devops-automation' }
+    ]
+  }
+];
+const quickLinks = [
+  { name: 'Home', href: '/', icon: Home }
+  { name: 'Services', href: '/services', icon: Briefcase }
+  { name: 'Solutions', href: '/solutions', icon: Rocket }
+  { name: 'About', href: '/about', icon: Users }
+  { name: 'Blog', href: '/blog', icon: BookOpen }
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
+  { name: 'Support', href: '/support', icon: MessageCircle }
+  { name: 'Privacy', href: '/privacy', icon: Shield }
+];
+const socialLinks = [
+  {
+    name: 'LinkedIn'
+    href: 'https://linkedin.com/company/ziontechgroup'
+    icon: Linkedin
+    color: 'hover:text-blue-400'
+  }
+  {
+    name: 'Twitter'
+    href: 'https://twitter.com/ziontechgroup'
+    icon: Twitter
+    color: 'hover:text-sky-400'
+  }
+  {
+    name: 'GitHub'
+    href: 'https://github.com/Zion-Holdings'
+    icon: Github
+    color: 'hover:text-gray-400'
+  }
+  {
+    name: 'YouTube'
+    href: 'https://youtube.com/@ziontechgroup'
+    icon: Youtube
+    color: 'hover:text-red-500'
+  },];  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' }
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-sky-400' }
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github, color: 'hover:text-gray-400' }
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-500' }
+const footerSections = [
+  {
+    title: 'Company'
+    links: [
+      { name: 'About Us', href: '/about' }
+      { name: 'Our Mission', href: '/mission' }
+      { name: 'Leadership Team', href: '/team' }
+      { name: 'Careers', href: '/careers' }
+      { name: 'Press & Media', href: '/press' }
+      { name: 'Partnerships', href: '/partnerships' }
+    ]
+  },  {      { name: 'Partnerships', href: '/partnerships' }
+    ]
+  }
+  {
+    title: 'Solutions'
+    links: [
+      { name: 'AI Services', href: '/ai-services' }
+      { name: 'Quantum Technology', href: '/quantum-technology' }
+      { name: 'IT Infrastructure', href: '/it-infrastructure' }
+      { name: 'Cybersecurity', href: '/cybersecurity' }
+      { name: 'Cloud Solutions', href: '/cloud-solutions' }
+      { name: 'Blockchain', href: '/blockchain-solutions' }
+    ]
+  },  {      { name: 'Blockchain', href: '/blockchain-solutions' }
+    ]
+  }
+  {
+    title: 'Resources'
+    links: [
+      { name: 'Blog', href: '/blog' }
+      { name: 'Case Studies', href: '/case-studies' }
+      { name: 'White Papers', href: '/white-papers' }
+      { name: 'Documentation', href: '/docs' }
+      { name: 'API Reference', href: '/api' }
+      { name: 'Support Center', href: '/support' }
+    ]
+  },  {      { name: 'Support Center', href: '/support' }
+    ]
+  }
+  {
+    title: 'Legal'
+    links: [
+      { name: 'Privacy Policy', href: '/privacy' }
+      { name: 'Terms of Service', href: '/terms' }
+      { name: 'Cookie Policy', href: '/cookies' }
+      { name: 'Data Protection', href: '/data-protection' }
+      { name: 'Accessibility', href: '/accessibility' }
+      { name: 'Compliance', href: '/compliance' }
+    ]
+  },];
+const UltraFuturisticFooter2029 = () => {
+  return (
+    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>      { name: 'Compliance', href: '/compliance' }
+    ]
+  }
+];
+const UltraFuturisticFooter2029 = () => {
+  return (
+    <footer className='bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50'>
+
+            <p className='text-gray-400 mb-6 leading-relaxed'>
+              Leading the revolution in AI, quantum computing, and autonomous
+              technology solutions. Transforming businesses with cutting-edge
+              innovation.
+            </p>
+            {/* Contact Information */}
+            <div className='space-y-3 mb-6'>
+              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
+                <Phone className='w-4 h-4' />
+                <a href={`tel:${contactInfo.mobile}`} className='text-sm'>
+                  {contactInfo.mobile}
+                </a>
+              </div>
+              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
+                <Mail className='w-4 h-4' />
+                <a href={`mailto:${contactInfo.email}`} className='text-sm'>
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className='flex items-center space-x-3 text-gray-400'>
+                <MapPin className='w-4 h-4' />
+                <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
+            {/* Social Links */}
+            <div className='flex space-x-4'>
+              {socialLinks.map(social => (            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+                <a href={`tel:${contactInfo.mobile}`} className="text-sm">
+                  {contactInfo.mobile}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                <Mail className="w-4 h-4" />
+                <a href={`mailto:${contactInfo.email}`} className="text-sm">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm">{contactInfo.address}</span>
+              </div>
+            </div>
+            {/* Social Links */}
+            <div className='flex space-x-4'>
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
+                >
+                  <social.icon className='w-5 h-5' />                </a>                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+
             {/* Social Links */}
 
                 </a>
 
               ))}
+
 
 
 
@@ -234,6 +409,7 @@ const serviceCategories = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           {/* Service Categories */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -245,9 +421,11 @@ const serviceCategories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -272,6 +450,7 @@ const serviceCategories = [;
                     {category && category.services.map((service) => (;
                       <li key={service && service.name}>;
                         <Link
+
                           href={service && service.href}
                           className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">;
                           <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />;
@@ -284,6 +463,7 @@ const serviceCategories = [;
 
             </div>;
           </div>;
+
 
 
 
@@ -303,7 +483,9 @@ const serviceCategories = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -313,6 +495,7 @@ const serviceCategories = [;
                   href={link.href}
                   className='flex items-center space-x-2 text-sm text-gray-400 hover:text-white transition-colors duration-200 p-2 rounded-lg hover:bg-slate-800/50'
                 >
+
                   <link.icon className='w-4 h-4' />                  <span>{link.name}</span>                <Link
                   key={link.name}
                   href={link.href}
@@ -356,6 +539,7 @@ const serviceCategories = [;
                       <li key={link && link.name}>;
 
 
+
           {/* Footer Sections */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>Company</h4>
@@ -365,7 +549,9 @@ const serviceCategories = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                 <div key={section.title}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -591,14 +777,17 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Bottom Footer */}
       <div className='border-t border-slate-700/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
             <div className='text-sm text-gray-400'>
+
 
 
 
@@ -618,6 +807,7 @@ const UltraFuturisticFooter2029 = () =>: any {
               © 2025 Zion Tech Group. All rights reserved.
 
             </div>
+
 
 
               © 2025 Zion Tech Group. All rights reserved.
@@ -719,6 +909,7 @@ const UltraFuturisticFooter2029 = () =>: any {
 
 
 
+
                 Subscribe;
               </button>;
             </div>;
@@ -739,9 +930,11 @@ export default UltraFuturisticFooter2029;
 
 
 
+
 export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -753,3 +946,4 @@ export default UltraFuturisticFooter2029;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

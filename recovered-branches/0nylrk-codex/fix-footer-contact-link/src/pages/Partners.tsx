@@ -1,6 +1,7 @@
 
 
 
+
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -24,6 +25,7 @@ export default function Partners() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -139,6 +141,7 @@ export default function Partners() {;
           >
             Apply to Join
           </Button>
+
           <Button
             size="lg"
             variant="outline"
@@ -147,6 +150,7 @@ export default function Partners() {;
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
+
 
 
 import { Button } from "@/components/ui/button",;
@@ -298,8 +302,12 @@ export default function Partners() {;
             Apply to Join;
           </Button>;
 
+          <Button;
+            size="lg";
+            variant="outline";
+            className="text-zion-cyan border-zion-cyan";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -308,6 +316,7 @@ export default function Partners() {;
       </div>
     )
   }
+
 
 
           <Button
@@ -325,6 +334,7 @@ export default function Partners() {;
       </div>;
     );
   }
+
 
 
 
@@ -380,6 +390,8 @@ export default function Partners() {;
       </Tabs>
     </div>
   )
+
 }
 }
 ;
+

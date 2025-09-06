@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next/link';
 
+
 const EnhancedFooter = () => {
 
 import Link from 'next / link';
@@ -36,21 +37,7 @@ const EnhancedFooter = () =>: any {
           {/* Company Info */}
 
   const currentYear = new Date().getFullYear()
-=======
 
-  const currentYear = new Date().getFullYear(),
-          <div className='lg:col - span - 2'>;
-            <div className='flex items - center space - x-2 mb - 4'>;
-              <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
-                <span className='text - white font - bold text - xl'>Z</span>;
-              </div>;
-              <span className='text - xl font - bold'>Zion Tech Group</span>;
-            </div>;
-            <p className='text - gray - 300 mb - 6 max - w-md'>;
-              Leading technology solutions provider helping businesses transform;
-              their digital presence with cutting - edge AI, cloud architecture,
-              and innovative development services.            </p > const EnhancedFooter = () =>: any {
-  const current_year = new Date ().getFullYear (),
   return (
     <footer className="bg - gray - 900 text - white">;
       {/* Main Footer Content */}
@@ -83,6 +70,7 @@ const EnhancedFooter = () =>: any {
       </div>
       {/* Bottom Footer */}
 
+
 );
 }
 export default EnhancedFooter;}
@@ -91,3 +79,4 @@ export default EnhancedFooter;
 export default EnhancedFooter;},
 
 export default EnhancedFooter;
+

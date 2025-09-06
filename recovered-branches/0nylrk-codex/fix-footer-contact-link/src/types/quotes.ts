@@ -4,15 +4,18 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export type ServiceType = "service" | "talent" | "equipment" | "";
 export type ServiceCategory = string;
 export type TimelineType = "fixed" | "flexible";
 export type BudgetType = "fixed" | "hourly" | "range";
+
 
 
 
@@ -55,10 +58,13 @@ export interface QuoteFormData {
 
 
 
+
   amount: number;
   maxAmount?: number
   type: BudgetType
 }
+
+
 
 
 
@@ -81,6 +87,7 @@ export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'clos
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
@@ -89,6 +96,7 @@ export interface QuoteRequest {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   talent_id: string;
@@ -110,13 +118,24 @@ export interface QuoteRequest {
   replied_at?: string;
 
 
+  updated_at: string
+}
+
+export type ServiceType = "service" | "talent" | "equipment" | "",
+export type ServiceCategory = string,
+export type TimelineType = "fixed" | "flexible",
+export type BudgetType = "fixed" | "hourly" | "range",
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   created_at: string,
   updated_at: string;
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

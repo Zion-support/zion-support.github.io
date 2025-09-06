@@ -2,6 +2,7 @@
 
 
 
+
 interface TokenRequest {
   userId: string;
   amount: number
@@ -22,6 +23,7 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
 
 
+
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -38,6 +40,7 @@ serve(async (req) => {
 
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+
   }
   const url = new URL(req.url);
   const action = url.pathname.split('/').pop();
@@ -89,6 +92,7 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
 
 
 
+
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -123,7 +127,9 @@ interface TokenRequest {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

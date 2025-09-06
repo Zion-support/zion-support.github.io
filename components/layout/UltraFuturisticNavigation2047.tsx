@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -134,6 +135,7 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 import {
   Menu
   ChevronDown
@@ -200,6 +202,7 @@ interface NavigationItem {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -231,6 +234,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
 
   Brain, Rocket, Target, Atom, Shield;
@@ -257,7 +261,9 @@ interface NavigationItem {
   category?: string;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -278,9 +284,11 @@ const navigationItems: NavigationItem[] = [
       {
 
 
+
   color?: string
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -309,6 +317,7 @@ const navigationItems: NavigationItem[] = [
     }
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
+
   }, []);
   return (
     <nav className='relative bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 z-50'>
@@ -340,6 +349,7 @@ const navigationItems: NavigationItem[] = [
 
 
     window.addEventListener('resize', handleResize);
+
 
                 Zion Tech Group
               </span>
@@ -396,7 +406,9 @@ const navigationItems: NavigationItem[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -508,6 +520,7 @@ const navigationItems: NavigationItem[] = [
                                 <span className="font-medium text-white">{child.name}</span>
                                 {child.featured && (
 
+
                             onClick={closeMenu}>;
                             <div className={`p-2 rounded-lg bg-gradient-to-r ${child && child.color || 'from-gray-500 to-slate-500'}`}>;
                               {child && child.icon}
@@ -521,6 +534,7 @@ const navigationItems: NavigationItem[] = [
                                   </span>;
 
                                 )}
+
 
 
 
@@ -543,6 +557,7 @@ const navigationItems: NavigationItem[] = [
 
 
 
+
           </div>;
 
 
@@ -556,6 +571,7 @@ const navigationItems: NavigationItem[] = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex lg:items-center lg:space-x-4'>;
             <div className='flex items-center space-x-4 text-sm text-gray-400'>;
@@ -572,6 +588,7 @@ const navigationItems: NavigationItem[] = [
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
 
+
                 <span>{contactInfo.mobile}</span>
 
 
@@ -580,10 +597,12 @@ const navigationItems: NavigationItem[] = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               </a>
             </div>
             <Link
               href='/contact'
+
 
 
 
@@ -613,10 +632,12 @@ const navigationItems: NavigationItem[] = [
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             </button>
           </div>
         </div>
       </div>
+
 
 
 
@@ -682,6 +703,7 @@ const navigationItems: NavigationItem[] = [
           <motion.div;
 
 
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -690,6 +712,7 @@ const navigationItems: NavigationItem[] = [
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
+
 
 
 className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t border - slate - 700 / 50';
@@ -727,6 +750,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                       <motion.div;
 
 
+
           >
             <div className='px-2 pt-2 pb-3 space-y-1'>
               {navigationItems.map(item => (
@@ -762,6 +786,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
+
 
 
 
@@ -863,6 +888,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                           >
                             {child.name}
                           </Link>
@@ -872,6 +898,8 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
                   </AnimatePresence>
                 </div>
               ))}
+
+
 
 
 
@@ -937,6 +965,7 @@ className='lg:hidden bg - slate - 800 / 95 backdrop - blur - md border - t borde
 
                     href="/contact"
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-200"
+
 
 
                         className='ml - 4 mt - 2 space - y-1';
@@ -1042,9 +1071,11 @@ export default UltraFuturisticNavigation2047;
 
 
 
+
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -1054,3 +1085,4 @@ export default UltraFuturisticNavigation2047;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -25,6 +25,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -35,6 +36,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
   const [ceramic, setCeramic] = useState('');
@@ -42,6 +44,7 @@ import React, { useEffect, useMemo, useState } from 'react';
   const [linking, setLinking] = useState(false);
   const [backupCid, setBackupCid] = useState('');
   const [restoreCid, setRestoreCid] = useState('');
+
 
 
 
@@ -68,12 +71,14 @@ import React, { useEffect, useMemo, useState } from 'react';
       window && window.localStorage.setItem('zion-web3-display', String(val));  };
 
   const linkDID = async () => {;
+
     if (!user) return;
     setLinking(true);
     setStatus(null);
     try {;
       const nonceRes = await fetch('/api/auth/nonce');
       const { nonce } = await nonceRes.json();
+
       const payload = {
         ens
         lens
@@ -85,6 +90,7 @@ import React, { useEffect, useMemo, useState } from 'react';
         ts: Date.now()
       }
       const payload = { ens, lens, ceramic, farcaster, address: user.address, chain: user.chain, nonce, ts: Date.now() },;
+
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -100,6 +106,7 @@ import React, { useEffect, useMemo, useState } from 'react';
           signature = await signer && signer.signMessage(msg);
         } else if (user && user.chain === 'sol' && (window as any).solana?.isPhantom) {;
           const enc = new TextEncoder().encode(msg);
+
           const { signature: sig } = await (window as any).solana.signMessage(
             enc
             'utf8'
@@ -179,10 +186,12 @@ import React, { useEffect, useMemo, useState } from 'react';
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(profile)}),;
+
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error |'Backup failed');
       setBackupCid(data.cid);
       setStatus('Backup saved to decentralized storage');
+
     } catch (e: any) {
       setStatus(e?.message |'Backup failed');    }
   }
@@ -425,6 +434,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -436,8 +446,10 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   return (
 
 
@@ -462,6 +474,7 @@ import React, { useEffect, useMemo, useState } from 'react';
             </label>
           </div>
         </section>
+
         <section className='rounded-xl border p-5'>
           <h2 className='font-semibold mb-2'>Link Web3 identities</h2>
           <div className='grid grid-cols-1 gap-3'>
@@ -552,12 +565,15 @@ import React, { useEffect, useMemo, useState } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
+
+
 
 
 
@@ -571,6 +587,7 @@ import React, { useEffect, useMemo, useState } from 'react';
     </>
   )
 }
+
 
 
 
@@ -588,4 +605,5 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -239,6 +239,7 @@ if ( {) {
 
 // Handle redirects for short URLs
 export async function getServerSideProps({
+
   params
 }: {
   params: { shortCode: string }
@@ -251,9 +252,11 @@ export async function getServerSideProps({
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
 
 
+
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
+
 
 
 
@@ -270,4 +273,5 @@ export async function getServerSideProps({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

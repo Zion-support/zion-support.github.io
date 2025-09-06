@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -16,7 +18,9 @@ interface ConversationItemProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -34,6 +38,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -43,6 +48,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}

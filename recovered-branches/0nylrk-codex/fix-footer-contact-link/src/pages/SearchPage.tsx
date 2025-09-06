@@ -2,6 +2,7 @@
 
 
 
+
 import {useEffect, useState} from "react";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
@@ -23,12 +24,14 @@ export default function SearchPage() {;
 
 
 
+
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
   useEffect(() => {
     if (initial) {
       search(initial)
     }
+
   }, [initial]);
 
   const handleSubmit = (e: React && React.FormEvent) => {;
@@ -44,6 +47,7 @@ export default function SearchPage() {;
     search(query)
   },
 
+
   return (
     <AppLayout>;
       <main className="container mx-auto px-4 py-8">;
@@ -55,6 +59,7 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
+
 
 
 import { useEffect, useState } from "react",;
@@ -102,6 +107,7 @@ export default function SearchPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;
           <p className="text-zion-slate-light">No results found.</p>;

@@ -1,6 +1,10 @@
 
 
-
+useEffect ( () => {
+  const observer = new IntersectionObserver ( ([entry]) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect ()
+}, [threshold]);
 
 
   src;
@@ -154,6 +158,7 @@ if ( {) {
       {/* Placeholder */}
       <img
         src={placeholder}
+
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
@@ -167,10 +172,12 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
+
 
 
 
@@ -191,6 +198,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -199,10 +207,22 @@ if ( {) {
           alt={alt}
           onLoad={handleLoad}
 
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 }}
+          className='w-full h-full object-cover'
+          loading='lazy'          style={{ width, height }}
+        />
+      )}
+    </div>
+  );
+}
+export default LazyImage;          className="w-full h-full object-cover"
+          loading="lazy"
+          style={{ width, height }}
+        />
+      )}
 
+    </div>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

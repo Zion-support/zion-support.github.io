@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
@@ -25,6 +27,7 @@ const SAMPLE_LISTINGS: ListingItem[] = [
 
 
 
+
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState(""),
   
@@ -32,11 +35,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
     updateFormData({ serviceType: type })
   },
   
+
   const handleItemSelect = (item: ListingItem) => {
     updateFormData({
       specificItem: item
       serviceCategory: item.category
       serviceType: item.category.toLowerCase() as ServiceType
+
     });
   }
   const filteredListings = SAMPLE_LISTINGS.filter((item) => {
@@ -68,6 +73,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
            item.category.toLowerCase().includes(searchQuery.toLowerCase())
   }),
 
+
   return (
     <div className="space - y-6">;
       <div>;
@@ -86,11 +92,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
 
 
+
           <Card 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent"
@@ -104,6 +112,8 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
               AI specialists, developers, consultants
             </p>
           </Card>
+
+
 
 
 
@@ -128,12 +138,14 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
 
 
 
+
 import {useState} from "react";
 import {QuoteFormData, ListingItem, ServiceType} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Card} from "@/components/ui/card";
 import {Search} from "lucide-react";
 import {ListingScoreCard} from "@/components/ListingScoreCard";
+
 
 
 
@@ -154,10 +166,12 @@ import {ListingScoreCard} from "@/components/ListingScoreCard";
                   key={item && item.id}
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
+
                     formData.specificItem?.id === item.id
                       ? "ring-2 ring-zion-purple rounded-lg"
                       : ""
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
+
                   }`}
                 >;
                   <ListingScoreCard

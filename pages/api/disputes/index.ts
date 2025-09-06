@@ -4,12 +4,15 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
+
 
 
 
@@ -25,6 +28,7 @@ export default async function handler(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const user = parseUserFromRequest(req);
 
 
@@ -67,6 +71,7 @@ export default async function handler(
 
     }
     const id = generateCaseId();
+
 
     let filtered = all;
     // Check condition
@@ -132,6 +137,7 @@ if ( {) {
 
 
 }
+
 
 
 
@@ -225,6 +231,8 @@ export default async function handler(req, res) {
       messages: []},;
 
 
+
+
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -234,6 +242,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
   res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
@@ -270,3 +279,4 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

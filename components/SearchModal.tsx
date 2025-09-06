@@ -141,6 +141,8 @@ const search_data: SearchResult[] = [;
 
 
 
+
+
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);

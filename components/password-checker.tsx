@@ -1,6 +1,7 @@
 
 
 
+
   Lock,
   Shield,
   Eye,
@@ -43,6 +44,7 @@ import React, { useState, useEffect } from 'react';
 
 
 export default function PasswordCheckerPage() {;
+
 
 
 
@@ -322,6 +324,7 @@ if (
     navigator.clipboard.writeText(text)
 
 
+
     // Ensure at least one of each required character type;
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)]; // Uppercase;
     result += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)]; // Lowercase;
@@ -350,6 +353,7 @@ if (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
@@ -490,15 +494,31 @@ if (
               </h3>
               <div className="space-y-6">
 
+                {/* Password Input */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    Enter Password
+                  ">
+                    Enter Password
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? 'text' : 'password'}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="Type your password here..."
+                      className="w-full px-4 py-3 pr-12 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-white"
+                    >
+                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                    </button>
+                  </div>
+                </div>
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 {/* Generate Password */}
                 <div>;
@@ -517,6 +537,7 @@ if (
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Generated Password Display */}
 
@@ -527,6 +548,7 @@ if (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {/* Generated Password Display */}
                 {generatedPassword && (
@@ -548,6 +570,7 @@ if (
                     </div>
 
 
+
                       {generatedPassword}
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
@@ -558,6 +581,7 @@ if (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </div>
                   </div>
@@ -583,6 +607,7 @@ if (
                 Security Analysis
               </h3>
               {password ? (
+
 
 
                 <div className='text-sm text-gray-400'>                  <p>• Real-time strength analysis</p>                <div className="text-sm text-gray-400">;
@@ -618,11 +643,13 @@ if (
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
+
 
 
 
@@ -653,6 +680,7 @@ if (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -664,6 +692,7 @@ if (
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
+
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}
@@ -680,6 +709,7 @@ if (
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -690,6 +720,7 @@ if (
                       ))}
                     </div>
                   </div>
+
 
 
 
@@ -708,6 +739,7 @@ if (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -723,6 +755,7 @@ if (
                             <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
                             <span className='text-sm text-yellow-300'>
                               {suggestion}
+
                             </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
                       <div className="space-y-2">
                         {suggestions.map((suggestion, index) => (
@@ -736,6 +769,7 @@ if (
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                         ))}
                       </div>
                     </div>
@@ -760,6 +794,7 @@ if (
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         ))}
                       </div>;
@@ -780,6 +815,7 @@ if (
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       {/* Features */}
@@ -1229,12 +1265,14 @@ if (
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
+
             Ready to Secure Your Passwords?
 
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           </h2>
@@ -1257,6 +1295,7 @@ if (
               size='lg'
 
 
+
               View Pricing;
             </Button>;
           </div>;
@@ -1275,4 +1314,5 @@ if (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,3 +1,4 @@
+
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
@@ -121,6 +122,7 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
+
 
 
 const contactInfo = {;
@@ -248,16 +250,20 @@ const useCases = [;
       'Optimize product descriptions and marketing content for better conversions',;
     icon: ShoppingCart,;
 
-
-
-    color: 'from-orange-500 to-red-500',;
-  },;
+    color: 'from-orange-500 to-red-500';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
 
 
 const integrations = [
 
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
+
 export default function AIContentIntelligencePlatform() {
   return (
 
@@ -271,6 +277,7 @@ export default function AIContentIntelligencePlatform() {
             Create, optimize, and manage content intelligently with our AI-powered content platform.;
           </p>;
         </div>;
+
 
 
 
@@ -331,6 +338,7 @@ export default function AIContentIntelligencePlatform() {
             </motion.div>
           </div>
         </div>
+
       {/* Features Section */}
       <section className='py-20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -354,6 +362,7 @@ export default function AIContentIntelligencePlatform() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Powerful Features for Content Success
@@ -368,7 +377,9 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -380,6 +391,7 @@ export default function AIContentIntelligencePlatform() {
                   <p className="text-gray-400">{feature.description}</p>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -421,6 +433,7 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -435,7 +448,9 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -447,6 +462,7 @@ export default function AIContentIntelligencePlatform() {
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -488,6 +504,7 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -502,7 +519,9 @@ export default function AIContentIntelligencePlatform() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -522,6 +541,7 @@ export default function AIContentIntelligencePlatform() {
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
+
                       <li
                         key={featureIndex}
                         className='flex items-center text-gray-300'
@@ -549,9 +569,11 @@ export default function AIContentIntelligencePlatform() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                   </ul>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Link
+
 
 
 
@@ -568,6 +590,7 @@ export default function AIContentIntelligencePlatform() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Seamless Integrations
@@ -579,6 +602,7 @@ export default function AIContentIntelligencePlatform() {
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {integrations.map((integration, index) => (
               <motion.div
+
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -841,6 +865,7 @@ export default function AIContentIntelligencePlatform() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
@@ -896,6 +921,8 @@ export default function AIContentIntelligencePlatform() {
           </motion.div>
         </div>
       </section>
+
+
 
 
 
@@ -957,8 +984,12 @@ export default function AIContentIntelligencePlatform() {
         </div>;
       </section>;
 
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

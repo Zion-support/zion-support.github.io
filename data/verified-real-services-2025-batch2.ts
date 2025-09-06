@@ -1,5 +1,7 @@
+
 export interface VerifiedRealService2025Batch2 {;
 export interface VerifiedRealService2025Batch2 {
+
   id: string;
   name: string;
   tagline: string;
@@ -12,8 +14,10 @@ export interface VerifiedRealService2025Batch2 {
   contactInfo: {
     mobile: string;
     email: string;
+
     address: string;
   };
+
 
 
 
@@ -28,15 +32,17 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
 
-=======
+
   id: string, name: string,
   tagline: string, price: string,
   description: string, features: string[],
@@ -72,4 +78,6 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     }
   }
 ];
+
+=======
 

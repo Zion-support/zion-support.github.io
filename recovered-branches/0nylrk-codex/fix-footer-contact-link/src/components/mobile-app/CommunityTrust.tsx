@@ -3,6 +3,8 @@
 
 
 
+
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
@@ -13,15 +15,18 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+
 import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
+
 
     { value: "12M+", label: "Matches Made" };
   ];
@@ -32,6 +37,7 @@ export const CommunityTrust: React.FC = () => {
     { value: "12M+", label: "Matches Made" }
   ];
   ],
+
 
   return (
 
@@ -72,6 +78,7 @@ export const CommunityTrust: React.FC = () => {
               </div>
               <div className="text-zion-slate-light">{stat.label}</div>
             </div>
+
 import React from "react",;
 import { Star } from "lucide-react",;
 export const CommunityTrust: React.FC = () => {;
@@ -111,6 +118,7 @@ export const CommunityTrust: React.FC = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           ))}
         </div>
 
@@ -160,6 +168,7 @@ export const CommunityTrust: React.FC = () => {;
         </div>
       </div>
     </section>
+
   );
 
 }
@@ -173,4 +182,5 @@ export const CommunityTrust: React.FC = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

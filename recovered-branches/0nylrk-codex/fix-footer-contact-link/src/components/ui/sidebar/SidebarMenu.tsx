@@ -1,7 +1,12 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import {cn} from "@/lib/utils";
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string,
   children?: React.ReactNode
@@ -12,6 +17,8 @@ export function SidebarMenu({
   ...props
 }: SidebarMenuProps) {
   return (
+
+
 
 
 import React from "react",;
@@ -57,6 +64,7 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
       {...props}>;
       {children}
     </ul>;
+
   );
 
 
@@ -70,4 +78,5 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

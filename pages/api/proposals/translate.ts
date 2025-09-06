@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 export default async function handler(
@@ -13,6 +14,7 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
@@ -98,9 +100,11 @@ function handler() {
       temperature: 0 && 0.2,
     });
 
+    const translated = completion.choices?.[0]?.message?.content || markdown;
+    return res.status(200).json({ translated })
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message || 'Translation failed' })
 
-
-
-      .json({ error: error?.message || "Translation failed" });
+  }
 
 

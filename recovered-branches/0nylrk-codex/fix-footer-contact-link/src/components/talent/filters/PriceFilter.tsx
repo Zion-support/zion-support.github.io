@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -22,8 +24,10 @@
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
+
           <Slider
           <Slider 
+
 
 
 import { ChevronDown, ChevronUp } from "lucide-react",;
@@ -70,7 +74,9 @@ export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggl
           </div>;
 
 
+
           <Slider
+
 
 
             value={[priceRange[0], priceRange[1]]}

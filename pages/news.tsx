@@ -1,5 +1,6 @@
 
 
+
 import { 
   Newspaper;
   Calendar, 
@@ -29,12 +30,45 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 
 
+
 const NewsPage: React.FC = () => {
   const news_articles = [;
     {
 
-
-
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform'
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.'
+      author: 'Press Team'
+      date: '2025-01-15'
+      author: 'Zion Tech Group'
+      readTime: '5 min read'
+      featured: true
+      image: '/images/news/ai-consciousness-breakthrough.jpg'
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation']
+    }
+    {
+      id: 2
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion'
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.'
+      category: 'company'
+      date: '2025-01-10'
+      author: 'Zion Tech Group'
+      readTime: '3 min read'
+      featured: true
+      image: '/images/news/series-c-funding.jpg'
+      tags: ['FundingInvestmentGrowthExpansion']
+    }
+    {
+      id: 3
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure'
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.'
+      category: 'partnerships'
+      date: '2025-01-05'
+      author: 'Zion Tech Group'
+      readTime: '4 min read'
+      featured: true
+      image: '/images/news/quantum-azure-partnership.jpg'
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
+    }
 
 
 import React from 'react';
@@ -102,10 +136,12 @@ const NewsPage: React.FC = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   ],
+
   const latestNews = [
     {
       id: 4
@@ -132,6 +168,7 @@ const NewsPage: React.FC = () => {;
       tags: ['RecognitionForbesAI LeadershipInnovation']
     }
     {
+
       id: 6
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"'
       excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.'
@@ -150,6 +187,7 @@ const NewsPage: React.FC = () => {;
       readTime: '8 min read',
       featured: false,
       image: '/images/news/quantum-drug-discovery.jpg',
+
       tags: ['Quantum ComputingDrug DiscoveryResearchHealthcare']
     }
     {
@@ -187,6 +225,7 @@ const NewsPage: React.FC = () => {;
       featured: false
       image: '/images/news/european-expansion.jpg'
       tags: ['ExpansionEuropeInternationalGrowth']
+
     }
   ]
   const pressReleases = [
@@ -323,6 +362,7 @@ const NewsPage: React.FC = () => {;
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
+
       day: 'numeric'
     })
   }
@@ -339,15 +379,20 @@ export default function NewsPage() {
 
 
 
+
+
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -377,6 +422,7 @@ export default function NewsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -386,6 +432,7 @@ export default function NewsPage() {
                 News & Press
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+
 
 
 
@@ -703,6 +750,7 @@ function NewsPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -717,6 +765,7 @@ function NewsPage() {
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
 
 
+
   ArrowRight, ExternalLink, Calendar, Tag, Star
 } from 'lucide-react'
 import EnhancedNavigation from '../components/EnhancedNavigation';
@@ -724,10 +773,12 @@ import EnhancedFooter from '../components/EnhancedFooter';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   ArrowRight, ExternalLink, Calendar, Tag, Star
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
 import EnhancedFooter from '../components/EnhancedFooter',;
+
 
 
 
@@ -895,6 +946,7 @@ export default function NewsPage() {
 
     : newsItems.filter(item => item.category === selectedCategory),
   const featuredNews = newsItems.filter(item => item.featured),
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -905,6 +957,7 @@ export default function NewsPage() {
         <link rel="canonical" href="https://ziontechgroup.com/news" />
       </Head>
       <EnhancedNavigation />
+
       {/* Hero Section */}
       <section className="relative pt - 32 pb - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -946,6 +999,7 @@ export default function NewsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -956,6 +1010,8 @@ export default function NewsPage() {
             </p>
           </motion.div>
           <motion.div
+
+
 
 
 
@@ -974,10 +1030,13 @@ export default function NewsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology
+
 
 
 
@@ -992,11 +1051,13 @@ export default function NewsPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
         </div>
       </section>
+
       {/* Featured News */}
       {/* Featured News */  } catch (error) {
     console.error("Error:", error);
@@ -1010,10 +1071,12 @@ export default function NewsPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       {featuredNews.length > 0 && (
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1309,6 +1372,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -1317,6 +1381,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {featuredNews.map((item, index) => (
                 <motion.div
+
                   key={item.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1354,6 +1419,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="p-8">
@@ -1363,6 +1429,7 @@ export default function NewsPage(req, res) {
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
+
                           {item.category}
                           {item.category  } catch (error) {
     console.error("Error:", error);
@@ -1379,6 +1446,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         </span>
                         <span className="text-xs text-white/40 bg-white/5 px-2 py-1 rounded">
                           Featured
@@ -1403,6 +1471,7 @@ export default function NewsPage(req, res) {
                     </button>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -1435,11 +1504,13 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
+
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -1534,6 +1605,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
@@ -1544,6 +1616,7 @@ export default function NewsPage(req, res) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredNews.filter(item => !item.featured).map((item, index) => (
               <motion.div
+
                 key={item.title}
                 initial={{ opacity: 0, coordinate_y: 30 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1581,6 +1654,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
@@ -1589,6 +1663,7 @@ export default function NewsPage(req, res) {
                       <item.icon className="w-5 h-5 text-white" />
                     </div>
                     <span className="text-xs text-white/60 bg-white/5 px-2 py-1 rounded-full">
+
                       {item.category}
                       {item.category  } catch (error) {
     console.error("Error:", error);
@@ -1605,6 +1680,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </span>
                   </div>
                   <h3 className="text-lg font-bold text-white mb-3 line-clamp-2">{item.title}</h3>
@@ -1624,6 +1700,7 @@ export default function NewsPage(req, res) {
                   </button>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -1649,10 +1726,12 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
                     <a
+
                       href={`/news/${news.id}`}
                       href={`/news/${news.id}`  } catch (error) {
     console.error("Error:", error);
@@ -1669,10 +1748,12 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
+
                     </a>
                     </Link>
 
@@ -1686,6 +1767,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                 </motion.div>
               ))}
@@ -1698,6 +1780,7 @@ export default function NewsPage(req, res) {
       </section>
           <div className="max-w-7xl mx-auto">
             <motion.div
+
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
@@ -1727,6 +1810,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-4">Latest News</h2>
@@ -1737,6 +1821,7 @@ export default function NewsPage(req, res) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
+
                   key={article.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
@@ -1768,10 +1853,12 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
+
                       {article.category}
                       {article.category  } catch (error) {
     console.error("Error:", error);
@@ -1788,6 +1875,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 line-clamp-2">{article.title}</h3>
@@ -1795,6 +1883,7 @@ export default function NewsPage(req, res) {
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
+
                       {new Date(article.date).toLocaleDateString()}
                     </div>
                     <div className="flex items-center gap-2">
@@ -1824,6 +1913,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </div>
                   </div>
                   <button className="w-full px-4 py-2 border border-cyan-500/30 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-2">
@@ -1831,6 +1921,7 @@ export default function NewsPage(req, res) {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </motion.article>
+
               ))}
             </div>
           </div>
@@ -1854,6 +1945,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -1899,6 +1991,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pressReleases.map((release, index) => (
                 <motion.article
+
                   key={release.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -1936,10 +2029,12 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
+
                       {release.category}
                       {release.category  } catch (error) {
     console.error("Error:", error);
@@ -1953,10 +2048,12 @@ export default function NewsPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     </span>
                     <span className="text-gray-400 text-sm">{release.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+
                     {release.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -1983,12 +2080,14 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </p>
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4 text-gray-400" />
                     <span className="text-gray-400 text-sm">{release.date}</span>
                   </div>
                 </motion.article>
+
               ))}
             </div>
           </div>
@@ -2048,6 +2147,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2060,6 +2160,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               {newsCategories.map((category, index) => (
                 <motion.div
+
                   key={category.name}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2097,10 +2198,12 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
+
                       {category.icon}
                     </div>
                   </div>
@@ -2183,6 +2286,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2195,6 +2299,7 @@ export default function NewsPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {recentNews.map((news, index) => (
                 <motion.article
+
                   key={news.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2232,10 +2337,12 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
+
                       {news.category}
                       {news.category  } catch (error) {
     console.error("Error:", error);
@@ -2249,10 +2356,12 @@ export default function NewsPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     </span>
                     <span className="text-gray-400 text-sm">{news.readTime}</span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+
                     {news.title}
                   </h3>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
@@ -2279,6 +2388,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -2291,6 +2401,7 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.article>
+
               ))}
             </div>
           </div>
@@ -2314,6 +2425,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -2350,6 +2462,7 @@ export default function NewsPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -2357,6 +2470,7 @@ export default function NewsPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 please contact our communications team.
               </p>
@@ -2367,6 +2481,7 @@ export default function NewsPage(req, res) {
                 >
                   Contact Media Team
                   <Mic className="ml-2 w-5 h-5" />
+
                 </a>
                 </Link>
 
@@ -2380,6 +2495,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <a
                   href="/press"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300"
@@ -2391,6 +2507,7 @@ export default function NewsPage(req, res) {
           </div>
         </section>
       </div>
+
       {/* CTA Section */}
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -2402,6 +2519,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -2435,13 +2553,12 @@ export default function NewsPage(req, res) {
             <p className="text-xl text-gray-300 mb-8">
 
 
+              Explore our latest research, industry insights, and technology breakthroughs
+              that are shaping the future of AI and quantum computing.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <Link
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -2452,7 +2569,9 @@ export default function NewsPage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 href="/contact"
@@ -2508,6 +2627,8 @@ export default function NewsPage(req, res) {
 
 
 
+
+
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -2519,6 +2640,7 @@ export default function NewsPage(req, res) {
               <a href="/contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
                 <span>Contact Us</span>
                 <ArrowRight className="w-5 h-5" />
+
               </a>
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
@@ -2558,6 +2680,7 @@ export default function NewsPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
@@ -2576,6 +2699,7 @@ export default function NewsPage(req, res) {
           </motion.div>
         </div>
       </section>
+
         {/* Latest News */}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
@@ -2622,6 +2746,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2634,6 +2759,7 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {filteredNews.filter(news => !news.featured).map((news, index) => (
                 <motion.div
+
                   key={news.id}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2671,6 +2797,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -2679,6 +2806,7 @@ export default function NewsPage(req, res) {
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
                       <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded text-xs border border-purple-500/30">
+
                         {news.category}
                       </span>
                       <span className="text-gray-400 text-xs">
@@ -2727,6 +2855,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
                       <span>{formatDate(news.date)}</span>
@@ -2734,6 +2863,7 @@ export default function NewsPage(req, res) {
                     </div>
                   </div>
                 </motion.div>
+
               ))}
             </div>
             {filteredNews.filter(news => !news.featured).length === 0 && (
@@ -2769,12 +2899,14 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
+
             )}
           </div>
         </section>
@@ -2832,6 +2964,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2844,6 +2977,7 @@ export default function NewsPage(req, res) {
             <div className="max-w-4xl mx-auto space-y-6">
               {pressReleases.map((release, index) => (
                 <motion.div
+
                   key={release.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -2919,6 +3053,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     </span>
                     <a
                       href="/contact"
@@ -2928,6 +3063,7 @@ export default function NewsPage(req, res) {
                     </a>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -2987,6 +3123,7 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -2999,6 +3136,7 @@ export default function NewsPage(req, res) {
             <div className="grid lg:grid-cols-2 gap-8">
               {mediaResources.map((resource, index) => (
                 <motion.div
+
                   key={resource.title}
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -3058,10 +3196,12 @@ export default function NewsPage(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
+
                         {resource.type}
                       </span>
                       <span>{resource.size}</span>
@@ -3095,12 +3235,14 @@ export default function NewsPage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
                     </a>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -3157,6 +3299,7 @@ export default function NewsPage(req, res) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
@@ -3227,6 +3370,8 @@ export default function NewsPage(req, res) {
 
 
 
+
+
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;
                 Stay Updated;
@@ -3261,15 +3406,20 @@ export default function NewsPage(req, res) {
 
 }
 
+    <div className="min-h-[60vh] px-6 py-24">;
+      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
+      <div className="max-w-3xl mx-auto">;
+        <h1 className="text-4xl font-bold text-white mb-4">News & Press</h1>;
+        <p className="text-gray-300">Press releases and announcements will appear here.</p>;
+      </div>;
+      <EnhancedFooter />;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

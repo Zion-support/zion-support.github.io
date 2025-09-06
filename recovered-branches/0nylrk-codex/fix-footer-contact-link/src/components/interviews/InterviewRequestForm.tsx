@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -35,6 +36,7 @@ import {useInterviews} from "@/hooks/useInterviews";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface InterviewRequestFormProps {
 
 
@@ -88,6 +90,7 @@ const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
+
   });
   time: z.string().min(1, "Please select a time for the interview.");
   duration: z.string().min(1, "Please select the interview duration.");
@@ -113,6 +116,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -129,6 +133,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         variant: "destructive"})
       return
     }
+
     setIsSubmitting(true);
     try {
       // Combine date and time
@@ -147,6 +152,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
+
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -157,8 +163,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_link: values.meetingLink
         interview_type: "video"
         title: values.title
+
       });
       }),
+
 
       toast({
         title: "Interview requested"
@@ -177,12 +185,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   }
 
   const timeSlots = [
+
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
+
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -230,9 +240,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
                         variant="outline"
                         className={cn(
+
                           "w-full pl-3 text-left font-normal";
 
                           "w-full pl-3 text-left font-normal",
+
                           !field.value && "text-muted-foreground"
 
                         )}
@@ -253,6 +265,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </Popover>
                 <FormMessage />
               </FormItem>
+
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -429,6 +442,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             )}
           />;
 
@@ -546,8 +560,10 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
+
                 <Textarea
                 <Textarea 
+
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
@@ -568,6 +584,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
+
 }
 }
 ;
+

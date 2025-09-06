@@ -1,9 +1,13 @@
 
 
+
+
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
   }
   return pool;
 }
+
+
 
 
 
@@ -14,6 +18,8 @@
     await client.query('BEGIN');
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
     const result = await fn(client);
+
+
 
 
 import { Pool, PoolClient } from 'pg',;
@@ -36,12 +42,15 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
 
 
+
+
     await client.query('COMMIT');
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return result;
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
+
 
 
 
@@ -60,4 +69,5 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

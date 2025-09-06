@@ -1,9 +1,12 @@
+
 import {useEffect, useMemo, useState} from 'react';
+
 
 
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
+
 
 
 
@@ -27,6 +30,7 @@ export default function Assistant() {;
       role: 'assistant',;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
     },;
+
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') |'';
   const brand = params.get('brand') |'Zion AI';
@@ -124,10 +128,12 @@ export default function Assistant() {;
       </form>
     </div>
 
+
   );
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

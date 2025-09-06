@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
@@ -82,6 +84,8 @@ if ( {) {
           await onSuccess()
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
+
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react',;
@@ -138,7 +142,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         }
@@ -150,18 +156,21 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 
 
+
   },
 
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
+
           <Textarea
           <Textarea 
             className="min-h-24"
@@ -180,6 +189,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           disabled={isEnhancing || !bulkSkills.trim()}
+
           className="gap-2"
         >
           {isEnhancing ? (
@@ -196,6 +206,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       </div>
     </div>
   )
+
 
 
 
@@ -233,4 +244,5 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

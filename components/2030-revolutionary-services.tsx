@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,6 +58,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
 
 
 
+
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -71,12 +73,14 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
+
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
   };
+
 
 
 
@@ -170,10 +174,12 @@ export default function Revolutionary2030ServicesPage() {
               },
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
@@ -251,6 +257,7 @@ export default function Revolutionary2030ServicesPage() {
         </div>
       </section>
 
+
             transition={{ duration: 0 && 0.8 }}
             className='mb-8'>;
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 mb-6'>;
@@ -324,6 +331,7 @@ export default function Revolutionary2030ServicesPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -389,7 +397,9 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -464,6 +474,7 @@ export default function Revolutionary2030ServicesPage() {
             ))}
           </div>
 
+
                   {/* Price and CTA */}
                   <div className='flex items-center justify-between'>;
                     <div>;
@@ -509,6 +520,7 @@ export default function Revolutionary2030ServicesPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -527,6 +539,7 @@ export default function Revolutionary2030ServicesPage() {
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+
 
 
 
@@ -550,6 +563,7 @@ export default function Revolutionary2030ServicesPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+
 
 
 
@@ -754,9 +768,11 @@ export default function Revolutionary2030ServicesPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -5,6 +5,7 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 
 
+
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -47,6 +48,7 @@ export default function IncubatorPage() {
       <div className="max-w-3xl">
 
 
+
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -78,6 +80,7 @@ export default function IncubatorPage() {
         </div>
       </div>
     </EnhancedLayout>
+
 
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
@@ -130,4 +133,5 @@ function IncubatorPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

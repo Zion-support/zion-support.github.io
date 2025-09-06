@@ -1,6 +1,7 @@
 
 
 
+
 import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
 import { supabase } from '@/integrations / supabase / client';
 import { AuthContext } from '@/context / auth / AuthContext';
@@ -17,6 +18,7 @@ export interface UserDetails {
   headline?: string;
   profile_complete?: boolean;
   role?: string;
+
 
 
 
@@ -64,6 +66,7 @@ export interface AuthContextType {;
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
+
 export function AuthProvider({ children }: { children: ReactNode }) {;
   const [user, setUser] = useState<UserDetails | null>(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -72,12 +75,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isLoading, setIsLoading] = useState(true),
 
+
   // Mock auth functions for now - these would connect to Supabase in a real implementation
 
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign in attempted with:", email);
     // Mock successful sign-in
+
     setUser({
       id: "mock-user-id"
       email
@@ -102,12 +107,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
   },
 
+
   const signOut = async () => {
     // This would be replaced with actual Supabase auth
     console.log("Sign out attempted");
     setUser(null)
+
   }
   },
+
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth
@@ -122,15 +130,19 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       profileComplete: false
     });
     return { error: null }
+
   }
   },
+
 
   const resetPassword = async (email: string) => {
     // Mock implementation
     console.log("Password reset requested for:", email);
     return { error: null }
+
   }
   },
+
 
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation
@@ -139,8 +151,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser({ ...user, ...data })
     }
     return { error: null }
+
   }
   },
+
 
   const loginWithGoogle = async () => {
     console.log("Google login requested");
@@ -152,8 +166,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Google User"
       profileComplete: true
     })
+
   }
   },
+
 
   const loginWithFacebook = async () => {
     console.log("Facebook login requested");
@@ -165,8 +181,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Facebook User"
       profileComplete: true
     })
+
   }
   },
+
 
   const loginWithTwitter = async () => {
     console.log("Twitter login requested");
@@ -178,13 +196,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       name: "Twitter User"
       profileComplete: true
     })
+
   }
   },
+
 
   const loginWithWeb3 = async () => {
     // // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
     if (!ethereum) {
+
+
 
 
 
@@ -501,10 +523,14 @@ export function useAuth(): any (): AuthContextType {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
   return context;
 }
 ;
+
+

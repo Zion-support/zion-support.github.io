@@ -2,6 +2,7 @@
 
 
 
+
   return twMerge(clsx(inputs));}
 
   return twMerge(clsx(inputs));}
@@ -55,6 +56,8 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 
 
 
+
+
 };
 
 
@@ -68,3 +71,4 @@ export function formatCurrency(amount: number, currency = "USD"): string {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

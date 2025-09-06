@@ -5,6 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data);export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (!requireSuperadminApi(req, res)) return;
@@ -25,3 +26,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

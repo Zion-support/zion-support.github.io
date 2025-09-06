@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return rows;
@@ -14,10 +15,12 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   } catch {
     return [];
   }
 }
+
 
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
@@ -83,6 +86,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -103,7 +107,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

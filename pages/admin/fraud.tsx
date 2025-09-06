@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface FraudItem {
@@ -44,6 +46,7 @@ export default function FraudAdminPage() {
   }
 }
 export default function FraudAdminPage() {
+
 
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
@@ -114,10 +117,12 @@ export default function FraudAdminPage() {
     localStorage.setItem('admin-token', adminToken);
     fetchItems();
   };
+
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST'
       headers: {
+
         'Content-Type': 'application/json'
         ...(adminToken ? { 'x-admin-token': adminToken } : {})}
       body: JSON.stringify({ fraudId: id, action })})
@@ -135,6 +140,7 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -142,6 +148,7 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
+
           value={adminToken}
           onChange={(e) => setAdminToken(e.target.value)}
           value={adminToken  } catch (error) {
@@ -165,10 +172,13 @@ export default function FraudAdminPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
+
+
 
 
 
@@ -187,6 +197,7 @@ export default function FraudAdminPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -194,6 +205,7 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       <div className="overflow-x-auto">
         <table className="min-w-full border">
@@ -211,14 +223,17 @@ export default function FraudAdminPage() {
           <tbody>
             {items.map((it) => (
               <tr key={it.id} className="border-t">
+
                 <td className="p-2 border">{it.userId |'—'}</td>
                 <td className="p-2 border">{it.userId || '—'}</td>
+
                 <td className="p-2 border">{it.source}</td>
                 <td className="p-2 border">{new Date(it.createdAt).toLocaleString()}</td>
                 <td className="p-2 border">
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
+
                     ))}
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -236,12 +251,15 @@ export default function FraudAdminPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
                 </td>
                 <td className="p-2 border">
                   <div className="text-sm">
+
                     <div className="font-semibold">{it.gpt?.label |'—'}</div>
                     <div className="font-semibold">{it.gpt?.label || '—'}</div>
+
                     <div className="text-gray-700">{it.gpt?.reason}</div>
                   </div>
                 </td>
@@ -260,6 +278,7 @@ export default function FraudAdminPage() {
       </div>
     </div>
   );
+
 };
   } catch (error) {
     console.error("Error:", error);
@@ -272,4 +291,5 @@ export default function FraudAdminPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

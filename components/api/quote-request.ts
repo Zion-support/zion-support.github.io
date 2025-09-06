@@ -74,6 +74,7 @@ export default async function handler(
 
 
 
+
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_client  } from '@supabase / supabase - js';
@@ -146,6 +147,7 @@ if ( {) {
           : [];
       }
 
+
       let saved: any = null;
       // Check condition
 if ( {) {
@@ -184,6 +186,7 @@ if (throw error) {
 
 
 
+
   }
 }
 
@@ -193,6 +196,7 @@ if (throw error) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

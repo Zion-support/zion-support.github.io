@@ -1,15 +1,17 @@
 
 
+import Link from 'next/link';
 
-
-
+import {
 
 
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+
 export default function WhitepaperBuilderPage() {;
 export default function WhitepaperBuilderPage() {
+
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 
@@ -147,5 +149,7 @@ if (return '/docs / zion - protocol.pdf') {
         ))}
       </div>
     </div>
+
 );
 }
+

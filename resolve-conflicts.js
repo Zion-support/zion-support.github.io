@@ -1,4 +1,15 @@
-#!/usr/bin/env node
+
+
+
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node const fs = require("fs"); const path = require("path"); const { execSync } = require("child_process"); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,"utf8"); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {'`'"`
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
 
 import { execSync } from 'child_process';
 import fs from 'fs';
@@ -64,7 +75,7 @@ function resolveConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD')) {
+    if (!content.includes('')) {
       return; // No conflicts in this file
     }
 
@@ -74,40 +85,12 @@ function resolveConflicts(filePath) {
     
     // Strategy: Use main branch for most files, incoming for specific files
     if (matchesPattern(filePath, useIncomingBranch)) {
-      // Use incoming branch version (after =======)
-      resolvedContent = content.replace(
-        /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g,
+      // Use incoming branch version (after 
         '$1'
       );
     } else if (matchesPattern(filePath, useMainBranch)) {
-      // Use main branch version (before =======)
-      resolvedContent = content.replace(
-        /<<<<<<< HEAD([\s\S]*?)=======[\s\S]*?>>>>>>> [^\n]+/g,
-        '$1'
-      );
-    } else {
-      // Default: try to merge intelligently
-      resolvedContent = content.replace(
-        /<<<<<<< HEAD([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+/g,
-        (match, mainContent, incomingContent) => {
-          // For most files, prefer main branch but keep important incoming changes
-          const mainLines = mainContent.trim().split('\n');
-          const incomingLines = incomingContent.trim().split('\n');
-          
-          // If incoming has significantly more content, use it
-          if (incomingLines.length > mainLines.length * 1.5) {
-            return incomingContent;
-          }
-          
-          // Otherwise use main branch
-          return mainContent;
-        }
-      );
-    }
-
-    // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+      // Use main branch version (before 
+    resolvedContent = resolvedContent.replace(/
 
     fs.writeFileSync(filePath, resolvedContent);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -115,6 +98,7 @@ function resolveConflicts(filePath) {
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
   }
 }
+
 
 // Function to merge a branch
 async function mergeBranch(branchName) {
@@ -195,3 +179,4 @@ async function main() {
 }
 
 main();
+

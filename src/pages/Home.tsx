@@ -1,4 +1,5 @@
 
+
 import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -61,6 +62,7 @@ const Home: React.FC = () => {
               </Link>
             </motion.div>
           </motion.div>
+
         </div>
         {/* Floating Elements */}
         <motion.div 
@@ -136,6 +138,7 @@ const Home: React.FC = () => {
         </div>
       </div>
 
+
       {/* Features Section */}
       <div className="py-20 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,6 +191,8 @@ const Home: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
+
+>>>>>>> origin/fix-website-loading-errors-final
           </div>
         </div>
       </div>
@@ -268,6 +273,5 @@ const Home: React.FC = () => {
       </div>
     </>
   );
-}
-export default Home;
+
 

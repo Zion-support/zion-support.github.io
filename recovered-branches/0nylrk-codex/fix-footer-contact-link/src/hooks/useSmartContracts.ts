@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -17,6 +18,7 @@ export function useSmartContracts() {;
 
 
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
+
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -28,7 +30,9 @@ export function useSmartContracts() {
   const { user } = useAuth(),
   const [isLoading, setIsLoading] = useState(false),
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
+
   
+
   const generateSolidityContract = async (
     values: ContractFormValues
     talent: TalentProfile
@@ -41,6 +45,7 @@ export function useSmartContracts() {
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
 
         body: {
+
           talentName: talent.full_name;
           clientName: clientName;
           projectName: values.projectName;
@@ -65,6 +70,7 @@ export function useSmartContracts() {
       
       if (error) throw error,
       
+
       if (data && data.solidityCode) {
         return data.solidityCode
 
@@ -88,9 +94,11 @@ export function useSmartContracts() {
     } finally {
       setIsLoading(false)
     }
+
   }
   },
   
+
   const deploySmartContract = async (
     contractCode: string;
     options: DeploymentOptions
@@ -102,6 +110,7 @@ export function useSmartContracts() {
       return null
     }
     try {
+
       setDeploymentStatus('deploying');
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
@@ -183,3 +192,4 @@ export function useSmartContracts() {
   }
 }
 ;
+

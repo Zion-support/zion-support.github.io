@@ -1,23 +1,24 @@
+
 ursor/fix-syntax-push-and-merge-to-main-40de
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
+
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import AppMinimal from './AppMinimal';
 import React from 'react';
 
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 describe('AppMinimal', () => {
   it('renders without crashing', () => {
     render(<AppMinimal />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+
   it('displays correct content', () => {
     render(<AppMinimal />);
   });
@@ -29,10 +30,12 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe("AppMinimal",() => { it("renders without crashing",() => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<AppMinimal />)}); it("handles user interactions",() => { render(<AppMinimal />)})});''"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 import { render, screen, describe, it, expect } from 'lucide-react'; import AppMinimal from './AppMinimal'; describe('AppMinimal',() => { it('renders without crashing',() => { render(<AppMinimal />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<AppMinimal />)}
 }); it('handles user interactions',() => { render(<AppMinimal />)})}
 });'
+
 </AppMinimal>'
 </AppMinimal>'
 </AppMinimal>'
@@ -52,7 +55,4 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import AppMinimal from "./AppMinimal"; describe('AppMinimal', () => { it('renders without crashing', () => { render(<AppMinimal />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<AppMinimal />)}); it("handles user interactions"
 ursor/automate-test-improve-and-merge-code-2480
 });
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

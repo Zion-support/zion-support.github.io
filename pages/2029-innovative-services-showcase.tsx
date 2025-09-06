@@ -1,17 +1,38 @@
 
 
 
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
+import { 
+  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
+  Phone, Mail, MapPin
+} from 'lucide-react',;
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 
+export default function InnovativeServicesShowcase2029() {
+  const allServices = [
+    ...aiAutonomousEcosystemServices2029,
+    ...emergingTechBreakthroughServices2029,
+    ...practicalBusinessSolutionServices2029
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
 import {
   Brain, Atom, Target, ArrowRight, CheckCircle, Star
   Phone, Mail, MapPin
@@ -20,11 +41,13 @@ import {;
   Brain, Atom, Target, ArrowRight, CheckCircle, Star,;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
+
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -88,6 +111,7 @@ export default function InnovativeServicesShowcase2029() {
 
 
 
+
         <section className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -111,6 +135,7 @@ export default function InnovativeServicesShowcase2029() {
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+
 
 
 
@@ -144,6 +169,7 @@ export default function InnovativeServicesShowcase2029() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
@@ -158,6 +184,7 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+
         {/* Services Overview */}
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
@@ -199,6 +226,7 @@ export default function InnovativeServicesShowcase2029() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Revolutionary Service Categories
@@ -207,7 +235,9 @@ export default function InnovativeServicesShowcase2029() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 revolutionize different aspects of business and technology.
@@ -216,6 +246,7 @@ export default function InnovativeServicesShowcase2029() {
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               {serviceCategories.map((category, index) => (
                 <motion.div
+
                   key={category.title}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -230,6 +261,7 @@ export default function InnovativeServicesShowcase2029() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   viewport={{ once: true }} className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
@@ -241,7 +273,9 @@ export default function InnovativeServicesShowcase2029() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                       and accelerate your success in the digital age.
@@ -251,6 +285,7 @@ export default function InnovativeServicesShowcase2029() {
                     </div>
                   </div>
                 </motion.div>
+
               ))}
             </div>
           </div>
@@ -304,6 +339,7 @@ export default function InnovativeServicesShowcase2029() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
                 Featured Services
@@ -312,7 +348,9 @@ export default function InnovativeServicesShowcase2029() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 and creating new possibilities for businesses worldwide.
@@ -321,6 +359,7 @@ export default function InnovativeServicesShowcase2029() {
             <div className="grid lg:grid-cols-2 gap-8">
               {allServices.slice(0, 4).map((service, index) => (
                 <motion.div
+
                   key={service.id}
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -334,6 +373,7 @@ export default function InnovativeServicesShowcase2029() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   viewport={{ once: true }} className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
@@ -352,6 +392,7 @@ export default function InnovativeServicesShowcase2029() {
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
+
                         {cat}
                       </span>
                     ))}
@@ -377,6 +418,7 @@ export default function InnovativeServicesShowcase2029() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </div>
 
 
@@ -392,6 +434,7 @@ export default function InnovativeServicesShowcase2029() {
                     </Link>
                   </div>
                 </motion.div>
+
               ))}
             </div>
             <motion.div
@@ -431,6 +474,7 @@ export default function InnovativeServicesShowcase2029() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               viewport={{ once: true }} className="text-center mt-16">
               <Link
                 href="/services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -440,6 +484,7 @@ export default function InnovativeServicesShowcase2029() {
             </motion.div>
           </div>
         </section>
+
         {/* Contact CTA */}
         {/* Contact CTA */  } catch (error) {
     console.error("Error:", error);
@@ -449,6 +494,7 @@ export default function InnovativeServicesShowcase2029() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
         <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
@@ -479,6 +525,7 @@ export default function InnovativeServicesShowcase2029() {
               <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
 
 
+
                 Join the future of technology with our innovative 2029 services.
 
 
@@ -499,6 +546,7 @@ export default function InnovativeServicesShowcase2029() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
 
 
 
@@ -544,6 +592,8 @@ export default function InnovativeServicesShowcase2029() {
     </>
 
 
+
+
             >;
               <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
                 Ready to Transform Your Business?;
@@ -587,6 +637,7 @@ export default function InnovativeServicesShowcase2029() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -598,4 +649,5 @@ export default function InnovativeServicesShowcase2029() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

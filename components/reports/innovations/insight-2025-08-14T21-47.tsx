@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
@@ -29,6 +30,7 @@ export default function Page() {
 
 
 
+
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
           }}
@@ -48,6 +50,7 @@ export default function Page() {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
 
+
 }
 
 
@@ -57,6 +60,7 @@ export default function Page() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
@@ -76,9 +80,11 @@ export default function Page() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

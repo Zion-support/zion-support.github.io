@@ -5,7 +5,9 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 export interface TalentGridProps {
@@ -15,6 +17,7 @@ export interface TalentGridProps {
   savedTalentIds: string[],
   onToggleSave: (id: string, isSaved: boolean) => void,
   isAuthenticated: boolean,
+
   viewProfile?: (id: string) => void,;
   clearFilters?: () => void;
   viewProfile?: (id: string) => void,
@@ -26,6 +29,7 @@ export interface TalentGridProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   handleRequestHire?: (talent: TalentProfile) => void
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -35,6 +39,7 @@ export function TalentGrid({
   onTalentClick
   savedTalentIds
   onToggleSave
+
 
   isAuthenticated;
   viewProfile;
@@ -54,12 +59,14 @@ export function TalentGrid({
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   handleRequestHire
 }: TalentGridProps) {
 
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)
+
 
 
     } else {
@@ -79,6 +86,7 @@ if ( {) {
       // Default implementation
 
   };
+
 
 
 
@@ -128,10 +136,12 @@ export function TalentGrid({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -171,16 +181,20 @@ export function TalentGrid(): any ({ ;
         </button>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       )}
     </div>
   }
 
 
 
+
       )}
     </div>;
   }
+
 
 
 
@@ -199,6 +213,7 @@ export function TalentGrid(): any ({ ;
           isAuthenticated={isAuthenticated}
         />;
       ))}
+
     </div>
   )
 }
@@ -206,6 +221,4 @@ export function TalentGrid(): any ({ ;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  }
-;
+

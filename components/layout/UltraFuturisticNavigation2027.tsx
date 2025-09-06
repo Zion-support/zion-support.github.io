@@ -1,8 +1,11 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 
@@ -43,6 +46,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
   Brain, Atom, Globe, Shield, Cpu, Database, 
   Cloud, Smartphone, Palette, Search, MessageSquare, ;
+
 
 
 
@@ -173,12 +177,77 @@ const serviceCategories = [;
       { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion-2028', description: 'Revolutionary healthcare AI', price: '$399/month' },;
       { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution-2028', description: 'Unlimited AI content generation', price: '$599/month' }
 
-    ];
-  };
+    ]
+  }
+    title: '🏢 2028 Enterprise Solutions'
+    icon: Shield
+    color: 'from-red-600 to-orange-600'
+    description: 'Enterprise-grade solutions'
+    services: [
+      {
+        name: 'Zero Trust Architecture 2028'
+        href: '/zero-trust-network-architecture-2028'
+        description: 'Next-gen security architecture'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2028'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
+      {
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2028'
+        description: 'Enterprise 5G solutions'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform-2028'
+        description: 'Enterprise blockchain'
+        price: 'Custom pricing'
+      }
+    ]
+  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
+      { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
+    ]
+  }
+    title: '🌌 2028 Metaverse & Digital Reality'
+    icon: Globe
+    color: 'from-pink-600 to-rose-600'
+    description: 'Virtual and augmented reality'
+    services: [
+      {
+        name: 'Holographic Metaverse'
+        href: '/holographic-metaverse-development-platform-2028'
+        description: '3D holographic experiences'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Multiverse Creation'
+        href: '/ai-multiverse-creation-platform-2028'
+        description: 'Create AI-powered multiverses'
+        price: '$29,999/month'
+      }
+      {
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform-2028'
+        description: 'Holographic event platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Digital Reality Interface'
+        href: '/digital-reality-interface-2028'
+        description: 'Next-gen reality interface'
+        price: '$4,999/month'
+      }
+    ]
+  },];
+const companyLinks = [
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
@@ -214,6 +283,7 @@ const technologyLinks = [
   { name: '📊 Analytics', href: '/analytics', icon: Database }
   { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
 ];
+
 
 const _serviceCategories = [
   {_title: '🚀 2028 Cutting-Edge Innovations', _icon: Rocket, _color: 'from-violet-600 to-purple-600', _description: 'Beyond the future of technology', _services: [
@@ -347,6 +417,7 @@ const company_links = [;
 
 
 
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -414,6 +485,7 @@ if (return) {
       icon: <Brain className='w-5 h-5' />
       color: 'from-purple-500 to-indigo-600'
       children: [
+
         {          name: 'AI Consciousness Platform'
           href: '/services/ai-consciousness-platform'
           description: 'Advanced AI consciousness simulation'
@@ -1119,6 +1191,7 @@ icon: <Building className="w-5 h-5" />,
 
   ];
 
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -1157,10 +1230,24 @@ icon: <Building className="w-5 h-5" />,
     }`}>;
       {/* Animated Background */}
 
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
+      <div className="relative container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-3 group relative z-10">
+            <motion.div 
+              className="w-12 h-12 bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/30"
+              whileHover={{ rotate: 5, scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Zap className="w-7 h-7 text-white" />
+            </motion.div>
+            <div className="hidden sm:block">
+              <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
+                Zion Tech Group
+              </div>
+              <div className="text-xs text-gray-400 group-hover:text-cyan-300 transition-colors">
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 Revolutionary Technology Solutions
               </div>
@@ -1554,6 +1641,7 @@ icon: <Building className="w-5 h-5" />,
             {navigation.map(item => (
               <div key={item.name} className='relative group'>
                 <motion.button
+
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}          <nav className="hidden xl:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -1574,6 +1662,7 @@ icon: <Building className="w-5 h-5" />,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0 && 0.95 }}
@@ -1584,6 +1673,7 @@ icon: <Building className="w-5 h-5" />,
                     {item.icon}
                   </div>
                   <span className='font-medium'>{item.name}</span>
+
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion.button>                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
                     {item.icon}
                   </div>
@@ -1609,6 +1699,7 @@ icon: <Building className="w-5 h-5" />,
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {/* Dropdown Menu */}
                 <AnimatePresence>;
                   {activeDropdown === item && item.name && (;
@@ -1626,7 +1717,9 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1713,6 +1806,7 @@ icon: <Building className="w-5 h-5" />,
                                 <div className='text - sm font - medium text - cyan - 400'>;
                                   {child.price}
                                 </div>
+
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
@@ -1883,6 +1977,7 @@ icon: <Building className="w-5 h-5" />,
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                             </Link>
                           ))}
                         </div>
@@ -1896,12 +1991,14 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
@@ -1912,6 +2009,7 @@ icon: <Building className="w-5 h-5" />,
                 <span>{contactInfo && contactInfo.mobile}</span>;
               </a>;
               <a
+
 
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
@@ -1932,6 +2030,7 @@ icon: <Building className="w-5 h-5" />,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
@@ -1959,10 +2058,12 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1990,7 +2091,9 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -2005,6 +2108,7 @@ icon: <Building className="w-5 h-5" />,
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
+
 
 
 
@@ -2031,6 +2135,7 @@ icon: <Building className="w-5 h-5" />,
                     {navigation.map (item => (
                       <div key={item.name}>;
                         <Link;
+
 
 
           >
@@ -2084,6 +2189,7 @@ icon: <Building className="w-5 h-5" />,
                     ))}
                   </div>
                 </div>
+
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
 
@@ -2100,6 +2206,7 @@ icon: <Building className="w-5 h-5" />,
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <div>
@@ -2169,6 +2276,8 @@ icon: <Building className="w-5 h-5" />,
 export default UltraFuturisticNavigation2027;
 
 
+export default UltraFuturisticNavigation2027;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export default UltraFuturisticNavigation2027;
+
 

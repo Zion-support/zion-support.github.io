@@ -20,8 +20,10 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
+
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
+
 
 
 
@@ -37,6 +39,7 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
+
 
 
 export default function LanguageSwitcher() {
@@ -55,6 +58,7 @@ export default function LanguageSwitcher() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -160,6 +164,7 @@ export default function LanguageSwitcher() {;
         </ul>;
       )}
     </div>
+
 );
 }
   );
@@ -262,6 +267,7 @@ function LanguageSwitcher() {
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
+
 
 
 

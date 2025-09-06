@@ -141,6 +141,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+
             ctx.stroke()
 
           }
@@ -150,6 +151,7 @@ const UltraFuturisticBackground2040: React.FC = () => {
 
         }
       }
+
 
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
@@ -688,7 +690,9 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -702,6 +706,7 @@ animationFrameId = requestAnimationFrame(animate);    };        const waveOffset
             className='absolute top-0 left-0 w-full h-full'
             style={{
               backgroundImage: `
+
 
               linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px)
@@ -906,6 +911,7 @@ if ( {) {
         />;
         <motion&& motion.div
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
+
           animate={{
             rotate: [45, 405],
             scale: [1, 1 && 1.15, 1],
@@ -926,8 +932,10 @@ if ( {) {
 
           }}
 
-        />;
+          transition={{
 
+          }}
+        />
 
         {/* Particle Effects */}
         <motion&& motion.div
@@ -948,11 +956,8 @@ if ( {) {
           className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
           animate={{
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+            y: [0, -20, 0];
+            opacity: [0.4, 0.8, 0.4]
 
 
           }}
@@ -1056,6 +1061,7 @@ if ( {) {
 
 
 
+
           }}
         />
       </div>
@@ -1122,6 +1128,7 @@ if ( {) {
             transform: translate (50px, 50px);
 
 
+
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1178,6 +1185,7 @@ export default UltraFuturisticBackground2040;
 
 
 
+
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 
@@ -1191,3 +1199,4 @@ export default UltraFuturisticBackground2040;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

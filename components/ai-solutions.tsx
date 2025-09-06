@@ -1,11 +1,14 @@
+
 import React from 'react',
 import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+
 
 
 
@@ -26,6 +29,7 @@ export default function AISolutionsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     {
       id: 'natural-language-processing'
@@ -380,6 +384,7 @@ export default function AISolutionsPage() {;
         <meta property="og:description" content="Advanced AI solutions for machine learning, natural language processing, computer vision, and autonomous systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+
       
 
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -426,11 +431,13 @@ export default function AISolutionsPage() {;
                         <li key={featureIndex} className="text-sm text-white/60 flex items-center">;
                           <span className="text-cyan-400 mr-2">•</span>;
 
+
                           {feature}
                         </li>;
                       ))}
                     </ul>;
                     <Link
+
                       href={`/services#${solution && solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
@@ -451,11 +458,13 @@ export default function AISolutionsPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
               </div>
             </div>
+
 
 
 
@@ -475,6 +484,7 @@ export default function AISolutionsPage() {;
 
 
 
+
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -489,8 +499,10 @@ export default function AISolutionsPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {useCases.map((useCase, index) => (
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -526,6 +538,7 @@ export default function AISolutionsPage() {;
 
 
 
+
               </div>;
             </div>;
 
@@ -541,6 +554,7 @@ export default function AISolutionsPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
             {/* Technologies */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -548,6 +562,7 @@ export default function AISolutionsPage() {;
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='flex flex-wrap justify-center gap-4'>
+
                   {technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -574,12 +589,14 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
             </div>
+
 
 
 
@@ -599,6 +616,7 @@ export default function AISolutionsPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Success Stories */}
 
 
@@ -652,6 +670,7 @@ export default function AISolutionsPage() {;
     </>
 
 
+
                   Explore Insights;
                 </Link>;
               </div>;
@@ -670,4 +689,5 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

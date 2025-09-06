@@ -1,9 +1,12 @@
+
 import React, { useEffect, useState, useCallback } from 'react',
 import React, { useEffect, useState, useCallback } from 'react';
+
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -73,6 +76,7 @@ import {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
@@ -80,6 +84,8 @@ import {
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
+
+
 
 
 
@@ -204,6 +210,33 @@ const Homepage2043: React.FC = () => {
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
   const testimonials = [
     {
+
+
+      content:
+        "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods."
+      rating: 5
+      avatar: '👩‍🔬'
+    }
+    {
+      name: 'Marcus Rodriguez'
+      role: 'CTO'
+      company: 'SpaceMining Corp'
+      content:
+        "The autonomous space mining AI has increased our resource extraction efficiency by 500%. It's like having a team of expert miners working 24/7 without breaks."
+      rating: 5
+      avatar: '👨‍🚀'
+    }
+    {
+      name: 'Dr. Emily Watson'
+      role: 'Research Director'
+      company: 'Consciousness Research Institute'
+      content:
+        "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless."
+      rating: 5
+      avatar: '👩‍💻'
+    }
+  ];
+
 
   const handleGetStarted = useCallback(() => {
     window.location.href = '/revolutionary-2040-2041-pricing-showcase';
@@ -400,11 +433,13 @@ const Homepage2043: React.FC = () => {
       <main className='relative z-10'>
 
 
+
         {/* Hero Section */}
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         <section
           className='min-h-screen flex items-center justify-center px-4 relative overflow-hidden'
@@ -624,12 +659,26 @@ const Homepage2043: React.FC = () => {
                     scale: [0, 1.5, 0]}}
 
 
+                  }}
+                  style={{
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`
+                  }}                />                    ease: "easeInOut"
+                  }}
+                  style={{
+                    left: `${Math.random() * 100}%`
+                    top: `${Math.random() * 100}%`}}
+              ))}
+            </div>
+
+
 
 
               ))}
             </div>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
 
 
@@ -657,6 +706,7 @@ const Homepage2043: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
               transition={{ duration: 0 && 0.8 }}>;
@@ -664,6 +714,7 @@ const Homepage2043: React.FC = () => {
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />                Revolutionary 2043 Technology
               </div>
+
               {/* Main Heading */}              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 mr-2" />
 
@@ -677,6 +728,7 @@ const Homepage2043: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 Revolutionary 2043 Technology
               </div>
               {/* Main Heading */}
@@ -787,6 +839,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -798,11 +851,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 ))}
               </div>
             </motion.div>
           </div>
         </section>
+
 
 
 
@@ -818,6 +873,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Enhanced Features Section */}
         <section className='py-20 px-4 relative'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative">;
@@ -838,12 +894,14 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -857,7 +915,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -948,7 +1008,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -973,6 +1035,8 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
+
                     href={feature.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
@@ -984,6 +1048,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
+
 
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                     <feature && feature.icon className='w-8 h-8 text-white' />;
@@ -1033,6 +1098,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
         {/* Enhanced Featured Services Section */}
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">;
@@ -1052,12 +1118,14 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -1071,7 +1139,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1106,6 +1176,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Featured;
@@ -1129,6 +1200,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -1143,7 +1215,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1194,7 +1268,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1203,6 +1279,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                 <button
                   onClick={prevService}
                   className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
+
 
 
 
@@ -1221,6 +1298,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 >
                   <ChevronLeft className='w-6 h-6' />
                 </button>
@@ -1231,6 +1309,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   <ChevronRight className='w-6 h-6' />
                 </button>
                 {/* Service Indicators */}
+
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>                  {featuredServices.map((_, index) => (                >
                   <ChevronLeft className="w-6 h-6" />
                 </button>
@@ -1279,6 +1358,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
@@ -1292,7 +1372,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                       }`}
                     />;
                   ))}
@@ -1301,6 +1383,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             </div>
           </div>
         </section>
+
 
 
 
@@ -1318,11 +1401,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
         {/* Enhanced Testimonials Section */}
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
 
 
 
@@ -1340,11 +1425,13 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+
 
 
 
@@ -1358,6 +1445,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 What Our
@@ -1387,6 +1475,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
             <div className="relative">
               <AnimatePresence mode="wait">
                 <motion.div
+
 
 
               className='text-center mb-16'>;
@@ -1438,6 +1527,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -1448,7 +1538,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <div className='text-8xl mb-6'>💬</div>
@@ -1458,10 +1550,33 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                   <div className='flex items-center justify-center gap-4 mb-6'>
                     <div className='text-4xl'>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+                      {testimonials[currentTestimonialIndex].avatar}
+                    </div>
+                    <div>
+                      <div className='text-xl font-semibold text-white'>
+                        {testimonials[currentTestimonialIndex].name}
+                      </div>
+                      <div className='text-gray-400'>
+                        {testimonials[currentTestimonialIndex].role} at{' '}
+                        {testimonials[currentTestimonialIndex].company}
+                      </div>
+                    </div>
+                  </div>
+                  <div className='flex justify-center gap-1'>
+                    {[
+                      ...Array(testimonials[currentTestimonialIndex].rating)
+                    ].map((_, i) => (
+                      <Star
+                        key={i}
+                        className='w-6 h-6 text-yellow-400 fill-current'
+                      />                    ))}
+                  <div className="flex justify-center gap-1">
+                    {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
+                      <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+              {/* Testimonial Indicators */}
 
 
                 {testimonials.map((_, index) => (
@@ -1472,6 +1587,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
                       index === currentTestimonialIndex 
                         ? 'bg-emerald-400 w-8' 
                         : 'bg-white/30 hover:bg-white/50'
+
 
 
 
@@ -1493,6 +1609,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
                     }`}
                   />
                 ))}
@@ -1504,7 +1621,9 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -1520,6 +1639,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1528,6 +1648,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1601,6 +1722,7 @@ className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white fon
     </Layout>
 
   );
+
 }
 Math.random () * 100
 };
@@ -1609,6 +1731,7 @@ Math.random () * 100
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }%`;
@@ -1688,6 +1811,7 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   {
 
 
+
 };
 export default Homepage2043;
 
@@ -1696,4 +1820,5 @@ export default Homepage2043;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface ChatMessageProps {
 
   message: string
@@ -20,6 +22,8 @@ interface ChatMessageProps {
 
   timestamp: Date
 }
+
+
 
 
 
@@ -43,24 +47,28 @@ interface ChatMessageProps {
         )}
       </Avatar>
       <div className={cn(
+
         "max-w-[80%] rounded-lg px-4 py-2 text-sm";
         isUser
           ? "bg-zion-purple text-white"
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser 
           ? "bg-zion-purple text-white" 
+
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
+
           "text-xs mt-1";
           isUser
             ? "text-white/70"
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
+
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -78,9 +86,11 @@ function formatMessageWithLinks(message: string): string {
   let formattedMessage = message.replace(
     urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
+
   );
   ),
   
+
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -89,6 +99,8 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
+
+
 
 
 
@@ -173,6 +185,7 @@ function formatMessageWithLinks(): any (message: string): string {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -181,6 +194,7 @@ function formatMessageWithLinks(): any (message: string): string {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -201,3 +215,5 @@ export /**
 function ChatMessage() {
   const { theme } = use_theme ();
 ;
+
+

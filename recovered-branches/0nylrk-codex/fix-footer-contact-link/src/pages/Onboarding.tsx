@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useAuth} from "@/hooks/useAuth";
@@ -25,6 +26,7 @@ export default function Onboarding() {;
 
 
 
+
   // Convert our user types to match what's expected in the database
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -36,6 +38,7 @@ export default function Onboarding() {;
       default:
         return "buyer"
     }
+
   }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type);
@@ -44,6 +47,7 @@ export default function Onboarding() {;
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
     setUserType(type),
     
+
     // Direct to specific registration page based on user type
     if (type === "serviceProvider") {
       navigate('/service-onboarding')
@@ -54,12 +58,15 @@ export default function Onboarding() {;
     }
     // Continue with the onboarding flow for clients
     setCurrentStep(1)
+
   }
   },
+
 
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({
+
         title: "Authentication Error"
         description: "Your session may have expired. Please log in again."
         variant: "destructive"})
@@ -76,6 +83,7 @@ export default function Onboarding() {;
     
     const dbUserType = mapUserTypeToDatabase(userType),
     
+
     try {
       await updateProfile({
         id: user.id
@@ -84,21 +92,26 @@ export default function Onboarding() {;
         userType: dbUserType
         headline: data.headline
         profileComplete: true
+
       });
       }),
       
+
       // Update onboarding milestone
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id
         _milestone: 'profile_completed'
         _status: true
+
       });
       }),
       
+
       toast({
         title: 'Profile completed!'
         description: 'Your profile has been set up successfully.'})
       // Get the appropriate dashboard route based on user type
+
       const dashboardRoute = userType === "client"
         ? "/client-dashboard"
         : "/talent-dashboard";
@@ -106,6 +119,7 @@ export default function Onboarding() {;
         ? "/client-dashboard" 
         : "/talent-dashboard",
       
+
       // Redirect to dashboard
       navigate(dashboardRoute)
     } catch (error) {
@@ -115,16 +129,20 @@ export default function Onboarding() {;
         description: 'There was a problem updating your profile. Please try again.'
         variant: 'destructive'})
     }
+
   }
   },
+
 
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
+
     navigate('/login');
 
     navigate('/login'),
+
     return null
 
   }
@@ -134,6 +152,7 @@ export default function Onboarding() {;
                 <Step
                   key={index}
                   status={
+
                     currentStep> index;
                       ? "complete";
                       : currentStep === index;
@@ -151,6 +170,7 @@ export default function Onboarding() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   }
                   label={step && step.label}
@@ -179,6 +199,8 @@ export default function Onboarding() {;
 
 
 
+
+
                 >;
                   Back to Role Selection;
                 </Button>;
@@ -195,9 +217,11 @@ export default function Onboarding() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 }
 ;
+

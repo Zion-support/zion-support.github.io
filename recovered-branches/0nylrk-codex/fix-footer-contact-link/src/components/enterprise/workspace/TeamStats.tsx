@@ -4,6 +4,7 @@ import {
 
 
 
+
   Card,
   CardContent,
   CardDescription,
@@ -17,6 +18,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "@/components/ui/card";
 
@@ -37,6 +39,7 @@ export function TeamStats() {;
           <Progress value={64} className="h-2" />
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
+
         <div className="space-y-4 pt-2">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1">
@@ -87,10 +90,12 @@ export function TeamStats() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
+
         
 
 
@@ -103,6 +108,7 @@ export function TeamStats() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
@@ -111,6 +117,12 @@ export function TeamStats() {
       </CardContent>
 
 
+  )
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Progress } from "@/components/ui/progress";
+export function TeamStats() {;
+  return (;
 
     <Card>;
       <CardHeader>;
@@ -153,6 +165,14 @@ export function TeamStats() {
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
 
+            View Full Analytics;
+          </button>;
+        </div>;
+      </CardContent>;
+
+    </Card>;
   );
 }
 ;
+
+

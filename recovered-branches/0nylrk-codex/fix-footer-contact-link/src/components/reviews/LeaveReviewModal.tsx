@@ -3,12 +3,14 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
+
 
 
 
@@ -23,6 +25,25 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
+interface LeaveReviewModalProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
+
+import { useState, useEffect } from "react",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { ReviewForm } from "./ReviewForm",;
+import { useReviews } from "@/hooks/useReviews",;
 
 interface LeaveReviewModalProps {;
   projectId: string,;
@@ -71,6 +92,7 @@ export function LeaveReviewModal(): any ({;
         handleOpenChange(false);
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       return success;
@@ -98,6 +120,7 @@ export function LeaveReviewModal(): any ({;
 
 
   
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;
       <DialogContent className="max-w-md">;
@@ -119,18 +142,7 @@ export function LeaveReviewModal(): any ({;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
-        />
-      </DialogContent>
-    </Dialog>
-  )
-}
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
@@ -151,3 +163,6 @@ function LeaveReviewModal() {
   const { user_review, submit_review, update_review, is_submitting } = use_reviews (project_id);
   const [open, set_open] = useState (is_open);
 ;
+=======
+
+

@@ -64,10 +64,12 @@ function matchesService(profile: TalentProfile, service?: string) {
   const s = service.toLowerCase();
   return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
+
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
     [region, service]
+
   );
 
 
@@ -259,6 +261,8 @@ export default function TalentGrid(_{_region, _service}: Props) {_const _items =
         </div>
       ))}
     </div>
+
   )
 
 }
+

@@ -1,3 +1,4 @@
+
  password.toLowerCase () .includes (pattern) );
 password.toLowerCase () .includes (pattern) );
 
@@ -5,6 +6,7 @@ password.toLowerCase () .includes (pattern) );
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
 if (strength = 'very - weak') {
@@ -158,6 +160,7 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
+
   }      suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words')
     }
@@ -298,3 +301,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

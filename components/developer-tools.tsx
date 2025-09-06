@@ -1,17 +1,26 @@
+
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Code
+
+
+  Cpu,;
+  Globe,;} from 'lucide-react';import { ;
+
+  Code;
+
   GitBranch
   Database
   Cloud
   Shield
   Zap
+
   Star
   ExternalLink
   CheckCircle
@@ -28,6 +37,7 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
+
 
 
 
@@ -52,15 +62,121 @@ import {
 
 export default function DeveloperToolsPage() {_const _developerTools = [
     {
-      icon: <Code className=&quot;w-8 h-8 text-white&quot; />,
 
-      title: 'GitHub Copilot',
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
+      icon: <Code className='w-8 h-8 text-white' />
+      title: 'GitHub Copilot'
+      description:
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
+      features: [
+        'Intelligent code completion'
+        'Multi-language support'
+        'IDE integration'
+        'Code explanation'
+        'Security vulnerability detection'
+      ],      pricing: '$10/month',      title: 'GitHub Copilot'
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
+      features: [
+        'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection';
+      ];
+      pricing: '$10/month'
+      marketPrice: '$10-20/month'
+      website: 'https://github.com/features/copilot'
+      color: 'bg-gradient-to-br from-gray-500 to-black'
+      textColor: 'text-gray-400'
+      gradient: 'from-gray-400 to-black'
+      popular: true
+      category: 'Code Generation'
+    }
+      icon: <GitBranch className='w-8 h-8 text-white' />
+      title: 'GitHub Pro'
+      description:
+        'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.'
+      features: [
+        'Unlimited private repositories'
+        'Advanced code review tools'
+        'Priority support'
+        'Advanced insights'
+        'Team management features'
+      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
+      ];
+      pricing: '$4/month'
+      marketPrice: '$4/month'
+      website: 'https://github.com/pricing'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'
+      popular: true
+      category: 'Version Control'
+    }
+      icon: <Database className='w-8 h-8 text-white' />
+      title: 'MongoDB Atlas'
+      description:
+        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.'
+      features: [
+        'Fully managed MongoDB'
+        'Auto-scaling & optimization'
+        'Global distribution'
+        'Advanced security'
+        'Real-time analytics'
+      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
+      ];
+      pricing: '$9/month'
+      marketPrice: '$9-57/month'
+      website: 'https://www.mongodb.com/atlas'
+      color: 'bg-gradient-to-br from-green-500 to-blue-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-blue-500'
+      popular: false
+      category: 'Database'
+    }
+      icon: <Cloud className='w-8 h-8 text-white' />
+      title: 'Vercel Pro'
+      description:
+        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.'
+      features: [
+        'Zero-config deployments'
+        'Preview deployments'
+        'Advanced analytics'
+        'Team collaboration'
+        'Custom domains'
+      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
+      ];
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://vercel.com/pricing'
+      color: 'bg-gradient-to-br from-black to-gray-600'
+      textColor: 'text-gray-400'
+      gradient: 'from-black to-gray-500'
+      popular: false
+      category: 'Deployment'
+    }
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Snyk'
+      description:
+        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.'
+      features: [
+        'Vulnerability scanning'
+        'Dependency monitoring'
+        'Container security'
+        'Infrastructure as Code'
+        'CI/CD integration'
+      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
+      ];
+      pricing: '$25/month'
+      marketPrice: '$25-100/month'
+      website: 'https://snyk.io/pricing'
+      color: 'bg-gradient-to-br from-red-500 to-pink-600'
+      textColor: 'text-red-400'
+      gradient: 'from-red-400 to-pink-500'
+      popular: false
+      category: 'Security'
+    }
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Postman'
+      description:
+        'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
       features: [
 
-
-
-    },  ];
 
   ];
 
@@ -275,6 +391,7 @@ export default function DeveloperToolsPage() {;
       </section>
       {/* Developer Market Statistics */}
 
+
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -392,11 +509,13 @@ export default function DeveloperToolsPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -420,6 +539,7 @@ export default function DeveloperToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Curated Developer Tools & Services
             </h2>
@@ -608,6 +728,7 @@ export default function DeveloperToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -621,6 +742,7 @@ export default function DeveloperToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
@@ -631,6 +753,7 @@ export default function DeveloperToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -644,6 +767,7 @@ export default function DeveloperToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               Complete Developer Workflow
             </h2>
@@ -712,14 +836,17 @@ export default function DeveloperToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Tool Categories */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
               Developer Tool Categories
 
@@ -746,6 +873,7 @@ export default function DeveloperToolsPage() {;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -798,6 +926,7 @@ export default function DeveloperToolsPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -821,10 +950,12 @@ export default function DeveloperToolsPage() {;
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
             Ready to Level Up Your Development?
 
@@ -835,6 +966,7 @@ export default function DeveloperToolsPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
@@ -861,6 +993,7 @@ export default function DeveloperToolsPage() {;
             >
               Explore AI Tools
             </Button>
+
             <Button
 href="/contact"
               variant="outline"
@@ -882,4 +1015,5 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,3 +1,4 @@
+
 import {
   EnvelopeIcon
   PhoneIcon
@@ -9,6 +10,7 @@ import React from 'react';
 
 
 const contactMethods = [
+
 
 
 const contactMethods = [
@@ -69,14 +71,18 @@ const faqs = [;
     question: 'What security measures do you have?'
     answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
+
 export default function ContactPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
+
 export default function ContactPage() {
 
 
   return (
     <div className="bg-black">
+
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -84,10 +90,10 @@ export default function ContactPage() {
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               Get in{' '}
 
-
-
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                Touch
+              </span>
+            </h1>
 
 
               technology can accelerate your growth and innovation.
@@ -96,11 +102,36 @@ export default function ContactPage() {
         </div>
       </div>
 
+      {/* Contact methods */}
+      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Contact Us</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Multiple ways to reach us
+          </p>
+        </div>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            {contactMethods.map((method) => (
+              <div key={method.name} className="flex flex-col group">
+                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
+                  <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
+                  {method.name}
+                </dt>
+
+                    >
+                      {method.value} <span aria-hidden="true">→</span>
+                    </Link>
+                  </p>
+                </dd>
+              </div>
+            ))}
 
           </dl>;
         </div>;
       </div>;
       {/* Contact form */}
+
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
@@ -109,6 +140,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
 
             Let's start a conversation
@@ -202,6 +234,7 @@ export default function ContactPage() {
         </div>;
       </div>;
 
+
       {/* Office locations */}
       <div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
@@ -238,6 +271,7 @@ export default function ContactPage() {
                   {faq.question}
                 </dt>;
                 <dd className=&quot;text - base leading - 7 text - gray - 300 & quot;>;
+
 
 
 

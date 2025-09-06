@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,6 +26,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
 
 
 
@@ -84,6 +86,7 @@ const serviceCategories = [
     icon: Network,
     color: 'from-purple-500 to-pink-600',
 
+
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
 ];
@@ -96,6 +99,7 @@ const heroFeatures = [
 
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   }
+
 
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
@@ -110,7 +114,115 @@ const contactInfo = {;
   }
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+],;
+const serviceCategories = [;
+  {;
+    title: 'Quantum Cloud Computing';
+    description: 'Next-generation cloud infrastructure with quantum processing capabilities';
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing');
+    icon: Cloud;
+    color: 'from-indigo-500 to-purple-600';
+    features: ['Quantum ProcessingHybrid ComputingAI Acceleration'];
+  },;
+  {;
+    title: 'Edge Computing & IoT',;
+    description: 'Autonomous edge infrastructure with intelligent optimization',;
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Edge Computing & IoT');
+    icon: Wifi,;
+    color: 'from-green-500 to-emerald-600',;
+    features: ['Edge ProcessingIoT Orchestration5G Optimization'];
+  },;
+  {;
+    title: 'Cybersecurity',;
+    description: 'Comprehensive security framework with continuous verification',;
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Cybersecurity');
+    icon: SecurityIcon,;
+    color: 'from-red-500 to-orange-600',;
+    features: ['Zero TrustThreat DetectionCompliance Automation'];
+  },;
+  {;
+    title: 'Data Center Infrastructure',;
+    description: 'Self-managing data center infrastructure with AI optimization',;
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Data Center Infrastructure');
+    icon: Building,;
+    color: 'from-blue-500 to-cyan-600',;
+    features: ['AI ManagementPredictive MaintenanceCost Optimization'];
+  },;
+  {;
+    title: 'Quantum Networking',;
+    description: 'Next-generation networking with quantum encryption and optimization',;
+    services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking');
+    icon: Network,;
+    color: 'from-purple-500 to-pink-600',;
+    features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring'];
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const heroFeatures = [;
+  {;
+    title: 'Quantum Computing';
+    description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.';
+    icon: Atom;
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
+  };
+  {;
+    title: 'AI-Powered Automation',;
+    description: 'Intelligent automation that reduces operational costs by up to 70% while improving reliability.',;
+    icon: Brain,;
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600';
+  },;
+  {;
+    title: 'Edge Computing',;
+    description: 'Distributed edge infrastructure that reduces latency and provides real-time processing capabilities.',;
+    icon: Wifi,;
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
+  },;
+  {;
+    title: 'Zero Trust Security',;
+    description: 'Continuous verification and monitoring that provides comprehensive protection against modern threats.',;
+    icon: Shield,;
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const testimonials = [;
+  {;
+    name: 'Dr. Jennifer Martinez';
+    role: 'CTO, QuantumTech Industries',;
+    company: 'QuantumTech Industries',;
+    content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',;
+    rating: 5,;
+    avatar: '👩‍🔬';
+  },;
+  {;
+    name: 'Robert Thompson',;
+    role: 'Infrastructure Director, EdgeNet Solutions',;
+    company: 'EdgeNet Solutions',;
+    content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',;
+    rating: 5,;
+    avatar: '👨‍💼';
+  },;
+  {;
+    name: 'Lisa Chang',;
+    role: 'Security CISO, SecureCorp International',;
+    company: 'SecureCorp International',;
+    content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',;
+    rating: 5,;
+    avatar: '👩‍🔒';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+
+
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
@@ -124,6 +236,7 @@ export default function AdvancedITInfrastructureServices() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
       </Head>
+
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
@@ -254,21 +367,25 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
 
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
             </h1>
+
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
+
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
+
 
 
 
@@ -293,6 +410,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
@@ -313,6 +431,7 @@ export default function AdvancedITInfrastructureServices() {
             </div>
           </motion.div>
         </div>
+
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -336,6 +455,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -344,6 +464,7 @@ export default function AdvancedITInfrastructureServices() {
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -355,6 +476,7 @@ export default function AdvancedITInfrastructureServices() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -370,6 +492,7 @@ export default function AdvancedITInfrastructureServices() {
                   </div>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -419,10 +542,12 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
             </h2>
+
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive infrastructure solutions covering quantum computing
               edge computing, security, and data centers
@@ -535,6 +660,7 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -543,6 +669,7 @@ export default function AdvancedITInfrastructureServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
+
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -592,6 +719,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -609,6 +737,7 @@ export default function AdvancedITInfrastructureServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
+
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.description}
                           </p>
@@ -652,6 +781,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -671,6 +801,7 @@ export default function AdvancedITInfrastructureServices() {
                         </div>
                       </div>
                     </motion.div>
+
                   ))}
                 </div>
               </motion.div>
@@ -722,6 +853,7 @@ export default function AdvancedITInfrastructureServices() {
 
 
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -730,6 +862,7 @@ export default function AdvancedITInfrastructureServices() {
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -774,6 +907,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -787,6 +921,7 @@ export default function AdvancedITInfrastructureServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -854,6 +989,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -866,6 +1002,7 @@ export default function AdvancedITInfrastructureServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
+
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
               </Link>
               <Link
@@ -896,6 +1033,7 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -909,6 +1047,7 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
       </section>
+
 
 
 
@@ -941,3 +1080,4 @@ export default function AdvancedITInfrastructureServices() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

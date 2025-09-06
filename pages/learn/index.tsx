@@ -2,10 +2,12 @@
 
 
 
+
     category: '',
     level: '',
     isFree: '',;
   });  const [courses, setCourses] = useState<Course[]>([]);
+
 
 
 
@@ -20,22 +22,27 @@ export default function LearnMarketplace(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
     async function load() {;
+
+
       setLoading(true);
 
       const params = new URLSearchParams();
 
 
       setLoading(false);
+
     }
     load ();
   }, [filters]);
@@ -66,6 +73,7 @@ export default function LearnMarketplace(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between gap-4">
@@ -79,6 +87,7 @@ export default function LearnMarketplace(req, res) {
       {loading ? (
         <div>Loading...</div>
       ) : (
+
 
 
 
@@ -101,6 +110,7 @@ export default function LearnMarketplace(req, res) {
 
 
 
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {courses.map((c) => (
             <CourseCard key={c.id} course={c} />
@@ -116,9 +126,11 @@ export default function LearnMarketplace(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

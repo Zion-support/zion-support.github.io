@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ReferralTableProps {
 
@@ -23,11 +25,13 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
+
     switch (status) {;
 
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
     switch (status) {
       case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
+
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
 
@@ -42,8 +46,10 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return null;
 
     }
+
   }
   },
+
 
   if (isLoading) {
     return (
@@ -64,6 +70,8 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
+
+
 
 
 
@@ -115,14 +123,29 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
     );
   }
 
+;
+  return (;
+    <Table>;
+      <TableHeader>;
+        <TableRow>;
+          <TableHead>Date</TableHead>;
+          <TableHead>Email</TableHead>;
+          <TableHead>Status</TableHead>;
+          <TableHead>User Type</TableHead>;
+          <TableHead>Completed On</TableHead>;
+          <TableHead>Reward</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {referrals.map((referral) => (;
+          <TableRow key={referral.id}>;
+            <TableCell>{formatDate(referral.created_at)}</TableCell>;
+            <TableCell>{referral.email || '-'}</TableCell>;
+            <TableCell>{renderStatusBadge(referral.status)}</TableCell>;
+            <TableCell>;
+              {referral.referred_user_type;
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 : '-'}
             </TableCell>;

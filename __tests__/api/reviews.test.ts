@@ -6,6 +6,8 @@ import productReviewsHandler from '@/pages/api/reviews/[productId]'
 import { supabase } from '@/integrations/supabase/client'
 } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
+
+
 jest.mock('@prisma/client'
           this.name = 'PrismaClientKnownRequestError'
 jest.mock('@/integrations/supabase/client'
@@ -58,6 +60,7 @@ describe('/api/reviews API Endpoint'
           "where"
         "method"
         "method"
+
         "error"
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {
@@ -417,3 +420,4 @@ import { createMocks,RequestMethod } from 'node-mocks-http' import type { NextAp
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
         "error"
+

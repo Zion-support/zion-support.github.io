@@ -8,11 +8,13 @@ export default function SiteHealth() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -43,6 +45,7 @@ export default function SiteHealth() {
             <Link href="/automation"><a>Automations</a></Link>
             <Link href="/reports/seo"><a>SEO Audit</a></Link>
             <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
+
 
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>;
       <Head>;
@@ -373,4 +376,5 @@ import Head from 'next / head';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

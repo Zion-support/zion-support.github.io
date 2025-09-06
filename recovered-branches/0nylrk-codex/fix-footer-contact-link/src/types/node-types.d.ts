@@ -1,4 +1,5 @@
 // Add basic type definitions for Node.js globals used in the project;
+
 interface Process {env: {;
     [key: string]: string | undefined;
     NODE_ENV: 'development' | 'production' | 'test';
@@ -23,5 +24,6 @@ interface Process {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

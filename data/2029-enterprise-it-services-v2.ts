@@ -1,11 +1,13 @@
 
 
 
+
     deployment: 'Cloud-native, hybrid options',
 
     maintenance: 'Fully autonomous, continuous optimization',
     training: 'IT operations training, certification',
     documentation: 'Operations guides, best practices',
+
 
 
 
@@ -324,6 +326,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     contact: {
 
 
+
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
@@ -341,6 +344,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
     ];
@@ -382,10 +386,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
 
+
     }
   }
 ];
 export interface EnterpriseITService2029V2 {;
+
 
 
   id: string,;
@@ -618,9 +624,12 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
       address: '364 E Main St STE 1008 Middletown DE 19709';
 
 
+
+
     }
   }
 ];
+
 
 ;
 
@@ -631,3 +640,4 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
   }
 ];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

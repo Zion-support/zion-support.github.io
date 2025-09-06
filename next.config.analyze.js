@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -20,12 +21,14 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 };
 ;
 ,;
 ;};
 ;
 };
+
 ,
 
 
@@ -49,16 +52,20 @@ origin/automation-improvements-final
 
 
 
+
 }
 ;}
 }
+
 origin/main
+
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module && module.exports = {
   "webpack": (config, { isServer }) => {
   if (!isServer) {
   config && config.plugins.push(;
         new BundleAnalyzerPlugin({
+
 
 
 
@@ -75,3 +82,4 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

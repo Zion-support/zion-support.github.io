@@ -33,6 +33,7 @@ function updateIconImportsInFile(filePath) {
     )
     // Only write if changes were made
     if (content !== updatedContent) {
+
       fs.writeFileSync(filePath, updatedContent, 'utf8')
       console.log(`✅ Updated imports in ${filePath}`)
 
@@ -50,6 +51,7 @@ function updateIconImportsInFile(filePath) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
     return false
@@ -79,6 +81,8 @@ console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support t
 
 
 
+
+
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
@@ -95,9 +99,11 @@ files.forEach(file => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

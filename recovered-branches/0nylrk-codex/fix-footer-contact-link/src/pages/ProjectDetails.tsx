@@ -4,6 +4,8 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -27,25 +29,56 @@ import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewS
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
 
 
-
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-
-
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+import { useState, useEffect } from "react",
+import { useParams, useNavigate, Link } from "react-router-dom",
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button",
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle} from "@/components/ui/card",
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import {
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle} from "lucide-react",
 
 
 function ProjectDetailsContent() {
@@ -73,7 +106,9 @@ function ProjectDetailsContent() {
       
       if (projectData) {
         setProject(projectData),
+
         
+
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -82,6 +117,7 @@ function ProjectDetailsContent() {
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
+
 import { useState, useEffect } from "react",;
 import { useParams, useNavigate, Link } from "react-router-dom",;
 import { format } from "date-fns",;
@@ -297,16 +333,19 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
 
       setIsLoading(false);
     }
+
     loadProject()
   }, [projectId]);
     
     loadProject()
   }, [projectId]),
   
+
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
@@ -316,6 +355,7 @@ if ( {) {
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
+
         .order("created_at", { ascending: false })
       if (error) throw error;
       setNotes(data |[])
@@ -341,6 +381,7 @@ if ( {) {
     
     setIsSubmittingNote(true),
     
+
     try {
       const { data, error } = await supabase
         .from("project_notes")
@@ -348,6 +389,7 @@ if ( {) {
           project_id: project.id
           user_id: user.id
           content: newNote})
+
         .select();
       if (error) throw error;
       // Refresh notes
@@ -361,6 +403,7 @@ if ( {) {
       fetchProjectNotes(project.id),
       setNewNote(""),
       
+
       toast({
         title: "Note added"
         description: "Your note has been added to the project."})
@@ -373,6 +416,7 @@ if ( {) {
     } finally {
       setIsSubmittingNote(false)
     }
+
   }
   const handleStatusChange = async (newStatus: ProjectStatus) => {
     if (!project) return
@@ -393,6 +437,7 @@ if ( {) {
         ...project,
         status: newStatus}),
       
+
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -400,9 +445,11 @@ if ( {) {
           description: "The project is now in progress. Congratulations!"})
       }
     }
+
   }
   },
   
+
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
       case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
@@ -420,9 +467,11 @@ if ( {) {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
+
   }
   },
   
+
   if (isLoading) {
 
     return (
@@ -475,15 +524,18 @@ if ( {) {
     )
   }
   // Check if user is either the client or the talent
+
   const isClient = user?.id === project.client_id;
   const isTalent = user?.id === project.talent_id;
   const isClient = user?.id === project.client_id,
   const isTalent = user?.id === project.talent_id,
   
+
   if (!isClient && !isTalent) {
     navigate("/unauthorized"),
     return null
   }
+
   const isOfferPending = project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
@@ -493,6 +545,7 @@ if ( {) {
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
   const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   
+
   return (
     <>
       <SEO
@@ -722,6 +775,7 @@ if ( {) {
                               <div className="flex items - center gap - 2 mb - 2">;
                                 <Avatar className="h - 6 w - 6">;
                                   {note.created_by_profile?.avatar_url ? (
+
 
 
   const isOfferPending = project && project.status === "offer_sent";
@@ -1059,6 +1113,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1123,6 +1178,7 @@ if ( {) {
                   </p>
                 </CardFooter>
               )}
+
             </Card>
           </div>
         </div>
@@ -1183,3 +1239,4 @@ function ProjectDetails() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

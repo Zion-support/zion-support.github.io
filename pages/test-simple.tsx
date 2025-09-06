@@ -2,10 +2,12 @@ import React from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (;
+
 
 
     <div>;
@@ -13,6 +15,7 @@ import React from 'react';
       <p>This is a simple test page to check if Next.js is working.</p>;
     </div>;
   );
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -29,3 +32,4 @@ import React from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

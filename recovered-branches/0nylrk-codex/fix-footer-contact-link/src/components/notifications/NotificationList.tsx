@@ -2,6 +2,8 @@
 
 
 
+
+
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -26,6 +28,7 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
+
   loading;
   error;
   notifications;
@@ -37,6 +40,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   notifications,
   onMarkAsRead,
   onDismiss,
+
   onRetry
 
 }) => {
@@ -85,6 +89,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -98,3 +103,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

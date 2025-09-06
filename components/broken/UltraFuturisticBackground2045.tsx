@@ -452,6 +452,7 @@ if ( {) {
           style={{
             backgroundImage: `
 
+
               linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `,
@@ -460,32 +461,56 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           }}
           transition={{
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}      }
 
-
-
-
+      window.removeEventListener('resize', handleResize)
     }
-
-  }, [])
-
-
+  }, []);
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden">;
+    <div className="relative min-h-screen bg-black overflow-hidden">
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)' }}
+      />
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-10">
+        {/* Animated Grid */}
+        <motion.div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
+            `;
+            backgroundSize: '50px 50px'
+          }}
+          animate={{
+            backgroundPosition: ['0px 0px50px 50px']}}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear'
+          }}
+        />
 
 
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{
+
             rotate: [0, 360]
             scale: [1, 1.1, 1]
             rotate: [0, 360],
             scale: [1, 1.1, 1],
+
             opacity: [0.3, 0.6, 0.3],          animate={{
 
 
@@ -589,6 +614,7 @@ if ( {) {
             ease: 'easeInOut'
           }}
 
+
         />;
 
 
@@ -596,30 +622,68 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
         {/* Additional floating elements */}
         <motion&& motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
 
-            y: [0, -20, 0],
+
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+          transition={{
+            duration: 4
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 transform rotate-12'
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1.1, 1]
+          animate={{
+            rotate: [12, 372];
+            scale: [1, 1.1, 1]}}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'linear'
+            ease: 'linear'
+          }}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'linear',          }}
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
+
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          animate={{
+            rotate: [12, 372];
+            scale: [1, 1.1, 1]}}
+          transition={{
 
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
           animate={{
+
             scale: [1, 1.5, 1]
             opacity: [0.5, 1, 0.5]
             scale: [1, 1.5, 1],
             opacity: [0.5, 1, 0.5],
+
             y: [0, -10, 0],          animate={{
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.5, 1, 0 && 0.5]
@@ -720,6 +784,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -733,6 +798,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Gradient Overlays */}
 
@@ -799,7 +865,12 @@ if ( {) {
   );
 
 
+export default UltraFuturisticBackground2045;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+}
+}
+}
+
+export default UltraFuturisticBackground2045;
 
 

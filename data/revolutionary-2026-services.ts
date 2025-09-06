@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface Revolutionary2026Service {;
   id: string;
@@ -63,6 +64,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     competitors: ['TableauPower BILookerQlikDomo'], marketSize: '$29.5B market',
     growthRate: '220% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+
 
 
 
@@ -747,8 +749,10 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   }
 ];
+

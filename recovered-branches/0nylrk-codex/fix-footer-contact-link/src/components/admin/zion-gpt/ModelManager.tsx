@@ -2,17 +2,21 @@
 
 
 
+
 import { useState, useEffect } from 'react',
+
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
+
 
 
 
@@ -31,11 +35,14 @@ import {ModelConfig} from '@/utils/zion-gpt';
 
 
 
+
+
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
+
 
 
 
@@ -49,6 +56,7 @@ export function ZionGPTModelManager() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
@@ -177,6 +185,8 @@ if (throw error) {
 
 
 
+
+
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -294,11 +304,13 @@ export function ZionGPTModelManager() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <Card className="w-full">;
@@ -396,6 +408,7 @@ export function ZionGPTModelManager() {;
 
                     )}
 
+
                   </TableCell>
                 </TableRow>
                   </TableCell>;
@@ -407,10 +420,12 @@ export function ZionGPTModelManager() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               ))}
             </TableBody>;
           </Table>;
         )}
+
       </CardContent>
     </Card>
   )
@@ -420,5 +435,4 @@ export function ZionGPTModelManager() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
+

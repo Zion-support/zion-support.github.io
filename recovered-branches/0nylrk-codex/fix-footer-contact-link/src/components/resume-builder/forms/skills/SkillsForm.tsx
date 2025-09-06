@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -24,6 +25,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
@@ -35,6 +37,8 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       if (success) {
         // Refresh the skills list
         await refreshSkills()
+
+
 import { useState } from 'react',;
 import { Skill } from '@/types/resume',;
 import { Button } from '@/components/ui/button',;
@@ -58,13 +62,16 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
         await refreshSkills();
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       }
       return success
     } catch (err: any) {
       setError(err.message |'An error occurred')
       return false
     }
+
 
   }
   };
@@ -84,6 +91,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {
@@ -100,6 +108,8 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {
         setLocalSkills(resumeData.skills)
+
+
   },;
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
     if (confirm('Are you sure you want to delete this skill?')) {;
@@ -122,6 +132,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -131,12 +142,14 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
 
     } catch (err: any) {;
       setError(err && err.message || 'Failed to refresh skills');
 
     }
+
 
   },
 
@@ -156,6 +169,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
   return (
 
@@ -190,10 +204,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
-}
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 export /**
  * SkillsForm - Function description
  */
@@ -202,3 +213,6 @@ function SkillsForm() {
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 ;
+=======
+
+

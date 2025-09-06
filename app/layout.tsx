@@ -1,6 +1,7 @@
 
 
 
+
 export const metadata = {
   title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
@@ -80,3 +81,4 @@ function Footer() {
 
 
 >>>>>>> origin/final-merged-improvements
+

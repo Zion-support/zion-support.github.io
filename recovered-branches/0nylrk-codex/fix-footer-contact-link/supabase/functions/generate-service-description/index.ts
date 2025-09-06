@@ -2,6 +2,7 @@
 
 
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -19,6 +20,7 @@ import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -28,6 +30,7 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
   try {
+
     const { title, keyFeatures, targetAudience } = await req.json();
     if (!title) {
       return new Response(
@@ -54,9 +57,11 @@ serve(async (req) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         }
       )
     }
+
 
 
 
@@ -73,10 +78,13 @@ serve(async (req) => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     const configuration = new Configuration({
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
     const prompt = `Create a professional and detailed service description for the following service:
+
+
 
 
 
@@ -91,7 +99,9 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 Title: ${title}
@@ -102,6 +112,7 @@ The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
+
 5. Include a compelling opening and closing statement`;
 ;
     const completion = await openai.chat.completions.create ({
@@ -167,3 +178,4 @@ The description should: 1. Be approximately 200-300 words
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 });
+

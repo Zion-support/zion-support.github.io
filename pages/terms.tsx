@@ -1,19 +1,124 @@
 
 
+import Head from 'next/head';
+import Link from 'next/link';
 
 
-
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import Head from 'next/head';
 import Link from 'next/link';
 
 export default function Terms() {
   const contact = {
 
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+
+  }
+  return (
+    <>
+      <Head>
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Terms of Service for Zion Tech Group. Read our terms and conditions for using our micro SaaS products, AI services, and IT solutions." />
+        <meta name="keywords" content="terms of service, terms and conditions, legal, zion tech group" />
+        <link rel="canonical" href={`${contact.site}/terms`} />
+      </Head>
+      
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="max-w-4xl mx-auto py-20 px-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+            Terms of Service
+          </h1>
+          
+          <div className="prose prose-invert max-w-none">
+            <p className="text-lg text-slate-300 mb-8">
+              Last updated: {new Date().toLocaleDateString()}
+            </p>
+
+
+
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">2. Use License</h2>
+              <p className="text-slate-300 mb-4">
+                Permission is granted to temporarily download one copy of Zion Tech Group&apos;s services for personal, 
+                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
+                <li>modify or copy the materials</li>
+                <li>use the materials for any commercial purpose or for any public display</li>
+                <li>attempt to reverse engineer any software contained on the website</li>
+                <li>remove any copyright or other proprietary notations from the materials</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">3. Service Availability</h2>
+              <p className="text-slate-300 mb-4">
+                Zion Tech Group strives to maintain high service availability but does not guarantee uninterrupted access. 
+                We reserve the right to modify, suspend, or discontinue any service at any time without notice.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">4. User Responsibilities</h2>
+              <p className="text-slate-300 mb-4">
+                Users are responsible for:
+              </p>
+              <ul className="list-disc list-inside text-slate-300 mb-4 space-y-2">
+                <li>Maintaining the confidentiality of their account credentials</li>
+                <li>All activities that occur under their account</li>
+                <li>Complying with all applicable laws and regulations</li>
+                <li>Not using the services for any unlawful or prohibited purpose</li>
+              </ul>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">5. Payment Terms</h2>
+              <p className="text-slate-300 mb-4">
+                Payment terms vary by service. All fees are non-refundable unless otherwise specified. 
+                We reserve the right to change our pricing with 30 days notice to existing customers.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">6. Limitation of Liability</h2>
+              <p className="text-slate-300 mb-4">
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, without limitation, 
+                damages for loss of data or profit, or due to business interruption) arising out of the use or inability 
+                to use the services, even if Zion Tech Group or a Zion Tech Group authorized representative has been notified 
+                orally or in writing of the possibility of such damage.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">7. Privacy Policy</h2>
+              <p className="text-slate-300 mb-4">
+                Your privacy is important to us. Please review our Privacy Policy, which also governs your use of the services.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">8. Contact Information</h2>
+              <p className="text-slate-300 mb-4">
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="bg-slate-900/60 p-6 rounded-lg border border-white/10">
+                <p className="text-slate-300 mb-2">
+                  <strong>Phone:</strong> <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="text-blue-400 hover:text-blue-300">{contact.phone}</a>
+                </p>
+                <p className="text-slate-300 mb-2">
+                  <strong>Email:</strong> <a href={`mailto:${contact.email}`} className="text-blue-400 hover:text-blue-300">{contact.email}</a>
+                </p>
+                <p className="text-slate-300">
+                  <strong>Address:</strong> {contact.address}
+                </p>
+
+import React from 'react';
+
+export default function Terms() {
+  const contact = {
 
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -113,6 +218,8 @@ export default function Terms() {
                 <p className="text-slate-300">
                   <strong>Address:</strong> {contact.address}
                 </p>
+
+
               </div>
             </section>
           </div>
@@ -127,7 +234,9 @@ export default function Terms() {
   );
 }
 
+
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 
 import React from 'react';
 ] 
@@ -212,6 +321,7 @@ content: 'In no event shall Zion Tech Group be liable for any damages arising ou
   {
 
 
+
   opacity: 0, x: -20 
 
 
@@ -251,6 +361,7 @@ origin/main
 
 
 
+
 export default function Terms() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -260,6 +371,7 @@ export default function Terms() {
         title="Terms of Service | Zion Tech Group"
         description="Read Zion Tech Group's Terms of Service, including usage policies, user agreements, and legal conditions for accessing our technology services."
         keywords={["terms of service", "user agreement", "legal terms", "conditions of use", "service agreement", "Zion Tech Group"]}
+
 
 
 
@@ -463,6 +575,7 @@ export default function Terms() {
 
 
 
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -516,7 +629,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               className="text-center mb-16"
@@ -583,6 +698,7 @@ export default function Terms() {
             </div>
           </div>
         </section>
+
 
 
 
@@ -669,6 +785,7 @@ export default function Terms() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               className="text-center mb-16"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -718,7 +835,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <section className="py-20">
@@ -747,6 +866,7 @@ export default function Terms() {
                 </a>;
                 <a
                   href="/contact"
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -876,6 +996,7 @@ export default function Terms() {
           <motion&& motion.div
 
 
+
                 className="group cursor-pointer"
               >
                 <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
@@ -888,9 +1009,29 @@ export default function Terms() {
               </motion.div>
 
 
+            ))}
+          </div>
+        </div>
+      </section>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+      {/* Service Categories */}
+
+      {/* Service Categories */}
+
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        </div>;
+      </section>;
+      {/* Service Categories */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
 
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -906,6 +1047,7 @@ export default function Terms() {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -970,6 +1112,7 @@ export default function Terms() {
                     <div className="w - 12 h - 12 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 flex items - center justify - center">;
 
 
+
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
@@ -983,9 +1126,14 @@ export default function Terms() {
                     <h3 className="text - xl font - bold mb - 4 group - hover:text - cyan - 400 transition - colors duration - 300">;
                       {service.category}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                    </h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Features:</h4>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
 
 
                       </ul>
@@ -996,6 +1144,7 @@ export default function Terms() {
                         {service.restrictions.map((restriction, restrictionIndex) => (
                           <li key={restrictionIndex} className="flex items-start gap-2">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+
 
 
 
@@ -1037,6 +1186,7 @@ export default function Terms() {
                             <CheckCircle className="w-4 h-4 text-green-400 mt-0 && 0.5 flex-shrink-0" />;
                             {feature}
                           </li>;
+
 
 
 
@@ -1096,7 +1246,9 @@ export default function Terms() {
           </section>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <motion.div
@@ -1113,10 +1265,13 @@ export default function Terms() {
                   <motion.div
 
 
+
+
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+
 
 
 
@@ -1548,17 +1703,25 @@ export default function Terms() {
                           <div className="w - 2 h - 2 bg - cyan - 500 rounded - full mt - 2 flex - shrink - 0"></div>;
                           <span className="text - gray - 300">{item}</span>;
                         </li>))}
+
                     </ul>;
                   </motion.div>))}
               </div>;
             </div>;
           </section>;
-          {/* Prohibited Activities */}
-          <section className="py - 20 px - 4 bg - gradient - to - r from - black / 50 to - gray - 900 / 50">;
-            <div className="max - w-6xl mx - auto">;
-              <motion.div;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
+
+          {/* Prohibited Activities */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+          <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
+            <div className="max-w-6xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+
                 transition={{ duration: 0.6 }}
                 className="text - center mb - 16";
               >;
@@ -1569,6 +1732,7 @@ export default function Terms() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+
                 className="bg - gradient - to - br from - red - 500 / 20 to - orange - 500 / 20 rounded - 2xl p - 8 border border - red - 500 / 30";
               >;
                 <div className="flex items - center gap - 4 mb - 6">;
@@ -1597,6 +1761,7 @@ export default function Terms() {
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
+
                 transition={{ duration: 0.6 }}
                 className="text - center mb - 16";
               >;
@@ -1607,6 +1772,7 @@ export default function Terms() {
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+
                 className="bg - gradient - to - br from - yellow - 500 / 20 to - orange - 500 / 20 rounded - 2xl p - 8 border border - yellow - 500 / 30";
               >;
                 <div className="flex items - center gap - 4 mb - 6">;
@@ -1636,6 +1802,7 @@ export default function Terms() {
               <motion.div;
                 initial={{ opacity: 0, coordinate_y: 20 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
+
                 transition={{ duration: 0.6 }}
                 className="space - y-12";
               >;
@@ -1696,6 +1863,7 @@ export default function Terms() {
                       <h3 className="text - 2xl font - bold text - white mb - 4">5. Intellectual Property Rights</h3>;
                       <p className="text - gray - 300 mb - 4 leading - relaxed">;
                         Our services, including software, content, and technology, are protected by copyright;
+
                         trademark, and other intellectual property laws. You retain rights to your own content.;
                       </p>;
                       <p className="text - gray - 300 leading - relaxed">;
@@ -1776,6 +1944,7 @@ export default function Terms() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
@@ -1784,6 +1953,7 @@ export default function Terms() {
                 By using our services, you agree to these terms.
               </p>
             </motion.div>
+
 
 
 
@@ -1839,6 +2009,7 @@ export default function Terms() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
                 >
                   <div className="flex items-center space-x-3 mb-4">
@@ -1849,7 +2020,10 @@ export default function Terms() {
                 </motion.div>
 
 
-
+              ))}
+            </div>
+          </div>
+        </section>
 
 
         {/* Detailed Terms */}
@@ -1860,6 +2034,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
 
 
 
@@ -1908,6 +2083,7 @@ export default function Terms() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="space-y-12"
             >
               <div className="text-center mb-16">
@@ -1919,7 +2095,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -1940,7 +2118,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -1950,9 +2130,15 @@ export default function Terms() {
 
                     By accessing, browsing, or using our services, you acknowledge that you have read;
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                    understood, and agree to be bound by these Terms of Service and our Privacy Policy.
+                  </p>
+                  <p>
+                    If you do not agree to these terms, please do not use our services. We reserve the
+                    right to modify these terms at any time, and such modifications will be effective
+                    immediately upon posting.
+                  </p>
+                </div>
+              </div>
 
 
               <div className="prose prose-invert max-w-none">
@@ -1979,7 +2165,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2005,7 +2193,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2024,7 +2214,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2052,7 +2244,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2071,7 +2265,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2090,7 +2286,9 @@ export default function Terms() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               <div className="prose prose-invert max-w-none">
@@ -2108,12 +2306,15 @@ export default function Terms() {
                     </div>
                   </div>
                 </div>
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
               </div>
             </motion.div>
           </div>
+
 
 
 
@@ -2125,6 +2326,7 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
             >
               <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
@@ -2149,7 +2351,9 @@ export default Terms;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           <section className="py-20 px-4">
@@ -2196,6 +2400,7 @@ export default Terms;
 
 
 
+
 export default TermsPage;
 
 
@@ -2238,6 +2443,7 @@ origin/main
 
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 
 
 },
@@ -2304,6 +2510,7 @@ export default Terms;
 export default TermsPage;
 
 
+
 }> <h2 className="text - 4xl font - bold mb - 6 text - white" > Questions About These Terms? </h2> <p className="text - xl text - gray - 300 mb - 8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white px - 8 py - 4 rounded - lg font - semibold hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <Mail className="w - 5 h - 5" /> Email Us </Link> <a href="/contact" className="border - 2 border - cyan - 400 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold hover:bg - cyan - 400 hover:text - black transition - all duration - 300 transform hover:scale - 105 inline - flex items - center gap - 2" > <User className="w - 5 h - 5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>);
 }export default TermsPage;
 ;
@@ -2315,3 +2522,4 @@ export default TermsPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

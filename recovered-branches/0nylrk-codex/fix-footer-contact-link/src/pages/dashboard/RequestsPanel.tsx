@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -26,6 +27,7 @@ export default function RequestsPanel() {
   const { user } = useAuth(),
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
   
+
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
 
@@ -40,6 +42,7 @@ export default function RequestsPanel() {
     markAsViewed,
     markAsResponded,
     toggleArchive
+
   } = useTalentQuotes();
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
@@ -50,10 +53,12 @@ export default function RequestsPanel() {
     setSelectedQuote(quote),
     setShowDetails(true),
     
+
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
+
   }
   // Filter quotes by archive status
   const activeQuotes = quotes.filter(q => !q.is_archived);
@@ -64,6 +69,7 @@ export default function RequestsPanel() {
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
 
+
   return (
     <ProtectedRoute>
       <div>
@@ -71,6 +77,7 @@ export default function RequestsPanel() {
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
+
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -136,6 +143,7 @@ export default function RequestsPanel() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -185,6 +193,7 @@ export default function RequestsPanel() {;
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+
           onClose={() => {
             setShowDetails(false);
 
@@ -203,6 +212,7 @@ export default function RequestsPanel() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           }}
         />
         <Footer />

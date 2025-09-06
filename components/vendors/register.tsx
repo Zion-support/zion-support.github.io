@@ -2,12 +2,14 @@
 
 
 
+
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -39,9 +41,16 @@ export default function VendorRegisterPage() {;
           caseStudies: [],;
         }),;
       });
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Failed to submit');
 
+      const data = await res.json();
+      if (!res.ok) throw new Error(data?.error |'Failed to submit');
+      setMessage('Application submitted. Await approval.');
+      form.reset();
+    } catch (err: any) {
+      setMessage(err.message);
+    } finally {
+      setLoading(false);    }
+  }
 
 
   return (            .map(s => s.trim())
@@ -57,7 +66,9 @@ export default function VendorRegisterPage() {;
       if (!res.ok) throw new Error(data?.error |'Failed to submit');
       setMessage('Application submitted. Await approval.');
 
+
       form.reset()
+
 
 
 
@@ -68,6 +79,7 @@ export default function VendorRegisterPage() {;
       setLoading(false)
     }
   }
+
 
 
 
@@ -144,6 +156,7 @@ export default function VendorRegisterPage() {;
 
 
     }
+
 
 
 

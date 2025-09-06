@@ -1,4 +1,6 @@
+
 import React from "react";
+
 
 
 
@@ -23,10 +25,12 @@ class ErrorBoundary extends React.Component {
 import React from "react";
 
 
+
 export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
+
 
 
   className?: string;
@@ -37,6 +41,7 @@ export default function EnhancedCard(): any ({;
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
+
 
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
@@ -54,3 +59,4 @@ export default function EnhancedCard({ children, className = '' }: { children: R
 
 }
 }
+

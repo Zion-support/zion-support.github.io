@@ -28,10 +28,12 @@ export type ProposalType =;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   targetInstitution: string;
 ;
 export type ProposalForm = {
@@ -42,6 +44,7 @@ export type ProposalForm = {
   supportingMultiverses: string;
   language?: string;
   customPrompt?: string;};export type ProposalForm = {
+
 
   targetInstitution: string,
   type: ProposalType,
@@ -63,6 +66,7 @@ export type ProposalForm = {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   });
   const [isGenerating, setIsGenerating] = useState(false);
@@ -99,6 +103,7 @@ export type ProposalForm = {
       console && console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
+
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown |'');
       setDraftJson(data.json |null);
@@ -118,6 +123,7 @@ export type ProposalForm = {
 
 
 
+
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -130,6 +136,7 @@ export type ProposalForm = {
           json: draftJson,
           meta: form})}),
       const data = await res.json();
+
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
 
       setStatusMessage('Exported. Files saved.')
@@ -137,6 +144,7 @@ export type ProposalForm = {
       console.error(e);
       setStatusMessage('Export failed')
     }
+
 
 
 
@@ -150,7 +158,9 @@ export type ProposalForm = {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 
@@ -226,6 +236,7 @@ export type ProposalForm = {
 
 
 
+
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json();
@@ -236,12 +247,14 @@ export type ProposalForm = {
 
 
 
+
     }
   }
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         <div className='space-y-4'>
+
           <div>
             <label className='block text-sm font-medium'>
               Target institution
@@ -358,6 +371,7 @@ export type ProposalForm = {
 
 
 
+
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -423,7 +437,9 @@ export type ProposalForm = {
           <div className='flex gap-2'>
             <button
 
+
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
+
 
 
               onClick={handleGenerate}
@@ -499,6 +515,7 @@ export type ProposalForm = {
 
 
 
+
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
@@ -522,6 +539,7 @@ export type ProposalForm = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               )}
             </div>;
           )}
@@ -530,6 +548,7 @@ export type ProposalForm = {
 
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
+
 
 
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
@@ -914,4 +933,5 @@ function handleSubmitBridge() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

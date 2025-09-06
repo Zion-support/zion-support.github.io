@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -34,6 +35,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -56,6 +58,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error('Error fetching milestone activities:', err)
       } finally {
         setIsLoading(false)
+
+
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -113,7 +117,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       }
@@ -121,6 +127,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     if (projectId) {
       fetchActivities()
     }
+
   }, [projectId]);
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
@@ -129,6 +136,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
         return 'created a new milestone'
+
 
 
   }, [projectId]),;
@@ -148,7 +156,9 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
 
 
+
   if (isLoading) {;
+
 
 
 
@@ -245,6 +255,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 </div>;
               </div>;
             ))}
+
           </div>
         </CardContent>
       </Card>
@@ -258,12 +269,4 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_activities ();
-    }
-  }, [project_id]);
-;
+

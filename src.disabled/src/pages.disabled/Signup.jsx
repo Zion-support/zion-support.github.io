@@ -1,9 +1,11 @@
 import React from 'react';
 interface SignupProps {
   // Add props here as needed
+
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 export default function Signup({ }: SignupProps) {
   return (
     <div>
@@ -20,5 +22,7 @@ export default function Signup({ }: SignupProps) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

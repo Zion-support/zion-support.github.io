@@ -1,6 +1,9 @@
 
 
 
+import { useState } from "react",
+import { MessageSquare } from "lucide-react",
+
 
   // Handle sending messages to the AI chat assistant
 
@@ -9,6 +12,7 @@
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
@@ -18,6 +22,7 @@
           messages: [{ role: "user", content: message }] 
         })}),
       
+
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
       }
@@ -25,6 +30,7 @@
     } catch (error) {
       console.error("Error in AI chat:", error);
       return Promise.resolve()
+
     }
   }
   return (
@@ -75,6 +81,7 @@ export function ChatAssistantTrigger() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         onClick={() => setIsOpen(true)}
 
         size="icon";
@@ -99,14 +106,7 @@ export function ChatAssistantTrigger() {;
           onSendMessage={handleSendMessage}
         />;
       )}
-    </>
-  )
-}
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -117,3 +117,6 @@ export /**
 function ChatAssistantTrigger() {
   const [is_open, setIsOpen] = useState (false);
 ;
+=======
+
+

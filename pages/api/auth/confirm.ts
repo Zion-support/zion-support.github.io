@@ -1,15 +1,7 @@
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 

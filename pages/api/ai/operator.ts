@@ -1,10 +1,13 @@
 
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
 
 
   if (!limited) {
     bucket.timestamps.push(now);
   }
+
 
   ipToRequests[ip] = bucket;
   return limited;
@@ -17,6 +20,7 @@
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -78,6 +82,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
   } catch (err: any) {
 
 
+
 ;
 
 
@@ -86,6 +91,7 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(500).json({ error: 'Internal Server Error' })
   };
 };
+
 
 
 
@@ -135,6 +141,7 @@ export default async function handler(req, res) {
     return res.status(200).json({ text });
   
 }
+
   
 
 }
@@ -142,6 +149,7 @@ export default async function handler(req, res) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

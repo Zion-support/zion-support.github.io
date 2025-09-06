@@ -1,6 +1,8 @@
 
 
 
+import React from "react",
+import { QuoteRequestCard } from "./QuoteRequestCard",
 
 
 type QuoteRequestsListProps = {
@@ -13,6 +15,10 @@ type QuoteRequestsListProps = {
 },
 
 
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
+
+  onMarkAsResponded,
+
 
   onToggleArchive
 }) => {
@@ -22,6 +28,7 @@ type QuoteRequestsListProps = {
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
       </div>
     )
+
 import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
@@ -56,10 +63,12 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
     );
 
 
+
   }
   if (quotes.length === 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
   }
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -80,6 +89,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
   }
 
 
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
@@ -91,6 +101,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
           onViewDetails={onViewDetails}
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
+
 
 
 
@@ -109,3 +120,4 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

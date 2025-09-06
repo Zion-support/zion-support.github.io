@@ -2,7 +2,9 @@
 
 
 
+
 import { useState } from 'react',
+
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -17,6 +19,7 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
+
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
@@ -28,12 +31,14 @@ import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDi
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 // Define form schema
 
 const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required"),
   role_title: z.string().min(1, "Role title is required"),
   start_date: z.date({
+
     required_error: "Start date is required"})
   end_date: z.date().optional()
   is_current: z.boolean().default(false)
@@ -62,10 +67,12 @@ interface WorkExperienceItemFormProps {
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
+
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
+
       company_name: initialData?.company_name |""
       role_title: initialData?.role_title |""
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date()
@@ -90,6 +97,7 @@ interface WorkExperienceItemFormProps {
   const watchRoleTitle = form.watch("role_title"),
   const watchCompanyName = form.watch("company_name"),
 
+
   const handleFormSubmit = async (values: FormValues) => {
     // Create a properly typed WorkExperience object with all required fields
     const workExperience: WorkExperience = {
@@ -101,6 +109,7 @@ interface WorkExperienceItemFormProps {
       is_current: values.is_current,      // Required
       description: values.description,    // Optional
       location: values.location,          // Optional
+
     }
     await onSubmit(workExperience)
   }
@@ -109,11 +118,14 @@ interface WorkExperienceItemFormProps {
     await onSubmit(workExperience)
   },
 
+
   const handleAIEnhancement = (content: string) => {
     form.setValue("description", content, { shouldDirty: true })
     setIsEnhancementDialogOpen(false)
+
   }
   },
+
 
   return (
     <>
@@ -131,6 +143,7 @@ interface WorkExperienceItemFormProps {
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -359,6 +372,7 @@ function WorkExperienceItemForm() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               )}
             />
             <FormField
@@ -392,6 +406,7 @@ function WorkExperienceItemForm() {
                   <FormMessage />
                 </FormItem>
               )}
+
             />
             <FormField
             />;
@@ -405,6 +420,7 @@ function WorkExperienceItemForm() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               control={form.control}
               name="is_current";
               render={({ field }) => (
@@ -598,6 +614,8 @@ function WorkExperienceItemForm() {
       />
     </>
   )
+
 }
 }
 ;
+

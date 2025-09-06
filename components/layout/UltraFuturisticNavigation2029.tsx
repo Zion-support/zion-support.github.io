@@ -1,9 +1,12 @@
+
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
 
 
 
@@ -97,6 +100,7 @@ import { motion, AnimatePresence } from 'framer-motion';
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, ;
+
 
 
 
@@ -395,6 +399,7 @@ import { motion, AnimatePresence } from 'framer-motion';
         price: '$4,999/month'
       }
       {
+
         name: 'Corporate Intelligence Platform'
         href: '/corporate-intelligence-platform'
         description: 'AI-powered business intelligence'
@@ -495,6 +500,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -507,12 +513,14 @@ const mainNavItems = [
 
 
 
+
 ];
 
 
 
 
 const mainNavItems = [
+
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -562,23 +570,33 @@ export default function UltraFuturisticNavigation2029() {;
             >
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
               <Phone size={14} />
               <span>{contactInfo.mobile}</span>
             </a>
+            <a
+              href={`mailto:${contactInfo.email}`}
+              className='flex items-center space-x-2 hover:text-cyan-300 transition-colors'
+            >
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className='flex items-center space-x-2'>              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>              <Phone size={14} />
+              <span>{contactInfo.mobile}</span>
+            </a>
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-cyan-300 transition-colors">
+              <Mail size={14} />
+              <span>{contactInfo.email}</span>
+            </a>
+            <div className="flex items-center space-x-2">
+              <MapPin size={14} />
+              <span>{contactInfo.address}</span>
+            </div>
+          </div>
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
             </a>
           </div>
         </div>
@@ -704,6 +722,7 @@ function UltraFuturisticNavigation2029() {
             </motion && motion.div>;
             {/* Desktop Navigation */}
 
+
             <div className="hidden lg:flex items-center space-x-8">
               {mainNavItems.map((item) => (
 
@@ -745,9 +764,11 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             {/* Desktop Navigation */}
 
 
+
                 </Link>
               ))}
               {/* Services Dropdown */}
+
 
 
 
@@ -757,6 +778,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                     {serviceCategories.map((category, index) => (
@@ -774,8 +796,10 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                       >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -821,6 +845,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                           <div className="space-y-2">;
                             {category && category.services.slice(0, 3).map((service) => (;
                               <Link
+
                                 key={service && service.name}
                                 href={service && service.href}
                                 className="block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200 group">;
@@ -883,6 +908,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                             ))}
                           </div>;
                         </div>;
@@ -891,6 +917,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                   </div>
                 </div>
               </div>
+
 
 
 
@@ -909,10 +936,12 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40"
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40'              >
 
@@ -926,6 +955,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               >
                 Get Started
               </motion.button>
@@ -948,6 +978,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
             <div className='lg:hidden'>
               <button
                 onClick={toggleMenu}
+
                 className='text-gray-300 hover:text-white transition-colors'              >            <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
@@ -958,12 +989,14 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
           </div>
         </div>
       </nav>
+
 
 
 
@@ -978,6 +1011,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* Mobile Menu */}
       <AnimatePresence>;
@@ -995,7 +1029,9 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1054,16 +1090,26 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                 </div>;
                 {/* Mobile Navigation Items */}
 
+                <div className='space-y-4'>
+                  {mainNavItems.map(item => (                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
+                    >
+                      <item.icon size={20} className='text-cyan-400' />                      <span>{item.name}</span>                <div className="space-y-4">
+                  {mainNavItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={closeMenu}
+                      className='flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200'
+                    >
+                      <item.icon size={20} className='text-cyan-400' />                      className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500/20 transition-all duration-200"
+                    >
+                      <item.icon size={20} className="text-cyan-400" />
+                      <span>{item.name}</span>
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-                </div>;
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                 {/* Mobile Services */}
                 <div className='mt-8'>
@@ -1098,6 +1144,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                               key={service.name}
                               href={service.href}
                               onClick={closeMenu}
+
                               className='block p-2 rounded bg-black/30 hover:bg-cyan-500/20 transition-all duration-200'
                             >
                               <div className='flex items-center justify-between'>
@@ -1125,6 +1172,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 
+
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                           ))}
@@ -1133,6 +1181,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
                     ))}
                   </div>
                 </div>
+
 
 
 
@@ -1147,6 +1196,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 {/* Mobile CTA */}
                 <div className='mt-8'>;
@@ -1193,6 +1243,7 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
           </motion.div>
         )}
       </AnimatePresence>
+
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
@@ -1216,4 +1267,5 @@ className="group relative text-gray-300 hover:text-white transition-colors durat
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

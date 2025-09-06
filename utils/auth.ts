@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -23,6 +24,7 @@ export interface User {
     const user = parseUserFromRequest(req);
 
 
+
     ensureAdmin(user);
 
 
@@ -37,10 +39,17 @@ export interface User {
   }
 }
 
-// Additional auth utilities for login;
-
-export interface DemoUser {
-
+// Additional auth utilities for login
+export interface DemoUser {;
+  id: string;
+  name: string;
+  role: 'admin' | 'user' | 'guest';
+  email: string;
+}
+const demoUsers: DemoUser[] = [];
+export function ensureDemoUsers(): void {
+  if (demoUsers.length === 0) {
+    demoUsers.push(
 
 
     );
@@ -48,6 +57,7 @@ export interface DemoUser {
 }
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {
   return {
+
 
 
 
@@ -66,6 +76,7 @@ export function upsertUser(user: DemoUser): void {;
 
 
 
+
   const index = demoUsers.findIndex(u => u.id === user.id);
   if (index >= 0) {
     demoUsers[index] = user;
@@ -73,6 +84,7 @@ export function upsertUser(user: DemoUser): void {;
     demoUsers.push(user);
   }
 }
+
 
 
 
@@ -100,4 +112,5 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

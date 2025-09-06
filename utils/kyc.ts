@@ -1,11 +1,14 @@
 
 
 
+
+
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
+
 
 
 
@@ -18,6 +21,7 @@ export interface KycProfile {;
 
 export interface KycProfile {
   user_id: string;
+
 
 
   userId: string;
@@ -69,9 +73,11 @@ if ( {) {
 }
 
 
+
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
 
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+
 
 
   const missing: string[] = [];
@@ -128,11 +134,13 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

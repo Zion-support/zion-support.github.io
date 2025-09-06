@@ -5,6 +5,8 @@
 
 
 
+
+
 import type { HelpArticle } from '../../utils/support';
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -14,6 +16,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
+
 
 
 
@@ -109,6 +112,7 @@ function vote() {
 
 
 
+
   const [voted, setVoted] = useState<null | boolean>(null);
   async function vote(helpful: boolean) {
     await fetch('/api/support/feedback', {
@@ -116,6 +120,8 @@ function vote() {
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ articleId: article.id, helpful })
     });
+
+
 
 
 
@@ -155,13 +161,16 @@ export default function HelpArticlePage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     setVoted(helpful);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 
@@ -199,6 +208,7 @@ export default function HelpArticlePage(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{article.title}</h1>
@@ -218,10 +228,12 @@ export default function HelpArticlePage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

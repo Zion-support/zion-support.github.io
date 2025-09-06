@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,12 +25,15 @@ import Head from "next/head";
 origin/main
 origin/automation-improvements-final
 
+
 interface SEOProps {
 interface SEOProps {;
   title?: string;
   description?: string;
+
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
   keywords?: string;
 }
 
@@ -39,30 +43,7 @@ const SEO: React.FC < SEOProps> = ({
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
 
 }) => {
-=======
 
-const SEO: React.FC<SEOProps> = ({;
-  title = "Zion Tech Group - Technology Solutions",;
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
-}) => {;
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </Head>
-  );
-}
-};
-
-export default SEO;
-
-
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
   image?: string;
   url?: string;
   type?: string;
@@ -91,6 +72,7 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -99,3 +81,4 @@ origin/main
 origin/automation-improvements-final
 }
 export default SEO;
+

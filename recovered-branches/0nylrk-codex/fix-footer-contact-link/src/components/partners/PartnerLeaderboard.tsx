@@ -2,6 +2,7 @@
 
 
 
+
 interface LeaderboardEntry {
 
   id: string
@@ -21,6 +22,7 @@ import { Crown, Medal, Trophy } from "lucide-react",
 
 
 
+
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -28,6 +30,8 @@ interface LeaderboardEntry {
   avatar?: string,
   referrals: number,
   earnings: number,
+
+
   badges: string[]
 }
 export function PartnerLeaderboard() {
@@ -39,6 +43,7 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
+
 
 
 
@@ -57,6 +62,7 @@ export function PartnerLeaderboard() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     {
 
       id: "2"
@@ -67,8 +73,10 @@ export function PartnerLeaderboard() {
       earnings: 3625
 
       badges: ["silver"]
+
     }
     },
+
     {
 
       id: "3"
@@ -79,8 +87,10 @@ export function PartnerLeaderboard() {
       earnings: 3100
 
       badges: ["bronze"]
+
     }
     },
+
     {
 
       id: "4"
@@ -91,6 +101,7 @@ export function PartnerLeaderboard() {
       earnings: 2450
 
       badges: []
+
     }
     {
 
@@ -99,6 +110,30 @@ export function PartnerLeaderboard() {
 
 
 
+  return (
+    <div className="space-y-6">
+      <Card className="bg-zion-blue-dark border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Crown className="h-5 w-5 text-yellow-500" />
+            Top Partners
+          </CardTitle>
+          <CardDescription>This month's top-performing partners</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {leaderboard.length > 0 ? (
+              leaderboard.map(entry => (
+                <div
+                  key={entry.id}
+                  className={`flex items-center justify-between p-3 rounded-md ${
+                    entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
+                    entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Crown, Medal, Trophy } from "lucide-react",;
 
 interface LeaderboardEntry {;
   id: string,;
@@ -254,6 +289,7 @@ function PartnerLeaderboard() {
         <CardContent>;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
           <div className="space - y-4">;
@@ -262,6 +298,7 @@ function PartnerLeaderboard() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   }`}
                 >
@@ -353,6 +390,7 @@ function PartnerLeaderboard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -374,6 +412,7 @@ function PartnerLeaderboard() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
           </div>
@@ -432,6 +471,8 @@ function PartnerLeaderboard() {
       </Card>
     </div>
   )
+
 }
 }
 ;
+

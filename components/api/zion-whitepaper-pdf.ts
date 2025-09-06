@@ -9,6 +9,8 @@ import {
 
 
 
+
+
 } from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';
 function writeSection(doc: PDFDocument, title: string, content: string) {
 
@@ -36,6 +38,7 @@ function write_section() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   try {
@@ -45,10 +48,12 @@ function write_section() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   const edition =
     editionParam === 'investor' |editionParam === 'developer'
       ? editionParam
       : 'full';
+
 
 
 
@@ -65,6 +70,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
   const editionParam = (req.query.edition as string) |'full';
   const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full';
   res.setHeader('Content-Typeapplication/pdf');
@@ -77,7 +83,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   doc.info.Author = 'Zion Protocol';
   doc.pipe(res);
 
-
+  // Cover page
+  doc.addPage();
+  doc
+    .fontSize(26)
+    .fillColor('#000000')
+    .text('Zion Protocol Whitepaper', { align: 'left' });
+  doc.moveDown();
+  doc
+    .fontSize(14)
+    .fillColor('#444444')
+    .text(`Edition: ${edition.toUpperCase()}`);
+  doc.moveDown();
+  doc
+    .fontSize(10)
+    .fillColor('#666666')
+    .text('Operator Prompt (for maintenance):');  doc.moveDown(0.5);
+  doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 });
+  const sections = getWhitepaperSections(edition as any);
 
 
   sections.forEach(s => writeSection(doc, s.title, s.contentMd));
@@ -91,6 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -98,4 +122,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

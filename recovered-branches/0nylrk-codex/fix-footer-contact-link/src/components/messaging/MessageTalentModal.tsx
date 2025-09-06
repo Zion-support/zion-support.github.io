@@ -2,6 +2,7 @@
 
 
 
+
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -14,6 +15,7 @@ import {useNavigate} from "react-router-dom";
 
 
 
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -21,12 +23,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
+
+
   DialogFooter} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
+
 import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast",
@@ -38,6 +43,7 @@ import { useNavigate } from "react-router-dom",
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -48,6 +54,7 @@ export interface MessageTalentModalProps {
 }
 
 
+
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -55,15 +62,18 @@ export interface MessageTalentModalProps {
   const navigate = useNavigate();
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
+
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
       : `Hi ${talent.full_name}, I'm interested in your profile and would like to discuss a potential opportunity.`
+
   );
   const [isSubmitting, setIsSubmitting] = useState(false);
   ),
   const [isSubmitting, setIsSubmitting] = useState(false),
   
+
   const handleSendMessage = async () => {
     if (!message.trim()) {
       toast({
@@ -113,6 +123,7 @@ function MessageTalentModal() {
       return;
     }
     try {
+
       setIsSubmitting(true);
       // Create context data for the conversation
       const contextData = {
@@ -129,6 +140,7 @@ function MessageTalentModal() {
         image_url: talent.profile_picture_url || ""
       },
       
+
       // Create conversation with this talent
       await createConversation(
         talent.user_id,
@@ -136,6 +148,7 @@ function MessageTalentModal() {
         jobTitle ? 'job' : 'talent',
         talent.id,
         contextData
+
       );
       toast({
         title: "Message sent"
@@ -149,6 +162,7 @@ function MessageTalentModal() {
       
       onClose(),
       
+
       // Navigate to messages inbox
       navigate("/messages")
     } catch (error) {
@@ -161,8 +175,10 @@ function MessageTalentModal() {
     } finally {
       setIsSubmitting(false)
     }
+
   }
   },
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -172,6 +188,7 @@ function MessageTalentModal() {
             <Avatar className="h-8 w-8 border border-zion-purple/20">
               <AvatarImage src={talent.profile_picture_url} alt={talent.full_name} />
               <AvatarFallback className="bg-zion-blue-dark text-white">
+
 import React, { useState } from 'react',;
 import {;
   Dialog,;
@@ -272,6 +289,7 @@ export function MessageTalentModal({;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -318,6 +336,7 @@ export function MessageTalentModal({;
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
+
           </Button>
         </DialogFooter>
       </DialogContent>
@@ -330,5 +349,4 @@ export function MessageTalentModal({;
     </Dialog>);
 }
 
-=======
-;
+

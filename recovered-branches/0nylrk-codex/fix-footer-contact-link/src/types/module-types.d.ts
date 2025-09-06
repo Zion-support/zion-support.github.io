@@ -7,12 +7,14 @@ declare module 'vitest / config' {
 
 
 
+
 declare module '@vitejs/plugin-react-swc' {;
 import {Plugin} from 'vite';
   export default function reactSWC(): Plugin
 }
 
 declare module 'path' {;
+
 
 
 
@@ -29,6 +31,7 @@ declare module 'path' {;
 
 
 
+
 declare module 'lovable-tagger' {;
 
 import {Plugin} from 'vite';
@@ -36,6 +39,7 @@ import {Plugin} from 'vite';
 }
 
 ;
+
 
 
 
@@ -61,6 +65,7 @@ declare module 'lovable-tagger' {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -68,4 +73,5 @@ declare module 'lovable-tagger' {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

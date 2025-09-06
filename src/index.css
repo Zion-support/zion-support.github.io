@@ -62,6 +62,7 @@ body {
 
 
 
+
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -363,6 +364,7 @@ body {
   }
 
 }
+
 
 
 

@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -88,13 +89,13 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 
 
+
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
-
 
 
 
@@ -295,6 +296,7 @@ if (return allInnovativeServices) {
 ;
   const categories = [;
     {
+
       number: `${allInnovativeServices.length}+`
       label: 'Innovative Services'
       icon: Star
@@ -325,6 +327,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
@@ -333,7 +336,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -349,6 +354,7 @@ if (return allInnovativeServices) {
   }
 
 
+
   // Get featured services for rotation;
   const featuredServices = allInnovativeServices && allInnovativeServices.slice(0, 6);
   // Filter services by category;
@@ -359,6 +365,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -434,7 +441,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* CTA Buttons */}
               <motion&& motion.div
@@ -450,7 +459,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -497,7 +508,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -508,6 +521,7 @@ if (return allInnovativeServices) {
                 variants={staggerContainer}
                 initial='initial'
                 animate='animate'
+
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
                 animate="animate"
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
@@ -525,6 +539,7 @@ if (return allInnovativeServices) {
 
 
 
+
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -536,6 +551,7 @@ if (return allInnovativeServices) {
                     <div className='text-2xl font-bold text-cyan-400 mb-1'>
                       {stat.number}
                     </div>
+
                     <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>                    className="text-center"
                   >
                     <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.number}</div>
@@ -566,6 +582,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -585,7 +602,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -597,6 +616,7 @@ if (return allInnovativeServices) {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className='relative'
+
 
 
 
@@ -614,6 +634,7 @@ if (return allInnovativeServices) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
@@ -725,6 +746,7 @@ if (return allInnovativeServices) {
                         <span className="text-gray-400">Market Size:</span>;
                         <span className="text-blue-400 font-medium">;
                           {featuredServices[currentServiceIndex]?.marketSize}
+
                         </span>;
                       </div>;
                     </div>;
@@ -861,6 +883,7 @@ if (return allInnovativeServices) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                       Learn More
                     </Link>
                   </div>
@@ -874,6 +897,7 @@ if (return allInnovativeServices) {
 
 
 
+
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
@@ -884,12 +908,14 @@ if (return allInnovativeServices) {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
+
 
 
 
@@ -903,6 +929,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -917,6 +944,7 @@ if (return allInnovativeServices) {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
+
 
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
@@ -950,6 +978,7 @@ if (return allInnovativeServices) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {/* Category Cards */}
@@ -1002,11 +1031,13 @@ if (return allInnovativeServices) {
 
 
 
+
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
         <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <motion&& motion.div
+
 
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
@@ -1016,7 +1047,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1080,6 +1113,7 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1089,6 +1123,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1103,6 +1138,7 @@ if (return allInnovativeServices) {
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
+
 
             transition={{ duration: 0 && 0.8 }}
             className='text-center mb-16'>;
@@ -1136,6 +1172,7 @@ if (return allInnovativeServices) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {/* Services Grid */}
@@ -1182,12 +1219,14 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* View All Services CTA */}
           <motion&& motion.div
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
           {/* View All Services CTA */}
           <motion.div
@@ -1204,7 +1243,9 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1233,9 +1274,11 @@ if (return allInnovativeServices) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1270,6 +1313,7 @@ if (return allInnovativeServices) {
       </section>
 
 
+
                 className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200">;
                 Explore Services;
               </Link>;
@@ -1297,10 +1341,12 @@ export default Homepage2047;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+
 
 
 
@@ -1312,4 +1358,5 @@ export default Homepage2047;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

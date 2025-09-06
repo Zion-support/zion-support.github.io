@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -31,9 +32,11 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
 
 
+
 interface ApplicationCardProps {
   application: JobApplication
 }
+
 
 
 
@@ -49,14 +52,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+
   }
   },
+
 
   const renderActionButtons = () => {
     switch (application.status) {
@@ -89,8 +95,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null;
 
     }
+
   }
   },
+
 
   return (
 
@@ -191,6 +199,7 @@ function ApplicationCard() {
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
                 </div>
               </div>
+
             )}
           </div>
 import { useState } from "react",;
@@ -309,6 +318,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         )}
 
       </CardContent>;
@@ -323,16 +333,17 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             {renderActionButtons()}
             <Button
 
+              variant="outline"
+              size="sm"
+              asChild
+            >
+              <Link to={`/jobs/${application.job_id}`}>
+                <ExternalLink className="h-4 w-4 mr-1" /> View Job
+              </Link>
+            </Button>
+          </div>
+        </div>
 
-
-
-
-        <Button 
-          variant="secondary" 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
           size="sm"
           className="w-full"
@@ -345,6 +356,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       </CardFooter>
     </Card>
   )
+
 }
 }
 ;
+

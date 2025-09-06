@@ -1,3 +1,4 @@
+
 \"HEAD\": src.pages.disabled/Login.jsx import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react-router-dom\'';\'; import { useAuth } from \'@/hooks/useAuth\'';\'; import { safeStorage } from \'@/utils/safeStorage\'';\'; import { LoginContent } from \'@/components/auth/login\'';\'; import { ErrorBoundary } from \'react-error-boundary\'';\'; import { useCart } from \'@/context/CartContext\'';\';\''; import { toast } from \'@/hooks/use-toast\'';\'; import { useDispatch } from \'react-redux\'';\'; import { setLoggedIn } from \'@/store/authSlice\'; useEffect ( () => {}; import { useEffect } from \'react\'';\'; import { useNavigate,useLocation } from \'react - router - dom\'';\'; import { useAuth } from \'@/hooks / useAuth\'';\'; import { safeStorage } from \'@/utils / safeStorage\'';\'; import { LoginContent } from \'@/components / auth / login\'';\'; import { ErrorBoundary } from \'react - error - boundary\'';\'; import { useCart } from \'@/context / CartContext\'';\';\''; import { toast } from \'@/hooks / use - toast\'';\'; import { useDispatch } from \'react - redux\'';\'; import { setLoggedIn } from \'@/store / authSlice\'; useEffect ( () => {}\';\'';
 ursor/add-new-services-and-deploy-updates-0462
 import React from 'react';
@@ -6,6 +7,7 @@ interface LoginProps {
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 export default function Login({ }: LoginProps) {
   return (
     <div>
@@ -13,13 +15,9 @@ export default function Login({ }: LoginProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 
-<<<<<<< HEAD
 
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

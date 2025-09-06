@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -49,6 +50,7 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function DemosPage() {
+
 
 
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
@@ -133,22 +135,91 @@ export default function DemosPage() {
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
 
-
-
-
-
+                style={{ animationDelay: '0.4s' }}
+              >
+                <Code className="w-5 h-5 mr-2" />
+                View All Services
+              </Button>
+            </div>
+          </div>
+          {/* Stats */}
+          <div
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
+            style={{ animationDelay: '0.6s' }}
+          >
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
+                4
+              </div>
+              <div className='text-gray-400 text-sm'>Live Demos</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+                Real
+              </div>
+              <div className='text-gray-400 text-sm'>API Endpoints</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+                Free
+              </div>
+              <div className='text-gray-400 text-sm'>To Test</div>
+            </div>
+            <div className='text-center group'>
+              <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
+                Instant
+              </div>
+              <div className='text-gray-400 text-sm'>Results</div>            </div>                4
+              </div>
+              <div className="text-gray-400 text-sm">Live Demos</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300">
+                Real
+              </div>
+              <div className="text-gray-400 text-sm">API Endpoints</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                Free
+              </div>
+              <div className="text-gray-400 text-sm">To Test</div>
+            </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
+                Instant
+              </div>
+              <div className="text-gray-400 text-sm">Results</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Demo Navigation */}
+      <section
+        id='demos'
+        className='py-16 bg-gray-900 relative overflow-hidden'
+      >
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-12'>
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
+              Choose a Service to Test
+            </h2>
+            <p className='text-lg text-gray-400 max-w-2xl mx-auto'>
+              Each demo showcases a different micro SaaS service with full
+              functionality
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+            {demos.map(demo => (              <button              Choose a Service to Test
+            </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Each demo showcases a different micro SaaS service with full functionality
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {demos.map((demo) => (
               <button
-
-
-
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                 key={demo.id}
@@ -201,6 +272,8 @@ export default function DemosPage() {
 
 
 
+
+
                   {demo.icon}
                 </div>
                 <h3 className='font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300'>
@@ -211,6 +284,7 @@ export default function DemosPage() {
                 </p>
                 {activeDemo === demo.id && (
                   <div className='mt-3 flex items-center text-blue-400 text-sm'>
+
                     <CheckCircle className='w-4 h-4 mr-2' />                    Active Demo                  {demo.icon}
                 </div>
                 <h3 className="font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
@@ -232,6 +306,7 @@ export default function DemosPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 )}
@@ -240,6 +315,7 @@ export default function DemosPage() {
           </div>
         </div>
       </section>
+
 
 
 
@@ -261,12 +337,14 @@ export default function DemosPage() {
 
 
 
+
       {/* Active Demo */}
       <section className='py-16 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <div className='text-center mb-12'>
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-4'>
               <Play className='w-4 h-4 mr-2' />
+
 
 
 
@@ -319,6 +397,7 @@ export default function DemosPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               Live Demo
             </div>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
@@ -329,6 +408,7 @@ export default function DemosPage() {
           </div>
           <div className='animate-fade-in'>{activeDemoData?.component}</div>        </div>
       </section>
+
 
 
       {/* Features */}              Live Demo
@@ -455,6 +535,7 @@ export default function DemosPage() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -510,27 +591,44 @@ export default function DemosPage() {
         </div>
       </section>
 
-
-
-
-              Get Started;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-
-
-
-
+      {/* CTA Section */}
+      <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+          </h2>
+          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
+            After testing our demos, integrate these professional services into
+            your applications with our comprehensive APIs and documentation.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-6 justify-center'>
+            <Button
+              href='/micro-saas'
+              variant='secondary'
+              size='lg'
+              className='bg-white text-blue-600 hover:bg-gray-100 shadow-2xl'
+            >
+              View All Services
+              <Code className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/contact'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
+              Get Started
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
 
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-
-
-
+  );
 
 }
-
 

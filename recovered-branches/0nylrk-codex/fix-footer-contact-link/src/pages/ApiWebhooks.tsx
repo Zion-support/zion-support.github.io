@@ -1,15 +1,17 @@
 
 
 
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export function ApiWebhooks() {
   // Sample webhook event payload
 
   const newApplicationPayload = `{
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
+
   "data": {
     "application_id": "app-123456";
     "job_id": "job-789";
@@ -49,10 +51,12 @@ function ApiWebhooks() {
   }
 }`,
 
+
   const newHirePayload = `{
   "event_type": "talent_hired",
   "created_at": "2023-06-12T09:15:22Z",
   "data": {
+
     "project_id": "project-123";
     "job_id": "job-456";
     "client_id": "client-789";
@@ -72,10 +76,12 @@ function ApiWebhooks() {
   }
 }`,
 
+
   const quoteReceivedPayload = `{
   "event_type": "quote_received",
   "created_at": "2023-06-15T11:30:00Z",
   "data": {
+
     "quote_id": "quote-123";
     "client_id": "client-456";
     "talent_id": "talent-789";
@@ -144,19 +150,23 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 
 
 
+
 }
 
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
 
+
   
+
 
   // Handle different event types
   switch (event_type) {
     case 'new_application':
       // // // console.log('New application received:', data.application_id),
       // Process the new application...
+
       break;
       break,
     
@@ -178,11 +188,13 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break;
       break,
     
+
     default:
       // // // console.log('Unknown event type:', event_type)
   }
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
+
 });
 app.listen(3000, () => {
   console.log('Webhook server listening on port 3000')
@@ -192,6 +204,7 @@ app.listen(3000, () => {
 app.listen(3000, () => {
   // // // console.log('Webhook server listening on port 3000')
 }),`,
+
 
   return (
     <ApiDocsLayout>
@@ -292,6 +305,7 @@ app.listen(3000, () => {
       </div>
     </ApiDocsLayout>
   )
+
 }
 export default ApiWebhooks;
 
@@ -453,3 +467,4 @@ app.listen(3000, () => {;
 
 
 export default ApiWebhooks;
+

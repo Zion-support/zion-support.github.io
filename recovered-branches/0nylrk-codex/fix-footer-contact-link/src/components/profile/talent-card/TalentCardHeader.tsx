@@ -4,6 +4,7 @@
 
 
 
+
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
@@ -25,6 +26,7 @@ export function TalentCardHeader(): any ({ ;
 
 
 
+
 interface TalentCardHeaderProps {
   fullName: string,
   professionalTitle: string,
@@ -33,13 +35,17 @@ interface TalentCardHeaderProps {
   yearsExperience: number
 }
 
+
 export function TalentCardHeader({ ;
   fullName;
 export function TalentCardHeader({ 
   fullName,
+
   professionalTitle, 
   profilePicture, 
   availabilityType,
+
+
 
 
   yearsExperience
@@ -66,6 +72,7 @@ export function TalentCardHeader({
       </div>
     </div>
   )
+
 }
 import React from "react",;
 import { BadgeCheck } from "lucide-react",;
@@ -147,3 +154,4 @@ function TalentCardHeader() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

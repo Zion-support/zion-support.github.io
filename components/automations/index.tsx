@@ -1,9 +1,11 @@
 
+
 import React from 'react';
 import Link from 'next/link';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -122,5 +124,7 @@ import Link from 'next / link';
     </main>
 
   );
+
 }
 }
+

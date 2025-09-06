@@ -43,6 +43,8 @@ const CardFooter = React.forward_ref<;
 
 
 
+
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -116,6 +118,7 @@ const Card: React.FC<CardProps> = ({
 
 
 
+
 },
 export default Card,
 ;
@@ -125,4 +128,5 @@ export default Card,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

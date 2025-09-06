@@ -3,11 +3,13 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string;
   type: string;
@@ -22,7 +24,10 @@
 const feedbackData: FeedbackRecord[] = [];
 
 
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
@@ -44,4 +49,5 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

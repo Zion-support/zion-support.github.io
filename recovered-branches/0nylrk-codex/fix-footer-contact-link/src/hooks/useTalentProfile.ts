@@ -3,6 +3,7 @@
 
 
 
+
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
 import { convertProfileToTalentProfile } from "@/utils/profileConverter",
@@ -12,6 +13,7 @@ export function useTalentProfile(id: string | undefined) {
   const [error, setError] = useState<string | null>(null),
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
 
+
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
@@ -19,19 +21,23 @@ export function useTalentProfile(id: string | undefined) {
         setIsLoading(false);
         return
       }
+
       setIsLoading(true);
       setError(null);
 
       setIsLoading(true),
       setError(null),
       
+
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
+
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
           const foundProfile = MOCK_TALENTS.find(talent => talent.id === id),
           
+
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
 
@@ -58,6 +64,7 @@ if ( {) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
         setIsLoading(false)
+
       }
     }
     fetchProfile()
@@ -121,6 +128,7 @@ export function useTalentProfile(id: string | undefined) {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return { profile, isLoading, error, mockProfileData }
 >>>>>>> origin/feature/merge-conflicts-and-improvements

@@ -1,6 +1,7 @@
 
 
 
+
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -17,6 +18,7 @@
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+
 
 
 
@@ -43,7 +45,9 @@ export default function JobDetails() {
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
+
   
+
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
   if (isLoading) {
@@ -77,23 +81,29 @@ export default function JobDetails() {
       return
     }
     setIsApplyModalOpen(true)
+
   }
   },
+
 
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")
     setIsApplyModalOpen(false)
+
   }
   },
+
 
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified"
     return `$${budget.min} - $${budget.max}`
+
   }
   const isOwnJob = user?.id === job.client_id;
   },
 
   const isOwnJob = user?.id === job.client_id,
+
 
   return (
     <>
@@ -139,6 +149,7 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
+
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -271,6 +282,7 @@ export default function JobDetails() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                         {skill}
                       </Badge>;
                     ))}
@@ -306,16 +318,20 @@ export default function JobDetails() {;
                   </div>
                 </div>
                 {!isOwnJob && (
+
                   <Button
                     className="w-full mt-4"
                   <Button 
                     className="w-full mt-4" 
+
                     onClick={handleApply}
                     disabled={isOwnJob}>;
                     Apply Now;
                   </Button>;
                 )}
+
                 
+
                 {isOwnJob && (
                   <div className="text-center p-2 bg-muted rounded-md mt-4">
                     <p className="text-sm text-muted-foreground">This is your job posting</p>

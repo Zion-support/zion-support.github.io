@@ -4,10 +4,13 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import {
+
 
 
 
@@ -19,6 +22,7 @@ import {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 } from "../../../utils/data/proposals";
 async function submitByEmail(
   to: string
@@ -26,6 +30,7 @@ async function submitByEmail(
   text: string
   attachments: any[] = []
 ) {
+
 
 
 
@@ -49,10 +54,12 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const host = process.env.EMAIL_HOST;
   const port = Number(process.env.EMAIL_PORT |587);
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+
 
 
   const from = process.env.EMAIL_FROM |user;
@@ -60,12 +67,14 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   const from = process.env.EMAIL_FROM || user;
   if (!host || !user || !pass) throw new Error("Email not configured");
 
+
   const transporter = nodemailer.createTransport({
     host
     port
     secure: port === 465
     auth: { user, pass }
   });
+
 
   if (!host || !user || !pass) throw new Error('Email not configured');
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } });
@@ -81,6 +90,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
@@ -116,6 +126,7 @@ export default async function handler(
       .status(500)
 
 
+
       .json({ error: error?.message |"Submission failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
@@ -143,6 +154,7 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 
     const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {};
     if (!id) return res && res.status($1).json({ $2 });
+
 
 
   try {
@@ -190,6 +202,7 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
     return res.status(500).json({ error: error?.message || 'Submission failed' })
 
   }
+
 }
     const updated = updateProposalMeta (id, (m) => ({
       ...m,
@@ -248,3 +261,4 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

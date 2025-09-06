@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 
 
@@ -13,6 +14,7 @@ export function ProjectMilestonesContent() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const { user } = useAuth();
   const { getProjectById } = useProjects();
@@ -40,6 +42,8 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)
+
+
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -90,6 +94,7 @@ export function ProjectMilestonesContent() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -99,6 +104,7 @@ export function ProjectMilestonesContent() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -106,25 +112,43 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
-    loadProject();
-    refetch();
-  }, [projectId, getProjectById, refetch]);
-  const handleMilestoneCreated = async () => {
-    await refetch()
+
+
+    return (
+      <div className="container mx-auto py-8 px-4">
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        </div>
+      </div>
+    )
   }
-  // Determine if the user is the client or talent
-  const isClient = user?.id === project?.client_id;
-  const isTalent = user?.id === project?.talent_id;
-  // Determine project type based on job category or default to "Other"
-  const projectType = job?.category |"Other";
-  if (isLoading |!project) {
-    
-    loadProject(),
-    refetch()
-  }, [projectId, getProjectById, refetch]),
+  const handleMilestoneSubmit = async (data: any) => {
+    if (!projectId) return
+    // Ensure all required fields are present
+    const milestoneData = {
+      project_id: projectId
+      title: data.title
+      description: data.description |""
+      amount: data.amount
+      status: "pending" as const
+      due_date: data.due_date ? data.due_date.toISOString() : undefined
 
+  return (
+    <div className="container mx-auto py-8 px-4">
 
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
 
+      } catch (error) {;
+        console.error("Error loading project:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    }
+;
+    loadProject(),;
+    refetch();
+  }, [projectId, getProjectById, refetch]),;
 
   const handleMilestoneCreated = async () => {;
     await refetch();
@@ -174,12 +198,14 @@ export function ProjectMilestonesContent() {;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         <ProjectActions
 
 
           projectId={projectId || ''}
+
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
@@ -197,10 +223,12 @@ export function ProjectMilestonesContent() {;
           )}
         </TabsList>
         <TabsContent value="milestones">
+
           <MilestoneManager
             projectId={projectId |''}
           <MilestoneManager 
             projectId={projectId || ''}
+
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
@@ -220,10 +248,12 @@ export function ProjectMilestonesContent() {;
           <MilestoneActivities projectId={projectId |''} />
         </TabsContent>
         <TabsContent value="create">
+
           {(isClient |isTalent) && (
             <MilestoneCreator
           {(isClient || isTalent) && (
             <MilestoneCreator 
+
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
@@ -233,6 +263,7 @@ export function ProjectMilestonesContent() {;
               projectType={projectType}
             />;
           )}
+
         </TabsContent>
       </Tabs>
     </div>
@@ -265,5 +296,4 @@ export function ProjectMilestonesContent() {;
     </div>);
 }
 
-=======
-;
+

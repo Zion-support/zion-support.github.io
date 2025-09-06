@@ -1,6 +1,7 @@
 
 
 
+
 ...realMicroSaasServices2025;
  ...realMicroSaasServices2025;
 
@@ -10,6 +11,7 @@
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -87,6 +89,8 @@ and micro SAAS services designed to transform your business and drive innovation
 }</div> </span>) ) 
 }</div> </div> </div> </div> <a > Learn More <ArrowRight className="w-4 h-4 inline ml-2" /> </a> </div> </div> </motion.div>) ) 
 }</div>) 
+
+
 }</motion.div> {
   /* Enhanced CTA Section */
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
@@ -618,6 +622,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -625,6 +630,7 @@ and micro SAAS services designed to transform your business and drive innovation
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Enhanced Search and Filters */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -698,23 +704,44 @@ and micro SAAS services designed to transform your business and drive innovation
                         onClick={() => setViewMode('grid')}
 
                         className={`p-3 rounded-xl transition-all duration-300 ${
-                          viewMode === 'grid'
-                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25'
-                          viewMode === 'grid' 
-                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
+
+
                             : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
+                        }`}
+                      >
+                        <Grid className="w-5 h-5" />
+                      </button>
+                      <button
+                        onClick={() => setViewMode('list')}
+                        className={`p-3 rounded-xl transition-all duration-300 ${
+                          viewMode === 'list'
+                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25'
+                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',                        }`}
+                      >
+                        <List className="w-5 h-5" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                {/* Enhanced Results Count */}
+                <div className="mt-6 text-center">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                    <span className="text-cyan-300 font-medium">
+                      Showing {filteredServices.length} of {allServices.length} revolutionary services
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-              
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
               <select
                 value={sortBy}
@@ -727,6 +754,7 @@ and micro SAAS services designed to transform your business and drive innovation
                 <option value="rating">Sort by Rating</option>
               </select>
             </div>
+
 
 
 
@@ -757,6 +785,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Enhanced Category Overview */}
@@ -814,6 +843,7 @@ and micro SAAS services designed to transform your business and drive innovation
                         </div>
                       </div>
 
+
                       onClick={() => setSelectedCategory(category && category.id)}
                     >;
                       <div className={`w-20 h-20 bg-gradient-to-r ${category && category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>;
@@ -859,6 +889,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
             {/* Services Grid/List */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -898,6 +929,7 @@ and micro SAAS services designed to transform your business and drive innovation
                             </span>;
                           )}
                         </div>
+
                         
 
 
@@ -909,6 +941,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service && service.icon}</div>;
                       </div>;
@@ -944,6 +977,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -953,6 +987,7 @@ and micro SAAS services designed to transform your business and drive innovation
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">
@@ -962,9 +997,19 @@ and micro SAAS services designed to transform your business and drive innovation
                         </div>
                       </div>
 
+                      {/* Enhanced Features */}
+                      <div className="mb-6 relative z-10">
+                        <div className="text-sm text-cyan-400 font-medium mb-3">✨ Key Features</div>
+                        <ul className="space-y-2">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <li key={idx} className="text-sm text-gray-300 flex items-center group-hover:text-white transition-colors duration-300">
+                              <Check className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
@@ -982,27 +1027,50 @@ and micro SAAS services designed to transform your business and drive innovation
                         </div>
                       </div>
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-                          </div>;
-                          <p className="text-gray-300 mb-3">{service && service.description}</p>;
-                          <div className="flex flex-wrap gap-2 mb-4">;
-                            {service && service.features.slice(0, 4).map((feature, idx) => (;
-                              <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">;
-
+                      {/* Enhanced CTA */}
+                      <div className="relative z-10">
+                        <a
+                          href={service.link}
+                          className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 px-6 rounded-2xl text-center font-semibold text-base hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 group-hover:shadow-xl group-hover:shadow-cyan-500/40"
+                        >
+                          Explore Service
+                          <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {sortedServices.map((service, index) => (
+                    <motion.div
+                      key={service.id}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
+                      className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"
+                    >
+                      <div className="flex flex-col lg:flex-row gap-6">
+                        {/* Service Info */}
+                        <div className="flex-1">
+                          <div className="flex items-start justify-between mb-3">
+                            <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                            {service.popular && (
+                              <span className="px-3 py-1 text-sm bg-gradient-to-r from-pink-500 to-rose-500 text-white rounded-full">
+                                Popular
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-gray-300 mb-3">{service.description}</p>
+                          <div className="flex flex-wrap gap-2 mb-4">
+                            {service.features.slice(0, 4).map((feature, idx) => (
+                              <span key={idx} className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-lg">
                                 {feature}
-                              </span>;
+                              </span>
                             ))}
+                          </div>
+                        </div>
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
@@ -1021,6 +1089,7 @@ and micro SAAS services designed to transform your business and drive innovation
                               <div className="text-gray-400">Customers</div>
                             </div>
                           </div>
+
 
                           </div>;
                         </div>;
@@ -1072,6 +1141,7 @@ and micro SAAS services designed to transform your business and drive innovation
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Enhanced CTA Section */}
             <motion&& motion.div
@@ -1414,7 +1484,9 @@ and micro SAAS services designed to transform your business and drive innovation
       </main>
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
+
   )
 }
   ),
 }
+

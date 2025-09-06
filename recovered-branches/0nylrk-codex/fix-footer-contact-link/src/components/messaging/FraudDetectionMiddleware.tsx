@@ -1,10 +1,12 @@
 
+
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
+
 
 
 
@@ -20,7 +22,9 @@ interface FraudDetectionMiddlewareProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
@@ -53,11 +57,13 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
+
   undefined as FraudDetectionContextType | undefined;
 );
   undefined as FraudDetectionContextType | undefined
 );
 ),
+
 
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
@@ -68,12 +74,14 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
+
       // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
       // First do a quick local check using the fraud detection service
       const quickCheck = checkMessage(content);
       const quickCheck = checkMessage(content),
       
+
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
@@ -136,9 +144,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           'message',
           messageId,
           content
+
         );
         ),
         
+
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -146,6 +156,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
+
           });
           return {
             isSafe: false
@@ -153,10 +164,13 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           
           return { 
             isSafe: false,
+
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
         }
       }
+
+
 
 
 
@@ -183,12 +197,15 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
 
 
+
       
+
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
+
         });
         return {
           isSafe: false
@@ -204,12 +221,17 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         }
       }
       */
       // Message is considered safe
 
+      return { isSafe: true }
 
+    } catch (error) {;
+      console.error('Error in fraud detection:', error),;
+      // On error, let the message pass through but log the error;
 
       return { isSafe: true }
 
@@ -222,6 +244,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
   return (
     <FraudDetectionContext && FraudDetectionContext.Provider value={contextValue}>;
       {children}
+
 
     </FraudDetectionContext && FraudDetectionContext.Provider>;
 
@@ -237,3 +260,4 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

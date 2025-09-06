@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -95,6 +96,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 
+
   ];    features: [
 
 
@@ -130,8 +132,10 @@ import { ServiceVariant } from '../types/service-variants';
 
 
     reviews: 112
+
   }
 ];
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedLogisticsSupplyChainSolution2025 {;
   id: string,;
@@ -176,7 +180,11 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
 ;
 
 
+
+
   }
 
 
 ];
+
+

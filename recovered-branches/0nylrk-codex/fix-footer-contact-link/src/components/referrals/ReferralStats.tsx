@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface ReferralStatsProps {
   stats: ReferralStatsType;
@@ -64,6 +66,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                   {card.description}
                 </p>
               </>
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralStats as ReferralStatsType } from "@/types/referrals",;
 import { Award, Share, Star, TrendingUp } from "lucide-react",;
@@ -125,10 +128,12 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             )}
           </CardContent>;
         </Card>;
       ))}
+
 
 
   )
@@ -141,3 +146,4 @@ export function ReferralStats(): any ({ stats, isLoading }: ReferralStatsProps) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

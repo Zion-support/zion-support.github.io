@@ -1,5 +1,6 @@
 
 const ResumeBuilder: NextPage = () => {
+
   const [role, setRole] = useState('Data Scientist')
   const [experienceYears, setExperienceYears] = useState(5)
   const [skills, setSkills] = useState('Python, Machine Learning, Cloud Systems')
@@ -28,6 +29,7 @@ const ResumeBuilder: NextPage = () => {
   const improveSectionPrompt = (sectionName: string, content: string) => (
     `Improve the following resume ${sectionName} to be professional, concise, and results-focused. Keep markdown formatting.\n\n${content}`
   ),
+
   return (
     <div>
       <Head>
@@ -62,6 +64,7 @@ const ResumeBuilder: NextPage = () => {
             <AIAssistant
               buttonLabel="Generate with AI"
               title="Generate Resume Summary"
+
               defaultPrompt={generateSummaryPrompt}
               onAccept={setSummary}
               authorizationToken={operatorToken}
@@ -91,10 +94,12 @@ const ResumeBuilder: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+
 
 
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
@@ -102,6 +107,7 @@ const ResumeBuilder: NextPage = () => {
 
               onAccept={setSummary}
               authorizationToken={operatorToken}
+
 
 
 
@@ -124,12 +130,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             />
           </div>
         </div>
@@ -143,11 +151,13 @@ const ResumeBuilder: NextPage = () => {
             title="Improve Experience"
 
 
+
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
 
 
             onAccept={setExperience}
             authorizationToken={operatorToken}
+
 
 
 
@@ -170,12 +180,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           />
         </div>
         <textarea value={experience} onChange={e => setExperience(e.target.value)} rows={10} className="w-full rounded-md border p-3" />
@@ -188,11 +200,13 @@ const ResumeBuilder: NextPage = () => {
             title="Improve Skills"
 
 
+
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
 
 
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
+
 
 
 
@@ -215,12 +229,14 @@ const ResumeBuilder: NextPage = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           />
         </div>
         <textarea value={skillsText} onChange={e => setSkillsText(e.target.value)} rows={6} className="w-full rounded-md border p-3" />
@@ -229,6 +245,8 @@ const ResumeBuilder: NextPage = () => {
   )
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

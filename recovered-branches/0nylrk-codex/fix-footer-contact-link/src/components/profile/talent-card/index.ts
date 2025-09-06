@@ -1,3 +1,4 @@
+
 export { TalentCardAvatar } from "./TalentCardAvatar";
 export { TalentCardAvailability } from "./TalentCardAvailability";
 export { TalentCardBadges } from "./TalentCardBadges";
@@ -18,3 +19,4 @@ export { TalentCardSkills } from './TalentCardSkills';
 export { TalentCardSkills } from './TalentCardSkills';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

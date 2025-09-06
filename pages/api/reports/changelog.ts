@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
 const p = path.join(
   process.cwd()
   'data'
@@ -27,6 +28,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')));
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to read changelog' });
+
   }
 if (req.method === 'POST') {
     try {
@@ -63,6 +65,7 @@ if (req.method === 'POST') {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -72,4 +75,5 @@ if (req.method === 'POST') {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

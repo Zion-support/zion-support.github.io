@@ -24,6 +24,7 @@ interface LazyImageProps {;
 }
 export default function LazyImage({
 
+
   src,
   alt,
   width,
@@ -47,6 +48,7 @@ export default function LazyImage({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);

@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -38,6 +39,7 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -48,12 +50,40 @@ interface GeneratedContent {
   keyPoints: string[]
 
 
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Sparkles, ArrowRight } from "@/components/icons",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Badge } from "@/components/ui/badge",;
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  },;
+  keyPoints: string[];
+}
+;
+interface AIListingGeneratorProps {;
+  onApplyGenerated?: (content: GeneratedContent) => void,;
+  initialValues?: {;
+    title?: string,;
+    category?: string,;
+    keyFeatures?: string,;
+    targetAudience?: string;
 
 
   }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
+
   const { toast } = useToast();
   const [title, setTitle] = useState(initialValues.title |"");
   const [category, setCategory] = useState(initialValues.category |"");
@@ -68,6 +98,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+
 
 
 
@@ -87,8 +118,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e.target.value)
         break
     }
+
   }
   },
+
 
   const handleGenerate = async () => {
     if (!title |!category) {
@@ -96,6 +129,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
+
       });
       return
     }
@@ -242,13 +276,16 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
       if (data.error) {
         throw new Error(data.error)
       }
+
       setGeneratedContent(data.generated);
 
       setGeneratedContent(data.generated),
+
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -295,8 +332,10 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+
   }
   },
+
 
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
@@ -306,8 +345,10 @@ if ( {) {
         description: "The generated content has been applied to your listing."
       })
     }
+
   }
   },
+
 
   return (
     <div className="space-y-6">
@@ -363,6 +404,8 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
+
+
 
 
 
@@ -463,6 +506,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -473,6 +517,7 @@ if ( {) {
 
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
+
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (

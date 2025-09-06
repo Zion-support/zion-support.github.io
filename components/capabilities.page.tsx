@@ -3,6 +3,8 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 
+
+
 const CAPABILITIES = [
   'Full‑stack Web'
   'Mobile (iOS/Android)'
@@ -24,6 +26,7 @@ export default function CapabilitiesPage() {;
 
         ))}
 
+
       </div>;
     </EnhancedLayout>;
   );
@@ -36,3 +39,4 @@ export default function CapabilitiesPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

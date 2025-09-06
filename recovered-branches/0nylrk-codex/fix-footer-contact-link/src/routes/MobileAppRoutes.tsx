@@ -1,8 +1,9 @@
 
 
+import { Route, Routes } from "react-router-dom",
+import MobileAppPage from "../pages/MobileAppPage",
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const MobileAppRoutes = () => {
   return (
     <Routes>
@@ -13,10 +14,12 @@ const MobileAppRoutes = () => {
       <Route path="/open-app" element={<OpenAppRedirect />} />
     </Routes>
   )
+
 }
 export default MobileAppRoutes;
 
 },
+
 
 
 
@@ -49,6 +52,7 @@ const MobileAppRoutes = () => {;
   );
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -59,3 +63,4 @@ const MobileAppRoutes = () => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 export default MobileAppRoutes;
+

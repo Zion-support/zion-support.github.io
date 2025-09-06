@@ -2,6 +2,7 @@
 
 
 
+
 import {useState} from 'react';
 import {Resume} from '@/types/resume';
 import {useFetchResume} from './useFetchResume';
@@ -12,6 +13,7 @@ import {useSkills} from './useSkills';
 import {useCertifications} from './useCertifications';
 import {useResumeList} from './useResumeList';
 export function useResume() {;
+
 
 
 
@@ -107,7 +109,9 @@ export * from './useResumeUtils';
 
 
 
+
 ;
+
 
 
 
@@ -198,9 +202,11 @@ export * from './useResumeUtils';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,6 +1,8 @@
 
 
 
+
+
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -74,9 +76,11 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 
 
 
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 import {;
   Search, Star, Users, TrendingUp,;
@@ -214,8 +218,34 @@ export default function EnhancedServicesShowcase2025(req, res) {
       y: 0,;
       transition: {;
 
+        duration: 0.5;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  return (
+    <EnhancedFuturisticBackground
+      intensity="high"
+      colorScheme="quantum"
+      particleCount={300  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      animationSpeed={1.5  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     >
       <div className="min-h-screen">
         <Head>
@@ -229,6 +259,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/enhanced-services-showcase-2025" />
         </Head>
+
         {/* Hero Section */}
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
@@ -278,6 +309,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             >
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
@@ -292,6 +324,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
               <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our cutting-edge solutions that are transforming industries and driving the future of technology
               </p>
+
               {/* Service Statistics */}
 
 
@@ -324,6 +357,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </div>
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-purple-400">{aiCount + quantumCount}</div>
@@ -342,11 +376,13 @@ export default function EnhancedServicesShowcase2025(req, res) {
             </motion.div>
           </div>
         </section>
+
         {/* Search and Filters */}
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <input
@@ -357,6 +393,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   />
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
+
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
@@ -443,6 +480,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -461,6 +499,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                           <Star className="w-4 h-4 fill-current" />
                           <span>Popular</span>
                         </div>
+
                       )}
                     </div>
                     {/* Service Title and Description */}
@@ -519,6 +558,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
@@ -526,6 +566,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
+
                     {/* Key Features */}
                     <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
@@ -589,6 +630,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                         <span>Average ROI</span>
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
@@ -597,6 +639,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       </div>
                     </div>
+
                     {/* Action Buttons */}
                     <div className='flex gap-3'>
                     {/* Action Buttons */  } catch (error) {
@@ -616,6 +659,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       <a
                         href={service && service.link}
                         target='_blank'
@@ -626,8 +670,10 @@ export default function EnhancedServicesShowcase2025(req, res) {
                       </a>;
                       <a
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                        href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
+                        Contact Us
+                      </Link>
+                    </div>
 
 
                         <div>✉️ {service.contactInfo.email}</div>
@@ -636,6 +682,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </div>
                   </motion.div>
+
                 ))}
 
               </AnimatePresence>;
@@ -710,6 +757,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -720,7 +768,9 @@ export default function EnhancedServicesShowcase2025(req, res) {
               </p>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   </div>
@@ -740,6 +790,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                 </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </div>
+
               {/* Action Buttons */}
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {/* Action Buttons */  } catch (error) {
@@ -759,6 +810,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'>;
@@ -766,6 +818,7 @@ export default function EnhancedServicesShowcase2025(req, res) {
                   <Rocket className='ml-2 w-6 h-6' />;
                 </a>;
                 <a
+
 
                   href='/pricing'
 
@@ -785,4 +838,5 @@ export default function EnhancedServicesShowcase2025(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

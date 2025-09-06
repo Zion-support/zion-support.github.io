@@ -4,6 +4,7 @@
 
 
 
+
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>
 
@@ -13,6 +14,7 @@ interface PersonalInfoFieldsProps {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }
 
 export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
@@ -63,6 +65,7 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -73,4 +76,5 @@ export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

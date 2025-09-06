@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,12 +14,15 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface ApplicationScoreCardProps {
 
   application: JobApplication
 
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
+
+
 
 
 
@@ -44,20 +48,60 @@ interface ApplicationScoreCardProps {
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
 
+      case "Strongly Recommended": return "bg-green-100 text-green-800",
+      case "Recommended for Review":
+        return "bg-blue-100 text-blue-800",
+      case "Low Match":
+        return "bg-orange-100 text-orange-800"
+      default:
+        return "bg-gray-100 text-gray-800"
 
-
-
-      case "Strongly Recommended": return "bg-green-100 text-green-800";
+import { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",;
+import { toast } from "sonner",;
+import { JobApplication } from "@/types/jobs",;
+interface ApplicationScoreCardProps {;
+  application: JobApplication,;
+  onScoreUpdated?: (updatedApplication: JobApplication) => void;
+}
+;
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
+  const [isScoring, setIsScoring] = useState(false),;
+  // Determine if application has been scored;
+  const hasScore = typeof application.match_score === 'number',;
+  // Format the date when the application was scored;
+  const scoredDate = application.scored_at;
+    ? new Date(application.scored_at).toLocaleDateString();
+    : null,;
+  // Get suggestion color;
+  const getSuggestionColor = (suggestion: string | undefined) => {;
+    switch (suggestion) {;
+      case "Strongly Recommended": return "bg-green-100 text-green-800",;
       case "Recommended for Review":;
-        return "bg-blue-100 text-blue-800";
-
-
-
-
-
-
-
+        return "bg-blue-100 text-blue-800",;
+      case "Low Match":;
+        return "bg-orange-100 text-orange-800",;
+      default:;
+        return "bg-gray-100 text-gray-800";
+    }
+  },;
+  // Trigger the scoring process;
+  const handleScore = async () => {;
+    try {;
+      setIsScoring(true),;
+      // Call the trigger_resume_scoring function;
+      const { error } = await supabase.rpc(;
+        'trigger_resume_scoring',;
+        { application_id: application.id }
+      ),
       
+      if (error) throw error,
+
+
       toast.success("Resume scoring has been initiated"),
       
       // Poll for results every 3 seconds for up to 30 seconds
@@ -66,14 +110,18 @@ interface ApplicationScoreCardProps {
       
       const checkScore = async () => {
         attempts++,
+
         
+
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
+
           .single();
           .single(),
           
+
         if (error) {
 
           setIsScoring(false),
@@ -88,6 +136,7 @@ interface ApplicationScoreCardProps {
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
+
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.")
         }
@@ -112,6 +161,7 @@ interface ApplicationScoreCardProps {
         }
 
       };
+
 
 
           setIsScoring(false),
@@ -255,8 +305,10 @@ interface ApplicationScoreCardProps {
                         )}
 
 
+
                     )}
                     
+
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
@@ -281,6 +333,7 @@ interface ApplicationScoreCardProps {
 
                     )}
 
+
                     {application && application.match_breakdown.education_match && (;
                       <div>;
                         <p className="font-medium">Education Match: {application && application.match_breakdown.education_match && education_match.score}/100</p>;
@@ -296,6 +349,7 @@ interface ApplicationScoreCardProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             )}
 
           </div>;
@@ -320,6 +374,7 @@ interface ApplicationScoreCardProps {
             </Button>;
           </div>;
         )}
+
       </CardContent>
     </Card>
   )
@@ -329,5 +384,4 @@ interface ApplicationScoreCardProps {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
+

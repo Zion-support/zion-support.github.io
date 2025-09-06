@@ -2,6 +2,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -17,6 +18,7 @@ export default async function handler(
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
@@ -28,6 +30,8 @@ export default async function handler(
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, status: "queued", mock: true });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,6 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       return res.status(200).json({ ok: true, status: 'queued', mock: true })
+
     }
     const supabase = getServerSupabase();
     const { error } = await supabase.from("payout_requests").insert({
@@ -96,6 +101,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message });
 
 
+
     const { error } = await supabase.from('payout_requests').insert({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),
@@ -106,7 +112,9 @@ export default async function handler(req, res) {
     return res && res.status(200).json({ ok: true, status: "requested" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch (e: any) {
+
     return res && res.status(500).json({ error: e?.message });
+
 
   }
 }

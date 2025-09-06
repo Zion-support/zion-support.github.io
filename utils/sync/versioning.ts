@@ -1,5 +1,6 @@
 
 
+
 export interface Version {
   major: number;
   minor: number;
@@ -11,4 +12,5 @@ export interface Version {
 }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

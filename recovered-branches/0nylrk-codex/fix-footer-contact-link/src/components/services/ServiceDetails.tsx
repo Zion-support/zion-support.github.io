@@ -1,7 +1,10 @@
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Server, Clock, MapPin } from "lucide-react",
+
+
 interface ServiceDetailsProps {
   country: string
 }
@@ -17,6 +20,7 @@ import { Server, Clock, MapPin } from './lucide-react';
 
 
   const getDatacenters = (country: string): string[] => {
+
     const dataCenters: Record<string, string[]> = {;
 
 
@@ -45,6 +49,7 @@ import { Server, Clock, MapPin } from './lucide-react';
     return dataCenters[country] || dataCenters["default"]
   },
   
+
   // Get region-specific image
   const getRegionalImage = (country: string): string => {
     // In a real app, you'd have specific images for each region
@@ -57,6 +62,7 @@ import { Server, Clock, MapPin } from './lucide-react';
       "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore";
       // Default placeholder
       "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+
     }
     return regions[country] |regions["default"]
   }
@@ -65,6 +71,7 @@ import { Server, Clock, MapPin } from './lucide-react';
     return regions[country] || regions["default"]
   },
   
+
   // Get region-specific instructions
   const getRegionalInstructions = (country: string): string => {
     // In a real implementation, this would be much more detailed and specific
@@ -76,16 +83,19 @@ import { Server, Clock, MapPin } from './lucide-react';
       "Australia": "AEST/ACDT/AWST depending on location",
       "Singapore": "SGT",
       "default": "Local timezone"
+
     }
     const timezone = timeZones[country] |timeZones["default"];
     },
     
     const timezone = timeZones[country] || timeZones["default"],
     
+
     return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
            `Response times are typically within 4 hours for metropolitan areas. ` +
            `Please have site access permissions and contact details ready for our technicians. ` +
            `For remote locations, additional travel fees may apply.`
+
   }
   const datacenters = getDatacenters(country);
 
@@ -93,6 +103,7 @@ import { Server, Clock, MapPin } from './lucide-react';
   
   const datacenters = getDatacenters(country),
   
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>
@@ -127,6 +138,7 @@ import { Server, Clock, MapPin } from './lucide-react';
                   key={idx}
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
 interface ServiceDetailsProps {;
@@ -229,6 +241,7 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {dc}
                 </div>;
               ))}
@@ -264,6 +277,8 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
       </CardFooter>
     </Card>
   )
+
 }
 }
 ;
+

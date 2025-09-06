@@ -1,5 +1,6 @@
 
 
+
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 import { useLocation  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
@@ -15,6 +16,7 @@ import { supabase } from '@/integrations/supabase/client';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   path?: string;
   component?: string;
   elementId?: string;
@@ -27,6 +29,8 @@ import { supabase } from '@/integrations/supabase/client';
 
 
 
+
+
   trackEvent: (type: AnalyticsEventType, metadata?: Record<string, any>) => void;
   trackConversion: (conversionType: string, value?: number, metadata?: Record<string, any>) => void;
   pageViews: number
@@ -34,6 +38,8 @@ import { supabase } from '@/integrations/supabase/client';
   events: AnalyticsEvent[]
   clearEvents: () => void
 }
+
+
 
 
 
@@ -108,9 +114,12 @@ export interface AnalyticsContextType {;
 
 
 
+
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
 ),
+
 
 export function AnalyticsProvider({ children }: { children: ReactNode }) {;
   const [pageViews, setPageViews] = useState(0);
@@ -124,6 +133,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),
   const location = useLocation(),
   const { user } = useAuth(),
+
 
 
 
@@ -143,6 +153,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
       timestamp: Date.now()
       userId: user?.id
       metadata
+
     }
     setEvents((prevEvents) => [...prevEvents, event]);
     setLastEvent(event);
@@ -151,6 +162,7 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setEvents((prevEvents) => [...prevEvents, event]),
     setLastEvent(event),
     
+
     try {
       // Store event in Supabase for persistent analytics
       await supabase.from('analytics_events').insert([{
@@ -159,6 +171,31 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
         user_id: user?.id
         metadata: metadata
 
+
+    }
+  }
+  // Function to track conversion events
+  const trackConversion = (conversionType: string, value?: number, metadata: Record<string, any> = {}) => {
+    trackEvent('conversion', {
+      conversionType
+      value
+      ...metadata
+    })
+  }
+  // Clear events (for development or testing)
+  const clearEvents = () => {
+    setEvents([]);
+    setLastEvent(null)
+  }
+  return (
+    <AnalyticsContext.Provider
+      value={{
+        trackEvent;
+        trackConversion;
+        pageViews;
+        lastEvent;
+        events;
+        clearEvents
 
 
 ;
@@ -257,14 +294,25 @@ function AnalyticsProvider() {
     setEvents([]);
     setLastEvent(null);
 
+  },;
+  return (;
+    <AnalyticsContext.Provider;
+      value={{;
+        trackEvent,;
+        trackConversion,;
+        pageViews,;
+        lastEvent,;
+        events,;
+        clearEvents;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       }}
     >
       {children}
     </AnalyticsContext.Provider>
   )
 }
+
 
 
 
@@ -294,6 +342,7 @@ export const useAnalytics = (): AnalyticsContextType => {;
 
 
 
+
   const context = useContext(AnalyticsContext);
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -301,6 +350,8 @@ export const useAnalytics = (): AnalyticsContextType => {;
   // Cast is used here because the context default is undefined until provided
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
+
+
 
 
 
@@ -319,7 +370,9 @@ export const useAnalytics = (): AnalyticsContextType => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 };
+

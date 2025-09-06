@@ -1,9 +1,11 @@
 import React from 'react';
 interface EnterpriseHeroProps {
   // Add props here as needed
+
 }
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 export default function EnterpriseHero({ }: EnterpriseHeroProps) {
   return (
     <div>
@@ -20,5 +22,7 @@ export default function EnterpriseHero({ }: EnterpriseHeroProps) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,8 @@
 
 
 
+
+
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -10,6 +12,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+
 
 
   }
@@ -28,6 +31,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -41,6 +45,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
   if (!milestoneId || !title) return res.status(400).json({ error: "milestoneId, title required" }),
   const version = nextVersionFor(state, milestoneId),
+
   const event = {
     eventId: uuidv4()
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
@@ -109,11 +114,13 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
+
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
 
       .map(async (peer) => {
+
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString();
         try {
@@ -124,6 +131,7 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   return res
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
+
 
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
@@ -173,9 +181,11 @@ if (headers["x - zion - signature"] = sig) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
 
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

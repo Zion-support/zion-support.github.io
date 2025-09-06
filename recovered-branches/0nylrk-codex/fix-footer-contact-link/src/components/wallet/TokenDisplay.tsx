@@ -6,6 +6,7 @@
 
 
 
+
 export function TokenDisplay() {;
 
 
@@ -14,6 +15,7 @@ export function TokenDisplay() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   const { wallet, loading } = useWallet();
+
 import React from "react",
 import { BadgeDollarSign } from "lucide-react",
 import { useWallet } from "@/hooks/useWallet",
@@ -50,6 +52,7 @@ export function TokenDisplay() {
               </Button>
             </div>
           </div>
+
         )}
       </CardContent>
     </Card>
@@ -97,6 +100,7 @@ export function TokenDisplay() {;
     </Card>);
 
 }
+
 
 
 

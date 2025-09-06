@@ -1,5 +1,6 @@
 
 
+
 interface Contract {
 
   id: string;
@@ -17,15 +18,18 @@ interface Contract {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
+
 export function RecentContractsTable({
   contracts
   onViewContract
 }: RecentContractsTableProps) {
 
 export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
+
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -95,6 +99,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                     size="sm"
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                   >;
                     View;
@@ -106,10 +111,13 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
 
 
 
+
           </tbody>;
         </table>;
       </div>;
+
     </>;
+
 
 
 

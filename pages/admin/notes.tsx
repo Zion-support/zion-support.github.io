@@ -1,4 +1,5 @@
 
+
 import { useEffect, useState } from 'react';
 
 
@@ -11,6 +12,7 @@ import { useEffect, useState } from 'react';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -49,6 +51,8 @@ export default function AdminNotesConsole(req, res) {
 }
     if (isAdmin) load()
   }, [isAdmin]),
+
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -70,6 +74,7 @@ export default function AdminNotesConsole(req, res) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
+
 
 
 
@@ -151,12 +156,23 @@ export default function AdminNotesConsole(req, res) {
       } finally {;
         setLoading(false);
         } catch (error) {
+
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
+        </div>;
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

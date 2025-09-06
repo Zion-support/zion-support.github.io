@@ -4,8 +4,10 @@
 
 
 
+
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
+
 
 
 import React from 'react',
@@ -18,7 +20,9 @@ import { toast } from "sonner",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface MilestoneManagerProps {
@@ -39,21 +43,83 @@ interface MilestoneManagerProps {
 }
 
 
+export function MilestoneManager({
+  projectId,
+  milestones,
+  activities,
+  isLoading,
+  isClient,
+  isTalent,
+  paymentTerms,
+  isSubmitting,
+  onCreateMilestone,
+  onUpdateStatus,
+  onDeleteMilestone,
+  onUploadDeliverable,
 
-  refetch: () => Promise<void>
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
+
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+      toast.success("Milestone approved"),
+      await refetch()
+    } catch (error) {
+      console.error("Error approving milestone:", error),
+      toast.error("Failed to approve milestone")
+    }
+
+  const handleMilestoneRejected = async (milestoneId: string) => {
+    try {
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
+      toast.success("Milestone rejected"),
+      await refetch()
+    } catch (error) {
+      console.error("Error rejecting milestone:", error),
+      toast.error("Failed to reject milestone")
+    }
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="lg:col-span-2">
+
+import React from 'react',;
+import { MilestonesList } from '../MilestonesList',;
+import { PaymentSummary } from '../PaymentSummary',;
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+import { toast } from "sonner",;
+interface MilestoneManagerProps {;
+  projectId: string,;
+  milestones: Milestone[],;
+  activities: Record<string MilestoneActivity[]>,;
+  isLoading: boolean,;
+  isClient: boolean,;
+  isTalent: boolean,;
+  paymentTerms?: string,;
+  isSubmitting: boolean,;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,;
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,;
+  onDeleteMilestone: (id: string) => Promise<boolean>,;
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,;
+  refetch: () => Promise<void>;
+}
+;
+export function MilestoneManager({;
+  projectId,;
+  milestones,;
+  activities,;
+  isLoading,;
+  isClient,;
+  isTalent,;
+  paymentTerms,;
+  isSubmitting,;
+  onCreateMilestone,;
+  onUpdateStatus,;
+  onDeleteMilestone,;
+  onUploadDeliverable,;
 
   refetch;
 }: MilestoneManagerProps) {;
@@ -87,6 +153,7 @@ interface MilestoneManagerProps {
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
 
+
         <MilestonesList
 
 
@@ -98,6 +165,7 @@ interface MilestoneManagerProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}
@@ -115,6 +183,7 @@ interface MilestoneManagerProps {
         <PaymentSummary
           milestones={milestones}
           paymentTerms={paymentTerms}
+
         />
       </div>
     </div>
@@ -140,5 +209,4 @@ interface MilestoneManagerProps {
     </div>);
 }
 
-=======
-;
+

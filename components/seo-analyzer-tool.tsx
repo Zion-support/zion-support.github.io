@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -32,6 +33,7 @@ import {
 
 
 export default function SEOAnalyzerToolPage() {
+
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [url, setUrl] = useState('');
@@ -104,6 +106,7 @@ export default function SEOAnalyzerToolPage() {
       category: 'Local SEO'
       factors: [
         'Google My BusinessLocal citationsReview managementLocal keyword targetingLocation-based contentLocal link building'
+
       ]
       icon: '📍'
       color: 'text-orange-400'
@@ -334,6 +337,7 @@ export default function SEOAnalyzerToolPage() {
 
 
 
+
     {
       category: 'Content SEO'
       factors: [
@@ -552,19 +556,85 @@ export default function SEOAnalyzerToolPage() {
         ],;
       });
       setIsAnalyzing(false);
-    }, 4000);  };        recommendations: [
-          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
-        ];
-        keywords: [
-          { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
-          { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
-          { keyword: 'search engine optimization', volume: '15K', difficulty: 'high' }
-        ]
-      });
 
-      setIsAnalyzing(false);
-    }, 4000);
-  };
+
+  return (
+    <>
+      <Head>
+        <title>
+          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &
+          Optimization
+        </title>
+        <meta
+          name='description'
+          content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings."
+        />
+        <meta
+          property='og:title'
+          content='SEO Analyzer Tool - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
+        <div className='absolute inset-0 bg-grid opacity-10' />
+        <div className='relative z-10 container-cursor text-center'>
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
+            <Search className='w-4 h-4 mr-2' />
+            Professional SEO Analysis
+          </div>
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>
+            SEO Analyzer Tool
+          </h1>
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
+            Analyze your website's SEO performance with our comprehensive tool.
+            Get detailed insights, keyword research, and optimization
+            recommendations to improve your search rankings and drive more
+            organic traffic.
+          </p>
+          {/* URL Input */}
+          <div className='max-w-2xl mx-auto mb-8'>
+            <div className='flex flex-col sm:flex-row gap-4'>
+              <input
+                type='url'
+                placeholder='Enter your website URL (e.g., https://example.com)'
+                value={url}
+                onChange={e => setUrl(e.target.value)}
+                className='flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
+              />
+              <Button
+                onClick={handleAnalyzeSEO}
+                size='lg'
+                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing |!url.trim()}
+              >
+                {isAnalyzing ? (
+                  <>
+                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    Analyzing...
+                  </>
+                ) : (
+                  <>
+                    <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>
+      {/* Hero Section */}
+      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
+        <div className="absolute inset-0 bg-grid opacity-10" />
+        <div className="relative z-10 container-cursor text-center">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+            <Search className="w-4 h-4 mr-2" />
+            Professional SEO Analysis
+          </div>
+          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
+            SEO Analyzer Tool
+          </h1>
+          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
+            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
 
 
   return (
@@ -716,6 +786,7 @@ export default function SEOAnalyzerToolPage() {
               View Pricing
             </Button>
             <Button
+
 href="/contact"
               variant="outline"
               size="lg"
@@ -840,6 +911,7 @@ href="/contact"
 
 
 
+
                     </p>
                   </div>
                 </div>
@@ -853,9 +925,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -865,9 +939,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -960,9 +1036,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -1168,16 +1246,27 @@ href="/contact"
                 <div className="space-y-3">
                   {analysisResults.issues.map((issue, index) => (
 
+                    <div key={index} className='flex items-start space-x-3'>
+                      {issue.type === 'error' ? (
+                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />
+                      ) : issue.type === 'warning' ? (
+                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />
+                      ) : (
+                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
+                      )}
+                      <div>
+                        <span className='text-gray-300'>{issue.message}</span>
+                        <div className='text-xs text-gray-500 mt-1'>
+                          Priority: {issue.priority}
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ))}
                 </div>
               </Card>
             </div>
+
 
 
 
@@ -1192,6 +1281,7 @@ href="/contact"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1291,11 +1381,14 @@ href="/contact"
                         }`}>
 
 
+
+
                         </span>
                       </div>
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ))}
+
 
 
 <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
@@ -1495,6 +1588,7 @@ href="/contact"
             </div>;
           </div>;
 
+
       {/* Pricing Section */}
       <section id='pricing' className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1506,7 +1600,9 @@ href="/contact"
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1601,6 +1697,8 @@ href="/contact"
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1615,6 +1713,8 @@ href="/contact"
                 </div>;
 
 
+
+
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1627,16 +1727,15 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+
 
           </div>;
         </div>;
@@ -1651,11 +1750,13 @@ href="/contact"
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
 
             Ready to Improve Your SEO Rankings?
 
@@ -1666,6 +1767,7 @@ href="/contact"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1687,6 +1789,7 @@ href="/contact"
               size='lg'
 
 
+
               Schedule Demo;
             </Button>;
           </div>;
@@ -1705,4 +1808,5 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

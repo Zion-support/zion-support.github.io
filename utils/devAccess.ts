@@ -1,12 +1,34 @@
 
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+// Note: This is a Vite project, not Next.js
+// Using generic request/response types instead of Next.js types
+type ApiRequest = {
+  headers: Record<string, string | string[] | undefined>;
+  [key: string]: any;
+};
 
+type ApiResponse = {
+  status: (code: number) => ApiResponse;
+  json: (data: any) => void;
+  [key: string]: any;
+};
+
+export type DevRole = 'admin' | 'maintainer' | 'contributor';
+
+export interface DevIdentity {
+  isAuthenticated: boolean;
 
   roles: DevRole[];
   userId?: string;
 }
 
-    const gitDir = path && path.join(process && process.cwd(), '.git');
-    if (!fs && fs.existsSync(gitDir)) return { connected: false };
+
+export function getGitStatus(): { connected: boolean; branch?: string } {
+  try {
+    const gitDir = path.join(process.cwd(), '.git');
+    if (!fs.existsSync(gitDir)) return { connected: false };
 
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore'],
@@ -17,6 +39,7 @@
   } catch {
     return { connected: false };
   }
+
 }
 
 
@@ -38,6 +61,7 @@
 
 
 
+
 export function requireRoles(
   req: ApiRequest,
   res: ApiResponse,
@@ -56,6 +80,7 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+
 
 }
 
@@ -79,3 +104,4 @@ export function requireRoles(
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

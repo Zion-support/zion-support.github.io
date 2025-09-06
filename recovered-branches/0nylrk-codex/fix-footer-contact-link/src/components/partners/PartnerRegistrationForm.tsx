@@ -4,6 +4,8 @@
 
 
 
+
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -19,12 +21,19 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
+import { useState } from "react",
+import { z } from "zod",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client",
 
 
 const partnerFormSchema = z.object({
@@ -41,12 +50,14 @@ const partnerFormSchema = z.object({
 
 type PartnerFormValues = z.infer<typeof partnerFormSchema>,
 
+
 export function PartnerRegistrationForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { user } = useAuth(),
+
 
   const form = useForm<PartnerFormValues>({
     resolver: zodResolver(partnerFormSchema)
@@ -66,6 +77,7 @@ export function PartnerRegistrationForm() {
       .from('partner_profiles')
       .select('id')
       .eq('user_id', user.id)
+
       .single();
     if (existingPartner) {
       toast({
@@ -80,6 +92,7 @@ export function PartnerRegistrationForm() {
       .single(),
 
 
+
   async function onSubmit(data: PartnerFormValues) {
     if (!user) {
       toast({
@@ -87,6 +100,8 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+
+
 
 
 import { useState } from "react",;
@@ -291,12 +306,14 @@ if (return) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           }
         ]);
         .select();
@@ -312,8 +329,10 @@ if (return) {
         .from('referral_codes')
         .select('code')
         .eq('user_id', user.id)
+
         .single();
         .single(),
+
 
       if (!existingCode) {
         await supabase.rpc('generate_referral_code', { user_id: user.id })
@@ -331,6 +350,7 @@ if (return) {
 
 
     }
+
 
 
 
@@ -416,6 +436,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -489,6 +510,7 @@ if ( {) {
                       <FormMessage />
                     </FormItem>
                   )}
+
                 />
                 <FormField
                 />;
@@ -519,6 +541,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -639,8 +662,29 @@ if ( {) {
                     <FormControl>;
                       <Textarea
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
-                        rows={4} 
-                        {...field} 
 
+                        rows={4}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormDescription>
+                      Limit: 500 characters
+                    </FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+              className="w-full bg-zion-purple hover:bg-zion-purple-dark"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Submitting..." : "Submit Application"}
+            </Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
 
 

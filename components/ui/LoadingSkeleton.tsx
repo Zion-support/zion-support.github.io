@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+
 interface SkeletonProps {
   className?: string;
   height?: string;
@@ -71,6 +72,7 @@ export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' })
 
 
 
+
 interface StatsSkeletonProps {
   className?: string
 
@@ -112,15 +114,10 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
     </div>;
   );
 
-
+}
+export default Skeleton;  )
+}
 export default Skeleton;
-
-
-
-
-
-
-
 
 
 interface SkeletonProps {
@@ -131,9 +128,11 @@ interface SkeletonProps {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

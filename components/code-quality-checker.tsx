@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -32,6 +33,7 @@ import {
 
 
 export default function CodeQualityCheckerPage() {
+
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
@@ -71,6 +73,7 @@ export default function CodeQualityCheckerPage() {
   ];
   const supportedLanguages = [
     {
+
       name: 'JavaScript/TypeScript'
       icon: '⚡'
       features: ['ESLint rules', 'TypeScript checks', 'React best practices']
@@ -148,6 +151,7 @@ export default function CodeQualityCheckerPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   const pricing = [
     {
       name: 'Developer'
@@ -280,6 +284,7 @@ export default function CodeQualityCheckerPage() {
           },
 
           {
+
             type: 'error'
             message: 'Missing semicolon at end of statement'
             line: 18
@@ -305,6 +310,7 @@ export default function CodeQualityCheckerPage() {
 
           securityScore: '92%',
         },
+
         recommendations: [
           'Use const for immutable variables to improve code clarity'
           'Break down large functions into smaller, more focused functions'
@@ -511,6 +517,7 @@ export default function CodeQualityCheckerPage() {
               View Pricing
             </Button>
             <Button
+
 href="/contact"
               variant="outline"
               size="lg"
@@ -706,6 +713,7 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
                     </p>
                   </div>
                 </div>
@@ -718,7 +726,9 @@ href="/contact"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>
@@ -729,7 +739,9 @@ href="/contact"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               Multi-Language Support
             </h2>
@@ -807,9 +819,11 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Demo Analysis Results */}
       {analysisResults && (
 
@@ -1005,6 +1019,7 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1018,6 +1033,7 @@ href="/contact"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {/* Quality Metrics */}
               <Card className='border-gradient-teal'>
@@ -1034,6 +1050,7 @@ href="/contact"
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1047,6 +1064,7 @@ href="/contact"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   </div>
                   <div className='flex justify-between items-center'>
@@ -1085,6 +1103,7 @@ href="/contact"
                 </div>;
               </Card>;
             {/* Recommendations */}
+
             <Card className="border-gradient-teal">
               <h3 className="text-2xl font-bold mb-6 text-white">Improvement Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -1102,6 +1121,7 @@ href="/contact"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 ))}
               </div>
             </Card>
@@ -1122,7 +1142,9 @@ href="/contact"
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1368,6 +1390,8 @@ href="/contact"
                 )}
 
 
+
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1382,6 +1406,8 @@ href="/contact"
                 </div>;
 
 
+
+
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -1394,16 +1420,15 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
+                  className={`w-full ${plan.popular ? 'bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-600 hover:to-cyan-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
+                >
+                  Get Started
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
+
 
           </div>;
         </div>;
@@ -1418,11 +1443,13 @@ href="/contact"
 
 
 
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-teal-600 to-cyan-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
 
             Ready to Improve Your Code Quality?
 
@@ -1433,6 +1460,7 @@ href="/contact"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           </h2>
           <p className='text-responsive-md text-teal-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1464,6 +1492,7 @@ href="/contact"
         </div>
       </section>
     </>
+
 );
 
 
@@ -1480,6 +1509,7 @@ href="/contact"
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
 
 

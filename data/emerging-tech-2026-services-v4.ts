@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface EmergingTech2026ServiceV4 {;
   id: string;
@@ -302,6 +303,13 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
+
+
+
+
+    rating: 4.8
+
+    reviews: 25
 
 
 import { ServiceVariant } from '../types/service-variants',;
@@ -702,6 +710,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -710,3 +719,4 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
+

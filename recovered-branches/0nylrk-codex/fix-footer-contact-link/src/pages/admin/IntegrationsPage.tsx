@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -18,6 +19,7 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default function IntegrationsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -26,7 +28,14 @@ export default function IntegrationsPage() {
         title="Integrations - Zion AI Marketplace"
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
 
-
+      />
+      <Header />
+      <main className="min-h-screen bg-background">
+        <IntegrationsHub />
+      </main>
+      <Footer />
+    </ProtectedRoute>
+  )
 
 
 import React, { useState } from "react",;
@@ -53,6 +62,7 @@ export default function IntegrationsPage() {;
 
 
 
+
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -75,6 +85,7 @@ function IntegrationsPage() {
       </main>;
       <Footer />;
     </ProtectedRoute>);
+
 
 
 

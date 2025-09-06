@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,6 +36,7 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 
 
 
+
 export default function BlogPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -51,12 +53,14 @@ export default function BlogPage() {
       <SEO
         title='Blog | Zion Tech Group'
         description='Insights and updates on AI, cloud, and automation.'
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+
+
+>>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup.com/blog/" />
@@ -66,6 +70,7 @@ export default function BlogPage() {
       </div>
     </UltraFuturisticBackground>;
   );
+
 
 }
 
@@ -79,4 +84,5 @@ export default function BlogPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

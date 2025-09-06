@@ -257,6 +257,7 @@ export default async function handler(
     // Language detection (simplified - assume English for demo)
 
 
+
       language: {
 
         topWords,
@@ -322,4 +323,5 @@ export default async function handler(
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

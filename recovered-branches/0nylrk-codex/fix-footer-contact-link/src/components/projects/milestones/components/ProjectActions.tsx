@@ -1,6 +1,8 @@
 
 
 
+
+
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
@@ -11,7 +13,9 @@ import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface ProjectActionsProps {
@@ -24,6 +28,13 @@ interface ProjectActionsProps {
 }
 
 
+export function ProjectActions({
+  projectId,
+  isUnderDispute,
+  disputeId,
+  isTalent,
+
+
   onAddMilestone
 }: ProjectActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -33,6 +44,7 @@ interface ProjectActionsProps {
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
+
         />;
 
 
@@ -40,6 +52,7 @@ interface ProjectActionsProps {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       )}

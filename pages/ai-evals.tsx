@@ -1,9 +1,11 @@
 
+
 import React from 'react',;
 import Head from 'next/head',;
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',;
 import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
 ;
+
 
 
 
@@ -14,18 +16,21 @@ import { Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default function AIEvalsPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
 		email: 'kleber@ziontechgroup.com'
 		address: '364 E Main St STE 1008 Middletown DE 19709'
 		website: 'https://ziontechgroup.com'
+
 
 	}
 	const plans = [
@@ -47,6 +52,7 @@ export default function AIEvalsPage() {_const _contactInfo = {
 		{_name: 'Growth', _price: '$499/month', _items: ['50K eval calls', _'Custom metrics (BLEU/ROUGE/F1)', _'CI evals via API', _'Slack alerts']},
 		{_name: 'Enterprise', _price: 'Custom', _items: ['Private cloud/VPC', _'SLA & audit logs', _'SOC2 support', _'SAML/SSO']}];
 ursor/fix-lint-push-and-merge-to-main-ce13
+
 	return (_<QuantumHolographicMatrixBackground intensity={_1.5}>
 
 			<Head>
@@ -61,11 +67,13 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 					<div className="mt-6 flex justify-center gap-3">
 
 
+
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Get a Demo</Link>
 						<a href="/resources" className="border-gray-600 text-gray-200">Read Docs</Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -76,6 +84,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 							<ul className="space-y-2 text-gray-300 text-sm">
 								{p.items.map((i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
+
 
 
 								))  } catch (error) {
@@ -93,6 +102,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -120,14 +130,17 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 					<div className="text-center">
 
 
+
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 					</div>
 				</div>
 			</div>
 		</QuantumHolographicMatrixBackground>
+
 
 
 export default function AIEvalsPage() {
@@ -232,11 +245,13 @@ export default function AIEvalsPage() {
 		</QuantumHolographicMatrixBackground>
 
 
+
 	)
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 }
 
@@ -251,4 +266,5 @@ export default function AIEvalsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

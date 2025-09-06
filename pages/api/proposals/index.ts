@@ -3,6 +3,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -14,12 +16,14 @@ async function ensureStore() {
 
 
 
+
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
+
 
 
   await ensureStore();
@@ -54,6 +58,8 @@ async function ensureStore() {
   }
 
   res.status(405).json({ error: "Method not allowed" });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -96,6 +102,7 @@ if ( {) {
       regional_scope: body.regional_scope,
       type: body.type,
 
+
       status: body.status || "Draft",
       created_at: new Date ().toISOString (),
     }
@@ -134,3 +141,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -3,6 +3,7 @@
 
 
 
+
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
 
 interface AnalyticsContainerProps {
@@ -11,9 +12,11 @@ interface AnalyticsContainerProps {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
+
 
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
@@ -40,6 +43,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   // Check if user is admin (using either role or userType)
   const isAdmin = user?.role === 'admin' || user?.userType === 'admin',
   
+
   // If still loading auth status, show loading
   if (isLoading) {
     return (
@@ -48,12 +52,16 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
       </div>
     )
   }
+
   
+
   // If not authenticated, redirect
   if (!isAuthenticated) {
     return <Navigate to="/login" state={{ from: '/analytics' }} replace />
   }
+
   
+
   // If not admin, redirect
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />
@@ -73,6 +81,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
             Track user behavior, page views, and conversion rates
           </p>
         </div>
+
         {children}
       </main>
       <Footer />
@@ -142,6 +151,7 @@ export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
     </div>);
 
 }
+
 
 
 

@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -31,7 +32,9 @@ import {toast} from "sonner";
 
 
 
+
 }
+
 
 
 
@@ -63,6 +66,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     e.preventDefault();
   const { user } = useAuth(),
   const { applyToJob } = useJobApplications(),
+
   const { resumes, isLoading: isResumesLoading } = useResume(),
   const navigate = useNavigate(),
   
@@ -73,7 +77,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
+
     
+
     if (!user) {
       toast.error("You must be logged in to apply")
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } })
@@ -86,6 +92,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError("Please provide a cover letter");
       return;
     }
+
     setIsSubmitting(true);
     setError(null);
     try {
@@ -97,6 +104,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     try {
       const success = await applyToJob(job.id, coverLetter, selectedResumeId || undefined),
       
+
       if (success) {
         toast.success("Your application has been submitted!");
         if (onSuccess) {
@@ -186,10 +194,12 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
+
   }
 
   },
   
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
@@ -213,6 +223,7 @@ if ( {) {
             value={coverLetter}
             onChange={(e) => setCoverLetter(e && e.target.value)}
             rows={6}
+
 
 ;
   return (
@@ -272,6 +283,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();
@@ -288,6 +300,7 @@ if ( {) {
           ) : (;
             "Submit Application";
           )}
+
         </Button>
       </div>
     </form>
@@ -346,5 +359,4 @@ if ( {) {
     </form>);
 }
 
-=======
-;
+

@@ -1,3 +1,4 @@
+
 import React from "react";
 import React from 'react';
 
@@ -85,6 +86,7 @@ function FuturisticBackground() {
 
 
 
+
 export default function FuturisticBackground() {
   return (
     <div className=&quot;pointer-events-none absolute inset-0 overflow-hidden&quot;>
@@ -98,6 +100,7 @@ export default function FuturisticBackground() {_return (
       <div className=&quot;grid-overlay absolute inset-0 opacity-20&quot; />
 
       {/* Glow orbs */}
+
     </div>
   )
 
@@ -111,4 +114,5 @@ export default function FuturisticBackground() {_return (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

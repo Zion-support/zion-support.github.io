@@ -28,6 +28,12 @@ import { motion } from 'framer-motion';
 
 
 
+
+  pulse: number;
+export default function UltraFuturisticBackground2029({
+
+  children: React.ReactNode;
+
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -60,6 +66,7 @@ interface EnergyField {
 
 
 
+
 interface EnergyField {;
   x: number,;
   y: number,;
@@ -70,6 +77,7 @@ interface EnergyField {;
 }
 
 export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
 
 
 
@@ -576,9 +584,74 @@ if ( {) {
 
           }}
 
+          transition={{
+            duration: 8
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full'
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0.2, 0.5, 0.2],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 border border-pink-400 opacity-20 rounded-full"
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]
+          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45'
+          animate={{
+            rotate: [45, 405]
+            scale: [1, 1.1, 1],          }}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-1/4 w-40 h-40 border border-purple-400 opacity-20 transform rotate-45"
+          animate={{
+            rotate: [45, 405];
+            scale: [1, 1.1, 1]
+          }}
+          transition={{
+            duration: 12
+            repeat: Infinity
+            ease: 'easeInOut'
+          }}
+        />
+        <motion.div
+          className='absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20'
+          animate={{
+            rotate: [-45, 315]
+            opacity: [0.2, 0.6, 0.2],          }}
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
+          animate={{
+            rotate: [-45, 315];
+            opacity: [0.2, 0.6, 0.2]
+          }}
+          transition={{
 
-            duration: 10,
-            repeat: Infinity,
 
 
 
@@ -609,4 +682,5 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

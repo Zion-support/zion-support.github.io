@@ -134,6 +134,7 @@ import { motion } from 'framer-motion';
             background: [
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0 && 0.3) 0%, transparent 50%)'
             ]
+
       />;
       {/* Animated gradient background */}
       <div className="absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 via - cyan - 900 / 20 to - black">;
@@ -144,6 +145,7 @@ import { motion } from 'framer-motion';
               'radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 80% 20%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 40% 40%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)radial - gradient (circle at 20% 80%, rgba (120, 119, 198, 0.3) 0%, transparent 50%)';
             ];
         }
+
 
         // Draw particle with glow effect
         ctx.save(),
@@ -254,6 +256,18 @@ import { motion } from 'framer-motion';
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
         animate={{
 
+          y: [0, -20, 0]
+          opacity: [0.2, 0.5, 0.2],        }}
+        transition={{
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut',        }}      />
+      <motion.div
+        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
+        animate={{
+          rotate: [45, 405]
+          scale: [1, 1.2, 1],        }}
+        transition={{
 
 
           ease: 'linear',        }}
@@ -269,6 +283,7 @@ import { motion } from 'framer-motion';
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
         transition={{
+
 
           duration: 12,
           repeat: Infinity,
@@ -286,6 +301,7 @@ import { motion } from 'framer-motion';
           duration: 12
           repeat: Infinity
 
+
           ease: 'linear',          ease: "linear"
         }}
 
@@ -299,6 +315,8 @@ import { motion } from 'framer-motion';
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+
+
           duration: 12,
           repeat: Infinity,
 
@@ -324,10 +342,13 @@ import { motion } from 'framer-motion';
           style={{
             background:
               'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)',
+
+
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px'],          }}
           transition={{
+
             duration: 30
             repeat: Infinity
             ease: 'linear',          }}        <motion.div
@@ -350,11 +371,14 @@ import { motion } from 'framer-motion';
             repeat: Infinity,
 
 
+
           }}
         />
       </div>
       {/* Quantum energy waves */}
       <div className='absolute inset-0'>
+
+
 
 
         <motion.div
@@ -396,10 +420,12 @@ import { motion } from 'framer-motion';
           transition={{
 
 
+
             duration: 8
             repeat: Infinity
             duration: 8,
             repeat: Infinity,
+
 
             ease: 'easeInOut',          }}        <motion.div
           className="absolute inset-0"
@@ -425,6 +451,7 @@ import { motion } from 'framer-motion';
           animate={{
 
             scale: [1, 1.5, 1];
+
 
 
             opacity: [0.1, 0.3, 0.1];
@@ -457,6 +484,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           }}
           transition={{
             duration: 8,
@@ -467,12 +495,18 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+        />
+      </div>
+
+
       {/* Holographic elements */}
 
 
@@ -506,9 +540,21 @@ import { motion } from 'framer-motion';
 
           opacity: [0.2, 0.4, 0.2];
         transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: 'linear',          ease: "linear";
+
+
+          ease: 'linear',        }}
+      />
+      {/* Neural network connections */}
+      <div className='absolute inset-0'>        className="absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full"
+        animate={{
+          rotate: [360, 0];
+          scale: [1.2, 1, 1.2];
+          opacity: [0.2, 0.4, 0.2]
+        transition={{
+          duration: 20
+          repeat: Infinity
+          ease: 'linear',          ease: "linear"
+
         }}
       />;
       {/* Neural network connections */}
@@ -549,6 +595,7 @@ import { motion } from 'framer-motion';
             }}
 
 
+
             transition={{
 
               duration: 3,
@@ -571,10 +618,12 @@ import { motion } from 'framer-motion';
 
       <div className='absolute inset-0 overflow-hidden'>
 
+
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -582,6 +631,7 @@ import { motion } from 'framer-motion';
       </div>
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
+
               ease: 'easeInOut',            }}
 
 
@@ -595,6 +645,7 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -604,15 +655,18 @@ import { motion } from 'framer-motion';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
+
               left: `${15 + i * 15}%`
               top: '-20px'
               left: `${15 + i * 15}%`,
               top: '-20px',
+
             }}
             animate={{
               y: [0, window.innerHeight + 20],            }}        {Array.from({ length: 5 }).map((_, i) => (
@@ -629,6 +683,7 @@ import { motion } from 'framer-motion';
 
 
             }}
+
 
 
 
@@ -664,6 +719,7 @@ import { motion } from 'framer-motion';
 
 
 
+
             transition={{
               duration: 4,
               repeat: Infinity,
@@ -672,7 +728,11 @@ import { motion } from 'framer-motion';
 
 
 
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -683,6 +743,7 @@ import { motion } from 'framer-motion';
       </div>;
     </div>;
   );
+
 
 
 }
@@ -701,4 +762,5 @@ export default UltraFuturisticBackground2029;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

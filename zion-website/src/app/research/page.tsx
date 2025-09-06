@@ -112,6 +112,7 @@ const academic_partners = [;
     location: 'Tokyo, Japan'
     focus: 'Robotics & Autonomous Systems'
     collaboration: 'Robotic learning and human-robot interaction'}]
+
 export default function ResearchPage() {
 
 export default function ResearchPage() {;
@@ -120,6 +121,7 @@ export default function ResearchPage() {;
 const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -130,10 +132,12 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Innovation
               </span>
             </h1>
+
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
               Pushing the boundaries of artificial intelligence through groundbreaking research
             <p className="mt-6 text-lg leading-8 text-gray-300">
               Pushing the boundaries of artificial intelligence through groundbreaking research, 
+
               innovative discoveries, and academic collaboration.
             </p>
           </div>
@@ -146,10 +150,12 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
             Focus Areas
           </p>
+
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our research spans the cutting edge of AI and technology, driving innovation
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our research spans the cutting edge of AI and technology, driving innovation 
+
             and advancing the state of the art.
           </p>
         </div>
@@ -186,6 +192,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Recent Publications */}
+
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Publications</h2>
@@ -194,6 +201,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Publications</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
 
             Recent Research
@@ -224,13 +232,29 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;text - sm text - gray - 300 mb - 4&quot;>{publication.abstract}</p>;
                 <a;
                   href={`https://doi.org/${publication.doi}`}
-                  target=&quot;_blank & quot;
-                  rel=&quot;noopener noreferrer & quot;
-                  className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
-                  View Publication <span aria - hidden=&quot;true & quot;>→</span>;
-                </Link>;
-              </div>))}
+
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+                >
+                  View Publication <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            ))}
+          </div>;
+        </div>;
+      </div>;
+      {/* Research Impact */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+            Research Influence
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our research has made significant contributions to the field, 
 
 
             influencing both academia and industry.
@@ -245,6 +269,22 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 <p className=&quot;mt-2 text-sm text-gray-400&quot;>{item.description}</p>
               </div>
             ))}
+
+          </dl>;
+        </div>;
+      </div>;
+      {/* Academic Collaborations */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+            Academic Partnerships
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            We collaborate with leading academic institutions worldwide to advance 
+
 
             the frontiers of AI research and innovation.
           </p>
@@ -302,9 +342,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           </div>;
         </div>;
       </div>;
-    </div>);
-}
-=======
+
 
 
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
@@ -312,11 +350,20 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
 
 
+=======
+      {/* CTA section */}
+
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
 
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Interested in collaborating on cutting-edge AI research? 
+
+
 
 
 

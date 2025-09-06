@@ -22,6 +22,7 @@ import React from 'react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -32,6 +33,7 @@ import React from 'react';
 
   TrendingUp,;
   CheckCircle,;
+
 
 
 
@@ -211,6 +213,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
               <p className="text-blue-300 font-medium">{stat.label}</p>
             </div>
+
           ))}
         </div>
         {/* Testimonials Grid */}
@@ -278,6 +281,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -294,6 +298,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
                 {/* Testimonial Text */}
                 <p className='text-white/80 text-sm leading-relaxed mb-6'>                  "{testimonial.content}"
                 </p>
+
                 {/* Author Info */}            <div
               key={testimonial.id}
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -366,6 +371,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
                   </span>
                 </div>
               </div>
@@ -431,6 +437,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
               </div>
               <div className='absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />            </div>              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-blue-400/5 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
             </div>
+
           ))}
         </div>
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -442,6 +449,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* CTA Section */}
         <div className='text-center mt-16'>
@@ -455,8 +463,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               Ready to Join Our Success Stories?
             </h3>
@@ -534,6 +544,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
             </div>
           </div>
         </div>
+
 
 
 className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
@@ -614,9 +625,11 @@ export default EnhancedTestimonialsSection;
 
 
 
+
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -626,3 +639,4 @@ export default EnhancedTestimonialsSection;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

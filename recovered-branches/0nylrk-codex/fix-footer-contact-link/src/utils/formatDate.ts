@@ -4,11 +4,13 @@
 
 
 
+
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const dateObj = new Date(date);
   switch (format) {
@@ -51,6 +53,8 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {
 
         return dateObj.toLocaleDateString()
+
+
 
 
 /**;
@@ -99,6 +103,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
     default: return dateObj && dateObj.toLocaleDateString()
@@ -127,11 +132,13 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
  * @returns Time ago string (e && e.g., "2 hours ago")
  */
+
 export const timeAgo = (date: Date | string | number): string => {;
   const dateObj = new Date(date);
   const now = new Date();
@@ -166,6 +173,7 @@ export const timeAgo = (date: Date | string | number): string => {
   
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
+
 
 
 
@@ -270,9 +278,11 @@ if ( {) {
 ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 };
+

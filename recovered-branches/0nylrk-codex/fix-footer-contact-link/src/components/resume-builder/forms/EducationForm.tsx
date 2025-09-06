@@ -2,6 +2,7 @@
 
 
 
+
   return <EducationFormComponent {...props} />;
 }
 
@@ -25,3 +26,4 @@ export function EducationForm(props: EducationFormProps) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from "react";
 import {MatchResultItem} from "@/lib/ai-matchmaking";
 import {Card, CardContent} from "@/components/ui/card";
@@ -39,11 +40,13 @@ export function AIMatchingResults(): any ({;
 
 
 
+
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
+
   serviceType?: string
 }
 
@@ -56,12 +59,14 @@ interface AIMatchingResultsProps {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   // Group matches by category
   const categories = {
     all: matches
     talent: matches.filter(match => match.category.toLowerCase().includes("talent"))
     services: matches.filter(match => match.category.toLowerCase().includes("service"))
     equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))
+
   }
   // Get the icon for a category
   const getCategoryIcon = (category: string) => {
@@ -80,6 +85,7 @@ interface AIMatchingResultsProps {
     return BriefcaseIcon
   },
   
+
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -106,6 +112,7 @@ interface AIMatchingResultsProps {
               <p className="text-xs text-zion-slate-light">Your search:</p>
               <p className="text-sm text-white">{projectDescription}</p>
             </div>
+
 import { useState } from "react",;
 import { MatchResultItem } from "@/lib/ai-matchmaking",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -191,12 +198,15 @@ export function AIMatchingResults({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           )}
         </CardContent>;
       </Card>;
     );
   }
+
   
+
   return (
     <div className="space-y-4">
       <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">

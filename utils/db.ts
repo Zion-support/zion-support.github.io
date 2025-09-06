@@ -1,3 +1,4 @@
+
 // Mock database utility
 import fs from 'fs';
 import path from 'path';
@@ -23,11 +24,13 @@ export function writeJsonFile<T>(fileName: string, data: T): void {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
 }
+
 
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
@@ -63,3 +66,4 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

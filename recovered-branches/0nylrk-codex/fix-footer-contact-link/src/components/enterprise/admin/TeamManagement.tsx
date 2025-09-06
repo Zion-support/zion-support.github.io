@@ -3,6 +3,7 @@
 
 
 
+
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -14,6 +15,7 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
+
 
 
 
@@ -32,11 +34,14 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+
+
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
+
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
@@ -52,6 +57,7 @@ export function TeamManagement() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -98,6 +104,7 @@ export function TeamManagement() {
       return
     }
     toast({
+
       title: "Invitation sent"
       description: `An invitation has been sent to ${newMemberEmail}`})
     setNewMemberEmail("");
@@ -110,19 +117,23 @@ export function TeamManagement() {
     setIsAddingMember(false)
   },
 
+
   const handleRemoveMember = (memberId: number) => {
     // In a real app, this would make an API call to remove the member
     toast({
       title: "Team member removed"
       description: "The team member has been removed from your workspace."})
+
   }
   },
+
 
   const handleResendInvite = (memberEmail: string) => {
     // In a real app, this would make an API call to resend the invitation
     toast({
       title: "Invitation resent"
       description: `A new invitation has been sent to ${memberEmail}`})
+
   }
   },
 
@@ -214,6 +225,7 @@ export function TeamManagement() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                         onClick={() => handleRemoveMember(member.id)}

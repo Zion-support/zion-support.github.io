@@ -5,6 +5,7 @@
 
 
 
+
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
@@ -53,6 +54,7 @@ export async function createNotification({
   relatedId?: string | null,
   sendEmail?: boolean,
   actionUrl?: string | null,
+
   actionText?: string | null
 }) {
   void actionUrl;
@@ -61,6 +63,7 @@ export async function createNotification({
     // Call the create_notification database function
 
     const { data, error } = await supabase.rpc('create_notification', {
+
       _user_id: userId;
       _title: title;
       _message: message;
@@ -77,10 +80,12 @@ export async function createNotification({
     
     if (error) throw error,
     
+
     // If sendEmail is true, call the edge function to send an email
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
+
 import { supabase } from "@/integrations/supabase/client",;
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 /**;
@@ -132,10 +137,12 @@ export async function createNotification({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+
 
 
 
@@ -146,6 +153,7 @@ export async function createNotification({;
   } catch (error) {;
     console.error('Error creating notification:', error),;
 
+
     return { success: false, error }
   }
 }
@@ -153,21 +161,115 @@ export async function createNotification({;
 /**
  * Creates a hire request notification for admin and talent
  */
+
+
+  requesterEmail, 
+  projectType,
+  projectSummary,
+  hireRequestId
+}: {
+  talentId: string,
+  adminId?: string,
+  requesterName: string,
+  requesterEmail: string,
+  projectType?: string,
+  projectSummary?: string,
+  hireRequestId: string
+}) {
+  const projectInfo = projectType 
+    ? `${projectType} project` 
+    : "project",
+  
+  const summaryText = projectSummary 
+    ? `: "${projectSummary}"` 
+    : "",
+  
+  // Create notification for talent
+  const talentNotification = await createNotification({
+    userId: talentId,
+    title: `New Hire Request from ${requesterName}`,
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
+    type: 'hire_request',
+    relatedId: hireRequestId,
+    sendEmail: true,
+    actionUrl: '/dashboard',
+    actionText: 'View Request'
+  }),
+  
+  // Create notification for admin if admin ID is provided
+  if (adminId) {
+    const adminNotification = await createNotification({
+      userId: adminId,
+      title: `New Hire Request for Talent`,
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,
+      type: 'hire_request',
+      relatedId: hireRequestId,
+      sendEmail: true,
+      actionUrl: '/admin/hire-requests',
+      actionText: 'Review Request'
+    }),
+    
+    return {
+      success: talentNotification.success && adminNotification.success,
+      talentNotification,
+      adminNotification
+
+;
+/**;
+ * Creates a hire request notification for admin and talent;
+ */;
 export async function createHireRequestNotifications({;
-  talentId;
-  adminId;
-  requesterName;
-export async function createHireRequestNotifications({
+  talentId,;
+  adminId,;
+  requesterName,;
+  requesterEmail,;
+  projectType,;
+  projectSummary,;
+  hireRequestId;
+}: {;
+  talentId: string,;
+  adminId?: string,;
+  requesterName: string,;
+  requesterEmail: string,;
+  projectType?: string,;
+  projectSummary?: string,;
+  hireRequestId: string;
+}) {;
+  const projectInfo = projectType;
+    ? `${projectType} project`;
+    : "project",;
+  const summaryText = projectSummary;
+    ? `: "${projectSummary}"`;
+    : "",;
+  // Create notification for talent;
+  const talentNotification = await createNotification({;
+    userId: talentId,;
+    title: `New Hire Request from ${requesterName}`,;
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;
+    type: 'hire_request',;
+    relatedId: hireRequestId,;
+    sendEmail: true,;
+    actionUrl: '/dashboard',;
+    actionText: 'View Request';
+  }),;
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {;
+    const adminNotification = await createNotification({;
+      userId: adminId,;
+      title: `New Hire Request for Talent`,;
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;
+      type: 'hire_request',;
+      relatedId: hireRequestId,;
+      sendEmail: true,;
+      actionUrl: '/admin/hire-requests',;
+      actionText: 'Review Request';
+    }),;
+    return {;
+      success: talentNotification.success && adminNotification.success,;
+      talentNotification,;
+      adminNotification;
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
     }
   }
   return {
@@ -177,6 +279,8 @@ export async function createHireRequestNotifications({
     talentNotification
   }
 }
+
+
 
 
 
@@ -304,6 +408,8 @@ function createTestNotification() {
   }
 
 
+    actionText: actions[randomType].text
+  })
 
 
 ;
@@ -382,8 +488,10 @@ export async function createTestNotification(userId: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 }
 ;
+

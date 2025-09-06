@@ -2,6 +2,8 @@
 
 
 
+
+
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -28,6 +30,8 @@ type FormFieldContextValue = {;
 };
 
 const FormField = ({ ...props }: any) => {
+
+
   return (
 
 };
@@ -45,6 +49,7 @@ const useFormField = () => {;
     <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
+
   );
 }
 const useFormField = () => {
@@ -66,13 +71,16 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
+
   if (!fieldContext) {
     throw new Error('useFormField should be used within <FormField>');
   }
   if (!itemContext) {
+
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
+
 
 
 
@@ -97,6 +105,7 @@ type FormItemContextValue = {;
 
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
+
 
 
 
@@ -183,6 +192,7 @@ const FormLabel = React.forwardRef<
 
 
 
+
     />
   )
 })
@@ -195,9 +205,17 @@ const FormControl = React.forwardRef<
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
 
-
-
-
+  return (
+    <Slot
+      ref={ref}
+      id={formItemId}
+      aria-describedby={;
+        !error;
+          ? `${formDescriptionId}`;
+          : `${formDescriptionId} ${formMessageId}`;
+      }
+      aria-invalid={!!error}
+      {...props}
 
 
     />
@@ -212,9 +230,12 @@ const FormDescription = React.forwardRef<
   const { formDescriptionId } = useFormField()
 
 
-
-
-
+  return (
+    <p
+      ref={ref}
+      id={formDescriptionId}
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
 
 
     />
@@ -233,44 +254,16 @@ const FormMessage = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
     >
       {body}
     </p>
-  );
-});
-FormMessage.displayName = 'FormMessage';
-export {
-  useFormField
-  Form
-  FormItem
-  FormLabel
-  FormControl
-  FormDescription
-  FormMessage
-  FormField
-}
-  )
-})
-FormMessage.displayName = "FormMessage"
 
-
-export {;
-  useFormField,;
-  Form,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
-  FormField,;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
 import {Slot} from '@radix - ui / react - slot';
@@ -408,5 +401,8 @@ export {
   FormMessage,
 
 
+
+
+=======
 
 

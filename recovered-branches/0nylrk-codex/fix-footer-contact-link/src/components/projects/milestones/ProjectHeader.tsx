@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
@@ -45,13 +46,16 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {;
 
 
 
+
 interface ProjectHeaderProps {;
   title: string;
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate(),
+
   
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
       <div className="flex items-center">;
@@ -76,8 +80,10 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
         </h1>
       </div>
     </div>
+
   );
 }
   )
 }
 ;
+

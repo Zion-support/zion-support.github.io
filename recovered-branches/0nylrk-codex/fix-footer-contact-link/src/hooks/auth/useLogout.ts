@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,10 +14,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
       // Clean up existing auth state
+
 
 
 
@@ -26,10 +29,13 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
 
 
 
+
       // Update state
       setUser(null)
     } catch (error) {
       console.error("Error during logout:", error)
+
+
 
 
 
@@ -47,6 +53,7 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
       setUser(null);
     } catch (error) {;
       console.error("Error during logout:", error);
+
     }
 
 
@@ -59,3 +66,4 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

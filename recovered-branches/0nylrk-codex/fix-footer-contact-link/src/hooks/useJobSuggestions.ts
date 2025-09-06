@@ -1,11 +1,15 @@
 
 
 
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
 
 
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
+
       if (!talentId) return;
       try {
         setIsLoading(true);
@@ -14,6 +18,7 @@
       try {
         setIsLoading(true),
         
+
         // Get job matches with job details
         const { data, error } = await supabase
           .from("job_talent_matches")
@@ -22,6 +27,7 @@
             job:job_id (*)
           `)
           .eq("talent_id", talentId)
+
           .order("created_at", { ascending: false });
         if (error) throw error;
         setJobMatches(data |[])
@@ -30,17 +36,21 @@
         if (error) throw error,
         
         setJobMatches(data || [])
+
       } catch (error) {
         console && console.error("Error fetching job matches:", error);
         toast({
+
           title: "Error";
           description: "Failed to load job suggestions"
           title: "Error",
           description: "Failed to load job suggestions",
+
           variant: "destructive"})
       } finally {
         setIsLoading(false)
       }
+
     }
     fetchSuggestedJobs()
   }, [talentId]);
@@ -49,11 +59,13 @@
     fetchSuggestedJobs()
   }, [talentId]),
 
+
   const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {
     try {
       const updates = {
         status
         ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {})
+
       }
       const { error } = await supabase
         .from("job_talent_matches")
@@ -69,6 +81,7 @@
         
       if (error) throw error,
       
+
       // Update local state
 
       setJobMatches(matches => 
@@ -78,9 +91,11 @@
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
+
       );
       ),
       
+
       // Show appropriate message
       if (status === 'applied') {
         toast({
@@ -98,6 +113,13 @@
       toast({
 
 
+    }
+  }
+  // Filter matches by status
+  const newMatches = jobMatches.filter(match => match.status === 'new');
+  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
+  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
+  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
 
   return {
     jobMatches;
@@ -111,6 +133,37 @@
       declinedMatches
 
 
+import { useState, useEffect } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { JobMatch } from "@/types/jobs",;
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const fetchSuggestedJobs = async () => {;
+      if (!talentId) return,;
+      try {;
+        setIsLoading(true),;
+        // Get job matches with job details;
+        const { data, error } = await supabase;
+          .from("job_talent_matches");
+          .select(`;
+            *,;
+            job:job_id (*);
+          `);
+          .eq("talent_id", talentId);
+          .order("created_at", { ascending: false }),;
+        if (error) throw error,;
+        setJobMatches(data || []);
+      } catch (error) {;
+        console.error("Error fetching job matches:", error),;
+        toast({;
+          title: "Error",;
+          description: "Failed to load job suggestions",;
+          variant: "destructive"});
+      } finally {;
+        setIsLoading(false);
 
       }
 ;
@@ -160,6 +213,7 @@ if ( {) {
   // Filter matches by status;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const new_matches = job_matches.filter (match => match.status === 'new');
@@ -179,6 +233,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     }
   }

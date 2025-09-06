@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +21,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import type { GetServerSideProps } from 'next';
+
 import path from 'path';
 import fs from 'fs';
 
@@ -41,6 +43,7 @@ type DocsContent = {
 
 
 
+
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
@@ -56,6 +59,7 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
   return { props: { docs } };
 };
 
+
 export default function ApiDocsPage({ docs }: PageProps) {
       nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
     >
@@ -63,6 +67,7 @@ export default function ApiDocsPage({ docs }: PageProps) {
         <section key={section.id} id={section.id} className='scroll-mt-24'>
           <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
+
 
 
               ))}
@@ -133,11 +138,13 @@ function ApiDocsPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               ))}
             </div>
           )}
         </section>
       ))}
+
 
 
 
@@ -150,4 +157,5 @@ function ApiDocsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 

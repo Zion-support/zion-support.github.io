@@ -1,5 +1,28 @@
 
 
+export const config = {
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb'}}}
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' })
+    return
+
+export const config = {;
+  api: {;
+    bodyParser: {;
+      sizeLimit: '10mb'}}};
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
   }
 }
 ;
@@ -22,11 +45,14 @@
     await browser.close(),
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
+
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })
   };
@@ -112,3 +138,4 @@ const page = await browser.new_page (),
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

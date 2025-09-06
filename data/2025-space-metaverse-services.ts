@@ -1,5 +1,19 @@
 
 
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+
+
+
 
 
   {
@@ -321,6 +335,7 @@
 
 
 
+
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
 
@@ -392,6 +407,7 @@
     ],
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
 
+
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -424,7 +440,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   id: string,;
   name: string,;
@@ -689,5 +707,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [;
     reviews: 1400;
 
 
+
   }
 ];
+

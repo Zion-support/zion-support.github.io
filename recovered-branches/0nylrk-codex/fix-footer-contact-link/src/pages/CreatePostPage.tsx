@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface PostFormValues {
 
@@ -23,7 +25,14 @@ interface PostFormValues {
 }
 
 
+export default function CreatePostPage() {
 
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
+  
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory || "project-help"
+  },
 
 
   const handleSubmit = async (values: PostFormValues) => {
@@ -31,6 +40,7 @@ interface PostFormValues {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation
       // Parse tags into an array
+
       const tagsArray = values.tags.split(",").map(tag => tag.trim());
       const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       
@@ -40,6 +50,7 @@ interface PostFormValues {
       });
       }),
       
+
       // Redirect to the forum category
       navigate(`/community/category/${values.categoryId}`)
     } catch (error) {
@@ -99,8 +110,10 @@ export default function CreatePostPage() {;
       });
 
     }
+
   }
   },
+
 
   return (
 
@@ -124,6 +137,7 @@ export default function CreatePostPage() {;
       </div>
     </AppLayout>
   )
+
 }
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useSearchParams } from "react-router-dom",;
@@ -269,6 +283,7 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
+
 
 
 

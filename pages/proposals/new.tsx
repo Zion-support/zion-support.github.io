@@ -1,5 +1,6 @@
 
 const NewProposal: NextPage = () => {
+
   const [jobBrief, setJobBrief] = useState('')
   const [resumeSummary, setResumeSummary] = useState('')
   const [relevantExperience, setRelevantExperience] = useState('')
@@ -16,6 +17,7 @@ const NewProposal: NextPage = () => {
   const pitchPrompt = useMemo(() => (
     `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief || '(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary || '(Not provided)'}\n\nRelevant Experience:\n${relevantExperience || '(Not provided)'}\n\nReturn markdown only.`
   ), [jobBrief, relevantExperience, resumeSummary]),
+
   return (
     <div>
       <Head>
@@ -38,6 +40,7 @@ const NewProposal: NextPage = () => {
         <AIAssistant
           buttonLabel="Generate Pitch Based on Profile & Job"
           title="Generate Proposal"
+
           defaultPrompt={pitchPrompt}
           onAccept={setCoverLetter}
           authorizationToken={operatorToken}
@@ -67,6 +70,7 @@ const NewProposal: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         />
       </div>
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
@@ -74,6 +78,8 @@ const NewProposal: NextPage = () => {
   )
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

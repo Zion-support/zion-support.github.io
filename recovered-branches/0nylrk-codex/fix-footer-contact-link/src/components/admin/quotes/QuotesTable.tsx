@@ -1,6 +1,7 @@
 
 
 
+
   isArchived?: boolean;
   isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
@@ -9,6 +10,7 @@
 
 
 import {formatDate} from "@/utils/dateUtils";
+
 
 
 import React from "react",
@@ -36,7 +38,9 @@ import { formatDate } from "@/utils/dateUtils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 interface QuotesTableProps {
@@ -46,6 +50,7 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
+
 
 
   onViewDetails: (quote: QuoteRequest) => void
@@ -59,6 +64,7 @@ interface QuotesTableProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   onViewDetails
 }) => {
@@ -108,6 +114,7 @@ interface QuotesTableProps {
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
+
 
   deleteQuote,;
   onViewDetails;
@@ -217,12 +224,14 @@ interface QuotesTableProps {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))
           )}
+
         </TableBody>
       </Table>
     </div>
@@ -249,10 +258,12 @@ interface QuotesTableProps {
 
 
 
+
         </TableBody>;
       </Table>;
     </div>;
   );
+
 
 
 
@@ -268,3 +279,4 @@ interface QuotesTableProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

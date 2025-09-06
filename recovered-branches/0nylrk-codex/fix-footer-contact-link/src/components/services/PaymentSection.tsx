@@ -3,10 +3,12 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -18,6 +20,7 @@ interface PaymentSectionProps {
 
   const handlePaymentInitiated = () => {
     toast({
+
       title: "Processing your request"
       description:
         "You'll be redirected to our secure payment portal momentarily."
@@ -30,6 +33,7 @@ interface PaymentSectionProps {
       description: "You'll be redirected to our secure payment portal momentarily."})
   },
   
+
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -38,6 +42,7 @@ interface PaymentSectionProps {
         {selectedCountry.country}
       </h4>
       <p className="text-2xl font-bold text-zion-cyan mb-6">
+
 import { MapPin } from "lucide-react",;
 import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
@@ -72,6 +77,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
       <PaymentButton
@@ -89,13 +95,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {;
         billed separately.
       </p>
     </div>
-  );
-}
-  )
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 export /**
  * PaymentSection - Function description
  */
@@ -109,3 +109,6 @@ function PaymentSection() {
     });
   }
 ;
+=======
+
+

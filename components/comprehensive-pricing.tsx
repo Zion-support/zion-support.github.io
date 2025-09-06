@@ -1,14 +1,16 @@
 
 
+import Head from 'next/head';
 
-
-
+import {
 
 
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+
 
 
 
@@ -171,18 +173,95 @@ export default function ComprehensivePricingPage() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
     }
-  });
-;
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
 
+      name: 'Professional'
+      price: '$199'
+      period: '/month'
+      description: 'Ideal for growing businesses and teams'
+      features: [
+        'Advanced service access'
+        'Priority support'
+        'Advanced features'
+        'API access'
+        'Advanced analytics'
+        'Custom integrations'
+      ]
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    },    {        'Advanced service accessPriority supportAdvanced featuresAPI accessAdvanced analyticsCustom integrations'
+      ];
+      icon: <Gem className="w-6 h-6" />
+      color: 'from-purple-500 to-pink-600'
+      popular: true
+    }
+      name: 'Enterprise'
+      price: '$499'
+      period: '/month'
+      description: 'For large organizations and enterprises'
+      features: [
+        'Full service access'
+        '24/7 dedicated support'
+        'All features'
+        'Custom development'
+        'Enterprise analytics'
+        'White-label options'
+        'SLA guarantees'
+      ]
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    },  ];        'Full service access24/7 dedicated supportAll featuresCustom developmentEnterprise analyticsWhite-label optionsSLA guarantees'
+      ];
+      icon: <Crown className="w-6 h-6" />
+      color: 'from-yellow-500 to-orange-600'
+      popular: false
+    }
+  // Market statistics
+  const marketStats = [
+    {
+      metric: '$15.2B'
+      label: 'Total Market Size'
+      description: 'Combined market value of all services'
+      icon: <ChartBar className='w-6 h-6' />
+    },    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },    {
+      metric: '2000%+'
+      label: 'Average ROI'
+      description: 'Proven business value'
+      icon: <TrendingUp className='w-6 h-6' />
+    },  ];      icon: <ChartBar className="w-6 h-6" />
+    }
+    {
+      metric: '400+'
+      label: 'Services Available'
+      description: 'Comprehensive micro SaaS portfolio'
+      icon: <Database className='w-6 h-6' />
+    },      icon: <Database className="w-6 h-6" />
+    }
+    {
+      metric: '99.99%'
+      label: 'Uptime Guarantee'
+      description: 'Enterprise-grade reliability'
+      icon: <Shield className='w-6 h-6' />
+    },      icon: <Shield className="w-6 h-6" />
+    }
+    {
 
 
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
+
 
 
 
@@ -245,6 +324,7 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -266,6 +346,7 @@ export default function ComprehensivePricingPage() {;
       y: 0
       opacity: 1
       transition: {
+
         duration: 0.5
       }
     }
@@ -279,6 +360,7 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -315,6 +397,7 @@ export default function ComprehensivePricingPage() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
+
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
 
@@ -339,10 +422,12 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+
 
 
 
@@ -383,6 +468,7 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -399,6 +485,7 @@ export default function ComprehensivePricingPage() {;
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
+
                 ))}
               </motion.div>
 
@@ -417,18 +504,17 @@ export default function ComprehensivePricingPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
 
-
-
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>              <motion&& motion.div 
+                transition={{ duration: 0.8, delay: 0.6 }}
 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
 
-
+              >
 
 
                 initial={{ opacity: 0, y: 20 }}
@@ -530,6 +616,7 @@ export default function ComprehensivePricingPage() {;
         <section id="pricing-tiers" className="py-20">
 
           <div className="container mx-auto px-4">
+
             <motion.div
               className="text-center mb-16"
             <motion.div 
@@ -541,6 +628,7 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -606,11 +694,14 @@ export default function ComprehensivePricingPage() {;
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+                </span>
+                <br />
+                <span className="text-white">for Every Business</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
+              </p>
+            </motion.div>
 
 
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
@@ -685,6 +776,7 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
               ))}
 
             </motion && motion.div>;
@@ -725,11 +817,13 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
+
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
@@ -749,6 +843,7 @@ export default function ComprehensivePricingPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -825,6 +920,7 @@ export default function ComprehensivePricingPage() {;
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
 
 
+
                     </button>;
                   </div>;
                 </div>;
@@ -842,12 +938,15 @@ export default function ComprehensivePricingPage() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+
+
               whileInView='visible'              viewport={{ once: true }}
 
 
@@ -858,7 +957,9 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -874,6 +975,7 @@ export default function ComprehensivePricingPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -882,6 +984,7 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -970,6 +1073,7 @@ export default function ComprehensivePricingPage() {;
                               <span className="text-gray-300">{feature}</span>
                           ))}
                         </div>
+
                         <div className='text-center space-y-2'>
                           <Button
                             variant='primary'
@@ -1133,10 +1237,12 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
+
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -1287,12 +1393,14 @@ export default function ComprehensivePricingPage() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+
 
                 >;
                   Schedule Demo;
@@ -1377,4 +1485,5 @@ export default function ComprehensivePricingPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,18 +1,27 @@
+
 import React from 'react',
 import Head from 'next/head',
 import React from 'react';
 import Head from 'next/head';
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Brain
+
+
+  Calendar,;
+  Target,;} from 'lucide-react';import { ;
+
+  Brain;
+
   Monitor
   Search
   Shield
   Mail
   Share2
   Check
+
   Star
   Zap
   TrendingUp
@@ -36,6 +45,7 @@ import {
   Globe,
   Lock,
   BarChart3,
+
 
 
 
@@ -95,6 +105,7 @@ import {
         enterprise: {
           price: 299
           features: [
+
             'Unlimited generations'
             'Custom templates'
             'White-label options'
@@ -419,6 +430,7 @@ import {
         'Performance tracking',
         'Brand consistency',
       ],
+
       pricing: {
         starter: {
           price: 19
@@ -444,6 +456,7 @@ import {
         enterprise: {
           price: 149
           features: [
+
 
 
             'Unlimited URLs'
@@ -825,6 +838,7 @@ import {
         enterprise: {
 
 
+
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
@@ -957,6 +971,7 @@ import {
       demo: 'https://demo.rate - limiter.ziontech.ai',
     },
     {
+
       id: 'email - marketing',
       name: 'Email Marketing Automation',
       description:;
@@ -1012,6 +1027,7 @@ import {
           Micro SaaS Services | Zion Tech Group - Professional Business;
           Solutions;
         </title>;
+
 
     <>
       <Head>
@@ -1129,6 +1145,7 @@ import {
                       {insight.growth}
                     </div>
                   </div>
+
                   <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>              Market Overview & Competitive Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -1241,12 +1258,14 @@ import {
 
 
 
+
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1265,11 +1284,13 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
 
 
 
@@ -1297,6 +1318,7 @@ import {
           </div>
           <div className='space-y-16'>
             {microSaasServices.map((service, index) => (
+
 
 
 
@@ -1493,37 +1515,92 @@ import {
 
                             <li
                               key={useCaseIndex}
-                              className='flex items-center text-gray-300 text-sm'>;
-                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />                              {useCase}                          Use Cases;
-                        </h4>;
-                        <ul className="space-y-2">;
-                          {service && service.useCases.map((useCase, useCaseIndex) => (;
-                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">;
-                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />;
 
-
+                              className='flex items-center text-gray-300 text-sm'
+                            >
+                              <Check className='w-4 h-4 mr-2 text-green-400 flex-shrink-0' />                              {useCase}                          Use Cases
+                        </h4>
+                        <ul className="space-y-2">
+                          {service.useCases.map((useCase, useCaseIndex) => (
+                            <li key={useCaseIndex} className="flex items-center text-gray-300 text-sm">
+                              <Check className="w-4 h-4 mr-2 text-green-400 flex-shrink-0" />
                               {useCase}
-                            </li>;
+                            </li>
                           ))}
-
-                        </ul>;
-                      </div>;
-                    </div>;
-                    <div className='flex flex-wrap gap-4'>;
-
-
-
-                    <div className="flex flex-wrap gap-4">
+                        </ul>
+                      </div>
+                    </div>
+                    <div className='flex flex-wrap gap-4'>
                       <Button
-                        href={service && service.website}
+                        href={service.website}
+                        size='sm'
+                        className='bg-cursor-blue hover:bg-blue-600'                      >                    <div className="flex flex-wrap gap-4">
+                      <Button
+                        href={service.website}
+                        size="sm"
+                        className="bg-cursor-blue hover:bg-blue-600"
+                        Visit Website
+                      </Button>
+                      <Button
+                        href={service.demo}
+                        variant='outline'
+                        size='sm'
+                        className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'                      >                        variant="outline"
+                        size="sm"
+                        className="border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white"
+                      >
+                        Try Demo
+                      </Button>
+                    </div>
+                  </div>
+                  {/* Pricing & Market Info */}
+                  <div className='lg:col-span-1'>
+                    <div className='bg-gray-800/50 rounded-xl p-6 border border-gray-700'>
+                      <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+                        <BarChart3 className='w-5 h-5 mr-2 text-cursor-blue' />
+                      </h4>
+                      <div className='space-y-4'>
+                        <div>
+                          <p className='text-sm text-gray-400 mb-1'>
+                            Market Price Range
+                          </p>
+                          <p className='text-lg font-bold text-white'>
+                            {service.marketPrice}
+                          </p>
+                        </div>
+                        <div>
+                          <p className='text-sm text-gray-400 mb-1'>
+                            Our Pricing
+                          </p>
+                          <div className='space-y-2'>
+                            {Object.entries(service.pricing).map(
+                              ([tier, details]) => (
+                                <div
+                                  key={tier}
+                                  className='flex justify-between items-center'
+                                >
+                                  <span className='text-sm text-gray-300 capitalize'>
+                                    {tier}
+                                  </span>
+                                  <span className='text-sm font-semibold text-white'>
+                                    ${details.price}/mo
+                                  </span>
+                                </div>
+                              )
+                            )}                          </div>
+                        </div>
+                        <div>                          <p className="text-sm text-gray-400 mb-1">Our Pricing</p>
+                          <div className="space-y-2">
+                            {Object.entries(service.pricing).map(([tier, details]) => (
+                              <div key={tier} className="flex justify-between items-center">
+                                <span className="text-sm text-gray-300 capitalize">{tier}</span>
+                                <span className="text-sm font-semibold text-white">${details.price}/mo</span>
+                              </div>
+                            ))}
+                        </div>
+                        <div>
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
               </div>
             </Card>
           </div>
@@ -1710,6 +1787,7 @@ import {
             >
               Get Started
             </Button>
+
             <Button
               href='/pricing'
               variant='outline'
@@ -1733,4 +1811,5 @@ import {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,6 +1,7 @@
 
 
 
+
 import {useEffect, useState} from "react";
 import {QuoteFormData} from "@/types/quotes";
 import {Card, CardContent} from "@/components/ui/card";
@@ -53,6 +54,7 @@ export function SummaryStep(): any ({ formData, updateFormData }: SummaryStepPro
 
 
         
+
         // Get AI matches
         const results = await findMatches(
           queryString,
@@ -115,9 +117,11 @@ if (return) {
       } finally {
         setIsMatching (false);
       }
+
     }
     },
     
+
     runMatching()
   }, [formData]);
   const handleSelectMatch = (match: MatchResult) => {
@@ -129,6 +133,7 @@ if (return) {
     toast({
       title: "Match Selected"
       description: `You've selected ${match.item.title}`})
+
   }
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item);
@@ -137,6 +142,7 @@ if (return) {
   // Extract just the items from each MatchResult for the AIMatchingResults component
   const matchItems = matches.map(match => match.item),
   
+
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
@@ -144,6 +150,7 @@ if (return) {
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
+
   }
 
   return (
@@ -163,6 +170,7 @@ if (return) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       {/* AI Matching Results */}
       <AIMatchingResults
@@ -228,7 +236,9 @@ if (return) {
                   </div>
                 </div>
               )}
+
               
+
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -293,8 +303,10 @@ if (return) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

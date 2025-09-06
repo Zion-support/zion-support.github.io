@@ -1,6 +1,7 @@
 
 
 
+
 // Function to fix merge conflicts in a file;
 /**
  * fixMergeConflicts - Function description
@@ -24,6 +25,7 @@ if ( {) {
       console.log (`✅ Fixed merge conflicts in: ${path.relative (process.cwd (), file_path)}`),
 
 
+
 console.log('🔧 Starting Merge Conflict Resolution'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
@@ -31,8 +33,10 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+    const originalContent = content;
+    // Remove merge conflict markers and keep HEAD version;
+    content = content.replace(/
+    content = content.replace(/
 
 
     if (content !== originalContent) {;
@@ -53,11 +57,14 @@ function fixMergeConflicts(filePath) {;
 function getAllFiles(dir, extensions) {;
 
 
+
+
   try {;
     const items = fs.readdirSync(dir);
     for (const item of items) {;
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+
 
 
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
@@ -129,3 +136,4 @@ async function main() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

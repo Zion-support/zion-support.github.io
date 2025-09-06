@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -10,6 +11,7 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
+
 
 
 
@@ -38,6 +40,8 @@ export function PortfolioBuilder() {;
     if (success) {
       fetchProjects();
     }
+
+
 
 
 
@@ -76,10 +80,12 @@ export function PortfolioBuilder() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -115,6 +121,7 @@ export function PortfolioBuilder() {;
 
 
 
+
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
 
@@ -137,6 +144,7 @@ export function PortfolioBuilder() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               }}
             />;
           </CardContent>;

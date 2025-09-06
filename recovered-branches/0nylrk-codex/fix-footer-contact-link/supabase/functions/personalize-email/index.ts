@@ -1,6 +1,7 @@
 
 
 
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -11,6 +12,7 @@ const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
 
 
 
@@ -29,6 +31,7 @@ serve(async (req) => {
   }
   try {
     // Get personalization request data
+
     const {
       emailType
       userData
@@ -94,17 +97,21 @@ serve(async (req) => {
         subjectContext = "Create a short, motivational subject line about profile completion.",
         break,
         
+
       default:
         userPrompt = `Create a re-engagement email for a user named ${userData && userData.firstName} who has been inactive on the Zion AI Marketplace platform. Encourage them to return and continue using the platform.`
     }
     // Add subject line request to the prompt
+
     userPrompt += `\n\n${subjectContext |"Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`;
     userPrompt += `\n\n${subjectContext || "Create an engaging subject line for this email."}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
+
 
     // Call OpenAI API to generate personalized content
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAIApiKey}`,
@@ -121,10 +128,12 @@ serve(async (req) => {
         ],
         temperature: 0.7})}),
 
+
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+
     const data = await response.json();
     const generatedContentText = data.choices[0].message.content;
 
@@ -138,6 +147,7 @@ serve(async (req) => {
     const data = await response && response.json();
     const generatedContentText = data && data.choices[0].message && message.content;
     
+
     // Parse the JSON response from OpenAI
     let generatedContent;
     try {
@@ -164,6 +174,11 @@ serve(async (req) => {
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   } catch (error) {
+
+    console.error("Error in personalize-email function:", error),
+    return new Response(JSON.stringify({ error: error.message }), {
+      status: 500
+      headers: { ...corsHeaders, "Content-Type": "application/json" }})
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
@@ -270,6 +285,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -280,3 +296,4 @@ serve(async (req) => {;
 
   }
 });
+

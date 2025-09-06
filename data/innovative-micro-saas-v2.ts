@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -74,6 +75,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -86,7 +88,48 @@ import { ServiceVariant } from '../types/service-variants';
     rating: 4.8
 
 
+    reviews: 912
 
+import { ServiceVariant } from '../types/service-variants',;
+export interface InnovativeMicroSaasV2 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
 
 }
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
@@ -300,6 +343,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8;
     reviews: 912;
 
+
   }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -324,4 +368,5 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

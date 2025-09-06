@@ -1,8 +1,10 @@
 
+
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
+
 
 
 
@@ -16,12 +18,16 @@ interface NotificationFooterProps {;
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate(),
+
   
+
   const handleViewAll = () => {
     onClose(),
     navigate('/notifications')
   },
+
   
+
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
       <Button
@@ -31,10 +37,12 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 
 
 
+
         onClick={handleViewAll}>;
 
 
   )
+
 
 
       >;
@@ -43,6 +51,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
       </Button>;
     </div>;
   );
+
 
 
 
@@ -58,3 +67,4 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

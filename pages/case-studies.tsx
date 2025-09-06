@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -49,6 +50,7 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
+
 
 
 
@@ -119,6 +121,7 @@ const stats = [
 
   { number: "24/7", label: "Support Available" }
 ];
+
 
 
 
@@ -339,6 +342,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
  </Head> </section> </Layout>
+
 
 
 export default function CaseStudiesPage() {
@@ -633,6 +637,7 @@ export default function CaseStudiesPage() {
   );
  </Head> </section> </Layout>
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   );
@@ -641,6 +646,7 @@ export default function CaseStudiesPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 	return (
 		<Layout>
@@ -657,6 +663,12 @@ export default function CaseStudiesPage() {
 	)
 
 
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage(req, res) {
+  try {
+	return (;
 
 		<Layout>;
 			<Head>;
@@ -678,11 +690,13 @@ export default function CaseStudiesPage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

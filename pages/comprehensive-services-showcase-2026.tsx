@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import { motion  } from 'framer-motion';
 import { innovativeMicroSaasServices2026  } from '../data/2026-innovative-micro-saas-expansion';
 import { specializedITSolutions2026  } from '../data/2026-specialized-it-solutions';
@@ -70,6 +71,7 @@ interface Service {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   id: string;
   name: string;
   tagline: string;
@@ -103,9 +105,11 @@ interface Service {
     address: string;
 
     website: string;
+
   }
 
   },;
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -122,6 +126,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('popularity');
+
 
 
   const allServices = [
@@ -169,12 +174,14 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
   const priceRanges = [;
     { value: 'all', label: 'All Prices' },;
     { value: '0-100', label: '$0 - $100' },;
     { value: '100-200', label: '$100 - $200' },;
     { value: '200-400', label: '$200 - $400' },;
     { value: '400-600', label: '$400 - $600' },;
+
     { value: '600+', label: '$600+' },;
   ];
 
@@ -212,6 +219,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
       'Business Intelligence & Analytics': <Database className="w-5 h-5" />,
@@ -241,6 +249,8 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
     },
     return iconMap[category] || <Sparkles className="w-5 h-5" />
   },
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */  } catch (error) {
@@ -326,6 +336,7 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
                   className="w-full pl-10 pr-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                 />
               </div>
+
               <div className='flex items-center space-x-2 text-white'>
                 <TrendingUp className='w-5 h-5 text-green-400' />
                 <span>Growing Rapidly</span>
@@ -872,22 +883,29 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
             </div>
           </div>
         </div>
       </div>
 
-                className='bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300'>;
 
-
-
-  /* CTA Button */ 
-}<a > Learn More & Get Started </Link> </div> </div> </motion.div>) ) 
-}</div> </div> <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30"> <div className="text-center"> <h2 className="text-3xl font-bold text-white mb-4"> text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Get in touch with our team to discuss how our innovative services can help you achieve your goals. </p> <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> <div className=" text-center"> <div className=" w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Users className=" w-8 h-8 text-cyan-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Expert Team</h3> <p className=" text-gray-300 text-sm">Dedicated professionals ready to help</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Zap className=" w-8 h-8 text-blue-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">Fast Implementation</h3> <p className=" text-gray-300 text-sm">Quick setup and deployment</p> </div> <div className=" text-center"> <div className=" w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className=" w-8 h-8 text-purple-400"/> </div> <h3 className=" text-lg font-semibold text-white mb-2">24/7 Support</h3> <p className=" text-gray-300 text-sm">Round-the-clock assistance</p> </div> </div> <div className=" flex flex-col sm:flex-row gap-4 justify-center items-center"> <a href=" mailto:kleber@ziontechgroup.com"className=" bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"> Email Us </Link> <a href=" tel:+13024640950"className=" bg-white/10 text-white px-8 py-3 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300" > Call Us </Link> </div> </div> </div> </div> </div>) 
-};
-
-
-
+  )
+},
+export default ComprehensiveServicesShowcase2026,
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">;
+          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-8 border border-cyan-400/30">;
+            <div className="text-center">;
+              <h2 className="text-3xl font-bold text-white mb-4">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
+                Get in touch with our team to discuss how our innovative services can help you achieve your goals.;
+              </p>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <Users className="w-8 h-8 text-cyan-400" />;
 
                   </div>;
                   <div className='text - xs text - gray - 400'>Customers</div>;
@@ -996,7 +1014,9 @@ const ComprehensiveServicesShowcase2026: React.FC = () => {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 export default ComprehensiveServicesShowcase2026;
+

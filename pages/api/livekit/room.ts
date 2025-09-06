@@ -4,6 +4,8 @@
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { RoomServiceClient, CreateRoomOptions } from "livekit-server-sdk";
 
@@ -25,6 +27,8 @@ export default async function handler(
     const { projectId, preferredName } = req.body |{}
     if (!projectId) {
       return res.status(400).json({ error: "Missing projectId" });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
 
@@ -48,6 +52,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     }
+
 
 
     const roomName = `${projectId}-${date && date.getFullYear()}${pad(date && date.getMonth() + 1)}${pad(date && date.getDate())}-${pad(date && date.getHours())}${pad(date && date.getMinutes())}`;
@@ -76,6 +81,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           project_id,
           created_by: preferred_name || "host",
         }),
+
 
     }
     if (!LIVEKIT_API_KEY |!LIVEKIT_API_SECRET |!LIVEKIT_HOST) {
@@ -115,6 +121,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Failed to create room" });
 
 
+    const date = new Date();
+    const pad = (n: number) => String(n).padStart(2, '0');
+    const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
+
+
+
 
   }
 }
@@ -125,6 +137,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
 
+
   }
 }
 
@@ -132,5 +145,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -23,14 +24,17 @@ export default function Profile() {;
 
 
 
+
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile"),
       navigate("/login?redirect=/profile")
     }
+
   }, [user, isLoading, navigate]);
   }, [user, isLoading, navigate]),
+
 
   if (isLoading) {
 
@@ -87,9 +91,11 @@ export default function Profile() {;
 
                 <Button
                   onClick={() => {
+
                     logout();
 
                     logout(),
+
                     navigate("/")
                   }}
                   variant="outline"
@@ -105,6 +111,7 @@ export default function Profile() {;
       <Footer />
     </>
   )
+
 }
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
@@ -204,3 +211,4 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -12,7 +12,9 @@ export default function RetailTechnologySolutions() {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 
 
@@ -28,7 +30,9 @@ export default function RetailTechnologySolutions() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
@@ -39,6 +43,8 @@ export default function RetailTechnologySolutions() {
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
+
+
 
 
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
@@ -53,8 +59,10 @@ export default function RetailTechnologySolutions() {
   }
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

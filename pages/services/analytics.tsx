@@ -1,6 +1,7 @@
 
 
 
+
 import { motion } from 'framer-motion';
 
 import {
@@ -106,6 +107,7 @@ export default /**
 function AnalyticsServicesPage() {
   const services = [;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     {
       title: "Big Data Processing",
       description: "Scalable data processing and analytics platforms",
@@ -138,6 +140,7 @@ function AnalyticsServicesPage() {
       features: ["Data Architecture", "Governance Policies", "Compliance", "Data Quality"],
       price: "From $10,000",
       icon: Shield,
+
       color: 'from-emerald-500 to-teal-500',
     },;
   ];
@@ -149,6 +152,7 @@ function AnalyticsServicesPage() {
   }
 }
   ],
+
   const stats = [
     { number: "1M+", label: "Data Points Processed", icon: Database },
     { number: "95%", label: "Accuracy Rate", icon: CheckCircle },
@@ -159,10 +163,13 @@ function AnalyticsServicesPage() {
   }
 }
   ],
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Data Analytics Services - Zion Tech Group</title>
+
         <meta
           name='description'
           content='Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services.'
@@ -191,10 +198,12 @@ function AnalyticsServicesPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               Data Analytics
             </h1>
+
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Transform raw data into actionable insights that drive business
               growth            </p>
@@ -254,6 +263,7 @@ function AnalyticsServicesPage() {
 
 
 
+
             </p>
           </motion.div>
           <motion.div
@@ -290,12 +300,15 @@ function AnalyticsServicesPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-purple-400" />
                 </div>
+
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -341,12 +354,14 @@ function AnalyticsServicesPage() {
 
 
 
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive analytics solutions designed to unlock the value of your data
             </p>
           </motion.div>
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -365,10 +380,12 @@ function AnalyticsServicesPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
+
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -411,6 +428,7 @@ function AnalyticsServicesPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
@@ -419,6 +437,7 @@ function AnalyticsServicesPage() {
                   </button>
                 </div>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -472,6 +491,7 @@ function AnalyticsServicesPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -496,20 +516,46 @@ function AnalyticsServicesPage() {
     </div>
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
 }</div> </div> </section> <motion.div initial= {
+  {
+  opacity: 0, y: 30
+}whileInView= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  duration: 0.8
+}viewport= {
+  {
+  once: true
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
+  )
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">;
+              Ready to Unlock Your Data's Potential?;
+            </h2>;
+            <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">;
+              Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">;
+                Data Assessment;
+              </button>;
+              <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+                View Demos;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

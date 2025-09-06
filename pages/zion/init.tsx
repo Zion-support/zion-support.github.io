@@ -1,5 +1,53 @@
 
 
+const InitPage: NextPage = () => {
+  const [state, setState] = useState<DeployFormState> ({
+  instanceName: '', defaultLanguage: 'en', deploymentRegion: 'us-east-1', tokenActivation: true, governanceMode: 'Hybrid', branding: {
+  logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' }
+const defaultModules: DeployFormState['modules'] = {
+  marketplace: true
+  gpt: true
+  academy: true
+  token: true
+  dao: true
+  'nation-builder': true
+  'launch-kit': true
+  'book-builder': true
+  'roadmap-whitepaper': true
+  'api-docs-wiki': true
+  'zion-brain': true
+}
+const defaultBonus: DeployFormState['bonusModules'] = {
+  'global-map': false
+  'franchise-onboarding': false
+  'referral-ambassadors': false
+  'grant-portal': false
+  trailer: false
+  'book-store': false
+}
+const InitPage: NextPage = () => {
+  const [state, setState] = useState<DeployFormState>({
+    instanceName: ''
+    defaultLanguage: 'en'
+    deploymentRegion: 'us-east-1'
+    tokenActivation: true
+    governanceMode: 'Hybrid'
+    branding: {
+      logoUrl: ''
+      primaryColor: '#4f46e5'
+      secondaryColor: '#0ea5e9'
+      subdomain: ''
+    }
+    modules: defaultModules
+    bonusModules: defaultBonus
+  });  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
+  const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
+    setState(prev => ({
+      ...prev
+      [group]: { ...prev[group], [key]: !prev[group][key] }
+    }));  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,6 +60,8 @@
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify(state)
       });
+
+
 import { useState } from 'react';
 import type { NextPage } from 'next';
 type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
@@ -95,9 +145,12 @@ const InitPage: NextPage = () => {;
 
 
 
+
+
       const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
+
 
     } catch (error) {
       setError(err.message || 'Unexpected error');
@@ -209,6 +262,7 @@ const InitPage: NextPage = () => {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 </label>
               ))}
             </div>
@@ -229,6 +283,7 @@ const InitPage: NextPage = () => {;
             </div>
           </div>
         </section>
+
         <div className='flex items-center gap-3'>
           <button
             disabled={submitting}
@@ -241,6 +296,7 @@ export default InitPage;
 
 }
 }
+
 
 
 
@@ -293,6 +349,7 @@ export default InitPage;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -300,3 +357,4 @@ export default InitPage;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

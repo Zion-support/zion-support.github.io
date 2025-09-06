@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -30,7 +31,9 @@ import {ApplicationActions} from "./ApplicationActions";
 
 
 
+
 }
+
 
 
 
@@ -43,6 +46,7 @@ export function ApplicationRow({;
   processingId;
   onViewApplication;
   onStatusChange;
+
 
 
 
@@ -59,6 +63,7 @@ export function ApplicationRow({;
         <ApplicationActions
 
 
+
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
@@ -71,6 +76,7 @@ export function ApplicationRow({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           application={application}
           processing_id={processing_id}

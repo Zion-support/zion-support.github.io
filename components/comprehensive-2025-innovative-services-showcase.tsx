@@ -1,11 +1,14 @@
+
 import React from 'react',
 import SEO from '../components/SEO',
 import React from 'react';
 import SEO from '../components/SEO';
+
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
   Star,
@@ -24,6 +27,7 @@ import {
   Cpu,
   Eye,
   Target,
+
 
 
 
@@ -81,6 +85,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star;    return cat ? cat.icon : Star
@@ -105,6 +111,7 @@ import { motion } from 'framer-motion';
 
   return (
     <Layout>
+
       <SEO
         title='2025 Innovative Services Showcase | Zion Tech Group'
         description='Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.'
@@ -152,12 +159,14 @@ import { motion } from 'framer-motion';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-6"
           >
+
 
 
 
@@ -173,6 +182,7 @@ import { motion } from 'framer-motion';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Enhanced Company Badge */}
             <motion&& motion.div
@@ -303,7 +313,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -325,7 +337,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -345,7 +359,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -469,12 +485,14 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -488,7 +506,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -505,6 +525,7 @@ import { motion } from 'framer-motion';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {categories.map((category, index) => {
               const IconComponent = category.icon;
+
 
 
 
@@ -533,6 +554,7 @@ import { motion } from 'framer-motion';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
                 >
                   <div
@@ -739,6 +761,7 @@ import { motion } from 'framer-motion';
               );
             })}
 
+
           </div>;
         </div>;
       </section>;
@@ -751,6 +774,7 @@ import { motion } from 'framer-motion';
       {/* Featured Services */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>          <motion&& motion.div
+
 
 
 
@@ -780,7 +804,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -855,6 +881,7 @@ import { motion } from 'framer-motion';
         <div className='absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5'></div>
 
 
+
         <div className='max-w-7xl mx-auto relative z-10'>      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
 
@@ -918,6 +945,7 @@ import { motion } from 'framer-motion';
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1065,6 +1093,7 @@ import { motion } from 'framer-motion';
             viewport={{ once: true }}
             className='text-center mb-16'
 
+
           >
 
 
@@ -1072,6 +1101,7 @@ import { motion } from 'framer-motion';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent'>
               Complete Service Portfolio
             </h2>
@@ -1083,6 +1113,7 @@ import { motion } from 'framer-motion';
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {innovative2025MicroSaasBatch.map((service, index) => {
               const IconComponent = getCategoryIcon(service.category);
+
 
 
 
@@ -1123,6 +1154,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Contact CTA */}
       <section className='py-20 px-4'>;
         <div className='max-w-4xl mx-auto text-center'>          <motion && motion.div      {/* All Services Grid */}
@@ -1139,11 +1171,13 @@ import { motion } from 'framer-motion';
 
 
 
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
+
 
 
 
@@ -1158,10 +1192,12 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1196,6 +1232,7 @@ import { motion } from 'framer-motion';
 export default Comprehensive2025InnovativeServicesShowcase;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1203,4 +1240,5 @@ export default Comprehensive2025InnovativeServicesShowcase;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

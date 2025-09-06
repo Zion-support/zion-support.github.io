@@ -1,14 +1,17 @@
 
 // Content flagging functionality
+
 import { supabase  } from '@/integrations/supabase/client';
 import { FraudSeverity, FraudFlag  } from '@/types/fraud';
 import { FlagResult } from './types';
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
 import { FlagResult } from './types',
+
 /**
  * Flag content for review
  */
+
 
 
 
@@ -21,6 +24,7 @@ import { FlagResult } from './types',
   contentExcerpt: string,
   severity: FraudSeverity,
   reason: string,
+
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
@@ -30,6 +34,7 @@ import { FlagResult } from './types',
       contentId,
       reason,
       severity
+
     });
 
     
@@ -87,3 +92,4 @@ import { FlagResult } from './types',
     }
   }
 };
+

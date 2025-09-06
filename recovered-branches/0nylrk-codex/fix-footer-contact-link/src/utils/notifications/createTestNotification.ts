@@ -3,12 +3,14 @@
 
 
 
+
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 /**
  * Demo function to create test notifications for the current user
@@ -40,6 +42,8 @@ export async function createTestNotification(userId: string) {
   }
 
 
+    actionText: actions[randomType].text
+  })
 
 
 import { NotificationType } from './types',;
@@ -78,9 +82,13 @@ export async function createTestNotification(userId: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+
+

@@ -1,6 +1,7 @@
 
 
 
+
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -15,6 +16,7 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
+
 
 
 
@@ -38,11 +40,13 @@ type EducationFormValues = z.infer<typeof educationSchema>;
 
 
 
+
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
+
 
 
 
@@ -70,6 +74,8 @@ export function EducationFormFields({
       setError(err.message |'An error occurred')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -144,11 +150,13 @@ export function EducationFormFields(): any ({ ;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <Form {...form}>;
@@ -202,10 +210,12 @@ export function EducationFormFields(): any ({ ;
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+
                   <Input
                     type="date"
                   <Input 
                     type="date" 
+
                     {...field}
                     value={field.value |''}
                   />
@@ -315,6 +325,8 @@ export function EducationFormFields(): any ({ ;
       </form>
     </Form>
   )
+
 }
 }
 ;
+

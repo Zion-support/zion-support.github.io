@@ -1,3 +1,4 @@
+
 // Global type declarations for DOM types
 declare global {
   interface Window {
@@ -122,4 +123,5 @@ export {}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

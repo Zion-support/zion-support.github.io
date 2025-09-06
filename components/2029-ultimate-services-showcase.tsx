@@ -1,12 +1,15 @@
+
 import React, { useState } from 'react',
 import Head from 'next/head',
 import React, { useState } from 'react';
 import Head from 'next/head';
+
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
 import {
+
 
 
 
@@ -59,6 +62,7 @@ import {
   Gamepad,;
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
 
 
 
@@ -318,6 +322,7 @@ export default function UltimateServicesShowcase2029() {
         <meta property="og:type" content="website" />;
 
         {/* Twitter */}
+
         <meta;
           name='description';
           content='Explore our revolutionary 2029 services including AI Consciousness Evolution, Quantum Time Manipulation, Space Quantum Communication, and autonomous AI systems. Transform your business with future technology.';
@@ -382,6 +387,7 @@ export default function UltimateServicesShowcase2029() {
 
 
 
+
               >
                 Get Started Today
               </Link>
@@ -400,6 +406,7 @@ export default function UltimateServicesShowcase2029() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -408,6 +415,7 @@ export default function UltimateServicesShowcase2029() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Stats */}
 
@@ -503,10 +511,15 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                 placeholder="Search services..."
                 value={searchTerm}
 
-
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200"
+              />
+            </div>
             {/* Category Filter */}
-
-
+            <div className='flex flex-wrap items-center space-x-2'>
+              {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
+              {categories.map((category) => (
+                <button
 
 
                   key={category.id}
@@ -527,13 +540,16 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
             {/* Price Filter */}
             <div className='flex items-center space-x-2'>
               {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
               {priceRanges.map((range) => (
                 <button
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -552,6 +568,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Services Grid */}
 
 
@@ -562,6 +579,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
                   {/* Categories */}
+
 
 
 
@@ -591,6 +609,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                   {/* Features Preview */}
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white mb-2'>
@@ -630,6 +649,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 
 
+
                     </div>;
                   </div>;
 
@@ -654,6 +674,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   {/* Market Info */}
 
@@ -696,6 +717,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                       Learn More
                       <ArrowRight className='inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-200' />                    </Link>
                   </div>
+
                   {/* Hover Effect */}
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </div>                    <Link
                       href={`/services/${service.id}`}
@@ -727,6 +749,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -744,6 +767,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+
 
 
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200'              >            <div className="text-center py-20">;
@@ -778,6 +802,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -792,6 +817,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
           )}
         </div>
       </section>
+
 
 
 
@@ -829,6 +855,7 @@ className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 font-bold rounded
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -863,6 +890,7 @@ Join the future of technology with our revolutionary services.
       </section>
       <UltraFuturisticFooter2029 />
     </>
+
 
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -1091,3 +1119,4 @@ Join the future of technology with our revolutionary services.
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

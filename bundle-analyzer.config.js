@@ -1,12 +1,16 @@
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+
 module.exports = {"webpack": (config { isServer }) = > {if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({"analyzerMode": 'static'; openAnalyzer: false
     reportFilename: 'bundle-analysis.htm,l'}); )}; return config}}
 module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
 ;
+
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
      {;
+
+
 
 
 
@@ -15,6 +19,7 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
       )};
     return config};
 };
+
 
 
 
@@ -37,15 +42,18 @@ module && module.exports = {
           reportFilename: 'bundle-analysis.htm,l'});
           "analyzerMode": 'static',
           openAnalyzer: false,
+
           reportFilename: 'bundle-analysis.html'
         })
       );
     }
     return config;
   }
+
+
+}
+
 };
-
-
 
 
 ;
@@ -65,6 +73,7 @@ module.exports = {,;
 },;
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -72,4 +81,5 @@ module.exports = {,;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

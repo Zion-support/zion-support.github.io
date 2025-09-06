@@ -1,4 +1,5 @@
 
+
 const winston = require('winston');
 const logger = winston.createLogger({
 
@@ -36,6 +37,7 @@ class AggressiveSyntaxFixer {
 
 
 
+
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -69,7 +71,9 @@ class AggressiveSyntaxFixer {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
@@ -223,16 +227,12 @@ class AggressiveSyntaxFixer {;
     }
 
 
+    createValidFile(filePath) {
 
-
-
-
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
-        
-if (ext === '.tsx' || ext === '.jsx') {;
-
-
-
+        const ext = path.extname(filePath)
+        const fileName = path.basename(filePath, ext)
+        const dirName = path.dirname(filePath)
+        // Convert invalid characters to valid ones
 
 
             return `import React from 'react';
@@ -259,6 +259,8 @@ const ${validFileName} = {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality
 }`
+
+
 ;
     createValidFile(filePath) {;
         const ext = path.extname(filePath),;
@@ -296,6 +298,7 @@ const ${validFileName} = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -304,6 +307,7 @@ const ${validFileName} = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         }
 
@@ -346,6 +350,7 @@ async function main() {
 if (require.main === module) {
     main()
 }
+
 module.exports = AggressiveSyntaxFixer
 // Graceful shutdown handling
 process.on('SIGINT', () => {
@@ -357,10 +362,12 @@ module.exports = AggressiveSyntaxFixer,
 // Graceful shutdown handling
 process.on('SIGINT', () => {
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
+
   // Add cleanup logic here
   process.exit(0)
 })
 process.on('SIGTERM', () => {
+
 
 
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
@@ -431,6 +438,7 @@ if ( {) {
 }
 module.exports = AggressiveSyntaxFixer,
 
+
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n🛑 Received SIGINT, shutting down gracefully...'),
@@ -440,6 +448,7 @@ process.on ('SIGINT', () => {
 process.on ('SIGTERM', () => {
   console.log ('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here;
+
 
 
   process.exit (0);
@@ -455,4 +464,5 @@ process.on ('SIGTERM', () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

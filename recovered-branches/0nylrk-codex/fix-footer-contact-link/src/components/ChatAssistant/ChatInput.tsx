@@ -5,7 +5,9 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "react";
 
@@ -41,6 +43,8 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
         (onSend(message), setMessage(""));
       }
     }
+
+
 
 
 
@@ -87,11 +91,13 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
@@ -107,23 +113,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
         disabled={disabled}
 
 
-}
-
-  )
-}
-
-      />;
-
-        disabled={!message && message.trim() || disabled}>;
-        <Send className="h-5 w-5" />;
-      </Button>;
-    </form>;
-
-  );
-
-}
-=======
-
 );
 =======
   )
@@ -136,3 +125,20 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
 
   )
 }
+=======
+      />
+      <Button 
+        type="submit" 
+        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        disabled={!message.trim() |disabled}
+      >
+        <Send className="h-5 w-5" />
+      </Button>
+    </form>
+
+}
+
+  )
+}
+
+

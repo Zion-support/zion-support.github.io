@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -45,9 +46,11 @@ import {;
 
 
 
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+
 
   Menu,
   X,
@@ -74,6 +77,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "lucide-react";
 import Link from "next/link";
@@ -163,6 +167,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
+
         { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
         { name: "Quantum Computing", href: "/services?category=quantum" }
         { name: "Space Technology", href: "/services?category=space" }
@@ -185,6 +190,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "View All Services", href: "/services" },
       ],
     },
+
     {
       name: "Solutions"
       href: "/solutions"
@@ -412,6 +418,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
               <Search className="w-5 h-5" />;
@@ -428,6 +435,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -449,6 +457,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
               transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
               className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
               <Bell className="w-5 h-5" />;
@@ -466,6 +475,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -494,6 +504,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 
 
 
+
           </motion && motion.button>;
         </div>;
       </div>;
@@ -509,6 +520,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -526,6 +538,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   type="text"
                   placeholder="Search services..."
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+
 
                 />;
               </div>;
@@ -560,6 +573,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   )}
                 </div>;
               ))}
+
 
 
 
@@ -701,6 +715,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
       </AnimatePresence>
     </nav>
 
+
 }
 export default EnhancedNavigation;
 ;
@@ -723,3 +738,4 @@ export default EnhancedNavigation;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

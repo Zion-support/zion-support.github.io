@@ -1,5 +1,6 @@
 
 
+
 console && console.log('🔧 Starting automatic merge conflict resolution...');
 
 
@@ -236,18 +237,4 @@ if ( {) {
 
 main().catch(console && console.error);
 
-=======
-      console.error (`❌ Error processing ${branch}:`, error.message);
-    }
-  }
-  console.log ('\n🎉 PR merge process completed!');
-;
-  // Show final status;
-  try {
-    console.log ('\n📊 Final git status: '),
-    exec_sync ('git status --short', { stdio: 'inherit' });
-  } catch (error) {
-    console.error ('Error getting git status:', error.message);
-  }
-}
-main ().catch (console.error);
+

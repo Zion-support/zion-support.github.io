@@ -2,12 +2,14 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
+
 
 
 
@@ -22,6 +24,8 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
+
+
 
 
 
@@ -45,18 +49,23 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('certifications')
         .insert({
+
           resume_id: resumeId;
           name: cert.name;
           issuing_organization: cert.issuing_organization;
@@ -77,11 +86,14 @@ export function useCertifications() {;
       
       if (error) throw error,
       
+
       return showSuccessToast("Certification added", "Your certification has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -117,18 +129,23 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('certifications')
         .update({
+
           name: cert.name;
           issuing_organization: cert.issuing_organization;
           issue_date: cert.issue_date ? formatDateForDB(cert.issue_date) : null;
@@ -149,11 +166,14 @@ export function useCertifications() {;
       
       if (error) throw error,
       
+
       return showSuccessToast("Certification updated", "Your certification has been updated")
     } catch (e: any) {
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
+
+
 
 
 
@@ -189,29 +209,36 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     }
     
     setIsLoading(true),
     setError(null),
+
     
+
     try {
       const { error } = await supabase
         .from('certifications')
         .delete()
+
         .eq('id', certId);
       if (error) throw error;
         .eq('id', certId),
       
       if (error) throw error,
       
+
       return showSuccessToast("Certification deleted", "Your certification has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete certification')
     } finally {
       setIsLoading(false)
+
 
     }
   }
@@ -234,3 +261,4 @@ export function useCertifications() {;
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+

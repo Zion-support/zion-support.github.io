@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,10 +14,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export function QuickActions() {
 
   const actions = [
     {
+
 
 
 
@@ -38,22 +41,27 @@ export function QuickActions() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     {
       id: "add-member"
       label: "Add Team Member"
       icon: <Plus className="h-5 w-5 mr-2" />
       description: "Invite someone to your team"
       color: "bg-green-100 dark:bg-green-900/20"
+
     }
     },
+
     {
       id: "find-talent"
       label: "Find Talent"
       icon: <Search className="h-5 w-5 mr-2" />
       description: "Search the talent pool"
       color: "bg-purple-100 dark:bg-purple-900/20"
+
     }
     },
+
     {
       id: "schedule"
       label: "Schedule Interview"
@@ -85,6 +93,7 @@ export function QuickActions() {
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -156,6 +165,7 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
+
 
 
 

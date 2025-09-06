@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveService {;
   id: string;
@@ -50,6 +51,7 @@ const contact = {
 
 
 
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -63,6 +65,7 @@ const contact = {
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
+
 
 
 
@@ -216,6 +219,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 18,
   },
   {
+
 
 
     useCases: [
@@ -716,6 +720,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 
     reviews: 178
 
+
     reviews: 178
 
 
@@ -728,8 +733,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 ;
 
 
-=======
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveService {;
   id: string,;
@@ -1427,3 +1431,5 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
 
   }
 ];
+
+

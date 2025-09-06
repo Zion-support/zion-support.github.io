@@ -8,6 +8,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
       {children}
+
     </ThemeProvider>
   );
 }
@@ -36,6 +37,7 @@ export const mockNextRouter = () =>: any ({
   defaultLocale: 'en',
   domainLocales: [],
   isPreview: false;
+
 
 
 
@@ -70,7 +72,9 @@ export const mockNextRouter = () => ({;
 export const createMockProps = (overrides = {}) => ({;
 
 
+
   ...overrides;
+
 
 
 

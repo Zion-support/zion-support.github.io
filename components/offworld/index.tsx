@@ -1,5 +1,7 @@
+
 import { useState  } from 'react';
 import {useState} from 'react';
+
 import Head from 'next/head';
 
 
@@ -39,6 +41,7 @@ import Head from 'next/head';
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
+
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
@@ -267,6 +270,7 @@ function broadcast() {
 
 
     setStatus('Broadcasting manifesto...');
+
 
 
 

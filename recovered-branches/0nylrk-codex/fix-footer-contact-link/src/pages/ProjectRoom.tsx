@@ -4,11 +4,13 @@
 
 
 
+
   const { projectId } = useParams() as { projectId: string },;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
@@ -31,6 +33,8 @@
       isMuted: false
     }
   ]);
+
+
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -68,10 +72,12 @@ export default function ProjectRoom() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   
+
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -81,14 +87,17 @@ export default function ProjectRoom() {;
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
+
   }
   },
   
+
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
+
   }
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -121,6 +130,7 @@ export default function ProjectRoom() {;
 
 
   
+
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -208,8 +218,10 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
+
                     <VideoCallRoom
                     <VideoCallRoom 
+
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -286,6 +298,7 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
+
 }
 
 
@@ -409,6 +422,7 @@ export default function ProjectRoom() {;
 
     </>);
 }
+
 
 
 

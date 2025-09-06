@@ -2,6 +2,7 @@ import React from 'react';
 
 
 
+
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -13,9 +14,11 @@ import Link from 'next / link';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const GitHubActionsAutomationBlueprint: React.FC = () => {
   const automation_workflows = [;
     {
+
       name: 'Continuous Integration'
       description: 'Automated testing, building, and quality checks'
       status: 'active'
@@ -125,6 +128,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -136,7 +140,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const automationFeatures = [
 
@@ -169,8 +175,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       description: 'Zero - downtime deployments with health checks',
       benefit: 'Seamless updates and improved user experience',
 
+      status: 'implemented'
 
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
 
 
   const performanceMetrics = [
@@ -182,14 +194,13 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
     { metric: 'MTTR', value: '15 min', target: '30 min', status: 'exceeded' },
 
 
-
+    { metric: 'Change Failure Rate', value: '0.8%', target: '2%', status: 'exceeded'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ];
-
-
-
-
-
 
 
   const getStatusColor = (status: string) => {
@@ -199,6 +210,8 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       case 'exceeded': return 'text-green-400';
       case 'excellent': return 'text-green-400';
       default: return 'text-gray-400';
+
+
 
 
 
@@ -213,7 +226,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -234,12 +249,15 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+
 
 
 
@@ -253,6 +271,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-green-900 to-gray-900 text-white">
       <Head>
@@ -261,6 +280,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+
         {/* Header */}
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -278,6 +298,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <Link href="/reports/blueprints" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Blueprints
@@ -289,6 +310,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             Complete CI/CD automation with self-healing capabilities and intelligent workflows
           </p>
         </div>
+
         {/* Blueprint Overview */}
         {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
@@ -306,6 +328,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-green-400">Status</h3>
@@ -328,6 +351,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently optimized</p>
           </div>
         </div>
+
         {/* Automation Workflows */}
         {/* Automation Workflows */  } catch (error) {
     console.error("Error:", error);
@@ -341,6 +365,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Workflows</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -349,6 +374,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{workflow.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getFrequencyColor(workflow.frequency)}`}>
+
                     {workflow.frequency}
                     {workflow.frequency  } catch (error) {
     console.error("Error:", error);
@@ -362,11 +388,13 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{workflow.description}</p>
                 <div className="flex justify-between items-center">
                   <span className={`text-xs ${getStatusColor(workflow.status)}`}>
+
                     ● {workflow.status}
                     ● {workflow.status  } catch (error) {
     console.error("Error:", error);
@@ -383,10 +411,12 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </span>
                   <span className="text-xs text-green-400">● {workflow.health}</span>
                 </div>
               </div>
+
             ))}
           </div>
         </div>
@@ -410,6 +440,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Features</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -418,6 +449,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{feature.feature}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(feature.status)}`}>
+
                     {feature.status}
                     {feature.status  } catch (error) {
     console.error("Error:", error);
@@ -434,11 +466,13 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-2">{feature.description}</p>
                 <p className="text-green-400 text-sm font-medium">Benefit: {feature.benefit}</p>
               </div>
+
             ))}
           </div>
         </div>
@@ -462,6 +496,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -483,6 +518,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
                       <td className="py-3 px-4 text-gray-300">{metric.target}</td>
                       <td className="py-3 px-4">
                         <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
+
                           {metric.status}
                         </span>
                       </td>
@@ -511,11 +547,13 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 </tbody>
               </table>
             </div>
           </div>
         </div>
+
         {/* Automation Pipeline */}
         {/* Automation Pipeline */  } catch (error) {
     console.error("Error:", error);
@@ -533,6 +571,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Automation Pipeline</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -548,7 +587,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 ensure code quality and rapid delivery.
               </p>
@@ -577,6 +618,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
             </div>
           </div>
         </div>
+
         {/* Technology Stack */}
         {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
@@ -594,6 +636,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -624,11 +667,14 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
+
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
@@ -641,6 +687,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
           >
@@ -649,7 +696,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/reports/blueprints/comprehensive-redundancy"
@@ -660,7 +709,9 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/reports/blueprints/ultimate-redundancy"
@@ -672,6 +723,7 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
       </div>
     </div>
   );
+
 }
 
 
@@ -683,5 +735,6 @@ const GitHubActionsAutomationBlueprint: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default GitHubActionsAutomationBlueprint;

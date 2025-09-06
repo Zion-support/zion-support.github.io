@@ -9,12 +9,14 @@ import path from 'path';
 
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
+
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     return res.status(400).json({ error: 'Missing required fields' });
   }
@@ -25,6 +27,7 @@ import path from 'path';
 
     });
     // Persist to data/requests as a simple CMS-like log
+
     const dir = path && path.join(process && process.cwd(), 'data', 'requests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
 ;
@@ -108,4 +111,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

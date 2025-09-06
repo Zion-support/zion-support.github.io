@@ -3,6 +3,7 @@
 
 
 
+
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react";
 import { UseFormReturn } from "react-hook-form";
@@ -81,6 +82,7 @@ interface ProjectDetailsFieldsProps {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   form: UseFormReturn<ContractFormValues>;
 }
 
@@ -101,6 +103,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
             <FormMessage />
           </FormItem>
         )}
+
       />
       <FormField
       />;
@@ -111,6 +114,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -154,7 +158,9 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
           </FormItem>
         )}
       />
+
       
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
         <FormField
@@ -191,6 +197,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
               <FormMessage />;
             </FormItem>;
           )}
+
         />
         <FormField
         />;
@@ -201,6 +208,7 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -228,23 +236,33 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
                     mode="single"
 
 
-
-                    selected={field && field.value || undefined}
-                    onSelect={field && field.onChange}
-                    disabled={(date) => date < form && form.getValues("startDate")}
-                    initialFocus;
-
-
-
-
-=======
-
         />;
       </div>;
     </>;
 
 
 
+
+
+=======
+                    selected={field.value |undefined}
+                    onSelect={field.onChange}
+                    disabled={(date) => date < form.getValues("startDate")}
+                    initialFocus
+                  />
+                </PopoverContent>
+              </Popover>
+              <FormDescription>
+                Leave empty if the end date is flexible
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )}
+
+        />;
+      </div>;
+
+    </>;
 
 
   );

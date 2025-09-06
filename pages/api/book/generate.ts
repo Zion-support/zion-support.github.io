@@ -2,6 +2,7 @@
 
 
 
+
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
       messages: [
@@ -15,6 +16,7 @@
 
 
 }
+
 
 
 }
@@ -51,6 +53,8 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 

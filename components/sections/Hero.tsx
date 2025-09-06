@@ -1,5 +1,7 @@
+
 import React from 'react',
 import React from 'react';
+
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
@@ -98,6 +100,7 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
             {title}
           </h1>
+
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string
     href: string
@@ -161,6 +164,7 @@ const Hero: React.FC<HeroProps> = ({
 
 
 
+
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
@@ -169,6 +173,7 @@ const Hero: React.FC<HeroProps> = ({
 
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
+
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
 
@@ -176,6 +181,7 @@ const Hero: React.FC<HeroProps> = ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               )}
               {secondaryAction && (;
@@ -186,6 +192,7 @@ const Hero: React.FC<HeroProps> = ({
             </div>;
           )}
         </div>
+
 
 
 
@@ -203,6 +210,7 @@ const Hero: React.FC<HeroProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Stats Section */}
         {stats && (;
           <div
@@ -229,6 +237,7 @@ const Hero: React.FC<HeroProps> = ({
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
 
+
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
 
                   {stat.label}
@@ -238,6 +247,7 @@ const Hero: React.FC<HeroProps> = ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 </div>
               </div>
@@ -275,6 +285,7 @@ const Hero: React.FC<HeroProps> = ({
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
+
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
@@ -321,6 +332,7 @@ export default Hero;
 
 
 
+
 }
 }
 }
@@ -340,5 +352,7 @@ export default Hero;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

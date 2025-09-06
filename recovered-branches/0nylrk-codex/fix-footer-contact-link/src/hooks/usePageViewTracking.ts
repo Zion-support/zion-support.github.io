@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -10,10 +11,12 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 /**
  * Custom hook to track page views for analytics purposes
  * Attaches event listeners to track route changes and logs page views
  */
+
 export function usePageViewTracking() {;
   const location = useLocation();
 export function usePageViewTracking() {
@@ -28,10 +31,12 @@ export function usePageViewTracking() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   const location = useLocation();
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view
+
       console.log('Page view:', window.location.pathname)
     }
     // Listen for route changes
@@ -50,6 +55,7 @@ export function usePageViewTracking() {
 
     handleRouteChange(),
     
+
     return () => {
       window && window.removeEventListener('popstate', handleRouteChange)
     }
@@ -58,8 +64,11 @@ export function usePageViewTracking() {
   // Also track when location changes directly via React Router
   useEffect(() => {
 
+    // // // console.log('Page view:', location.pathname)
+  }, [location.pathname])
 
-
+import { useEffect } from 'react',;
+import { useLocation } from 'react-router-dom',;
 
 /**;
 * Custom hook to track page views for analytics purposes;
@@ -97,9 +106,13 @@ function usePageViewTracking() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
+
+

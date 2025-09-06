@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default function OsvWatchPage() {
 
   const results: any[] = (data?.results |[]).slice(0, 50)
@@ -19,7 +21,9 @@ export default function OsvWatchPage() {
 
 
 
+
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+
 
 
         {results.length === 0 ? (
@@ -33,7 +37,9 @@ export default function OsvWatchPage() {
                   {r.vulns.slice(0, 5).map((v, i) => (
 
 
+
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</a> — {v.summary || ''}</li>
+
 
 
                   ))}
@@ -44,6 +50,7 @@ export default function OsvWatchPage() {
         )}
       </div>
     </EnhancedLayout>
+
 
 
 export default function OsvWatchPage() {
@@ -83,6 +90,7 @@ export default function OsvWatchPage() {
 
 
 
+
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
                   ))  } catch (error) {
     console.error("Error:", error);
@@ -110,11 +118,13 @@ export default function OsvWatchPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

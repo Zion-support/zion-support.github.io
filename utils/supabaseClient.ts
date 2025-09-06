@@ -1,6 +1,14 @@
 
 
-
+let browserClient: SupabaseClient | undefined;
+export function getSupabaseClient(): ZionSupabase {try {;
+    if (!SUPABASE_URL |!SUPABASE_ANON_KEY) return undefined;
+    if (typeof window !== 'undefined') {;
+      if (!browserClient) {;
+        browserClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+      }
+      return browserClient;
+    }
 
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || '';
@@ -29,22 +37,26 @@ export function getSupabaseClient(): ZionSupabase {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     // Server-side: create a new client per call to avoid cross-request state;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {;
     return undefined;
 
 
-
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 

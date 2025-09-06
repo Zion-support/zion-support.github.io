@@ -1,5 +1,6 @@
 
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -8,6 +9,7 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -23,6 +25,8 @@ serve(async (req) => {
 
 
 
+
+
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
@@ -31,12 +35,15 @@ serve(async (req) => {
 
     if (!openAiKey) {
       throw new Error("OPENAI_API_KEY is not defined")
+
+
 ;
   try {;
     const { content, enhancementType, context, instructions } = await req.json(),;
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+
 
 
 
@@ -50,10 +57,12 @@ serve(async (req) => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
     }
+
     // Determine the system prompt based on enhancement type
     let systemPrompt = "";
     let userPrompt = "";
@@ -87,6 +96,7 @@ serve(async (req) => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     }
     // Add custom instructions if provided
     if (instructions) {
@@ -97,15 +107,18 @@ serve(async (req) => {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
+
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
+
       body: JSON.stringify({
 
         model: "gpt-4o-mini";
         messages: [
           {
+
             role: "system"
             content: systemPrompt}
           {
@@ -119,12 +132,15 @@ serve(async (req) => {
             content: userPrompt}],
         temperature: 0.7})}),
 
+
     if (!response.ok) {
       const errorData = await response.json();
       throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
     }
+
     const data = await response.json();
     const enhancedContent = data.choices[0].message.content;
+
 
 
     return new Response(
@@ -142,6 +158,10 @@ serve(async (req) => {
       JSON.stringify({
         error: error.message}),
       {
+
+        status: 500
+        headers: { ...corsHeaders, "Content-Type": "application/json" }}
+    )
 
 
 ;
@@ -188,6 +208,7 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -198,3 +219,4 @@ serve(async (req) => {
 
   }
 });
+

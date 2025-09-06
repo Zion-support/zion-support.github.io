@@ -2,6 +2,8 @@
 
 
 
+
+
 interface Blob {
   size: number;
   type: string;
@@ -74,11 +76,13 @@ interface AbortSignal extends EventTarget {
 
 
 
+
 };
 origin/cursor/integrate-build-improve-and-re-verify-242d
 }};
 export const apiClient = new ApiClient();
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
@@ -89,12 +93,16 @@ interface ApiResponse<T = unknown> {
   success: boolean,
 
 
+
+
 // Define RequestInit if not available
 interface File extends Blob {
   name: string;
   lastModified: number;
 
+
 origin/main
+
 
 }
 interface Blob {
@@ -154,6 +162,7 @@ interface AbortController {
   signal: AbortSignal;
   abort(): void;
 }
+
 
 
 class ApiClient {
@@ -229,6 +238,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com';
 export class ApiClient {
   private baseURL: string;
@@ -289,6 +299,7 @@ export class ApiClient {
     });
   }
 }
+
 }};
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -307,12 +318,15 @@ interface AbortSignal extends EventTarget {
   onabort: ((this: AbortSignal, ev: Event) => any) | null;
 origin/main
 }
+
 };
 export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
 
+
 >>>>>>> origin/automation-improvements-final
+
 
 
 
@@ -389,6 +403,7 @@ if ( {) {
 
 
 
+
 export type { ApiResponse, RequestOptions };
 
 export type { ApiResponse, RequestOptions };
@@ -417,4 +432,5 @@ export type { ApiResponse, RequestOptions }
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -255,12 +256,14 @@ origin/automation-improvements-final
 import React from "react";
 import Layout from "../components/Layout";
 origin/main
+
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
+
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -284,6 +287,7 @@ export default function AIServices() {
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 origin/automation-improvements-final
+
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
@@ -674,6 +678,8 @@ origin/automation-improvements-final
   }
 }
             </div>
+
+
           </div>
         </section>
         {/* Stats Section */  } catch (error) {
@@ -960,6 +966,7 @@ origin/automation-improvements-final
       </div>
     </Layout>;
   );
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1071,3 +1078,4 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
+

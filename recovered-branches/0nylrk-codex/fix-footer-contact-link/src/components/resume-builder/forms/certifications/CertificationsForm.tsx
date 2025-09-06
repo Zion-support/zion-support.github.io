@@ -1,6 +1,7 @@
 
 
 
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -20,6 +21,7 @@ import {CertificationFormValues, certificationSchema} from './types';
 
 
 
+
 interface CertificationsFormProps {
 
   resumeId: string
@@ -28,6 +30,7 @@ interface CertificationsFormProps {
 
   onBack: () => void
 }
+
 
 
 
@@ -48,6 +51,7 @@ import {CertificationFormFields} from './CertificationFormFields';
 
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+
 
 
 
@@ -88,6 +92,8 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         success = await updateCertification(editingId, certData)
       } else {
         success = await addCertification(resumeId, certData)
+
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -117,8 +123,37 @@ function CertificationsForm() {
 ;
   // Helper function to format dates as strings for form inputs;
 
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '',;
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  },;
+  const form = useForm<CertificationFormValues>({;
+    resolver: zodResolver(certificationSchema),;
+    defaultValues: {;
+      name: '',;
+      issuing_organization: '',;
+      issue_date: '',;
+      expiration_date: '',;
+      credential_id: '',;
+      credential_url: ''}}),;
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {;
+    try {;
+      setError(null),;
+      let success,;
+      const certData: Certification = {;
+        name: data.name,;
+        issuing_organization: data.issuing_organization,;
+        issue_date: data.issue_date || undefined,;
+        expiration_date: data.expiration_date || undefined,;
+        credential_id: data.credential_id,;
+        credential_url: data.credential_url},;
+      if (editingId) {;
+        success = await updateCertification(editingId, certData);
+      } else {;
+        success = await addCertification(resumeId, certData);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       }
       if (success) {
         form.reset({
@@ -134,6 +169,7 @@ function CertificationsForm() {
       setError(err.message |'An error occurred')
     }
 
+
   }
   };
 
@@ -154,6 +190,7 @@ function CertificationsForm() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -164,6 +201,8 @@ function CertificationsForm() {
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
+
+
 
 
 
@@ -185,6 +224,7 @@ function CertificationsForm() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
+
   },
 
 
@@ -195,6 +235,7 @@ function CertificationsForm() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
 
     <div className="space-y-6">;
@@ -265,6 +306,7 @@ function CertificationsForm() {
       </div>
     </div>
   )
+
 }
 }
         form.reset ({
@@ -281,3 +323,4 @@ function CertificationsForm() {
     }
   }
 ;
+

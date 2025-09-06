@@ -1,4 +1,5 @@
 
+
 import React, { useEffect, useState } from 'react';
 
 
@@ -15,6 +16,7 @@ import {toast} from 'sonner';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -24,6 +26,7 @@ import {toast} from 'sonner';
         console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")
       }
+
     }
     loadData()
   }, [fetchConversations]);
@@ -32,11 +35,13 @@ import {toast} from 'sonner';
     loadData()
   }, [fetchConversations]),
   
+
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
       return
     }
+
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
     // Show toast notification
@@ -60,6 +65,7 @@ import {toast} from 'sonner';
     navigate(`/call/${roomId}`)
   },
   
+
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -75,6 +81,7 @@ import {toast} from 'sonner';
 
               <Button
                 onClick={startVideoCall}
+
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
                 <Video className="h-4 w-4" />;
                 Start Call;
@@ -148,6 +155,7 @@ if ( {) {
 
 
 
+
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}
@@ -165,6 +173,8 @@ if ( {) {
       </div>
     </ProtectedRoute>
   )
+
 }
 }
 ;
+

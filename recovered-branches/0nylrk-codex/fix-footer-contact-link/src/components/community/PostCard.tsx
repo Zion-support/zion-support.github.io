@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 interface PostCardProps {
 
@@ -21,6 +23,7 @@ interface PostCardProps {
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })
   return (
+
     <Card className={cn(;
       "transition-shadow hover: shadow-md";
     <Card className={cn(
@@ -28,6 +31,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       post.isPinned && "border-zion-purple/50"
       "transition-shadow hover:shadow-md",
       post.isPinned && "border-zion-purple/50",
+
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">
@@ -56,6 +60,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
           <div className="flex flex-wrap gap-2 mt-2">
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
+
 import { formatDistanceToNow } from "date-fns",;
 import { Link } from "react-router-dom",;
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",;
@@ -116,6 +121,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {tag}
               </Badge>
             ))}
@@ -149,6 +155,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
+
       </CardFooter>
     </Card>
   )
@@ -168,3 +175,4 @@ export default PostCard;
 
 
 export default PostCard;
+

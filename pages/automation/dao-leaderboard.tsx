@@ -4,10 +4,12 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 export default function DaoLeaderboardPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 25)
@@ -19,7 +21,9 @@ export default function DaoLeaderboardPage() {
 
 
 
+
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
+
 
 
         <ul className="mt-6 space-y-2">
@@ -31,6 +35,7 @@ export default function DaoLeaderboardPage() {
               </div>
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
+
 
 
 export default function DaoLeaderboardPage() {
@@ -55,12 +60,14 @@ export default function DaoLeaderboardPage() {
 
 
 
+
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
+
 
 
 
@@ -74,4 +81,5 @@ export default function DaoLeaderboardPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

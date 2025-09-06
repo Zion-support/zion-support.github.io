@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
@@ -34,6 +35,7 @@ function readAll() {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 }
 
@@ -48,6 +50,7 @@ async function main() {
     console && console.error('Missing OPENAI_API_KEY'),
     process && process.exit(1)
   }
+
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -70,6 +73,7 @@ async function main() {
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
+
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
@@ -101,6 +105,20 @@ async function main() {
   // Append to prompt improvements
 
 
+  console.log('Analysis written to', summaryPath)
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+  // // // console.log('Analysis written to', summaryPath)
+  const all = readAll(),;
+  const recent = all.filter(lastNDays(7)),;
+  const downs = recent.filter((r) => r.rating === 'down'),;
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;
+  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),;
+  if (downs.length === 0) {;
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
+    // // // console.log('No low-rated feedback to analyze.'),;
 
     return;
   }
@@ -124,6 +142,7 @@ async function main() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -132,4 +151,5 @@ main ().catch ((e) => { console.error (e), process.exit (1) }),
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

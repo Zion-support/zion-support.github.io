@@ -5,6 +5,8 @@
 
 
 
+
+
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
@@ -18,8 +20,10 @@ import { Button } from "@/components/ui/button",
 
 
 
+
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
+
   const [sortConfig, setSortConfig] = useState<{
 
     key: keyof CountryPricing;
@@ -30,9 +34,11 @@ export function ITServicePricingTable() {
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
+
     let filteredData = [...onsiteServicePricing];
     let filteredData = [...onsiteServicePricing],
     
+
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -85,6 +91,7 @@ export function ITServicePricingTable() {;
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === "ascending" ? 1 : -1;
       }
+
       return 0;
     });
 
@@ -113,6 +120,7 @@ export function ITServicePricingTable() {;
           ? "descending" 
           : "ascending"})
   },
+
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
@@ -178,6 +186,7 @@ export function ITServicePricingTable() {;
                   No countries match your search
                 </TableCell>
               </TableRow>
+
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -291,6 +300,7 @@ export function ITServicePricingTable() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             )}
           </TableBody>;

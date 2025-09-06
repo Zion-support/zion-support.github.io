@@ -1,13 +1,16 @@
 
-
+import React, { useState } from 'react';
 
 export type ModerationModalProps = {
+
+
   flag: any | null;
 
   onAction: (;
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
+
 
 
 
@@ -20,6 +23,7 @@ export default function ModerationModal(): any ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
@@ -131,6 +135,7 @@ export default function ModerationModal(): any ({;
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+
 );
 }
   on_close: () => void;
@@ -315,4 +320,5 @@ if (return null) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

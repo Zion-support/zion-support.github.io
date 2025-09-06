@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import {useState} from 'react';
@@ -12,6 +13,7 @@ export interface TalentProfileData {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   name: string;
   title: string;
   bio: string;
@@ -21,6 +23,7 @@ export interface TalentProfileData {
 
 }
 
+
 export interface CategorizedSkills {
 
 
@@ -29,9 +32,11 @@ export interface CategorizedSkills {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   programming: string[];
   devops: string[];
   platforms: string[];
+
 
 
 
@@ -52,11 +57,13 @@ export function useTalentProfileEnhancer() {;
     
 
 
+
     try {
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
+
 
 
 
@@ -68,6 +75,7 @@ export function useTalentProfileEnhancer() {;
         throw new Error(error.message)
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export interface TalentProfileData {;
@@ -109,6 +117,7 @@ export function useTalentProfileEnhancer() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -116,6 +125,7 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       }
       return data as EnhancedProfile
@@ -134,16 +144,21 @@ export function useTalentProfileEnhancer() {;
 
 
 
+
+
   return {
     enhanceProfile;
     isGenerating;
 
     error
+
+
   },;
   return {;
     enhanceProfile;
     isGenerating;
     error;
+
 
 
 
@@ -157,6 +172,7 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 }

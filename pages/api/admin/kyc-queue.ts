@@ -1,6 +1,7 @@
 
 
 
+
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
@@ -20,12 +21,36 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   } catch {
     return {};
   }
 }
 
 
+
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  if (req.method === 'GET') {
+    const queue = Object.values(db).filter((p) => p.status === 'submitted' |p.status === 'needs_more_info')
+    return res.status(200).json({ ok: true, queue })
+  }
+  if (req.method === 'POST') {
+    const { userId, action, reason } = req.body as { userId?: string, action?: 'approve' | 'reject' | 'needs_more_info', reason?: string }
+    if (!userId |!action) return res.status(400).json({ error: 'Missing userId or action' })
+    const profile = db[userId]
+    if (!profile) return res.status(404).json({ error: 'Profile not found' })
+    const now = new Date().toISOString()
+    if (action === 'approve') profile.status = 'approved'
+    if (action === 'reject') profile.status = 'rejected'
+    if (action === 'needs_more_info') profile.status = 'needs_more_info'
+    profile.lastUpdatedAt = now
+    profile.auditTrail.push({ at: now, by: 'admin', action: `admin_${action}`, details: reason ? { reason } : undefined })
+    db[userId] = profile
+    save(db)
+    return res.status(200).json({ ok: true, profile })
 
 
   try {
@@ -54,6 +79,7 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -64,3 +90,4 @@ const FILE = path.join(DATA_DIR, 'profiles.json');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

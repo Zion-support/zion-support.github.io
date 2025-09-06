@@ -14,6 +14,7 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No jobs yet"
           description="Post your first job to get quotes from top talent."
+
           icon={<span>🧰</span>}
           primaryAction={{ label: 'Post a job', href: '/jobs/post' }}
           secondaryAction={{ label: 'Explore talent', href: '/talent' }}
@@ -43,6 +44,7 @@ const Dashboard: NextPage = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         />
       </section>
       <section>
@@ -50,6 +52,7 @@ const Dashboard: NextPage = () => {
         <EmptyState
           title="No messages yet"
           description="When conversations start, they’ll show up here."
+
           icon={<span>💬</span>}
           primaryAction={{ label: 'Browse services', href: '/services' }}
         />
@@ -58,6 +61,7 @@ const Dashboard: NextPage = () => {
   )
 }
 export default Dashboard;
+
 
 
 
@@ -75,6 +79,7 @@ export default Dashboard;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -82,4 +87,5 @@ export default Dashboard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

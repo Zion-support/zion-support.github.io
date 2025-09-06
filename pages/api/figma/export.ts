@@ -2,11 +2,14 @@
 
 
 
+
+
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
 
 
@@ -78,6 +81,7 @@ function handler() {
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -98,6 +102,8 @@ export default async function handler(req, res) {
   try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
+
+
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -143,6 +149,7 @@ export default async function handler(req, res) {
 
     );
     res.status(200).send(buffer);
+
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
   } catch (error) {
@@ -153,11 +160,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 
   }
 }
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -183,3 +192,4 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

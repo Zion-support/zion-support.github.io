@@ -3,11 +3,13 @@
 
 
 
+
 import {format} from 'date-fns';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 /**
  * Formats a date for PDF display
@@ -20,6 +22,8 @@ export function formatDate(date: Date | string | undefined): string {
 
   if (typeof date === 'string') {
     return format(new Date(date), 'MMM yyyy')
+
+
 import { format } from 'date-fns',;
 /**;
 
@@ -33,6 +37,7 @@ export function formatDate(date: Date | string | undefined): string {;
     return format(new Date(date), 'MMM yyyy');
 
 
+
   }
   return format(date, 'MMM yyyy')
 
@@ -43,10 +48,13 @@ export function formatDate(date: Date | string | undefined): string {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     return format (new Date (date), 'MMM yyyy');
+
   }
   return format (date, 'MMM yyyy');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

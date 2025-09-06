@@ -3,6 +3,7 @@
 
 
 
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
@@ -17,6 +18,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -57,6 +59,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
   } else {
     res.status(405).json({ error: "Method not allowed" });
+
+
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';
@@ -92,6 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   } else {
+
     res && res.status(405).json({ error: "Method not allowed" });
   }
 
@@ -99,8 +104,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
   }
 }
+
 
   } catch (error) {
     console.error("Error:", error);
@@ -128,4 +135,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

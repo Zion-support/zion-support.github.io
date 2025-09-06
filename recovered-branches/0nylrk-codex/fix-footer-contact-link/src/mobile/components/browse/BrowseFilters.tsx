@@ -3,6 +3,7 @@
 
 
 
+
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
   type: "jobs" | "talents";
@@ -16,6 +17,7 @@ interface BrowseFiltersProps {
     setActiveFilters(activeFilters.filter(f => f !== filter))
   },
   
+
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">

@@ -1,10 +1,12 @@
 
+
 import { GradientHeading } from "./GradientHeading",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import { Button } from "./ui/button",
 import { GradientHeading } from "./GradientHeading";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "./ui/button";
+
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
@@ -16,6 +18,7 @@ const recentPosts = [...BLOG_POSTS]
     );
   })
   .slice(0, 3);
+
 export function BlogSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="blog">
@@ -41,6 +44,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
 }).slice(0, 3),
 
+
             className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
             asChild
           >
@@ -55,12 +59,14 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
@@ -86,6 +92,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                 </Button>
               </CardFooter>
             </Card>
+
           ))}
         </div>
       </div>
@@ -277,4 +284,5 @@ function BlogSection() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

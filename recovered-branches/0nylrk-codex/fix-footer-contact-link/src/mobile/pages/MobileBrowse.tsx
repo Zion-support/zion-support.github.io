@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -23,12 +24,14 @@ import {useAuth} from "@/hooks/useAuth";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 // Mock data for demonstration
 
 
 
 const jobsData = [
   {
+
     id: "1"
     title: "Senior React Developer"
     subtitle: "TechCorp Inc."
@@ -187,6 +190,7 @@ export function MobileBrowse() {
 
   },
   
+
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -214,6 +218,7 @@ export function MobileBrowse() {
       <BrowseFilters type={browseType} />
       <div className="py-4 px-4">
         <BrowseCards
+
           items={browseType === "jobs" ? jobsData : talentsData}
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -340,6 +345,7 @@ export function MobileBrowse() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}

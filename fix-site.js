@@ -1,7 +1,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 console.log('🔧 Fixing site loading issues...'),;
@@ -11,7 +13,9 @@ const nextConfig = {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   eslint: { ignoreDuringBuilds: true },;
@@ -35,7 +39,9 @@ const emptyFiles = [;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 emptyFiles.forEach(file => {;
@@ -46,3 +52,5 @@ emptyFiles.forEach(file => {;
   }
 }),;
 console.log('🎉 Site fixes completed!'),;
+
+

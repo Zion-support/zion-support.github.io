@@ -3,6 +3,7 @@
 
 
 
+
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -16,10 +17,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 	website: 'https://ziontechgroup.com'
 }
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   {
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     id: 'managed-ml-feature-store-starter'
@@ -3407,19 +3410,22 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
   },
   {
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
 
 
+    tagline: 'Record workflows, export resilient agent scripts with retries',
+    price: '$89',
+    period: '/month',
+    description: 'Point-and-click recorder producing deterministic agent scripts with selector healing, backoff, and CAPTCHA strategies.',
+    features: [
+      'DOM diff–based selector healingAuto-wait and idempotent steps',
+      'Proxies and device profilesRun history and replays',
+      'Webhooks and schedules'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -3451,7 +3457,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -3463,13 +3471,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Production-grade SSO (SAML/OIDC) with SCIM provisioning adapters, test suites, branding, and audit logs.',
+    features: [
+      'SAML/OIDC providers ready-to-goSCIM provisioning adapters',
+      'End-to-end test suitesBranding and theming',
+      'Audit logs and support runbooks'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3481,7 +3488,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'SaaS teams targeting enterprise',
@@ -3507,7 +3516,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -3516,13 +3527,15 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     name: 'API Performance Optimizer Pro',
 
 
+    tagline: 'Latency reduction, rate-limit tuning, and load testing as-a-service',
+    price: '$99',
+    period: '/month',
+    description: 'Continuously measure and improve your API latency with synthetic tests, adaptive rate-limit tuning, and contract-aware caching. Export recommendations as IaC.',
+    features: [
+      'Synthetic latency monitoringAdaptive rate-limit tuner',
+      'Multi-region load testingSchema & contract validation',
+      'Auto-caching recommendationsChange-impact reports'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3534,7 +3547,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Platform and API teams',
@@ -3554,13 +3569,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Synthetic test agents, results store, optimization engine, and IaC exporter.',
+    launchDate: '2025-03-01',
+    customers: 12,
+    rating: 4.8,
+    reviews: 9
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3571,13 +3585,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Deploy a secure RAG stack with ingestion pipeline, chunking, embeddings, vector DB, and evaluation harness. Includes observability and guardrails.',
+    features: [
+      'Document ingestion & chunkingEmbeddings & vector DB (Pinecone/Weaviate/PGVector)',
+      'Prompt templates & guardrailsEvaluation harness (quality, toxicity, grounding)',
+      'Observability dashboardsOne-click deploys'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3603,13 +3616,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Templates, infra modules, eval notebooks, and dashboards.',
+    launchDate: '2025-03-08',
+    customers: 15,
+    rating: 4.8,
+    reviews: 7
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3620,13 +3632,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Define robust browser automation using plain-language steps. Includes anti-fingerprint profiles, CAPTCHA strategies, and failure replay.',
+    features: [
+      'Step-based DSLResilient selectors & healing',
+      'Proxy pools & rotationCaptcha solve workflows',
+      'Audit logs & video replayScheduler & webhooks'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -3638,7 +3649,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Ops, growth, QA teams',
@@ -3658,13 +3671,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Runner fleet, state store, DSL compiler, and replay UI.',
+    launchDate: '2025-03-05',
+    customers: 22,
+    rating: 4.6,
+    reviews: 12
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3675,13 +3687,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Continuously monitor cloud bills and usage for anomalies, surface drivers, and open GitHub issues with Terraform recommendations.',
+    features: [
+      'Anomaly detection & seasonalityService & tag attribution',
+      'Slack and email alertsTerraform fix suggestions',
+      'Forecast & budget guardrailsMulti-cloud support'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3713,7 +3724,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -3722,13 +3735,15 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     name: 'Serverless Batch Orchestrator',
 
 
+    tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling',
+    price: '$79',
+    period: '/month',
+    description: 'Define data and maintenance jobs using a YAML spec. We provision serverless cron, retries, dead-letter queues, and cost-aware schedules across AWS/Azure/GCP.',
+    features: [
+      'YAML job specsCross-cloud scheduler',
+      'Retries & DLQNotification hooks',
+      'Cost-aware windowsAudit & run history'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -3740,7 +3755,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Data engineering, platform, ops',
@@ -3760,13 +3777,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Managed specs, runners, and observability with audit trails.',
+    launchDate: '2025-02-10',
+    customers: 34,
+    rating: 4.6,
+    reviews: 14
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3777,13 +3793,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Continuously crawl your site, detect Core Web Vitals regressions, broken links, and missing structured data. Auto-open PRs with fixes.',
+    features: [
+      'Automated crawlingCWV and Lighthouse checks',
+      'Broken link detectionSchema.org suggestions',
+      'PR autofix workflowsSitemap & robots validation'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3795,7 +3810,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Growth, web, SEO engineering',
@@ -3815,13 +3832,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Crawl scheduler, render lab, rules engine, and PR bot.',
+    launchDate: '2025-02-15',
+    customers: 58,
+    rating: 4.7,
+    reviews: 31
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3832,13 +3848,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Deploy multi-region consent banners with IAB TCF compliance, A/B testing, and consent logs. Export DPIA and audit trails.',
+    features: [
+      'IAB TCF supportRegion-based policies',
+      'Consent logs & exportsA/B banner optimization',
+      'CMP integrationsAccessibility first UI'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -3864,13 +3879,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Hosted CMP with edge storage and region-aware rendering.',
+    launchDate: '2025-03-03',
+    customers: 40,
+    rating: 4.5,
+    reviews: 16
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3881,13 +3895,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Capture meeting audio, generate summaries with speakers, and push action items to Jira/HubSpot/Salesforce with privacy controls.',
+    features: [
+      'Auto-record & transcribeSpeaker diarization',
+      'Action item extractionCRM & PM sync',
+      'PII redactionTeam workspace'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -3899,7 +3912,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Sales, success, product, ops',
@@ -3919,13 +3934,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Recording bot, summarization pipeline, and secure storage.',
+    launchDate: '2025-02-01',
+    customers: 120,
+    rating: 4.6,
+    reviews: 52
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3936,13 +3950,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Automate upgrades across frameworks and libraries. Typed codemods, test-aware refactors, and PRs with diffs and rollback plans.',
+    features: [
+      'Typed codemodsTest-aware refactors',
+      'Multi-repo orchestrationRisk scoring & rollbacks',
+      'CI validationChangelogs & docs'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -3961,7 +3974,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     roi: 'Cut upgrade time by 60–80%',
@@ -3973,13 +3988,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'AST-driven codemods with safety rails and CI checks.',
+    launchDate: '2025-02-18',
+    customers: 18,
+    rating: 4.5,
+    reviews: 10
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -3990,13 +4004,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Automate incident status updates based on SLO breaches. Standardize RCAs, postmortems, and subscriber communication.',
+    features: [
+      'SLO-triggered updatesRCA templates',
+      'Subscriber messagingIncident timeline',
+      'Webhook & chat opsAnalytics & CSAT'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4022,13 +4035,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'SLO integrations, templates, and messaging pipeline.',
+    launchDate: '2025-02-22',
+    customers: 25,
+    rating: 4.6,
+    reviews: 12
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4039,13 +4051,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Protect databases and object stores with policy-based snapshots, immutability, encryption, and cross-cloud recovery runbooks.',
+    features: [
+      'Snapshot policiesImmutability & WORM',
+      'Cross-cloud recoveryKey rotation & KMS',
+      'Drills & audit logsCost-aware tiers'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4071,13 +4082,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Policy engine, snapshot orchestrator, and drill runner.',
+    launchDate: '2025-03-05',
+    customers: 14,
+    rating: 4.7,
+    reviews: 8
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4088,13 +4098,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Aggregate NPS, reviews, and support tickets. Use LLMs to cluster themes, detect churn signals, and prioritize roadmap items.',
+    features: [
+      'Omnichannel ingestionLLM theme clustering',
+      'Churn signal alertsRoadmap prioritization',
+      'VOC dashboardsCSV & API export'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4126,7 +4135,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4138,13 +4149,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Generate compliant, persona-aware sequences across email and LinkedIn. Test copy variants and optimize send windows.',
+    features: [
+      'ICP & persona modelingSequence generator',
+      'Deliverability checksSend window optimizer',
+      'A/B copy testingCRM sync'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4176,7 +4186,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4188,13 +4200,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Profile jobs, detect bottlenecks, and tune parallelism. Catch schema drift early and enforce cost guardrails with auto-remediation.',
+    features: [
+      'Throughput profilerParallelism tuner',
+      'Schema drift alertsCost guardrails',
+      'Auto-remediationRunbook suggestions'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4226,7 +4237,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4238,13 +4251,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Offer SSO to your customers in days, not months. Support SAML/OIDC, branded login pages, SCIM provisioning, and role mapping.',
+    features: [
+      'SAML & OIDCSCIM provisioning',
+      'Branded login pagesRole & group mapping',
+      'Audit logsTenant isolation'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4270,13 +4282,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Config UI, metadata exchange, and provisioning agent.',
+    launchDate: '2025-01-30',
+    customers: 45,
+    rating: 4.7,
+    reviews: 19
+  }
+  ,
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   {
     id: 'finops-cost-anomaly-guard',
@@ -4286,13 +4299,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Continuous cloud spend monitoring with anomaly detection, budget guardrails, auto-tagging checks, and actionable playbooks that reduce waste fast.',
+    features: [
+      'Real-time anomaly detectionBudget guardrails & alerts',
+      'Auto-tagging verificationSavings recommendations',
+      'Slack/Email integrationsMulti-cloud coverage (AWS/Azure/GCP)'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4304,7 +4316,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'FinOps, platform and SRE teams',
@@ -4320,7 +4334,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     roi: '5–20% monthly savings within 60 days',
     competitors: ['Anodot, CloudZero, Vantage'],
@@ -4331,13 +4347,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Connect billing export, train anomaly baselines, configure guardrails and alert routes.',
+    launchDate: '2025-03-10',
+    customers: 11,
+    rating: 4.7,
+    reviews: 6
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4348,13 +4363,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'End-to-end DSAR workflows: identity verification, data discovery, redaction, secure delivery, and complete audit trails.',
+    features: [
+      'Identity verification & consentCross-system data discovery',
+      'Automatic PII redactionDeadline tracking & SLAs',
+      'Export bundles & receiptsPolicy templates'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4366,7 +4380,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Legal, security, and data teams',
@@ -4386,13 +4402,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Configurable workflows, connectors, and export pipeline with redaction.',
+    launchDate: '2025-03-12',
+    customers: 8,
+    rating: 4.8,
+    reviews: 5
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4400,13 +4415,15 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     name: 'Incident Copilot Pro',
 
 
+    tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems',
+    price: '$149',
+    period: '/month',
+    description: 'Reduce MTTR with incident detection, guided diagnostics, automated status updates, and post-incident summaries.',
+    features: [
+      'Playbook suggestionsAuto status page updates',
+      'Root-cause timelinesSlack/PagerDuty bridges',
+      'Postmortem draftsService dependency mapping'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4418,7 +4435,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'SRE, platform and support teams',
@@ -4438,13 +4457,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Ingestion of alerts, timeline builder, and report generator.',
+    launchDate: '2025-03-14',
+    customers: 9,
+    rating: 4.7,
+    reviews: 4
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4455,13 +4473,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Find ICP-fit accounts, generate tailored messaging, schedule sequences across email/LinkedIn, and track replies with deliverability best practices.',
+    features: [
+      'ICP filters & enrichmentPersonalized sequences',
+      'Deliverability checksLinkedIn assist',
+      'Reply classificationCRM sync'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4473,7 +4490,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Growth and sales teams',
@@ -4499,7 +4518,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4511,13 +4532,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Define data contracts, detect breaking changes, monitor SLAs, and auto-open tickets with owners enriched from lineage.',
+    features: [
+      'Schema diff & validationData quality checks',
+      'Lineage-based ownershipSLA monitors',
+      'Contract registryAuto ticketing'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4529,7 +4549,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Data platform & analytics engineering',
@@ -4549,13 +4571,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Registry UI, checks engine, and connectors for lineage & tickets.',
+    launchDate: '2025-03-16',
+    customers: 6,
+    rating: 4.6,
+    reviews: 3
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4566,13 +4587,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Auto-categorize, draft, and send replies to routine emails with human-in-the-loop review queues and SLA targets.',
+    features: [
+      'Priority and intent detectionSafe auto-send rules with approvals',
+      'Knowledge-grounded answers (RAG)Shared inbox and assignments',
+      'Analytics and SLA dashboards'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4584,7 +4604,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Support, sales, ops, founders',
@@ -4594,13 +4616,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Next.jsOpenAI', 'PGVector'],
+    integrations: ['GmailOutlook', 'Slack'],
+    useCases: ['Support inboxSales replies', 'Backoffice'],
+    roi: 'Reduce manual email time by 50–80%',
+    competitors: ['Front + AIZendesk AI'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$9B shared inbox',
     growthRate: '15% CAGR',
@@ -4609,13 +4630,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'OAuth mail connectors, policy engine, review queues.',
+    launchDate: '2025-03-18',
+    customers: 6,
+    rating: 4.7,
+    reviews: 3
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4626,13 +4646,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Design mobile-optimized surveys with adaptive branching, QR codes, and embeddable widgets. Export insights and raw data.',
+    features: [
+      'Branching & pipingTheme & embed widgets',
+      'QR & link distributionReal-time dashboards',
+      'Exports & webhooks'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4648,13 +4667,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Next.jsServerless', 'PostgreSQL'],
+    integrations: ['ZapierSlack', 'HubSpot'],
+    useCases: ['NPSMarket research', 'UX surveys'],
+    roi: 'Increase completion rates 1.5–2.5x',
+    competitors: ['TypeformSurveyMonkey'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$5B surveys',
     growthRate: '12% CAGR',
@@ -4669,7 +4687,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4681,13 +4701,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Self-serve returns portal, label generation, disposition workflows, and refund APIs. Reduce WISMR and improve CX.',
+    features: [
+      'Return portal & policiesLabel generation',
+      'Reason codes & workflowsWarehouse disposition',
+      'Refund & exchange APIs'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4703,13 +4722,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Next.jsNode', 'Carrier APIs'],
+    integrations: ['ShopifyStripe', 'Shippo'],
+    useCases: ['RMA automationRefunds', 'Analytics'],
+    roi: 'Cut return handling time by 40–70%',
+    competitors: ['Loop ReturnsReturnly'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$3B returns tech',
     growthRate: '18% CAGR',
@@ -4718,13 +4736,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Portal, policy engine, carrier/commerce connectors.',
+    launchDate: '2025-03-18',
+    customers: 4,
+    rating: 4.7,
+    reviews: 2
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4735,13 +4752,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Automatically triage inbound emails, suggest responses, and escalate exceptions. Includes tone controls, policy guardrails, and CRM sync.',
+    features: [
+      'Inbox categorization & prioritiesDraft reply suggestions with tone controls',
+      'Policy filters and PII redactionCRM sync and tags',
+      'Auto follow-ups and SLAs'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4752,7 +4768,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Support, sales, operations, founders',
@@ -4772,13 +4790,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'OAuth connections, safe prompt templates, analytics and handoff.',
+    launchDate: '2026-03-10',
+    customers: 32,
+    rating: 4.7,
+    reviews: 14
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4789,13 +4806,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Build adaptive, mobile‑optimized surveys and embed them anywhere. Get real‑time analytics and audience insights.',
+    features: [
+      'Branching logic and conditionsBeautiful mobile templates',
+      'Real‑time charts & exportsUTM and webhook integrations',
+      'NPS/CSAT/CES presets'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4806,7 +4822,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Marketing, CX, product research',
@@ -4832,7 +4850,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4844,13 +4864,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Create affiliate programs with unique links, payouts, and fraud detection. Export-ready tax reports and analytics included.',
+    features: [
+      'Referral links and attributionCommission rules and schedules',
+      'Fraud checks and blacklistsAnalytics & tax exports',
+      'Webhook and API'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4882,7 +4901,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -4894,13 +4915,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Upload audio, auto‑transcribe with speaker diarization, generate show notes, and publish SEO‑ready pages.',
+    features: [
+      'Diarization & timestampsChapters and show notes',
+      'Vocabulary hintsExport SRT/VTT/Docs',
+      'SEO landing pages'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -4911,7 +4931,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Podcasters, media teams, agencies',
@@ -4931,13 +4953,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Batch processing pipeline, editor UI, and export tools.',
+    launchDate: '2026-03-09',
+    customers: 20,
+    rating: 4.6,
+    reviews: 9
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -4948,13 +4969,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Allow customers to initiate returns, generate labels, and track status. Automate refunds and reasons for analytics.',
+    features: [
+      'Return reasons & RMA flowLabel creation and tracking',
+      'Status pages and notificationsExchange or refund rules',
+      'Analytics and exports'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -4965,7 +4985,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Shopify/WooCommerce merchants',
@@ -4985,13 +5007,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Branded portal, webhook flows, and SLA notifications.',
+    launchDate: '2026-03-08',
+    customers: 14,
+    rating: 4.5,
+    reviews: 7
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -5002,13 +5023,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Simple helpdesk for MSPs with SLA timers, KB, and client portal. Integrates with remote monitoring for alerts → tickets.',
+    features: [
+      'Tickets and SLAsKB and canned replies',
+      'Client portal and rolesAlerts → ticket rules',
+      'Email ingest & automation'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5019,7 +5039,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'MSPs and internal IT teams',
@@ -5045,7 +5067,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5057,13 +5081,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'End-to-end privacy ops: system inventory, data flows, DPIAs, risk scoring, DSAR triage, and evidence exports mapped to GDPR/CCPA.',
+    features: [
+      'Automated system discovery and RoPA builderDPIA templates with AI risk suggestions',
+      'DSAR intake, identity verification, redactionPolicy generation and version control',
+      'Evidence exports (ISO 27001/SOC2 mappings)'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5075,7 +5098,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Legal, security, compliance teams',
@@ -5085,13 +5110,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Next.jsNode.js', 'Vector DBOCR redaction'],
+    integrations: ['Google, Microsoft 365, Okta, Slack, Zendesk'],
+    useCases: ['DPIA/RoPA automationDSAR processing', 'Evidence collection'],
+    roi: 'Reduce manual privacy ops hours by 60–80%',
+    competitors: ['OneTrustTranscend', 'Securiti'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$8B privacy tech',
     growthRate: '20% CAGR',
@@ -5100,13 +5124,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Policy templates, discovery connectors, redaction pipeline.',
+    launchDate: '2025-08-01',
+    customers: 9,
+    rating: 4.7,
+    reviews: 6
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -5117,13 +5140,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'AI sequences with intent signals, channel selection, and auto-logged CRM notes, improves reply rates and pipeline velocity.',
+    features: [
+      'Adaptive sequencing and send windowsFirmographic and technographic personalization',
+      'Meeting transcription and action itemsAuto-log to Salesforce/HubSpot',
+      'Safety guardrails and opt-out handling'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5135,7 +5157,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'SDRs, AEs, RevOps',
@@ -5145,13 +5169,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Next.jsLLM APIs', 'Webhooks'],
+    integrations: ['SalesforceHubSpot', 'Gmail/Outlook'],
+    useCases: ['Outbound sequencesCall notes', 'CRM hygiene'],
+    roi: 'Increase replies by 2–3x, reduce admin time 50%',
+    competitors: ['OutreachSalesloft'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$6B sales engagement',
     growthRate: '18% CAGR',
@@ -5160,13 +5183,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realImplementation: true,
 
 
+    implementationDetails: 'Sequence engine with deliverability checks and CRM sync.',
+    launchDate: '2025-07-10',
+    customers: 21,
+    rating: 4.6,
+    reviews: 12
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   },
   {
@@ -5177,13 +5199,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Collectors for cloud configs, vulnerability status, access reviews, and tickets. Export auditor-ready evidence bundles.',
+    features: [
+      'Cloud config collectors (AWS/GCP/Azure)Access review workflows and attestations',
+      'Vulnerability snapshot with exceptionsTicket sampling and change history',
+      'Auditor-ready exports'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5195,7 +5216,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Security, compliance, platform',
@@ -5205,13 +5228,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Cloud APIsNext.js', 'Queue workers'],
+    integrations: ['AWSGCP', 'AzureJira', 'GitHub'],
+    useCases: ['SOC2 evidenceISO controls', 'Audit prep'],
+    roi: 'Save 40–60% audit prep time',
+    competitors: ['DrataVanta (lite)'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$3B compliance ops',
     growthRate: '22% CAGR',
@@ -5226,7 +5248,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5238,13 +5262,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Continuous research briefs across app reviews, news, social, and docs. Prioritize roadmap with evidence.',
+    features: [
+      'Competitor monitoring and diffsUser review mining and clustering',
+      'Opportunity scoring and tagsWeekly executive briefings',
+      'Export to slides and docs'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5260,13 +5283,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['LLM pipelinesEmbeddings', 'Crawlers'],
+    integrations: ['G2Twitter/X', 'RedditApp Store'],
+    useCases: ['Market scansVoice of customer', 'Roadmap inputs'],
+    roi: 'Cut research time by 70%',
+    competitors: ['CrayonKlue (lite)'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$2B CI tools',
     growthRate: '15% CAGR',
@@ -5281,7 +5303,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5293,13 +5317,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Generate full briefs: channels, messaging, budget splits, creative ideas, and KPIs with benchmarks.',
+    features: [
+      'Persona and JTBD inputsChannel mix recommendations',
+      'Creative prompts and examplesBenchmark KPIs by industry',
+      'Export to Google Docs/Slides'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5311,7 +5334,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Marketing managers, agencies, founders',
@@ -5321,13 +5346,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['LLM promptsTemplates', 'Exports'],
+    integrations: ['Google DriveNotion'],
+    useCases: ['Campaign planningBrief standardization', 'Rapid iteration'],
+    roi: 'Reduce planning time 80%',
+    competitors: ['Notion templatesAgency briefs'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$1B planning tools',
     growthRate: '12% CAGR',
@@ -5342,7 +5366,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5354,13 +5380,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Unified inbox for in-app, email, NPS, and social. Topic clustering and product area mapping with auto-routing.',
+    features: [
+      'NPS/CSAT and feedback widgetsTopic clustering and trends',
+      'Product area routing rulesRoadmap linkage and voting',
+      'Weekly summaries to Slack'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5376,6 +5401,11 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['Events APIEmbeddings', 'Dashboards'],
+    integrations: ['SlackZendesk', 'Jira'],
+    useCases: ['Feedback centralizationPrioritization', 'VOC analytics'],
+    roi: 'Improve roadmap-fit and customer satisfaction',
+    competitors: ['CannyProductboard (lite)'],
 
 
     marketSize: '$1.2B feedback tools',
@@ -5392,7 +5422,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5404,13 +5436,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Edge-deployed flags, segments, and experiments for teams that need speed without platform bloat.',
+    features: [
+      'Edge evaluation and low latencySDKs for JS, Node, Python',
+      'Audit log and approvalsExperiments and rollouts',
+      'Usage quotas'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5432,7 +5463,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     roi: 'Speed up releases and reduce incidents',
     competitors: ['LaunchDarkly (lite)'],
@@ -5449,7 +5482,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5461,13 +5496,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Analyze contracts and propose clause language with rationale, fallback options, and playbooks for negotiation.',
+    features: [
+      'Risk heatmap and clause classificationSuggested language with alternatives',
+      'Counterparty playbooks and historyExport redlines to Word',
+      'Audit and approval workflows'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5479,7 +5513,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'In-house legal, procurement',
@@ -5489,13 +5525,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['LLMVector DB', 'Template engine'],
+    integrations: ['SharePointGoogle Drive'],
+    useCases: ['Playbook adherenceNegotiation prep', 'Drafting'],
+    roi: 'Reduce review cycle 30–50%',
+    competitors: ['Ironclad (assist)LinkSquares (assist)'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$1B legal tech AI',
     growthRate: '18% CAGR',
@@ -5510,7 +5545,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5522,13 +5559,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Ingest alerts, logs, changes, and on-call notes to produce incident timelines, probable root causes, and runbook updates.',
+    features: [
+      'Timeline and RCA suggestionsChange correlation and diffs',
+      'Duplicate detection and clusteringRemediation proposals with context',
+      'Report and postmortem draft'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5540,7 +5576,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'SRE, platform, dev teams',
@@ -5550,13 +5588,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true,
 
 
+    technology: ['APM APIsLLM', 'Diff engine'],
+    integrations: ['PagerDutyDatadog', 'New RelicGitHub'],
+    useCases: ['Incident summarizationRegression detection', 'Runbook upkeep'],
+    roi: 'Reduce MTTR and toil',
+    competitors: ['FireHydrant (assist)Rootly (assist)'],
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     marketSize: '$5B incident mgmt',
     growthRate: '17% CAGR',
@@ -5571,7 +5608,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5583,13 +5622,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Monitors data pipelines and warehouse tables, raises issues, and suggests owners and fixes with code snippets.',
+    features: [
+      'Schema and distribution monitoringDrift detection and anomaly alerts',
+      'Ownership inference and routingFix suggestions and PR templates',
+      'Dashboards and SLAs'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5601,7 +5639,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Data engineering, analytics',
@@ -5617,7 +5657,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     roi: 'Reduce broken dashboards and ML drift',
     competitors: ['Monte Carlo (lite)'],
@@ -5634,7 +5676,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5646,13 +5690,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Suggests alternative copy with rationale and runs lightweight experiments, integrates with feature flags.',
+    features: [
+      'Copy suggestions with tone controlsExperiment setup in minutes',
+      'Segmentation and resultsExport diffs and PRs',
+      'Design tool plugins'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: false,
@@ -5664,7 +5707,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     targetAudience: 'Product, design, growth',
@@ -5680,7 +5725,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     roi: 'Lift conversion 5–15%',
     competitors: ['Mutiny (lite)'],
@@ -5697,7 +5744,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -5709,13 +5758,12 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     period: '/month',
 
 
+    description: 'Catalog AI systems, track risks, evaluate prompts, and manage approvals with audit trails and policy templates.',
+    features: [
+      'System registry and ownershipRisk assessment and mitigations',
+      'Prompt evals and guardrailsApproval workflows and logs',
+      'Policy templates and training'
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ],
     popular: true,
@@ -5737,7 +5785,9 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     roi: 'Reduce policy drift and audit risk',
     competitors: ['Holistic AI (lite)'],
@@ -5928,6 +5978,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 
+
     reviews: 8
   };
   {
@@ -6085,4 +6136,5 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

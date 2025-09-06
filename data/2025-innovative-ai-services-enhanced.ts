@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -266,6 +267,13 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     rating: 4.8,
 
 
+
+
+    rating: 4.8
+
+    reviews: 89
+
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAIService2025 {;
   id: string,;
@@ -532,6 +540,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -540,3 +549,4 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 ];
+

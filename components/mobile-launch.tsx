@@ -10,7 +10,9 @@ import Link from 'next/link';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -438,6 +440,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -455,6 +458,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
@@ -487,6 +491,7 @@ const testimonials = [
 
 
 
+
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -495,6 +500,7 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+
 
 
 
@@ -524,6 +530,7 @@ export default function MobileLaunchPage() {;
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
 
 
+
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -551,6 +558,7 @@ export default function MobileLaunchPage() {;
 
     }
   }
+
 
 
     }
@@ -595,6 +603,7 @@ export default function MobileLaunchPage() {;
 
 
       {/* Trust & Community */}
+
       <section className='mt-12'>
         <div className='flex items-center gap-2'>
             <StarIcon key={i} />
@@ -668,6 +677,7 @@ export default function MobileLaunchPage() {;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -687,6 +697,7 @@ export default function MobileLaunchPage() {;
         </div>
       </section>
     </EnhancedLayout>
+
 
         {status === 'error' && (;
           <div className='mt-2 text-sm text-rose-600'>;
@@ -809,4 +820,5 @@ export default function MobileLaunchPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

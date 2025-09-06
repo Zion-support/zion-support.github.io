@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 /**
  * Custom hook for auth event handling
@@ -31,11 +33,13 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+
       };
     }, 0);
       }
     }, 0);
     }, 0),
+
 
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
@@ -46,17 +50,21 @@ export function useAuthEventHandlers(
         variant: "default"})
       navigate('/onboarding')
     }
+
   }
   },
+
 
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
+
   }
   return {
     handleSignedIn;
+
 
 
 
@@ -108,7 +116,9 @@ export function useAuthEventHandlers(): any (;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 }

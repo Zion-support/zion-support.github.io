@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -20,6 +22,7 @@ interface MobileFilterBarProps {
 
   setIsMobileFilterOpen: (isOpen: boolean) => void
 }
+
 export function MobileFilterBar({
   searchTerm;
 
@@ -31,6 +34,7 @@ export function MobileFilterBar({
   searchTerm,
   setSearchTerm, 
   setIsMobileFilterOpen 
+
 }: MobileFilterBarProps) {
   return (
     <div className="lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4">
@@ -53,6 +57,7 @@ export function MobileFilterBar({
       </div>
     </div>
   )
+
 }
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -134,3 +139,4 @@ function MobileFilterBar() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

@@ -7,7 +7,9 @@
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import { NextApiRequest, NextApiResponse } from "next";
 import { randomUUID } from "crypto";
 import { promises as fs } from "fs";
@@ -15,6 +17,8 @@ import { Epub } from "epub-gen";
 export const config = {
   api: {
     bodyParser: {
+
+
 
 
 
@@ -57,6 +61,7 @@ export default async function handler(
 
 
     );
+
 
     res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
 
@@ -187,4 +192,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

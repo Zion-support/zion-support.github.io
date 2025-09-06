@@ -5,10 +5,12 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 import React, { useState } from 'react';
 import React, { useState, useEffect } from 'react',
+
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -16,6 +18,7 @@ import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 
 import {
+
 
 
 
@@ -37,6 +40,7 @@ import {
   X,
   ChevronDown,
   ChevronUp;
+
 
 
 
@@ -129,6 +133,7 @@ const filters = [
 
 
 
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -142,6 +147,7 @@ export default function SearchPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -159,13 +165,343 @@ export default function SearchPage() {
   });
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  Search, Filter, Grid, List, ArrowRight, ExternalLink,;
+  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
+  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,;
+  X, Sliders, SortAsc, SortDesc;
+} from 'lucide-react',;
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SearchPage(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filters, setFilters] = useState({;
+    category: 'all';
+    status: 'all',;
+    priceRange: 'all',;
+    technology: 'all';
+  });
+  const [sortBy, setSortBy] = useState('relevance');
+  const [showFilters, setShowFilters] = useState(false);
+  // Mock data for search;
+  const allServices = [;
+    {;
+      id: 'ai-business-intelligence';
+      title: 'AI Business Intelligence';
+      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling';
+      category: 'AI & Machine Learning';
+      status: 'active',;
+      price: '$499/month',;
+      technology: 'AI/ML',;
+      features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],;
+      link: '/ai-business-intelligence',;
+      icon: Brain,;
+      color: 'from-purple-500 to-pink-500',;
+      relevance: 95;
+    },;
+    {;
+      id: 'quantum-cybersecurity',;
+      title: 'Quantum Cybersecurity',;
+      description: 'Future-proof security with quantum-resistant encryption and AI threat detection',;
+      category: 'Cybersecurity',;
+      status: 'active',;
+      price: '$799/month',;
+      technology: 'Quantum',;
+      features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],;
+      link: '/quantum-cybersecurity',;
+      icon: Shield,;
+      color: 'from-red-500 to-orange-500',;
+      relevance: 92;
+    },;
+    {;
+      id: 'ai-customer-experience',;
+      title: 'AI Customer Experience',;
+      description: 'Deliver personalized customer experiences at scale with AI-driven insights',;
+      category: 'AI & Machine Learning',;
+      status: 'active',;
+      price: '$399/month',;
+      technology: 'AI/ML',;
+      features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],;
+      link: '/ai-customer-experience',;
+      icon: Users,;
+      color: 'from-green-500 to-teal-500',;
+      relevance: 88;
+    },;
+    {;
+      id: 'edge-computing-orchestration',;
+      title: 'Edge Computing Orchestration',;
+      description: 'Deploy and manage applications at the edge with intelligent orchestration',;
+      category: 'Edge Computing',;
+      status: 'active',;
+      price: '$349/month',;
+      technology: 'Edge',;
+      features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],;
+      link: '/edge-computing-orchestration',;
+      icon: Network,;
+      color: 'from-purple-500 to-pink-500',;
+      relevance: 85;
+    },;
+    {;
+      id: 'space-technology',;
+      title: 'Space Technology Innovation',;
+      description: 'Accelerate space exploration with cutting-edge technology solutions',;
+      category: 'Space Technology',;
+      status: 'beta',;
+      price: '$2,499/month',;
+      technology: 'Space',;
+      features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],;
+      link: '/space-technology',;
+      icon: Rocket,;
+      color: 'from-violet-500 to-purple-500',;
+      relevance: 82;
+    },;
+    {;
+      id: 'neural-interface',;
+      title: 'Neural Interface Development',;
+      description: 'Build the future of human-computer interaction with neural interfaces',;
+      category: 'Biotechnology',;
+      status: 'beta',;
+      price: '$899/month',;
+      technology: 'Biotech',;
+      features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],;
+      link: '/neural-interface',;
+      icon: Brain,;
+      color: 'from-pink-500 to-rose-500',;
+      relevance: 78;
+    },;
+    {;
+      id: 'quantum-neural-networks',;
+      title: 'Quantum Neural Networks',;
+      description: 'Quantum-powered AI with advanced consciousness capabilities',;
+      category: 'Quantum Computing',;
+      status: 'beta',;
+      price: '$1,299/month',;
+      technology: 'Quantum',;
+      features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],;
+      link: '/quantum-neural-networks',;
+      icon: Atom,;
+      color: 'from-blue-500 to-cyan-500',;
+      relevance: 75;
+    },;
+    {;
+      id: 'autonomous-devops',;
+      title: 'Autonomous DevOps',;
+      description: 'AI-powered DevOps optimization and automation platform',;
+      category: 'Cloud & DevOps',;
+      status: 'active',;
+      price: '$599/month',;
+      technology: 'DevOps',;
+      features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],;
+      link: '/autonomous-devops',;
+      icon: Cpu,;
+      color: 'from-emerald-500 to-teal-500',;
+      relevance: 72;
+    },;
+    {;
+      id: 'ai-autonomous-business',;
+      title: 'AI Autonomous Business Manager',;
+      description: 'Fully autonomous business operations powered by advanced AI',;
+      category: 'AI & Machine Learning',;
+      status: 'beta',;
+      price: '$1,999/month',;
+      technology: 'AI/ML',;
+      features: ['Business automationDecision makingResource allocationPerformance optimization'],;
+      link: '/ai-autonomous-business',;
+      icon: Target,;
+      color: 'from-indigo-500 to-purple-500',;
+      relevance: 70;
+    },;
+    {;
+      id: 'quantum-financial-trading',;
+      title: 'Quantum Financial Trading',;
+      description: 'Quantum computing powered financial analysis and trading strategies',;
+      category: 'Financial Technology',;
+      status: 'beta',;
+      price: '$3,999/month',;
+      technology: 'Quantum',;
+      features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],;
+      link: '/quantum-financial-trading',;
+      icon: TrendingUp,;
+      color: 'from-emerald-500 to-green-500',;
+      relevance: 68;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const categories = [;
+    { id: 'all', name: 'All Categories', icon: '📂' },;
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', icon: '🧠' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', icon: '⚛️' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: '🛡️' },;
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', icon: '☁️' },;
+    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },;
+    { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },;
+    { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },;
+    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const statuses = [;
+    { id: 'all', name: 'All Statuses', icon: '📊' },;
+    { id: 'active', name: 'Active', icon: '✅' },;
+    { id: 'beta', name: 'Beta', icon: '🧪' },;
+    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const priceRanges = [;
+    { id: 'all', name: 'All Prices', icon: '💰' },;
+    { id: 'under-500', name: 'Under $500/month', icon: '💵' },;
+    { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },;
+    { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },;
+    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const technologies = [;
+    { id: 'all', name: 'All Technologies', icon: '🔧' },;
+    { id: 'AI/ML', name: 'AI/ML', icon: '🧠' },;
+    { id: 'Quantum', name: 'Quantum', icon: '⚛️' },;
+    { id: 'Edge', name: 'Edge', icon: '🌐' },;
+    { id: 'Space', name: 'Space', icon: '🚀' },;
+    { id: 'Biotech', name: 'Biotech', icon: '🧬' },;
+    { id: 'DevOps', name: 'DevOps', icon: '⚙️'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  // Search function;
+  const performSearch = () => {;
+    if (!searchTerm.trim()) {;
+      setSearchResults([]);
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsSearching(true);
+    // Simulate search delay;
+    setTimeout(() => {;
+      const results = allServices.filter(service => {;
+        const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = filters.category === 'all' || service.category === filters.category;
+        const matchesStatus = filters.status === 'all' || service.status === filters.status;
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        let matchesPrice = true;
+        if (filters.priceRange !== 'all') {;
+          const price = parseInt(service.price.replace(/[^0-9]/g, '')),;
+          switch (filters.priceRange) {;
+            case 'under-500':;
+              matchesPrice = price < 500;
+              break,;
+            case '500-1000':;
+              matchesPrice = price >= 500 && price < 1000;
+              break,;
+            case '1000-2500':;
+              matchesPrice = price >= 1000 && price < 2500;
+              break,;
+            case 'over-2500':;
+              matchesPrice = price >= 2500;
+              break;
+            } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+        return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice;
+      }),;
+      // Sort results;
+      const sortedResults = results.sort((a, b) => {;
+        switch (sortBy) {;
+          case 'relevance':;
+            return b.relevance - a.relevance,;
+          case 'price-low':;
+            return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, '')),;
+          case 'price-high':;
+            return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),;
+          case 'name':;
+            return a.title.localeCompare(b.title);
+          case 'status':;
+            return a.status.localeCompare(b.status);
+          default: return 0;
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      }),;
+      setSearchResults(sortedResults);
+      setIsSearching(false);
+    }, 500);
+  },;
+  // Handle search on Enter key;
+  const handleKeyPress = (e: React.KeyboardEvent) => {;
+    if (e.key === 'Enter') {;
+      performSearch();
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  // Update search when filters change;
+  useEffect(() => {;
+    if (searchTerm.trim()) {;
+      performSearch();
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [filters, sortBy]),
+  // Clear all filters
+  const clearFilters = () => {
+    setFilters({
+      category: 'all',
+      status: 'all',
+      priceRange: 'all',
+      technology: 'all'
+    }),
+    setSortBy('relevance')
+  },
+
+
   return (
     <Layout>
       <Head>
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
+
+
 
 
       <div className="min-h-screen bg-gray-50">
@@ -209,11 +545,13 @@ export default function SearchPage() {
               {/* Search Bar */}
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
               <div className="max-w-2xl mx-auto">;
                 <div className="relative">;
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;
+
 
 
 
@@ -224,6 +562,7 @@ export default function SearchPage() {
                     type="text"
                     placeholder="Search for services, guides, articles..."
                     value={searchQuery}
+
 
 
         {/* Filters Section */}
@@ -251,10 +590,12 @@ export default function SearchPage() {
 
 
 
+
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
+
 
 
                   <Grid className="w-5 h-5" />
@@ -284,6 +625,7 @@ export default function SearchPage() {
 }
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
+
                 <button
                   onClick={() => setShowFilters(!showFilters)  } catch (error) {
     console.error("Error:", error);
@@ -294,6 +636,8 @@ export default function SearchPage() {
                 >
                   <Sliders className="w-4 h-4" />
                   Filters
+
+
 
 
 
@@ -309,6 +653,7 @@ export default function SearchPage() {
                 animate={{ opacity: 1, height: 'auto' }}
 
                 transition={{ duration: 0.3 }}
+
 
 
 
@@ -388,6 +733,7 @@ export default function SearchPage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               >
                 <div className="flex flex-wrap gap-4">
                   {filters.map((filter) => (
@@ -403,6 +749,7 @@ export default function SearchPage() {
 
 
 
+
                   ))}                </div>
 ursor/fix-lint-push-and-merge-to-main-ae4e
                   ))}
@@ -410,6 +757,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 origin/automation-improvements-final
 ))}
                 </div>
+
               </motion.div>
             )}
           </div>
@@ -428,6 +776,7 @@ origin/automation-improvements-final
                     animate={{ opacity: 1, y: 0 }}
 
                     transition={{ duration: 0.5, delay: index * 0.1 }}
+
 
 
 
@@ -691,6 +1040,7 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -701,6 +1051,9 @@ origin/automation-improvements-final
                           <span className="text-sm text-gray-500">{result.type}</span>
                         </div>
 
+
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">
+                          <Link
 
                             href={result.url}
                             className="hover:text - blue - 600 transition - colors";
@@ -725,6 +1078,7 @@ origin/automation-improvements-final
                         className="ml-4 text-blue-600 hover:text-blue-700 transition-colors"
                       >
                         <ArrowRight className="w-5 h-5" />
+
                       </Link>
                       </Link>
   const [searchTerm, setSearchTerm] = useState('');
@@ -737,6 +1091,7 @@ origin/automation-improvements-final
     priceRange: 'all',
     technology: 'all',
 ursor/integrate-build-improve-and-re-verify-8f7d
+
         </div>
       </section>
 
@@ -1040,6 +1395,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                           Get Quote
                         </a>
                       </div>
+
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1054,6 +1410,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
                 ))}
               </div>
 origin/automation-improvements-final
+
             ) : (
               <motion.div
                 className="text-center py-16"
@@ -1128,6 +1485,7 @@ origin/automation-improvements-final
   );
 }  )
 }
+
 
 
                         <div className="flex flex-col items-end gap-2">
@@ -1338,6 +1696,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             </AnimatePresence>
           )}
 
@@ -1377,6 +1736,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   );
 
 
+
   )
 
 
@@ -1397,3 +1757,4 @@ origin/main
 origin/automation-improvements-final
 )
 }
+

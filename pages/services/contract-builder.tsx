@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
@@ -10,6 +11,7 @@ export default function ContractBuilderRedirect() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const router = useRouter();
@@ -22,7 +24,9 @@ export default function ContractBuilderRedirect() {;
 
 
 
+
 }
+
 
 
 
@@ -50,5 +54,7 @@ export default function ContractBuilderRedirect() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

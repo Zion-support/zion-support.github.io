@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
@@ -11,6 +12,7 @@ import type { GrantApplication, Milestone } from '../../types/grants';
 export default function GrantsAdminPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
@@ -35,6 +37,7 @@ export default function GrantsAdminPage() {
     load()
 
 
+
   const headers = useMemo(;
     () =>;
       token;
@@ -57,10 +60,12 @@ export default function GrantsAdminPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
           </div>
         </div>
       </div>
     </EnhancedLayout>
+
 
 
                     onClick={saveMilestones}>;
@@ -161,3 +166,4 @@ export default function GrantsAdminPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

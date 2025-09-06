@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useEffect, useState } from 'react';
 
 
@@ -58,6 +59,7 @@ export default function DevTreePage() {
 
 
 
+
 import React, { useEffect, useState } from "react",
 import Tree, { TreeNode } from "../../components/ui/Tree",
 interface ApiResponse {
@@ -72,14 +74,19 @@ interface ApiResponse {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null),
   const [error, setError] = useState<string | null>(null),
   const [git, setGit] = useState<ApiResponse["status"] | null>(null),
   const [adminToken, setAdminToken] = useState<string>(""),
+
+
   const fetchTree = async (token?: string) => {
 
     try {
+
       const resp = await fetch('/api/dev/source-map', {
         headers: token ? { 'x-admin-token': token } : undefined
       });
@@ -169,6 +176,7 @@ export default function DevTreePage() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
       {nodes ? (
         <div className="rounded border p-3 bg-white">
           <Tree nodes={nodes} onDeploy={onDeploy} />
@@ -176,6 +184,8 @@ export default function DevTreePage() {
         </div>
       ) : (
         <div>Loading...</div>
+
+
 
 
 
@@ -311,6 +321,7 @@ export default function DevTreePage(req, res) {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -320,3 +331,4 @@ export default function DevTreePage(req, res) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

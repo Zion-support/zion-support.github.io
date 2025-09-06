@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import {
+
   setVendorApproval,
   setVendorCommission,;
   suspendVendor,;
@@ -26,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(500).json({ error: e && e.message })
   };
 }
+
 
 
 
@@ -59,6 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   } catch (e: any) {
     res.status (500).json ({ error: e.message });
 }
+
   }
 
 }
+

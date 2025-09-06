@@ -2,6 +2,7 @@
 
 
 
+
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -30,6 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
     if (req.method !== 'POST') {
       res.setHeader('Allow', 'POST');
       return res.status(405).end('Method Not Allowed');
@@ -48,8 +50,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
     if (existingIndex >= 0) {
 
@@ -60,9 +64,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

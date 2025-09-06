@@ -1,5 +1,6 @@
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,7 @@ import Head from 'next/head';
 
 
 
+
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
@@ -39,17 +41,128 @@ export default function MarketPricing2026() {;
     ...revolutionary2026Services
     ...emergingTech2026Services
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
+    ...comprehensiveIT2026Services,    ...revolutionary2026Services;
+    ...emergingTech2026Services;
+    ...comprehensiveIT2026Services
+  ];
+  // Filter services based on selection
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory =
+      selectedCategory === 'all' |service.category.includes(selectedCategory);
+    const matchesPrice =
+      priceRange === 'all' |
+      (priceRange === 'budget' &&
+        parseFloat(service.price.replace(/[^0-9.]/g, '')) < 5000) |
+      (priceRange === 'mid' &&
+        parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 5000 &&
+        parseFloat(service.price.replace(/[^0-9.]/g, '')) < 15000) |
+      (priceRange === 'premium' &&
+        parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 15000);
+    return matchesCategory && matchesPrice;
+  });
+  const categories = [
+    {
+      id: 'all'
+      name: 'All Categories'
+      icon: BarChart3
+      count: allServices.length
+    }
+    {
+      id: 'AI'
+      name: 'AI & Machine Learning'
+      icon: Brain
+      count: allServices.filter(s => s.category.includes('AI')).length
+    }
+    {
+      id: 'Quantum'
+      name: 'Quantum Computing'
+      icon: Atom
+      count: allServices.filter(s => s.category.includes('Quantum')).length
+    }
+    {
+      id: 'Emerging'
+      name: 'Emerging Technology'
+      icon: Sparkles
+      count: allServices.filter(s => s.category.includes('Emerging')).length
+    }
+    {
+      id: 'IT'
+      name: 'IT & Infrastructure'
+      icon: Shield
+      count: allServices.filter(
+        s => s.category.includes('IT') |s.category.includes('Infrastructure')
+      ).length
+    }
+    {
+      id: 'Autonomous'
+      name: 'Autonomous Systems'
+      icon: Target
+      count: allServices.filter(s => s.category.includes('Autonomous')).length
+    }
+    {
+      id: 'Cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
+      count: allServices.filter(
+        s => s.category.includes('Cloud') |s.category.includes('DevOps')
+      ).length
+    },  ];
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All price ranges' },    { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length }
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length }
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length }
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length }
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('DevOps')).length }
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All price ranges' }
+    {
+      id: 'budget'
+      name: 'Budget ($0 - $5K)'
+      range: 'Affordable solutions for startups and small businesses'
+    }
+    {
+      id: 'mid'
+      name: 'Mid-Range ($5K - $15K)'
+      range: 'Professional solutions for growing companies'
+    }
+    {
+      id: 'premium'
+      name: 'Premium ($15K+)'
+      range: 'Enterprise-grade solutions for large organizations'
+    },  ];    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' }
+    { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' }
+    { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
+  ];
 
   const contactInfo = {
-
-
-      allServices.length,
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
+  }
+  // Calculate pricing statistics
+  const pricingStats = {
+    totalServices: allServices.length
+    averagePrice:
+      allServices.reduce(
+        (sum, service) =>
+          sum + parseFloat(service.price.replace(/[^0-9.]/g, ''))
+        0
+      ) / allServices.length
+    lowestPrice: Math.min(
+      ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
+    )
+    highestPrice: Math.max(
+      ...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))
+    )
+    totalCustomers: allServices.reduce(
+      (sum, service) => sum + service.customers
+      0
+    )
+    averageRating:
+      allServices.reduce((sum, service) => sum + service.rating, 0) /
 
 
     >
@@ -95,6 +208,7 @@ export default function MarketPricing2026() {;
           <meta property="og:url" content="https://ziontechgroup.com/market-pricing-2026" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/market-pricing-2026" />
+
         {/* Navigation */}
         <UltraAdvancedNavigation />
         {/* Hero Section */}
@@ -378,6 +492,7 @@ export default function MarketPricing2026() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -500,6 +615,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -508,6 +624,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                       <button
                         key={category && category.id}
@@ -524,6 +641,7 @@ transition={{ duration: 0 && 0.8 }}>;
                         </div>
                         <div className='text-xs mt-1 opacity-75'>
                           ({category.count})
+
                         </div>                      </button>                        <div className="flex items-center justify-center space-x-2">
                           <category.icon className="w-4 h-4" />
                           <span>{category.name}</span>
@@ -545,6 +663,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {/* Price Range Filter */}
 
 
@@ -569,7 +688,9 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -581,6 +702,7 @@ transition={{ duration: 0 && 0.8 }}>;
             </div>
           </div>
         </section>
+
 
 
 
@@ -747,11 +869,13 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
         {/* Market Analysis Section */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
 
 
 
@@ -774,9 +898,11 @@ transition={{ duration: 0 && 0.8 }}>;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+
 
             {/* Market Insights Grid */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-16'>            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">;
@@ -795,6 +921,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className='text-4xl mb-4'>📊</div>
@@ -829,6 +956,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -842,6 +970,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className='text-4xl mb-4'>🎯</div>
@@ -875,6 +1004,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -888,6 +1018,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               >
                 <div className='text-4xl mb-4'>🚀</div>
@@ -1111,10 +1242,12 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1162,13 +1295,16 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
                 >
                   <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
                     {/* Service Header */}
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
+
                         <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
                   <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     {/* Service Header */}
@@ -1199,6 +1335,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -1209,6 +1346,7 @@ transition={{ duration: 0 && 0.8 }}>;
                     <div className='bg-gray-700/30 rounded-xl p-4 mb-4'>
                       <div className='text-center'>
                         <div className='text-3xl font-bold text-cyan-400 mb-1'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+
 
 
 
@@ -1301,12 +1439,14 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                       </p>
                     </div>
                     {/* ROI & Customers */}
                     <div className='grid grid-cols-2 gap-4 mb-4'>
                       <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
                         <div className='text-lg font-bold text-green-400 mb-1'>
+
 
 
 
@@ -1324,6 +1464,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                           {service.roi.split(' ')[0]}
                         </div>
@@ -1348,11 +1489,14 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                           </li>
                         ))}
                       </ul>
                     </div>
+
 
 
 
@@ -1369,6 +1513,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     {/* Technology Stack */}
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -1383,6 +1528,7 @@ transition={{ duration: 0 && 0.8 }}>;
                           </span>
                         ))}
                         {service.technology.length > 3 && (
+
                           <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>                            +{service.technology.length - 3} more                    <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Technology</h4>
                       <div className="flex flex-wrap gap-1">
@@ -1402,11 +1548,13 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                           </span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         )}
                       </div>
                     </div>
+
                     {/* CTA Button */}
                     <a
                       href={service.link}
@@ -1421,6 +1569,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                     >
                       View Details
                     </a>
@@ -1429,6 +1578,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
             </div>
+
 
 
 
@@ -1446,6 +1596,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -1459,6 +1610,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your category or price range filters
+
                 </p>              </motion.div>                className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -1478,11 +1630,13 @@ transition={{ duration: 0 && 0.8 }}>;
             <motion&& motion.div
 
 
+
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -1496,6 +1650,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                           </span>;
@@ -1635,6 +1790,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1648,6 +1804,7 @@ transition={{ duration: 0 && 0.8 }}>;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
@@ -1725,6 +1882,7 @@ transition={{ duration: 0 && 0.8 }}>;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+
 );
   );
 
@@ -1734,6 +1892,7 @@ transition={{ duration: 0 && 0.8 }}>;
   );
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

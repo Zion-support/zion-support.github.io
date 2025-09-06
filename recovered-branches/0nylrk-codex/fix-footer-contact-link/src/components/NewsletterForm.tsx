@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 import {Button} from "@/components/ui/button";
@@ -15,12 +16,14 @@ export function NewsletterForm() {;
 
 
 
+
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
 
   const handleSubmit = (e: React.FormEvent) => {
+
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate API call
@@ -39,6 +42,7 @@ export function NewsletterForm() {
       setEmail("")
     }, 1000)
   },
+
 
   return (
     <div className="w-full max-w-md mx-auto">
@@ -63,6 +67,7 @@ export function NewsletterForm() {
             className="flex-grow bg-zion-blue-light text-white border-zion-purple/20 focus:border-zion-purple focus:ring-zion-purple"
             value={email}
 
+
             onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setEmail(e && e.target.value)}
             required;
           />;
@@ -83,6 +88,7 @@ export function NewsletterForm() {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
       )}

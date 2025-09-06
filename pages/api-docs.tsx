@@ -3,16 +3,19 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 import { motion } from 'framer-motion';
 import React from 'react';
+
 import Head from 'next/head';
 
 
 
 import Link from 'next/link';
+
 
 
 import { 
@@ -21,6 +24,7 @@ import {
   Lock,
   Brain,
   Cloud;
+
 
 
 
@@ -59,6 +63,7 @@ const apiEndpoints = [
 
   }
 ];
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
@@ -67,6 +72,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
+
 
 export default function APIDocsPage() {
   return (
@@ -83,9 +89,11 @@ export default function APIDocsPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -283,6 +291,7 @@ function APIDocsPage() {
         </div>
       </section>
     </div>
+
       <div className='container mx-auto px-4 py-16 text-gray-200'>
         <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
         <p className='text-gray-300'>
@@ -296,10 +305,12 @@ function APIDocsPage() {
     </Layout>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
+
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
+
 
 
 
@@ -314,6 +325,7 @@ export default function APIDocsPage() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 export default function ApiDocsPage() {
   return (
     <>
@@ -322,15 +334,19 @@ export default function ApiDocsPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+
+
 
 
       <div className='container mx-auto px-4 py-16 text-gray-200'>
@@ -342,6 +358,7 @@ export default function ApiDocsPage() {
           </a>{' '}
           for the full reference.
         </p>
+
 ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
 
@@ -369,6 +386,7 @@ export default function ApiDocsPage() {;
   return (
 
   );
+
         <meta name="description" content="API reference and guides." />
         <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
       </Head>
@@ -376,6 +394,7 @@ export default function ApiDocsPage() {;
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
       </div>
+
 
 
 
@@ -483,4 +502,5 @@ function ApiDocsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

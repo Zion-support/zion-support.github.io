@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -27,6 +28,7 @@ import {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+
   BookOpen,
   Brain,
   Building,
@@ -61,13 +63,16 @@ origin/automation-improvements-final
   Star,
   Target,
   TrendingUp,
+
 ursor/integrate-build-improve-and-re-verify-8f7d
+
   Truck,
   Users,
   X,
   Zap,;
 
 } from "lucide-react";
+
   Truck,
   Users,
   X,
@@ -118,6 +123,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+
   ArrowRight
   Award
   BarChart3
@@ -160,7 +166,9 @@ import {
   X
   Zap
 } from "lucide-react";
+
 origin/main
+
 const navigationItems = [
   {
     title: "Services"
@@ -593,6 +601,7 @@ const quickLinks = [;
 
 ];
 
+
 export default function Navigation() {;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -606,6 +615,7 @@ export default function Navigation() {;
 
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

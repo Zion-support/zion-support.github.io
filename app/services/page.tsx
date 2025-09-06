@@ -6,9 +6,9 @@ import Link from 'next/link';
 
 export const metadata = {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  title: "Services | Zion Tech Group - AI, Micro SaaS, FinTech, HealthTech & EdTech Solutions",
+  description:
 
->>>>>>> origin/final-merged-improvements
 };
 
 export default function ServicesOverviewPage() {

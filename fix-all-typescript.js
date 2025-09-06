@@ -1,4 +1,5 @@
 
+
 ;
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,;
 #!/usr/bin/env node,;
@@ -21,6 +22,7 @@ function fixTypeScriptFiles(dir) {,;
 
 
 
+
         // console.log(`Error processing ${fullPath}: ${error.message}`)};
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -33,6 +35,7 @@ function fixTypeScriptFiles(dir) {,;
       } catch (error) {_;};
 };
   })};
+
 
 
 
@@ -75,6 +78,7 @@ function fixTypeScriptFiles(dir) {,
 
 #!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixTypeScriptFiles(dir) { if (!fs.existsSync(dir)) return, const items = fs.readdirSync(dir), items.forEach(item => { const fullPath = path.join(dir,item), const stat = fs.statSync(fullPath), if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') { fixTypeScriptFiles(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) { try { const content = fs.readFileSync(fullPath,'utf8'), if (content.trim() === '' || !content.includes('export') && !content.includes('import')) {  fs.writeFileSync(fullPath,' } catch (error) { } } })}  fixTypeScriptFiles(__dirname), ,
 ursor/integrate-build-improve-and-re-verify-8f7d
+
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -94,6 +98,7 @@ function fixTypeScriptFiles(dir) {,
           console.log(`Fixing "file": ${fullPath}`),
           fs.writeFileSync(fullPath, '// Auto-generated module\nexport {};')};
       } catch (error) {,
+
 
 
 
@@ -142,4 +147,5 @@ function fixTypeScriptFiles() { if () return) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

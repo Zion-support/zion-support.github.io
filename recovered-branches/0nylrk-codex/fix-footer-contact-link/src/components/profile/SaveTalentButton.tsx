@@ -3,16 +3,21 @@
 
 
 
+
+
 interface SaveTalentButtonProps {
   talentId: string,
   onSave: (talentId: string) => void,
   isSaved: boolean
 
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Star } from "lucide-react",;
+interface SaveTalentButtonProps {;
+  talentId: string,;
+  onSave: (talentId: string) => void;
+  isSaved: boolean;
 
 
 }
@@ -27,6 +32,7 @@ export function SaveTalentButton({
       onClick={() => onSave(talentId)}
       variant={isSaved ? "default" : "outline"}
       size="sm"
+
       className={
         is_saved;
           ? "bg - yellow - 500 hover:bg - yellow - 600 text - white";
@@ -46,3 +52,4 @@ export function SaveTalentButton({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

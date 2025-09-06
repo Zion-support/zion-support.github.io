@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 export default function Page() {
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
@@ -26,6 +27,7 @@ export default function Page() {
 
 
 
+
               '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/automation</a></p><h2>Scenario</h2><p>Exploring how trigger, homepage, sitemap, automation, hubdiscover delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latency, higher reliability, and faster iteration speed.</p>',;
 
           }}
@@ -44,6 +46,7 @@ export default function Page() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   return (
+
 
 import Head from 'next / head';
 export default /**
@@ -105,6 +108,7 @@ function Page() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Case Study — Trigger Homepage</title>
@@ -123,9 +127,11 @@ function Page() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

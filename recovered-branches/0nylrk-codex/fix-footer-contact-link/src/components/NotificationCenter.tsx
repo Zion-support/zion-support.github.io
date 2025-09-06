@@ -2,6 +2,7 @@
 
 
 
+
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -33,6 +34,7 @@ import React, { useState, useEffect } from 'react',
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -50,10 +52,12 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
+
     markAsRead, ;
     markAllAsRead;
     markAsRead, 
     markAllAsRead,
+
     dismissNotification, 
     loading,
     filter,
@@ -69,6 +73,7 @@ export const NotificationCenter: React.FC = () => {
     if (open) {
       const loadNotifications = async () => {
         try {
+
 
 
   const [open, setOpen] = useState(false);
@@ -97,6 +102,7 @@ export const NotificationCenter: React.FC = () => {
 
 
 
+
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
@@ -105,6 +111,7 @@ export const NotificationCenter: React.FC = () => {
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
     }
+
   }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
@@ -114,6 +121,7 @@ export const NotificationCenter: React.FC = () => {
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
+
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -122,6 +130,7 @@ export const NotificationCenter: React.FC = () => {
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
+
   }, [open, fetchNotifications]),;
 
   const handleMarkAllAsRead = async () => {;
@@ -160,6 +169,7 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -171,6 +181,7 @@ export const NotificationCenter: React.FC = () => {
 
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
+
 
         <NotificationList
         
@@ -188,11 +199,14 @@ export const NotificationCenter: React.FC = () => {
 
 
         <NotificationList 
+
           loading={loading}
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
 
+          onDismiss={dismissNotification}
+          onRetry={fetchNotifications}
 
 
         />;
@@ -201,6 +215,7 @@ export const NotificationCenter: React.FC = () => {
       </PopoverContent>;
     </Popover>;
   );
+
 
 
 
@@ -216,3 +231,4 @@ export const NotificationCenter: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 };
+

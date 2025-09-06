@@ -1,5 +1,6 @@
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -27,6 +28,7 @@ import {toast} from "@/hooks/use-toast";
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 interface ApplicationsTableProps {
 
   applications: JobApplication[]
@@ -34,6 +36,7 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>
   onViewScore: (application: JobApplication) => void
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -66,10 +69,12 @@ export function ApplicationsTable({
   onStatusChange;
   onViewApplication, 
   onStatusChange,
+
   onViewScore
 }: ApplicationsTableProps) {
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+
   
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application)
@@ -77,12 +82,14 @@ export function ApplicationsTable({
   }
   },
   
+
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
     toast({
       title: "Hiring process initiated"
       description: "Offer has been sent to the talent."
     })
+
   }
 ;
   const handleHireConfirmed = () =>: any {
@@ -119,10 +126,12 @@ export function ApplicationsTable({
 
 
 
+
                     <ClickableBadge
                       variant="outline"
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
+
                     >;
                       {application && application.match_score}%;
                     </ClickableBadge>;
@@ -185,6 +194,7 @@ export function ApplicationsTable({
                       <Briefcase className="h - 3 w - 3 mr - 1" /> Hire;
                     </ClickableBadge>;
                     <ApplicationActions;
+
 
 
 

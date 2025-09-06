@@ -34,6 +34,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -95,8 +97,10 @@ interface EnhancedServiceCardProps {;
     launchDate: string;
     customers: number;
     rating: number;
+
     reviews: number;
   };
+
 
     reviews: number;
   }
@@ -110,6 +114,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       y: 0
       scale: 1
       transition: {
+
         duration: 0.6
         ease: 'easeOut' as const
       }
@@ -217,6 +222,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         duration: 0.6,
 
 
+
     >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Background Glow */}
@@ -261,6 +267,8 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         </div>
 
 
+
+
       {/* Card Content */}
       <div className='relative p-6'>
 
@@ -273,7 +281,9 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         <div className='flex items-start justify-between mb-4'>
@@ -296,7 +306,22 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           >
             {service.icon}
           </motion.div>
-          
+
+          <div className='text-right'>
+            <div className='text-2xl font-bold text-white'>{service.price}</div>
+            <div className='text-sm text-gray-400'>{service.period}</div>          </div>
+        </div>
+        {/* Title & Tagline */}
+        <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
+          {service.name}
+        </h3>
+        <p className='text-gray-300 text-sm mb-4 leading-relaxed'>          {service.tagline}
+        </p>
+        {/* Description */}
+        <p className='text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3'>          {service.description}
+        </p>
+
+
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -318,6 +343,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </div>
         </div>
         {/* Title & Tagline */}
+
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
           {service.name}
         </h3>
@@ -363,6 +389,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -442,6 +469,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1 * index }}
               >
+
                 <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full' />                <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
 
 
@@ -456,6 +484,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                 {feature}
               </motion && motion.div>;
             ))}
@@ -468,6 +497,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -481,6 +511,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Market Info */}
         <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
@@ -493,6 +524,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -506,6 +538,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           </div>
           <div className='flex items-center justify-between mb-2'>
@@ -529,6 +562,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           </div>
         </div>
         {/* Trial & Setup Info */}
+
         <div className='flex items-center justify-between mb-6 text-sm'>
           <div className='flex items-center gap-2 text-gray-400'>
             <Clock className='w-4 h-4' />
@@ -612,6 +646,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           </div>
         </div>
         {/* Action Buttons */}
@@ -624,8 +659,10 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           <motion.a
             href={service.link}
@@ -655,6 +692,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
           <motion.a
             href={service.link}
             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+
 
         <div className="mt-4 pt-4 border-t border-white/10">
 
@@ -704,14 +742,18 @@ export default EnhancedServiceCard;    </motion && motion.div>;
   );
 
 
+
 export default EnhancedServiceCard;    </motion.div>
   )
 }
 export default EnhancedServiceCard;
 
 
+
+
 };
 export default EnhancedServiceCard;
+
 export default EnhancedServiceCard;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -727,4 +769,5 @@ export default EnhancedServiceCard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

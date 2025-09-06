@@ -2,6 +2,7 @@ import React from 'react';
 
 
 
+
 import Head from 'next / head';
 import Link from 'next / link';
 ;
@@ -13,9 +14,11 @@ import Link from 'next / link';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
+
       category: 'System Architecture'
       blueprints: [
         {
@@ -133,6 +136,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
           description: 'Multi-layer redundancy architecture for maximum uptime',
@@ -143,7 +147,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'ultimate-redundancy',
@@ -158,7 +164,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'github-actions-automation',
@@ -169,8 +177,11 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-15'
 
 
-
-
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
       ]
@@ -181,7 +192,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'zero-downtime-deployment',
@@ -194,7 +207,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'canary-deployment',
@@ -209,7 +224,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'rolling-update',
@@ -222,8 +239,11 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-12'
 
 
-
-
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
       ]
@@ -234,7 +254,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           id: 'health-check-system',
@@ -248,7 +270,9 @@ const BlueprintsIndexPage: React.FC = () => {
         },
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
           id: 'performance-monitoring',
           name: 'Performance Monitoring',
           description: 'Real-time performance metrics and alerting',
@@ -256,6 +280,7 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-10'
         },
+
 
         {
 
@@ -332,11 +357,14 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
           id: 'logging-aggregation',
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
           complexity: 'low',
+
+
 
 
           } catch (error) {
@@ -354,11 +382,13 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 ;
   const recent_blueprints = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   const recentBlueprints = [
 
@@ -385,14 +415,13 @@ const BlueprintsIndexPage: React.FC = () => {
       status: 'research'
 
 
-
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ];
-
-
-
-
-
 
 
   const getStatusColor = (status: string) => {
@@ -402,6 +431,8 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'development': return 'text-yellow-400';
       case 'research': return 'text-purple-400';
       default: return 'text-gray-400';
+
+
 
 
 
@@ -416,7 +447,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -436,12 +469,15 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
+
 
 
 
@@ -455,6 +491,7 @@ const BlueprintsIndexPage: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
       <Head>
@@ -463,6 +500,7 @@ const BlueprintsIndexPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
+
         {/* Header */}
         {/* Header */  } catch (error) {
     console.error("Error:", error);
@@ -480,6 +518,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Reports
@@ -491,6 +530,7 @@ const BlueprintsIndexPage: React.FC = () => {
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
+
         {/* Blueprint Overview */}
         {/* Blueprint Overview */  } catch (error) {
     console.error("Error:", error);
@@ -508,6 +548,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-indigo-400">Total Blueprints</h3>
@@ -530,6 +571,7 @@ const BlueprintsIndexPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
           </div>
         </div>
+
         {/* Blueprint Categories */}
         {/* Blueprint Categories */  } catch (error) {
     console.error("Error:", error);
@@ -547,6 +589,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -559,6 +602,9 @@ const BlueprintsIndexPage: React.FC = () => {
                       <div className="flex justify-between items-start mb-2">
 
 
+                          href={`/reports/blueprints/${blueprint.id}`}
+                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                        >
 
                           {blueprint.name}
                         </Link>;
@@ -566,18 +612,25 @@ const BlueprintsIndexPage: React.FC = () => {
                           {blueprint.complexity}
 
 
-                        </span>;
-                      </div>;
-                      <p className="text - gray - 300 text - sm mb - 2">{blueprint.description}</p>;
-                      <div className="flex justify - between items - center text - xs">;
-                        <span className={`${getStatusColor (blueprint.status)}`}>;
-                          ● {blueprint.status}
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+                          href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                        >
+                          {blueprint.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </Link>
+                        <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
+                          {blueprint.complexity  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
                         </span>
@@ -585,6 +638,7 @@ const BlueprintsIndexPage: React.FC = () => {
                       <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
                       <div className="flex justify-between items-center text-xs">
                         <span className={`${getStatusColor(blueprint.status)}`}>
+
                           ● {blueprint.status}
                           ● {blueprint.status  } catch (error) {
     console.error("Error:", error);
@@ -602,10 +656,12 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                         </span>
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
+
                   ))}
                 </div>
               </div>
@@ -639,6 +695,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -647,6 +704,7 @@ const BlueprintsIndexPage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
+
                     {blueprint.status}
                     {blueprint.status  } catch (error) {
     console.error("Error:", error);
@@ -663,11 +721,13 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{blueprint.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{blueprint.date}</span>
+
 
 
 
@@ -683,12 +743,14 @@ const BlueprintsIndexPage: React.FC = () => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
                     View Blueprint →
                   </Link>
                 </div>
               </div>
+
             ))}
           </div>
         </div>
@@ -716,6 +778,7 @@ const BlueprintsIndexPage: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -726,7 +789,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                 scalability, reliability, and maintainability for your systems.
@@ -755,11 +820,14 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
+
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
 
@@ -772,6 +840,7 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
@@ -780,7 +849,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/reports/performance"
@@ -791,7 +862,9 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             href="/reports/innovation"
@@ -803,6 +876,7 @@ const BlueprintsIndexPage: React.FC = () => {
       </div>
     </div>
   );
+
 }
 
 
@@ -814,5 +888,6 @@ const BlueprintsIndexPage: React.FC = () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default BlueprintsIndexPage;

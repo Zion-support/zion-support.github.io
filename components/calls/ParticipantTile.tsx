@@ -21,6 +21,7 @@ import React, { useEffect, useRef } from 'react';
 
 
 import type {
+
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,;
@@ -36,12 +37,22 @@ import type {;
   Track,;
 
 
+
 } from 'livekit-client';
 
 type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+
+}
+export default function ParticipantTile({
+
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
 
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -124,6 +135,7 @@ type Props = {;
 
   }, [participant]);
   return (
+
     <div className='bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative'>;
 
 
@@ -145,4 +157,5 @@ type Props = {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

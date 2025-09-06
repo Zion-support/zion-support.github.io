@@ -1,5 +1,6 @@
 
 
+
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
@@ -12,6 +13,7 @@ import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
+
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
@@ -23,6 +25,7 @@ interface Service {
   id: string;
   title: string
   category: string
+
 }
 interface QuoteDetails {
   description: string;
@@ -64,6 +67,7 @@ interface QuoteDetails {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 }
 interface RequestBody {
   service: Service | null
@@ -74,6 +78,8 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
+
 
 
 
@@ -99,6 +105,8 @@ serve(async (req) => {
           userId = user.id
 
 
+
+
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
@@ -118,6 +126,7 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -126,11 +135,13 @@ serve(async (req) => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       }
     } catch (authError) {
       console && console.log("Auth error:", authError);
       // Continue without user identity
+
     }
     // Generate a summary and tags using OpenAI
     let aiAnalysis = null;
@@ -155,6 +166,7 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
+
 
 
 
@@ -191,17 +203,20 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
+
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
               }
+
             ];
             temperature: 0.5
           })
@@ -226,11 +241,13 @@ serve(async (req) => {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         }
       }
     } catch (openAIError) {
       console && console.error("OpenAI error:", openAIError);
       // Continue without AI analysis
+
     }
     // Generate a summary and tags using OpenAI;
     let ai_analysis = null;
@@ -314,6 +331,7 @@ if ( {) {
 
 
 
+
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -351,6 +369,7 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -359,3 +378,4 @@ if ( {) {
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
 });
+

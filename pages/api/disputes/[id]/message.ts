@@ -1,6 +1,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
@@ -15,6 +16,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+
 
 
   const { id } = req.query;
@@ -62,6 +64,7 @@ export default async function handler(
 
 
 
+
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -70,6 +73,7 @@ export default async function handler(
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+
 
 
 
@@ -107,6 +111,8 @@ export default async function handler(req, res) {
       createdAt: now}),;
 
 
+
+
     dispute.updatedAt = now;
     await upsertDispute(dispute);
     return res.status(201).json({ dispute });
@@ -117,6 +123,7 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
@@ -153,3 +160,4 @@ export default async function handler(req, res) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

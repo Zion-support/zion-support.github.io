@@ -1,10 +1,10 @@
 
 
 
+import {Badge} from "@/components/ui/badge";
 
-
-
-
+import React from "react",
+import { Badge } from "@/components/ui/badge",
 
 
 interface TalentCardSkillsProps {
@@ -12,6 +12,7 @@ interface TalentCardSkillsProps {
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+
   // Get top skills (limit to 4);
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4)
@@ -24,6 +25,7 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -42,12 +44,14 @@ import {Badge} from "@/components/ui/badge";
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {skill}
         </Badge>;
       ))}

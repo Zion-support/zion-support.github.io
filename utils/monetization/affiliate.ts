@@ -1,6 +1,7 @@
 
 
 
+
 export function affiliate (url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {
   // Check condition
 if (return url, ) {
@@ -14,9 +15,4 @@ if (return url, ) {
 
 
 export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
-=======
-export function affiliate(url: string, code: string = process.env.NEXT_PUBLIC_AFFILIATE_CODE || ''): string {;
 
-
-}
-;

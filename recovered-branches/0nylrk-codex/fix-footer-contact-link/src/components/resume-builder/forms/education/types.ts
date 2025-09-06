@@ -3,6 +3,7 @@
 
 
 
+
 import {Education} from '@/types/resume';
 export interface EducationFormProps {;
 
@@ -10,11 +11,14 @@ export interface EducationFormProps {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
   resumeId: string;
   educationEntries: Education[];
   onComplete: () => void;
   onBack: () => void
 }
+
+
 
 
 
@@ -29,11 +33,14 @@ export interface EducationFormProps {;
 
 
 
+
+
   isEditing: boolean;
   onSubmit: (data: any) => Promise<void>;
 
   onCancel: () => void;
 }
+
 
 
 
@@ -52,4 +59,5 @@ export interface EducationFormProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -8,6 +8,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -20,6 +22,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     visible: {
       opacity: 1
       transition: {
+
         staggerChildren: 0.2
         delayChildren: 0.1
       }
@@ -28,6 +31,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         delayChildren: 0.1,
       },
     },  };
+
 
   const itemVariants = {
     hidden: {
@@ -57,6 +61,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       }
     }
   }
+
 
 
         stagger_children: 0.2,
@@ -167,6 +172,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -290,6 +296,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             </div>
             {service.popular && (
               <div className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium'>
+
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>    >
       <motion.div
         variants={cardVariants}
@@ -395,6 +402,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -517,6 +525,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -530,6 +539,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
@@ -569,6 +579,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </p>
         </motion.div>
 
+
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40' />;
 
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
@@ -576,6 +587,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
+
 
 
 
@@ -630,14 +642,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='mb-20'
 
 
         >
@@ -671,6 +677,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         </motion.div>
 
 
+
           transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
           className='mb-20'>;
           <div className='flex items-center space-x-3 mb-8'>;
@@ -684,12 +691,14 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
         {/* IT Infrastructure Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='mb-20'
+
 
 
 
@@ -760,6 +769,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -777,16 +787,19 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               renderServiceCard(service, index)
             )}          </motion.div>        >
 
-
-
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-          className='mb-20'>;
-          <div className='flex items-center space-x-3 mb-8'>;
-            <Globe className='w-6 h-6 text-purple-400' />;
-            <h3 className='text-2xl font-bold text-white'>;
-              IT Infrastructure & Security;
-            </h3>;
-          </div>;
+          <div className="flex items-center space-x-3 mb-8">
+            <Globe className="w-6 h-6 text-purple-400" />
+            <h3 className="text-2xl font-bold text-white">IT Infrastructure & Security</h3>
+          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026ITInfrastructureServices.map((service, index) => renderServiceCard(service, index))}
+          </motion.div>
+        </motion.div>
 
 
         {/* Micro SAAS Section */}
@@ -802,6 +815,24 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             </h3>
           </div>
           <motion.div
+
+            variants={containerVariants}
+            initial='hidden'
+            whileInView='visible'
+            className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+          >
+            {innovative2026MicroSaasServices.map((service, index) =>
+              renderServiceCard(service, index)
+            )}          </motion.div>          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
+          </motion.div>
+        </motion.div>
 
 
         {/* CTA Section */}
@@ -828,6 +859,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -837,6 +869,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+
 
 
 
@@ -893,6 +926,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -936,3 +970,4 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

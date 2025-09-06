@@ -1,6 +1,7 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
 
 
+
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
@@ -39,5 +40,6 @@ export const getPricingMetrics = async () => {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 

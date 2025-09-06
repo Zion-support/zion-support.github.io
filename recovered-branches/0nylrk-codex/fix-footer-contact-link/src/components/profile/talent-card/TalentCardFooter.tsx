@@ -1,19 +1,28 @@
 
 
 
+import React, { useState } from "react",
+import { Star } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { ExternalLink } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { HireRequestModal } from "@/components/profile/hire-request",
+import { useAuthStatus } from "@/hooks/talent",
 
+interface TalentCardFooterProps {
+  profile: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire?: (profile: TalentProfile) => void
 
-
-import React, { useState } from "react";
-import {Star} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {ExternalLink} from "lucide-react";
-import {TalentProfile} from "@/types/talent";
-import {HireRequestModal} from "@/components/profile/hire-request";
-import {useAuthStatus} from "@/hooks/talent";
-import {UserProfile} from "@/types/auth";
-import {useNavigate} from "react-router-dom";
-
+import React, { useState } from "react",;
+import { Star } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { ExternalLink } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { HireRequestModal } from "@/components/profile/hire-request",;
+import { useAuthStatus } from "@/hooks/talent",;
+import { UserProfile } from "@/types/auth",;
+import { useNavigate } from "react-router-dom",;
 
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
@@ -112,11 +121,13 @@ if ( {) {
     }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <>;
@@ -137,17 +148,20 @@ if ( {) {
         </div>
         {/* Action Buttons */}
         <div className="flex gap-2">
+
           <Button
             variant="default"
             size="sm"
           <Button 
             variant="default" 
             size="sm" 
+
             onClick={handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+
 
 
 
@@ -159,6 +173,7 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -167,6 +182,7 @@ if ( {) {
           </Button>
         </div>
       </div>
+
       
 
 
@@ -178,12 +194,14 @@ if ( {) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
+
       />
     </>
   )
@@ -193,5 +211,4 @@ if ( {) {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-;
+

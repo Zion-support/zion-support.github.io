@@ -1,9 +1,11 @@
 
+
 import React from 'react';
 import { User  } from 'lucide-react';
 import { Conversation  } from '@/types/messaging';
 import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
+
 
 
 
@@ -23,9 +25,11 @@ interface ConversationsListProps {;
 
 export function ConversationsList({ 
   conversations,
+
   activeConversation, 
   setActiveConversation, 
   markAsRead 
+
 }: ConversationsListProps) {
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">
@@ -47,6 +51,7 @@ export function ConversationsList({
               key={conversation.id}
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
+
               onClick={() => {
                 setActiveConversation(conversation);
 
@@ -64,6 +69,7 @@ export function ConversationsList({
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               }}
             />;
           ))}

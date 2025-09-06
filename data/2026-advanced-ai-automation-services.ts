@@ -1,3 +1,4 @@
+
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -49,6 +50,7 @@ const contact = {
 
 
 
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -66,12 +68,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 
 
+
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
       'Automated decision making',
       'Process improvement suggestions',
       'Integration with existing systems',
+
 
 
 
@@ -309,6 +313,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     implementation_details: 'Multi - tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launch_date: '2026 - 01 - 25';
     customers: 198;
+
     rating: 4.9,
     reviews: 267;
 
@@ -322,8 +327,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 ;
 
 
-=======
-=======
+
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -565,3 +569,5 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
   }
 ];
+
+

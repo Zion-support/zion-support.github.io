@@ -28,6 +28,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
   Brain;
   Cloud
   RefreshCw
@@ -37,7 +39,138 @@ import { motion } from 'framer-motion';
   ArrowRight;
   Zap
 
-} from 'lucide-react';
+const ServicesSection: React.FC = () => {
+  const services = [
+    {
+      icon: Brain
+      title: 'AI Development'
+      description:
+        'Custom AI solutions and machine learning models tailored to your business needs.'
+      features: [
+        'Machine Learning Models'
+        'Natural Language Processing'
+        'Computer Vision'
+        'Predictive Analytics'
+      ]
+      color: 'from-blue-500 to-cyan-500'
+      href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500'
+      href: '/services/ai-development'
+    }
+    {
+      icon: Cloud
+      title: 'Cloud Architecture'
+      description: 'Scalable cloud solutions and infrastructure design for modern applications.'
+      features: ['AWS/Azure/GCPMicroservicesServerless ArchitectureDevOps Automation']
+      color: 'from-purple-500 to-pink-500'
+      href: '/services/cloud-architecture'
+    }
+    {
+      icon: RefreshCw
+      title: 'Digital Transformation'
+      description: 'End-to-end digital transformation services to modernize your business.'
+      features: ['Process AutomationLegacy System MigrationChange ManagementDigital Strategy']
+      color: 'from-green-500 to-emerald-500'
+      href: '/services/digital-transformation'
+    }
+    {
+      icon: Cloud
+      title: 'Cloud Architecture'
+      description:
+        'Scalable cloud solutions and infrastructure design for modern applications.'
+      features: [
+        'AWS/Azure/GCP'
+        'Microservices'
+        'Serverless Architecture'
+        'DevOps Automation'
+      ]
+      color: 'from-purple-500 to-pink-500'
+      href: '/services/cloud-architecture'
+    }
+    {
+      icon: RefreshCw
+      title: 'Digital Transformation'
+      description:
+        'End-to-end digital transformation services to modernize your business.'
+      features: [
+        'Process Automation'
+        'Legacy System Migration'
+        'Change Management'
+        'Digital Strategy'
+      ]
+      color: 'from-green-500 to-emerald-500'
+      href: '/services/digital-transformation'
+    },    {
+      icon: Wifi
+      title: 'IoT Platforms'
+      description: 'Connected device solutions and IoT platform development.',      href: '/services/digital-transformation'
+    }
+    {
+      icon: Wifi
+      title: 'IoT Platforms'
+      description: 'Connected device solutions and IoT platform development.'
+      features: [
+        'Sensor Networks'
+        'Real-time Monitoring'
+        'Data Analytics'
+        'Edge Computing'
+      ]
+      color: 'from-orange-500 to-red-500'
+      href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500'
+      href: '/services/iot-platforms'
+    }
+    {
+      icon: Shield
+      title: 'Blockchain Solutions'
+      description: 'Decentralized technology platforms and smart contract development.'
+      features: ['Smart ContractsDeFi ApplicationsNFT PlatformsSupply Chain Solutions']
+      color: 'from-indigo-500 to-purple-500'
+      href: '/services/blockchain-solutions'
+    }
+    {
+      icon: Shield
+      title: 'Blockchain Solutions'
+      description:
+        'Decentralized technology platforms and smart contract development.'
+      features: [
+        'Smart Contracts'
+        'DeFi Applications'
+        'NFT Platforms'
+        'Supply Chain Solutions'
+      ]
+      color: 'from-indigo-500 to-purple-500'
+      href: '/services/blockchain-solutions'
+    },    {
+      icon: BarChart3
+      title: 'Data Analytics'
+      description: 'Advanced analytics and business intelligence solutions.',      href: '/services/blockchain-solutions'
+    }
+    {
+      icon: BarChart3
+      title: 'Data Analytics'
+      description: 'Advanced analytics and business intelligence solutions.'
+      features: [
+        'Big Data Processing'
+        'Real-time Dashboards'
+        'Predictive Modeling'
+        'Data Visualization'
+      ]
+      color: 'from-teal-500 to-blue-500'
+      href: '/services/data-analytics'
+    },  ];      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization']
+      color: 'from-teal-500 to-blue-500'
+      href: '/services/data-analytics'
+    }
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    },  }
+  const cardVariants = {
+
+  };
 
 
 
@@ -49,6 +182,7 @@ import { motion } from 'framer-motion';
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -60,6 +194,8 @@ import { motion } from 'framer-motion';
       <div className="relative container mx-auto px-4">;
 
         {/* Section Header */}
+
+
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -69,6 +205,7 @@ import { motion } from 'framer-motion';
     hidden: { opacity: 0, y: 20 },
 
         {/* Section Header */}
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -118,11 +255,14 @@ import { motion } from 'framer-motion';
 
 
 
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
+
+
 
 
 
@@ -133,6 +273,7 @@ import { motion } from 'framer-motion';
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
+
 
           >
 
@@ -147,6 +288,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -160,6 +302,7 @@ import { motion } from 'framer-motion';
 
 
 
+
             We deliver cutting-edge technology solutions that drive innovation,
 
 
@@ -167,10 +310,12 @@ import { motion } from 'framer-motion';
             efficiency, and growth for businesses across all industries.          </p>
 
 
+
             efficiency, and growth for businesses across all industries.          </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth
             for businesses across all industries.
+
 
           </p>
 
@@ -211,6 +356,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -228,6 +374,7 @@ import { motion } from 'framer-motion';
                   <service && service.icon className='w-8 h-8 text-white' />;
                 </div>;
                 {/* Content */}
+
                 <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>;
                   {service && service.title}
                 </h3>;
@@ -317,10 +464,12 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               </div>
             </motion.div>
           ))}
         </motion.div>
+
 
 
 
@@ -338,6 +487,7 @@ import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -353,7 +503,9 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -393,6 +545,7 @@ import { motion } from 'framer-motion';
   );
 
 
+
 }
 
 
@@ -407,4 +560,5 @@ export default ServicesSection;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

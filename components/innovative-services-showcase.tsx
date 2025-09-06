@@ -1,9 +1,12 @@
+
 import React from 'react',
 import React from 'react';
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+
 
 
   Star,
@@ -84,6 +87,7 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -95,6 +99,7 @@ export default function InnovativeServicesShowcase() {
 
 
 
+
   const contactInfo = {
 
     mobile: '+1 302 464 0950',
@@ -103,6 +108,7 @@ export default function InnovativeServicesShowcase() {
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
 
   };
+
 
 
 
@@ -122,6 +128,7 @@ export default function InnovativeServicesShowcase() {
     visible: {
       opacity: 1
       transition: {
+
         staggerChildren: 0.1
         delayChildren: 0.2
       }
@@ -162,6 +169,7 @@ export default function InnovativeServicesShowcase() {
 
   };
 
+
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform'
@@ -182,15 +190,65 @@ export default function InnovativeServicesShowcase() {
       color: 'from-indigo-600 to-purple-700'
     }
 
-  };
+    {
+      title: '🧬 AI-Powered Quantum Drug Discovery'
+      description:
+        'Revolutionary platform combining quantum computing and AI to accelerate drug discovery by 100x. Simulates molecular interactions at quantum level.'
+      price: '$12,999/month'
+      marketData: '$150B AI in healthcare, 400% annual growth'
+      competitors: 'Insitro ($100M+ funding), Recursion ($2B+ funding)'
+      savings: '100x faster drug discovery vs. traditional methods'
+      features: [
+        'Quantum molecular simulation'
+        'AI-powered drug screening'
+        'Protein folding prediction'
+        'Drug interaction modeling'
+        'Clinical trial optimization'
+      ]
+      link: 'https://ziontechgroup.com/ai-quantum-drug-discovery'
+      color: 'from-emerald-600 to-teal-700'
+    }
+    {
+      title: '💰 Autonomous Quantum Trading System'
+      description:
+        'AI-powered quantum trading with nanosecond precision. Process market data at quantum speeds for unprecedented accuracy and returns.'
+      price: '$15,999/month'
+      marketData: '$15T algorithmic trading, 200% annual growth'
+      competitors: 'Renaissance Technologies, Two Sigma, Citadel'
+      savings: 'Accessible quantum AI for smaller firms'
+      features: [
+        'Quantum AI trading algorithms'
+        'Nanosecond execution'
+        'Real-time market analysis'
+        'Risk management'
+        'Portfolio optimization'
+      ]
+      link: 'https://ziontechgroup.com/autonomous-quantum-trading-system'
+      color: 'from-yellow-600 to-orange-700'
+    }
+    {
+      title: '🧠 Neural Interface Development Platform'
+      description:
+        'Revolutionary platform for developing neural interfaces that connect human brains directly to computers. Enables next-generation human-AI collaboration.'
+      price: '$19,999/month'
+      marketData: '$5B neural interface market, 500% annual growth'
+      competitors: 'Basic research tools, Traditional medical devices'
+      savings: 'First comprehensive neural interface platform'
+      features: [
+        'Neural signal processing'
+        'Brain activity monitoring'
+        'AI-powered interpretation'
+        'Real-time communication'
+        'Safety protocols'
+      ]
+      link: 'https://ziontechgroup.com/neural-interface-development-platform'
+      color: 'from-purple-600 to-indigo-700'
+    },  ];
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-        stagger_children: 0.1,
-        delay_children: 0.2,
-      },
-    },  }        delay_children: 0.2;
-      }
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
+
     }
   }
 ;
@@ -363,6 +421,7 @@ export default function InnovativeServicesShowcase() {;
     }
   ];
 
+
             href='https://ziontechgroup && ziontechgroup.com/innovative-services-showcase'
           />;
         </Head>;
@@ -391,6 +450,7 @@ export default function InnovativeServicesShowcase() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -425,6 +485,7 @@ export default function InnovativeServicesShowcase() {;
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
+
 
 
 
@@ -479,6 +540,7 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className='text - 2xl font - bold text - white mb - 4'>;
 
 
+
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -516,6 +578,7 @@ export default function InnovativeServicesShowcase() {;
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+
 
 
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'>;
@@ -586,10 +649,12 @@ export default function InnovativeServicesShowcase() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -603,6 +668,7 @@ export default function InnovativeServicesShowcase() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -618,6 +684,7 @@ export default function InnovativeServicesShowcase() {;
                 transforming industries
               </p>
             </motion.div>
+
 
 
 
@@ -642,6 +709,7 @@ export default function InnovativeServicesShowcase() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -657,6 +725,7 @@ export default function InnovativeServicesShowcase() {;
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
+
 
 
 
@@ -848,6 +917,7 @@ export default function InnovativeServicesShowcase() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -879,7 +949,9 @@ export default function InnovativeServicesShowcase() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -953,28 +1025,78 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                >;
-                  <UltraFuturisticCard variant="quantum - holographic" className="p - 6">;
-                    <div className="text - 4xl mb - 4">{service.icon}</div>;
-                    <h3 className="text - xl font - bold text - white mb - 3">{service.name}</h3>;
-                    <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
-                    <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
 
-
-
-
+                >
+                  <UltraFuturisticCard
+                    variant='quantum-holographic'
+                    className='p-6'
+                  >
+                    <div className='text-4xl mb-4'>{service.icon}</div>
+                    <h3 className='text-xl font-bold text-white mb-3'>
+                      {service.name}
+                    </h3>
+                    <p className='text-gray-400 text-sm mb-4'>
+                      {service.description}
+                    </p>
+                    <div className='text-2xl font-bold text-cyan-400 mb-2'>
                       {service.price}
-                      <span className="text - sm text - gray - 400">{service.period}</span>;
-                    </div>;
-                    <div className="text - sm text - gray - 400 mb - 4">{service.market_size} • {service.growth_rate}</div>;
-                    <a;
+                      <span className='text-sm text-gray-400'>
+                        {service.period}
+                      </span>
+                    </div>
+                    <div className='text-sm text-gray-400 mb-4'>
+                      {service.marketSize} • {service.growthRate}
+                    </div>
+                    <a
                       href={service.link}
+                      className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2'
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className='w-4 h-4' />                    </a>                      {service.price}
+                      <span className="text-sm text-gray-400">{service.period}</span>
+                    </div>
+                    <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
+                    <a
+                      href={service.link}
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <motion.a
+                href='/services'
+                className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Discover All AI Services</span>
+                <ArrowRight className='w-6 h-6' />              </motion.a>                href="/services"
+                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>Discover All AI Services</span>
+                <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />
+              </motion.a>
+            </motion.div>
+          </div>
+        </section>
 
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
@@ -989,6 +1111,7 @@ export default function InnovativeServicesShowcase() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1028,6 +1151,7 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
+
 
 
 
@@ -1235,3 +1359,4 @@ export default function InnovativeServicesShowcase() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

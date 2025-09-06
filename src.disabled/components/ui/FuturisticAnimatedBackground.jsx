@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 import _React,{ useEffect,useRef } from';react'; import { motion } from';';framer-motion'; "export": const FuturisticAnimatedBackground = ({ variant =';';cyberpunk',intensity =';';medium',"className": = '';'}) => {} const canvasRef = useRef(null) const particlesRef = useRef([]) const animationRef = useRef(null) useEffect(() => {} const canvas = canvasRef.current if (!canvas) return'; const ctx = canvas.getContext('';2d') "if": (!ctx) return'';';
 =======

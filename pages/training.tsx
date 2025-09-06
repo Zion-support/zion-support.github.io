@@ -5,6 +5,7 @@
 
 
 
+
 import React from 'react';
 
 export default function Training() {
@@ -37,6 +38,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 export default function Training() {
+
 
 
 
@@ -289,6 +291,7 @@ export default function TrainingPage() {
     const colors = {
 
 
+
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -298,6 +301,7 @@ export default function TrainingPage() {
     setExpandedProgram(expandedProgram === id ? null : id)
 
   },
+
   return (
 
     <Layout>
@@ -338,6 +342,7 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
+
           <div className="text-center">
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
@@ -353,14 +358,47 @@ export default function TrainingPage() {
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+      <div className='min-h-screen'>
+        {/* Hero Section */}
+        <section className='relative py-20 lg:py-32 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
+          <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+                Training & Certification
+              </h1>
+              <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
+                Master the future of technology with our comprehensive training
+                programs in AI consciousness, quantum computing, and autonomous
+                operations.
+              </p>
+              <div className='flex flex-wrap justify-center gap-4 text-gray-400'>
+                <div className='flex items-center gap-2'>
+                  <GraduationCap className='w-5 h-5' />
+                  <span>Expert-Led Training</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Award className='w-5 h-5' />
+                  <span>Industry Certifications</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Users className='w-5 h-5' />                  <span>Global Community</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
 
       </div>
     </Layout>
   ),
+
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       </div>
     </Layout>
@@ -377,6 +415,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 
   )
+
 
 
 
@@ -431,6 +470,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
+
 };
 }
 origin/main
@@ -447,11 +487,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 
+
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
 
 export default Training;
+
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
@@ -465,11 +507,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   )
   );
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 };
 
 export default Training;
 
 };export default Training;
+
+
 
 
 
@@ -513,6 +558,7 @@ export default Training,
 export default Training;
 
 
+
 }export default Training;
 ;
 
@@ -523,3 +569,4 @@ export default Training;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

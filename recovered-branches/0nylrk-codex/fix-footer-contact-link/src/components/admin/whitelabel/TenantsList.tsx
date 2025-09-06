@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -115,10 +116,12 @@ import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+
 
 
 
@@ -267,6 +270,7 @@ export function TenantsList() {
 
 
 
+
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {;
@@ -382,11 +386,13 @@ export function TenantsList() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
 
@@ -478,6 +484,7 @@ export function TenantsList() {;
                           None;
                         </span>;
                       )}
+
 
 import React, { useState, useEffect } from './react';
 import { supabase  } from '@/integrations / supabase / client';
@@ -762,4 +769,5 @@ if (throw error) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

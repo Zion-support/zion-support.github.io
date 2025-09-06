@@ -1,5 +1,20 @@
 
 
+  url: string;
+  timestamp: Date;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  performanceScore: number;
+  accessibilityScore: number;
+
+
+
 
   speed_index: number;
   performance_score: number;
@@ -8,6 +23,8 @@
   seo_score: number;
 
 }
+
+
 
 
 
@@ -28,6 +45,8 @@
 
 
 
+
+
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
@@ -40,14 +59,95 @@
 
 
 
+
+    webhook: boolean
+  }
+}
+
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
+
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
 
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${this.apiKey}`;
+          'Content-Type': 'application/json'}
+        body: JSON.stringify({ url })});
+      if (!response.ok) {
+        throw new Error(`Performance monitoring failed: ${response.statusText}`)
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  url: string,;
+  timestamp: Date,;
+  loadTime: number,;
+  firstContentfulPaint: number,;
+  largestContentfulPaint: number,;
+  cumulativeLayoutShift: number,;
+  firstInputDelay: number,;
+  timeToInteractive: number,;
+  totalBlockingTime: number,;
+  speedIndex: number,;
+  performanceScore: number,;
+  accessibilityScore: number,;
+  bestPracticesScore: number,;
+  seoScore: number;
+}
+;
+export interface PerformanceAlert {;
+  id: string,;
+  url: string,;
+  type: 'critical' | 'warning' | 'info',;
+  message: string,;
+  metric: string,;
+  threshold: number,;
+  currentValue: number,;
+  timestamp: Date,;
+  resolved: boolean;
+}
+;
+export interface MonitoringConfig {;
+  urls: string[],;
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
+  thresholds: {;
+    loadTime: number,;
+    firstContentfulPaint: number,;
+    largestContentfulPaint: number,;
+    cumulativeLayoutShift: number;
+  },;
+  notifications: {;
+    email: boolean,;
+    slack: boolean,;
+    webhook: boolean;
+  }
+}
+;
+export class PerformanceMonitorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
+    try {;
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify({ url })}),;
+      if (!response.ok) {;
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
 
 
       }
@@ -64,6 +164,8 @@
 
 
 
+
+
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
@@ -71,6 +173,8 @@
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
+
+
 ;
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {;
     try {;
@@ -79,6 +183,7 @@
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+
 
 
 
@@ -100,6 +205,7 @@
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+
 
 
 
@@ -133,6 +239,8 @@
           'Authorization': `Bearer ${this.apiKey}`}});
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
+
+
 ;
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {;
     try {;
@@ -164,6 +272,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -180,6 +289,7 @@
       return this && this.generateMockAlerts(url)
     }
   }
+
 
 
 
@@ -270,6 +380,8 @@
         seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
 
       })
+
+
 ;
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{;
     summary: {;
@@ -349,6 +461,7 @@
         seoScore: Math.floor(Math.random() * 20) + 80;
       });
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -362,15 +475,18 @@
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     }
     return data
   }
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
 
@@ -398,6 +514,7 @@
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+
 
 
 
@@ -430,6 +547,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Enterprise';
     price: 149;
     period: '/month';
+
 
 
 
@@ -472,6 +590,29 @@ export const PERFORMANCE_MONITOR_PRICING = {;
     period: '/month',;
 
     features: [;
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 49,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 149,;
+    period: '/month',;
+    features: [;
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',;
+      'SLA guarantee';
+
+    ];
+
+
+    features: [;
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee';
 
@@ -489,6 +630,7 @@ export const PERFORMANCE_MONITOR_PRICING = {;
 
     ];
   }
+
 }
 
 // Pricing tiers for the Performance Monitor
@@ -519,3 +661,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
 };
+

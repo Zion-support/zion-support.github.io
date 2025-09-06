@@ -1,6 +1,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -46,6 +47,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -59,14 +61,18 @@ function ClientDashboardContent() {
       setSelectedJobId(jobs[0].id),
       setSelectedJobTitle(jobs[0].title)
     }
+
   }, [jobs, selectedJobId]);
   }, [jobs, selectedJobId]),
+
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
     setSelectedJobId(jobId)
     setSelectedJobTitle(jobTitle)
+
   }
   },
+
 
   return (
     <>
@@ -127,6 +133,7 @@ function ClientDashboardContent() {
           </div>
           <div>
             <div className="sticky top-4 space-y-6">
+
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -239,6 +246,7 @@ function ClientDashboardContent() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -272,6 +280,7 @@ function ClientDashboardContent() {;
 if ( {) {
   $2
 }
+
       setSelectedJobId (jobs[0].id);
       setSelectedJobTitle (jobs[0].title);
     }
@@ -365,6 +374,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+
 
 
 

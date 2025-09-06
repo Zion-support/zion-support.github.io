@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
@@ -9,12 +11,14 @@ import Layout from "./components / Layout";
 import { motion  } from './framer-motion';
 
 import {
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
 origin/automation-improvements-final
+
   ArrowRight,
   Users,
   Calendar,
@@ -31,6 +35,7 @@ origin/automation-improvements-final
   Award,
 
 
+
 } from "lucide-react";
 
 
@@ -38,6 +43,7 @@ origin/automation-improvements-final
   Clock
 } from 'lucide-react';
 origin/automation-improvements-final
+
 
   ArrowRight
   Users
@@ -55,6 +61,8 @@ origin/automation-improvements-final
   Award
   Clock
 } from "lucide-react";
+
+
 const benefits = [
   {
     title: "Exclusive Content"
@@ -67,9 +75,11 @@ const benefits = [
 ;
 const benefits = [;
   {
+
     title: "Webinar Invitations"
     title: "Webinar Invitations",
     title: "Webinar Invitations"
+
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -83,6 +93,7 @@ const benefits = [;
   {
     title: "Industry Insights"
     description:
+
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -104,16 +115,19 @@ origin/automation-improvements-final
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
+
 ];
 
 ;
 const testimonials = [;
 
   {
+
     name: "Sarah Johnson",
     role: "CTO, TechCorp",
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
+
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -135,6 +149,8 @@ const testimonials = [;
 ];
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
+
+
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -157,11 +173,14 @@ export default function NewsletterPage() {
 
 
 
+
+
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+
 
 
     
@@ -171,6 +190,7 @@ export default function NewsletterPage() {
 origin/automation-improvements-final
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
+
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -178,12 +198,16 @@ origin/automation-improvements-final
     <Layout>
       <Head>
         <title>Newsletter - Zion Tech Group</title>
+
+
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />
+
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
 origin/automation-improvements-final
+
       </Head>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -193,6 +217,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
 
 
 
@@ -214,6 +239,7 @@ origin/automation-improvements-final
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -274,10 +300,12 @@ origin/automation-improvements-final
                 What You'll Get
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+
                 Join thousands of professionals who rely on our newsletter for
                 the latest insights and updates.
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
 origin/automation-improvements-final
+
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -422,10 +450,13 @@ function NewsletterPage() {
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
 
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
+                  </h3>
 
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Stats Section */}
         <section className="py-16 bg-gray-50">;
@@ -437,6 +468,7 @@ function NewsletterPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0 }}
               >
+
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
                 </div>
@@ -445,6 +477,7 @@ function NewsletterPage() {
                 </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
 origin/automation-improvements-final
+
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -462,6 +495,7 @@ origin/automation-improvements-final
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
                 </div>
@@ -470,6 +504,7 @@ origin/automation-improvements-final
                 </div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
 origin/automation-improvements-final
+
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -498,10 +533,12 @@ origin/automation-improvements-final
                 What Our Subscribers Say
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
+
                 Don't just take our word for it. Here's what our community has
                 to say.
                 Don't just take our word for it. Here's what our community has to say.
 origin/automation-improvements-final
+
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -514,19 +551,33 @@ origin/automation-improvements-final
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
 
+                      <Star
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                      />
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-            </div>;
-          </div>;
-        </section>;
-
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div>
+                    <div className="font-semibold text-gray-900">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-sm text-gray-500">
+                      {testimonial.role}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
@@ -536,10 +587,12 @@ origin/automation-improvements-final
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-                Subscribe now and start receiving valuable insights delivered to your inbox every week.
-              </p>
-              
-
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold mb-6">
+                Ready to Join Our Community?
+              </h2>
+              <p className="text-xl mb-8 text-green-100">
 
 
               {!isSubscribed && (
@@ -584,7 +637,9 @@ origin/automation-improvements-final
       </div>
     </Layout>
   );
+
 }
 }
 origin/automation-improvements-final
 }
+

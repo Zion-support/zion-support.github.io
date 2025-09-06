@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -12,6 +13,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 // Define suggested quick replies
 
@@ -24,6 +26,7 @@ type Message = {
   content: string
   sender: "user" | "bot"
   timestamp: Date
+
 }
 export function ChatBotPanel() {
   const [messages, setMessages] = useState<Message[]>([
@@ -61,10 +64,12 @@ export function ChatBotPanel() {
   const inputRef = useRef<HTMLInputElement>(null),
   const { theme } = useTheme(),
 
+
   // Auto-scroll to bottom when messages change
   useEffect(() => {
     if (scrollAreaRef.current) {
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight
+
     }
   }, [messages]);
 
@@ -193,6 +198,7 @@ export function ChatBotPanel() {;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         }
       } else {
         // Reset failed attempts if successful;
@@ -200,12 +206,18 @@ export function ChatBotPanel() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
 
+    } catch (error) {
+      console.error("Error in AI chat:", error),
+      toast({
+
     } catch (error) {;
-      console && console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),;
+
       toast({;
         variant: "destructive",;
         title: "Communication Error",;
         description: "We're having trouble connecting to our support service."}),;
+
 
 
       setFailedAttempts((prev) => prev + 1);
@@ -238,11 +250,13 @@ export function ChatBotPanel() {;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   const sendToAIAssistant = async (message: string) => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
@@ -252,6 +266,7 @@ export function ChatBotPanel() {;
           messages: [{ role: "user", content: message }] 
         })}),
       
+
       if (!response.ok) {
         return {
           success: false
@@ -265,10 +280,14 @@ export function ChatBotPanel() {;
 
 
 
+
+
       const data = await response.json();
       return {
         success: true
         message: data.message
+
+
 ;
   const sendToAIAssistant = async (message: string) => {
     try {
@@ -298,6 +317,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -307,12 +327,23 @@ if ( {) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
     } catch (error) {
       console.error ("Error in AI chat:", error);
       return {
 
+        success: false,
+        message: "I'm experiencing technical difficulties. Please try again later."
+      }
+      console.error("Error in AI chat:", error);
+      return {
+        success: false
+        message: "I'm experiencing technical difficulties. Please try again later."
 
+      };
+    }
+  },
 
 
   const suggestEscalation = () => {
@@ -333,8 +364,10 @@ if ( {) {
     try {
       // Send the conversation to the backend for logging
       // This would be implemented in a real system
+
       console.log("Support escalation triggered", {
       // // // console.log("Support escalation triggered", { 
+
         conversationHistory: messages.map(m => ({
           content: m.content
           sender: m.sender
@@ -380,6 +413,7 @@ if ( {) {
     } catch (error) {
       console.error("Failed to log support escalation:", error)
     }
+
   }
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
@@ -389,6 +423,7 @@ if ( {) {
   const handleQuickReply = (text: string) => {
     handleSendMessage(text)
   },
+
 
   const handleEscalateToLiveAgent = () => {
     setMessages((prev) => [
@@ -398,6 +433,7 @@ if ( {) {
         content: "I'd like to speak with a human agent"
         sender: "user"
         timestamp: new Date()
+
       }
       {
         id: `bot-${Date.now()}`
@@ -415,12 +451,15 @@ if ( {) {
       }
     ]),
     
+
     // In a real implementation, this would trigger a live chat request
     toast({
       title: "Support request submitted"
       description: "A support agent will be with you shortly."})
+
   }
   },
+
 
   const handleEmailSupport = () => {
     setMessages((prev) => [
@@ -430,8 +469,10 @@ if ( {) {
         content: "I'd like to email support"
         sender: "user"
         timestamp: new Date()
+
       }
       },
+
       {
         id: `bot-${Date.now()}`
         content: "Please send your question to support@ziontechgroup.com. Our team will get back to you within 24 hours."
@@ -439,8 +480,10 @@ if ( {) {
         timestamp: new Date()
       }
     ])
+
   }
   },
+
 
   return (
     <div className="flex flex-col h-full">
@@ -448,6 +491,7 @@ if ( {) {
         <div className="flex flex-col gap-4">
           {messages.map((message) => (
             <ChatMessage
+
   },;
 
   const suggestEscalation = () => {;
@@ -539,13 +583,16 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
               key={message.id}
               message={message.content}
               isUser={message.sender === "user"}
               timestamp={message.timestamp}
             />
           ))}
+
           
+
           {isLoading && (
             <div className="flex items-center justify-center py-2">
               <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />
@@ -569,7 +616,9 @@ if ( {) {
           </div>
         </div>
       )}
+
       
+
       {failedAttempts >= 3 && (
         <div className="px-4 py-3 border-t border-zion-purple/10">
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>
@@ -614,6 +663,7 @@ if ( {) {
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your question..."
             className={cn(
+
               "flex-1";
               theme === "dark"
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
@@ -621,6 +671,7 @@ if ( {) {
               "flex-1",
               theme === "dark" 
                 ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" 
+
                 : "bg-white border-gray-200"
             )}
           />
@@ -638,22 +689,70 @@ if ( {) {
   )
 
 
-
-              theme === "dark" ;
-                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple" ;
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+;
 =======
 ;
+      {failedAttempts >= 3 && (;
+        <div className="px-4 py-3 border-t border-zion-purple/10">;
+          <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" : "text-gray-600")}>;
+            Need more help?;
+          </p>;
+          <div className="flex gap-2">;
+            <Button;
+              onClick={handleEscalateToLiveAgent}
+              size="sm";
+              className="bg-zion-purple hover:bg-zion-purple-light text-white";
+            >;
+              Chat with Live Agent;
+            </Button>;
+            <Button;
+              onClick={handleEmailSupport}
+              size="sm"
+              variant="outline"
+            >
+              Email Support
+            </Button>
+          </div>
+        </div>
+      )}
+;
+      <div className={cn(;
+        "p-4 border-t",;
+        theme === "dark" ? "border-zion-blue-light" : "border-gray-200";
+      )}>;
+        <form;
+          onSubmit={(e) => {;
+            e.preventDefault();
+            handleSendMessage();
+          }}
+          className="flex items-center gap-2"
+        >
+          <Input
+            ref={inputRef}
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            placeholder="Type your question...";
+            className={cn(;
+              "flex-1";
+              theme === "dark";
+                ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple";
+                : "bg-white border-gray-200";
+            )}
+          />;
+          <Button;
+            type="submit";
+            size="icon";
+            disabled={isLoading || !inputValue.trim()}
+            className="bg-zion-cyan hover: bg-zion-cyan/80 text-white";
+          >;
+            <Send className="h-4 w-4" />;
+          </Button>;
+        </form>;
+      </div>;
+    </div>;
+  );
+
+}
+;
+
+

@@ -4,12 +4,15 @@
 
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+
 
 
 
@@ -23,10 +26,12 @@ import Link from 'next/link';
 
 
 
+
 const AiConsultingChat: NextPage = () => {
   return (
     <div>
       <Head>
+
 
       </Head>;
 
@@ -53,4 +58,5 @@ export default AiConsultingChat;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

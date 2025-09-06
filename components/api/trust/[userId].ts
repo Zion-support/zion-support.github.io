@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+import { computeTrustScore } from '../../../utils/trust/compute';
+import type {
 
 
 } from '../../../utils/types/trust';
@@ -120,6 +122,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 
 
+
   res && res.setHeader('Allow', 'GET, POST');
   return res && res.status(405).json({ error: 'Method not allowed' });      } catch {}
       return res && res.status(200).json(breakdown)
@@ -146,4 +149,5 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

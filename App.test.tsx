@@ -1,3 +1,4 @@
+
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import App from './App'
@@ -5,25 +6,26 @@ import { render,screen } from \'@testing-library/react\'; import { describe,it,e
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from './App';
 import React from 'react';
 
+
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
     expect(screen.getByText('Hello App')).toBeInTheDocument();
   });
 
+
 ursor/fix-syntax-push-and-merge-to-main-40de
+
   it('displays correct content', () => {
     render(<App />);
   });
@@ -31,8 +33,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     render(<App />);
   });
 });
+
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+
   it('displays correct content', () => {
     render(<App />);
     // Add specific content assertions here
@@ -41,6 +45,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     render(<App />);
     // Add interaction tests here
   });
+
 });
 });
 });
@@ -51,3 +56,4 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
 ursor/automate-test-improve-and-merge-code-2480
 });
+

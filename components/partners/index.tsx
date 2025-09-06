@@ -1,6 +1,21 @@
 
 
+export default function Partners() {
+  const [form, setForm] = useState({
 
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
 
 
     name: ''
@@ -363,6 +378,7 @@ function submit() {
             </pre>;
 
             <a
+
               href={result && result.dashboardUrl}
               className='inline-block mt-4 bg-black text-white px-4 py-2 rounded'>;
               Go to Dashboard;
@@ -374,6 +390,7 @@ function submit() {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
         )}
@@ -381,6 +398,7 @@ function submit() {
       </div>;
     </div>;
   );
+
 
 
 
@@ -497,5 +515,6 @@ function submit() {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

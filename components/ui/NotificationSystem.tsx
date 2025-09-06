@@ -5,6 +5,7 @@ import React from "react";
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -12,6 +13,7 @@ import React from "react";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -28,10 +30,10 @@ interface NotificationSystemProps {;
 
           key;
 
-
 const getNotificationStyles = (type: Notification["type"]): string => {
   const baseStyles = "border-l-4";
   const typeStyles = {
+
     success: "bg-green-50 border-green-400 text-green-800"
     error: "bg-red-50 border-red-400 text-red-800"
     warning: "bg-yellow-50 border-yellow-400 text-yellow-800"
@@ -111,6 +113,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
 }: NotificationSystemProps) {;
 
 
+
               >
                 ×
               </button>
@@ -120,6 +123,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
       ))}
     </div>
   );
+
 
 
 const getNotificationStyles = (type: Notification["type"]): string => {
@@ -135,4 +139,5 @@ const getNotificationStyles = (type: Notification["type"]): string => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
