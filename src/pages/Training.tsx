@@ -1,38 +1,34 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react'; const Training = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Training Programs </h1> <p className="text-xl text-gray-600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">AI & Machine Learning</h3> <p className="text-gray-600 mb-4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3> <p className="text-gray-600 mb-4">Master the art of protecting digital assets and systems.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Computing</h3> <p className="text-gray-600 mb-4">Understand cloud infrastructure and deployment strategies.</p> <span className="text-sm text-blue-600">Learn More</span> </div> </div> </div> </div> )}; export default Training;
+import React from 'react';
+import Card from '../components/Card';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const Training = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Training Programs </h1> <p className="text - xl text - gray - 600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">AI & Machine Learning</h3> <p className="text - gray - 600 mb - 4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cybersecurity</h3> <p className="text - gray - 600 mb - 4">Master the art of protecting digital assets and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Computing</h3> <p className="text - gray - 600 mb - 4">Understand cloud infrastructure and deployment strategies.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default Training;
-=======
-import React from 'react'; const Training = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Training Programs </h1> <p className="text - xl text - gray - 600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">AI & Machine Learning</h3> <p className="text - gray - 600 mb - 4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cybersecurity</h3> <p className="text - gray - 600 mb - 4">Master the art of protecting digital assets and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Computing</h3> <p className="text - gray - 600 mb - 4">Understand cloud infrastructure and deployment strategies.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default Training;
-import React from 'react'; const Training = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Training Programs </h1> <p className="text-xl text-gray-600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">AI & Machine Learning</h3> <p className="text-gray-600 mb-4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3> <p className="text-gray-600 mb-4">Master the art of protecting digital assets and systems.</p> <span className="text-sm text-blue-600">Learn More</span> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Computing</h3> <p className="text-gray-600 mb-4">Understand cloud infrastructure and deployment strategies.</p> <span className="text-sm text-blue-600">Learn More</span> </div> </div> </div> </div> )}; export default Training;
-import React from 'react'; const Training = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Training Programs </h1> <p className="text - xl text - gray - 600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">AI & Machine Learning</h3> <p className="text - gray - 600 mb - 4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cybersecurity</h3> <p className="text - gray - 600 mb - 4">Master the art of protecting digital assets and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Computing</h3> <p className="text - gray - 600 mb - 4">Understand cloud infrastructure and deployment strategies.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default Training;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-import React from 'react'; const Training = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Training Programs </h1> <p className="text - xl text - gray - 600"> Enhance your skills with our comprehensive training programs. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">AI & Machine Learning</h3> <p className="text - gray - 600 mb - 4">Learn the fundamentals and advanced concepts of artificial intelligence.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cybersecurity</h3> <p className="text - gray - 600 mb - 4">Master the art of protecting digital assets and systems.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 2">Cloud Computing</h3> <p className="text - gray - 600 mb - 4">Understand cloud infrastructure and deployment strategies.</p> <span className="text - sm text - blue - 600">Learn More</span> </div> </div> </div> </div> )} export default Training;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const Training: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Training Programs</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Enhance your team's skills with our comprehensive training programs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <Card title="AI & Machine Learning" description="Learn the fundamentals of AI and ML technologies." />
+          <Card title="Cybersecurity" description="Master security best practices and threat protection." />
+          <Card title="Cloud Computing" description="Get hands-on experience with cloud platforms." />
+        </div>
+
+        <div className="text-center mt-12">
+          <a 
+            href="/contact" 
+            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Enroll Now
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Training;

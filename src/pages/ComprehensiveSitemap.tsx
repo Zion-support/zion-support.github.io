@@ -1,38 +1,59 @@
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react'; const ComprehensiveSitemap = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Comprehensive Sitemap </h1> <p className="text-xl text-gray-600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Main Navigation</h3> <ul className="space-y-2"> <li><a href="/" className="text-blue-600 hover:text-blue-800">Home</a></li> <li><a href="/about" className="text-blue-600 hover:text-blue-800">About Us</a></li> <li><a href="/services" className="text-blue-600 hover:text-blue-800">Services</a></li> <li><a href="/solutions" className="text-blue-600 hover:text-blue-800">Solutions</a></li> <li><a href="/contact" className="text-blue-600 hover:text-blue-800">Contact</a></li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3> <ul className="space-y-2"> <li><a href="/services/ai-solutions" className="text-blue-600 hover:text-blue-800">AI Solutions</a></li> <li><a href="/services/cybersecurity" className="text-blue-600 hover:text-blue-800">Cybersecurity</a></li> <li><a href="/services/cloud-devops" className="text-blue-600 hover:text-blue-800">Cloud & DevOps</a></li> <li><a href="/services/digital-twin" className="text-blue-600 hover:text-blue-800">Digital Twin</a></li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Resources</h3> <ul className="space-y-2"> <li><a href="/blog" className="text-blue-600 hover:text-blue-800">Blog</a></li> <li><a href="/news" className="text-blue-600 hover:text-blue-800">News</a></li> <li><a href="/help" className="text-blue-600 hover:text-blue-800">Help Center</a></li> <li><a href="/support" className="text-blue-600 hover:text-blue-800">Support</a></li> </ul> </div> </div> </div> </div> )}; export default ComprehensiveSitemap;
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const ComprehensiveSitemap = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Comprehensive Sitemap </h1> <p className="text - xl text - gray - 600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Main Navigation</h3> <ul className="space - y-2"> <li><a href="/" className="text - blue - 600 hover:text - blue - 800">Home</a></li> <li><a href="/about" className="text - blue - 600 hover:text - blue - 800">About Us</a></li> <li><a href="/services" className="text - blue - 600 hover:text - blue - 800">Services</a></li> <li><a href="/solutions" className="text - blue - 600 hover:text - blue - 800">Solutions</a></li> <li><a href="/contact" className="text - blue - 600 hover:text - blue - 800">Contact</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Services</h3> <ul className="space - y-2"> <li><a href="/services / ai - solutions" className="text - blue - 600 hover:text - blue - 800">AI Solutions</a></li> <li><a href="/services / cybersecurity" className="text - blue - 600 hover:text - blue - 800">Cybersecurity</a></li> <li><a href="/services / cloud - devops" className="text - blue - 600 hover:text - blue - 800">Cloud & DevOps</a></li> <li><a href="/services / digital - twin" className="text - blue - 600 hover:text - blue - 800">Digital Twin</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Resources</h3> <ul className="space - y-2"> <li><a href="/blog" className="text - blue - 600 hover:text - blue - 800">Blog</a></li> <li><a href="/news" className="text - blue - 600 hover:text - blue - 800">News</a></li> <li><a href="/help" className="text - blue - 600 hover:text - blue - 800">Help Center</a></li> <li><a href="/support" className="text - blue - 600 hover:text - blue - 800">Support</a></li> </ul> </div> </div> </div> </div> )} export default ComprehensiveSitemap;
-=======
-import React from 'react'; const ComprehensiveSitemap = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Comprehensive Sitemap </h1> <p className="text - xl text - gray - 600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Main Navigation</h3> <ul className="space - y-2"> <li><a href="/" className="text - blue - 600 hover:text - blue - 800">Home</a></li> <li><a href="/about" className="text - blue - 600 hover:text - blue - 800">About Us</a></li> <li><a href="/services" className="text - blue - 600 hover:text - blue - 800">Services</a></li> <li><a href="/solutions" className="text - blue - 600 hover:text - blue - 800">Solutions</a></li> <li><a href="/contact" className="text - blue - 600 hover:text - blue - 800">Contact</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Services</h3> <ul className="space - y-2"> <li><a href="/services / ai - solutions" className="text - blue - 600 hover:text - blue - 800">AI Solutions</a></li> <li><a href="/services / cybersecurity" className="text - blue - 600 hover:text - blue - 800">Cybersecurity</a></li> <li><a href="/services / cloud - devops" className="text - blue - 600 hover:text - blue - 800">Cloud & DevOps</a></li> <li><a href="/services / digital - twin" className="text - blue - 600 hover:text - blue - 800">Digital Twin</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Resources</h3> <ul className="space - y-2"> <li><a href="/blog" className="text - blue - 600 hover:text - blue - 800">Blog</a></li> <li><a href="/news" className="text - blue - 600 hover:text - blue - 800">News</a></li> <li><a href="/help" className="text - blue - 600 hover:text - blue - 800">Help Center</a></li> <li><a href="/support" className="text - blue - 600 hover:text - blue - 800">Support</a></li> </ul> </div> </div> </div> </div> )} export default ComprehensiveSitemap;
-import React from 'react'; const ComprehensiveSitemap = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Comprehensive Sitemap </h1> <p className="text-xl text-gray-600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Main Navigation</h3> <ul className="space-y-2"> <li><a href="/" className="text-blue-600 hover:text-blue-800">Home</a></li> <li><a href="/about" className="text-blue-600 hover:text-blue-800">About Us</a></li> <li><a href="/services" className="text-blue-600 hover:text-blue-800">Services</a></li> <li><a href="/solutions" className="text-blue-600 hover:text-blue-800">Solutions</a></li> <li><a href="/contact" className="text-blue-600 hover:text-blue-800">Contact</a></li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3> <ul className="space-y-2"> <li><a href="/services/ai-solutions" className="text-blue-600 hover:text-blue-800">AI Solutions</a></li> <li><a href="/services/cybersecurity" className="text-blue-600 hover:text-blue-800">Cybersecurity</a></li> <li><a href="/services/cloud-devops" className="text-blue-600 hover:text-blue-800">Cloud & DevOps</a></li> <li><a href="/services/digital-twin" className="text-blue-600 hover:text-blue-800">Digital Twin</a></li> </ul> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Resources</h3> <ul className="space-y-2"> <li><a href="/blog" className="text-blue-600 hover:text-blue-800">Blog</a></li> <li><a href="/news" className="text-blue-600 hover:text-blue-800">News</a></li> <li><a href="/help" className="text-blue-600 hover:text-blue-800">Help Center</a></li> <li><a href="/support" className="text-blue-600 hover:text-blue-800">Support</a></li> </ul> </div> </div> </div> </div> )}; export default ComprehensiveSitemap;
-import React from 'react'; const ComprehensiveSitemap = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Comprehensive Sitemap </h1> <p className="text - xl text - gray - 600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Main Navigation</h3> <ul className="space - y-2"> <li><a href="/" className="text - blue - 600 hover:text - blue - 800">Home</a></li> <li><a href="/about" className="text - blue - 600 hover:text - blue - 800">About Us</a></li> <li><a href="/services" className="text - blue - 600 hover:text - blue - 800">Services</a></li> <li><a href="/solutions" className="text - blue - 600 hover:text - blue - 800">Solutions</a></li> <li><a href="/contact" className="text - blue - 600 hover:text - blue - 800">Contact</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Services</h3> <ul className="space - y-2"> <li><a href="/services / ai - solutions" className="text - blue - 600 hover:text - blue - 800">AI Solutions</a></li> <li><a href="/services / cybersecurity" className="text - blue - 600 hover:text - blue - 800">Cybersecurity</a></li> <li><a href="/services / cloud - devops" className="text - blue - 600 hover:text - blue - 800">Cloud & DevOps</a></li> <li><a href="/services / digital - twin" className="text - blue - 600 hover:text - blue - 800">Digital Twin</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Resources</h3> <ul className="space - y-2"> <li><a href="/blog" className="text - blue - 600 hover:text - blue - 800">Blog</a></li> <li><a href="/news" className="text - blue - 600 hover:text - blue - 800">News</a></li> <li><a href="/help" className="text - blue - 600 hover:text - blue - 800">Help Center</a></li> <li><a href="/support" className="text - blue - 600 hover:text - blue - 800">Support</a></li> </ul> </div> </div> </div> </div> )} export default ComprehensiveSitemap;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-import React from 'react'; const ComprehensiveSitemap = () =>: any { return ( <div className="min - h-screen bg - gray - 50"> <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12"> <div className="text - center mb - 12"> <h1 className="text - 4xl font - bold text - gray - 900 mb - 4"> Comprehensive Sitemap </h1> <p className="text - xl text - gray - 600"> Complete directory of all our pages and resources. </p> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8"> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Main Navigation</h3> <ul className="space - y-2"> <li><a href="/" className="text - blue - 600 hover:text - blue - 800">Home</a></li> <li><a href="/about" className="text - blue - 600 hover:text - blue - 800">About Us</a></li> <li><a href="/services" className="text - blue - 600 hover:text - blue - 800">Services</a></li> <li><a href="/solutions" className="text - blue - 600 hover:text - blue - 800">Solutions</a></li> <li><a href="/contact" className="text - blue - 600 hover:text - blue - 800">Contact</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Services</h3> <ul className="space - y-2"> <li><a href="/services / ai - solutions" className="text - blue - 600 hover:text - blue - 800">AI Solutions</a></li> <li><a href="/services / cybersecurity" className="text - blue - 600 hover:text - blue - 800">Cybersecurity</a></li> <li><a href="/services / cloud - devops" className="text - blue - 600 hover:text - blue - 800">Cloud & DevOps</a></li> <li><a href="/services / digital - twin" className="text - blue - 600 hover:text - blue - 800">Digital Twin</a></li> </ul> </div> <div className="bg - white p - 6 rounded - lg shadow - md"> <h3 className="text - lg font - semibold text - gray - 900 mb - 4">Resources</h3> <ul className="space - y-2"> <li><a href="/blog" className="text - blue - 600 hover:text - blue - 800">Blog</a></li> <li><a href="/news" className="text - blue - 600 hover:text - blue - 800">News</a></li> <li><a href="/help" className="text - blue - 600 hover:text - blue - 800">Help Center</a></li> <li><a href="/support" className="text - blue - 600 hover:text - blue - 800">Support</a></li> </ul> </div> </div> </div> </div> )} export default ComprehensiveSitemap;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+const ComprehensiveSitemap: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50 py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">Comprehensive Sitemap</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Complete overview of all pages and sections on our website.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Main Pages</h2>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-blue-600 hover:underline">Home</Link></li>
+              <li><Link to="/about" className="text-blue-600 hover:underline">About</Link></li>
+              <li><Link to="/services" className="text-blue-600 hover:underline">Services</Link></li>
+              <li><Link to="/contact" className="text-blue-600 hover:underline">Contact</Link></li>
+              <li><Link to="/pricing" className="text-blue-600 hover:underline">Pricing</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Services</h2>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-blue-600 hover:underline">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-blue-600 hover:underline">IT Services</Link></li>
+              <li><Link to="/services/cybersecurity" className="text-blue-600 hover:underline">Cybersecurity</Link></li>
+              <li><Link to="/solutions" className="text-blue-600 hover:underline">Solutions</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Resources</h2>
+            <ul className="space-y-2">
+              <li><Link to="/faq" className="text-blue-600 hover:underline">FAQ</Link></li>
+              <li><Link to="/help" className="text-blue-600 hover:underline">Help</Link></li>
+              <li><Link to="/support" className="text-blue-600 hover:underline">Support</Link></li>
+              <li><Link to="/white-papers" className="text-blue-600 hover:underline">White Papers</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Company</h2>
+            <ul className="space-y-2">
+              <li><Link to="/careers" className="text-blue-600 hover:underline">Careers</Link></li>
+              <li><Link to="/news" className="text-blue-600 hover:underline">News</Link></li>
+              <li><Link to="/privacy" className="text-blue-600 hover:underline">Privacy Policy</Link></li>
+              <li><Link to="/terms" className="text-blue-600 hover:underline">Terms of Service</Link></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensiveSitemap;
