@@ -1,4 +1,4 @@
-import { FooterNewsletter } from '@/components/FooterNewsletter';
+import React from 'react';
 import { 
   Twitter,
   Linkedin,
@@ -8,13 +8,13 @@ import {
   ChevronUp,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === '' || envVar === '#' || envVar === '/') {
     return fallback;
   }
   return envVar;
+}
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL,
@@ -37,7 +37,7 @@ const GITHUB_URL = resolveUrl(
   'https://github.com/ZionTechGroup'
 );
 
-export function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className='bg-card border-t border-primary/20 pt-12 pb-8'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -116,7 +116,7 @@ export function Footer() {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  href='/marketplace'
+                  to='/marketplace'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Products
@@ -125,7 +125,7 @@ export function Footer() {
               {/* Ensure the services link routes to the main services page */}
               <li>
                 <Link
-                  href='/services'
+                  to='/services'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Services
@@ -133,7 +133,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/talent'
+                  to='/talent'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Talent
@@ -141,16 +141,15 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/equipment'
+                  to='/equipment'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
-                  target='_self'
                 >
                   Equipment
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/categories'
+                  to='/categories'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Categories
@@ -158,7 +157,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/green-it'
+                  to='/green-it'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Green IT
@@ -174,7 +173,7 @@ export function Footer() {
             <ul className='space-y-2'>
               <li>
                 <Link
-                  href='/about'
+                  to='/about'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   About Us
@@ -182,7 +181,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/blog'
+                  to='/blog'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Blog
@@ -190,7 +189,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/innovation'
+                  to='/innovation'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Innovation
@@ -198,7 +197,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/partners'
+                  to='/partners'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Partners
@@ -206,7 +205,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/careers'
+                  to='/careers'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Careers
@@ -214,21 +213,21 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href='/contact'
+                  to='/contact'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Contact
                 </Link>
               </li>
               <li>
-                <Link
+                <a
                   href='/sitemap'
                   target='_blank'
                   rel='noopener noreferrer'
                   className='text-foreground/80 hover:text-primary transition-colors text-sm'
                 >
                   Sitemap
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
@@ -242,7 +241,9 @@ export function Footer() {
               opportunities.
             </p>
             <div className='max-w-sm'>
-              <FooterNewsletter />
+              <div className='text-sm text-gray-500'>
+                Newsletter signup coming soon
+              </div>
             </div>
           </div>
         </div>
@@ -272,19 +273,19 @@ export function Footer() {
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link
-                href='/privacy'
+                to='/privacy'
                 className='text-foreground/80 hover:text-primary text-sm transition-colors'
               >
                 Privacy Policy
               </Link>
               <Link
-                href='/terms'
+                to='/terms'
                 className='text-foreground/80 hover:text-primary text-sm transition-colors'
               >
                 Terms of Service
               </Link>
               <Link
-                href='/status'
+                to='/status'
                 className='text-foreground/80 hover:text-primary text-sm transition-colors'
               >
                 API Status
@@ -292,10 +293,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <FeedbackWidget />
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
