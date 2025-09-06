@@ -14,11 +14,8 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
-<<<<<<< HEAD
-=======
           800: '#1e40af',
           900: '#1e3a8a',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         },
       },
       animation: {
@@ -119,7 +116,6 @@ module.exports = {
           '100%': { backgroundPosition: '20px 20px' },
         },
       },
-<<<<<<< HEAD
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -141,10 +137,4 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
-};
-=======
-    },
-  },
-  plugins: [],
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
