@@ -1,50 +1,6 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from "react";
-export interface Notification {
 
 export interface Notification {;
-=======
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React from "react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export interface Notification {
-=======
-export interface Notification {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   type: "success" | "error" | "warning" | "info";
   title?: string;
@@ -72,19 +28,8 @@ const getNotificationStyles = (type: Notification["type"]): string => {
   return `${baseStyles} ${typeStyles[type]}`;
 }
 export default function NotificationSystem({
-<<<<<<< HEAD
-  notifications
-  onDismiss
-key={notification.id}
-=======
   notifications,
   onDismiss,
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
   className,
 }: NotificationSystemProps) {
   const getNotificationStyles = (type: Notification['type']) => {
@@ -101,8 +46,6 @@ key={notification.id}
         return 'bg-gray-50 border-gray-200 text-gray-800';
     }
   };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
@@ -129,23 +72,15 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   }, []),
 
 }: NotificationSystemProps) {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: NotificationSystemProps) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (notifications.length === 0) return null;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
         <div
           key={notification.id}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
@@ -216,9 +151,6 @@ const getNotificationStyles = (type: Notification["type"]): string => {
   }
   return `${base_styles} ${type_styles[type]}`;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 export /**
  * NotificationProvider - Function description
@@ -261,21 +193,5 @@ if (return null) {
         </div>))}
     </div>);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-<<<<<<< HEAD
 
 }
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-}
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

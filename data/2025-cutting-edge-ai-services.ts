@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const cuttingEdgeAIServices2025 = [
   {
-    id: 'ai-consciousness-evolution-pro',
-    name: 'AI Consciousness Evolution Pro',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const cuttingEdgeAIServices2025 = [
-  {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'ai-consciousness-evolution-pro'
     name: 'AI Consciousness Evolution Pro'
     description:
@@ -75,21 +63,6 @@ export const cuttingEdgeAIServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$52.8B'
-<<<<<<< HEAD
-      'AI',
-      'Consciousness',
-      'Emotional Intelligence',
-      'Self - Awareness',
-      'Human - AI Collaboration',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution-pro',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$52 && 52.8B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Research institutions, AI development companies, psychology departments, consciousness researchers'
     competitiveAdvantage:
@@ -181,21 +154,6 @@ export const cuttingEdgeAIServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$78.5B'
-<<<<<<< HEAD
-      'Quantum Computing',
-      'AI',
-      'Machine Learning',
-      'Pattern Recognition',
-      'Hybrid Computing',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$78 && 78.5B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Research institutions, technology companies, financial institutions, pharmaceutical companies'
     competitiveAdvantage:
@@ -281,21 +239,6 @@ export const cuttingEdgeAIServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$45.2B'
-<<<<<<< HEAD
-      'AI',
-      'Autonomous Systems',
-      'Self - Management',
-      'Machine Learning',
-      'Automation',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$45 && 45.2B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Enterprises, technology companies, research institutions, government agencies'
     competitiveAdvantage:
@@ -381,21 +324,6 @@ export const cuttingEdgeAIServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$28.7B'
-<<<<<<< HEAD
-      'AI Ethics',
-      'Governance',
-      'Bias Detection',
-      'Fairness',
-      'Compliance',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$28 && 28.7B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Enterprises, government agencies, research institutions, AI development companies'
     competitiveAdvantage:
@@ -475,25 +403,6 @@ export const cuttingEdgeAIServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$35.4B'
-<<<<<<< HEAD
-          'Full creative studio',
-          'White - label solution',
-          'Dedicated support',
-          'Custom development',
-          '24 / 7 monitoring',
-        ],
-      },
-    },
-    category: 'AI Creativity',
-    tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation'],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-creativity-studio-pro',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$35 && 35.4B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Creative agencies, design firms, marketing companies, content creators'
     competitiveAdvantage:
@@ -513,75 +422,12 @@ export const cuttingEdgeAIServices2025 = [
       'Collaboration tools'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'SOC2'
-      'ISO 27001'
-      'GDPR'
-      'CCPA'
-      'Intellectual property protection'
-    ]
-<<<<<<< HEAD
   }
-];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
-    id: 'ai-consciousness-evolution-pro', name: 'AI Consciousness Evolution Pro',
-    description: 'Advanced AI consciousness development platform with emotional intelligence, self-awareness, and ethical decision-making capabilities for human-AI collaboration.',
-    features: [
-      'Emotional intelligence development with 98% accuracySelf-awareness and consciousness evolution trackingEthical decision-making frameworks and bias detectionHuman-AI emotional synchronization and empathyCross-cultural emotional understanding and adaptationReal-time consciousness state analysis and monitoringIntegration with consciousness research platformsCustom consciousness model training and development';
-      'Advanced empathy and understanding capabilitiesConsciousness level assessment and progression tracking'
-    market_size: '$35.4B',
-    target_audience:;
-      'Creative agencies, design firms, marketing companies, content creators',
-    competitive_advantage:;
-      'Comprehensive AI creativity platform, multi - domain creative capabilities, advanced collaboration tools',
-    use_cases: [;
-      'Creative content generation and design',
-      'Marketing and advertising creative',
-      'Product design and innovation',
-      'Artistic expression and creation',
-      'Creative problem - solving and ideation',
-    ],
-    integrations: [;
-      'Creative software',
-      'Design tools',
-      'Marketing platforms',
-      'Content management systems',
-      'Collaboration tools',
-    ],
-    compliance: [;
-      'SOC2',
-      'ISO 27001',
-      'GDPR',
-      'CCPA',
-      'Intellectual property protection',
-    ],
-  },
-];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
-    ];
-    integrations: ['Creative software_design tools_marketing platforms_content management systems_collaboration tools'];
-    compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
-  }
-];
-
-;
-=======
-  }
-=======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Creative content generation and designMarketing and advertising creativeProduct design and innovationArtistic expression and creationCreative problem-solving and ideation'
     ];
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'];
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const cuttingEdgeAIServices2025 = [;
   {;
     id: 'ai-consciousness-evolution-pro',;
@@ -787,12 +633,5 @@ export const cuttingEdgeAIServices2025 = [;
     ],;
     integrations: ['Creative softwareDesign toolsMarketing platformsContent management systemsCollaboration tools'],;
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

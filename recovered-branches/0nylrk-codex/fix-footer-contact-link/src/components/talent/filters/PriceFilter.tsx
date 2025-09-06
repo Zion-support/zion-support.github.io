@@ -1,49 +1,13 @@
 
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from "lucide-react",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Slider} from "@/components/ui/slider";
-import {PriceFilterProps} from "@/types/filters";
-export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = (values: number[]) => {
-    setPriceRange([values[0], values[1]]);
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { ChevronDown, ChevronUp } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Slider } from "@/components/ui/slider";
-import { PriceFilterProps } from "@/types/filters";
-
-export function PriceFilter({
-  priceRange
-  setPriceRange
-  expanded
-  toggleSection
-  isMobileFilterOpen
-}: PriceFilterProps) {
-  const handleChange = (values: number[]) => {
-<<<<<<< HEAD
-=======
     setPriceRange([values[0], values[1]]);
   }
-=======
 import { Slider } from "@/components/ui/slider",
 import { PriceFilterProps } from "@/types/filters",
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
   const handleChange = (values: number[]) => {
     setPriceRange([values[0], values[1]])
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -64,21 +28,12 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
-<<<<<<< HEAD
-          <Slider
-=======
           <Slider 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
   const handleChange = (values: number[]) => {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setPriceRange([values[0], values[1]]);
   }
 
@@ -93,16 +48,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-      </button>
-      {expanded && (
-        <div className="mt-6">
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">
-            <span>${priceRange[0]}/hr</span>
-            <span>${priceRange[1]}/hr</span>
-          </div>
-          <Slider
-=======
 
       </button>;
 
@@ -113,12 +58,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[1]}/hr</span>;
           </div>;
           <Slider;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}

@@ -1,42 +1,6 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import { useRouter } from 'next/router';
-import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
-=======
 
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import ProductCard from '@/components/ProductCard';
 
 import { use_router } from 'next / router';
@@ -47,16 +11,6 @@ import { use_translation } from 'react - i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
-<<<<<<< HEAD
-  ArrowUp
-  Filter
-  SortAsc
-  Sparkles
-  TrendingUp
-  Star
-<<<<<<< HEAD
-=======
-=======
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
 
@@ -66,8 +20,6 @@ import {
   Sparkles,
   TrendingUp,;
   Star;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -205,12 +157,8 @@ const FilterControls: React.FC<{
   locations: string[];
   show_recommended: boolean;
   setShowRecommended: (show: boolean) => void;
-<<<<<<< HEAD
-  loading: boolean;}> = ({
-=======
 
   sort_by,
-=======
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -223,11 +171,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -242,66 +185,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
-<<<<<<< HEAD
-    </CardContent>
-  </Card>
-<<<<<<< HEAD
-);
-=======
-<<<<<<< HEAD
-    </CardContent>;
-  </Card>;
-);
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-// Filter and sort controls
-const FilterControls: React.FC<{
-  sortBy: string;
-  setSortBy: (sort: string) => void;
-  filterCategory: string;
-  setFilterCategory: (category: string) => void;
-  categories: string[];
-  priceRange: [number, number];
-  setPriceRange: (range: [number, number]) => void;
-  minAiScore: number;
-  setMinAiScore: (score: number) => void;
-  minRating: number;
-  setMinRating: (rating: number) => void;
-  filterAvailability: string;
-  setFilterAvailability: (value: string) => void;
-  availabilityOptions: string[];
-  filterLocation: string;
-  setFilterLocation: (value: string) => void;
-  locations: string[];
-  showRecommended: boolean;
-  setShowRecommended: (show: boolean) => void;
-  loading: boolean;}> = ({
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  sortBy
-  setSortBy
-  filterCategory
-  setFilterCategory
-  categories
-  priceRange
-  setPriceRange
-  minAiScore
-  setMinAiScore
-  minRating
-  setMinRating
-  filterAvailability
-  setFilterAvailability
-  availabilityOptions
-  filterLocation
-  setFilterLocation
-  locations
-  showRecommended
-  setShowRecommended
-  loading
-}) => (
-<<<<<<< HEAD
-  <div className='flex flex - wrap gap - 4 mb - 6 p - 4 bg - muted / 30 rounded - lg relative'>;
-=======
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
     {loading && (
       <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
@@ -383,12 +266,8 @@ const FilterControls: React.FC<{
         onChange={e => setFilterAvailability(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
-=======
-=======
-=======
     </CardContent>
   </Card>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ),
 
 // Filter and sort controls
@@ -414,12 +293,7 @@ const FilterControls: React.FC<{
   setShowRecommended: (show: boolean) => void,
   loading: boolean
 }> = ({
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   sortBy,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   setSortBy,
   filter_category,
   setFilterCategory,
@@ -438,95 +312,6 @@ const FilterControls: React.FC<{
   locations,
   show_recommended,
   setShowRecommended,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  loading,
-}) => (
-  <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    {loading && (
-      <Spinner className='absolute right-4 top-4 h-4 w-4 text-primary' />
-    )}
-    <div className='flex items-center gap-2'>;
-      <Filter className='h-4 w-4 text-muted-foreground' />;
-      <select
-        value={filterCategory}
-        onChange={e => setFilterCategory(e && e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >;
-        <option value=''>All Categories</option>;
-        {categories && categories.map(category => (;
-          <option key={category} value={category}>;
-            {category}
-          </option>
-        ))}
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <SortAsc className='h-4 w-4 text-muted-foreground' />
-      <select
-        value={sortBy}
-        onChange={e => setSortBy(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value='newest'>Newest First</option>
-        <option value='price-low'>Price: Low to High</option>
-        <option value='price-high'>Price: High to Low</option>
-        <option value='rating'>Highest Rated</option>
-        <option value='popular'>Most Popular</option>
-        <option value='ai-score'>AI Score</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>$</span>
-      <input
-        type='number'
-        value={priceRange[0]}
-        min={MIN_PRICE}
-        max={priceRange[1]}
-        onChange={e => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'
-      />
-      <span>-</span>
-      <input
-        type='number'
-        value={priceRange[1]}
-        min={priceRange[0]}
-        max={MAX_PRICE}
-        onChange={e => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className='w-20 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>AI ≥</span>
-      <input
-        type='number'
-        value={minAiScore}
-        min={0}
-        max={100}
-        onChange={e => setMinAiScore(Number(e.target.value))}
-        className='w-16 bg-background border border-border px-2 py-1 rounded'      />
-    </div>
-    <div className='flex items-center gap-2'>
-      <span className='text-sm'>Rating ≥</span>
-      <select
-        value={minRating}
-        onChange={e => setMinRating(Number(e.target.value))}
-        className='bg-background border border-border px-2 py-1 rounded'      >
-        <option value={0}>Any</option>
-        <option value={5}>5</option>
-        <option value={4}>4</option>
-        <option value={3}>3</option>
-        <option value={2}>2</option>
-        <option value={1}>1</option>
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >
-        <option value=''>Any Availability</option>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -610,23 +395,6 @@ const FilterControls: React.FC<{
         <option value={1}>1</option>;
       </select>;
     </div>;
-<<<<<<< HEAD
-
-    <div className='flex items-center gap-2'>;
-      <select
-        value={filterAvailability}
-        onChange={e => setFilterAvailability(e && e.target.value)}
-        className='bg-background border border-border px-3 py-2 rounded'      >;
-        <option value=''>Any Availability</option>;
-        {availabilityOptions && availabilityOptions.map(opt => (;
-          <option key={opt} value={opt as string}>;
-            {opt}
-          </option>;
-        ))}
-      </select>
-    </div>
-    <div className='flex items-center gap-2'>
-=======
     <div className="flex items-center gap-2">;
       <select;
         value={filterAvailability}
@@ -634,11 +402,6 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
@@ -648,7 +411,6 @@ const FilterControls: React.FC<{
 
 
     <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <select
 
         value={filterLocation}
@@ -656,14 +418,8 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Locations</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
       </select>;
@@ -671,7 +427,6 @@ const FilterControls: React.FC<{
 
     <div className='flex items-center gap-2'>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <select
         value={filterLocation}
         onChange={e => setFilterLocation(e && e.target.value)}
@@ -691,15 +446,6 @@ const FilterControls: React.FC<{
       className='flex items-center gap-2'    >;
       <Sparkles className='h-4 w-4' />;
       {showRecommended ? 'All Products' : 'Recommended'}
-<<<<<<< HEAD
-    </Button>
-  </div>
-);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -707,17 +453,10 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   </div>
 ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
@@ -752,16 +491,7 @@ export default function Marketplace() {
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
-<<<<<<< HEAD
-        title: 'Admin Access Required'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: 'Admin Access Required'
-=======
         title: 'Admin Access Required',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -979,15 +709,6 @@ export default function Marketplace() {
     );
   }, []).filter(Boolean) as string[];
   // Show scroll to top button
-<<<<<<< HEAD
-  const [showScrollTop, setShowScrollTop] = useState(false);
-  useEffect(() => {    const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 800);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-=======
   const [showScrollTop, setShowScrollTop] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
@@ -996,14 +717,7 @@ export default function Marketplace() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Loading state with skeleton
   if (loading && products.length === 0) {
     return (
@@ -1073,18 +787,8 @@ export default function Marketplace() {
       >
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
           {t('marketplace.hero_title')}
-<<<<<<< HEAD
-        </h1>
-        <p className='text-muted-foreground text-lg'>
-=======
         </h1>;
         <p className="text-muted-foreground text-lg">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
@@ -1101,38 +805,11 @@ export default function Marketplace() {
       <motion&& motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-        transition={{ delay: 0 && 0.3 }}>;
-        <FilterControls
-          sortBy = {sortBy,}
-          setSortBy = {setSortBy,}
-          filterCategory = {filterCategory,}
-          setFilterCategory = {setFilterCategory,}
-          categories = {categories,}
-          priceRange = {priceRange,}
-          setPriceRange = {setPriceRange,}
-          minAiScore = {minAiScore,}
-          setMinAiScore = {setMinAiScore,}
-          minRating = {minRating,}
-          setMinRating = {setMinRating,}
-          filterAvailability = {filterAvailability,}
-          setFilterAvailability = {setFilterAvailability,}
-          availabilityOptions = {availabilityOptions && availabilityOptions.filter(Boolean) as string[],}
-          filterLocation = {filterLocation,}
-          setFilterLocation = {setFilterLocation,}
-          locations = {locations,}
-          showRecommended = {showRecommended,}
-          setShowRecommended = {setShowRecommended,}
-          loading = {isFetching,}
-        />
-      </motion.div>
-=======
 
         />;
       </motion && motion.div>;
 
 
-=======
         transition={{ delay: 0.3 }}
 
       >;
@@ -1159,30 +836,11 @@ export default function Marketplace() {
           loading={isFetching}
         />;
       </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Product Grid */}
       <motion&& motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-<<<<<<< HEAD
-        transition={{ delay: 0 && 0.4 }}>;
-        <AnimatePresence mode='popLayout'>;
-          {products && products.map((product, index) => (            <motion&& motion.div
-              key = {product && product.id,}
-              ref = {index === products && products.length - 1 ? lastElementRef : null,}
-              initial={{ opacity: 0, scale: 0 && 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0 && 0.9 }}
-              transition={{ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }}
-              whileHover={{ scale: 1 && 1.02 }}
-              className='relative group'>;
-=======
 
         transition={{ delay: 0.4 }}
       >
@@ -1192,11 +850,6 @@ export default function Marketplace() {
             <motion.div
               key={product.id}
               ref={index === products.length - 1 ? lastElementRef : null}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -1204,14 +857,7 @@ export default function Marketplace() {
               whileHover={{ scale: 1.02 }}
 
               className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <ProductCard
                 product={{
                   id: product.id
@@ -1227,96 +873,9 @@ export default function Marketplace() {
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
-<<<<<<< HEAD
-                  stock: product.stock
-                  in_stock: (product.stock |0) > 0
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  stock: product.stock
-                  in_stock: (product.stock |0) > 0
-=======
                   stock: product.stock,
-<<<<<<< HEAD
-                  in_stock: (product.stock || 0) > 0,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                }}
-                onBuy = {async () => {
-                  if (!isAuthenticated) {
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
-                    await router.push(`/checkout/${product.id}`);
-<<<<<<< HEAD
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', {
-                      data: error
-                    });
-                    toast({
-                      title: 'Navigation Error'
-                      description:
-                        'Could not navigate to checkout. Please try again.'
-                      variant: 'destructive'
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed
-
-                  id: product && product.id,
-                  name: product && product.title,
-                  title: product && product.title,
-                  description: product && product.description || '',
-                  price: product && product.price || 0,
-                  currency: product && product.currency,
-                  category: product && product.category,
-                  tags: product && product.tags,
-                  images: product && product.images,
-                  rating: product && product.rating || 0,
-                  reviewCount: product && product.reviewCount || 0,
-                  created_at: product && product.createdAt,
-                  updated_at: product && product.createdAt, // Use createdAt for both
-                  stock: product && product.stock,
-                  in_stock: (product && product.stock || 0)> 0,;
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                }}
-                onBuy = {async () => {;
-                  if (!isAuthenticated) {;
-                    setIsAuthModalOpen(true);
-                    return; // Stop further execution
-                  }                  try {
-                    await router.push (`/checkout/${product.id}`);
-                  } catch (error) {
-                    logErrorToProduction('Failed to navigate to checkout:', {
-                      data: error
-                    });
-                    toast({
-                      title: 'Navigation Error'
-                      description:
-                        'Could not navigate to checkout. Please try again.'
-                      variant: 'destructive'
-                    });
-                    // Re-throw to allow ProductCard's catch to also run if needed
-
-                    // though ProductCard will reset its state in .finally() regardless.
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-              {/* AI Score Badge */}
-              {product && product.aiScore && product && product.aiScore > 90 && (;
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>;
-                  <Sparkles className='h-3 w-3 mr-1' />;
-                  AI {product && product.aiScore}
-                </Badge>;
-              )}
-<<<<<<< HEAD
-=======
-=======
 
                   stock: product.stock,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   in_stock: (product.stock || 0) > 0
                 }}
                 onBuy={async () => {;
@@ -1326,10 +885,6 @@ export default function Marketplace() {
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -1338,21 +893,6 @@ export default function Marketplace() {
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    throw error;
-                  }
-                }}
-                buyDisabled={false} // Still false, ProductCard handles its own disabled state based on auth
-              />
-
-              {/* AI Score Badge */}
-              {product.aiScore && product.aiScore > 90 && (
-                <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
-                  <Sparkles className='h-3 w-3 mr-1' />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
@@ -1373,70 +913,37 @@ export default function Marketplace() {
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   AI {product.aiScore}
                 </Badge>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Featured Badge */}
               {product && product.featured && (;
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>;
                   <Star className='h-3 w-3 mr-1' />;
                   Featured;
                 </Badge>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </motion && motion.div>;
           ))}
         </AnimatePresence>
       </motion.div>
-<<<<<<< HEAD
-=======
       {/* Loading More Indicator */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {(isFetching |loading) && (
-=======
       {(isFetching || loading) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
-=======
         </AnimatePresence>;
       </motion && motion.div>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Loading More Indicator */}
       {(isFetching |loading) && (
         <motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
-<<<<<<< HEAD
-          animate={{ opacity: 1 }}>;
-          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>;
-            {Array && Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />;
-=======
 
           animate={{ opacity: 1 }}
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
-=======
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
@@ -1446,12 +953,6 @@ export default function Marketplace() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>;
         </motion && motion.div>;
@@ -1468,111 +969,16 @@ export default function Marketplace() {
           <div className='text-sm text-muted-foreground'>;
             Showing {products && products.length} AI-powered solutions;
           </div>;
-<<<<<<< HEAD
-        </motion && motion.div>;
-=======
 
         </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
       {/* Scroll to Top Button */}
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button
             onClick={scrollToTop}
-<<<<<<< HEAD
-            className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1 && 1.1 }}
-            whileTap={{ scale: 0 && 0.9 }}>;
-            <ArrowUp className='h-5 w-5 text-primary-foreground' />;
-          </motion && motion.button>;
-        )}
-      </AnimatePresence>;
-    </div>;
-  );
-}//Navigate to admin products page router && router.push ('/admin/products') ;
-}, [isAuthenticated, user, router, toast]);
-//Fetch function for infinite scroll with AI product generation try {//Use static marketplace listings data for now (compatible with ProductListing type) const params = {;
-  page,  limit, ... (filterCategory && {;
-  category: filterCategory ;
-                    logErrorToProduction ('Failed to navigate to checkout:', {
-                      data: error,
-                    });
-                    toast ({
-                      title: 'Navigation Error',
-                      description:;
-                        'Could not navigate to checkout. Please try again.',
-                      variant: 'destructive',
-                    });
-                    // Re - throw to allow ProductCard's catch to also run if needed,
-                    // though ProductCard will reset its state in .finally () regardless.;
-                    throw error;
-                  }
-                }}
-                buy_disabled={false} // Still false, ProductCard handles its own disabled state based on auth;
-              />;
-              {/* AI Score Badge */}
-              {product.ai_score && product.ai_score > 90 && (
-                <Badge className='absolute -top - 2 -right - 2 bg - gradient - to - r from - yellow - 500 to - orange - 500 z - 10 text - black'>;
-                  <Sparkles className='h - 3 w - 3 mr - 1' />;
-                  AI {product.ai_score}
-                </Badge>)}
-              {/* Featured Badge */}
-              {product.featured && (
-                <Badge className='absolute top - 2 left - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 z - 10'>;
-                  <Star className='h - 3 w - 3 mr - 1' />;
-                  Featured;
-                </Badge>)}
-            </motion.div>))}
-        </AnimatePresence>;
-      </motion.div>;
-      {/* Loading More Indicator */}
-      {(is_fetching || loading) && (
-        <motion.div;
-          className='mt - 8';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >;
-          <div className='grid grid - cols - 1 sm:grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 4 gap - 6'>;
-            {Array.from ({ length: 4 }).map ((_, i) => (              <SkeletonCard key={`loading-${i}`} />))}
-          </div>;
-        </motion.div>)}
-      {/* End of Results */}
-      {!has_more && products.length > 0 && (
-        <motion.div;
-          className='text - center mt - 12 py - 8 border - t';
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >;
-          <div className='text - muted - foreground text - lg mb - 2'>;
-             You've explored all available products!;
-          </div>;
-          <div className='text - sm text - muted - foreground'>;
-            Showing {products.length} AI - powered solutions;
-          </div>;
-        </motion.div>)}
-      {/* Scroll to Top Button */}
-      <AnimatePresence>;
-        {showScrollTop && (
-          <motion.button;
-            on_click={scrollToTop}
-            className='fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50'            initial={{ opacity: 0, scale: 0 }}
-=======
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             while_hover={{ scale: 1.1 }}
@@ -1830,16 +1236,8 @@ const Marketplace = () =>: any {
               </Link>;
             </div>;
     </>;
-<<<<<<< HEAD
   );
 }
-    </>);
-}
-=======
-  );
-}
-<<<<<<< HEAD
-=======
 ;
 }
 }
@@ -1857,8 +1255,6 @@ const Marketplace = () =>: any {
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
@@ -1868,9 +1264,3 @@ const Marketplace = () =>: any {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

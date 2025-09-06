@@ -70,18 +70,8 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
-<<<<<<< HEAD
-  Shield,
-  Globe,} from 'lucide-react';import {
-=======
-<<<<<<< HEAD
-  Shield,
-  Globe,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Shield,;
   Globe,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   MessageSquare
   Image
@@ -92,7 +82,6 @@ import {
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain;
   MessageSquare,
   Image,
@@ -237,8 +226,6 @@ export default function AIBusinessToolsPage() {
         'Easy to use'
       ]
       cons: ['Limited avatar options', 'Expensive', 'Subscription required']
-<<<<<<< HEAD
-=======
       bestFor: 'Training departments, marketers, educators'
     }
     {
@@ -349,16 +336,6 @@ export default function AIBusinessToolsPage() {
       useCase:
         'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.'
       pros: [
-<<<<<<< HEAD
-        'Data-driven insights'
-        'Content optimization'
-        'Competitor analysis'
-        'Good support'
-      ]
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
-      bestFor: 'SEO specialists, content marketers, businesses'
-    }
-=======
   Globe;
 export default /**
  * AIBusinessToolsPage - Function description
@@ -467,7 +444,6 @@ function AIBusinessToolsPage() {
       users: '50K+',
       icon: <Video className='w - 8 h - 8 text - red - 400' />,      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       category: 'AI Video',
       pricing: '$30 - $89 / month',
       rating: 4.5,
@@ -540,91 +516,6 @@ function AIBusinessToolsPage() {
       pricing: '$59 - $199 / month',
       rating: 4.6,
       users: '25K+',
-<<<<<<< HEAD
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      features: [
-        'Grammar & spelling check'
-        'Tone analysis'
-        'Style suggestions'
-        'Plagiarism detection'
-        'Browser extension'
-        'Mobile apps'
-      ]
-      website: 'https://grammarly.com'
-      useCase:
-        'Essential for anyone who writes professionally, including students, professionals, and content creators.'
-      pros: [
-        'Excellent accuracy'
-        'Multiple platforms'
-        'Free tier'
-        'User-friendly'
-      ]
-      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous']
-      bestFor: 'Students, professionals, content creators'
-    }
-    {
-      name: 'Lumen5'
-      description:
-        'AI video maker that transforms text content into engaging videos for social media and marketing.',      category: 'AI Video'
-      pricing: 'Free - $79/month'
-      rating: 4.3
-      users: '100K+'
-      icon: <Video className='w-8 h-8 text-blue-400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.'
-      category: 'AI Video'
-      pricing: 'Free - $79/month'
-      rating: 4.3
-      users: '100K+'
-      icon: <Video className='w-8 h-8 text-blue-400' />
-      features: [
-        'Text-to-video conversion'
-        'Video templates'
-        'Music library'
-        'Brand customization'
-        'Social media formats'
-        'Free tier available'
-      ]
-      website: 'https://lumen5.com'
-      useCase:
-        'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.'
-      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable']
-      cons: ['Limited customization', 'Basic features', 'Watermark on free']
-      bestFor: 'Marketers, social media managers, small businesses'
-    }
-    {
-      name: 'Surfer SEO'
-      description:
-        'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',      category: 'AI SEO'
-      pricing: '$59 - $199/month'
-      rating: 4.6
-      users: '25K+'
-      icon: <TrendingUp className='w-8 h-8 text-green-400' />,      description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.'
-      category: 'AI SEO'
-      pricing: '$59 - $199/month'
-      rating: 4.6
-      users: '25K+'
-      icon: <TrendingUp className='w-8 h-8 text-green-400' />
-      features: [
-        'Content optimization'
-        'Keyword research'
-        'Competitor analysis'
-        'SERP analysis'
-        'Content editor'
-        'Rank tracking'
-      ]
-      website: 'https://surferseo.com'
-      useCase:
-        'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.'
-      pros: [
-        'Data-driven insights'
-        'Content optimization'
-        'Competitor analysis'
-        'Good support'
-      ]
-      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
-      bestFor: 'SEO specialists, content marketers, businesses'
-    }
-=======
 
 
         'Data-driven insights',
@@ -635,8 +526,6 @@ function AIBusinessToolsPage() {
       cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses',
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const categories = [
     'All'
@@ -769,21 +658,7 @@ function AIBusinessToolsPage() {
             </div>
           </div>
           {/* Stats */}
-<<<<<<< HEAD
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-          >
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -835,31 +710,15 @@ function AIBusinessToolsPage() {
       </section>;
 
       {/* Category Filter */}
-<<<<<<< HEAD
-      <section className='py-16 bg-gray-900'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex flex-wrap justify-center gap-4'>;
-            {categories && categories.map(category => (              <button      <section className="py-16 bg-gray-900">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex flex-wrap justify-center gap-4">;
-            {categories && categories.map((category) => (;
-=======
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
 
-=======
 
 
               <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -871,41 +730,16 @@ function AIBusinessToolsPage() {
                 {category}
               </button>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Tools Grid */}
-      <section id='tools' className='py-24 bg-black'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
-              {selectedCategory === 'All';
-                ? 'All AI Tools';
-                : `${selectedCategory} Tools`}
-=======
 
           </div>;
         </div>;
       </section>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Tools Grid */}
 
             </h2>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -921,42 +755,7 @@ function AIBusinessToolsPage() {
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
-<<<<<<< HEAD
-                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      {tool.icon}
-                    </div>;
-                  </div>;
-                  <div className='flex - 1'>;
-                    <div className='flex items - center justify - between mb - 2'>;
-                      <h3 className='text - 2xl font - bold text - white group - hover:text - green - 400 transition - colors duration - 300'>;
-                        {tool.name}
-                      </h3>;
-                      <div className='flex items - center space - x-2'>;
-                        <Star className='w - 4 h - 4 text - yellow - 400 fill - current' />;
-                        <span className='text - sm text - gray - 300'>;
-                          {tool.rating}
-                        </span>
-                      </div>
-                    </div>
-                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
-                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
-                        {tool.category}
-                      </span>
-                      <span>{tool.users} users</span>
-                      <span className='text-green-400'>{tool.pricing}</span>
-                    </div>
-                    <p className='text-gray-400 leading-relaxed mb-4'>
-                      {tool.description}
-                    </p>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -985,50 +784,9 @@ function AIBusinessToolsPage() {
                         href={tool && tool.website}
                         variant='outline'
                         size='sm'
-<<<<<<< HEAD
-                        className='group-hover:border-green-500 group-hover:text-green-400'
-                      >
-                        Visit Website
-                        <ExternalLink className='w-4 h-4 ml-2' />
-                      </Button>
-                      <div className='text-right'>
-                        <div className='text-xs text-gray-500 mb-1'>
-                          Use Case:
-                        </div>
-                        <div className='text-sm text-gray-300 max-w-xs'>
-                          {tool.useCase}
-                        </div>                      </div>
-                      <div className="text-right">
-                        <div className="text-xs text-gray-500 mb-1">Use Case:</div>
-                        <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* AI Benefits Section */}
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Benefits Section */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1109,12 +867,6 @@ function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-                        className='group-hover:border-green-500 group-hover:text-green-400'>;
-                        Visit Website;
-                        <ExternalLink className='w-4 h-4 ml-2' />;
-                      </Button>;
-=======
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-green-600 to-green-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1149,15 +901,8 @@ function AIBusinessToolsPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
                       <div className='text-right'>;
                         <div className='text-xs text-gray-500 mb-1'>;
@@ -1403,14 +1148,5 @@ function AIBusinessToolsPage() {
 }
   );
 }
-<<<<<<< HEAD
-    </>);
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

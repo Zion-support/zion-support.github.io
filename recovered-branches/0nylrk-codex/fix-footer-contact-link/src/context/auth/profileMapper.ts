@@ -1,25 +1,11 @@
-<<<<<<< HEAD
-import type { UserProfile } from "@/types / auth";
-// We cannot rely on the Supabase SDK types here because the project;
-// declares `@supabase / supabase - js` as an untyped external module. Define;
-// a minimal user shape that includes only the properties we actually use;
-// in this file.;
-=======
 
 
 
 import type { UserProfile } from "@/types/auth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // We cannot rely on the Supabase SDK types here because the project
 // declares `@supabase/supabase-js` as an untyped external module. Define
 // a minimal user shape that includes only the properties we actually use
 // in this file.
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export interface SupabaseUser {
 
   id: string
@@ -57,16 +43,8 @@ export function mapProfileToUser(user: SupabaseUser, profile: any): UserProfile 
     avatar_url: profile.avatar_url || undefined, // Add for compatibility;
     role: profile.user_type // Map user_type to role for backward compatibility;
   }
-<<<<<<< HEAD
-}
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
   return {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

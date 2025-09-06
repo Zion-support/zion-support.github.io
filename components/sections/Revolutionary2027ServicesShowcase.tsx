@@ -25,35 +25,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Brain
-  Zap
-  Shield
-  Rocket
-  Sparkles
-  Star
-  TrendingUp
-  Globe
-  Cpu
-  Lock
-  Cloud
-  Atom
-  Microscope
-  Satellite
-  DollarSign
-  Factory
-  Earth
-  TestTube
-  Megaphone
-  Scale
-  Network;
-<<<<<<< HEAD
-=======
-=======
   ArrowRight,
   Brain,
   Zap,
@@ -76,8 +47,6 @@ import {
   Megaphone,
   Scale,;
   Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react';
 import Link from 'next/link';
@@ -99,14 +68,6 @@ const Revolutionary2027ServicesShowcase = () => {
         'Real-time brain-computer interface'
       ]
       marketSize: '$15B research market'
-<<<<<<< HEAD
-      icon: Brain,
-      color: 'from - purple - 600 to - indigo - 700',
-      category: 'Quantum AI & Neuroscience',
-      features: ['Quantum consciousness simulationNeural pattern recognitionEmotional intelligence modelingReal-time brain-computer interface'],
-      marketSize: '$15B research market',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       growthRate: '300% annual growth'
     }
     {
@@ -474,16 +435,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='text-center mb-20'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -525,17 +477,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           </p>;
         </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
@@ -604,11 +546,6 @@ const Revolutionary2027ServicesShowcase = () => {;
           ))}
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -911,18 +848,9 @@ const Revolutionary2027ServicesShowcase = () => {;
                       <div key={idx} className="flex items-center space-x-2">;
                         <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>;
                         <span className="text-sm text-gray-400">{feature}</span>;
-<<<<<<< HEAD
-                  </div>
-=======
 
                     ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -992,125 +920,13 @@ const Revolutionary2027ServicesShowcase = () => {;
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                {/* Hover Effect Overlay */}
-                <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
-              </div>;
-            </motion && motion.div>;
-          ))}
-        </motion.div>
-
-                {/* Hover Effect Overlay */}
-                <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none'></div>              </div>                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>;
-              </div>;
-            </motion && motion.div>;
-          ))}
-        </motion.div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='text-center'>;
-          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
-            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
-                  </h3>;
-                  <p className="text - gray - 300 leading - relaxed">;
-                    {service.description}
-                  </p>;
-                  {/* Features */}
-                  <div className='space - y-2'>;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className='flex items - center space - x-2'>;
-                        <div className='w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full'></div>;
-                        <span className='text - sm text - gray - 400'>{feature}</span>                      </div>                  <div className="space - y-2">;
-                    {service.features.slice (0, 3).map ((feature, idx) => (
-                      <div key={idx} className="flex items - center space - x-2">;
-                        <div className="w - 2 h - 2 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full"></div>;
-                        <span className="text - sm text - gray - 400">{feature}</span>))}
-                  </div>;
-                  {/* Market Info */}
-                  <div className='pt - 4 border - t border - gray - 700 / 50'>;
-                    <div className='flex justify - between items - center text - sm text - gray - 400'>;
-                      <span > Market: {service.market_size}</span>;
-                      <span className='text - green - 400'>;
-                         {service.growth_rate}
-                      </span>                    </div>;
-                  </div>;
-                  {/* Price and CTA */}
-                  <div className='pt - 4 flex items - center justify - between'>;
-                    <div className='text - 3xl font - bold text - white'>                  <div className="pt - 4 border - t border - gray - 700 / 50">;
-                    <div className="flex justify - between items - center text - sm text - gray - 400">;
-                      <span > Market: {service.market_size}</span>;
-                      <span className="text - green - 400"> {service.growth_rate}</span>;
-                  </div>;
-                  {/* Price and CTA */}
-                  <div className='pt - 4 flex items - center justify - between'>;
-                    <div className='text - 3xl font - bold text - white'>;
-                      {service.price}
-                      <span className='text - lg text - gray - 400'>;
-                        {service.period}
-                      </span>;
-                    </div>;
-                    <Link;
-                      href={`/services/${service.id}`}
-                      className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 6 py - 3 rounded - xl font - semibold transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - lg hover:shadow - purple - 500 / 25';
-                    >;
-                      <span > Explore</span>;
-                      <ArrowRight className='w - 4 h - 4' />                    </Link>                      {service.price}
-                      <span className="text - lg text - gray - 400">{service.period}</span>;
-                    </div>;
-                    <Link;
-                      href={`/services/${service.id}`}
-                      className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 6 py - 3 rounded - xl font - semibold transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - lg hover:shadow - purple - 500 / 25";
-                    >;
-                      <span > Explore</span>;
-                      <ArrowRight className="w - 4 h - 4" />;
-                    </Link>;
-                  </div>;
-                </div>;
-                {/* Hover Effect Overlay */}
-                <div className='absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none'></div>              </div>                <div className="absolute inset - 0 bg - gradient - to - br from - purple - 500 / 5 to - cyan - 500 / 5 rounded - 3xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300 pointer - events - none"></div>;
-              </div>;
-            </motion.div>))}
-        </motion.div>;
-        {/* Call to Action */}
-        <motion.div;
-          initial={{ opacity: 0, coordinate_y: 20 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className='text - center';
-        >;
-          <div className='bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12'>;
-            <h3 className='text - 3xl md:text - 4xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-              Join the future of technology with our revolutionary 2027;
-              services. Get in touch to discover how we can accelerate your;
-              digital transformation.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1122,7 +938,6 @@ const Revolutionary2027ServicesShowcase = () => {;
               digital transformation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href='https://ziontechgroup && ziontechgroup.com/contact'
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'>;
@@ -1159,83 +974,6 @@ const Revolutionary2027ServicesShowcase = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
 };
 
-export default Revolutionary2027ServicesShowcase;  );
-}
-export default Revolutionary2027ServicesShowcase;  )
-}
-};
-
-export default Revolutionary2027ServicesShowcase;  );
-};
-
-=======
-<<<<<<< HEAD
-}
-=======
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default Revolutionary2027ServicesShowcase;  )
-}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default Revolutionary2027ServicesShowcase;
-
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
-              <Link;
-                href='https://ziontechgroup.com / contact';
-                className='inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25';
-              >;
-                <span > Get Started Today</span>;
-                <ArrowRight className='w - 5 h - 5' />;
-              </Link>;
-              <a;
-                href='tel:+13024640950';
-                className='inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl'              >        >;
-          <div className="bg - gradient - to - r from - purple - 900 / 50 to - cyan - 900 / 50 backdrop - blur - xl border border - purple - 500 / 30 rounded - 3xl p - 12">;
-            <h3 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h3>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-              Join the future of technology with our revolutionary 2027 services.;
-              Get in touch to discover how we can accelerate your digital transformation.;
-            </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;
-              <Link;
-                href="https://ziontechgroup.com / contact";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl hover:shadow - purple - 500 / 25";
-              >;
-                <span > Get Started Today</span>;
-                <ArrowRight className="w - 5 h - 5" />;
-              </Link>;
-              <a;
-                href="tel:+13024640950";
-                className="inline - flex items - center space - x-2 bg - gradient - to - r from - gray - 700 to - gray - 800 text - white px - 8 py - 4 rounded - xl font - semibold text - lg transform transition - all duration - 300 hover:shadow - xl hover:shadow - cyan - 500 / 30 hover:shadow - xl";
-              >;
-                <span > Call +1 302 464 0950</span>;
-              </a>;
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027ServicesShowcase);
-}
-;
-export default Revolutionary2027ServicesShowcase;
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default Revolutionary2027ServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

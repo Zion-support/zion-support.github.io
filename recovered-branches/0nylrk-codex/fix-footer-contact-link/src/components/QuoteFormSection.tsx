@@ -1,43 +1,9 @@
 import React from 'react';
 
-<<<<<<< HEAD
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-export function QuoteFormSection() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true);
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Button} from "./ui/button";
-import {Input} from "./ui/input";
-import {GradientHeading} from "./GradientHeading";
-import {useState} from "react";
-export function QuoteFormSection() {;
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Button } from "./ui/button",
-import { Input } from "./ui/input",
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
-=======
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -48,7 +14,6 @@ export function QuoteFormSection() {
     e.preventDefault(),
     setIsSubmitting(true),
     
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Simulate form submission
     setTimeout(() => {
       (setIsSubmitting(false), setIsSubmitted(true));
@@ -181,20 +146,6 @@ export function QuoteFormSection() {
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                      <label
-                        htmlFor={`interest-${index}`}
-                        className="ml-2 text-sm text-zion-slate-light"
-                      >
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button",;
 import { Input } from "./ui/input",;
@@ -296,22 +247,15 @@ export function QuoteFormSection() {;
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 mt-2">;
                   {["AI Products/Services", "IT Equipment", "Server Solutions", "Storage Solutions", "Networking", "24/7 Support", "Recycling Services"].map((item, index) => (;
                     <div key={index} className="flex items-center">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <input
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
                       />
-<<<<<<< HEAD
-=======
                       />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         {item}
                       </label>;
                     </div>;

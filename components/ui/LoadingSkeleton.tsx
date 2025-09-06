@@ -80,22 +80,13 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-5/6 mb-2" />
       <Skeleton className="h-4 w-4/6" />
     </div>
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
-  )
-}
-=======
 
   );
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface HeroSkeletonProps {
   className?: string
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface HeroSkeletonProps {
   class_name?: string;
@@ -113,22 +104,13 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = '' }) =>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
-  )
-}
-=======
 
   );
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StatsSkeletonProps {
   className?: string
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface StatsSkeletonProps {
   class_name?: string;
@@ -152,14 +134,6 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
     </div>
   );
 }
-<<<<<<< HEAD
-export default Skeleton;  )
-}
-};
-
-interface HeroSkeletonProps {;
-  className?: string;
-=======
 
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
   return (
@@ -176,75 +150,12 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />;
     </div>;
   );
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export default Skeleton;  )
 }
-<<<<<<< HEAD
-
-export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {;
-  return (
-    <div className={`py-20 px-6 ${className}`}>;
-      <div className="max-w-7xl mx-auto">;
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
-          {[...Array(4)].map((_, index) => (;
-            <div key={index} className='text-center'>;
-              <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />;
-              <Skeleton className='h-10 w-20 mx-auto mb-2' />;
-              <Skeleton className='h-5 w-24 mx-auto' />            <div key={index} className="text-center">;
-              <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />;
-              <Skeleton className="h-10 w-20 mx-auto mb-2" />;
-              <Skeleton className="h-5 w-24 mx-auto" />;
-          ))}
-        </div>;
-      </div>;
-    </div>;
-  );
-};
-
-export default Skeleton;  );
-};
-
 export default Skeleton;
-
-export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' }) => {
-  return (
-    <div className={`py - 20 px - 6 ${class_name}`}>;
-      <div className="max - w-7xl mx - auto">;
-        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 8">;
-          {[...Array (4)].map ((_, index) => (
-            <div key={index} className='text - center'>;
-              <Skeleton className='w - 16 h - 16 rounded - full mx - auto mb - 4' />;
-              <Skeleton className='h - 10 w - 20 mx - auto mb - 2' />;
-              <Skeleton className='h - 5 w - 24 mx - auto' />            <div key={index} className="text - center">;
-              <Skeleton className="w - 16 h - 16 rounded - full mx - auto mb - 4" />;
-              <Skeleton className="h - 10 w - 20 mx - auto mb - 2" />;
-              <Skeleton className="h - 5 w - 24 mx - auto" />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default Skeleton);
-}
-;
-export default Skeleton;
-;
-=======
-export default Skeleton;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

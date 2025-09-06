@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -124,9 +116,6 @@ const serviceCategories = [
     color: 'from-orange-500 to-red-500',
     services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-500/20 to-red-500/20'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -143,14 +132,6 @@ import {
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
 import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-<<<<<<< HEAD
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-=======
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],;
 const contactInfo = {;
   mobile: '+1 302 464 0950';
@@ -251,12 +232,7 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 const serviceCategories = [
   {
@@ -385,9 +361,6 @@ export default function Revolutionary2025ServicesShowcase() {
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-<<<<<<< HEAD
-        {/* Hero Section */}
-=======
 
 
         {/* Hero Section */  } catch (error) {
@@ -395,22 +368,11 @@ export default function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
           <div className="container mx-auto relative z-10">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
 
 
               initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -428,12 +390,6 @@ export default function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -651,8 +607,6 @@ function Revolutionary2025ServicesShowcase() {
           <div className="container mx - auto">;
             <div className="flex flex - col lg:flex - row gap - 6 items - center justify - between">;
               {/* Search */}
-<<<<<<< HEAD
-=======
 
 
         {/* Search and Filter Section */  } catch (error) {
@@ -668,12 +622,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -689,10 +637,6 @@ function Revolutionary2025ServicesShowcase() {
                 {/* Category Filter */}
                 <div className="relative">
                   <select
-<<<<<<< HEAD
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-=======
                     value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -703,12 +647,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="all">All Categories</option>
@@ -723,10 +661,6 @@ function Revolutionary2025ServicesShowcase() {
                 {/* Sort Filter */}
                 <div className="relative">
                   <select
-<<<<<<< HEAD
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-=======
                     value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -737,12 +671,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="popularity">Most Popular</option>
@@ -753,9 +681,6 @@ function Revolutionary2025ServicesShowcase() {
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
-<<<<<<< HEAD
-                {/* View Mode */}
-=======
 
 
                 {/* View Mode */  } catch (error) {
@@ -763,12 +688,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')}
@@ -795,8 +714,6 @@ function Revolutionary2025ServicesShowcase() {
         <section className="py - 16 px - 4">;
           <div className="container mx - auto">;
             {/* Results Count */}
-<<<<<<< HEAD
-=======
 
 
         {/* Services Grid */  } catch (error) {
@@ -811,12 +728,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
@@ -846,9 +757,6 @@ function Revolutionary2025ServicesShowcase() {
                     >;
                       <div className="relative bg - gradient - to - br from - gray - 900 / 80 to - black / 90 border border - gray - 700 / 50 rounded - 2xl p - 6 h - full backdrop - blur - xl hover:border - purple - 500 / 50 transition - all duration - 300 hover:transform hover:scale - 105">;
                         {/* Popular Badge */}
-<<<<<<< HEAD
-=======
-=======
 
                 )  } catch (error) {
     console.error("Error:", error);
@@ -862,11 +770,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <AnimatePresence mode="wait">
               {viewMode === 'grid' ? (
                 <motion.div
@@ -892,11 +795,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
@@ -930,12 +828,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         {service.popular && (
                           <div className="absolute -top-3 -right-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full">
                             POPULAR
@@ -964,24 +856,12 @@ function Revolutionary2025ServicesShowcase() {
                               <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
-<<<<<<< HEAD
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        {/* Market Data */}
-=======
 
                         {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
                           <ul className="space-y-1">
@@ -1007,12 +887,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <div className="grid grid-cols-2 gap-3 mb-6">
                           <div className="bg-gray-800/50 rounded-lg p-3">
                             <div className="text-xs text-gray-400 mb-1">Market Size</div>
@@ -1023,9 +897,6 @@ function Revolutionary2025ServicesShowcase() {
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
                         </div>
-<<<<<<< HEAD
-                        {/* Action Buttons */}
-=======
 
 
                         {/* Action Buttons */  } catch (error) {
@@ -1033,12 +904,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
@@ -1094,20 +959,12 @@ function Revolutionary2025ServicesShowcase() {
                             <div className="flex - 1">;
                               <div className="flex items - center gap - 3 mb - 2">;
                                 <h3 className="text - xl font - bold text - white">{service.name}</h3>;
-<<<<<<< HEAD
-=======
-=======
 
                         {/* Contact Info */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="grid grid-cols-1 gap-2 text-xs">
                           <div className="flex items-center gap-2 text-purple-400">
                             <Phone className="w-3 h-3" />
@@ -1119,11 +976,6 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
                             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                           <div className="flex items-center gap-2 text-blue-400">
                             <Mail className="w-3 h-3" />
@@ -1135,11 +987,6 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
                             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       </div>
@@ -1174,11 +1021,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="space-y-6"
                 >
                   {sortedServices.map((service, index) => (
@@ -1212,19 +1054,12 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <div className="flex-1">
                           <div className="flex items-start gap-4 mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             <div className="flex-1">
                               <div className="flex items-center gap-3 mb-2">
                                 <h3 className="text-xl font-bold text-white">{service.name}</h3>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                                 {service.popular && (
                                   <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                                     POPULAR
@@ -1252,14 +1087,8 @@ function Revolutionary2025ServicesShowcase() {
                                 {service.technology.slice (0, 6).map ((tech, tech_index) => (
                                   <span key={tech_index} className="bg - gray - 800 / 50 text - gray - 300 text - xs px - 2 py - 1 rounded">;
                                     {tech}
-<<<<<<< HEAD
-                                  </span>
-                                ))}
-                              </div>
-=======
 
                                   </span>))}
-=======
 
                                     {feature  } catch (error) {
     console.error("Error:", error);
@@ -1272,13 +1101,7 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </ul>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             </div>
                           </div>
                         </div>
@@ -1308,21 +1131,12 @@ function Revolutionary2025ServicesShowcase() {
                             <div className="text-xs text-green-400 mb-1">Expected ROI</div>
                             <div className="text-sm text-green-300">{service.roi}</div>
                           </div>
-<<<<<<< HEAD
-                          {/* Action Buttons */}
-=======
 
                           {/* Action Buttons */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
@@ -1336,9 +1150,6 @@ function Revolutionary2025ServicesShowcase() {
                               </button>
                             </Link>
                           </div>
-<<<<<<< HEAD
-                          {/* Contact Info */}
-=======
 
 
                           {/* Contact Info */  } catch (error) {
@@ -1346,20 +1157,10 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
                               <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
-<<<<<<< HEAD
-                                {service.contactInfo.mobile}
-                              </a>
-=======
 
 
                                 {service.contactInfo.mobile  } catch (error) {
@@ -1368,20 +1169,10 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
                               </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
                               <Mail className="w-3 h-3" />
                               <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
-<<<<<<< HEAD
-                                {service.contactInfo.email}
-                              </a>
-=======
 
 
                                 {service.contactInfo.email  } catch (error) {
@@ -1390,24 +1181,11 @@ function Revolutionary2025ServicesShowcase() {
   }
 }
                               </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-            {/* No Results */}
-=======
 
 
                   ))  } catch (error) {
@@ -1427,12 +1205,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4"></div>
@@ -1443,9 +1215,6 @@ function Revolutionary2025ServicesShowcase() {
                     setSearchTerm('')
 
                     setSelectedCategory('all')
-<<<<<<< HEAD
-                  }}
-=======
 
 
                   }  } catch (error) {
@@ -1453,12 +1222,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
@@ -1475,8 +1238,6 @@ function Revolutionary2025ServicesShowcase() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
             )  } catch (error) {
@@ -1491,11 +1252,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
@@ -1519,8 +1275,6 @@ function Revolutionary2025ServicesShowcase() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -1571,19 +1325,7 @@ function Revolutionary2025ServicesShowcase() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   )
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  )
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -1639,14 +1381,4 @@ function Revolutionary2025ServicesShowcase() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

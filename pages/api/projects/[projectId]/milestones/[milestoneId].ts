@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../../utils/api/auth";
-import {
-  getProject
-  updateMilestone
-  assertParticipantOrAdmin
-  isClient
-  isTalent
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
@@ -23,8 +6,6 @@ import {
   assertParticipantOrAdmin,
   isClient,
   isTalent,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -94,53 +75,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
-<<<<<<< HEAD
-      res && res.status(404).json({ error: "Milestone not found" });
-      return;
-    }
-    res && res.status(200).json({ milestone: updated });
-    return;
-  }
-
-  res && res.setHeader("AllowPATCH");
-  res && res.status(405).end("Method Not Allowed");
-  res.setHeader("AllowPATCH");
-  res.status(405).end("Method Not Allowed");
-
-  res && res.setHeader("AllowPATCH");
-  res && res.status(405).end("Method Not Allowed");
-}
-
-import type { NextApiRequest, NextApiResponse } from './next';
-import { require_user  } from '../../../../../utils / api / auth';
-import {
-  get_project,
-  update_milestone,
-  assertParticipantOrAdmin,
-  is_client,
-  is_talent,
-} from '../../../../../utils / api / projects';
-import { isMilestoneStatus  } from '../../../../../utils / types / milestones';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const user = require_user (req, res);
-  // Check condition
-if (return) {
-  $2
-}
-  const { project_id, milestone_id } = req.query as {
-    project_id: string;
-    milestone_id: string;
-=======
-<<<<<<< HEAD
-      res.status(404).json({ error: "Milestone not found" });
-=======
-<<<<<<< HEAD
-      res.status(404).json({ error: 'Milestone not found' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'PATCH') {
@@ -159,7 +93,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   const project = get_project (project_id);
   // Check condition
@@ -240,8 +173,6 @@ if ( {) {
   res.set_header ("AllowPATCH");
   res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
 import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
@@ -394,27 +325,16 @@ export default function handler(req, res) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {;
       res.status(404).json({ error: 'Milestone not found' });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return;
     }
     res && res.status(200).json({ milestone: updated });
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.setHeader("AllowPATCH");
-  res.status(405).end("Method Not Allowed");
-}
 
-=======
-
-=======
 
 res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
@@ -422,18 +342,11 @@ res.setHeader("AllowPATCH");
   }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

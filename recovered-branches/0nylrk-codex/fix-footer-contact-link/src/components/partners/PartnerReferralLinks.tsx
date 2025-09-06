@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useRef, useState} from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Copy, Download, Link, Plus} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-import {useReferrals} from "@/hooks/useReferrals";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Label} from "@/components/ui/label";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-
-export function PartnerReferralLinks() {;
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -30,34 +6,14 @@ import { Copy, Download, Link, Plus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
-  const [customParam, setCustomParam] = useState<string>("");
-<<<<<<< HEAD
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([])
-=======
 
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
   const [customParam, setCustomParam] = useState<string>(""),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Get the base referral link
   const baseLink = getReferralLink();
   const handleCopyLink = (link: string) => {
@@ -114,24 +70,9 @@ export function PartnerReferralLinks() {
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-            <Button
-              variant="outline"
-              size="sm"
-=======
-<<<<<<< HEAD
-            <Button
-              variant="outline"
-              size="sm"
-=======
             <Button 
               variant="outline" 
               size="sm" 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -209,12 +150,6 @@ export function PartnerReferralLinks() {;
             <Button;
               variant="outline";
               size="sm";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;

@@ -117,10 +117,6 @@ if ( {) {
     chrome.tabs.create ({ url: `${BASE_URL}/notifications` });
   }
 
-<<<<<<< HEAD
-});
-
-=======
     return true
   }
   if (message.type === 'post-job') {
@@ -132,16 +128,7 @@ if ( {) {
   if (message.type === 'view-notifications') {
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-});
-
-=======
 }),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }),
 ;
 }),;

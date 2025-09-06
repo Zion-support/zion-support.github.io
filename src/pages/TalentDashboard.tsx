@@ -1,86 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState, useEffect } from 'react'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import Link from 'next/link'
-import { SEO } from '@/components/SEO'
-import {
-  BriefcaseIcon
-  UserIcon
-  MessageSquare
-  Star
-  PlusCircle
-  FileText
-  Inbox
-  Video
-} from 'lucide-react'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs'
-import { useAuth } from '@/hooks/useAuth'
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Avatar } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps'
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { MyApplications } from '@/components/jobs/MyApplications'
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
-<<<<<<< HEAD
-
-function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
-  const onboardingStatus = null;
-import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { SEO } from '@/components/SEO';
-import {;
-  BriefcaseIcon,;
-  UserIcon,;
-  MessageSquare,;
-  Star,;
-  PlusCircle,;
-  FileText,;
-  Inbox,;
-  Video,;
-} from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { SuggestedJobs } from '@/components/jobs/SuggestedJobs';
-import { useAuth } from '@/hooks/useAuth';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Avatar } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { TalentOnboardingSteps } from '@/components/onboarding/TalentOnboardingSteps';
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { MyApplications } from '@/components/jobs/MyApplications';
-import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-function TalentDashboardContent() {;
-=======
-<<<<<<< HEAD
-=======
 function TalentDashboardContent() {
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState('job-matches')
@@ -90,11 +7,8 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 function TalentDashboardContent() {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('job-matches');
   const onboardingStatus = useOnboardingStatus();
@@ -104,57 +18,15 @@ function TalentDashboardContent() {
     onboardingStatus && onboardingStatus.availabilitySet &&;
     onboardingStatus && onboardingStatus.matchReceived;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <SEO
         title='Talent Dashboard | Zion AI Marketplace'
         description='Your personalized talent dashboard with job matches and professional opportunities.'
-<<<<<<< HEAD
-      />
-      <main className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-          <div>
-            <h1 className='text-3xl font-bold'>Talent Dashboard</h1>
-            <p className='text-muted-foreground mt-1'>
-              Find opportunities matched to your skills and experience
-            </p>
-          </div>
-          <div className='flex gap-4'>
-            <Button variant='outline' asChild>
-              <Link href='/settings/account'>
-                <UserIcon className='h-4 w-4 mr-2' />
-                Profile Settings
-              </Link>
-            </Button>
-            <Button asChild>
-              <Link href='/dashboard/talent/applications'>
-                <Inbox className='h-4 w-4 mr-2' /> Application Tracker
-              </Link>
-            </Button>
-          </div>
-        </div>
-        {/* Project Offer Banner - Show pending offers */}
-        <ProjectOfferBanner />
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-=======
 
 
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div>
             <Card className='mb-8'>
               <CardHeader className='pb-2'>
@@ -201,12 +73,6 @@ function TalentDashboardContent() {
                     </span>
                   </div>
                 </div>
-<<<<<<< HEAD
-                <div className='mt-4'>
-                  <Button className='w-full' asChild>
-                    <Link href='/messages'>
-                      <MessageSquare className='h-4 w-4 mr-2' />
-=======
 
 
                 
@@ -214,29 +80,15 @@ function TalentDashboardContent() {
                   <Button className="w-full" asChild>
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       Messages
                     </Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
 
-=======
 
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
@@ -276,7 +128,6 @@ function TalentDashboardContent() {;
       <SEO;
         title="Talent Dashboard | Zion AI Marketplace";
         description="Your personalized talent dashboard with job matches and professional opportunities.";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />;
       <main className='container mx-auto px-4 py-8'>;
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>;
@@ -325,7 +176,6 @@ function TalentDashboardContent() {;
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.displayName || 'User'}</CardTitle>;
-=======
 import { useState, useEffect } from 'react';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -419,8 +269,6 @@ function TalentDashboardContent() {
                     </Avatar>;
                     <div>;
                       <CardTitle>{user?.display_name || 'User'}</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <CardDescription>;
                         {user?.headline || 'AI Professional'}
                       </CardDescription>;
@@ -459,28 +307,8 @@ function TalentDashboardContent() {
               </CardContent>;
             </Card>;
 
-<<<<<<< HEAD
-            {/* New Onboarding Progress Tracker */}
-            <TalentOnboardingSteps />;
-            {showAdvanced && (;
-              <div className='mt-6'>;
-                <AdvancedOnboardingSteps />;
-              </div>;
-            )}
-            {/* Upcoming Interviews Card */}
-            <div className='mt-8'>
-              <UpcomingInterviewsCard />
-            </div>
-            <Card className='mt-8'>
-=======
             
             <Card className="mt-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <CardHeader>
                 <CardTitle className='text-lg'>Quick Stats</CardTitle>
               </CardHeader>
@@ -508,13 +336,6 @@ function TalentDashboardContent() {
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-          <div className='lg:col-span-2'>
-            <Tabs defaultValue='job-matches' onValueChange={setActiveTab}>
-              <TabsList className='mb-6'>
-                <TabsTrigger value='job-matches' className='flex items-center'>
-                  <BriefcaseIcon className='h-4 w-4 mr-2' />
-=======
 
 
           
@@ -523,12 +344,6 @@ function TalentDashboardContent() {
               <TabsList className="mb-6">
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   AI Job Matches
                 </TabsTrigger>
                 <TabsTrigger value='applications'>My Applications</TabsTrigger>
@@ -537,17 +352,8 @@ function TalentDashboardContent() {
               <TabsContent value='job-matches' className='mt-0'>
                 <SuggestedJobs />
               </TabsContent>
-<<<<<<< HEAD
-              <TabsContent value='applications' className='mt-0'>
-=======
               
               <TabsContent value="applications" className="mt-0">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <MyApplications />
                 <div className='mt-4 flex justify-center'>
                   <Button variant='outline' asChild>
@@ -558,12 +364,6 @@ function TalentDashboardContent() {
                   </Button>
                 </div>
               </TabsContent>
-<<<<<<< HEAD
-              <TabsContent value='saved' className='mt-0'>
-                <Card className='bg-muted/30'>
-                  <CardContent className='pt-6 text-center'>
-                    <p className='text-muted-foreground'>
-=======
 
 
               
@@ -571,12 +371,6 @@ function TalentDashboardContent() {
                 <Card className="bg-muted/30">
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       You haven't saved any jobs yet.
                     </p>
                     <Button className='mt-4' asChild>
@@ -591,48 +385,23 @@ function TalentDashboardContent() {
       </main>
     </>
   )
-<<<<<<< HEAD
-export default function TalentDashboard() {
-=======
-<<<<<<< HEAD
-export default function TalentDashboard() {
-  return (
-    <ProtectedRoute>
-<<<<<<< HEAD
-      <TalentDashboardContent />
-    </ProtectedRoute>
-  )
-}
-=======
 
       <TalentDashboardContent />;
     </ProtectedRoute>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
 ;
 
 export default function TalentDashboard() {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />;
             {show_advanced && (
@@ -721,13 +490,6 @@ function TalentDashboard() {
       <TalentDashboardContent />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

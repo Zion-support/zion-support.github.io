@@ -1,39 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-</div> </div>) )
-}</div> </div>) import fs from 'fs';
-import fs from 'fs';
-import path from 'path';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datanews-digest.json');
-  let items: NewsItem[] = [];  let generatedAt = '';
-  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    items = json.items |[];
-    generatedAt = json.generatedAt |''
-
-  } catch {}
-  return { props: { items, generatedAt } }
-}
-export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string }) {
- </div> </div>) ) ;
-}</div> </div>) import fs from 'fs';
-import path from 'path';
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
-export async function getServerSideProps() {
-=======
 </div> </div>) ) 
-=======
  </div> </div>) ) 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const file = path.join(process.cwd(), 'datanews-digest.json');
   let items: NewsItem[] = [];  let generatedAt = '';
   try {;
@@ -76,16 +46,7 @@ export default function NewsDigestPage(): any ({ items, generatedAt }: { items: 
           </div>;
         ))}
       </div>
-<<<<<<< HEAD
-    </div>
-=======
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-=======
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 );
 }
 export default /**

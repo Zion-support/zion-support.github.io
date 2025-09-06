@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Certification  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useCertifications() {
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,15 +13,6 @@ export function useCertifications() {;
     if (!user) {
       setError('You must be logged in to add certifications')
       return false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Certification } from '@/types/resume',;
@@ -51,11 +26,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to add certifications'),;
       return false;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setIsLoading(true);
     setError(null);
@@ -77,28 +47,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not add certification')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update certifications')
-      return false
-=======
-<<<<<<< HEAD
-    }
-  }
-  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to update certifications')
-      return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -126,11 +74,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to update certifications'),;
       return false;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setIsLoading(true);
     setError(null);
@@ -152,28 +95,6 @@ export function useCertifications() {;
       return handleResumeError(e, 'Could not update certification')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const deleteCertification = async (certId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete certifications')
-      return false
-=======
-<<<<<<< HEAD
-    }
-  }
-  const deleteCertification = async (certId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete certifications')
-      return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -201,11 +122,6 @@ export function useCertifications() {;
     if (!user) {;
       setError('You must be logged in to delete certifications'),;
       return false;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setIsLoading(true);
     setError(null);
@@ -229,15 +145,6 @@ export function useCertifications() {;
     updateCertification;
 
     deleteCertification
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Certification} from '@/types / resume';
@@ -259,10 +166,6 @@ if ( {) {
       set_error ('You must be logged in to add certifications'),
       return false;
     }
-<<<<<<< HEAD
-    setIsLoading (true);
-    set_error (null);
-=======
 
   },;
   return {;
@@ -271,14 +174,8 @@ if ( {) {
     addCertification;
     updateCertification;
     deleteCertification;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     try {
       const { error } = await supabase;

@@ -1,26 +1,11 @@
 
-<<<<<<< HEAD
-
-export type ProjectStatus =
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export type ProjectStatus =
-=======
 export type ProjectStatus = 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
   | 'in_progress'
   | 'completed'
   | 'canceled';
-<<<<<<< HEAD
-export interface Project {
-=======
-=======
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -28,13 +13,8 @@ export type ProjectStatus =;
   | 'in_progress';
   | 'completed';
   | 'canceled';
-<<<<<<< HEAD
-export interface Project {
-=======
 
 export interface Project {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   client_id: string;
   talent_id: string;
@@ -60,16 +40,8 @@ export interface Project {;
     avatar_url?: string
   }
 }
-<<<<<<< HEAD
-export interface ProjectNote {
-=======
-<<<<<<< HEAD
-export interface ProjectNote {
-=======
 
 export interface ProjectNote {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   project_id: string;
   user_id: string;
@@ -78,9 +50,6 @@ export interface ProjectNote {;
   created_by_profile?: {
     display_name: string
 
-<<<<<<< HEAD
-    avatar_url?: string
-=======
     display_name: string,
     avatar_url?: string;
   }
@@ -95,11 +64,5 @@ export interface ProjectNote {;
   created_by_profile?: {;
     display_name: string;
     avatar_url?: string;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

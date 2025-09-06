@@ -25,25 +25,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Brain
-  Rocket
-  TestTube
-  Globe
-  Microscope
-  Lock
-  Star
-  TrendingUp
-  Zap
-  Sparkles
-  Atom;
-<<<<<<< HEAD
-=======
-=======
   ArrowRight,
   Brain,
   Rocket,
@@ -56,8 +37,6 @@ import {
   Zap,
   Sparkles,;
   Atom,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react';
 import Link from 'next/link';
@@ -157,60 +136,17 @@ const Revolutionary2027Hero = () => {;
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
 
       {/* Animated Grid Pattern */}
-<<<<<<< HEAD
-      <div className='absolute inset-0 opacity-20'>;
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">;
-=======
       <div className='absolute inset-0 opacity-20'>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  }
-=======
         <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      {/* Enhanced Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0.15),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.08),transparent_50%)]"></div>
-      {/* Animated Grid Pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      </div>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px]'></div>      </div>
-
       </div>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-      </div>
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Icons */}
       {floatingIcons && floatingIcons.map((item, index) => (;
         <motion&& motion.div
           key={index}
           className={`absolute ${item && item.position} text-purple-400/30`}
           animate={{
-<<<<<<< HEAD
-            y: [0, -20, 0],
-            y: [0, -20, 0]
-            rotate: [0, 5, -5, 0]
-            rotate: [0, 5, -5, 0],
-=======
             y: [0, -20, 0]
             rotate: [0, 5, -5, 0]
           }}          transition={{
@@ -223,139 +159,14 @@ const Revolutionary2027Hero = () => {;
           <item.icon className='w-8 h-8' />        </motion.div>
       ))}
       {/* Main Content */}
-<<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
-            rotate: [0, 5, -5, 0]}}
-          transition={{
-            duration: 4
-            delay: item.delay
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
-<<<<<<< HEAD
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
-            rotate: [0, 5, -5, 0]}}
-=======
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }}          transition={{
             duration: 4,
             delay: item && item.delay,
             repeat: Infinity,
-<<<<<<< HEAD
-            duration: 4
-            delay: item.delay
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-        >
-          <item.icon className='w-8 h-8' />        </motion.div>
-            rotate: [0, 5, -5, 0]}}
-          transition={{
-            duration: 4,
-            delay: item && item.delay,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}>;
-          <item && item.icon className='w-8 h-8' />        </motion && motion.div>;
-            ease: "easeInOut"
-=======
-<<<<<<< HEAD
-            ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }}
-        >
-          <item.icon className='w-8 h-8' />            ease: "easeInOut"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-        >
-          <item.icon className="w-8 h-8" />
-        </motion.div>
-      ))}
-      {/* Main Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            y: [0, -20, 0];
-            rotate: [0, 5, -5, 0]}}
-          transition={{
-            duration: 4
-            delay: item.delay
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-        >;
-          <item && item.icon className='w-8 h-8' />            ease: "easeInOut";
-          }}
-        >;
-          <item && item.icon className="w-8 h-8" />;
-      ))}
-      {/* Main Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
-        <motion&& motion.div
-          variants={containerVariants}
-          initial='hidden'
-          animate='visible'
-          className='space-y-8'>;
-          {/* Main Heading */}
-          <motion && motion.div variants={itemVariants} className='space-y-6'>;
-            <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Future;
-              </span>;
-              <br />;
-              <span className='text-white'>is Now</span>;
-            </h1>;
-            <div className='flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300'>;
-              <span>2027</span>;
-              <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>;
-              <span>Revolutionary</span>;
-              <div className='w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full'></div>              <span>Technology</span>        <motion&& motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="space-y-8">;
-          {/* Main Heading */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Future
-              </span>
-              <br />
-              <span className="text-white">is Now</span>
-            </h1>
-            <div className="flex items-center justify-center space-x-4 text-2xl md:text-3xl text-gray-300">
-              <span>2027</span>
-              <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
-              <span>Revolutionary</span>
-              <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
-<<<<<<< HEAD
-              <span>Technology</span>
-            </div>
-          </motion.div>
-          {/* Subtitle */}
-          <motion.div variants={itemVariants} className='max-w-4xl mx-auto'>
-            <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed'>
-              Experience the next generation of AI, quantum computing, and
-              emerging technologies. Transform your business with solutions that
-              were once science fiction.            </p>
-          </motion.div>
-          {/* Key Features */}          <motion.div variants={itemVariants} className="max-w-4xl mx-auto">
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
-              Experience the next generation of AI, quantum computing, and emerging technologies.
-              Transform your business with solutions that were once science fiction.
-          </motion.div>
-=======
-=======
-<<<<<<< HEAD
 
-          transition={{
-            duration: 4,
-            delay: item.delay,
-            repeat: Infinity,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <motion && motion.div variants={itemVariants} className="space-y-6">;
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">;
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -375,11 +186,6 @@ const Revolutionary2027Hero = () => {;
 
       {/* Main Content */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>Technology</span>
             </div>
           </motion.div>
@@ -689,26 +495,13 @@ const Revolutionary2027Hero = () => {;
         </div>;
       </motion.div>;
       {/* Particle Effects */}
-<<<<<<< HEAD
-      <div className='absolute inset - 0 pointer - events - none'>;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-=======
 
 
-=======
       {/* Particle Effects */}
       <div className='absolute inset-0 pointer-events-none'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {[...Array(20)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             key={i}
             className='absolute w - 1 h - 1 bg - gradient - to - r from - cyan - 400 to - purple - 400 rounded - full';
             style={{
@@ -753,44 +546,6 @@ export default Revolutionary2027Hero;              delay: Math && Math.random() 
 export default Revolutionary2027Hero;  )
 }
 export default Revolutionary2027Hero;
-<<<<<<< HEAD
-
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}            animate={{
-              coordinate_y: [0, -100],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-              delay: Math.random () * 2,
-            }}          />))}
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027Hero;              delay: Math.random () * 2}}
-          />))}
-      </div>;
-    </section>);
-}
-;
-export default Revolutionary2027Hero);
-}
-;
-export default Revolutionary2027Hero;
-;
-=======
-<<<<<<< HEAD
-
-=======
 
     </section>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </section>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

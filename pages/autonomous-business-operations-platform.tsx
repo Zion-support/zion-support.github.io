@@ -1,116 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Bot, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react'
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
-    {
-      icon: Bot
-      title: "AI Autonomous Management"
-      description: "Fully autonomous business operations with intelligent decision-making"
-import { 
-  Bot, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle;
-  ArrowRight, Star, Award, Clock, DollarSign;
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react';
-
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      icon: Brain
-      title: "Cognitive Business Intelligence"
-      description: "Advanced AI that understands and optimizes your business processes"
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      icon: Workflow
-      title: "Automated Workflows"
-      description: "Seamless automation of complex business processes and operations"
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      icon: Shield
-      title: "Intelligent Security"
-      description: "AI-powered security monitoring and threat prevention"
-      color: "from-red-500 to-orange-500"
-    }
-  ]
-  const capabilities = [
-    "24/7 autonomous operation"
-    "Real-time decision making"
-    "Predictive analytics"
-    "Process optimization"
-    "Resource management"
-    "Performance monitoring"
-    "Risk assessment"
-    "Compliance automation"
-  ]
-  const industries = [
-    {
-      title: "Manufacturing"
-  ];
-
-  const industries = [
-    {
-      title: "Manufacturing",
-      description: "Automated production lines, quality control, and supply chain management"
-    }
-    {
-      title: "Healthcare"
-      description: "Patient care automation, medical device management, and administrative tasks"
-    }
-    {
-      title: "Finance"
-      description: "Automated trading, risk management, and compliance monitoring"
-    }
-    {
-      title: "Retail"
-      description: "Inventory management, customer service, and sales optimization"
-    }
-  ]
-  const benefits = [
-    {
-      icon: TrendingUp
-      title: "Increased Efficiency"
-      value: "300%"
-<<<<<<< HEAD
-  ];
-
-  const benefits = [
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  Bot, Brain, Cpu, Zap, Shield, Globe,
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow;
-} from 'lucide-react',
-const AutonomousBusinessOperationsPlatform = () =>: any {
-  const features = [;
-    {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision - making",
-      color: "from - blue - 500 to - cyan - 500";
-=======
       description: "Boost in operational efficiency"
     }
     {
@@ -132,25 +19,18 @@ const AutonomousBusinessOperationsPlatform = () =>: any {
       description: "Increase in team productivity"
     }
   ]
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Bot, Brain, Cpu, Zap, Shield, Globe, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Bot, Brain, Cpu, Zap, Shield, Globe,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign,
   Building2, Gauge, BarChart3, Settings, Workflow
@@ -162,7 +42,6 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "AI Autonomous Management",
       description: "Fully autonomous business operations with intelligent decision-making",
       color: "from-blue-500 to-cyan-500"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
     {
       icon: Brain,
@@ -179,30 +58,14 @@ const AutonomousBusinessOperationsPlatform = () => {
     {
       icon: Shield,
       title: "Intelligent Security",
-<<<<<<< HEAD
-      description: "AI - powered security monitoring and threat prevention",
-      color: "from - red - 500 to - orange - 500";
-    }
-=======
 
       description: "AI-powered security monitoring and threat prevention",
       color: "from-red-500 to-orange-500"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ],
   const capabilities = [;
     "24 / 7 autonomous operation",
@@ -212,22 +75,9 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Resource management",
     "Performance monitoring",
     "Risk assessment",
-<<<<<<< HEAD
-    "Compliance automation";
-  ],
-  const industries = [;
-=======
     "Compliance automation"
   ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const industries = [
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       title: "Manufacturing",
       description: "Automated production lines, quality control, and supply chain management";
@@ -242,27 +92,12 @@ const AutonomousBusinessOperationsPlatform = () => {
     },
     {
       title: "Retail",
-<<<<<<< HEAD
-      description: "Inventory management, customer service, and sales optimization";
-    }
-=======
       description: "Inventory management, customer service, and sales optimization"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ],
   const benefits = [;
     {
@@ -288,31 +123,12 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Team Productivity"
       value: "250%"
       description: "Increase in team productivity"
-<<<<<<< HEAD
-    }
-  ]
-  ];
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <Head>
@@ -325,9 +141,6 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/autonomous-business-operations-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-<<<<<<< HEAD
-        {/* Hero Section */}
-=======
 
 
         {/* Hero Section */  } catch (error) {
@@ -335,21 +148,10 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -378,10 +180,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                Transform your business with AI-powered autonomous operations that work 24/7
-=======
       description: "Boost in operational efficiency";
     },
     {
@@ -415,8 +213,6 @@ const AutonomousBusinessOperationsPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com / autonomous - business - operations - platform" />;
       </Head>;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - blue - 900 to - slate - 900">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Hero Section */}
         <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="absolute inset - 0 bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20"></div>;
@@ -425,33 +221,12 @@ const AutonomousBusinessOperationsPlatform = () => {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-            >
-              <div className="flex justify-center mb-6">
-                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
-                  <Bot className="w-8 h-8 text-white" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Autonomous Business
-                <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Operations Platform
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7
-=======
 
 
                 Transform your business with AI-powered autonomous operations that work 24/7,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7, 
-=======
                 Transform your business with AI-powered autonomous operations that work 24/7,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -479,12 +254,6 @@ const AutonomousBusinessOperationsPlatform = () => {
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-<<<<<<< HEAD
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -506,12 +275,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -541,9 +304,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -569,12 +329,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -604,8 +358,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -644,12 +396,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -679,9 +425,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -707,12 +450,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
@@ -739,8 +476,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -779,12 +514,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -815,9 +544,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -843,12 +569,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="text-center"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
@@ -881,8 +601,6 @@ const AutonomousBusinessOperationsPlatform = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -921,12 +639,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -956,9 +668,6 @@ const AutonomousBusinessOperationsPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -984,12 +693,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{industry.title}</h3>
@@ -1000,9 +703,6 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -1017,12 +717,6 @@ const AutonomousBusinessOperationsPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1063,20 +757,8 @@ const AutonomousBusinessOperationsPlatform = () => {
 }
 export default AutonomousBusinessOperationsPlatform;
 
-<<<<<<< HEAD
-=======
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export default AutonomousBusinessOperationsPlatform,;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default AutonomousBusinessOperationsPlatform,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Automate Your Business?;
@@ -1097,19 +779,7 @@ export default AutonomousBusinessOperationsPlatform,
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-    </>);
-},
-export default AutonomousBusinessOperationsPlatform,
-;
-=======
     </>;
   );
 },;
 export default AutonomousBusinessOperationsPlatform;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

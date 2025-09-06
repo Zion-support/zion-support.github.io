@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -18,16 +10,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-=======
-<<<<<<< HEAD
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -45,15 +27,10 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
   const goToNextStep = () => {
@@ -76,12 +53,8 @@ export function MobileJobPost() {
   }
   const renderStepContent = () => {
     switch (currentStep) {
-<<<<<<< HEAD
-=======
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen flex flex-col">
       <MobileHeader
@@ -165,36 +138,12 @@ function DetailsStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Textarea
-          id="description"
-          placeholder="Describe the job role and responsibilities"
-=======
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          rows={5}
-        />
-      </div>
-    </div>
-  )
-}
-<<<<<<< HEAD
-function RequirementsStep() {
-  const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"
-  ]);
-  const [newSkill, setNewSkill] = useState("");
-=======
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -238,8 +187,6 @@ export function MobileJobPost() {;
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       case "details": return <DetailsStep />;
       case "requirements":;
         return <RequirementsStep />;
@@ -292,8 +239,6 @@ export function MobileJobPost() {;
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 
 function DetailsStep() {;
   return (
@@ -351,10 +296,6 @@ function DetailsStep() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
@@ -471,7 +412,6 @@ if ( {) {
 /**
  * DetailsStep - Function description
  */
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function DetailsStep() {
   return (
     <div className="space-y-4">
@@ -576,28 +516,12 @@ function RequirementsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
-<<<<<<< HEAD
-              variant="secondary"
-              className="flex items-center gap-1 px-3 py-1">;
-              {skill}
-              <button
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
-=======
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
-<<<<<<< HEAD
-              <button
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
-=======
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -663,12 +587,6 @@ function RequirementsStep() {;
               {skill}
               <button;
                 className="ml-1 rounded-full hover:bg-background/20 p-1";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 onClick={() => removeSkill(skill)}
               >;
                 ;
@@ -699,40 +617,16 @@ function RequirementsStep() {;
         <Textarea
           id="responsibilities"
           placeholder="List the key responsibilities for this role"
-<<<<<<< HEAD
-=======
           rows={4}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        />
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
         <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           rows={4}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 function BudgetStep() {
   return (
@@ -912,52 +806,4 @@ function PreviewStep() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-/**
- * PreviewStep - Function description
- */
-function PreviewStep() {
-  return (
-    <div className="space - y-4">;
-      <h2 className="text - lg font - medium mb - 2">Job Preview</h2>;
-      <Card>;
-        <CardContent className="p - 4">;
-          <h3 className="font - bold text - lg">Senior React Developer</h3>;
-          <p className="text - muted - foreground">TechCorp Inc.  Remote  Full - time</p>;
-          <div className="flex gap - 2 my - 3">;
-            <Badge variant="outline">React</Badge>;
-            <Badge variant="outline">TypeScript</Badge>;
-            <Badge variant="outline">Node.js</Badge>;
-          </div>;
-          <div className="space - y-1 text - sm mt - 4">;
-            <p className="font - medium">Salary Range:</p>;
-            <p>$80, 000 - $120, 000 USD / year</p>;
-          </div>;
-          <div className="space - y-1 text - sm mt - 3">;
-            <p className="font - medium">Experience Level:</p>;
-            <p > Senior</p>;
-          </div>;
-          <div className="space - y-1 text - sm mt - 3">;
-            <p className="font - medium">Application Deadline:</p>;
-            <p > December 15, 2023</p>;
-          </div>;
-          <div className="mt - 4 pt - 3 border - t border - border">;
-            <h4 className="font - medium mb - 2">Description</h4>;
-            <p className="text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
-          </div>;
-        </CardContent>;
-      </Card>;
-      <Button variant="outline" className="w - full">Edit Job Post</Button>;
-    </div>);
-}
-=======
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

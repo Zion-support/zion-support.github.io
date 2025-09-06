@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-'use client',
-
-import Image from 'next/image';
-import { useState } from 'react';
-<<<<<<< HEAD
-import { ImageIcon } from 'lucide-react'
-interface SafeImageProps {
-=======
-=======
 'use client'
 import Image from 'next/image'
 import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
   src: string
@@ -114,22 +98,12 @@ export function SafeImage(): any ({;
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
-<<<<<<< HEAD
-    />
-  );        aria-label={alt}
-=======
-<<<<<<< HEAD
-    />
-=======
 ;
     />;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );        aria-label={alt}
-=======
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {;
@@ -143,14 +117,12 @@ interface SafeImageProps {;
   src: string,;
   alt: string,;
 
-=======
 import { ImageIcon } from 'lucide-react'
 
 interface SafeImageProps {
   src: string,
   alt: string,
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   width?: number;
   height?: number;
   className?: string;
@@ -172,7 +144,6 @@ interface SafeImageProps {
         style={{ width, height }}
         role="img"
 
-=======
   quality?: number
 }
 
@@ -214,25 +185,12 @@ export function SafeImage({
         style={{ width, height }}
         role="img"
         aria-label={alt}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       >
         <ImageIcon className="w-6 h-6" />
       </div>
     )
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     />
   ); return (
         aria-label = {alt,}>;
@@ -264,27 +222,13 @@ export function SafeImage({
       unoptimized = {hasError,}
     />
   )
-<<<<<<< HEAD
-}
-} ;
-} ;
-} 
-=======
-<<<<<<< HEAD
-=======
 } 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
     />;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src: string,
   alt: string,
 interface SafeImageProps {
@@ -352,13 +296,6 @@ if ( {) {
       unoptimized = {has_error, }
     />);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 } ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

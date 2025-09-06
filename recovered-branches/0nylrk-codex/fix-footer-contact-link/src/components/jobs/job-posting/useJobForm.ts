@@ -1,20 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState, useEffect  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { format  } from 'date-fns';
-import { toast } from "sonner";
-import { useNavigate  } from 'react-router-dom';
-import { jobSchema, JobSchemaType  } from './validation';
-import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-=======
-=======
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -31,8 +15,6 @@ export interface JobPostingProps {;
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -41,11 +23,6 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
@@ -137,9 +114,6 @@ if ( {) {
   $2
 }
         on_success ();
-<<<<<<< HEAD
-=======
-=======
 
       title: '',
       company: '',
@@ -166,28 +140,6 @@ if ( {) {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-
-    setIsLoading(true);
-
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
-
-      const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote,
-        user_id: user.id};
-
-      if (onSuccess) {
-        onSuccess()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -250,11 +202,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       return job_data;
     } catch (error: any) {
@@ -262,35 +209,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       toast.error (error.message || "Failed to process form");
       throw error;
     } finally {
-<<<<<<< HEAD
-      setIsLoading (false);
-    }
-  }
-=======
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  return {
-    form;
-    is_loading;
-    start_date;
-    setStartDate;
-    endDate
-    setEndDate;
-    is_remote;
-    setIsRemote;
-    initial_values;
-    setInitialValues;
-    submit_job;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       return jobData;
     } catch (error: any) {;
@@ -313,11 +232,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 

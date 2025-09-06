@@ -20,15 +20,7 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -69,11 +61,6 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return context as CarouselContextProps;
 }
@@ -134,33 +121,15 @@ const Carousel = React.forwardRef<
     React.useEffect(() => {if (!api) {;
         return;
       }
-<<<<<<< HEAD
-onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       onSelect(api)
       api.on("reInit", onSelect)
       api.on("select", onSelect)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
       return () => {
         api?.off("select", onSelect)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       set_api (api);
     }, [api, set_api]);
@@ -174,8 +143,6 @@ if ( {) {
 on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
@@ -196,22 +163,11 @@ on_select (api);
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-<<<<<<< HEAD
-className={cn (&quot;relative & quot;, class_name)}
-          role=&quot;region & quot;
-          aria - roledescription=&quot;carousel & quot;
-=======
 
 
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {...props}
         >;
           {children}
@@ -280,31 +236,9 @@ const CarouselPrevious = React.forwardRef<
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
-=======
-<<<<<<< HEAD
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
-<<<<<<< HEAD
-    </Button>
-  )
-})
-CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </Button>
   )
 })
@@ -329,51 +263,14 @@ const CarouselNext = React.forwardRef<
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowRight className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Next slide</span>
-=======
-<<<<<<< HEAD
->
-      <ArrowRight className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Next slide</span>
-<<<<<<< HEAD
-    </Button>
-  )
-})
-CarouselNext.displayName = &quot;CarouselNext&quot;
-export {
-  type CarouselApi
-  Carousel
-  CarouselContent
-  CarouselItem
-  CarouselPrevious
-  CarouselNext}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </Button>
   )
 })
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
-<<<<<<< HEAD
-  type CarouselApi
-  Carousel
-  CarouselContent
-  CarouselItem
-  CarouselPrevious
-  CarouselNext}
-=======
   type CarouselApi,
   Carousel,
   CarouselContent,
@@ -382,11 +279,4 @@ export {
 
 
   CarouselNext}
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

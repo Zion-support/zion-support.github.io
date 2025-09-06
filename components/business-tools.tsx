@@ -4,8 +4,6 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
-=======
   ExternalLink,
   Check,
   Star,
@@ -46,65 +44,8 @@ import {
   CheckCircle,
   AlertCircle,;
   MessageSquare,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-import {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ExternalLink
-  Check
-  Star
-  Zap
-  Users
-  Globe
-  BarChart3
-  Bot
-  Cloud
-  Lock
-  Database
-  Code
-  Palette
-  Search
-  Mail
-  Calendar
-  CreditCard
-  FileText
-  Video
-  Music
-  Image
-  Globe2
-  Smartphone
-  Monitor
-  Server
-  Cpu
-  HardDrive
-  Brain
-  Target
-  TrendingUp
-  Shield
-  Rocket
-  Briefcase
-  Cog
-  Lightbulb
-  ChartBar
-  Clock
-  CheckCircle
-  AlertCircle
-  MessageSquare;
-} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -158,25 +99,9 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      ]
-    },    {          icon: <Calendar className="w-6 h-6" />
-          color: 'bg-gradient-to-br from-red-500 to-pink-600'
-        }
-      ]
-    }
-      category: 'Communication & Collaboration'
-<<<<<<< HEAD
-=======
-=======
       ];
     };
       category: 'Communication & Collaboration',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       tools: [
         {
           name: 'Slack'
@@ -1047,55 +972,12 @@ export default function BusinessToolsPage() {;
         }
       ];
     }
-<<<<<<< HEAD
-      category: 'Analytics & Business Intelligence',
-      tools: [;
-        {
-          name: 'Google Analytics',
-          description: 'Free web analytics service that tracks and reports website traffic.',
-          features: ['Real-time dataAudience insightsConversion trackingE-commerceGoals'],
-          pricing: 'Free',
-          website: 'https://analytics.google.com',
-          icon: <BarChart3 className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-green-600',
-          popular: true
-        };
-        {
-          name: 'Tableau',
-          description: 'Data visualization and business intelligence platform for analytics.',
-          features: ['Interactive dashboardsData blendingReal-time analyticsMobile supportCollaboration'],
-          pricing: '$70/month - $35/month',
-          website: 'https://tableau.com',
-          icon: <ChartBar className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
-        };
-        {
-          name: 'Mixpanel',
-          description: 'Product analytics platform for understanding user behavior and product usage.',
-          features: ['Event trackingFunnel analysisCohort analysisA/B testingReal-time data'],
-          pricing: 'Free - $25/month',
-          website: 'https://mixpanel.com',
-          icon: <TrendingUp className="w-6 h-6" />,
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600'
-        }
-      ];
-    }
-=======
-<<<<<<< HEAD
-=======
     }
 
   ];
-=======
-<<<<<<< HEAD
-=======
 
   ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const businessInsights = [
     {
       title: 'Remote Work Tools'
@@ -1326,26 +1208,7 @@ export default function BusinessToolsPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <h3 className="text-xl font-bold text-white mb-3">{insight && insight.title}</h3>;
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{insight && insight.description}</p>;
-                <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${insight && insight.color} bg-gray-800/50`}>;
-                  {insight && insight.trend}
-                </div>;
-              </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -1445,66 +1308,19 @@ export default function BusinessToolsPage() {;
                             {feature}
                           </li>;
                         ))}
-<<<<<<< HEAD
-                      </ul>
-                    </div>
-                    <Button
-                      href={tool && tool.website}
-                      variant='primary'
-                      size='sm'
-                      className='w-full group-hover:scale-105 transition-transform duration-300'
-                      external>;
-                      Visit Website;
-                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary";
-                      size="sm";
-                      className="w-full group-hover:scale-105 transition-transform duration-300";
-                      external;
-                    >;
-                      Visit Website;
-                      <ExternalLink className="w-4 h-4 ml-2" />;
-                  </Card>;
-                ))}
-              </div>;
-            </div>;
-          ))}
-        </div>
-      </section>
-      {/* Productivity Tips */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-16'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
                       </ul>;
                     </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <Button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Productivity Tips */}
 
 
 
               Productivity Tips & Best Practices
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Maximize the value of your business tools with these proven
@@ -1522,21 +1338,6 @@ export default function BusinessToolsPage() {;
             {productivityTips && productivityTips.map((tip, index) => (;
               <Card
                 key={index}
-<<<<<<< HEAD
-                className='card-hover border-gradient-blue text-center'
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className='flex justify-center mb-4'>{tip && tip.icon}</div>;
-                <h3 className='text-xl font-bold text-white mb-3'>;
-                  {tip && tip.title}
-                </h3>;
-                <p className='text-gray-400 text-sm leading-relaxed'>;
-                  {tip && tip.description}
-                </p>              </Card>                <div className="flex justify-center mb-4">;
-                  {tip && tip.icon}
-                </div>;
-                <h3 className="text-xl font-bold text-white mb-3">{tip && tip.title}</h3>;
-                <p className="text-gray-400 text-sm leading-relaxed">{tip && tip.description}</p>;
-=======
                 className="card-hover border-gradient-blue text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1546,71 +1347,15 @@ export default function BusinessToolsPage() {;
                 <h3 className="text-xl font-bold text-white mb-3">{tip.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{tip.description}</p>
 
-=======
 
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='container-cursor text-center relative z-10'>;
-          <h2 className='text-responsive-lg font-bold text-white mb-8'>;
-          </h2>;
-          <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
-            {productivity_tips.map ((tip, index) => (
-              <Card;
-                key={index}
-                className='card - hover border - gradient - blue text - center';
-                style={{ animation_delay: `${index * 0.1}s` }}
-              >;
-                <div className='flex justify - center mb - 4'>{tip.icon}</div>;
-                <h3 className='text - xl font - bold text - white mb - 3'>;
-                  {tip.title}
-                </h3>;
-                <p className='text - gray - 400 text - sm leading - relaxed'>;
-                  {tip.description}
-                </p>              </Card>                <div className="flex justify - center mb - 4">;
-                  {tip.icon}
-                </div>;
-                <h3 className="text - xl font - bold text - white mb - 3">{tip.title}</h3>;
-                <p className="text - gray - 400 text - sm leading - relaxed">{tip.description}</p>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='section - padding bg - gradient - to - r from - cursor - blue to - purple - 600 relative overflow - hidden'>;
-        <div className='absolute inset - 0 bg-[radial - gradient (circle, rgba (255, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:20px_20px] opacity - 10' />;
-        <div className='container - cursor text - center relative z - 10'>;
-          <h2 className='text - responsive - lg font - bold text - white mb - 8'>;
-          </h2>;
-          <p className='text - xl text - blue - 100 mb - 12 max - w-4xl mx - auto leading - relaxed'>;
-            These business tools can streamline your operations, improve team;
-            collaboration, and drive growth. Start with the essentials and build;
-            your tech stack strategically.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-purple-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1619,11 +1364,6 @@ export default function BusinessToolsPage() {;
 
 
             Ready to Transform Your Business Operations?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             These business tools can streamline your operations, improve team
@@ -1631,8 +1371,6 @@ export default function BusinessToolsPage() {;
             your tech stack strategically.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/micro-saas'
               variant='secondary'
@@ -1677,10 +1415,6 @@ export default function BusinessToolsPage() {;
 }
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               className='border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl'            >              href="/micro-saas"
               variant="secondary"
               size="lg"
@@ -1704,11 +1438,4 @@ export default function BusinessToolsPage() {;
     </>
 );
 }
-=======
             <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

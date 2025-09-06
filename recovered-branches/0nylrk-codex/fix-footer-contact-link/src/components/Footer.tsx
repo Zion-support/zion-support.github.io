@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-import { NewsletterForm } from "@/components/NewsletterForm",
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
-export function Footer() {;
-=======
-<<<<<<< HEAD
-import { NewsletterForm } from "@/components/NewsletterForm",
-<<<<<<< HEAD
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
 
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Footer() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
@@ -345,8 +322,6 @@ function Footer() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
 
               <Link to="/privacy" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
@@ -356,13 +331,6 @@ function Footer() {
       </div>
 
     </footer>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { NewsletterForm } from "@/components/NewsletterForm",;
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",;
@@ -439,8 +407,6 @@ export function Footer() {;
           </div>;
         </div>;
       </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </footer>;
   );
 }

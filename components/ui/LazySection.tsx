@@ -1,37 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getInitialPosition = () => {
-<<<<<<< HEAD
-  switch (direction) {
-  case 'up':
-export const LazySection: React.FC<LazySectionProps> = ({
-=======
-=======
 const getInitialPosition = () => {
-=======
  const getInitialPosition = () => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   switch (direction) {
   case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  children
-  className = ''
-  threshold = 0.1
-  delay = 0
-  direction = 'up'
-}) => {
-<<<<<<< HEAD
-=======
-=======
 
   children,
   className = '',
@@ -39,8 +15,6 @@ export const LazySection: React.FC<LazySectionProps> = ({
   delay = 0,
   direction = 'up',
 }) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {

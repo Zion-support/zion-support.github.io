@@ -1,71 +1,10 @@
-<<<<<<< HEAD
-export interface MetaverseDigitalRealityService2026 {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface MetaverseDigitalRealityService2026 {
-=======
 export interface MetaverseDigitalRealityService2026 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-<<<<<<< HEAD
-  real_implementation: boolean;
-  contact_info: {
-=======
   realImplementation: boolean;
   contactInfo: {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     mobile: string;
     email: string;
 
     address: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }
-export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
-  [
-    {
-      id: '2026-metaverse-digital-reality'
-      name: '2026 Metaverse Digital Reality Platform'
-      tagline: 'Immersive digital reality experiences'
-      price: '$399/month'
-      description:
-        'Advanced metaverse platform creating immersive digital reality experiences for 2026 and beyond.'
-      features: [
-        'Immersive experiences'
-        'Digital reality'
-        'Metaverse platform'
-        'Advanced graphics'
-        'Social interactions'
-      ]
-      link: '/services/2026-metaverse-digital-reality'
-      category: 'Metaverse Digital Reality 2026'
-      realImplementation: true
-      contactInfo: {
-        mobile: '+1 302 464 0950'
-        email: 'kleber@ziontechgroup.com'
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    }
-<<<<<<< HEAD
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup && ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-      },
-    },
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];    features: [
 
       "Immersive experiences";
@@ -74,35 +13,13 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Advanced graphics",
       "Social interactions"
 
-<<<<<<< HEAD
-    ];
-    link: "/services/2026-metaverse-digital-reality", category: "Metaverse Digital Reality 2026"
-    realImplementation: true
-
-    contactInfo: {
-      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-  ];    features: [;
-      "Immersive experiences";
-      "Digital reality";
-      "Metaverse platform";
-      "Advanced graphics";
-      "Social interactions";
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     ];
     link: "/services / 2026 - metaverse - digital - reality", category: "Metaverse Digital Reality 2026",
     real_implementation: true,
     contact_info: {
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709";
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 export interface MetaverseDigitalRealityService2026 {;
-=======
   };
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
@@ -135,8 +52,6 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality";
       "Metaverse platform";
       "Advanced graphics";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -165,27 +80,15 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       "Digital reality",
       "Metaverse platform",
       "Advanced graphics",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       "Social interactions"
     ],
     link: "/services/2026-metaverse-digital-reality",
     category: "Metaverse Digital Reality 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
 ];

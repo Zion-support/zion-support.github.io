@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -18,22 +10,12 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-<<<<<<< HEAD
-=======
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
     id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform.";
-<<<<<<< HEAD
-    adminOnly: false
-
-    icon: "Briefcase"
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -53,26 +35,13 @@ import {
   Search
 } from "@/components/icons",
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-<<<<<<< HEAD
-    id: "getting-hired"
-    name: "Getting Hired"
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    adminOnly: false
-
-=======
     id: "getting-hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     adminOnly: false,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     icon: "Briefcase"
   }
   "project-help": {
@@ -391,8 +360,6 @@ export default function ForumCategoryPage() {
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",;
 import { useParams, Link } from "react-router-dom",;
@@ -701,12 +668,6 @@ export default function ForumCategoryPage() {;
             <Input;
               placeholder="Search posts in this category...";
               className="pl-10";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

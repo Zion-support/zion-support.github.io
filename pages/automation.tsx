@@ -1,72 +1,4 @@
-<<<<<<< HEAD
 import React from 'react',
-import Head from 'next/head';
-
-import {
-  RefreshCw
-  Zap
-  Bot
-  Workflow
-  ArrowRight
-  Check
-  BarChart3;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next / head';
-import {
-  RefreshCw,
-  Zap,
-  Bot,
-  Workflow,
-  ArrowRight,
-  Check,;
-  BarChart3,;
-} from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-} from 'lucide-react';
-export default /**
- * AutomationPage - Function description
- */
-function AutomationPage() {
-  const features = [;
-    {
-      icon: <Workflow className='w-8 h-8 text-white' />
-      title: 'Workflow Automation'
-      description: 'Create complex workflows with drag-and-drop interface'
-    }
-    {
-      icon: <Bot className='w-8 h-8 text-white' />
-      title: 'AI-Powered Bots'
-      description: 'Intelligent automation agents that learn and adapt'
-    }
-    {
-      icon: <BarChart3 className='w-8 h-8 text-white' />
-      title: 'Process Analytics'
-      description: 'Real-time insights into your automation performance'
-    }
-    {
-      icon: <Zap className='w-8 h-8 text-white' />
-      title: 'Smart Triggers'
-      description: 'Automated responses based on events and conditions'
-    }
-  ];
-  const benefits = [
-<<<<<<< HEAD
-    'Reduce manual tasks by 80%'
-    'Improve process accuracy'
-    'Scale operations efficiently'
-    '24/7 automated operations'
-    'Real-time monitoring'
-=======
 
 
 class ErrorBoundary extends React.Component {
@@ -124,13 +56,8 @@ export default function AutomationPage() {;
       title: 'Smart Triggers',;
       description: 'Automated responses based on events and conditions',;
     },;
-=======
 import Head from 'next/head',
 import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AutomationPage() {
   const features = [
     {
@@ -163,8 +90,6 @@ export default function AutomationPage() {
   const benefits = [
 
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
 
   const benefits = [;
@@ -225,37 +150,18 @@ export default function AutomationPage() {
                 Intelligent Automation
               </div>
             </div>
-<<<<<<< HEAD
-            <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
-=======
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Automation Hub
             </h1>
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
               AI-powered workflow automation platform that streamlines your
               business processes and increases efficiency.
             </p>
-<<<<<<< HEAD
-            <div className='flex flex-col sm:flex-row gap-6 justify-center'>
-              <a href='/contact' className='shadow-2xl shadow-blue-500/25'>
-=======
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <a
                 href="/contact" className="shadow-2xl shadow-blue-500/25">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Start Automating
                 <ArrowRight className='w-5 h-5 ml-2' />
               </a>
@@ -291,15 +197,7 @@ export default function AutomationPage() {
                   <p className='text-gray-400 leading-relaxed'>                    {feature && feature.description}
                   </p>;
                 </div>;
-<<<<<<< HEAD
-              ))}
-            </div>
-          </div>
-        </section>
-=======
 
-=======
-=======
 
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -311,11 +209,6 @@ export default function AutomationPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -324,11 +217,6 @@ export default function AutomationPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -339,7 +227,6 @@ export default function AutomationPage() {
                     {feature.title}
                   </h3>
 
-=======
 
                   <p className="text-gray-400 leading-relaxed">
                     {feature.description  } catch (error) {
@@ -359,8 +246,6 @@ export default function AutomationPage() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Benefits Section */}
         <section className='py-24 bg-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -381,14 +266,6 @@ export default function AutomationPage() {
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Your Business with Automation
@@ -402,18 +279,8 @@ export default function AutomationPage() {
                       <span className="text-gray-300 text-lg">{benefit}</span>
                     </div>
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-              <div className='relative'>
-                <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
-                  <div className='text-center'>
-                    <RefreshCw className='w-24 h-24 mx-auto mb-6 text-blue-400' />
-                    <h3 className='text-2xl font-bold text-white mb-4'>
-=======
 
               
-=======
 
 
               <div className="relative">
@@ -421,12 +288,6 @@ export default function AutomationPage() {
                   <div className="text-center">
                     <RefreshCw className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       Smart Workflows
                     </h3>
                     <p className='text-gray-300 mb-6'>
@@ -442,10 +303,7 @@ export default function AutomationPage() {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
 
-=======
 
         {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
@@ -455,11 +313,6 @@ export default function AutomationPage() {
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -479,14 +332,8 @@ export default function AutomationPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
         <section className="py-24 bg-gray-900">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
@@ -508,7 +355,6 @@ export default function AutomationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>;
               </div>;
 
@@ -525,7 +371,6 @@ export default function AutomationPage() {
                     </p>;
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>;
                       <Zap className='w-4 h-4 mr-2' />                      AI-powered optimization;
-=======
     <>;
       <Head>;
         <title > Automation Hub - Zion Tech Group</title>;
@@ -626,8 +471,6 @@ export default function AutomationPage() {
                     </p>;
                     <div className='inline - flex items - center px - 4 py - 2 rounded - full bg - blue - 500 / 20 text - blue - 400 text - sm'>;
                       <Zap className='w - 4 h - 4 mr - 2' />                      AI - powered optimization;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>;
                   </div>;
                 </div>;
@@ -677,19 +520,8 @@ export default function AutomationPage() {
 }
     </>);
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

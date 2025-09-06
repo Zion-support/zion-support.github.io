@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export function PerformanceDashboard() {
-  return (
-    <div className="bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-lg p-4 w-80">
-      <h3 className="text-white font-semibold mb-2">Performance Dashboard</h3>
-      <p className="text-slate-400 text-sm">Performance metrics will be displayed here</p>
-    </div>
-  );
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react'
 import {
   Card
@@ -38,7 +22,6 @@ interface PerformanceMetrics {
   loadTime: number;
   healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -61,7 +44,6 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   id: string;
   title: string;
@@ -170,22 +152,11 @@ const PerformanceDashboard: React.FC = () => {
       default:;
         return <CheckCircle className='h - 4 w - 4' />;
     }
-<<<<<<< HEAD
-  }
-  const completed_improvements = improvements.filter (
-    imp => imp.status === 'completed');
-=======
 
   },
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className='space-y-6 p-6'>
       <div className='flex items-center justify-between'>
@@ -220,17 +191,9 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Generated pages</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -242,17 +205,9 @@ const PerformanceDashboard: React.FC = () => {
             <p className='text-xs text-gray-500'>Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader className='pb-2'>
             <CardTitle className='text-sm font-medium text-gray-600'>
@@ -264,14 +219,7 @@ const PerformanceDashboard: React.FC = () => {
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
@@ -284,8 +232,6 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-=======
 
 const PerformanceDashboard: React.FC = () => {;
   const [metrics] = useState<PerformanceMetrics>({;
@@ -362,7 +308,6 @@ const PerformanceDashboard: React.FC = () => {;
         return <TrendingUp className='h-4 w-4 text-blue-500' />;
       default:;
         return <AlertCircle className='h-4 w-4 text-gray-500' />;
-=======
       {/* Completed Improvements */}
       <Card>
         <CardHeader>
@@ -381,11 +326,6 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -409,7 +349,6 @@ const PerformanceDashboard: React.FC = () => {;
       case 'ux': return <Search className="h-4 w-4" />,;
       case 'build': return <TrendingUp className="h-4 w-4" />,;
       default: return <CheckCircle className="h-4 w-4" />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   };
 
@@ -461,7 +400,6 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb-2'>;
             <CardTitle className='text-sm font-medium text-gray-600'>;
-=======
     <div className='space - y-6 p - 6'>;
       <div className='flex items - center justify - between'>;
         <h1 className='text - 3xl font - bold text - gray - 900'>;
@@ -476,8 +414,6 @@ const PerformanceDashboard: React.FC = () => {;
         <Card>;
           <CardHeader className='pb - 2'>;
             <CardTitle className='text - sm font - medium text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Build Size;
             </CardTitle>;
           </CardHeader>;
@@ -547,32 +483,6 @@ const PerformanceDashboard: React.FC = () => {;
           </CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-          <div className='space-y-4'>;
-            {completedImprovements && completedImprovements.map(improvement => (;
-              <div
-                key={improvement && improvement.id}
-                className='flex items-start space-x-3 p-3 border rounded-lg'>;
-                <div className='flex-shrink-0 mt-1'>                  {getCategoryIcon(improvement && improvement.category)}
-                </div>;
-                <div className='flex-1 min-w-0'>;
-                  <div className='flex items-center justify-between'>;
-                    <h3 className='text-sm font-medium text-gray-900'>;
-                      {improvement && improvement.title}
-                    </h3>;
-                    <div className='flex items-center space-x-2'>;
-                      <Badge className={getImpactColor(improvement && improvement.impact)}>;
-                        {improvement && improvement.impact} impact;
-                      </Badge>;
-                      {getStatusIcon(improvement && improvement.status)}
-                    </div>;
-                  </div>;
-                  <p className='text-sm text-gray-600 mt-1'>;
-                    {improvement && improvement.description}
-                  </p>;
-                </div>;
-              </div>;
-=======
 
       {/* Completed Improvements */}
       <Card>
@@ -602,85 +512,35 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
                 </div>
               </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </CardContent>
       </Card>
       {/* Action Buttons */}
-<<<<<<< HEAD
-      <div className='flex space-x-4'>;
-        <Button
-          onClick={() => window && window.open('/api/health/environment', '_blank')}
-          variant='outline';
-        >;
-          <Shield className='h-4 w-4 mr-2' />;
-          Check Health Status;
-        </Button>;
-        <Button
-          onClick={() =>;
-            alert('Bundle analysis available with: npm run build:analyze');
-          }
-          variant='outline'
-        >
-          <TrendingUp className='h-4 w-4 mr-2' />
-=======
 
 
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
           <TrendingUp className="h-4 w-4 mr-2" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Bundle Analysis
         </Button>
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export default PerformanceDashboard
-export default PerformanceDashboard
-export default PerformanceDashboard
-
-<<<<<<< HEAD
-          variant='outline';
-        >;
-          <TrendingUp className='h-4 w-4 mr-2' />;
-=======
-=======
 
 export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 
 export default PerformanceDashboard, 
@@ -692,7 +552,6 @@ export default PerformanceDashboard,
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">;
           <TrendingUp className="h-4 w-4 mr-2" />;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Bundle Analysis;
         </Button>;
       </div>;
@@ -701,18 +560,7 @@ export default PerformanceDashboard,
 };
 
 export default PerformanceDashboard;
-<<<<<<< HEAD
-export default PerformanceDashboard, ;
-export default PerformanceDashboard, ;
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className='space - y-4'>;
             {completed_improvements.map (improvement => (
               <div;
@@ -765,12 +613,5 @@ export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 export default PerformanceDashboard,
 export default PerformanceDashboard,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

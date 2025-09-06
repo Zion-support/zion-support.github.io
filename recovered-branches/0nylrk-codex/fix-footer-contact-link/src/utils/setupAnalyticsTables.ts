@@ -1,20 +1,8 @@
 
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
-=======
 import { supabase } from '@/integrations/supabase/client',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {supabase} from '@/integrations/supabase/client';
-=======
 import { supabase } from '@/integrations/supabase/client',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -26,23 +14,6 @@ export async function ensureAnalyticsTablesExist() {
     if (error && error.code === 'PGRST204') {
       console && console.log('Creating analytics tables...');
       await createAnalyticsTables()
-<<<<<<< HEAD
-    }
-  } catch (error) {
-    console && console.warn('Error checking if analytics tables exist:', error);
-    // No need to create tables here, as this could be a connection error
-=======
-<<<<<<< HEAD
-    }
-  } catch (error) {
-    console.warn('Error checking if analytics tables exist:', error);
-    // No need to create tables here, as this could be a connection error
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -58,11 +29,6 @@ export async function ensureAnalyticsTablesExist() {;
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 async function createAnalyticsTables() {
@@ -141,11 +107,7 @@ async function createAnalyticsTables() {
     console.error ('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue;
   }
-<<<<<<< HEAD
 }
-=======
-}
-=======
 
         SELECT 
           c.date,
@@ -165,13 +127,6 @@ async function createAnalyticsTables() {
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -239,9 +194,3 @@ async function createAnalyticsTables() {;
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

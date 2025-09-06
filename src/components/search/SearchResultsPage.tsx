@@ -1,112 +1,5 @@
-<<<<<<< HEAD
-
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
-import {
-  Search
-  Filter
-  X
-  SortAsc
-  SortDesc
-  GridIcon
-  List
-  Loader2
-} from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Badge } from '@/components/ui/badge'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Slider } from '@/components/ui/slider'
-import { Separator } from '@/components/ui/separator'
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { EnhancedSearchInput } from './EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-interface SearchResult {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect, useMemo } from 'react';
-import { useRouter } from 'next/router';
-import {;
-  Search,;
-  Filter,;
-  X,;
-  SortAsc,;
-  SortDesc,;
-  GridIcon,;
-  List,;
-  Loader2,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Slider } from '@/components/ui/slider';
-import { Separator } from '@/components/ui/separator';
-import {;
-  Sheet,;
-  SheetContent,;
-  SheetHeader,;
-  SheetTitle,;
-  SheetTrigger,;
-} from '@/components/ui/sheet';
-import { EnhancedSearchInput } from './EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/data/marketplaceData';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-interface SearchResult {;
-<<<<<<< HEAD
-import React, { useState, useEffect, useMemo } from 'react';
-import { use_router } from 'next / router';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect, useMemo } from 'react'
-import { useRouter } from 'next/router'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Search,
   Filter,
@@ -178,22 +71,11 @@ const HighlightText: React.FC<{
     new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
   )
   return (
-<<<<<<< HEAD
-    <span className={className}>;
-      {parts && parts.map((part, index) =>        part && part.toLowerCase() === searchTerm && searchTerm.toLowerCase() ? (;
-          <mark key={index} className='bg-yellow-200 text-black px-1 rounded'>;
-=======
 
     <span className={className}>
       {parts.map((part, index) => 
         part.toLowerCase() === searchTerm.toLowerCase() ? (
           <mark key={index} className="bg-yellow-200 text-black px-1 rounded">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {part}
           </mark>;
         ) : (;
@@ -247,16 +129,6 @@ if ( {) {
                 ? 'w-full h-48 object-cover rounded'
                 : 'w-20 h-20 object-cover rounded'
             }          />
-<<<<<<< HEAD
-        </div>
-      )}
-      <div className='flex-1'>
-        <div className='flex items-start justify-between mb-2'>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </span>;
   );
 },;
@@ -286,18 +158,11 @@ const SearchResultCard: React.FC<{;
             alt={result.title}
             className={viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded"}
           />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
       
       <div className="flex-1">
         <div className="flex items-start justify-between mb-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div>
             <h3 className='font-semibold text-lg mb-1'>
               <HighlightText text={result.title} searchTerm={searchTerm} />
@@ -324,9 +189,6 @@ const SearchResultCard: React.FC<{;
         <div className='flex items-center justify-between'>
           <div className='flex gap-2 flex-wrap'>
             {result.category && (
-<<<<<<< HEAD
-              <Badge variant='outline' className='text - xs'>;
-=======
               <Badge variant="outline" className="text-xs">
   },;
   const cardClass = viewMode === 'grid';
@@ -351,12 +213,6 @@ const SearchResultCard: React.FC<{;
           <div className="flex gap-2 flex-wrap">;
             {result.category && (;
               <Badge variant="outline" className="text-xs">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {result.category}
               </Badge>
             )}
@@ -405,9 +261,6 @@ const FilterSidebar: React.FC<{
               <span className='text-sm'>{result && result.rating.toFixed(1)}</span>;
             </div>;
           )}
-<<<<<<< HEAD
-=======
-=======
             {result.tags?.slice(0, 3).map((tag, index) => (
 
               <Badge key={index} variant="outline" className="text-xs">
@@ -416,11 +269,6 @@ const FilterSidebar: React.FC<{
             ))}
           </div>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {result.rating && (
             <div className="flex items-center gap-1">
               <span className="text-yellow-500">★</span>
@@ -428,8 +276,6 @@ const FilterSidebar: React.FC<{
             </div>
           )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>;
       </div>;
     </div>;
@@ -455,22 +301,6 @@ const FilterSidebar: React.FC<{;
     onFiltersChange({ ...filters, types: newTypes });
   };
 
-<<<<<<< HEAD
-  const handlePriceChange = (values: number[]) => {;
-    onFiltersChange({;
-      ...filters,;
-      minPrice: values[0] ?? 0,;
-      maxPrice: values[1] ?? 10000,;
-    });
-  };
-  return (
-    <div className='space-y-6'>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
 
                 id={option.id}
@@ -479,15 +309,9 @@ const FilterSidebar: React.FC<{;
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
               <label htmlFor={option.id} className="text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {option.label}
               </label>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </div>;
@@ -495,7 +319,6 @@ const FilterSidebar: React.FC<{;
 
       <Separator />;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div>;
         <h3 className='font-semibold mb-3'>Content Type</h3>;
         <div className='space-y-2'>;
@@ -558,10 +381,6 @@ const FilterSidebar: React.FC<{;
           </SelectTrigger>;
           <SelectContent>;
             <SelectItem value='all'>All Categories</SelectItem>;
-<<<<<<< HEAD
-            {availableCategories && availableCategories.map(category => (;
-              <SelectItem key={category} value={category}>;
-=======
 
 
         <h3 className="font-semibold mb-3">Category</h3>
@@ -570,18 +389,11 @@ const FilterSidebar: React.FC<{;
         }>
           <SelectTrigger>
             <SelectValue placeholder="All Categories" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Categories</SelectItem>
             {availableCategories.map(category => (
               <SelectItem key={category} value={category}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {category}
               </SelectItem>;
             ))}
@@ -611,21 +423,11 @@ const FilterSidebar: React.FC<{;
             min={0}
             max={10000}
             step={50}
-<<<<<<< HEAD
-            className='mb-2'          />
-          <div className='flex justify-between text-sm text-muted-foreground'>
-=======
 
 
             className="mb-2"
           />
           <div className="flex justify-between text-sm text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <span>${filters.minPrice}</span>
             <span>${filters.maxPrice}</span>
           </div>
@@ -639,9 +441,6 @@ const FilterSidebar: React.FC<{;
           onValueChange={value =>;
             onFiltersChange({ ...filters, minRating: parseFloat(value) });
           }
-<<<<<<< HEAD
-        >          <SelectTrigger>
-=======
 
 
         <h3 className="font-semibold mb-3">Minimum Rating</h3>
@@ -649,12 +448,6 @@ const FilterSidebar: React.FC<{;
           onFiltersChange({ ...filters, minRating: parseFloat(value) })
         }>
           <SelectTrigger>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <SelectValue />
           </SelectTrigger>
           <SelectContent>
@@ -672,18 +465,6 @@ const FilterSidebar: React.FC<{;
 }
 // No Results Component;
 const NoResultsState: React.FC<{
-<<<<<<< HEAD
-  searchTerm: string
-  onNewSearch: (term: string) => void
-}> = ({ searchTerm, onNewSearch }) => {  const suggestions = [
-    'AI & Machine Learning'
-    'Web Development'
-    'Mobile App Development'
-    'Data Analysis'
-    'UI/UX Design'
-    'Blockchain Development'
-  ]
-=======
 
 
 },
@@ -702,12 +483,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
     "Blockchain Development"
   ],
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className='text-center py-12'>
       <div className='mb-6'>
@@ -725,23 +500,6 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
             {suggestions.map((suggestion, index) => (
               <Button
                 key={index}
-<<<<<<< HEAD
-                variant='outline'
-                size='sm'
-                onClick={() => onNewSearch(suggestion)}              >;
-                {suggestion}
-              </Button>;
-            ))}
-          </div>
-        </div>
-        <div className='text-sm text-muted-foreground'>
-          <p>Tips for better results:</p>
-          <ul className='mt-2 space-y-1'>
-            <li> Try different keywords</li>
-            <li> Check your spelling</li>
-            <li> Use fewer filters</li>
-            <li> Search for broader terms</li>
-=======
                 variant="outline"
                 size="sm"
             className="mb-2";
@@ -805,7 +563,6 @@ const NoResultsState: React.FC<{;
           <h3 className='font-semibold mb-3'>Search Suggestions:</h3>;
           <div className='flex flex-wrap gap-2 justify-center'>;
             {suggestions && suggestions.map((suggestion, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 key={index}
 
@@ -813,11 +570,6 @@ const NoResultsState: React.FC<{;
                 size="sm";
                 onClick={() => onNewSearch(suggestion)}
               >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {suggestion}
               </Button>;
             ))}
@@ -827,16 +579,10 @@ const NoResultsState: React.FC<{;
         <div className="text-sm text-muted-foreground">
           <p>Tips for better results: </p>
           <ul className="mt-2 space-y-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <li>• Try different keywords</li>
             <li>• Check your spelling</li>
             <li>• Use fewer filters</li>
             <li>• Search for broader terms</li>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </ul>
         </div>
       </div>
@@ -854,39 +600,6 @@ export const SearchResultsPage: React.FC = () => {
   const [hasMore, setHasMore] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [showFilters, setShowFilters] = useState(false)
-<<<<<<< HEAD
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: []
-    category: ''
-    minPrice: 0
-    maxPrice: 10000
-    minRating: 0
-    sort: 'relevance'
-  })
-  const suggestions = generateSearchSuggestions()
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-=======
-<<<<<<< HEAD
-  const [filters, setFilters] = useState<SearchFilters>({
-    types: []
-    category: ''
-    minPrice: 0
-    maxPrice: 10000
-    minRating: 0
-    sort: 'relevance'
-  })
-  const suggestions = generateSearchSuggestions()
-  // Extract available categories from results for filter
-  const availableCategories = useMemo(() => {
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 
 // Main Search Results Page Component
@@ -901,37 +614,12 @@ export const SearchResultsPage: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [showFilters, setShowFilters] = useState(false),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
     category: '',
     minPrice: 0,
     maxPrice: 10000,
     minRating: 0,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    sort: 'relevance',
-  });
-  const suggestions = generateSearchSuggestions ();
-  // Extract available categories from results for filter;
-  const availableCategories = useMemo(() => {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    const categories = new Set<string>();    results.forEach(result => {
-      if (result.category) categories.add(result.category)
-    })
-    return Array.from(categories).sort()
-  }, [results])
-<<<<<<< HEAD
-  // Sync search term with URL
-  useEffect((,) => {
-    if (router.isReady && router.query.q) {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     sort: 'relevance'
   }),
 
@@ -946,144 +634,14 @@ export const SearchResultsPage: React.FC = () => {
     return Array.from(categories).sort()
   }, [results]),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      const urlTerm = router.query.q as string
-      setSearchTerm(urlTerm)
-    }
-  }, [router.isReady, router.query.q])
-  // Search function
-  const performSearch = async (
-    term: string
-    page: number = 1
-    newFilters?: SearchFilters
-  ) => {    if (!term.trim()) {
-      setResults([])
-      setTotalCount(0)
-      return
-    }
-    setLoading(true)
-    try {
-      const searchFilters = newFilters |filters
-      const params = new URLSearchParams({
-        query: term
-        page: page.toString()
-        limit: '20'
-      })
-      if (searchFilters.types.length > 0) {
-        params.append('type', searchFilters.types.join(','))
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('category', search_filters.category);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('min_price', search_filters.min_price.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('max_price', search_filters.max_price.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('min_rating', search_filters.min_rating.to_string ());
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        params.append ('sort', search_filters.sort);
-      }
-      const response = await fetch(`/api/search?${params}`)
-      const data: SearchResponse = await response.json()
-      if (page === 1) {
-        setResults(data.results)
-      } else {
-        set_results (prev => [...prev, ...data.results]);
-      }
-      setTotalCount(data.totalCount)
-      setCurrentPage(data.page)
-      setHasMore(data.hasMore)
-      logInfo('Search completed', {
-        term
-        resultCount: data.results.length
-        totalCount: data.totalCount
-      })
-    } catch (error) {
-      logErrorToProduction ('Search failed', { data: error });
-      set_results ([]);
-      setTotalCount (0);
-    } finally {
-      set_loading (false);
-    }
-  }
-  // Search when term or filters change;
-  useEffect ((, ) => {
-    if () {) {
-  $2
-}
-      perform_search (search_term, 1, filters);
-      setCurrentPage (1);
-    }
-  }, [searchTerm, filters])
-  // Handle search input
-  const handleSearch = (term: string) => {
-    setSearchTerm(term)
-    router.push(`/search?q=${encodeURIComponent(term)}`, undefined, {
-      shallow: true
-    })
-  }
-  // Handle filter changes;
-  const handleFiltersChange = (new_filters: SearchFilters) =>: any {
-    set_filters (new_filters);
-  }
-  // Load more results;
-  const load_more = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      perform_search (search_term, current_page + 1);
-    }
-  }
-  // Active filters count
-<<<<<<< HEAD
-  const activeFiltersCount =
-    filters.types.length +
-    (filters.category ? 1 : 0) +
-    (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
-    (filters.minRating > 0 ? 1 : 0)
-=======
-<<<<<<< HEAD
-  const activeFiltersCount =
-    filters.types.length +
-    (filters.category ? 1 : 0) +
-    (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) +
-=======
   const activeFiltersCount = null;
     filters.types.length +
     (filters.category ? 1 : 0) +
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     (filters.minRating > 0 ? 1 : 0)
-=======
           </div>;
         </div>;
 
@@ -1240,12 +798,6 @@ export const SearchResultsPage: React.FC = () => {;
     (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000 ? 1 : 0) +;
     (filters && filters.minRating > 0 ? 1 : 0);
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className='container mx-auto px-4 py-6'>;
       {/* Search Header */}
@@ -1257,29 +809,13 @@ export const SearchResultsPage: React.FC = () => {;
               onChange={setSearchTerm}
               onSelectSuggestion={suggestion => handleSearch(suggestion && suggestion.text)}
               searchSuggestions={suggestions}
-<<<<<<< HEAD
-              placeholder='Search products, talent, services, and more...'            />;
-          </div>;
-          <Button
-            onClick={() => handleSearch(searchTerm)}
-            disabled={!searchTerm.trim()}
-          >
-            <Search className='h-4 w-4' />
-=======
 
 
               placeholder="Search products, talent, services, and more..."
             />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <Button onClick={() => handleSearch(searchTerm)} disabled={!searchTerm.trim()}>
             <Search className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </Button>
         </div>
         {searchTerm && (
@@ -1297,10 +833,6 @@ export const SearchResultsPage: React.FC = () => {;
               <Select
                 value={filters && filters.sort}
                 onValueChange={value => setFilters({ ...filters, sort: value })}
-<<<<<<< HEAD
-              >
-                <SelectTrigger className='w-40'>                  <SelectValue />
-=======
 
 
 
@@ -1311,12 +843,6 @@ export const SearchResultsPage: React.FC = () => {;
               }>
                 <SelectTrigger className="w-40">
                   <SelectValue />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value='relevance'>Relevance</SelectItem>
@@ -1344,21 +870,10 @@ export const SearchResultsPage: React.FC = () => {;
                 </Button>;
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
-<<<<<<< HEAD
-                  size='sm'
-                  onClick={() => setViewMode('list')}                >
-                  <List className='h-4 w-4' />
-=======
                   size="sm"
                   onClick={() => setViewMode('list')}
                 >
                   <List className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </Button>
               </div>
               {/* Mobile Filter Toggle */}
@@ -1405,14 +920,6 @@ export const SearchResultsPage: React.FC = () => {;
               </Sheet>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       </div>
       {searchTerm && (
@@ -1448,55 +955,9 @@ export const SearchResultsPage: React.FC = () => {;
             </div>
           </div>
           {/* Main Content */}
-<<<<<<< HEAD
-          <div className='flex-1'>;
-            {loading && results && results.length === 0 ? (;
-              <div className='flex justify-center py-12'>;
-                <Loader2 className='h-8 w-8 animate-spin' />;
-              </div>;
-            ) : results && results.length === 0 && searchTerm ? (;
-              <NoResultsState
-                searchTerm={searchTerm}
-                onNewSearch={handleSearch}              />;
-            ) : (;
-              <>;
-                {/* Results Grid/List */}
-                <div
-                  className={
-                    viewMode === 'grid'
-                      ? 'grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6'
-                      : 'space-y-4 mb-6'
-                  }>;
-                  {results && results.map(result => (                    <SearchResultCard
-                      key={`${result && result.type}-${result && result.id}`}
-                      result = {result,}
-                      searchTerm = {searchTerm,}
-                      viewMode = {viewMode,}
-                    />;
-                  ))}
-                </div>
-                {/* Load More Button */}
-                {hasMore && (;
-                  <div className='text-center'>;
-                    <Button
-                      onClick={loadMore}
-                      disabled={loading}
-                      variant='outline'>;
-                      {loading ? (;
-                        <>;
-                          <Loader2 className='h-4 w-4 mr-2 animate-spin' />;
-                          Loading...;
-                        </>;
-                      ) : (;
-                        'Load More Results';
-=======
           <div className="flex-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
           <div className="flex-1">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {loading && results.length === 0 ? (
               <div className="flex justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin" />
@@ -1521,11 +982,6 @@ export const SearchResultsPage: React.FC = () => {;
                       searchTerm={searchTerm}
                       viewMode={viewMode}
                     />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   ))}
                 </div>
                 {/* Load More Button */}
@@ -1537,11 +993,6 @@ export const SearchResultsPage: React.FC = () => {;
                       disabled={loading}
                       variant="outline"
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
@@ -1549,8 +1000,6 @@ export const SearchResultsPage: React.FC = () => {;
                         </>
                       ) : (
                         'Load More Results'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       )}
                     </Button>;
                   </div>;
@@ -1560,37 +1009,12 @@ export const SearchResultsPage: React.FC = () => {;
           </div>;
         </div>;
       )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    </div>
-  )
-}
-export default SearchResultsPage
-  suggestion
-}</Button>) )
-<<<<<<< HEAD
-}</div> </div> <li> Try different keywords</li> <li> Check your spelling</li> <li> Use fewer filters</li> <li> Search for broader terms</li> </ul> </div> </div> </div>)
-}
-//Main Search Results Page Component setTotalCount (data.totalCount)
-setCurrentPage (data.page)
-setHasMore (data.hasMore)
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-=======
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>)
 }
 //Main Search Results Page Component setTotalCount (data.totalCount)
-<<<<<<< HEAD
-setCurrentPage (data.page)
-setHasMore (data.hasMore)
-//Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 |filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
-=======
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {
   /* Mobile Filter Toggle */
 }<Sheet open= {
@@ -1641,31 +1065,13 @@ setHasMore (data.hasMore);
 }
 export default SearchResultsPage
 '"
-<<<<<<< HEAD
-export default SearchResultsPage
-export default SearchResultsPage
-
-=======
-<<<<<<< HEAD
-export default SearchResultsPage
-export default SearchResultsPage
-
-=======
 export default SearchResultsPage, ;
 export default SearchResultsPage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </div>;
   );
 };
 
 export default SearchResultsPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>)}
       </div>;
       {search_term && (
@@ -1805,12 +1211,5 @@ export default SearchResultsPage;
 '";
 export default SearchResultsPage,
 export default SearchResultsPage,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

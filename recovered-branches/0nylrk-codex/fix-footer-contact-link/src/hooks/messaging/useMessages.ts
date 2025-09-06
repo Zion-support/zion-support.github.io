@@ -1,22 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { supabase  } from '@/integrations/supabase/client';
-import { Message, Conversation  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
-=======
-=======
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -98,12 +84,9 @@ if ( {) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-=======
 
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -145,25 +128,14 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   /**
    * Send a message to an existing conversation
    */
@@ -192,14 +164,6 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      // Update conversations list
-      await fetchConversations();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   /**;
    * Send a message to an existing conversation;
@@ -230,12 +194,7 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Update conversations list
       await fetchConversations();
       // Return the sent message
@@ -243,38 +202,7 @@ export function useMessages(;
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        title: "Failed to send message";
-        description: "Please try again later"
-        variant: "destructive"
-      })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    }
-  }
-  /**
-   * Mark messages as read
-   */
-  const markAsRead = async (conversationId: string) => {
-    if (!user |!conversationId) return
-    try {
-      const { error } = await supabase
-        .from('messages')
-        .update({ read: true })
-        .eq('conversation_id', conversationId)
-<<<<<<< HEAD
-        .eq('recipient_id', user && user.id)
-=======
         .eq('recipient_id', user.id)
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         .eq('read', false);
       if (error) throw error;
       // Update active messages to show they've been read
@@ -313,17 +241,6 @@ export function useMessages(;
 
     markAsRead
   }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-        title: "Failed to send message",
-        description: "Please try again later",
-        variant: "destructive"
-      })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   /**;
   * Send a message to an existing conversation;
@@ -378,8 +295,6 @@ if ( {) {
         variant: "destructive";
       });
     }
-<<<<<<< HEAD
-=======
   },;
   /**;
    * Mark messages as read;
@@ -428,12 +343,6 @@ if ( {) {
     loadMessages;
     sendMessage;
     markAsRead;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ;
   /**;

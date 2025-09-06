@@ -28,19 +28,9 @@ interface Activity {
     avatar_url: string | null
   }
 }
-<<<<<<< HEAD
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-=======
-<<<<<<< HEAD
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
-  const [activities, setActivities] = useState<Activity[]>([]),
-=======
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -65,10 +55,6 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-    if (projectId) {
-      fetchActivities()
-=======
 
 import {supabase} from '@/integrations/supabase/client';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -123,13 +109,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         console && console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }, [projectId]);
   function getActivityDescription(activity: Activity): string {
@@ -138,11 +118,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
 
         return 'created a new milestone'
 
-<<<<<<< HEAD
-      case 'status_changed':
-        return `changed status from ${activity.previous_status |'none'} to ${activity.new_status}`;
-      case 'updated':
-=======
 
 
       case 'status_changed':
@@ -153,12 +128,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return 'added a deliverable';
       default:
         return activity.action.replace(/_/g, ' ')
-<<<<<<< HEAD
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -168,23 +137,14 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
       case 'status_changed':;
         return `changed status from ${activity && activity.previous_status || 'none'} to ${activity && activity.new_status}`;
       case 'updated':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         return 'updated milestone details';
       case 'deliverable_added':;
         return 'added a deliverable';
       default:;
-<<<<<<< HEAD
-        return activity && activity.action.replace(/_/g, ' ');
-=======
         return activity.action.replace(/_/g, ' ');
-<<<<<<< HEAD
-=======
         return activity.action.replace(/_/g, ' ');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   if (isLoading) {

@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-export function EnterpriseHero() {;
-=======
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-=======
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseHero() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <section className="py-20 px-4 md:px-6 bg-gradient-to-b from-background to-background/80">;
       <div className="container mx-auto max-w-6xl">;
@@ -143,16 +119,10 @@ export function EnterpriseHero() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-}
-=======
 
     </section>);
 
 }
-=======
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />
@@ -175,20 +145,7 @@ export function EnterpriseHero() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-<<<<<<< HEAD
-  );
-}
-=======
-=======
-<<<<<<< HEAD
-    </section>;
-  );
-}
-=======
-    </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -242,9 +199,3 @@ export function EnterpriseHero() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

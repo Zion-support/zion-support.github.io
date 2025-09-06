@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-import { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../utils/auth";
-import { sendMessage } from "../../../utils/messaging/storage";
-import { ConversationContext } from "../../../utils/messaging/types";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { NextApiRequest, NextApiResponse } from '[^']*';
-import { requireUser } from '[^']*';
-import { sendMessage } from '[^']*';
-import { ConversationContext } from '[^']*';
-<<<<<<< HEAD
-=======
-=======
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { sendMessage } from '../../../utils/messaging/storage';
 import { ConversationContext } from '../../../utils/messaging/types';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import { sendMessage } from "../../../utils/messaging/storage";
 import { ConversationContext } from "../../../utils/messaging/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const user = requireUser(req, res);
   if (!user) return;
   if (req && req.method !== "POST")
@@ -85,10 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 }
   res.status (200).json ({ conversation, message });
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
@@ -111,10 +87,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   });
   res.status(200).json({ conversation, message })
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -158,6 +130,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

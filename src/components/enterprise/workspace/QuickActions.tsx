@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { FileText, Plus, Search, Calendar } from 'lucide-react'
-export function QuickActions() {
-  const actions = [
-    {
-<<<<<<< HEAD
-import React from './react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
-import { Calendar } from 'lucide-react';
-export /**
- * QuickActions - Function description
- */
-function QuickActions() {
-  const actions = [;
-=======
 import React from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -38,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Calendar } from 'lucide-react'
 export function QuickActions() {
   const actions = [
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'post-job'
       label: 'Post New Job'
@@ -67,63 +33,7 @@ export function QuickActions() {
       color: 'bg-amber-100 dark:bg-amber-900/20'
     }
   ]
-<<<<<<< HEAD
 
-import React from 'react';
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
-  CardTitle,;
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-export function QuickActions() {;
-  const actions = [;
-    {;
-import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Calendar } from 'lucide-react';
-import { FileText, Plus, Search, Calendar } from 'lucide-react';
-export function QuickActions() {;
-  const actions = [;
-    {;
-      id: 'post-job',;
-      label: 'Post New Job',;
-      icon: <FileText className='h-5 w-5 mr-2' />,;
-      description: 'Create a new job posting',;
-      color: 'bg-blue-100 dark:bg-blue-900/20',;
-    },;
-      id: 'add-member',;
-      label: 'Add Team Member',;
-      icon: <Plus className='h-5 w-5 mr-2' />,;
-      description: 'Invite someone to your team',;
-      color: 'bg-green-100 dark:bg-green-900/20',;
-    },;
-    {;
-      id: 'find-talent',;
-      label: 'Find Talent',;
-      icon: <Search className='h-5 w-5 mr-2' />,;
-      description: 'Search the talent pool',;
-      color: 'bg-purple-100 dark:bg-purple-900/20',;
-    },;
-    {;
-      id: 'schedule',;
-      label: 'Schedule Interview',;
-      icon: <Calendar className='h-5 w-5 mr-2' />,;
-      description: 'Set up candidate interviews',;
-      color: 'bg-amber-100 dark:bg-amber-900/20',;
-    },;
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -155,20 +65,10 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
       description: 'Set up candidate interviews',
       color: 'bg - amber - 100 dark:bg - amber - 900 / 20',
     },
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   return (
     <Card>;
       <CardHeader>;
-<<<<<<< HEAD
-        <CardTitle>Quick Actions</CardTitle>;
-        <CardDescription>Fast access to common tasks</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
-          {actions && actions.map(action => (;
-            <Button
-=======
         <CardTitle > Quick Actions</CardTitle>;
         <CardDescription > Fast access to common tasks</CardDescription>;
       </CardHeader>;
@@ -177,7 +77,6 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
           {actions.map (action => (
             <Button;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               key={action.id}
               variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
             >;
@@ -186,18 +85,10 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
                   {action.icon}
                   <span>{action.label}</span>;
                 </div>;
-<<<<<<< HEAD
-                </span>              </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-=======
 
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Card>
       <CardHeader>
@@ -209,46 +100,18 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {actions.map(action => (
             <Button
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
-<<<<<<< HEAD
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-              </div>
-            </Button>
-          ))}
-        </div>
-=======
-<<<<<<< HEAD
-                <span className='mt-1 text-xs text-muted-foreground'>
-                  {action.description}
-                </span>              </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-          {actions.map(action => (
-<<<<<<< HEAD
-            <Button
-=======
             <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -297,54 +160,10 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
             >
-<<<<<<< HEAD
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-center">
-                  {action.icon}
-                  <span>{action.label}</span>
-                </div>
-                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
-              </div>
-            </Button>
-          ))}
-        </div>
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      </CardContent>
-    </Card>
-  )
-}
-<<<<<<< HEAD
-                <span className='mt-1 text-xs text-muted-foreground'>;
-                  {action && action.description}
-                </span>              </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
-          {actions && actions.map(action => (;
-            <Button
-              key={action && action.id}
-              variant="outline" 
-              className={`h-auto justify-start p-4 ${action && action.color}`}>;
-              <div className="flex flex-col items-start text-left">;
-                <div className="flex items-center">;
-                  {action && action.icon}
-                  <span>{action && action.label}</span>;
-                </div>;
-                <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
-              </div>;
-            </Button>;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
@@ -357,8 +176,6 @@ export function QuickActions() {;
               </div>
 
             </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>;
       </CardContent>;
@@ -387,15 +204,5 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

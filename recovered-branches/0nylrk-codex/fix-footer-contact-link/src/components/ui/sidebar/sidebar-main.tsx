@@ -12,25 +12,11 @@ export interface SidebarProps extends React.ComponentProps<&quot;div&quot;> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-<<<<<<< HEAD
-  if (props.collapsible === &quot;none&quot;) {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (props.collapsible === &quot;none&quot;) {
-    return (
-      <div
-        className={cn(
-          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
-=======
 ;
   if (props.collapsible === &quot;none&quot;) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
   if (props.collapsible === "none") {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return (
       <div
         className={cn(
@@ -71,30 +57,16 @@ className=&quot;group peer hidden md:block text - sidebar - foreground & quot;
       data - collapsible={state === &quot;collapsed & quot; ? props.collapsible : ""}
       data - variant={props.variant}
       data - side={props.side}
-<<<<<<< HEAD
-=======
-=======
 
 ;
   return (;
     <div;
       ref={ref}
-<<<<<<< HEAD
       className="group peer hidden md:block text-sidebar-foreground"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
-=======
-      className="group peer hidden md:block text-sidebar-foreground"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div
@@ -133,22 +105,8 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
 })
 Sidebar.displayName = &quot;Sidebar&quot;
 export const SidebarRail = React.forwardRef<
-<<<<<<< HEAD
-  HTMLButtonElement
-  React.ComponentProps<&quot;button&quot;>
-=======
-<<<<<<< HEAD
-  HTMLButtonElement,;
-  React.ComponentProps<&quot;button&quot;>
-=======
   HTMLButtonElement,
   React.ComponentProps<"button">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -174,22 +132,8 @@ export const SidebarRail = React.forwardRef<
 })
 SidebarRail.displayName = &quot;SidebarRail&quot;
 export const SidebarInset = React.forwardRef<
-<<<<<<< HEAD
-  HTMLDivElement
-  React.ComponentProps<&quot;main">
-=======
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;main">
-=======
   HTMLDivElement,
   React.ComponentProps<"main">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   return (
     <main

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -30,9 +22,6 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -41,23 +30,6 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-const RegisterPage = () => {
-  const router = useRouter()
-  useEffect(() => {
-    fireEvent('signup_page_view')
-  }, [])
-  const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string
-    emailVerificationRequired: boolean
-  }) => {
-    if (emailVerificationRequired) {
-      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
-    } else {
-      router.push('/auth/login?registrationSuccess=true')
-    }
-  }
-=======
 
 import React, { useEffect } from 'react',
 import Head from 'next / head',
@@ -74,7 +46,6 @@ const RegisterPage = () =>: any {
   }, []),
   const handle_success = ({ email, emailVerificationRequired }: {
     email: string,
-=======
 
 const RegisterPage = () => {;
   const router = useRouter();
@@ -90,14 +61,8 @@ const RegisterPage = () => {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <Head>
@@ -123,8 +88,6 @@ if ( {) {
             </h2>;
             <p className="mt - 2 text - center text - sm text - gray - 600">;
               Or{' '}
-<<<<<<< HEAD
-=======
 
 
               width={48  } catch (error) {
@@ -145,11 +108,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
@@ -161,12 +119,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -176,9 +128,6 @@ if ( {) {
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-<<<<<<< HEAD
-          {/* Social signup options */}
-=======
 
 
           {/* Social signup options */  } catch (error) {
@@ -186,12 +135,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -210,8 +153,6 @@ if ( {) {
                 Terms of Service;
               </Link>{' '}
               and{' '}
-<<<<<<< HEAD
-=======
 
 
               By creating an account, you agree to our{' '  } catch (error) {
@@ -231,12 +172,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -249,19 +184,7 @@ if ( {) {
 }
 export default RegisterPage;
 
-<<<<<<< HEAD
-              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
-=======
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export default RegisterPage,;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
@@ -318,26 +241,13 @@ export default RegisterPage,
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </>);
-},
-export default RegisterPage,
-;
-=======
     </>;
   );
 },;
 export default RegisterPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

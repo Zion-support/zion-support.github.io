@@ -42,19 +42,11 @@ import { ServiceVariant } from '../types / service - variants';
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
-  reviews: number;
-export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] =
-  [
-    // AI Content Factory
-=======
   reviews: number;
 ;
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] =;
   [;
     // AI Content Factory;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'ai-content-factory'
       name: 'AI Content Factory Platform'
@@ -76,33 +68,10 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'ROI tracking'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-blue-500 to-cyan-600'
-      textColor: 'text-blue-400'
-      link: 'https://ziontechgroup.com/ai-content-factory'
-        'AI content creation',
-        'Content strategy optimization',
-        'Multi - channel management',
-        'Performance analytics',
-        'SEO optimization',
-        'Content personalization',
-        'Brand voice consistency',
-        'Content calendar automation',
-        'Collaboration tools',
-        'ROI tracking',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-blue-500 to-cyan-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-content-factory',
-=======
       icon: '📝'
       color: 'from-blue-500 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-content-factory'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Leading AI content platform. Competes with basic content tools but offers comprehensive AI strategy.'
       targetAudience:
@@ -120,8 +89,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'React'
         'Node.js'
       ]
-<<<<<<< HEAD
-=======
       integrations: [
         'WordPress'
         'Shopify'
@@ -791,14 +758,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.'
-      launchDate: '2025-03-05'
-      customers: 75
-      rating: 4.8
-      reviews: 45
-    }
-=======
       color: 'from - blue - 500 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - content - factory',
@@ -813,7 +772,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       technology: [;
         'AI / ML',
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Natural Language Processing',
         'Content Management',
         'SEO Tools',
@@ -1780,14 +1738,10 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       customers: 75,
       rating: 4 && 4.8,
       reviews: 45,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasService2025 {
   id: string, name: string,
   tagline: string, price: string,
@@ -1808,7 +1762,6 @@ export interface InnovativeMicroSaasService2025 {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2099,20 +2052,6 @@ export interface InnovativeMicroSaasService2025 {
     rating: 4.8
 
     reviews: 45
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
-    launch_date: '2025 - 03 - 05', customers: 75,
-    rating: 4.8,
-    reviews: 45;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -2551,12 +2490,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     customers: 75,;
     rating: 4.8;
     reviews: 45;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

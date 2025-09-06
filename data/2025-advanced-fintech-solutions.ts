@@ -40,15 +40,9 @@ export interface AdvancedFintechSolution2025 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
-  reviews: number;
-export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
-=======
   reviews: number;
 ;
 export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {
     id: 'ai-powered-credit-risk-assessment'
     name: 'AI-Powered Credit Risk Assessment'
@@ -70,33 +64,10 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Regulatory compliance'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-green-600 via-emerald-600 to-teal-600'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment'
-      'Alternative data analysis',
-      'Machine learning models',
-      'Real - time scoring',
-      'Risk prediction',
-      'Fraud detection',
-      'Compliance reporting',
-      'API integration',
-      'Custom scoring models',
-      'Performance analytics',
-      'Regulatory compliance',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-green-600 via-emerald-600 to-teal-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-credit-risk-assessment',
-=======
     icon: '💳'
     color: 'from-green-600 via-emerald-600 to-teal-600'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-powered-credit-risk-assessment'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading AI-powered credit risk assessment with alternative data analysis'
     targetAudience:
@@ -133,8 +104,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.8
     reviews: 45
   }
-<<<<<<< HEAD
-=======
   {
     id: 'blockchain-payment-processing-platform'
     name: 'Blockchain Payment Processing Platform'
@@ -377,14 +346,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
-=======
     color: 'from - green - 600 via - emerald - 600 to - teal - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - powered - credit - risk - assessment',
@@ -412,7 +373,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     variant: 'ai - finance - enterprise',
     contact_info: {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -734,48 +694,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       'Performance analytics',
     ],
     popular: false,
-<<<<<<< HEAD
-    icon: '',
-    color: 'from-gray-600 via-slate-600 to-zinc-600',
-    textColor: 'text-gray-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/regtech-compliance-automation-platform',
-    marketPosition:
-      'Leading RegTech platform with comprehensive compliance automation'
-    targetAudience:
-      'Banks, Credit unions, Investment firms, Insurance companies, Fintech companies'
-    trialDays: 14
-    setupTime: '7-10 days'
-    category: 'Fintech'
-    realService: true
-    technology: [
-      'RegTech, Compliance Automation, Regulatory Monitoring, Risk Management, AI/ML'
-    ]
-    integrations: [
-      'Core systems, Regulatory databases, Reporting tools, Audit systems, Training platforms'
-    ]
-    useCases: [
-      'Regulatory compliance, Automated reporting, Risk monitoring, Policy management, Training'
-    ]
-    roi: 'Reduce compliance costs by 50%. Improve accuracy by 90%. Cut reporting time by 80%.'
-    competitors: ['ComplyAdvantage, RegTech, ComplySci, Smarsh, NICE Actimize']
-    marketSize: '$15B RegTech market'
-    growthRate: '40% annual growth'
-    variant: 'fintech'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.'
-    launchDate: '2025-02-12'
-    customers: 89
-    rating: 4.5
-    reviews: 52
-  }
-=======
     icon: '📋',
 
 
@@ -785,8 +703,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.5,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -822,14 +738,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
     rating: 4 && 4.5,
     reviews: 52
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -908,7 +816,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -917,13 +824,6 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

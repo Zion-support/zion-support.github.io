@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',
-import fs from 'fs',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -42,38 +34,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.createReadStream(fullPath).pipe(res);
   res.setHeader("Content-Type", contentType);
   res.setHeader(
-<<<<<<< HEAD
-    "Content-Disposition"
-    `attachment, filename="${path.basename(fullPath)}"`
-=======
     "Content-Disposition",
     `attachment, filename="${path.basename(fullPath)}"`,
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs.createReadStream(fullPath).pipe(res);
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import path from 'path';
 import mime from 'mime-types';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
-<<<<<<< HEAD
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!requireSuperadminApi(req, res)) return;
-
-
-=======
 
   const section = String(req && req.query.section || "General");
   const file = String(req && req.query.file || "");
   if (!file) return res && res.status(400).json({ error: "Missing file" });
   const fullPath = path && path.join(
     resolveDataPath(path && path.join("dataroom", section)),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -96,7 +74,6 @@ function handler() {
     resolveDataPath (path.join ("dataroom", section)),
 
     file,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream";
@@ -104,7 +81,6 @@ function handler() {
   res && res.setHeader(
     "Content-Disposition",
     `attachment, filename="${path && path.basename(fullPath)}"`,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   appendAuditLog({ type: "file_download", section, name: file });
   fs && fs.createReadStream(fullPath).pipe(res);
@@ -130,10 +106,6 @@ function handler() {
   appendAuditLog ({ type: "file_download", section, name: file });
   fs.createReadStream (full_path).pipe (res);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -141,9 +113,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section || 'General');
   const file = String(req.query.file || '');
   if (!file) return res.status(400).json({ error: 'Missing file' });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

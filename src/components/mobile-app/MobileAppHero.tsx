@@ -1,36 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-}
-import React from './react';
-import Link from './next / link';
-import { ArrowRight, Phone } from 'lucide-react'import { Button  } from '@/components / ui / button';
-import { AppStoreButtons  } from './AppStoreButtons';
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-}
-import React from "react"
-import Link from "next/link"
-import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
-import { AppStoreButtons } from "./AppStoreButtons"
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import Link from "next/link",
 import { ArrowRight, Phone } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { AppStoreButtons } from "./AppStoreButtons",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -46,39 +19,14 @@ export const MobileAppHero: React.FC = () => {
             <p className="text-lg md:text-xl opacity-90 mb-8">
               Find top AI talent or global IT jobs on the go. The power of Zion's AI matching, now available on your mobile device.
             </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            <div className="mb-8">
-              <AppStoreButtons
-                appStoreUrl = {appStoreUrl,}
-                googlePlayUrl = {googlePlayUrl,}
-              />
-            </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="mb-8">
               <AppStoreButtons 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
             </div>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
                 Open App
@@ -86,57 +34,22 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
-<<<<<<< HEAD
-=======
 
 
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              {/* This would be replaced with an actual phone mockup image in production */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-  )
-}
-"
-
-<<<<<<< HEAD
-};
-import React from "react";
-import Link from "next/link";
-import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
-import { AppStoreButtons } from "./AppStoreButtons";
-=======
-=======
 
   );
 };
 ";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import Link from "next/link",;
 import { ArrowRight, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -181,22 +94,7 @@ export const MobileAppHero: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
-"
 
 ";
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

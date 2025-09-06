@@ -1,43 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Header } from '@/components/Header'
-import { ShieldAlert } from 'lucide-react'
-import { useTranslation } from 'react-i18next'
-export default function Unauthorized() {
-  const { t } = useTranslation()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import Link from "next/link",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header";
 import { ShieldAlert } from 'lucide-react'
-<<<<<<< HEAD
-import { useTranslation } from "react-i18next";
-export default function Unauthorized() {
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
-import { Header } from '@/components/Header';
-import { ShieldAlert } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-export default function Unauthorized() {;
-  const { t } = useTranslation();
-=======
-<<<<<<< HEAD
-import { useTranslation } from "react-i18next";
-=======
 import { useTranslation } from "react-i18next",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function Unauthorized() {
   const { t } = useTranslation(),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <Header />;
@@ -62,58 +30,17 @@ export default function Unauthorized() {
             </Link>;
             <Link
               href='/auth/login'
-<<<<<<< HEAD
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'>              href="/";
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center";
-            >;
-              {t('errors && errors.return_home')}
-            </Link>;
-            <Link
-              href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-              {t('errors && errors.login_different_account')}
-=======
               className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'            >              href="/"
-=======
               href="/"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
               {t('errors.return_home')}
             </Link>
             <Link
-<<<<<<< HEAD
-              href='/auth/login'
-              className='w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center'              href="/auth/login"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
-            >
-              {t('errors.login_different_account')}
-            </Link>
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      </div>
-    </>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
       </div>;
     </>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               href="/auth/login"
               className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
             >
@@ -162,9 +89,6 @@ function Unauthorized() {
               className="w - full border border - zion - blue - light text - zion - slate - light hover:bg - zion - blue hover:text - white px - 4 py - 2 rounded inline - flex items - center justify - center";
             >;
               {t ('errors.login_different_account')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Link>;
           </div>;
         </div>;
@@ -172,18 +96,7 @@ function Unauthorized() {
     </>;
   );
 }
-<<<<<<< HEAD
-  );
-}
-    </>);
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -40,23 +40,10 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { persona, invitee, topic, operatorPrompt } = req.body |{}
-
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
-=======
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { persona, invitee, topic, operatorPrompt } = req.body |{}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles
@@ -66,17 +53,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 5) A single-sentence Best Quote
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 
-<<<<<<< HEAD
-  const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
-=======
 }
-<<<<<<< HEAD
-}
-=======
     const episode = {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`;
   let generated: any = null;
@@ -232,36 +210,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
-<<<<<<< HEAD
-}
-      transcript: generated.transcript,
-      youtube_description: generated.youtube_description || '',
-      spotify_description: generated.spotify_description || '',
-      best_quote: generated.best_quote || '',
-      audio: {},
-    }
-    episodes.unshift (episode);
-    write_episodes (episodes);
-;
-    return res.status (200).json ({ episode });
-  } catch (error: any) {
-    console.error (error);
-    return res.status (500).json ({ error: error?.message || 'Unknown error' });
-  }    episodes.unshift (episode);
-    write_episodes (episodes);
-;
-    return res.status (200).json ({ episode });
-  } catch (error: any) {
-    console.error (error);
-    return res.status (500).json ({ error: error?.message || 'Unknown error' });
-}
-}
-=======
 
 
-=======
 
     const episode = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

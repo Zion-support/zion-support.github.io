@@ -1,76 +1,8 @@
-<<<<<<< HEAD
-
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import {
-  AlertTriangle
-  CheckCircle
-  XCircle
-  Clock
-  TrendingUp
-  Activity
-} from 'lucide-react'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-interface HealthData {
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {;
-  AlertTriangle,;
-  CheckCircle,;
-  XCircle,;
-  Clock,;
-  TrendingUp,;
-  Activity,;
-} from 'lucide-react';
-interface HealthData {;
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState, useEffect } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   AlertTriangle,
   CheckCircle,
@@ -190,17 +122,8 @@ const HealthDashboard: React.FC = () => {
   }
   const formatBytes = (bytes: number) => {
     return `${bytes.toFixed(1)} MB`
-<<<<<<< HEAD
-  }
-=======
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -222,30 +145,19 @@ const HealthDashboard: React.FC = () => {
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-=======
 
 const HealthDashboard: React.FC = () => {;
   const [healthData, setHealthData] = useState<HealthData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
-=======
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!healthData) return null
-=======
 
 
   if (!healthData) return null,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -261,11 +173,6 @@ const HealthDashboard: React.FC = () => {;
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
           <Button onClick={fetchHealthData} size="sm">
@@ -332,11 +239,6 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card>
               <CardHeader>
                 <CardTitle>System Information</CardTitle>
@@ -377,7 +279,6 @@ const HealthDashboard: React.FC = () => {;
                       <li key={index} className="text-sm text-red-600 flex items-start">
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return undefined;
   }, [autoRefresh]);
 
@@ -438,8 +339,6 @@ const HealthDashboard: React.FC = () => {;
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (!healthData) return null
   return (
@@ -522,64 +421,6 @@ const HealthDashboard: React.FC = () => {;
         </Card>
       </div>
       {/* Detailed Information */}
-<<<<<<< HEAD
-      <Tabs defaultValue='overview' className='space-y-4'>
-        <TabsList>
-          <TabsTrigger value='overview'>Overview</TabsTrigger>
-          <TabsTrigger value='errors'>Error Analysis</TabsTrigger>
-          <TabsTrigger value='metrics'>Metrics</TabsTrigger>
-          <TabsTrigger value='recommendations'>Recommendations</TabsTrigger>
-        </TabsList>
-        <TabsContent value='overview' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-            <Card>
-              <CardHeader>
-                <CardTitle>System Information</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className='space-y-2'>
-                  <div className='flex justify-between'>
-                    <span className='text-sm text-gray-600'>Environment:</span>
-                    <Badge variant='outline'>{healthData.environment}</Badge>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span className='text-sm text-gray-600'>Version:</span>
-                    <span className='text-sm font-mono'>
-                      {healthData.version}
-                    </span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span className='text-sm text-gray-600'>Memory Usage:</span>
-                    <span className='text-sm'>
-                      {formatBytes(healthData.metrics.memoryUsage)}
-                    </span>
-                  </div>
-                  <div className='flex justify-between'>
-                    <span className='text-sm text-gray-600'>Last Updated:</span>
-                    <span className='text-sm'>
-                      {new Date(healthData.timestamp).toLocaleTimeString()}
-                    </span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardHeader>
-                <CardTitle className='flex items-center'>
-                  <AlertTriangle className='w-4 h-4 mr-2' />
-                  Current Issues ({healthData.health.issues.length})
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                {healthData.health.issues.length > 0 ? (
-                  <ul className='space-y-2'>
-                    {healthData.health.issues.map((issue, index) => (
-                      <li
-                        key={index}
-                        className='text-sm text-red-600 flex items-start'>;
-                        <span className='w-2 h-2 bg-red-400 rounded-full mt-1 && 1.5 mr-2 flex-shrink-0'></span>                        {issue}
-                      </li>;
-=======
       <Tabs defaultValue='overview' className='space-y-4'>;
         <TabsList>;
           <TabsTrigger value='overview'>Overview</TabsTrigger>;
@@ -636,38 +477,17 @@ const HealthDashboard: React.FC = () => {;
                       <li key={index} className="text-sm text-red-600 flex items-start">;
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
                         {issue}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </ul>;
                 ) : (;
                   <p className='text-green-600 text-sm'>No issues detected</p>;
                 )}
-<<<<<<< HEAD
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-        <TabsContent value='errors' className='space-y-4'>
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
-=======
 
 
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Card>
               <CardHeader>
                 <CardTitle>Error Summary</CardTitle>
@@ -724,16 +544,6 @@ const HealthDashboard: React.FC = () => {;
                       ))}                  </div>;
                 ) : (;
                   <p className='text-gray-600 text-sm'>No recurring errors</p>;
-<<<<<<< HEAD
-                )}
-              </CardContent>
-            </Card>
-          </div>
-        </TabsContent>
-        <TabsContent value='metrics' className='space-y-4'>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-=======
-=======
 
                   <div className="space-y-2">
                     {healthData.errors.topErrors.slice(0, 5).map((error, index) => (
@@ -745,26 +555,14 @@ const HealthDashboard: React.FC = () => {;
                       </div>;
                     ))}
                   </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
 
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Card>
               <CardHeader className='pb-2'>
                 <CardTitle className='text-sm'>Error Rate</CardTitle>
@@ -811,19 +609,10 @@ const HealthDashboard: React.FC = () => {;
             </Card>
           </div>
         </TabsContent>
-<<<<<<< HEAD
-        <TabsContent value='recommendations' className='space-y-4'>
-=======
 
 
 
         <TabsContent value="recommendations" className="space-y-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Card>
             <CardHeader>
               <CardTitle>Improvement Recommendations</CardTitle>
@@ -850,23 +639,11 @@ const HealthDashboard: React.FC = () => {;
   )
 }
 export default HealthDashboard
-<<<<<<< HEAD
-export default HealthDashboard
-export default HealthDashboard
-
-=======
-<<<<<<< HEAD
-export default HealthDashboard
-export default HealthDashboard
-
-=======
       const response = await fetch ('/api / admin / health');
       // Check condition
 if ( {) {
   $2
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 <ul className="space-y-3">
                   {healthData.health.recommendations.map((rec, index) => (
                     <li key={index} className="flex items-start">
@@ -878,39 +655,18 @@ if ( {) {
               ) : (
                 <p className="text-gray-600">No specific recommendations at this time</p>
               )}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </CardContent>;
           </Card>;
         </TabsContent>;
       </Tabs>;
     </div>;
   );
-<<<<<<< HEAD
-};
-
-export default HealthDashboard;
-export default HealthDashboard, ;
-export default HealthDashboard, ;
-=======
 },;
 export default HealthDashboard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </div>);
 }
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

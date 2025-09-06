@@ -1,58 +1,6 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from 'react';
+
 interface LoadingSpinnerProps {
-
-interface LoadingSpinnerProps {;
-=======
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface LoadingSpinnerProps {
-<<<<<<< HEAD
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'blue' | 'white' | 'gray';
-  text?: string;
-  className?: string;
-}
-
-export default function LoadingSpinner({ 
-  size = 'md', 
-  color = 'blue', 
-  text,
-  className = '' 
-}: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'blue' | 'white' | 'gray' | 'slate';
   text?: string;
@@ -64,42 +12,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...'
   className = '',}) => {
   const sizeClasses = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    sm: 'w-4 h-4'
-    md: 'w-8 h-8'
-    lg: 'w-12 h-12'
-  }
-  const colorClasses = {
-    blue: 'text-blue-600'
-    white: 'text-white'
-    gray: 'text-gray-600'
-    slate: 'text-slate-600'
-  }
-<<<<<<< HEAD
-=======
-=======
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
->>>>>>> origin/main
   };
 
   const colorClasses = {
     blue: 'text-blue-600',
     white: 'text-white',
-<<<<<<< HEAD
-    gray: 'text-gray-600'
-=======
     gray: 'text-gray-600',
     slate: 'text-slate-600'
->>>>>>> origin/main
   };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`} />
@@ -108,21 +32,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>;
       )}
-<<<<<<< HEAD
-    </div>;
-  );
-=======
-<<<<<<< HEAD
-    </div>
-  );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (fullScreen) {
     return (
       <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">;
@@ -193,13 +103,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({size = 'md', text,'  cla
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
-<<<<<<< HEAD
-export default LoadingSpinner;
-;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default function LoadingSpinner() {
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -207,10 +110,6 @@ export default function LoadingSpinner() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
         <p className="text-lg">Loading...</p>
       </div>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>
   );
   } catch (error) {
@@ -218,25 +117,3 @@ export default function LoadingSpinner() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
-  size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    md: '    lg: 'w-12 h-12', };
-  return (;
-    <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
-        <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
-};
-export default LoadingSpinner;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

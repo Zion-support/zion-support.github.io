@@ -1,45 +1,7 @@
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Switch  } from '@/components/ui/switch';
-import { Button  } from '@/components/ui/button';
-import { Label  } from '@/components/ui/label';
-import { ShieldAlert, Info } from 'lucide-react';
-import {
-<<<<<<< HEAD
-
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { ShieldAlert, Info } from "lucide-react";
-import {
-  Accordion
-  AccordionContent
-  AccordionItem
-  AccordionTrigger
-} from "@/components/ui/accordion";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-
-export function FraudDetectionSettings() {
-=======
 
 
 export function FraudDetectionSettings() {
-=======
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -50,17 +12,11 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     setIsSaving(true);
@@ -68,9 +24,6 @@ export function FraudDetectionSettings() {;
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -93,7 +46,6 @@ export function FraudDetectionSettings() {
   const [isSaving, setIsSaving] = useState(false),
 
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     setIsSaving(true);
@@ -113,11 +65,7 @@ export function FraudDetectionSettings() {
         variant: "destructive"
       });
     } finally {
-<<<<<<< HEAD
-=======
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="mb-8">
@@ -220,18 +168,8 @@ export function FraudDetectionSettings() {
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
   )
-=======
   )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -271,8 +209,6 @@ export function FraudDetectionSettings() {;
         description: "Failed to save your preferences. Please try again.",;
         variant: "destructive"});
     } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setIsSaving(false);
     }
   }
@@ -394,12 +330,4 @@ export function FraudDetectionSettings() {;
 }
     </Card>);
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

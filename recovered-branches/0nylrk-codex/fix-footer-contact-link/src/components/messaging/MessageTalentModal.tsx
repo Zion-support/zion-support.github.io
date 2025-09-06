@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription;
-=======
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -20,10 +7,7 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Dialog;
   DialogContent;
@@ -36,19 +20,9 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Textarea } from "@/components/ui/textarea",
 import { useMessaging } from "@/context/MessagingContext",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-import { toast } from "@/components/ui/use-toast";
-import { useNavigate } from "react-router-dom";
-=======
 
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -57,40 +31,17 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
-<<<<<<< HEAD
-export function MessageTalentModal({
-  talent;
-  isOpen;
-  onClose;
-  jobTitle;
-}: MessageTalentModalProps) {;
-  const { createConversation } = useMessaging();
 
-  const navigate = useNavigate();
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-export function MessageTalentModal({;
-  talent;
-  isOpen;
-  onClose;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   jobTitle
 }: MessageTalentModalProps) {
 
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [message, setMessage] = useState(
     jobTitle
       ? `Hi ${talent.full_name}, I'd like to invite you to discuss a project: ${jobTitle}`
@@ -162,22 +113,6 @@ export function MessageTalentModal({
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
-<<<<<<< HEAD
-                {talent && talent.full_name.charAt(0).toUpperCase()}
-              </AvatarFallback>;
-            </Avatar>;
-            Message {talent && talent.full_name}
-          </DialogTitle>;
-          <DialogDescription className="text-zion-slate">;
-            Send a direct message to start a conversation.;
-            {talent && talent.professional_title && (;
-              <span className="block mt-1 text-zion-cyan">{talent && talent.professional_title}</span>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>
@@ -187,8 +122,6 @@ export function MessageTalentModal({
             Send a direct message to start a conversation.
             {talent.professional_title && (
               <span className="block mt-1 text-zion-cyan">{talent.professional_title}</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
           </DialogDescription>
         </DialogHeader>

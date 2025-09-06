@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
-import React from 'react';
-import { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { Logo  } from '@/components/header/Logo';
-import { PointsBadge  } from '@/components/loyalty/PointsBadge';
-import { UserMenu  } from '@/components/header/UserMenu';
-import { LanguageSelector  } from '@/components/header/LanguageSelector';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { useAuth  } from '@/hooks/useAuth';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { useMessaging  } from '@/context/MessagingContext';
-import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions  } from '@/data/marketplaceData';
-import { slugify  } from '@/lib/slugify';
-import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu  } from '@/components/header/MobileMenu';
-import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
-<<<<<<< HEAD
-=======
-=======
 
 import { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
@@ -48,8 +17,6 @@ import { slugify } from '@/lib/slugify'
 import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
 import { CartDrawer  } from '@/components/cart/CartDrawer';
@@ -70,25 +37,12 @@ export function PrimaryNav() {
     const messaging = use_messaging ();
     unread_count = messaging.unread_count;
   } catch {
-<<<<<<< HEAD
-    // context not available;
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-=======
 
     // context not available
-<<<<<<< HEAD
-  }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-=======
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -148,19 +102,12 @@ export function PrimaryNav() {;
           <div className='hidden lg:block order-1 flex-shrink-0'>;
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
-<<<<<<< HEAD
-            />          </div>
-=======
 
             />          </div>;
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <header
@@ -178,12 +125,6 @@ export function PrimaryNav() {;
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Actions container with responsive layout */}
           <div className='hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0'>;
             {/* Search form with clamped width */}
@@ -307,20 +248,12 @@ if ( {) {
               />;
             </form>;
             {/* Compact actions group */}
-<<<<<<< HEAD
-            <div className='flex items - center gap - 1'>;
-=======
 
             <div className="flex items-center gap-1">
               <PointsBadge />
               <CartDrawer />
             </div>
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -340,8 +273,6 @@ if ( {) {
                       e.preventDefault(),
                       setLoginOpen(true)
             <div className="flex items-center gap-1">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <PointsBadge />;
               <CartDrawer />;
             </div>;
@@ -351,19 +282,6 @@ if ( {) {
               <LanguageSelector />;
             </div>;
             {/* Auth links - flex wrap for very small screens */}
-<<<<<<< HEAD
-            <div className='flex items-center gap-1 flex-wrap'>;
-              {!isLoggedIn && (;
-                <>;
-                  <Link
-                    href='/auth/login'
-                    className='text-sm hover:text-primary whitespace-nowrap'
-                    data-testid='login-link'
-                    onClick={e => {
-                      e.preventDefault()
-                      setLoginOpen(true) }}
-                  >
-=======
 
                   <Link;
                     href="/auth/login";
@@ -374,12 +292,6 @@ if ( {) {
                       setLoginOpen(true);
                     }}
                   >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {t('auth.login')}
                   </Link>
                   <Link
@@ -393,28 +305,8 @@ if ( {) {
             </div>
           </div>
           {/* Tablet view (md to lg) - simplified controls */}
-<<<<<<< HEAD
-          <div className='hidden md:flex lg:hidden items-center gap-2 order-2'>;
-            <ModeToggle />;
-            <LanguageSelector />;
-            {!isLoggedIn && (;
-              <Link
-                href='/auth/login'
-                className='text-sm hover:text-primary'
-                data-testid='login-link'
-                onClick={e => {
-                  e.preventDefault()
-                  setLoginOpen(true) }}
-
-              >
-=======
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -439,12 +331,6 @@ if ( {) {
                   setLoginOpen(true);
                 }}
               >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {t('auth.login')}
               </Link>
             )}
@@ -499,26 +385,12 @@ if ( {) {
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-<<<<<<< HEAD
-            aria-label={t('general && general.toggle_mobile_menu')}          >;
-            {mobileMenuOpen ? (;
-              <X className='h-6 w-6' />;
-            ) : (;
-              <Menu className='h-6 w-6' />;
-=======
             aria-label={t('general.toggle_mobile_menu')}
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
           </button>;
         </div>;
@@ -526,16 +398,6 @@ if ( {) {
       {mobileMenuOpen && (;
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>;
           <div
-<<<<<<< HEAD
-            className='absolute inset-0 bg-black/50 backdrop-blur-sm'
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden='true'          />;
-          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>;
-            <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={returnToPath => setLoginOpen(true)}            />;
-=======
 
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -694,12 +556,8 @@ setLoginOpen (true)
 }/> </div> </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
-<<<<<<< HEAD
-  unreadCount
-=======
 
   unreadCount 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -774,11 +632,7 @@ setLoginOpen (true)
   )}
 '"`
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
@@ -803,7 +657,6 @@ setLoginOpen (true)
               unread_count={unread_count}
               on_close={() => setMobileMenuOpen (false)}
               openLoginModal={returnToPath => setLoginOpen (true)}            />;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </div>;
       )}
@@ -812,116 +665,4 @@ setLoginOpen (true)
     </>
   )
 }
-<<<<<<< HEAD
-}}
-              transition={{ duration: 0.3 }}";
-              className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">";
-              <div className="px - 4 py - 6 space - y-4">;
-                {services.map ((category, index) => (
-                  <div key={index}>";
-                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">;
-                      {category.category}
-                    </h3>"
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
-                        <Link
-                          key={serviceIndex}
-                          to={service.path}"
-                          className="block text-gray-300 hover:text-white transition-colors duration-200"
-                          onClick={( setIsOpen(false)}
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link                    to="/solutions"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Solutions
-                  </Link>
-                  <Link                    to="/about"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link                    to="/blog"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Blog
-                  </Link>
-                  <Link                    to="/contact"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </nav>
-    </header>
-  )}
-'"`
-}
-                    </h3>";
-                    <div className="space - y-2 ml - 4">;
-                      {category.items.map ((service: unknown, service_index: unknown;
-                        <Link;
-                          key={service_index}
-                          to={service.path}";
-                          className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                          on_click={( setIsOpen (false)}
-                        >;
-                          {service.name}
-                        </Link>))}
-                    </div>;
-                  </div>))}
-                <div className="pt - 4 border - t border - white / 10 space - y-2">;
-                  <Link                    to="/solutions";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Solutions;
-                  </Link>;
-                  <Link                    to="/about";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    About;
-                  </Link>;
-                  <Link                    to="/blog";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Blog;
-                  </Link>;
-                  <Link                    to="/contact";
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200";
-                    on_click={: unknown setIsOpen (false)}
-                  >;
-                    Contact;
-                  </Link>;
-                </div>;
-              </div>;
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-    </header>)}
-'"`;
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

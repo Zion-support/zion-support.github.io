@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function ApiPerformanceTestingPage() {
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
-export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-=======
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -23,8 +5,6 @@ export default function ApiPerformanceTestingPage() {
     'CI checks and PR annotations',
     'Synthetic traffic for staging',;
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function ApiPerformanceTestingPage() {;
   const features = [;
@@ -153,25 +133,6 @@ export default function ApiPerformanceTestingPage() {;
               Market references:{' '}
               <a
                 className='underline hover:text-cyan-300'
-<<<<<<< HEAD
-                href='https://k6 && k6.io/pricing/'
-                target='_blank'
-                rel='noreferrer'>;
-                Grafana k6;
-              </a>;
-              ,{' '}
-              <a
-                className='underline hover:text-cyan-300'
-                href='https://www && www.loadmill.com/pricing'
-                target='_blank'
-                rel='noreferrer'>;
-                Loadmill;
-              </a>;
-              ,{' '}
-              <a
-                className='underline hover:text-cyan-300'
-                href='https://www && www.blazemeter.com/pricing'
-=======
                 href='https://k6.io/pricing/'
                 target='_blank'
                 rel='noreferrer'
@@ -191,7 +152,6 @@ export default function ApiPerformanceTestingPage() {;
               <a
                 className='underline hover:text-cyan-300'
                 href='https://www.blazemeter.com/pricing'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 target='_blank'
                 rel='noreferrer'
               >
@@ -201,27 +161,12 @@ export default function ApiPerformanceTestingPage() {;
             </p>
           </div>
 <div className='mt-14 flex flex-wrap items-center gap-4'>
-<<<<<<< HEAD
-                BlazeMeter;
-              </a>;
-              .;
-            </p>;
-          </div>;
-
-          <div className='mt-14 flex flex-wrap items-center gap-4'>;
-            <Link
-              href='/contact'
-              className='px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold'>;
-              Talk to Sales;
-            </Link>;
-=======
             <Link
               href='/contact'
               className='px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold'
             >
               Talk to Sales
             </Link>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <a
               href='mailto:kleber@ziontechgroup.com'
               className='px-5 py-3 rounded-lg border border-white/20'
@@ -234,42 +179,20 @@ export default function ApiPerformanceTestingPage() {;
       </section>
     </div>
   );
-<<<<<<< HEAD
-	const features = [
-		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	];
 
-=======
-<<<<<<< HEAD
-=======
-=======
-
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 	return (
 		<div className="relative isolate">
 			<section className="px-6 lg:px-10 py-16 lg:py-24">
 				<div className="max-w-6xl mx-auto">
 					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">API Performance Testing</h1>
 					<p className="mt-4 text-gray-300 max-w-3xl">Load, latency, reliability and regression testing for APIs with synthetic traffic generation, SLO tracking, distributed load injectors, and CI/CD integration. Benchmark providers, catch performance drift, and ship with confidence.</p>
-<<<<<<< HEAD
-
-					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-						{[
-							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },
-							{ title: 'SLO Dashboards', desc: 'Track p50/p95/p99 latency, error budgets, and throughput trends over time.' };
-							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' };
-							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
-							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' };
-=======
 					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
 							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },
@@ -277,24 +200,17 @@ export default function ApiPerformanceTestingPage() {
 							{ title: 'Protocol Coverage', desc: 'HTTP/REST, GraphQL, gRPC, WebSocket, and streaming APIs.' },
 							{ title: 'Regression Gates', desc: 'Fail builds when latency regresses beyond thresholds or budgets are exhausted.' },
 							{ title: 'Realistic Traffic', desc: 'Custom scenarios, auth flows, test data seeding, and user think time.' },
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 							{ title: 'Reports & Export', desc: 'Beautiful HTML/CSV exports, signed artifacts, and webhook notifications.' }].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
-<<<<<<< HEAD
-						))}
-					</div>
-
-=======
 						))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 					</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 					<div className="mt-14">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -316,44 +232,15 @@ export default function ApiPerformanceTestingPage() {
 						</div>
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://k6.io/pricing/" target="_blank" rel="noreferrer">Grafana k6</a>, <a className="underline hover:text-cyan-300" href="https://www.loadmill.com/pricing" target="_blank" rel="noreferrer">Loadmill</a>, <a className="underline hover: text-cyan-300" href="https://www.blazemeter.com/pricing" target="_blank" rel="noreferrer">BlazeMeter</a>.</p>
 					</div>
-<<<<<<< HEAD
-
-					<div className="mt-14 flex flex-wrap items-center gap-4">
-						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold">Talk to Sales</Link>
-						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
-=======
 					<div className="mt-14 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold">Talk to Sales</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</Link>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 						<span className="text-gray-400">Call: +1 302 464 0950</span>
 					</div>
 				</div>
 			</section>
 		</div>
 	)
-<<<<<<< HEAD
-}
-<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
-            >;
-              Talk to Sales;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
-            </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </div>);
-;
-=======
 import React from 'react';
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
@@ -421,9 +308,3 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

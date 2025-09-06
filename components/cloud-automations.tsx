@@ -1,50 +1,9 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useEffect, useState } from 'react';
-export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any>(null);
-  useEffect(() => {;
-    fetch('/api/cloud-automations-status');
-      .then(r => r && r.json());
-      .then(setData);
-      .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
-      .then(setData);
-      .catch(() => setData({ ok: false }));
-=======
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
-=======
 export default function CloudAutomationsPage() {;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
@@ -53,8 +12,6 @@ export default function CloudAutomationsPage() {
       .then(setData)
       .catch(() => setData({ ok: false }))
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }, []);
 
   const items = data?.data ? Object && Object.entries(data && data.data) : [];

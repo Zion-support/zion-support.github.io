@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import { createClient  } from '@supabase/supabase-js';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createClient  } from '@supabase/supabase-js';
-=======
 import {createClient} from '@supabase/supabase-js';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
 import path from 'path',
@@ -22,9 +13,6 @@ const {
 if (!SUPABASE_URL |!SUPABASE_SERVICE_ROLE_KEY |!OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY')
   process.exit(1)
-<<<<<<< HEAD
-=======
-=======
 import { createClient } from '@supabase/supabase-js',;
 import fs from 'fs/promises',;
 import { createReadStream } from 'fs',;
@@ -39,12 +27,6 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
 async function fetchData() {
@@ -136,21 +118,8 @@ async function createFineTune(filePath) {
       model: 'gpt-3.5-turbo'
     })
 
-<<<<<<< HEAD
-  })
-  const job = await jobRes.json()
-
-  console.log('Fine-tune job created:', job.id)
-=======
-=======
   }),
   const job = await jobRes.json(),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  console.log('Fine-tune job created:', job.id)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -180,12 +149,6 @@ async function createFineTune(filePath) {;
   }),;
   const job = await jobRes.json(),;
   // // // console.log('Fine-tune job created:', job.id);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 async function main() {
 
@@ -195,37 +158,12 @@ async function main() {
 
   await createFineTune('training-data.jsonl')
 }
-<<<<<<< HEAD
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-
-});
-
-}),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-main().catch((err) => {
-  console.error('Training workflow failed', err)
-
-});
-
-  console && console.error('Training workflow failed', err)
-=======
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 main().catch((err) => {;
   console.error('Training workflow failed', err);
 });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

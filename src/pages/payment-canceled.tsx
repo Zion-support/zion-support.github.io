@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Button } from '@/components/ui/button'
-import { useRouter } from 'next/router'; // Changed from useNavigate
-
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Button } from '@/components/ui/button'
-=======
 import React from 'react';
 import { Button } from '@/components/ui/button';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 
@@ -20,14 +7,7 @@ import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {
@@ -42,15 +22,7 @@ export default function PaymentCanceled() {
         <p className="text-zion-slate-light mb-6">
           Your payment process was canceled. No charges have been made to your account.
         </p>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="flex flex-col space-y-3">
           <Button
             onClick={(,) => router.push('/payments')} // Changed to router.push
@@ -58,26 +30,11 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          <Button
-            variant="outline"
-            onClick={() => router.push('/dashboard')} // Changed to router.push
-            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-export default function PaymentCanceled() {
-<<<<<<< HEAD
-=======
-=======
           <Button 
             variant="outline";
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -108,8 +65,6 @@ export default function PaymentCanceled() {;
     </div>
   );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
-<<<<<<< HEAD
-=======
             Try Again
           </Button>
           
@@ -118,37 +73,12 @@ export default function PaymentCanceled() {;
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
           >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Return to Dashboard
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>
-  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-          >
-            Return to Dashboard
-          </Button>
-        </div>
-      </div>
-  )
-      </div>
-  )
-}
-<<<<<<< HEAD
-=======
 ;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   )
       </div>
   )
@@ -172,22 +102,10 @@ export default function PaymentCanceled() {;
       </div>
   );
 }
-<<<<<<< HEAD
+;
       </div>);
       </div>);
 }
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-      </div>);
-      </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

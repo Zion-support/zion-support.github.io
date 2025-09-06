@@ -1,37 +1,10 @@
 import React from 'react';
 
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
-import { Skeleton } from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Card, CardContent} from "@/components/ui/card";
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Card, CardContent } from "@/components/ui/card",
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-import { Skeleton } from "@/components/ui/skeleton";
-import { formatDistanceToNow } from "date-fns";
-=======
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -108,8 +81,6 @@ export function AnalyticsSummary() {
         title="Last Updated"
         value={
           isLoading ? (
-<<<<<<< HEAD
-=======
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />
           ) : stats?.lastUpdated ? (
             formatDistanceToNow(stats.lastUpdated, { addSuffix: true })
@@ -117,19 +88,6 @@ export function AnalyticsSummary() {
         }
         icon={
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-<<<<<<< HEAD
-        }
-      />
-    </div>
-  )
-<<<<<<< HEAD
-}
-interface StatCardProps {
-  title: string
-  value: React.ReactNode
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -145,7 +103,6 @@ export function AnalyticsSummary() {;
         .from('analytics_events');
         .select('count');
         .eq('event_typepage_view');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .single();
       if (pageViewsError && pageViewsError.code !== 'PGRST116') throw pageViewsError;
 
@@ -316,7 +273,6 @@ if (throw lastEventError) {
 
         value={
           isLoading ? (
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Skeleton className="h-8 w-28 bg-zion-blue-light" />;
           ) : stats?.lastUpdated ? (;
             formatDistanceToNow(stats && stats.lastUpdated, { addSuffix: true });
@@ -328,13 +284,6 @@ if (throw lastEventError) {
       />;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface StatCardProps {
   title: string

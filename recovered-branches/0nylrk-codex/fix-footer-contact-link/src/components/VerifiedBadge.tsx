@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react';
-import { CheckCircle  } from 'lucide-react';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-interface VerifiedBadgeProps {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   verified: boolean,
   size?: 'sm' | 'md' | 'lg'
 }
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {;
   if (!verified) return null;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { CheckCircle } from 'lucide-react',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
@@ -27,8 +13,6 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   verified: boolean
   size?: 'sm' | 'md' | 'lg'

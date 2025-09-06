@@ -1,24 +1,18 @@
 
 import React from "react";
 import { Quote } from "lucide-react";
-<<<<<<< HEAD
-=======
 import {
-<<<<<<< HEAD
-=======
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 import React from "react",
 import { Quote } from "lucide-react",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
 
   Carousel
@@ -81,50 +75,11 @@ export function EnterpriseTestimonials() {;
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
-<<<<<<< HEAD
-                      />;
-                    </div>;
-                    <div>;
-                      <p className="font-bold">{testimonial && testimonial.author}</p>;
-                      <p className="text-sm text-muted-foreground">;
-                        {testimonial && testimonial.title}, {testimonial && testimonial.company}
-import React from './react';
-import { Quote  } from './lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components / ui / carousel';
-=======
                       />
                     </div>
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </div>
-    </section>;
-  );
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -178,13 +133,7 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 const testimonials = [;
   {

@@ -28,21 +28,8 @@ import {;
   Globe,;
   Smartphone,;
   Zap,;
-<<<<<<< HEAD
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -809,73 +796,16 @@ export default function SEOAnalyzerToolPage() {;
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="flex items-start space-x-6">;
-                  <div className="relative">;
-                    <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${feature && feature.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
-                      {feature && feature.icon}
-                    </div>;
-                    <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${feature && feature.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />;
-                  </div>;
-                  <div className="flex-1">;
-                    <h3 className="text-2xl font-bold mb-4 text-white">;
-                      {feature && feature.title}
-                    </h3>;
-                    <p className="text-gray-400 leading-relaxed">;
-                      {feature && feature.description}
-                    </p>;
-                  </div>;
-                </div>;
-              </Card>;
-                      {feature.icon}
-                    </div>;
-                    <div className={`absolute -inset - 2 bg - gradient - to - r from - transparent via-${feature.gradient} to - transparent rounded - 2xl opacity - 0 group - hover:opacity - 20 transition - opacity duration - 300 blur - sm`} />;
-                  </div>;
-                  <div className="flex - 1">;
-                    <h3 className="text - 2xl font - bold mb - 4 text - white">;
-                      {feature.title}
-                    </h3>;
-                    <p className="text - gray - 400 leading - relaxed">;
-                      {feature.description}
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </p>
                   </div>
                 </div>
               </Card>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* SEO Factors Section */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Factors Section */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Comprehensive SEO Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -929,33 +859,7 @@ export default function SEOAnalyzerToolPage() {;
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="flex items-center mb-6">;
-                  <div className="text-3xl mr-4">{category && category.icon}</div>;
-                  <h3 className={`text-xl font-bold ${category && category.color}`}>{category && category.category}</h3>;
-                </div>;
-                <ul className="space-y-3">;
-                  {category && category.factors.map((factor, factorIndex) => (;
-                    <li key={factorIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />;
-                      {factor}
-                    </li>;
-                  ))}
-                </ul>;
-              </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Demo Analysis Results */}
       {analysisResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -1154,14 +1058,7 @@ export default function SEOAnalyzerToolPage() {;
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue && issue.priority}</div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </Card>
-            </div>
-=======
 
-=======
 
               {/* Issues */}
               <Card className="border-gradient-green">
@@ -1180,7 +1077,6 @@ export default function SEOAnalyzerToolPage() {;
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
-=======
               {/* Issues */}
               <Card className='border-gradient-green'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1205,14 +1101,7 @@ export default function SEOAnalyzerToolPage() {;
 
                       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
                 </div>;
@@ -1220,14 +1109,7 @@ export default function SEOAnalyzerToolPage() {;
             </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
               <Card className='border-gradient-green'>;
@@ -1286,10 +1168,7 @@ export default function SEOAnalyzerToolPage() {;
                         </span>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-=======
 
-=======
 
               <Card className="border-gradient-green">
                 <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
@@ -1310,17 +1189,9 @@ export default function SEOAnalyzerToolPage() {;
 
                           {keyword.difficulty}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                       </div>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
             <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
@@ -1518,23 +1389,8 @@ export default function SEOAnalyzerToolPage() {;
               </Card>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        </section>;
-      )}
-      {/* Pricing Section */}
-      <section id='pricing' className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1605,8 +1461,6 @@ export default function SEOAnalyzerToolPage() {;
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
-<<<<<<< HEAD
-=======
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
                     <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -1614,72 +1468,17 @@ export default function SEOAnalyzerToolPage() {;
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    {plan.name}
-                  </h3>
-                  <div className='mb-6'>
-                    <span className='text-4xl font-bold text-white'>
-                      {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
                 </ul>
                 <Button
                   href='/contact'
                   size='lg'
-<<<<<<< HEAD
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact";
-                  size="lg";
-                  className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-              </Card>;
-=======
 
-=======
                       {feature}
                     </li>
                   ))}
@@ -1693,7 +1492,6 @@ export default function SEOAnalyzerToolPage() {;
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-=======
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
@@ -1702,38 +1500,12 @@ export default function SEOAnalyzerToolPage() {;
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='container-cursor text-center relative z-10'>;
-          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>;
-          </h2>;
-          <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
-            Join thousands of businesses using our SEO analyzer to improve their;
-            search rankings and drive more organic traffic.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1742,19 +1514,12 @@ export default function SEOAnalyzerToolPage() {;
 
 
             Ready to Improve Your SEO Rankings?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
             search rankings and drive more organic traffic.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               size='lg'
@@ -1776,38 +1541,8 @@ export default function SEOAnalyzerToolPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-}
-              className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'>              href="/contact";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl";
-              Schedule Demo;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
   );
+}
 }
   );
 }
-    </>);
-}
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

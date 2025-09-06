@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Layout from "../components/Layout";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
-
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 export default function AIServices() {
   return (
 <Layout
@@ -115,20 +94,6 @@ function AIServices() {
       </div>;
     </Layout>;
   );
-<<<<<<< HEAD
-}
-}
-    </Layout>);
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -319,10 +284,7 @@ export default function AIServices() {
           </section>
 
           {/* Category Filter */}
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react';
 import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
@@ -369,7 +331,6 @@ export default function AIServices() {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
@@ -633,57 +594,11 @@ export default function AIServices() {
         </main>
       </ErrorBoundary>
     </>
-<<<<<<< HEAD
-  )
-}
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Link from 'next/link';
-export default function AIServicesPage() {
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <SEO title="AI Services | Zion Tech Group" description="LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing." canonical="https://ziontechgroup.com/ai-services/" />
-      <div className="container mx-auto px-4 py-24 text-white">
-        <div className="max-w-5xl mx-auto space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">AI Services</h1>
-          <p className="text-gray-300 text-lg">Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className="text-cyan-400 underline" href="/market-pricing">Market Pricing</Link> for typical vendor benchmarks.</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: 'RAG & Vector Search', href: '/vector-search-starter' },
-              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },
-              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },
-              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
-              { title: 'AI Customer Service', href: '/ai-customer-service' },
-              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
-              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
-                <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
-              </Link>
-            ))}
-          </div>
-          <div className="text-sm text-gray-400">Questions? <Link className="text-cyan-400 underline" href="/contact">Contact us</Link>.</div>
-        </div>
-      </div>
-    </UltraAdvancedFuturisticBackground>
-  )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 }
 
-=======
 
->>>>>>> origin/automation-improvements-final
 }
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     </Layout>);
 }
 
@@ -823,9 +738,3 @@ export default function AIServicesPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

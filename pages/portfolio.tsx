@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-
-import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Rocket
-  Brain
-  Atom
-  Shield
-  Cloud
-  BarChart3
-  ArrowRight
-  ExternalLink
-  Star
-  Users
-  Clock
-  TrendingUp;
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
@@ -160,8 +127,6 @@ export default function PortfolioPage() {
       ? projects
       : projects.filter(project => project.category === selectedCategory);
 
-=======
-=======
   Rocket,
   Brain,
   Atom,
@@ -174,13 +139,10 @@ export default function PortfolioPage() {
   Users,
   Clock,;
   TrendingUp,;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -189,10 +151,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function PortfolioPage() {
   const projects = [
     {
@@ -487,9 +445,6 @@ export default function PortfolioPage() {;
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
-<<<<<<< HEAD
-=======
-=======
         <meta name="description" content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions." />
         <meta property="og:title" content="Our Work - Zion Tech Group" />
         <meta property="og:description" content="Explore our portfolio of innovative technology projects and solutions." />
@@ -520,12 +475,6 @@ export default function PortfolioPage() {;
   }
 }
             className="mb-8"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Our Work
@@ -592,21 +541,6 @@ export default function PortfolioPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className='py-16 px-6'>
-        <div className='max-w-7xl mx-auto'>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='text-center'
-=======
       {/* Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -818,11 +752,6 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -833,8 +762,6 @@ export default function PortfolioPage(req, res) {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
           </div>;
@@ -842,7 +769,6 @@ export default function PortfolioPage(req, res) {
       </section>;
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Category Filter */}
       <section className='py-8 px-6'>;
         <div className='max-w-7xl mx-auto'>;
@@ -868,42 +794,7 @@ export default function PortfolioPage(req, res) {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {filteredProjects && filteredProjects.map((project, index) => (;
               <motion&& motion.div
                 key={project && project.title}
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                viewport={{ once: true }}
-                className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'>;
-                <div className='p-8'>;
-                  <div className='flex items-center gap-3 mb-4'>;
-                    <div
-                      className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}
-                    >
-                      <project.icon className='w-6 h-6 text-white' />
-                    </div>
-                    <span className='text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full'>
-                      {project.category}
-                    </span>
-                  </div>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    {project.title}
-                  </h3>
-                  <p className='text-white/70 mb-6'>{project.description}</p>
-                  <div className='mb-6'>
-                    <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
-                      Technologies
-                    </h4>
-                    <div className='flex flex-wrap gap-2'>
-                      {project.technologies.map(tech => (
-                        <span
-                          key={tech}
-                          className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'>                          {tech}
-                        </span>;
-                      ))}
-                      ))}
-=======
 
-=======
 
       {/* Projects Grid */}
       <section className="py-20 px-6">
@@ -937,17 +828,11 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
                       <project.icon className="w-6 h-6 text-white" />
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   </div>
                   <div className='mb-6'>
@@ -971,28 +856,12 @@ export default function PortfolioPage(req, res) {
                           <div className='w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2' />                          {result}
                         </li>;
                       ))}
-<<<<<<< HEAD
-                      ))}
-                    </ul>
-                  </div>
-                  <div className='flex items-center justify-between'>
-                    <span className='text-sm text-white/60'>
-                      Client: {project.client}
-                    </span>
-                    <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>                      View Details
-=======
 
                   
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </button>
                   </div>
                 </div>
@@ -1026,12 +895,6 @@ export default function PortfolioPage(req, res) {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-=======
 
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -1053,12 +916,6 @@ export default function PortfolioPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Start Your Project?
@@ -1079,19 +936,8 @@ export default function PortfolioPage(req, res) {
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-)
-</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-)
-</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
-=======
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -1423,37 +1269,6 @@ export default function PortfolioPage(req, res) {
         </div>;
       </section>;
       <EnhancedFooter />;
-<<<<<<< HEAD
-    </div>),
-</Head> <EnhancedNavigation /> > <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6" > Our Work </h1> <p className="text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text - lg text - white / 70 max - w-2xl mx - auto mb - 8" > Discover how we've helped organizations leverage cutting - edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w - 16 h - 16 bg - gradient - to - br from - blue - 500 / 20 to - cyan - 500 / 20 rounded - 2xl flex items - center justify - center mx - auto mb - 4" > <stat.icon className="w - 8 h - 8 text - cyan - 400" /> </div> </motion.div>) );
-}</div> </div> </section> key= {
-  category;
-}on_click= {
-  () => setSelectedCategory (category);
-}className= {
-  `px - 6 py - 3 rounded - full font - semibold transition - all duration - 300 $ {
-  selected_category === category ? 'bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white': 'bg - white / 5 text - white / 70 hover:bg - white / 10 hover:text - white';
-}`;
-}> {
-  category;
-}</button>) );
-}</div> </div> </section> </span>) );
-}</div> </div> </li>) );
-}</ul> </div> View Details </button> </div> </div> </motion.div>) );
-}</div> </div> </section> <motion.div initial= {
-  {
-  opacity: 0, coordinate_y: 30;
-}whileInView= {
-  {
-  opacity: 1, coordinate_y: 0;
-}transition= {
-  {
-  duration: 0.8;
-}viewport= {
-  {
-  once: true;
-}> <h2 className="text - 4xl font - bold text - white mb - 6" > Ready to Start Your Project? </h2> <p className="text - xl text - white / 70 mb - 8 max - w-2xl mx - auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>);
-=======
 
     </div>;
   );
@@ -1463,9 +1278,3 @@ export default function PortfolioPage(req, res) {
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

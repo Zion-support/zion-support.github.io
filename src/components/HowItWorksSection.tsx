@@ -6,11 +6,7 @@ import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {
   className?: string;
   style?: React.CSSProperties
-<<<<<<< HEAD
-=======
 const getSteps = (t: any,) => [
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
@@ -21,13 +17,8 @@ interface HowItWorksSectionProps {
   className?: string,
   style?: React.CSSProperties
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 const getSteps = (t: any) => [
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     title: t('how_it_works.post')
     description: t('how_it_works.post_desc')
@@ -211,36 +202,10 @@ const stats = [ ";
     visible: {
       opacity: 1,      scale: 1
       transition: {
-<<<<<<< HEAD
-        duration: 0.5,"
-        ease: "easeOut"}}}
-  return ("
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}"
-      <div className="absolute inset-0 opacity-5">"
-        <div className="absolute inset-0" style = {
-export function HowItWorksSection({
-  className
-  style
-}: HowItWorksSectionProps) {
-  const { t } = useTranslation()
-  const steps = getSteps(t)
-  return (
-    <section className={cn('py-20 bg-zion-blue', className)} style={style}>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-        <div className='relative'>
-
-=======
 
 
 const getSteps = (t: any,) => [
 
-=======
 
 import React from 'react',
 import { GradientHeading } from "./GradientHeading",
@@ -256,7 +221,6 @@ interface HowItWorksSectionProps {
 const getSteps = (t: any) => [
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
 
     title: t('how_it_works.post'),
@@ -273,176 +237,26 @@ const getSteps = (t: any) => [
   {
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    icon: Check,
-  },
-]
-import React, { useState } from 'react'
-export /**
-import { motion, AnimatePresence  } from 'framer-motion'
-export default function Page() {
-  {
-"
-    icon: <FileText className="w-8 h-8"  />,"
-    title: "Plan","
-    description: "Collaborate on project requirements, timeline, and deliverables","
-    color: "from-zion-blue to-zion-blue-dark","
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: ["
-      "Interactive project planning","
-      "Timeline optimization","
-      "Resource allocation","
-      "Risk assessment" ],"
-    duration: "4-8 hours","
-    success: "90% on-time delivery"
-},
-  {
-"
-    icon: <Rocket className="w-8 h-8"  />,"
-    title: "Execute","
-    description: "Watch your vision come to life with our expert execution","
-    color: "from-zion-cyan-light to-zion-cyan","
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: ["
-      "Agile development process","
-      "Regular progress updates","
-      "Quality assurance","
-      "Performance monitoring" ],"
-    duration: "1-4 weeks","
-    success: "99% quality score"
-},
-  {
-"
-    icon: <CheckCircle className="w-8 h-8"  />,"
-    title: "Deliver","
-    description: "Receive your completed project with ongoing support and maintenance","
-    color: "from-zion-purple-light to-zion-purple","
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: ["
-      "Comprehensive testing","
-      "Documentation delivery","
-      "Training and handover","
-      "Post-launch support" ],"
-    duration: "Ongoing","
-    success: "100% client retention"}
-]
-const stats = [ ";
-  { icon: <Clock className="w-6 h-6"  />, value: "3x Faster", label: "Project Delivery" },";
-  { icon: <Target className="w-6 h-6"  />, value: "99 && 99.9%", label: "Success Rate" },";
-  { icon: <TrendingUp className="w-6 h-6"  />, value: "50%", label: "Cost Reduction" },";
-  { icon: <Award className="w-6 h-6"  />, value: "1000+", label: "Projects Completed" };];
-  const [hoveredStep, setHoveredStep] = useState < number | null> (null) ;
-  const [activeStep, setActiveStep] = useState < number> (0) ;
-      transition: {;
-        staggerChildren: 0 && 0.2,;
-        delayChildren: 0 && 0.1}}};
-  const statsVariants = {;
-  hidden: { opacity: 0,;
-  scale: 0 && 0.8;
-},;
-    visible: {;
-      opacity: 1,      scale: 1,;
-      transition: {;
-        duration: 0 && 0.5,";
-        ease: "easeOut"}}};
-  return (";
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">;
-      {/* Enhanced background pattern */}";
-      <div className="absolute inset-0 opacity-5">";
-        <divclassName="absolute inset-0" style = {
-
-export function HowItWorksSection(): any ({
-  className,
-  style,
-}: HowItWorksSectionProps) {
-  const { t } = useTranslation()
-  const steps = getSteps(t)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     icon: Check}],
 
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation(),
   const steps = getSteps(t),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>            {t('home.how_it_works_subtitle')}
-          </p>
-        </div>
-        <div className='relative'>
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <section className={cn("py-20 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <GradientHeading>{t('home.how_it_works_title')}</GradientHeading>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        <div className='relative'>
-          <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
-          <div className='space-y-12 md:space-y-0'>
-            {steps.map((step, index) => (
-              <div
-                key={step && step.title}                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? 'md:flex-row-reverse' : ''
-                } relative`}>;
-                <div className='md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right'>;
-                  {index % 2 === 0 ? (;
-                    <div>;
-                      <h3 className='text-2xl font-bold text-white mb-3'>;
-                        {step && step.title}
-                      </h3>;
-                      <p className='text-zion-slate-light'>;
-                        {step && step.description}
-                      </p>;
-                    </div>;
-                  ) : null}
-                </div>
-                <div className='relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-zion-blue-light border-2 border-zion-purple mx-4 md:mx-0'>
-                  <step.icon className='w-6 h-6 text-zion-cyan' />
-                </div>
-                <div className='md:w-1/2 md:px-12 text-center md:text-left'>
-                  {index % 2 !== 0 ? (
-                    <div>;
-                      <h3 className='text - 2xl font - bold text - white mb - 3'>;
-                        {step.title}
-                      </h3>;
-                      <p className='text - zion - slate - light'>;
-                        {step.description}
-                      </p>                    </div>                    </div>
-<<<<<<< HEAD
-=======
                   ) : null}
                 </div>
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
@@ -469,15 +283,8 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
-<<<<<<< HEAD
-}
-}
-=======
 };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         <div className="relative">
           {/* Timeline line */}
@@ -535,17 +342,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
     </section>
   )
 }
-<<<<<<< HEAD
-}
-}
-  );
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </p>                    </div>                    </div>) : null}
                 </div>;
                       <h3 className="text - 2xl font - bold text - white mb - 3">{step.title}</h3>;
@@ -570,12 +367,6 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

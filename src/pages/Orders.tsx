@@ -1,132 +1,20 @@
-<<<<<<< HEAD
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
-import Link from 'next/link';
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 import Link from 'next/link'; // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-import Link from 'next/link'; // Changed from react-router-dom;
-import { useAuth } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-
-<<<<<<< HEAD
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth  } from '@/hooks/useAuth';
-import { useGetOrdersQuery } from '@/hooks/useOrders';
-import { Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow } from '@/components/ui/table';
-import { Badge  } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {
-=======
   Table
   TableBody
   TableCell
   TableHead
   TableHeader
-=======
-=======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
 import { useGetOrdersQuery } from '@/hooks/useOrders',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Table,
   TableBody,
   TableCell,
-<<<<<<< HEAD
-  TableHead,;
-  TableHeader;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
-
-export default function OrdersPage() {;
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const { user } = useAuth();
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-  
-  const getStatusBadge = (status: string) => {
-    switch (status) {
-      case 'in_escrow':
-        return (
-          <Badge variant='warning' className='flex items-center gap-1'>;
-            <Clock className='h-3 w-3' /> In Escrow;
-          </Badge>;
-        );
-      case 'released':;
-      case 'completed':;
-        return (
-          <Badge variant='success' className='flex items-center gap-1'>;
-            <CheckCircle2 className='h-3 w-3' /> Released;
-          </Badge>;
-        );
-      case 'disputed':;
-        return (
-          <Badge variant='destructive' className='flex items-center gap-1'>
-            <ShieldAlert className='h-3 w-3' /> Disputed
-          </Badge>
-        );
-      default:
-          <Badge variant='destructive' className='flex items-center gap-1'>;
-            <ShieldAlert className='h-3 w-3' /> Disputed;
-          </Badge>;
-        ),;
-      default:;
-        return status;
-    }
-  }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
-import Link from 'next/link', // Changed from react-router-dom
-import { useAuth } from '@/hooks/useAuth',
-import { useGetOrdersQuery } from '@/hooks/useOrders',
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableHead,
   TableHeader,
   TableRow} from '@/components/ui/table',
@@ -139,11 +27,6 @@ export default function OrdersPage() {
 
 
   const getStatusBadge = (status: string) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     switch (status) {
       case 'in_escrow':
         return (
@@ -170,8 +53,6 @@ export default function OrdersPage() {
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className='container max-w-4xl py-10'>
@@ -214,14 +95,6 @@ export default function OrdersPage() {
           icon={<FileText className='h-10 w-10' />}
           title='No Orders'
           description="You haven't purchased anything yet."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         />
       ) : (
         <Table>
@@ -237,16 +110,7 @@ export default function OrdersPage() {
           <TableBody>
             {orders.map(order => (
               <TableRow key={order.orderId}>
-<<<<<<< HEAD
-                <TableCell className='font-medium'>{order.orderId}</TableCell>
-=======
                 <TableCell className="font-medium">{order.orderId}</TableCell>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -260,41 +124,19 @@ export default function OrdersPage() {
                 </TableCell>
               </TableRow>
             ))}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          </TableBody>
-        </Table>
-      )}
-    </div>
-  );
-}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </TableBody>;
         </Table>;
       )}
     </div>;
   );
 }
-<<<<<<< HEAD
-TableRow,
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
 ;
   TableRow,
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '@/components / ui / table';
 import { Badge } from '@/components / ui / badge';
 import Skeleton from '@/components / ui / skeleton';
@@ -398,13 +240,6 @@ function OrdersPage() {
         </Table>)}
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

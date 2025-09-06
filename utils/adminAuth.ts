@@ -1,31 +1,11 @@
-<<<<<<< HEAD
-// Mock admin auth utility
-export function getSessionFromReq(req: any): any {
-  // Mock implementation - in a real app, this would parse JWT or session
-  return null;
-import type { NextApiRequest } from 'next';
-export interface Session {
-  user_id: string;
-=======
-<<<<<<< HEAD
-import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-export interface Session {
-=======
 
 export interface Session {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
 export function getSessionFromReq(req: NextApiRequest): Session | null {
-<<<<<<< HEAD
-  // Mock implementation - replace with actual session logic
-=======
   // Mock implementation - replace with actual session logic;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return null;
@@ -37,18 +17,8 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
   return { userId: 'user-1', email: 'user@zion.os', role: 'user' }
 }
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
-<<<<<<< HEAD
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] |'';
-=======
-<<<<<<< HEAD
-  // Check for internal agent headers or IPs
-  const userAgent = req.headers['user-agent'] |'';
-=======
   // Check for internal agent headers or IPs;
   const userAgent = req.headers['user-agent'] || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
@@ -198,19 +168,7 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
-<<<<<<< HEAD
-}
-;
-=======
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

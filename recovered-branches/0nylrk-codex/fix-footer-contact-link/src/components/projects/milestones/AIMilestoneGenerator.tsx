@@ -19,18 +19,10 @@ interface AIMilestoneGeneratorProps {
 
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
-<<<<<<< HEAD
-export function AIMilestoneGenerator({
-=======
-<<<<<<< HEAD
-export function AIMilestoneGenerator({
-=======
 
 
 
 export function AIMilestoneGenerator({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   scope;
   startDate;
   endDate;
@@ -44,10 +36,6 @@ export function AIMilestoneGenerator({;
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
       return
-<<<<<<< HEAD
-    }
-    const input: MilestoneInput = {
-=======
     }
     const input: MilestoneInput = {
       scope;
@@ -86,14 +74,9 @@ export function AIMilestoneGenerator({;
     } catch (error) {
       return dateString
     }
-<<<<<<< HEAD
-  }
-=======
     }
 
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -132,7 +115,6 @@ export function AIMilestoneGenerator({;
     }
 
     const input: MilestoneInput = {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       scope;
       startDate;
       endDate
@@ -169,19 +151,9 @@ export function AIMilestoneGenerator({;
     } catch (error) {
       return dateString
     }
-<<<<<<< HEAD
-  }
-=======
 
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;

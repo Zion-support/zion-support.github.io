@@ -1,45 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-<<<<<<< HEAD
-interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
-=======
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function ContactFields({ control }: ContactFieldsProps) {
   return (
@@ -66,9 +37,6 @@ function ContactFields() {
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-=======
 
         render={({ field }) => (
           <FormItem>
@@ -78,12 +46,6 @@ function ContactFields() {
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       />
       <FormField
@@ -129,38 +91,7 @@ function ContactFields() {
         )}
       />
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  );
-}
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

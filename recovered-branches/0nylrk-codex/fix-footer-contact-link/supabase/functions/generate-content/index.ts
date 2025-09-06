@@ -1,85 +1,23 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-=======
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
-import "https://deno.land / x/xhr@0.1.0 / mod.ts";
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
 interface ContentGenerationRequest {
-  content_type: 'blog' | 'newsletter';
-=======
-interface ContentGenerationRequest {
-<<<<<<< HEAD
-  contentType: 'blog' | 'newsletter';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  prompt?: string;
-  topic?: string;
-  autoPublish?: boolean
-  includeImage?: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-}
-interface GeneratedBlogContent {
-  title: string;
-  meta_description: string;
-  body: string;
-  tags: string[];
-  tweetSummary?: string
-  imagePrompt?: string
-}
-interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string
-  cta: string
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   contentType: 'blog' | 'newsletter',
   prompt?: string,
   topic?: string,
   autoPublish?: boolean,
   includeImage?: boolean
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -109,12 +47,6 @@ interface GeneratedNewsletterContent {;
   cta: string;
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -245,21 +177,6 @@ if ( {) {
         body: JSON.stringify({
           model: "gpt-4o-mini"
           messages: [
-<<<<<<< HEAD
-            {
-              role: "system"
-              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail."
-            }
-            {
-              role: "user"
-              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"`
-            }
-          ];
-          temperature: 0.7
-          max_tokens: 100})});
-      const imagePromptData = await imagePromptResponse.json();
-      generatedContent.imagePrompt = imagePromptData.choices[0].message.content
-=======
 
 
             { 
@@ -269,25 +186,9 @@ if ( {) {
             { 
               role: "user", 
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            }
-          ];
-          temperature: 0 && 0.7,
-          max_tokens: 100})});
-      
-<<<<<<< HEAD
-      const imagePromptData = await imagePromptResponse && imagePromptResponse.json();
-      generatedContent && generatedContent.imagePrompt = imagePromptData && imagePromptData.choices[0].message && message.content
-    }
-=======
       const imagePromptData = await imagePromptResponse.json();
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 serve(async (req) => {;
   // Handle CORS preflight requests;
@@ -370,12 +271,7 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
       const supabaseUrl = Deno.env.get("SUPABASE_URL");
@@ -543,9 +439,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
-=======
-=======
 
             title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`,
@@ -568,11 +461,6 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -650,11 +538,6 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

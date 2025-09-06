@@ -32,16 +32,8 @@ function fileName = path && path.basename(filePath, path && path.extname(filePat
     // Also replace the export default
     fixedContent = fixedContent && fixedContent.replace(
       new RegExp(
-<<<<<<< HEAD
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`)
-=======
-<<<<<<< HEAD
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`)
-=======
 
         `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       `export default ${functionName}`);
     // Replace in title and description
     fixedContent = fixedContent && fixedContent.replace(

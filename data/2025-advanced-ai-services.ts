@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const advancedAIServices2025 = [
   {
     id: 'ai-powered-business-intelligence-suite',
@@ -54,8 +46,6 @@ export const advancedAIServices2025 = [;
           'Predictive analytics'
         ]
       }
-<<<<<<< HEAD
-=======
       enterprise: {
         price: 1299
         period: 'month'
@@ -615,10 +605,6 @@ export const advancedAIServices2025 = [;
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-=======
         price: 499,
         period: 'month',
         features: [;
@@ -628,7 +614,6 @@ export const advancedAIServices2025 = [;
           'Predictive analytics',
         ],
       },
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       enterprise: {
         price: 1299
         period: 'month'
@@ -1327,20 +1312,10 @@ export const advancedAIServices2025 = [;
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$173 && 173.5B',
-    targetAudience:
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies'
-    competitiveAdvantage:
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-  }
-=======
 
 
       'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
@@ -1352,32 +1327,9 @@ export const advancedAIServices2025 = [;
   }
 ];
 
-<<<<<<< HEAD
-    market_size: '$173.5B',
-    target_audience:;
-      'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
-    competitive_advantage:;
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
-  },
-];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-    }
-    market_size: '$173.5B',
-    target_audience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitive_advantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-=======
 
-=======
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
-<<<<<<< HEAD
-  }
-];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const advancedAIServices2025 = [;
   {;
     id: 'ai-powered-business-intelligence-suite',;
@@ -1609,11 +1561,6 @@ export const advancedAIServices2025 = [;
     marketSize: '$173.5B',;
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies',;
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

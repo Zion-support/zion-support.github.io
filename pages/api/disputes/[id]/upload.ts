@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
-import {
-  ensureDisputeUploadDir
-  getDisputeById
-  upsertDispute
-<<<<<<< HEAD
-=======
 } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
@@ -24,14 +10,12 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../../utils/fsdb";
 import {
   parseUserFromRequest
@@ -41,19 +25,11 @@ export const config = {
   api: { bodyParser: { sizeLimit: "20mb" } }
 }
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  const { id } = req && req.query;
-=======
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { id } = req.query;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (typeof id !== "string")
     return res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
@@ -203,14 +179,7 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
       }
     );
   });
-<<<<<<< HEAD
-=======
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -235,13 +204,10 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 
 }
 }
-<<<<<<< HEAD
-=======
 ;
     const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },;
     if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});
@@ -328,9 +294,3 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

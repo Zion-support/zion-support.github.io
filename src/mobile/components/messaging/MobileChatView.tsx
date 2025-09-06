@@ -1,47 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React, { useState } from 'react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import {
-  Send
-  PaperclipIcon
-  ChevronLeft
-  MoreVertical
-  Video
-  Phone
-} from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { useRouter } from 'next/router'
-import { toast } from 'sonner'
-
-interface Message {
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {;
-  Send,;
-  PaperclipIcon,;
-  ChevronLeft,;
-  MoreVertical,;
-  Video,;
-  Phone,;
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useRouter } from 'next/router';
-import { toast } from 'sonner';
-interface Message {;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   content: string;
   timestamp: string;
@@ -72,13 +28,7 @@ export function MobileChatView({
     if (newMessage.trim() !== '') {
       onSendMessage(newMessage)
       setNewMessage('')
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
@@ -119,13 +69,10 @@ if (!== '') {) {
       onSendMessage (new_message);
       setNewMessage ('');
 
-=======
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {    // Check condition
@@ -164,11 +111,6 @@ export function MobileChatView(): any ({;
     if (newMessage.trim() !== "") {;
       onSendMessage(newMessage),;
       setNewMessage("");
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   };
 
@@ -199,11 +141,6 @@ export function MobileChatView(): any ({;
   };
 
   return (
-<<<<<<< HEAD
-    <div className='flex flex-col h-full pb-safe'>;
-      <header className='sticky top-0 z-10 bg-background border-b border-border'>;
-        <div className='flex items-center h-14 px-4'>;
-=======
 
 
   },
@@ -228,16 +165,10 @@ export function MobileChatView(): any ({;
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
         <div className="flex items-center h-14 px-4">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Button
             variant='ghost'
             size='icon'
@@ -245,17 +176,8 @@ export function MobileChatView(): any ({;
             aria-label='Go back'          >
             <ChevronLeft className='h-5 w-5' />
           </Button>
-<<<<<<< HEAD
-          <div className='flex items-center flex-1 gap-3 mx-2'>
-=======
           
           <div className="flex items-center flex-1 gap-3 mx-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
               <AvatarFallback>
@@ -281,8 +203,6 @@ export function MobileChatView(): any ({;
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-<<<<<<< HEAD
-=======
 
 
               <h3 className="font-medium">{contact.name}</h3>
@@ -291,11 +211,6 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='flex'>
-            <Button
-<<<<<<< HEAD
-=======
               variant='ghost'
               size='icon'
               onClick={startAudioCall}
@@ -306,19 +221,14 @@ export function MobileChatView(): any ({;
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               aria-label='Start video call'            >
               <Video className='h-5 w-5' />
             </Button>
             <Button variant='ghost' size='icon' aria-label='More options'>
               <MoreVertical className='h-5 w-5' />
-<<<<<<< HEAD
-=======
-=======
           
           <div className="flex">
             <Button
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost"
               size="icon"
               onClick={startAudioCall}
@@ -338,12 +248,6 @@ export function MobileChatView(): any ({;
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>
           </div>
         </div>
@@ -388,26 +292,9 @@ export function MobileChatView(): any ({;
               >
 
                 {message.timestamp}
-<<<<<<< HEAD
-                {message.is_me && message.status && (
-                  <span className='ml - 1'>;
-                    {message.status === 'read' ? '' : ''}
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-=======
 
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {message.status === 'read' ? '✓✓' : '✓'}
 
               </div>;
@@ -415,49 +302,16 @@ export function MobileChatView(): any ({;
           </div>;
         ))}
       </div>
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      <div className='sticky bottom-0 bg-background border-t border-border p-2'>
-        <div className='flex items-center gap-2'>
-          <Button variant='ghost' size='icon' aria-label='Attach file'>
-            <PaperclipIcon className='h-5 w-5' />
-<<<<<<< HEAD
-          </Button>
-          <Input
-            value={newMessage}
-            onChange={e => setNewMessage(e && e.target.value)}
-=======
-<<<<<<< HEAD
-          </Button>
-          <Input
-            value={newMessage}
-            onChange={e => setNewMessage(e.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder='Type a message...'
-            className='flex-1'          />
-          <Button
-            size='icon'
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? 'opacity-50' : ''}
-            aria-label='Send message'          >
-            <Send className='h-5 w-5' />
-=======
 
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" aria-label="Attach file">
             <PaperclipIcon className="h-5 w-5" />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
           <Input
             value={newMessage}
-<<<<<<< HEAD
-=======
             onChange={e => setNewMessage(e.target.value)}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
             className='flex-1'          />
@@ -470,8 +324,6 @@ export function MobileChatView(): any ({;
             <Send className='h-5 w-5' />
           </Button>
         </div>
-<<<<<<< HEAD
-=======
 
       </div>;
 
@@ -481,10 +333,8 @@ export function MobileChatView(): any ({;
             <PaperclipIcon className='h-5 w-5' />;
           </Button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             value={newMessage}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -493,13 +343,8 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </Button>
         </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </div>
     </div>
   )
@@ -533,17 +378,6 @@ export function MobileChatView(): any ({;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

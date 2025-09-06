@@ -4,45 +4,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2
-  Crown
-  Award
-  Target
-  Users
-  Clock
-  Globe2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-
-=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -76,7 +37,6 @@ import {
   Clock,;
   Globe2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -715,16 +675,8 @@ export default function Revolutionary2028Pricing() {;
                       ))}
                     </ul>;
 
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -734,25 +686,13 @@ export default function Revolutionary2028Pricing() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
 
           </div>;
         </div>;
       </section>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -874,25 +814,7 @@ export default function Revolutionary2028Pricing() {;
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-                    className="group relative"
-                  >
-                    <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <div className="relative z-10">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="text-3xl">{service.icon}</div>
-                          <div className="text-right">
-                            <div className="text-xl font-bold text-purple-400">{service.price}</div>
-                            <div className="text-sm text-purple-300">{service.period}</div>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           </div>
                         </div>
                         <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
@@ -925,39 +847,14 @@ export default function Revolutionary2028Pricing() {;
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </section>
-      {/* Value Proposition */}
-      <section className='py-20 bg-black/50'>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Why Choose{' '}
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
-                Our Pricing
-              </span>
-=======
 
         </div>;
       </section>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Value Proposition */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -1075,33 +972,12 @@ export default function Revolutionary2028Pricing() {;
             </p>;
           </div>;
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <motion&& motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1149,16 +1025,7 @@ export default function Revolutionary2028Pricing() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1207,16 +1074,7 @@ export default function Revolutionary2028Pricing() {;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1269,42 +1127,21 @@ export default function Revolutionary2028Pricing() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
-<<<<<<< HEAD
-=======
 
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='space-y-8'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Get Started
@@ -1316,8 +1153,6 @@ export default function Revolutionary2028Pricing() {;
               services to gain competitive advantages and drive innovation.
             </p>
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>
-<<<<<<< HEAD
-=======
               <Link
                 href='/contact'
                 className='px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2'
@@ -1351,21 +1186,7 @@ export default function Revolutionary2028Pricing() {;
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
-);
-}
-
-              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               We offer the best value in the market with transparent pricing and unmatched features.;
@@ -1468,7 +1289,6 @@ export default function Revolutionary2028Pricing() {;
               Ready to{' '}
               <span className='bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent'>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Get Started;
               </span>;
               ?;
@@ -1584,18 +1404,10 @@ export default function Revolutionary2028Pricing() {;
       <UltraFuturisticFooter2028 />;
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
-=======
 
     </>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-import * as React from 'react';
-import * as SliderPrimitive from '@radix-ui/react-slider';
-import {cn} from '@/lib/utils';
-=======
-<<<<<<< HEAD
-import * as React from 'react';
-import * as SliderPrimitive from '@radix-ui/react-slider';
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
-=======
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-=======
-=======
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
@@ -66,10 +47,6 @@ const Slider = React.forward_ref<;
 Slider.display_name = SliderPrimitive.Root.display_name,
 export { Slider }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       "relative flex w-full touch-none select-none items-center",
 
@@ -86,16 +63,5 @@ export { Slider }
 ))
 Slider.displayName = SliderPrimitive.Root.displayName
 
-<<<<<<< HEAD
 export { Slider }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export { Slider };
-=======
-export { Slider }
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

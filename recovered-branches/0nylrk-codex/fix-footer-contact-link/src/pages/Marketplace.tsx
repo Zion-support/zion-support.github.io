@@ -1,34 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {Grid3X3, ListFilter} from "lucide-react";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {FilterSidebar} from "@/components/search/FilterSidebar";
-import {ActiveFiltersBar} from "@/components/search/ActiveFiltersBar";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions} from "@/data/marketplaceData";
-import {toast} from "@/hooks/use-toast";
-import {useNavigate} from "react-router-dom";
-import {SearchSuggestion} from "@/types/search";
-import {AppLayout} from "@/layout/AppLayout";
-export default function Marketplace() {;
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -45,39 +15,17 @@ import { useNavigate } from "react-router-dom",
 import { SearchSuggestion } from "@/types/search";
 import { AppLayout } from "@/layout/AppLayout";
 export default function Marketplace() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions()
-  const filterOptions = generateFilterOptions();
-<<<<<<< HEAD
-=======
-=======
   const navigate = useNavigate(),
   const [searchQuery, setSearchQuery] = useState(""),
   const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter
@@ -85,8 +33,6 @@ export default function Marketplace() {
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
-<<<<<<< HEAD
-=======
 
 
 import React, { useState } from "react",;
@@ -120,12 +66,6 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
       return false;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -302,42 +242,19 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
-<<<<<<< HEAD
-=======
 
-=======
             id: listing.id,;
             title: listing.title,;
             category: listing.category,;
             image: listing.images?.[0];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       });
     }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -429,19 +346,9 @@ if ( {) {
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
-<<<<<<< HEAD
-              </p>
-            </div>
-=======
 
 
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

@@ -1,33 +1,8 @@
 
-<<<<<<< HEAD
 import React from "react",
 import { cn } from "@/lib/utils",
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-=======
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -48,35 +23,22 @@ interface EmptyStateProps {
   }
   className?: string
 }
-<<<<<<< HEAD
-export function EmptyState({
-=======
-<<<<<<< HEAD
-=======
 
 export function EmptyState(): any ({;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   icon;
   title;
   description;
   action;
   secondaryAction;
   className}: EmptyStateProps) {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EmptyState({
   icon,
   title,
   description,
   action,
   secondaryAction,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: EmptyStateProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div
 
@@ -98,19 +60,9 @@ export function EmptyState({
               <Link to={action.href}>{action.text}</Link>
             </Button>
           ) : (
-<<<<<<< HEAD
-            <Button
-              size="lg"
-              className="bg-zion-purple hover:bg-zion-purple-light"
-=======
             <Button 
               size="lg" 
               className="bg-zion-purple hover:bg-zion-purple-light"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { Button } from "@/components/ui/button",;
@@ -148,26 +100,6 @@ export function EmptyState({;
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
         {icon}
-<<<<<<< HEAD
-      </div>
-      <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>
-      <p className="text-zion-slate text-lg mb-8 max-w-md">{description}</p>
-      <div className="flex flex-col sm:flex-row gap-4">
-        {action && (
-          action.href ? (
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-light">
-              <Link to={action.href}>{action.text}</Link>
-            </Button>
-          ) : (
-            <Button
-              size="lg"
-              className="bg-zion-purple hover:bg-zion-purple-light"
-              onClick={action && action.onClick}>;
-              {action && action.text}
-            </Button>;
-          );
-        )}
-=======
 
       </div>;
       <h3 className="text-2xl font-semibold text-white mb-3">{title}</h3>;
@@ -183,11 +115,6 @@ export function EmptyState({;
             <Button;
               size="lg";
               className="bg-zion-purple hover:bg-zion-purple-light";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               onClick={action.onClick}
             >
               {action.text}
@@ -198,7 +125,6 @@ export function EmptyState({;
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {secondaryAction && (
           secondaryAction.href ? (
             <Button asChild variant="outline" size="lg" className="border-zion-blue-light hover:bg-zion-blue-light">

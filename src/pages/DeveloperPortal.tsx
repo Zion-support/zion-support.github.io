@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import {
@@ -28,21 +20,6 @@ interface TabDefinition {
   label: string;
   icon: LucideIcon
 export function DeveloperPortal() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
-  // Define the tabs
-  const tabs: TabDefinition[] = [
-    { id: 'documentation', label: 'Documentation', icon: BookOpen }
-    { id: 'api-keys', label: 'API Keys', icon: Key }
-    { id: 'webhooks', label: 'Webhooks', icon: Webhook }
-    { id: 'logs', label: 'Logs', icon: List }
-  ]
-=======
-<<<<<<< HEAD
-  const { user } = useAuth();
-=======
   const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>('documentation')
   // Define the tabs
@@ -52,8 +29,6 @@ export function DeveloperPortal() {
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
     { id: 'logs', label: 'Logs', icon: List },
   ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
     { id: "documentation", label: "Documentation", icon: BookOpen },
@@ -62,7 +37,6 @@ export function DeveloperPortal() {
     { id: "logs", label: "Logs", icon: List }],
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
 
     <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
@@ -75,8 +49,6 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-<<<<<<< HEAD
-=======
 
 
 import { useState } from "react";
@@ -106,10 +78,6 @@ export function DeveloperPortal() { const { user  } = useAuth(),
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
@@ -121,11 +89,9 @@ export function DeveloperPortal() { const { user  } = useAuth(),
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
-=======
 
 
       
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Tabs */}
       <div className='border-b border-zinc-800 mb-8'>
         <div className='flex flex-wrap -mb-px'>
@@ -264,37 +230,10 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
 
-<<<<<<< HEAD
-      {/* Tab content */}
-      <div>;
-        {activeTab === 'documentation' && <ApiDocumentation />}
-        {activeTab === 'api-keys' && <ApiKeysManager />}
-        {activeTab === 'webhooks' && <WebhooksManager />}
-        {activeTab === 'logs' && <ApiLogs />}
-      </div>
-    </div>
-  )
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
-                {tab.label}
-              </button>);
-          })}
-        </div>
-      </div>
-      {/* Tab content */}
-      <div>;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Tab content */}
       <div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
@@ -303,43 +242,19 @@ export function DeveloperPortal() {;
     </div>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-<<<<<<< HEAD
   )
-}
-}
-  )
-}
-  );
-}
-=======
-  )
-<<<<<<< HEAD
-}
-}
-  )
-}
-=======
   )
 
 };
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 
 export default function ProtectedDeveloperPortal() {;
@@ -348,13 +263,8 @@ export default function ProtectedDeveloperPortal() {;
       <DeveloperPortal />;
     </ProtectedRoute>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>;
       </div>;
       {/* Tab content */}
@@ -378,12 +288,6 @@ function ProtectedDeveloperPortal() {
 }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

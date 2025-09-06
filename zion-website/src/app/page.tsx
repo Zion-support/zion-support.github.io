@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  LightBulbIcon
-  CpuChipIcon
-  GlobeAltIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  UserGroupIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline';
-=======
-} from '@heroicons/react/24/outline';
-=======
 import React from 'react';
-=======
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -25,14 +8,8 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
-=======
 import React from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const features = [
   {
     name: 'AI-Powered Research'
@@ -118,18 +95,8 @@ export default function HomePage() {
                 Get Started
               </a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-<<<<<<< HEAD
-                Learn More <span aria-hidden="true"></span>
-              </a>
-=======
                 Learn More <span aria-hidden="true">→</span>
               </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
           </div>
         </div>
@@ -158,40 +125,19 @@ export default function HomePage() {
                   <p className="flex-auto">{feature.description}</p>
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
-<<<<<<< HEAD
-                      Learn more <span aria-hidden="true"></span>
-                    </a>
-=======
                       Learn more <span aria-hidden="true">→</span>
 
 
                     </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </p>
                 </dd>
               </div>
             ))}
-<<<<<<< HEAD
-          </dl>
-        </div>
-      </div>
-=======
 
 
           </dl>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -210,54 +156,9 @@ export default function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
-<<<<<<< HEAD
-          </dl>
-        </div>
-      </div>
-      {/* Solutions showcase */}
-      <div className="mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8">;
-        <div className="mx - auto max - w-2xl lg:text - center">;
-          <h2 className="text - base font - semibold leading - 7 text - blue - 400">Our Solutions</h2>;
-          <p className="mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl">;
-            Flagship AI and Technology Platforms;
-          </p>;
-          <p className="mt - 6 text - lg leading - 8 text - gray - 300">;
-            Discover how our innovative solutions are transforming industries and driving unprecedented growth.;
-          </p>;
-        </div>;
-        <div className="mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none">;
-          <div className="grid max - w-xl grid - cols - 1 gap - 8 lg:max - w-none lg:grid - cols - 2">;
-            {solutions.map ((solution) => (
-              <article;
-                key={solution.name}
-                className="flex flex - col items - start group bg - white / 5 p - 8 rounded - 2xl backdrop - blur - sm hover:bg - white / 10 transition - all duration - 300 hover:scale - 105";
-              >;
-                <div className="flex items - center gap - x-4 text - xs">;
-                  <time date_time="2024" className="text - gray - 400">;
-                    2024;
-                  </time>;
-                  <span className="relative z - 10 rounded - full bg - gray - 800 px - 3 py - 1.5 font - medium text - gray - 300 hover:bg - gray - 700 transition - colors duration - 200">;
-                    AI Platform;
-                  </span>;
-                </div>;
-                <div className="group relative">;
-                  <h3 className="mt - 3 text - lg font - semibold leading - 6 text - white group - hover:text - blue - 400 transition - colors duration - 200">;
-                    <a href={solution.href}>;
-                      <span className="absolute inset - 0" />;
-=======
-<<<<<<< HEAD
-          </dl>
-        </div>
-      </div>
-=======
           </dl>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -288,7 +189,6 @@ export default function HomePage() {
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
                     <a href={solution.href}>
                       <span className="absolute inset-0" />
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {solution.name}
                     </a>
                   </h3>
@@ -306,29 +206,14 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-=======
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-=======
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
           </dl>;
         </div>;
       </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -346,29 +231,11 @@ export default function HomePage() {
               Get Started
             </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-<<<<<<< HEAD
-              View Solutions <span aria-hidden="true"></span>
-            </a>
-=======
               View Solutions <span aria-hidden="true">→</span>
             </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          </div>
-        </div>
-      </div>
-    </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }

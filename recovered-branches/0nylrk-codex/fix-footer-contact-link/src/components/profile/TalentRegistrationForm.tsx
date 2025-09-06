@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Switch} from "@/components/ui/switch";
-import {Badge} from "@/components/ui/badge";
-import {Separator} from "@/components/ui/separator";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -31,22 +6,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-<<<<<<< HEAD
-=======
-=======
 import { Badge } from "@/components/ui/badge",
 import { Separator } from "@/components/ui/separator",
 import {
@@ -56,48 +15,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-// Define form schema
-
-const talentProfileSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters long");
-  title: z.string().min(5, "Professional title is required");
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
-  location: z.string().min(2, "Location is required");
-  skills: z.string().min(2, "Enter at least one skill");
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number"})
-  availability: z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z.boolean().default(true)})
-type TalentFormValues = z.infer<typeof talentProfileSchema>;
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
-interface CategorizedSkills {
-  programming: string[]
-  devops: string[]
-  platforms: string[]
-  softSkills: string[]
-  other: string[]
-=======
-<<<<<<< HEAD
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-=======
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 import React, { useState } from "react",;
@@ -147,12 +71,6 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface EnhancedProfile {
   summary: string
@@ -195,31 +113,7 @@ export function TalentRegistrationForm() {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-  // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string)
-      }
-      reader.readAsDataURL(file)
-    }
-<<<<<<< HEAD
-  }
-  // Generate enhanced profile with AI
-  const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -247,10 +141,8 @@ export function TalentRegistrationForm() {;
   const handleAddSkill = () => {;
     const skillInput = form && form.getValues("skills");
     if (skillInput && !skillTags && skillTags.includes(skillInput)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setSkillTags([...skillTags, skillInput]);
       form && form.setValue("skills", "");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   // Handle avatar upload
@@ -263,9 +155,6 @@ export function TalentRegistrationForm() {;
       }
       reader.readAsDataURL(file)
     }
-<<<<<<< HEAD
-  }
-=======
   },;
   // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -278,16 +167,10 @@ export function TalentRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -298,8 +181,6 @@ export function TalentRegistrationForm() {;
       return
     }
     try {
-<<<<<<< HEAD
-=======
       setIsGenerating(true);
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -315,12 +196,6 @@ export function TalentRegistrationForm() {;
       });
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
-      }
-      setGeneratedContent(data as EnhancedProfile);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
 
   // Generate enhanced profile with AI;
@@ -334,7 +209,6 @@ export function TalentRegistrationForm() {;
     }
 
     try {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setIsGenerating(true);
       // Call the Supabase Edge Function
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
@@ -347,26 +221,14 @@ export function TalentRegistrationForm() {;
             location: formData.location
           }
         }
-<<<<<<< HEAD
-      });
-      if (error) {
-        throw new Error(error.message)
-=======
 
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       if (error) {;
         throw new Error(error && error.message);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       setGeneratedContent(data as EnhancedProfile);
       toast({
@@ -402,23 +264,6 @@ export function TalentRegistrationForm() {;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-      form.set_value ("bio", generated_content.summary);
-;
-      // Extract all skills from categorized skills and properly type cast them;
-      const allCategorizedSkills = generated_content.categorized_skills;
-      const new_skills: string[] = [],
-      // Safely extract and flatten skills from each category;
-      Object.values (allCategorizedSkills).for_each (category_skills => {
-        if () {) {
-  $2
-}
-          category_skills.for_each (skill => {
-            if () {) {
-  $2
-}
-              new_skills.push (skill);
-=======
       setSkillTags ([...skill_tags, skill_input]);
       form.set_value ("skills", "");
     }
@@ -436,12 +281,6 @@ if ( {) {
           categorySkills.forEach(skill => {;
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {;
               newSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           });
         }
@@ -460,17 +299,8 @@ if ( {) {
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
-<<<<<<< HEAD
     }
-  }
-=======
-    }
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -488,14 +318,7 @@ if ( {) {
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -584,30 +407,12 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
-<<<<<<< HEAD
-            Object.values (categorized_skills).for_each (category_skills => {
-              if () {) {
-  $2
-}
-                category_skills.for_each (skill => {
-                  // Check condition
-if ( {) {
-  $2
-}
-                    ai_skills.push (skill);
-=======
 
             Object.values(categorizedSkills).forEach(categorySkills => {;
               if (Array.isArray(categorySkills)) {;
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   }
                 });
               }
@@ -615,38 +420,20 @@ if ( {) {
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
           }
-<<<<<<< HEAD
-=======
-=======
 
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
           finalSummary = ""
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -695,21 +482,7 @@ if ( {) {
   }
 
   return (
-<<<<<<< HEAD
-    <div className="max-w-4xl mx-auto p-4 md:p-6">
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle>
-          <CardDescription className="text-zion-slate">
-            Showcase your skills and experience to potential clients and employers.
-          </CardDescription>
-        </CardHeader>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <CardContent className="space-y-8">
-=======
 
-=======
 
 ;
       // Get user email for notification;
@@ -769,12 +542,6 @@ if ( {) {
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;

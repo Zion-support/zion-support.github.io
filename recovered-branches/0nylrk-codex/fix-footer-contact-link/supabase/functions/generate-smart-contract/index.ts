@@ -1,28 +1,12 @@
 
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 serve(async (req) => {
@@ -50,13 +34,7 @@ serve(async (req) => {
     // Create the smart contract prompt for OpenAI
     let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -88,12 +66,6 @@ serve(async (req) => {;
     // Create the smart contract prompt for OpenAI;
     let prompt = `;
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -116,14 +88,7 @@ serve(async (req) => {;
       ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
       `
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
@@ -227,8 +192,6 @@ if ( {) {
     return new Response(JSON.stringify({
       success: true
       solidityCode
-<<<<<<< HEAD
-=======
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
@@ -238,11 +201,6 @@ if ( {) {
         success: false
         error: error.message |'Failed to generate smart contract'
       });
-<<<<<<< HEAD
-      {
-        status: 500
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     const data = await response.json ();
 ;
@@ -266,16 +224,10 @@ if ( {) {
         success: false
         error: error.message |'Failed to generate smart contract'
       });
-<<<<<<< HEAD
-      {
-        status: 500
-=======
 
 
       { 
         status: 500, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     prompt += `;
     Format the code properly with comments explaining each section. Include a simple deployment script.;
@@ -315,12 +267,6 @@ if ( {) {
       }),;
       {;
         status: 500,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

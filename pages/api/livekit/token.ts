@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY |"";
@@ -37,46 +29,6 @@ export default async function handler(
       ttl: 60 * 60, // 1 hour
     });
     at.addGrant({
-<<<<<<< HEAD
-      roomJoin: true
-      room: String(roomName)
-      canPublish: audioOnly ? false : true
-      canPublishData: true
-      canSubscribe: true
-    });
-    const token = await at.toJwt();
-    return res.status(200).json({
-      token
-      url: LIVEKIT_HOST
-    });
-  } catch (err: any) {
-    console.error("Token error", err);
-    return res.status(500).json({ error: "Failed to create token" });
-
-      canPublishData: true,
-      can_subscribe: true,
-    });
-
-    const token = await at && at.toJwt();
-
-    return res && res.status(200).json({
-;
-    const token = await at.to_jwt ();
-;
-    return res.status (200).json ({
-      token,
-      url: LIVEKIT_HOST,
-    });
-  } catch (err: any) {
-    console && console.error("Token error", err);
-    return res && res.status(500).json({ error: "Failed to create token" });
-  }
-}
-      url: LIVEKIT_HOST})
-  } catch (err: any) {
-    console.error('Token error', err);
-    return res.status(500).json({ error: 'Failed to create token' })
-=======
 
       roomJoin: true,
       room: String(roomName),
@@ -92,11 +44,8 @@ export default async function handler(
       url: LIVEKIT_HOST
     });
   } catch (err: any) {
-<<<<<<< HEAD
-=======
     console.error("Token error", err);
     return res.status(500).json({ error: "Failed to create token" });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -170,28 +119,19 @@ if ( {) {
       token;
       url: LIVEKIT_HOST});
   } catch (error) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
-}
-=======
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
     console.error ("Token error", err);
     return res.status (500).json ({ error: "Failed to create token" });
   }
 }
-<<<<<<< HEAD
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -202,8 +142,5 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,112 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
-import Button from '../../components/ui/Button',
-<<<<<<< HEAD
-import Head from 'next/head';
-import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
-import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-
-=======
-import Card from '../../components/ui/Card';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
-import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
-import {extraServices} from '../../data/extra-services';
-import {additionalEnhancedServices} from '../../data/additional-real-services';
-import {newRealServices} from '../../data/new-real-services';
-import {marketReadyServices} from '../../data/market-ready-services';
-type Service = (typeof enhancedRealMicroSaasServices)[number];
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-function getAllServices(): Service[] {
-  return enhancedRealMicroSaasServices.concat(
-    extraServices as Service[]
-    additionalEnhancedServices as Service[]
-    newRealServices as Service[]
-    marketReadyServices as Service[]
-  );
-function toSlug(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '');
-function extractServiceSlugFromLink(link: string): string | null {
-  try {
-    const url = new URL(link);
-    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    if (path && path.startsWith('services/')) {;
-      return path && path.substring('services/'.length);
-import Head from 'next / head';
-import UltraFuturisticBackground from '../../components / ui / UltraFuturisticBackground';
-import Button from '../../components / ui / Button';
-import Card from '../../components / ui / Card';
-import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
-import {enhancedRealMicroSaasServices} from '../../data / enhanced - real - micro - saas - services';
-import {extra_services} from '../../data / extra - services';
-import {additionalEnhancedServices} from '../../data / additional - real - services';
-import {newRealServices} from '../../data / new - real - services';
-import {marketReadyServices} from '../../data / market - ready - services';
-;
-type Service = (typeof enhancedRealMicroSaasServices)[number];
-;
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-}
-;
-function getAllServices (): Service[] {
-  return enhancedRealMicroSaasServices.concat (
-    extra_services as Service[],
-    additionalEnhancedServices as Service[],
-    newRealServices as Service[],
-    marketReadyServices as Service[]);
-;
-function to_slug (value: string): string {
-  return value;
-    .toLowerCase ();
-    .replace (/[^a - z0 - 9]+/g, '-');
-    .replace (/(^-|-$)/g, '');
-;
-function extractServiceSlugFromLink (link: string): string | null {
-  try {
-    const url = new URL (link);
-    const path = url.pathname.replace (/^\/+|\/+$/g, '');
-    if () {) {
-  $2
-}
-      return path.substring ('services/'.length);
-    }
-    return null;
-  } catch {;
-    return null;
-  }
-<<<<<<< HEAD
-export async function getStaticPaths() {
-=======
-<<<<<<< HEAD
-export async function getStaticPaths() {
-=======
 
 export async function getStaticPaths() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const services = getAllServices();
   const slugs = new Set<string>();
     // Fall back to normalized id or name to provide a stable URL under /services/*
@@ -114,24 +8,11 @@ export async function getStaticPaths() {;
     else if (s.name) slugs.add(toSlug(s.name));
   }
   return {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    paths: Array.from(slugs).map(slug => ({ params: { slug } }))
-    fallback: false
-  }
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-<<<<<<< HEAD
-=======
-=======
     paths: Array.from(slugs).map(slug => ({ params: { slug } })),
     fallback: false,
   };
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const services = getAllServices();
   const incomingSlug = (params?.slug |'').replace(/^\/+|\/+$/g, '');
   let service: Service | undefined = services.find(s => {
@@ -260,35 +141,16 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </UltraFuturisticBackground>
-  );
-                  </a>;
-                </div>;
-              </div>;
-            </Card>;
-          </div>;
-        </div>;
-      </div>;
     </UltraFuturisticBackground>;
   );
-=======
-    </UltraFuturisticBackground>;
-  );
-<<<<<<< HEAD
-=======
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-=======
 
                     className='text-xs hover:underline'>;
                     {contactInfo && contactInfo.address}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
@@ -438,13 +300,3 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</UltraFuturisticBackground>
 	)
 }
-<<<<<<< HEAD
-    </UltraFuturisticBackground>);
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

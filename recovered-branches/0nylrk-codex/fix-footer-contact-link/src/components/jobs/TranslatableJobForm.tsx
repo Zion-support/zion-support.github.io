@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent} from "@/components/ui/card";
-import {Loader2, Globe} from "lucide-react";
-import {useTranslation} from "react-i18next";
-import {useTranslationService} from "@/hooks/useTranslationService";
-import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
-import {toast} from "@/components/ui/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -27,94 +8,18 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Loader2, Globe } from "lucide-react",
 import { useTranslation } from "react-i18next",
 import { useTranslationService } from "@/hooks/useTranslationService",
-<<<<<<< HEAD
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { toast } from "@/components/ui/use-toast";
-=======
-<<<<<<< HEAD
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { toast } from "@/components/ui/use-toast";
-=======
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
 import { toast } from "@/components/ui/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface TranslatableJobFormProps {
 
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
-<<<<<<< HEAD
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {;
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
-    en: ""
-    es: ""
-    pt: ""
-    ar: ""})
-  const [budget, setBudget] = useState("");
-  const [deadline, setDeadline] = useState("");
-  // Handle text changes
-  const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value })
-  }
-  const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value })
-  }
-  const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value })
-  }
-  // Handle form submission
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    // Complete any missing translations with auto-translation
-    await ensureAllTranslations();
-    onSubmit({
-      title;
-      description;
-      requirements;
-      budget
-      deadline})
-  }
-<<<<<<< HEAD
-=======
-=======
   const { t } = useTranslation(),
   const { translateContent, isTranslating } = useTranslationService(),
   const { supportedLanguages, currentLanguage } = useLanguage(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage),
   
@@ -168,41 +73,10 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       deadline})
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-  // Auto translate function
-  const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
-    let sourceLanguage: SupportedLanguage = 'en'
-    let content = '';
-    // Find first non-empty content to translate
-    for (const lang of supportedLanguages.map(l => l.code)) {
-      if (field === 'title' && title[lang]) {
-        content = title[lang];
-        sourceLanguage = lang;
-        break
-      } else if (field === 'description' && description[lang]) {
-        content = description[lang];
-        sourceLanguage = lang;
-        break
-      } else if (field === 'requirements' && requirements[lang]) {
-        content = requirements[lang];
-        sourceLanguage = lang;
-        break
-<<<<<<< HEAD
-      }
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -281,7 +155,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
       setActiveTab(tab);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   // Auto translate function
@@ -302,13 +175,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         content = requirements[lang];
         sourceLanguage = lang;
         break;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
     if (!content) {
@@ -326,8 +192,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error
           variant: "destructive"})
         return
-<<<<<<< HEAD
-=======
 
 
 ;
@@ -347,12 +211,6 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error,;
           variant: "destructive"}),;
         return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       if (field === 'title') {
         setTitle(translations)
@@ -377,20 +235,9 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     const promises = [];
     if (!title.en && !title.es && !title.pt && !title.ar) return;
     if (!description.en && !description.es && !description.pt && !description.ar) return;
-<<<<<<< HEAD
-    // Title translations
-    if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
-      promises.push(autoTranslate('title'))
-=======
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -403,26 +250,9 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     if (promises.length) {
       await Promise.all(promises)
     }
-<<<<<<< HEAD
-  }
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-
-
-  },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

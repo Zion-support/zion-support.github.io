@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -15,15 +7,7 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-export function EducationForm({
-=======
-<<<<<<< HEAD
-export function EducationForm({
-=======
 export function EducationForm({ ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   resumeId;
   educationEntries
   onComplete
@@ -52,29 +36,12 @@ export function EducationForm({ ;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     if (success) {
       setEditingId(null)
     }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -90,15 +57,7 @@ export function EducationForm({ ;
     } else {
       onBack()
     }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
 
   const handleEdit = (edu: Education) => {;
@@ -117,16 +76,9 @@ export function EducationForm({ ;
       setEditingId(null);
     } else {;
       onBack();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="space-y-6">
@@ -136,30 +88,12 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.
         </p>
       </div>
-<<<<<<< HEAD
-      <EducationList
-        educationEntries={educationEntries}
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-=======
-<<<<<<< HEAD
-      <EducationList
-        educationEntries={educationEntries}
-=======
       <EducationList 
         educationEntries={educationEntries} 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}

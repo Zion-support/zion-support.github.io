@@ -1,28 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useParams, Link} from "react-router-dom";
-import {Header} from "@/components/header/Header";
-import {Footer} from "@/components/Footer";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {useState, useEffect} from "react";
-import {Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase} from "lucide-react";
-import {MARKETPLACE_LISTINGS} from "@/data/listingData";
-import {useNavigate} from "react-router-dom";
-import {toast} from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { slug } = useParams() as { slug?: string };
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useParams, Link } from "react-router-dom",
 import { Header } from "@/components/header/Header",
 import { Footer } from "@/components/Footer",
@@ -32,21 +8,6 @@ import { useState, useEffect } from "react",
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
 import { MARKETPLACE_LISTINGS } from "@/data/listingData",
 import { useNavigate } from "react-router-dom",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { toast } from "@/hooks/use-toast";
-export default function CategoryDetail() {
-  // Cast to specify the expected route param type since useParams may be untyped
-
-  const { slug } = useParams() as { slug?: string }
-  const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(true);
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
-<<<<<<< HEAD
-=======
-=======
 import { toast } from "@/hooks/use-toast",
 export default function CategoryDetail() {
   // Cast to specify the expected route param type since useParams may be untyped
@@ -54,12 +15,6 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -334,40 +289,19 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
-<<<<<<< HEAD
-=======
 
-=======
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       });
     }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <>

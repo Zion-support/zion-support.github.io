@@ -14,37 +14,14 @@ const AutomationDetail: NextPage = () => {const router = useRouter();
     }
   } catch (e) {data = null;
   }
-<<<<<<< HEAD
-return (
-    <EnhancedLayout>;
-      <Head>;
-        <title>{title} - Zion Tech Solutions</title>;
-      </Head>;
-      <h1 className=&quot;text - xl font - semibold mb - 4&quot;>{title}</h1>;
-      {!data ? (
-        <div className=&quot;opacity-70&quot;>No report found.</div>
-      ) : (
-        <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>
-      )}
-    </EnhancedLayout>;
-  );
-}
-export default AutomationDetail;
-=======
 
 
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>
       <Head>
         <title>{_title} - Zion Tech Solutions</title>
       </Head>
       <h1 className=&quot;text-xl font-semibold mb-4&quot;>{title}</h1>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {!data ? (
 
         <div className=&quot;opacity - 70 & quot;>No report found.</div>) : (
@@ -53,7 +30,6 @@ export default AutomationDetail;
 },
 
 export default AutomationDetail;
-=======
 
         <pre className=&quot;text-xs whitespace-pre-wrap break-words rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white dark:bg-zinc-900 overflow-x-auto&quot;>{JSON.stringify(data, null, 2)}</pre>      )}
     </EnhancedLayout>
@@ -61,9 +37,3 @@ export default AutomationDetail;
 },
 
 export default AutomationDetail,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/automation/[slug].tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

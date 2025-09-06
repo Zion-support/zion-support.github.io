@@ -1,21 +1,8 @@
 import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
-<<<<<<< HEAD
-export default function GrantsAdminPage() {
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export default function GrantsAdminPage() {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function GrantsAdminPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [token, setToken] = useState('');
 
   const [items, setItems] = useState<GrantApplication[]>([]);
@@ -592,86 +579,20 @@ if (return) {
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
-<<<<<<< HEAD
-=======
-=======
     <EnhancedLayout>
 
 
             )}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-);
-}
   );
-}
-                  <button;
-                    className='px - 2 py - 1 bg - blue - 600 text - white rounded';
-                    on_click={save_milestones}
-                  >;
-                    Save Milestones;
-                  </button>;
-                </div>;
-              </div>) : (
-              <div className='text - sm text - gray - 600'>;
-                Select a grant to plan milestones.;
-              </div>            )}          </div>;
-        </div>;
-        <div>;
-          <div className="border rounded p - 3">;
-            <h2 className="font - medium mb - 2">Milestone Planner</h2>;
-            {selected ? (
-              <div className="space - y-2">;
-                {(milestones.length === 0 ? (selected.milestones || []) : milestones).map ((m, idx) => (
-                  <div key={m.id || idx} className="border rounded p - 2">;
-                    <input className="w - full border rounded p - 2 mb - 2" placeholder="Title" value={m.title} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], title: e.target.value }, return copy })} />;
-                    <textarea className="w - full border rounded p - 2 mb - 2" placeholder="Description" value={m.description || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], description: e.target.value }, return copy })} />;
-                    <div className="grid grid - cols - 2 gap - 2">;
-                      <input className="border rounded p - 2" placeholder="Due date (YYYY - MM - DD)" value={m.due_date || ''} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], due_date: e.target.value }, return copy })} />;
-                      <input className="border rounded p - 2" placeholder="Tranche (amount)" type="number" value={m.tranche_amount || 0} on_change={(e) => set_milestones ((ms) => { const copy = (ms.length ? [...ms] : [...(selected.milestones || [])]), copy[idx] = { ...copy[idx], tranche_amount: Number (e.target.value) }, return copy })} />;
-                    </div>;
-                    <div className="mt - 2 flex items - center gap - 2">;
-                      <button className="px - 2 py - 1 border rounded" on_click={() => mark_complete (m.id!)} disabled={!m.id}>Mark Complete</button>;
-                    </div>;
-                  </div>))}
-                <div className="flex gap - 2 mt - 2">;
-                  <button className="px - 2 py - 1 border rounded" on_click={() => set_milestones ((ms) => [...(ms.length ? ms : (selected.milestones || [])), { id: `${Date.now ()}-${Math.random ()}`, title: '', tranche_amount: 0, tranche_currency: 'USDC' } as any])}>Add Milestone</button>;
-                  <button className="px - 2 py - 1 bg - blue - 600 text - white rounded" on_click={save_milestones}>Save Milestones</button>;
-                </div>;
-              </div>) : (
-              <div className="text - sm text - gray - 600">Select a grant to plan milestones.</div>)}
-          </div>;
-        </div>;
-      </div>;
-    </EnhancedLayout>);
-}
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
-=======
 
   );
 
 }
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

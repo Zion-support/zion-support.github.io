@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState, useEffect  } from 'react';
-import { useRouter } from 'next/router', // Changed from react-router-dom
-import { useFormik  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik';
-import * as Yup from 'yup';
-import axios from 'axios';
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -45,9 +5,6 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
-<<<<<<< HEAD
-=======
-=======
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
@@ -60,8 +17,6 @@ import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
 import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 import { toast } from '@/hooks/use-toast'
@@ -82,21 +37,9 @@ const SignupSchema = Yup.object({
   terms: Yup.boolean().oneOf(
     [true]
     'You must accept the terms and conditions'
-<<<<<<< HEAD
-  )
-})
-export default function Signup() {
-=======
-<<<<<<< HEAD
-  )
-})
-export default function Signup() {
-=======
   ),
 });
 export default function Signup() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -125,19 +68,7 @@ if ( {) {
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
-<<<<<<< HEAD
-      if (
-        err.code === 'NETWORK_ERROR' |
-        err.message?.includes('Network Error')
-=======
-<<<<<<< HEAD
-      if (
-        err.code === 'NETWORK_ERROR' |
-        err.message?.includes('Network Error')
-=======
       if (true) {}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -252,21 +183,9 @@ if ( {) {
         })
         const status = err.response?.status
         // Try both 'error' and 'message' fields for compatibility
-<<<<<<< HEAD
-        const errorMsg =
-          err.response?.data?.error |
-          err.response?.data?.message |
-=======
-<<<<<<< HEAD
-        const errorMsg =
-          err.response?.data?.error |
-          err.response?.data?.message |
-=======
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -339,17 +258,6 @@ if ( {) {
   $2
 }
     return (
-<<<<<<< HEAD
-      <AuthLayout>
-        <div className='flex min-h-screen items-center justify-center p-4'>
-          <div className='text-center space-y-4'>
-            <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto'></div>
-            <p className='text-muted-foreground'>Initializing signup...</p>
-          </div>
-        </div>
-      </AuthLayout>
-    )
-=======
 
 const SignupSchema = Yup && Yup.object({;
   name: Yup && Yup.string().required('Name is required'),;
@@ -590,11 +498,6 @@ export default function Signup() {;
   };
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Show loading state only during initial health check
   if (healthCheckLoading) {
     return (
@@ -607,8 +510,6 @@ export default function Signup() {;
         </div>;
       </AuthLayout>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return (
     <AuthLayout>;
@@ -893,9 +794,6 @@ export default function Signup() {;
                 </p>;
               </div>;
             )}
-<<<<<<< HEAD
-
-=======
           </div>
           
           <div>
@@ -1000,11 +898,6 @@ export default function Signup() {;
               >
                 Go to Login
               </Button>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <Button
                 type="button"
                 variant="outline"
@@ -1015,57 +908,6 @@ export default function Signup() {;
               >
                 Check Verification Status
               </Button>
-<<<<<<< HEAD
-            ) : (
-              <div className='space-y-2'>
-                <Button
-                  type='button'
-                  variant='outline'
-                  className='w-full'
-                  onClick={() => router.push('/login')}
-                >
-                  Go to Login
-                </Button>
-                <Button
-                  type='button'
-                  variant='outline'
-                  className='w-full'
-                  onClick={() =>
-                    router.push(
-                      `/verify-status?email=${encodeURIComponent(formik.values.email)}`
-                    )
-                  }
-                >
-                  Check Verification Status
-                </Button>
-                <Button
-                  type='button'
-                  variant='ghost'
-                  className='w-full text-sm'
-                  onClick={() => {
-                    setEmailVerificationRequired(false)
-                    setSuccessMessage('')
-                  }}
-                >
-                  Try Different Email
-                </Button>
-              </div>
-            )}
-            {/* Additional help text when service issues are detected */}
-            {healthCheckError && (
-              <div className='text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded'>
-                <p>⚠️ We detected some authentication service issues.</p>
-                <p>
-                  If signup fails, please try again in a few minutes or contact
-                  support.
-                </p>
-              </div>
-            )}
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               <Button
                 type="button"
                 variant="ghost"
@@ -1087,12 +929,6 @@ export default function Signup() {;
               <p>If signup fails, please try again in a few minutes or contact support.</p>
             </div>
           )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -1235,22 +1071,6 @@ export default function Signup() {
   const form = useForm({
     resolver: zodResolver(signupSchema)
     defaultValues: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      displayName: "
-      email: "
-      password: "
-      confirmPassword: "
-      termsAccepted: false,
-}
-}) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
-<<<<<<< HEAD
-=======
-=======
       displayName: ",
       email: ",
       password: ",
@@ -1260,8 +1080,6 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -1291,27 +1109,14 @@ export default function Signup() {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
-<<<<<<< HEAD
-          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
-          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-          return
-=======
-<<<<<<< HEAD
-          form.setError("root", { message: sessionError.message |"Failed to set session. Please try logging in." })
-          toast.error(sessionError.message |"Failed to set session. Please try logging in.")
-          return
-=======
 
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
         return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
       // Check for successful response;
       // Check condition
@@ -1384,12 +1189,6 @@ if ( {) {
 } finally {
       setIsSubmitting (false) }
   }
-<<<<<<< HEAD
-  const onInvalid = (errors: any) => {
-    const firstError = Object.keys(errors)[0] as keyof SignupFormValues
-    if (firstError) {
-      form.setFocus(firstError)
-=======
 
 }</div> <div className="flex items-center space-x-2" > <input) 
 }{"
@@ -1518,26 +1317,6 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
-<<<<<<< HEAD
-}}
-}
-      }
-      // Toast and navigation are handled above if session is present;
-      // If emailVerificationRequired, no toast/navigation here, message is shown;
-} catch (err: any) {;
-      const message = err && err.message ?? "Registration failed";
-      form && form.setError("root", { message });
-      toast && toast.error(message);
-} finally {;
-      setIsSubmitting(false);    }
-  };
-  const onInvalid = (errors: any) => {;
-    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;
-    if (firstError) {;
-      form && form.setFocus(firstError);
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const on_invalid = (errors: any) =>: any {
     const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
     // Check condition
@@ -1619,30 +1398,13 @@ const Signup = () => {
             </div>;
     </>  );
 }
-<<<<<<< HEAD
-}}
-}
-}
-}}
-}
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }};
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </div>;
       </div>;
     </AuthLayout>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -45,26 +45,12 @@ import { ServiceVariant } from '../types / service - variants';
 
   reviews: number;
 const contact = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
-<<<<<<< HEAD
-=======
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -86,11 +72,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-autonomous-business-processor',
-    name: 'AI Autonomous Business Processor',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'ai-autonomous-business-processor'
     name: 'AI Autonomous Business Processor'
     tagline:
@@ -100,36 +81,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description:
       'An advanced AI system that autonomously analyzes, optimizes, and executes business processes across all departments. Continuously learns and improves without human oversight.'
     features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'Autonomous process discovery and mapping'
-      'Real-time optimization algorithms'
-      'Cross-departmental coordination'
-      'Predictive maintenance scheduling'
-      'Resource allocation optimization'
-      'Performance analytics dashboard'
-      'Automated decision making'
-      'Process improvement suggestions'
-      'Integration with existing systems'
-      '24/7 autonomous operation'
-    ]
-    popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-cyan-600 to-blue-700'
-    textColor: 'text-cyan-400'
-    link: 'https://ziontechgroup.com/ai-autonomous-business-processor'
-=======
     icon: '🤖'
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-400'
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor'
     marketPosition:
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.'
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Autonomous process discovery and mapping',
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
@@ -142,22 +99,12 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       '24/7 autonomous operation',
     ],
     popular: true,
-<<<<<<< HEAD
-    icon: '',
-    color: 'from-cyan-600 to-blue-700',
-    textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-business-processor',
-    marketPosition:
-      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.'
-=======
     icon: '🤖',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -578,21 +525,9 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   }
 ];
 
-<<<<<<< HEAD
-];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
-=======
 
-=======
     rating: 4.9
     reviews: 267
-<<<<<<< HEAD
-  }
-];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedAIAutomationService {;
   id: string,;
@@ -803,7 +738,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',;
     features: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'ROI trackingCRM integration';
     ];
     popular: true;
@@ -832,13 +766,6 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9,
     reviews: 267;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

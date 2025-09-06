@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-=======
 import {
-<<<<<<< HEAD
-=======
   Menu,
   ChevronDown,
   X,
@@ -64,10 +60,8 @@ import {
   Building,;
   MessageCircle,;
 } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu
   ChevronDown
   X
@@ -128,15 +122,7 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
-<<<<<<< HEAD
-  href: string;  icon?: React.ReactNode;import {
-=======
-<<<<<<< HEAD
-  href: string;  icon?: React.ReactNode;import {
-=======
   href: string;  icon?: React.ReactNode;import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -296,25 +282,10 @@ interface NavigationItem {
   children?: NavigationItem[];
   badge?: string;
   title?: string;
-<<<<<<< HEAD
-  featured?: boolean
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  featured?: boolean
-}
-=======
   featured?: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   featured?: boolean;  featured?: boolean
 }
-=======
   featured?: boolean;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -680,8 +651,6 @@ const navigation_items: NavigationItem[] = [;
     ],
   },
   {
-<<<<<<< HEAD
-=======
     name: 'All Services',
     href: '/comprehensive - services - showcase - 2025',
     icon: <Globe className='w - 5 h - 5' />,    description: 'Complete portfolio of all technology services',
@@ -730,140 +699,7 @@ const navigation_items: NavigationItem[] = [;
     badge: 'Enterprise',
     featured: true,
     children: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {
-        name: 'Zero Trust Security',
-        href: '/zero-trust-security-platform',
-        description: 'Next-generation security architecture',
-      },
-      {
-        name: 'Quantum Cloud Infrastructure',
-        href: '/quantum-cloud-infrastructure',
-        description: 'Quantum-enhanced cloud computing',
-      },
-      {
-        name: 'Autonomous IT Operations',
-        href: '/autonomous-it-operations-center',
-        description: 'Self-managing IT infrastructure',
-      },
-      {
-        name: 'Edge Computing Orchestration',
-        href: '/edge-computing-orchestration',
-        description: 'Distributed edge computing',
-      },
-      {
-        name: 'Blockchain Infrastructure',
-        href: '/blockchain-infrastructure-platform',
-        description: 'Enterprise blockchain solutions',
-      },
-      {
-        name: 'AI-Powered DevOps',
-        href: '/ai-powered-devops-platform',
-        description: 'Intelligent development operations',
-      },
-      {
-        name: 'Quantum Cybersecurity',
-        href: '/quantum-cybersecurity-services',
-        description: 'Next-gen quantum security',
-      },
-      {
-        name: 'AI-Powered Cybersecurity',
-        href: '/ai-powered-cybersecurity',
-        description: 'Intelligent threat detection',
-      },
-    ],
-  },
-    name: 'Industry Solutions',
-    href: '/industry-solutions',
-    icon: <Building className='w-5 h-5' />,
-    description: 'Industry-specific technology solutions',
-    badge: 'Industry',
-    children: [
-      {
-        name: 'Healthcare AI',
-        href: '/healthcare-ai-solutions',
-        description: 'AI-powered healthcare',
-      },
-      {
-        name: 'Financial Technology',
-        href: '/fintech-solutions',
-        description: 'Next-gen fintech',
-      },
-      {
-        name: 'Manufacturing AI',
-        href: '/manufacturing-ai-solutions',
-        description: 'Smart manufacturing',
-      },
-      {
-        name: 'Retail Technology',
-        href: '/innovative-business-solutions',
-        description: 'Digital retail transformation',
-      },
-      {
-        name: 'Education Technology',
-        href: '/training',
-        description: 'AI-powered learning',
-      },
-      {
-        name: 'Government Solutions',
-        href: '/enterprise-solutions-showcase',
-        description: 'Public sector innovation',
-      },
-      {
-        name: 'Energy & Utilities',
-        href: '/quantum-energy',
-        description: 'Sustainable energy tech',
-      },
-      {
-        name: 'Biotech AI Research',
-        href: '/biotech-ai',
-        description: 'AI-driven biotech',
-      },
-    ],
-  },
-  {
-    name: 'Resources',
-    href: '/resources',
-    icon: <BookOpen className='w-5 h-5' />,
-    description: 'Documentation, support, and learning resources',
-    children: [
-      {
-        name: 'Documentation',
-        href: '/docs',
-        description: 'Technical documentation',
-      },
-      {
-        name: 'API Reference',
-        href: '/api-documentation',
-        description: 'API documentation',
-      },
-      {
-        name: 'Case Studies',
-        href: '/case-studies',
-        description: 'Success stories',
-      },
-      { name: 'Blog & News', href: '/blog', description: 'Latest insights' },
-      {
-        name: 'Support Center',
-        href: '/support',
-        description: 'Help and support',
-      },
-      {
-        name: 'Training',
-        href: '/training',
-        description: 'Learning resources',
-      },
-      { name: 'Community', href: '/community', description: 'User community' },
-    ],
-  },
-];
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     name: 'AI & Consciousness',
     href: '/ai - services',
     icon: <Brain className='w - 5 h - 5' />,    description: 'Revolutionary AI consciousness and emotional intelligence',
@@ -2759,17 +2595,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                   Revolutionary Technology
                 </div>              </div>
             </Link>
-<<<<<<< HEAD
-            {/* Desktop Navigation */}  }
-=======
-<<<<<<< HEAD
-            {/* Desktop Navigation */}  }
-=======
 
             {/* Desktop Navigation */}  };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -2899,12 +2727,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                       activeDropdown === item.name ? 'rotate-180' : ''
                     }`} />
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
             {/* Desktop Navigation */}
 
 
@@ -2915,35 +2739,16 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
 
                   </button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
                       <motion.div
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
-<<<<<<< HEAD
-                        exit={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
-                        transition={{ duration: 0 && 0.2 }}
-                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-=======
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -2983,8 +2788,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           </div>
                           <div className="space-y-2">
                             {item.children?.map((child) => (
-<<<<<<< HEAD
-=======
 
                                 onClick={closeDropdowns}>                        onMouseLeave={closeDropdowns}
                       >;
@@ -3002,19 +2805,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           <div className="space-y-2">;
                             {item && item.children?.map((child) => (;
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                                 onClick={closeDropdowns}
 
                               >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
@@ -3039,10 +2833,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                                 </div>;
                                 <ArrowRight className='w-4 h-4 opacity-50' />                              </Link>                                <ArrowRight className="w-4 h-4 opacity-50" />;
                               </Link>;
-<<<<<<< HEAD
-=======
 
-=======
                                   child.featured 
                                     ? 'bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20' 
                                     : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
@@ -3050,17 +2841,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                                 onClick={closeDropdowns}
                               >
 
-=======
 
 
                               </Link>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             ))}
                           </div>;
                         </div>;
@@ -3069,34 +2853,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                   </AnimatePresence>;
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
-            {/* Right Side Actions */}
-            <div className='hidden lg:flex items-center gap-4'>;
-              {/* Quick Actions */}
-              <div className='flex items-center gap-2'>;
-                {quickActions && quickActions.map(action => (                  <Link            <div className="hidden lg:flex items-center gap-4">;
-              {/* Quick Actions */}
-              <div className="flex items-center gap-2">;
-                {quickActions && quickActions.map((action) => (;
-                    key={action && action.name}
-                    href={action && action.href}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${;
-                      action && action.primary;
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25';
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50';
-=======
 
             </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>;
               {/* Quick Actions */}
@@ -3107,40 +2868,23 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
 
                   <Link
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                       action.primary
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25'
                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     }`}
                   >;
                     {action && action.icon}
                     <span>{action && action.name}</span>;
                   </Link>;
                 ))}
-<<<<<<< HEAD
-              </div>
-=======
 
               </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>;
                 <a
@@ -3192,17 +2936,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
               </div>;
             </div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -3222,17 +2957,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
           </div>;
         </div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -3240,67 +2966,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.3 }}
-              className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-800/50'
-              <div className='container mx-auto px-4 py-6'>;
-                <div className='space-y-6'>;
-                  {/* Mobile Navigation Items */}
-                  {navigationItems && navigationItems.map(item => (;
-                    <div key={item && item.name}>;
-                      <button
-                        onClick={() => toggleDropdown(item && item.name)}
-                        className='flex items-center justify-between w-full p-3 text-left text-gray-300 hover:text-white transition-colors duration-200';
-                      >;
-                        <div className='flex items-center gap-3'>;
-                          {item && item.icon}
-                          <span>{item && item.name}</span>;
-                          {item && item.badge && (;
-                            <span
-                              className={`px-2 py-1 text-xs rounded-full ${
-                                item && item.badge === 'New'
-                                  ? 'bg-green-500/20 text-green-400'
-                                  : item && item.badge === 'Hot'
-                                    ? 'bg-red-500/20 text-red-400'
-                                    : item && item.badge === 'Showcase'
-                                      ? 'bg-cyan-500/20 text-cyan-400'
-                                      : 'bg-gray-500/20 text-gray-400'
-                              }`}>                              {item && item.badge}
-                            </span>;
-                          )}
-                        </div>                            <spanclassName={`px-2 py-1 text-xs rounded-full ${
-                              item && item.badge === 'New' ? 'bg-green-500/20 text-green-400' :
-                              item && item.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :
-                              item && item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :
-                              'bg-gray-500/20 text-gray-400'
-                            }`}>;
-                            </span>;
-                          )}
-                        </div>;
-                        <ChevronDown
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            activeDropdown === item && item.name ? 'rotate-180' : ''
-                          }`}
-                        />                      </button>                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          {item.icon}
-                          <span>{item.name}</span>;
-                          {item.badge && (
-                            <span className={`px-2 py-1 text-xs rounded-full ${
-                              item.badge === 'New' ? 'bg-green-500/20 text-green-400' :
-                              item.badge === 'Hot' ? 'bg-red-500/20 text-red-400' :
-                              item.badge === 'Showcase' ? 'bg-cyan-500/20 text-cyan-400' :
-                              'bg-gray-500/20 text-gray-400'
-                            }`}>
-                              {item.badge}
-=======
 
                               {item.badge}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             </span>
                           )}
                         </div>
@@ -3313,17 +2980,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                         }`} />;
                       </button>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -3365,18 +3022,8 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                                 {child && child.description && (;
                                   <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
                                 )}
-<<<<<<< HEAD
-                              </Link>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             ))}
                           </motion && motion.div>;
                         )}
@@ -3390,20 +3037,9 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                     <div className="space-y-3">;
                       {quickActions && quickActions.map((action) => (;
                         <Link
-<<<<<<< HEAD
-                          key={action && action.name}
-                          href={action && action.href}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           key={action.name}
                           href={action.href}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           className={`flex items-center gap-3 p-3 rounded-xl text-sm font-medium transition-all duration-200 ${
                             action && action.primary
                               ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
@@ -3414,49 +3050,24 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
                           <span>{action && action.name}</span>;
                         </Link>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-=======
 
                     </div>;
                   </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3 text-sm text-gray-400'>;
                       <a
-<<<<<<< HEAD
-                        href={`tel:${contactInfo && contactInfo.mobile}`}
-                        className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'>;
-                        <Phone className='w-4 h-4' />;
-                        <span>{contactInfo && contactInfo.mobile}</span>;
-                      </a>;
-=======
 
                         href={`tel:${contactInfo.mobile}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-cyan-400 hover:bg-gray-800/50 transition-all duration-200'
                       >
                         <Phone className='w-4 h-4' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <span>{contactInfo.mobile}</span>
                       </a>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <a
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='flex items-center gap-3 p-3 rounded-lg hover:text-purple-400 hover:bg-gray-800/50 transition-all duration-200'>;
@@ -3806,28 +3417,10 @@ export default UltraFuturisticNavigation2035);
 ;
 export default UltraFuturisticNavigation2035;
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
   closeMobileMenu 
 }>) ) 
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
 };
-<<<<<<< HEAD
 export default UltraFuturisticNavigation2035;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export default UltraFuturisticNavigation2035;  )
-};
-
-export default UltraFuturisticNavigation2035;
-=======
-export default UltraFuturisticNavigation2035;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

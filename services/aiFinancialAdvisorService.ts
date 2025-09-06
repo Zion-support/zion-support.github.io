@@ -1,42 +1,6 @@
-<<<<<<< HEAD
-export interface InvestmentPortfolio {
-  id: string;
-  user_id: string;
-  name: string;
-  total_value: number;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface InvestmentPortfolio {
-=======
 export interface InvestmentPortfolio {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  userId: string;
-  name: string;
-  totalValue: number;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  currency: string;
-
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive'
-
-  investmentHorizon: number, // in years
-  targetReturn: number;
-  assets: PortfolioAsset[];
-  last_rebalanced: Date;
-  performance: PortfolioPerformance;
-
-  createdAt: Date
-
-  updatedAt: Date
-}
-<<<<<<< HEAD
-export interface PortfolioAsset {
-=======
 
 export interface PortfolioAsset {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   symbol: string;
   name: string;
@@ -59,12 +23,8 @@ export interface PortfolioAsset {;
     totalReturn: number
   }
 }
-<<<<<<< HEAD
-export interface PortfolioPerformance {
-=======
 
 export interface PortfolioPerformance {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalReturn: number;
   annualizedReturn: number;
   volatility: number;
@@ -78,12 +38,8 @@ export interface PortfolioPerformance {;
 
   sortinoRatio: number
 }
-<<<<<<< HEAD
-export interface InvestmentRecommendation {
-=======
 
 export interface InvestmentRecommendation {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -104,12 +60,8 @@ export interface InvestmentRecommendation {;
 
   expiresAt: Date
 }
-<<<<<<< HEAD
-export interface FinancialGoal {
-=======
 
 export interface FinancialGoal {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   user_id: string;
   name: string;
@@ -127,12 +79,8 @@ export interface FinancialGoal {;
 
   updatedAt: Date
 }
-<<<<<<< HEAD
-export interface MarketAnalysis {
-=======
 
 export interface MarketAnalysis {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   market: string;
 
@@ -149,12 +97,8 @@ export interface MarketAnalysis {;
 
   nextUpdate: Date
 }
-<<<<<<< HEAD
-export interface FinancialPlan {
-=======
 
 export interface FinancialPlan {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   user_id: string;
   name: string;
@@ -203,30 +147,17 @@ export interface FinancialPlan {;
 
   updatedAt: Date
 }
-<<<<<<< HEAD
-export interface FinancialRequest {
-<<<<<<< HEAD
-  userId: string;
-
-=======
-=======
 
 export interface FinancialRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
-<<<<<<< HEAD
-export interface FinancialResponse {
-=======
 
 export interface FinancialResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -242,16 +173,8 @@ export interface FinancialResponse {;
 
   estimatedFees: number
 }
-<<<<<<< HEAD
-export class AIFinancialAdvisorService {
-=======
-<<<<<<< HEAD
-export class AIFinancialAdvisorService {
-=======
 
 export class AIFinancialAdvisorService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   private apiKey: string;
 
   private baseUrl: string
@@ -623,30 +546,9 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-<<<<<<< HEAD
-    risks: string[],
-    deadlines: Record < string, Date>;
-  }> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / tax - optimization`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, tax_year })});
-;
-      // Check condition
-if ( {) {
-  $2
-=======
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
 
-=======
-<<<<<<< HEAD
-export interface InvestmentPortfolio {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   userId: string,;
   name: string,;
@@ -660,7 +562,6 @@ export interface InvestmentPortfolio {;
   performance: PortfolioPerformance,;
   createdAt: Date,;
   updatedAt: Date;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -703,13 +604,4 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

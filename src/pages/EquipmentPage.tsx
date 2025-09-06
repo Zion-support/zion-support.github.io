@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment  } from '@/utils/equipmentAutoFeedAlgorithm';
@@ -45,9 +30,6 @@ const INITIAL_EQUIPMENT: ProductListing[] = [
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],
     author: { name: "NVIDIA", id: "nvidia" },
-<<<<<<< HEAD
-    images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto;
-=======
     images: ["https://images.unsplash.com/photo-1618599515406-3e5fd8cd9a27?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:30:00.000Z",
     rating: 4.9,
@@ -205,25 +187,11 @@ const EquipmentFilterControls = ({
     </Button>
   </div>
 ),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <Card className="h-full hover:shadow-lg transition-shadow">
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between">
@@ -265,7 +233,6 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Loading state
   if (loading && equipment.length === 0) {
     return (
@@ -291,17 +258,8 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   )
 }
-<<<<<<< HEAD
-
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 }
 // Main export with error boundary;
@@ -314,12 +272,5 @@ function EquipmentPage() {
       <EquipmentPageContent />;
     </EquipmentErrorBoundary>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

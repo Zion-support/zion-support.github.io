@@ -1,103 +1,12 @@
-<<<<<<< HEAD
-import React from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-=======
-<<<<<<< HEAD
-import React from "react",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-=======
-<<<<<<< HEAD
-import React from 'react'
-=======
 import React from "react",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter } from "@/components/ui/card",
 import Image from "next/image",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export interface Benefit {
   title: string;
   description: string;
   icon?: React.ReactNode
-<<<<<<< HEAD
-}
-export interface Testimonial {
-import React from 'react';
-
-export interface Benefit {;
-  title: string;
-  description: string;
-  icon?: React && React.ReactNode;
-}
-
-export interface Testimonial {;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
-export interface Testimonial {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  name: string;
-  role?: string;
-  text: string;
-  avatar?: string
-}
-interface ServiceLandingTemplateProps {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  title: string;
-  subtitle: string;
-  heroImage?: string;
-  description: string;
-  benefits: Benefit[];
-  testimonials: Testimonial[];
-  ctaText: string;
-import React from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import Image from "next/image";
-export interface Benefit {
-  title: string,
-  description: string,
-  icon?: React.ReactNode
-import React from 'react';
-export interface Benefit {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-}
-export interface Testimonial {
-  name: string,
-  role?: string;
-  text: string,
-  avatar?: string
-}
-interface ServiceLandingTemplateProps {
-<<<<<<< HEAD
-  title: string,
-  subtitle: string,
-  heroImage?: string;
-  description: string,
-  benefits: Benefit[],
-  testimonials: Testimonial[],
-  ctaText: string,
-  ctaLink: string
-}
-=======
 
   title: string;
   subtitle: string;
@@ -107,8 +16,6 @@ interface ServiceLandingTemplateProps {
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -136,13 +43,8 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 
   title
@@ -166,29 +68,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   ctaLink,;
 }) => {;
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-white">;
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
-        <div className="max-w-7xl mx-auto text-center">;
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">;
-=======
 
-=======
           </p>
-=======
   testimonials,
   ctaText,
-<<<<<<< HEAD
   ctaLink}) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  ctaLink,
-}) => {
-=======
-  ctaLink}) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -217,18 +101,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       <section className="py-12 px-4">
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {description}
 
     <div className="min - h-screen bg - white">;
       <section className="py - 20 px - 4 bg - gradient - to - br from - blue - 50 to - indigo - 100">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 4xl md:text - 6xl font - bold text - gray - 900 mb - 6">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {title}
           </h1>;
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">;
@@ -315,20 +193,8 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
-<<<<<<< HEAD
-}
-
-};
-=======
-<<<<<<< HEAD
-}
-
-=======
 };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
       <section className="py-16 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -405,41 +271,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
       </section>
     </div>
   )
-<<<<<<< HEAD
-
-};
-
-                  </div>;
-                  <div className="text - gray - 600">{stat.label}</div>;
-                </div>))}
-            </div>;
-          </div>;
-        </section>)}
-      <section className="py - 16 px - 4 bg - blue - 600">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <h2 className="text - 3xl font - bold text - white mb - 4">;
-            Ready to Get Started?;
-          </h2>;
-          <p className="text - xl text - blue - 100 mb - 8">;
-            Contact us today to learn more about our services.;
-          </p>;
-          <a;
-            href={cta_link}
-            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
-          >;
-            {cta_text}
-          </a>;
-        </div>;
-      </section>;
-    </div>);
-}
-=======
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

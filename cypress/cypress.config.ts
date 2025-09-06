@@ -24,10 +24,6 @@ if ( {) {
         return launch_options;
       });export default define_config ({
   e2e: {
-<<<<<<< HEAD
-    baseUrl: 'http://localhost:3000', // Standard Next.js port
-
-=======
 
 
 import { defineConfig } from 'cypress',;
@@ -44,16 +40,7 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-<<<<<<< HEAD
-      });export default defineConfig({
-  e2e: {
-<<<<<<< HEAD
-    baseUrl: 'http://localhost:3000', // Standard Next.js port
-
-=======
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     supportFile: 'cypress/support/e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
@@ -137,23 +124,6 @@ export default defineConfig({;
     toConsole: true
   }
 });
-<<<<<<< HEAD
-
-    base_url: 'http://localhost:3000', // Standard Next.js port;
-    support_file: 'cypress / support / e2e.ts';
-    experimentalModifyObstructiveThirdPartyCode: true;
-    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          launch_options.args.push ('--disable - ipv6');        }
-        return launch_options;
-<<<<<<< HEAD
-=======
-=======
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -167,10 +137,6 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       });
     }
     env: {
@@ -213,12 +179,3 @@ export default defineConfig({;
     to_console: true;
   }
 });
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

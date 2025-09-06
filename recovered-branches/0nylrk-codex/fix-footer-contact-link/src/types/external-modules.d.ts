@@ -1,55 +1,3 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-declare module "cmdk";
-declare module "@radix - ui / react - context - menu";
-=======
-<<<<<<< HEAD
-declare module "cmdk";
-declare module "@radix-ui/react-context-menu";
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-declare module "vaul";
-declare module "@radix-ui/react-hover-card";
-declare module "input-otp";
-declare module "react-markdown";
-declare module "@radix-ui/react-menubar";
-declare module "@radix-ui/react-navigation-menu";
-declare module "react-resizable-panels";
-declare module "@radix-ui/react-toggle-group";
-declare module "@radix-ui/react-toggle";
-<<<<<<< HEAD
-declare module '@tanstack/react-query';
-declare module 'react-day-picker' {
-  export interface DateRange {
-    from?: Date;
-    to?: Date;
-=======
-<<<<<<< HEAD
-declare module '@tanstack/react-query';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -61,20 +9,9 @@ declare module "@radix-ui/react-navigation-menu",
 declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 declare module '@tanstack/react-query',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 declare module 'react-day-picker' {
-<<<<<<< HEAD
-  export interface DateRange {
-    from?: Date,
-    to?: Date
-<<<<<<< HEAD
-=======
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -91,31 +28,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  export interface DateRange {;
-    from?: Date;
-    to?: Date
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }
-  // Minimal placeholder for the DayPicker component used in the app
-  // The actual library provides full typings but we stub them here so the
-  // TypeScript compiler can understand the imports without requiring the real
-  // type definitions.
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 declare module 'sonner';
 declare module 'lucide-react' {
 
@@ -312,20 +225,10 @@ import {FC, SVGProps} from 'react';
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
-<<<<<<< HEAD
-  export const Zap: LucideIcon
-=======
-<<<<<<< HEAD
-  export const Zap: LucideIcon
-  const icons: { [key: string]: LucideIcon }
-=======
   export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   export default icons
-=======
   export const Zap: LucideIcon,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const icons: { [key: string]: LucideIcon }
   export default icons
 }
@@ -378,15 +281,8 @@ declare module 'react - hook - form' {
   export type FieldPath<TFieldValues extends FieldValues> =
     keyof TFieldValues & string
   export type Control<TFieldValues extends FieldValues = FieldValues> = any
-<<<<<<< HEAD
-  export interface UseFormReturn<
-=======
-<<<<<<< HEAD
-  export interface UseFormReturn<
-=======
 
   export interface UseFormReturn<;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control<TFieldValues>
@@ -395,15 +291,6 @@ declare module 'react - hook - form' {
     formState: any
     [key: string]: any
   }
-<<<<<<< HEAD
-  export function useForm<
-    TFieldValues extends FieldValues = FieldValues;
-  >(options?: any): UseFormReturn<TFieldValues>
-  export function useFieldArray<
-    TFieldValues extends FieldValues = FieldValues;
-  >(options: any): any
-  export interface ControllerProps<
-=======
 
   export function useForm<;
     TFieldValues extends FieldValues = FieldValues;
@@ -413,7 +300,6 @@ declare module 'react - hook - form' {
   >(options: any): any
 
   export interface ControllerProps<;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     TFieldValues extends FieldValues = FieldValues;
     TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
   > {
@@ -424,12 +310,8 @@ declare module 'react - hook - form' {
     render: (props: any) => ReactElement
   }
   export const Controller: ComponentType<ControllerProps<any, any>>
-<<<<<<< HEAD
-  export interface FormProviderProps<
-=======
 
   export interface FormProviderProps<;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     TFieldValues extends FieldValues = FieldValues;
   > {
     children?: ReactNode
@@ -450,11 +332,6 @@ declare module 'ws';
 declare module 'recharts';
 declare module 'next-themes';
 declare module 'tailwind-merge';
-<<<<<<< HEAD
-
-=======
-=======
-=======
   export interface DateRange {
     from?: Date,
     to?: Date
@@ -483,7 +360,6 @@ declare module 'react-day-picker' {;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any;
   export const DayPicker: any;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 declare module 'sonner',;
 declare module 'lucide-react' {;
   import { FC, SVGProps } from 'react',;
@@ -734,8 +610,6 @@ declare module 'react-hook-form' {;
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
   export interface UseFormReturn<;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     TFieldValues extends FieldValues = FieldValues;
   > {
     control: Control < TFieldValues>;
@@ -772,19 +646,6 @@ declare module 'react-hook-form' {;
     TFieldValues extends FieldValues = FieldValues
   >(): UseFormReturn<TFieldValues>
 }
-<<<<<<< HEAD
-declare module 'react - i18next';
-declare module 'react-dom / client';
-declare module 'react-dom';
-declare module 'react - beautiful - dnd';
-declare module 'react - redux';
-declare module 'semver';
-declare module 'ws';
-declare module 'recharts';
-declare module 'next-themes';
-declare module 'tailwind-merge';
-
-=======
 declare module 'react-i18next',;
 declare module 'react-dom/client',;
 declare module 'react-dom',;
@@ -795,9 +656,3 @@ declare module 'ws',;
 declare module 'recharts',;
 declare module 'next-themes';
 declare module 'tailwind-merge';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

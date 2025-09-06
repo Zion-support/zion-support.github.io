@@ -128,17 +128,6 @@ const EnhancedLoading: React.FC<{;
   message = 'Loading component...',
   show_progress = true,
 }) => (
-<<<<<<< HEAD
-  <Card className='w - full max - w-md mx - auto'>;
-    <CardContent className='p - 6'>;
-      <div className='flex flex - col items - center space - y-4'>;
-        <div className='relative'>;
-          <Loader2 className='h - 8 w - 8 animate - spin text - primary' />          {show_progress && (
-            <motion.div;
-              className='absolute inset - 0 rounded - full border - 2 border - primary';
-              style={{
-                background: `conic - gradient (from 0deg, var (--primary) 0%, var (--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
-=======
 
   <Card className="w-full max-w-md mx-auto">
     <CardContent className="p-6">
@@ -146,53 +135,15 @@ const EnhancedLoading: React.FC<{;
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-            <motion.div
-              className="absolute inset-0 rounded-full border-2 border-primary"
-              style={{
-<<<<<<< HEAD
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
-=======
-                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-<<<<<<< HEAD
-            />;
-          )}
-        </div>;
-        <div className='text-center'>;
-          <p className='text-sm font-medium'>{message}</p>;
-          {showProgress && (;
-            <p className='text-xs text-muted-foreground mt-1'>;
-              {Math && Math.round(progress)}% loaded;
-            </p>;
-          )}
-        </div>
-      </div>
-    </CardContent>
-  </Card>
-)
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -201,13 +152,6 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-<<<<<<< HEAD
-  <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
-    <CardContent className='p-6'>
-      <div className='flex flex-col items-center space-y-4'>
-        <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
-            <AlertTriangle className='h-6 w-6 text-red-600' />
-=======
 
 
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
@@ -216,12 +160,6 @@ const EnhancedError: React.FC<{
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ) : (
             <WifiOff className='h-6 w-6 text-red-600' />
           )}
@@ -237,12 +175,6 @@ const EnhancedError: React.FC<{
           </p>;
           {retryCount > 0 && (;
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>;
-<<<<<<< HEAD
-              Retry {retryCount}/{maxRetries}
-            </p>;
-          )}
-=======
-=======
           </h3>
 
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
@@ -252,16 +184,7 @@ const EnhancedError: React.FC<{
             }
           </p>
           {retryCount > 0 && (
-<<<<<<< HEAD
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-            <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
-=======
-            <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Retry {retryCount}/{maxRetries}
             </p>;
           )}
@@ -276,18 +199,11 @@ const EnhancedError: React.FC<{
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Try Again
           </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
 
             />)}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>;
         {retryCount < maxRetries && (;
           <Button
@@ -350,16 +266,8 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         })
       }, 100)
       return () => clearInterval(interval)
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-    }
-=======
     };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -435,16 +343,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     }
           >
         <EnhancedError
-<<<<<<< HEAD
-          error = {loadingState && loadingState.error,}
-          retry = {retry,}
-          isOnline = {loadingState && loadingState.isOnline,}
-          retryCount = {loadingState && loadingState.retryCount,}
-          maxRetries = {maxRetries,}
-        />
-      </motion.div>
-    )
-=======
 
           error={loadingState.error}
           retry={retry}
@@ -454,12 +352,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         />;
       </motion.div>;
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   // Success state
   if (DynamicComponent) {
@@ -494,15 +386,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
     />
   )
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
@@ -529,10 +413,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
 
-<<<<<<< HEAD
-// );
-export default DynamicComponentLoader; export default DynamicComponentLoader;
-=======
     />;
   );
 };
@@ -565,9 +445,7 @@ export default DynamicComponentLoader; export default DynamicComponentLoader;
 
 export default DynamicComponentLoader;export default DynamicComponentLoader ;
 
-=======
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -575,27 +453,10 @@ export default DynamicComponentLoader;export default DynamicComponentLoader ;
 //       </div>
 //     )
 //   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-// )
-export default DynamicComponentLoader; export default DynamicComponentLoader
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // );
 export default DynamicComponentLoader; export default DynamicComponentLoader;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 
 // );
 
 export default DynamicComponentLoader;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -3,25 +3,12 @@ import {readOrgData, filterOrgData} from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req && req.method !== 'GET') {
-    return res && res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'GET') {
-    return res && res.status(405).json({ error: 'Method not allowed' })
-  }
-=======
 
-=======
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
-<<<<<<< HEAD
-  }
-=======
 
   };
   const data = readOrgData();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {

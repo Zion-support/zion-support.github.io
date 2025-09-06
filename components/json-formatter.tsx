@@ -26,35 +26,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
-<<<<<<< HEAD
-import {;
-  Code,;
-  Copy,;
-  RefreshCw,;
-  CheckCircle,;
-  XCircle,;
-  ArrowRight,;
-  Download,;
-  Upload,;
-  Settings,;
-  Eye,;
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
@@ -67,15 +38,9 @@ import {
   ArrowRight,
   Download,
   Upload,
-<<<<<<< HEAD
-  Settings,
-  Eye,
-=======
 
   Settings,;
   Eye,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -541,36 +506,6 @@ export default function JSONFormatterPage() {;
                     }`}>                    {isValid ? 'Valid' : 'Invalid'}                <div className="flex items-center space-x-2">;
                   <spanclassName={`px-2 py-1 rounded text-xs font-medium ${
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Input Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white flex items-center">
-                  <Code className="w-6 h-6 mr-3 text-teal-400" />
-                  Input JSON
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${
-                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                  }`}>
-                  </span>
-                </div>
-              </div>
-              <div className='space-y-4'>
-                <div className='relative'>
-                  {showLineNumbers && (
-                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space - y-4">;
-                <div className="relative">;
-                  {showLineNumbers && (
-                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   }`}>;
                   </span>;
@@ -601,18 +536,8 @@ export default function JSONFormatterPage() {;
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-<<<<<<< HEAD
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-=======
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -678,114 +603,20 @@ export default function JSONFormatterPage() {;
                       Copy;
                     </Button>;
                     <Button
-<<<<<<< HEAD
-                      onClick={() =>;
-                        downloadJSON(formattedJson, 'formatted && formatted.json');
-                      }
-                      variant='outline';
-                      size='sm';
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700';
-                    >;
-                      <Download className='w-4 h-4 mr-2' />                      Download                  Formatted Output;
-                </h3>;
-                {formattedJson && (;
-                  <div className="flex items-center space-x-2">;
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant="outline";
-                      size="sm";
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700";
-                    >;
-                      <Copy className="w-4 h-4 mr-2" />;
-                      Copy;
-                    </Button>;
-                    <Button
-                      onClick={() => downloadJSON(formattedJson, 'formatted && formatted.json')}
-                      variant="outline";
-                      size="sm";
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700";
-                    >;
-                      <Download className="w-4 h-4 mr-2" />;
-                      Download;
-                    </Button>;
-                  </div>;
-                )}
-              </div>
-              <div className='space-y-4'>
-                  <div className='relative'>
-                    {showLineNumbers && (
-                      <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
-                        {getLineNumbers(formattedJson)}
-                      </div>;
-                    )}
-                    <div
-                      className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                        showLineNumbers ? 'pl-16' : ''
-                      }`}>;
-                      <pre className='whitespace-pre-wrap'>{formattedJson}</pre>;
-                    </div>;
-                  </div>;
-                ) : (;
-                  <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>;
-                    <div className='text-6xl mb-4'></div>;
-                    <p className='text-gray-400'>;
-                      Formatted JSON will appear here. Enter JSON data and click;
-                      format to get started.                    </p>                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">;
-                    <div className="text-6xl mb-4"></div>;
-                    <p className="text-gray-400">;
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.;
-                  </div>;
-                )}
-                {formattedJson && (
-                  <div className='text-sm text-gray-400'>
-                    <p> Characters: {formattedJson.length}</p>
-                    <p> Lines: {formattedJson.split('\n').length}</p>
-                    <p>
-                       Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
-                      KB
-                    </p>                  </div>                  <div className="text-sm text-gray-400">
-                    <p> Characters: {formattedJson.length}</p>
-                    <p> Lines: {formattedJson.split('\n').length}</p>
-                    <p> Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Features */}
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
 
 
 
               Professional JSON Formatting Features
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -961,8 +792,6 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -995,11 +824,6 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
                 {formattedJson && (;
                   <div className='text-sm text-gray-400'>;
@@ -1112,337 +936,6 @@ export default function JSONFormatterPage() {;
               Perfect For Every JSON Need;
             </h2>;
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-<<<<<<< HEAD
-            {/* Output Section */}
-            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
-              <div className='flex items - center justify - between mb - 6'>;
-                <h3 className='text - 2xl font - bold text - white flex items - center'>;
-                  <CheckCircle className='w - 6 h - 6 mr - 3 text - cyan - 400' />;
-                  Formatted Output;
-                </h3>;
-                {formatted_json && (
-                  <div className='flex items - center space - x-2'>;
-                    <Button;
-                      on_click={() => copyToClipboard (formatted_json)}
-                      variant='outline';
-                      size='sm';
-                      className='border - gray - 600 text - gray - 300 hover:bg - gray - 700';
-                    >;
-                      <Copy className='w - 4 h - 4 mr - 2' />;
-                      Copy;
-                    </Button>;
-                    <Button;
-                      on_click={() =>;
-                        downloadJSON (formatted_json, 'formatted.json');
-                      }
-                      variant='outline';
-                      size='sm';
-                      className='border - gray - 600 text - gray - 300 hover:bg - gray - 700';
-                    >;
-                      <Download className='w - 4 h - 4 mr - 2' />                      Download                  Formatted Output;
-                </h3>;
-                {formatted_json && (
-                  <div className="flex items - center space - x-2">;
-                    <Button;
-                      on_click={() => copyToClipboard (formatted_json)}
-                      variant="outline";
-                      size="sm";
-                      className="border - gray - 600 text - gray - 300 hover:bg - gray - 700";
-                    >;
-                      <Copy className="w - 4 h - 4 mr - 2" />;
-                      Copy;
-                    </Button>;
-                    <Button;
-                      on_click={() => downloadJSON (formatted_json, 'formatted.json')}
-                      variant="outline";
-                      size="sm";
-                      className="border - gray - 600 text - gray - 300 hover:bg - gray - 700";
-                    >;
-                      <Download className="w - 4 h - 4 mr - 2" />;
-                      Download;
-                    </Button>;
-                  </div>)}
-              </div>;
-              <div className='space - y-4'>;
-                  <div className='relative'>;
-                    {showLineNumbers && (
-                      <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>;
-                        {getLineNumbers (formatted_json)}
-                      </div>)}
-                    <div;
-                      className={`p - 4 bg - gray - 700 border border - gray - 600 rounded - lg text - white font - mono text - sm overflow - auto max - h-96 ${
-                        showLineNumbers ? 'pl - 16' : '';
-                      }`}
-                    >;
-                      <pre className='whitespace - pre - wrap'>{formatted_json}</pre>;
-                    </div>;
-                  </div>) : (
-                  <div className='bg - gray - 700 p - 6 rounded - lg border border - gray - 600 text - center'>;
-                    <div className='text - 6xl mb - 4'></div>;
-                    <p className='text - gray - 400'>;
-                      Formatted JSON will appear here. Enter JSON data and click;
-                      format to get started.                    </p>                  <div className="bg - gray - 700 p - 6 rounded - lg border border - gray - 600 text - center">;
-                    <div className="text - 6xl mb - 4"></div>;
-                    <p className="text - gray - 400">;
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.;
-                  </div>)}
-                {formatted_json && (
-                  <div className='text - sm text - gray - 400'>;
-                    <p> Characters: {formatted_json.length}</p>;
-                    <p> Lines: {formatted_json.split ('\n').length}</p>;
-                    <p>;
-                       Size: {((formatted_json.length * 2) / 1024).to_fixed (2)}{' '}
-                      KB;
-                    </p>                  </div>                  <div className="text - sm text - gray - 400">;
-                    <p> Characters: {formatted_json.length}</p>;
-                    <p> Lines: {formatted_json.split ('\n').length}</p>;
-                    <p> Size: {(formatted_json.length * 2 / 1024).to_fixed (2)} KB</p>)}
-              </div>;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Features */}
-      <section className='py - 20 bg - gray - 800'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 16'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              Everything you need to work with JSON data efficiently and;
-              professionally.;
-            </p>;
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Smart Formatting;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Intelligent JSON formatting with customizable indentation and;
-                spacing options.;
-              </p>;
-            </Card>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Real - time Validation;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Instant JSON validation with detailed error messages and syntax;
-                highlighting.;
-              </p>;
-            </Card>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Minification;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Compress JSON data by removing unnecessary whitespace and;
-                formatting.;
-              </p>;
-            </Card>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Line Numbers;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Optional line numbering for easier navigation and debugging of;
-                large JSON files.;
-              </p>;
-            </Card>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Export Options;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Download formatted JSON files or copy to clipboard with a single;
-                click.;
-              </p>;
-            </Card>;
-            <Card className='text - center p - 8 bg - gray - 700 border border - gray - 600'>;
-              <div className='text - 4xl mb - 4'></div>;
-              <h3 className='text - xl font - bold text - white mb - 4'>;
-                Customizable;
-              </h3>;
-              <p className='text - gray - 400'>;
-                Adjust indentation size, toggle compact mode, and customize;
-                display options.              </p>            <Card className="text - center p - 8 bg - gray - 700 border border - gray - 600">;
-              <div className="text - 4xl mb - 4"></div>;
-              <h3 className="text - xl font - bold text - white mb - 4">Customizable</h3>;
-              <p className="text - gray - 400">;
-                Adjust indentation size, toggle compact mode, and customize display options.;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-      {/* Use Cases */}
-      <section className='py - 20 bg - gray - 900'>;
-        <div className='max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 16'>;
-            <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-              Perfect For Every JSON Need;
-            </h2>;
-            <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-              From development to data analysis, our JSON formatter serves all;
-              your formatting needs.;
-            </p>;
-          </div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>Developers</h3>;
-              <p className='text-gray-400 mb-6'>;
-                Format API responses, debug JSON data, and prepare configuration;
-                files with professional formatting.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li> API development and testing</li>              Perfect For Every JSON Need;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-              From development to data analysis, our JSON formatter serves all your formatting needs.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4"></div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-                <li> API development and testing</li>;
-                <li> Configuration file management</li>;
-                <li> Debug and troubleshooting</li>;
-              </ul>;
-            </Card>;
-
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                Data Analysts;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Clean and format JSON datasets for analysis, reporting, and data;
-                visualization projects.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li> Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4"></div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>;
-              <p className="text-gray-400 mb-6">;
-                Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-                <li> Report generation</li>;
-                <li> Data validation</li>;
-              </ul>;
-            </Card>;
-
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                DevOps Engineers;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Manage configuration files, validate deployment manifests, and;
-                format infrastructure as code.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li> Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4"></div>;
-              <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Manage configuration files, validate deployment manifests, and format infrastructure as code.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-                <li> Infrastructure validation</li>;
-                <li> Deployment automation</li>;
-              </ul>;
-            </Card>;
-
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'></div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                Technical Writers;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Format JSON examples for documentation, tutorials, and technical;
-                specifications.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li> Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4"></div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Format JSON examples for documentation, tutorials, and technical specifications.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-                <li> API documentation</li>;
-                <li> Technical specifications</li>;
-              </ul>;
-            </Card>;
-          </div>;
-        </div>;
-      </section>;
-
-      {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
-          </h2>;
-          <p className='text-xl text-teal-100 mb-8'>;
-            Join thousands of developers and professionals who trust our JSON;
-            formatter for their data needs.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-            <Button
-              href='/contact'
-              size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100'>;
-              Get Started Today;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
-            <Button
-              href='/pricing'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600"
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-);
-}
-              className='border-white text-white hover:bg-white hover:text-teal-600'>              href="/pricing";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-teal-600";
-              View Pricing;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
-  );
 }
   );
 }
-    </>);
-}
-=======
-=======
-}
-=======
-  );
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

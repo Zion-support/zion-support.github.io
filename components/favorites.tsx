@@ -7,56 +7,16 @@ function useFavorites() {
 function useFavorites() {;
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
-<<<<<<< HEAD
-  useEffect(() => {;
-    try {;
-      const raw = localStorage && localStorage.getItem(storageKey);
-      if (raw) setFavorites(JSON && JSON.parse(raw));    } catch {}
-=======
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
-<<<<<<< HEAD
-      if (raw) setFavorites(JSON.parse(raw));    } catch {}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }, []);
-  const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug))
-  return { favorites, remove }
-}
-<<<<<<< HEAD
-export default function FavoritesPage() {
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(
-    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
-    [favorites]
-  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-  }, []);
-  const remove = (slug: string) =>: any set_favorites ((prev) => prev.filter ((s) => s !== slug)),
-  return { favorites, remove }
-}
-
-export default function FavoritesPage() {
-  const { favorites, remove } = useFavorites();
-  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-=======
-<<<<<<< HEAD
-export default function FavoritesPage() {
-=======
 
 export default function FavoritesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div>
@@ -247,89 +207,10 @@ function FavoritesPage() {
                   Remove;
                 </button>;
               </div>;
-<<<<<<< HEAD
-              <div className='mt-3 text-xs text-gray-500'>{t && t.location}</div>;
-              <div className='mt-3 flex flex-wrap gap-2'>;
-                {t && t.skills.slice(0, 4).map(s => (;
-                  <span
-                    key={s}
-                    className='text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800'>;
-                    {s}
-                  </span>;
-                ))}
-              </div>;
-              <div className='mt-4 flex items-center justify-between text-sm'>;
-                <div className='font-medium'>${t && t.hourlyRateUsd}/hr</div>;
-                <div className='flex items-center gap-3'>;
-                  <Link href={`/talent/${t && t.slug}`}>;
-                    <a className='px-3 py-1 && 1.5 rounded-md bg-indigo-600 text-white'>;
-                      View Profile;
-                    </a>;
-                  </Link>;
-                  <Link href={`/talent/${t && t.slug}?hire=1`}>;
-                    <a className='px-3 py-1 && 1.5 rounded-md border border-indigo-600 text-indigo-600'>;
-                      Request to Hire;
-                    </a>;
-                  </Link>                </div>              <div className="mt-4 flex items-center justify-between text-sm">;
-                <div className="font-medium">${t && t.hourlyRateUsd}/hr</div>;
-                <div className="flex items-center gap-3">;
-                  <Link href={`/talent/${t && t.slug}`}><a className="px-3 py-1 && 1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>;
-                  <Link href={`/talent/${t && t.slug}?hire=1`}><a className="px-3 py-1 && 1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>;
-              </div>;
-            </div>;
-          ))}
-        </div>;
-      )}
-    </div>
-);
-}
-    </div>
-  );
-}
-              <div className='mt - 3 text - xs text - gray - 500'>{t.location}</div>;
-              <div className='mt - 3 flex flex - wrap gap - 2'>;
-                {t.skills.slice (0, 4).map (string => (
-                  <span;
-                    key={s}
-                    className='text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800';
-                  >;
-                    {s}
-                  </span>))}
-              </div>;
-              <div className='mt - 4 flex items - center justify - between text - sm'>;
-                <div className='font - medium'>${t.hourlyRateUsd}/hr</div>;
-                <div className='flex items - center gap - 3'>;
-                  <Link href={`/talent/${t.slug}`}>;
-                    <a className='px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white'>;
-                      View Profile;
-                    </a>;
-                  </Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}>;
-                    <a className='px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600'>;
-                      Request to Hire;
-                    </a>;
-                  </Link>                </div>              <div className="mt - 4 flex items - center justify - between text - sm">;
-                <div className="font - medium">${t.hourlyRateUsd}/hr</div>;
-                <div className="flex items - center gap - 3">;
-                  <Link href={`/talent/${t.slug}`}><a className="px - 3 py - 1.5 rounded - md bg - indigo - 600 text - white">View Profile</a></Link>;
-                  <Link href={`/talent/${t.slug}?hire = 1`}><a className="px - 3 py - 1.5 rounded - md border border - indigo - 600 text - indigo - 600">Request to Hire</a></Link>;
-              </div>;
-            </div>))}
-        </div>)}
-    </div>);
-}
-=======
 
-=======
-=======
 
 
 
           </ol>
         </nav>
       </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

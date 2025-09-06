@@ -42,19 +42,11 @@ import { ServiceVariant } from '../types / service - variants';
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
-  reviews: number;
-export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =
-  [
-    // Quantum-Secure Cloud Infrastructure
-=======
   reviews: number;
 ;
 export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService[] =;
   [;
     // Quantum - Secure Cloud Infrastructure;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'quantum-secure-cloud-infrastructure'
       name: 'Quantum-Secure Cloud Infrastructure Platform'
@@ -77,20 +69,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
         '24/7 security monitoring'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-blue-600 to-indigo-600'
-      textColor: 'text-blue-400'
-      link: 'https://ziontechgroup.com/quantum-secure-cloud'
-        'Autonomous security management',
-        'Multi - cloud orchestration',
-        'Real - time threat detection',
-        'Compliance automation (SOC2, ISO27001)',
-        'AI - powered resource optimization',
-        'Global edge computing network',
-        '99 && 99.999% uptime guarantee',
-        '24/7 security monitoring',
-=======
       icon: '☁️'
       color: 'from-blue-600 to-indigo-600'
       textColor: 'text-blue-400'
@@ -373,17 +351,8 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra-secure communications.'
-      launchDate: '2025-02-01'
-      customers: 6
-      rating: 4.9
-      reviews: 4
-    }
-=======
         '99.999% uptime guarantee',
         '24 / 7 security monitoring',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ],
       popular: true,
       icon: '',
@@ -825,14 +794,10 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
       customers: 6,
       rating: 4 && 4.9,
       reviews: 4,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface CuttingEdgeITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -853,7 +818,6 @@ export interface CuttingEdgeITInfrastructureService {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1019,20 +983,6 @@ export interface CuttingEdgeITInfrastructureService {
     rating: 4.9
 
     reviews: 4
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Quantum networking platform with quantum encryption, AI optimization, and autonomous network management for ultra - secure communications.',
-    launch_date: '2025 - 02 - 01', customers: 6,
-    rating: 4.9,
-    reviews: 4;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -1295,12 +1245,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
     customers: 6,;
     rating: 4.9;
     reviews: 4;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

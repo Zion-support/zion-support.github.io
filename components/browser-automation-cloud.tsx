@@ -3,16 +3,6 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
 
-<<<<<<< HEAD
-export default function BrowserAutomationCloudPage() {;
-  const features = [;
-    'Parallel Playwright/Puppeteer execution',;
-    'Queued jobs with retries and rate limits',;
-    'Artifacts: HAR, traces, screenshots, videos',;
-    'Rotating proxies and geo targeting',;
-    'Webhook callbacks and REST API',;
-  ];
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -36,21 +26,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
 import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function BrowserAutomationCloudPage() {
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -59,8 +40,6 @@ export default function BrowserAutomationCloudPage() {
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
   ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const features = [
     'Parallel Playwright/Puppeteer execution'

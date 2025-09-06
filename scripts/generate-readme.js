@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 #!/usr/bin/env node;
 /**;
  * Generate README;
  * Creates or updates the main README && README.md file;
  */;
-<<<<<<< HEAD
-=======
 
 ;
 const fs = require('fs'),;
@@ -124,8 +104,6 @@ function generateReadme() {;
     if (existingContent.length > 1000) {;
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),;
       return,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 #!/usr/bin/env node
 
 /**
@@ -230,64 +208,16 @@ function generateReadme() {
     if (existingContent.length > 1000) {
       // // // console.log('⚠️  README.md already exists and appears substantial. Skipping generation.'),
       return
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  console.log(`✅ README generated at: ${outputPath}`)
-}
-
-if (require.main === module) {
-  generateReadme()
-}
-;
-module.exports = { generateReadme },// Simple README maintenance: append an automation run footer with timestamp
-// Simple README maintenance: append an automation run footer with timestamp
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); } main();
-// Simple README "maintenance": append an automation run footer with timestamp
-import fs from 'fs';
-import path from 'path';
-function main() {
-  const repoRoot = process.cwd();
-  const readmePath = path.join(repoRoot, 'README.md');
-  const now = new Date().toISOString();
-  let content = '';
-  try {
-    content = fs.readFileSync(readmePath, 'utf8')} catch (err) {
-    // If README doesn't exist, create a basic one
-    content = '# Project\n\n'}
-  const footer = `\n\n---\nAutomation "summary": README refreshed ${now}\n`;
-  if (!content.includes('Automation "summary": ')) {
-    content += footer} else {
-    // replace existing footer
-    content = content.replace(/\n---\nAutomation "summary": [\s\S]*$/m, footer)}
-  fs.writeFileSync(readmePath, content, 'utf8');
-  console.log('✅ README updated')}
-main();
-#!/usr/bin/env node;,"});,"}) import fs from;,"});,"}) 'fs';,"});,"}) import path from;,"});,"}) 'path';,"});,"}) ;,"});,"}) function main() {;,"});,"}) const repoRoot = process.cwd();,"});,"}) const readmePath = path.join(repoRoot,;,"});,"}) 'README.md');,"});,"}) const now = new Date().toISOString();,"});,"}) ;,"});,"}) let content = ';,"});,"}) ';,"});,"}) try {;,"});,"}) content = fs.readFileSync(readmePath,'utf8;,"});,"}) ');,"});,"}) } catch (err) {;,"});,"}) content =;,"});,"}) '# Project\n\n';,"});,"}) }"});,"}) ;,"});,"}) const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`;,"});,"}) if (!content.includes(;,"});,"}) 'Automation summary:')) {;,"});,"}) content += footer;,"});,"}) } else {;,"});,"}) content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer);,"});,"}) }"});,"}) ;,"});,"}) fs.writeFileSync(readmePath,content,;,"});,"}) 'utf8');,"});,"}) console.log(;,"});,"}) '✅ README updated');,"});,"}) }"});,"}) ;,"});,"}) main();,"});,"}) ;,"});,"}) content = fs.readFileSync(readmePath,'utf8';)} catch (err) {; content =';# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes(` 'Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary: '[\s\S]*$/m',footer)} fs.writeFileSync(readmePath,content,';utf8'); console.log(','✅ README updated')} main();
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
-import fs from 'fs'; import path from 'path'; function main() { const repoRoot = process.cwd(); const readmePath = path.join(repoRoot,'README.md'); const now = new Date().toISOString(); let content = ''; try { content = fs.readFileSync(readmePath,'utf8')} catch (err) { content = '# Project\n\n'} const footer = `\n\n---\nAutomation summary: README refreshed ${now}\n`; if (!content.includes('Automation summary:')) { content += footer} else { content = content.replace(/\n---\nAutomation summary:[\s\S]*$/m,footer)} fs.writeFileSync(readmePath,content,'utf8'); console.log('✅ README updated')} main();
-<<<<<<< HEAD
-
-module.exports = { generateReadme },
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log(`✅ README generated at: ${outputPath}`)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 #!/usr/bin/env node;
 /**;
  * Generate README;
  * Creates or updates the main README.md file;
  */;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const fs = require('fs');
 const path = require('path');
 const README_TEMPLATE = `# Zion Tech Group  Autonomous Innovation Hub;
@@ -522,18 +452,7 @@ function main() { const repo_root = process.cwd (); const readme_path = path.joi
   $2
 } console.log (' README updated')} main ();
 ;
-<<<<<<< HEAD
-module.exports = { generate_readme },
-=======
 
 module.exports = { generateReadme },;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 module.exports = { generateReadme },
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

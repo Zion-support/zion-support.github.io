@@ -23,23 +23,11 @@ export default function QuantumCybersecurityPlatform() {
               'Post-quantum cryptography integrationQuantum key distribution optionsAdvanced anomaly and threat detectionSecurity analytics and incident workflowsCompliance and reportingFrom $4,999/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-<<<<<<< HEAD
-            ))}
-=======
-<<<<<<< HEAD
-            ))}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>

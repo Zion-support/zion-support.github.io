@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useRouter  } from 'next/router';
-import EnhancedCard from '../../components/ui/EnhancedCard',
-import EnhancedButton from '../../components/ui/EnhancedButton',
-import EnhancedLoading from '../../components/ui/EnhancedLoading',
-<<<<<<< HEAD
-=======
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
@@ -19,12 +8,10 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-=======
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
@@ -35,36 +22,13 @@ export default function JobDetailsPage() {
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
-<<<<<<< HEAD
-  const onApply = () => {
-    notify(
-      'Application submitted! Well notify you when its viewed.'
-      'success'
-    );
-  }
-=======
-<<<<<<< HEAD
-  const onApply = () => {
-    notify(
-      'Application submitted! We’ll notify you when it’s viewed.'
-      'success'
-    );
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className='relative'>
@@ -103,63 +67,6 @@ export default function JobDetailsPage() {
             </ul>
           </EnhancedCard>
         </div>
-<<<<<<< HEAD
-    <div className='relative'>;
-      {loading ? (;
-        <EnhancedLoading lines={5} />;
-      ) : (;
-        <div className='space-y-4'>;
-          <EnhancedCard>;
-            <div className='flex items-start justify-between gap-3'>;
-              <div>;
-                <h1 className='text-xl font-semibold'>;
-                  {slug?.replace(/-/g, ' ') || 'Job Title'}
-                </h1>;
-                <p className='text-sm text-gray-600 dark:text-gray-300'>;
-                  Remote  Contract  Posted today;
-                </p>;
-              </div>;
-              {!isMobile && (;
-                <EnhancedButton onClick={onApply} variant='primary'>;
-                  Apply Now;
-                </EnhancedButton>              )}
-            </div>;
-          </EnhancedCard>;
-
-          <EnhancedCard>;
-            <h2 className='font-semibold mb-2'>Description</h2>;
-            <p className='text-sm text-gray-700 dark:text-gray-300'>;
-              You will design, build, and scale AI features using LLMs and;
-              modern tooling.;
-            </p>;
-          </EnhancedCard>;
-
-          <EnhancedCard>;
-            <h2 className='font-semibold mb-2'>Requirements</h2>;
-            <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>              <li>3+ years with Python or TypeScript</li>;
-              <li>Experience with ML/AI production systems</li>;
-              <li>Familiarity with cloud infra and CI/CD</li>;
-            </ul>;
-          </EnhancedCard>;
-        </div>;
-      )}
-      {/* Sticky mobile apply CTA */}
-      {isMobile && (;
-        <div className='fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3'>;
-          <div className='container mx-auto px-2'>;
-            <EnhancedButton onClick={onApply} variant='primary' fullWidth>;
-              Apply Now;
-            </EnhancedButton>          </div>;
-        </div>;
-      )}
-    </div>
-);
-      {/* Sticky mobile apply CTA */}
-=======
-<<<<<<< HEAD
-      )}
-      {/* Sticky mobile apply CTA */}
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -171,53 +78,15 @@ export default function JobDetailsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-}
-          <EnhancedCard>;
-            <h2 className='font - semibold mb - 2'>Requirements</h2>;
-            <ul className='list - disc pl - 5 space - y-1 text - sm text - gray - 700 dark:text - gray - 300'>              <li > 3+ years with Python or TypeScript</li>;
-              <li > Experience with ML / AI production systems</li>;
-              <li > Familiarity with cloud infra and CI / CD</li>;
-            </ul>;
-          </EnhancedCard>;
-        </div>)}
-      {/* Sticky mobile apply CTA */}
-      {is_mobile && (
-        <div className='fixed inset - x-0 bottom - 0 z - 30 bg - white / 90 dark:bg - black / 80 backdrop - blur border - t border - gray - 200 dark:border - gray - 800 p - 3'>;
-          <div className='container mx - auto px - 2'>;
-            <EnhancedButton on_click={on_apply} variant='primary' full_width>;
-              Apply Now;
-            </EnhancedButton>          </div>;
-        </div>)}
-    </div>);
-;
-=======
-<<<<<<< HEAD
-      )}
-    </div>
-);
-<<<<<<< HEAD
-=======
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -230,9 +99,3 @@ export default function JobDetailsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

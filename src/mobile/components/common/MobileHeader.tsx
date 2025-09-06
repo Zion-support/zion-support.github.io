@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {;
-  title: string;  showBack?: boolean;  title: string,;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from "react";
-import { useRouter  } from 'next/router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-interface MobileHeaderProps {
-<<<<<<< HEAD
-=======
-=======
 import React from 'react'
 import { useRouter } from 'next/router'
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -52,8 +27,6 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { useRouter } from 'next/router',
 import { ChevronLeft, Bell, Settings } from 'lucide-react'
@@ -68,8 +41,6 @@ interface MobileHeaderProps {
   onNotificationsClick?: () => void,
   onSettingsClick?: () => void
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   title: string;  showBack?: boolean;  title: string
   showBack?: boolean
@@ -96,17 +67,7 @@ export function MobileHeader({
   const router = useRouter()
   return (
     <header className={cn(
-<<<<<<< HEAD
-      "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
-
-=======
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -175,27 +136,6 @@ export function MobileHeader(): any ({;
             </Button>;
           )}
           {showSettings && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            <Button variant='ghost' size='icon' onClick={onSettingsClick}>
-              <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>
-  showBack = false
-  showNotifications = false
-  showSettings = false
-  className
-  onNotificationsClick
-  onSettingsClick
-}: MobileHeaderProps) {
-  const router = useRouter()
-    >
-      <div className='flex items-center justify-between h-14 px-4'>
-        <div className='flex items-center'>
-          {showBack && (
-<<<<<<< HEAD
-=======
             <Button
               variant='ghost'
               size='icon'
@@ -218,39 +158,19 @@ export function MobileHeader(): any ({;
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
-<<<<<<< HEAD
-              <span className='sr-only'>Settings</span>            </Button>            <Button
-              variant="ghost"
-=======
             <Button 
-=======
               <span className='sr-only'>Settings</span>            </Button>            <Button 
-=======
             <Button 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               variant="ghost" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               size="icon"
               onClick={onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
-<<<<<<< HEAD
-          )}
-        </div>
-      </div>;
-    </header>;
-  );  )
-}
-<<<<<<< HEAD
-=======
 ;
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             </Button>
 import React from "react",;
 import { useRouter } from 'next/router',;
@@ -269,7 +189,6 @@ interface MobileHeaderProps {;
 ;
 export function MobileHeader({;
   title,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   showBack = false,;
   showNotifications = false,;
   showSettings = false,;
@@ -284,8 +203,6 @@ export function MobileHeader({;
       <div className='flex items-center justify-between h-14 px-4'>;
         <div className='flex items-center'>;
           {showBack && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               variant='ghost'
               size='icon'
@@ -323,128 +240,12 @@ export function MobileHeader({;
               <Settings className="h-5 w-5" />;
               <span className="sr-only">Settings</span>;
           )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </header>
-  );  )
-}
-        </div>;
-      </div>;
-    </header>;
-  );  );
-}
-  )
-}
-import React from 'react';
-import { use_router } from 'next / router';
-import { ChevronLeft, Bell, Settings } from 'lucide-react';
-import { cn } from '@/lib / utils';
-import { Button } from '@/components / ui / button';
-import { cn  } from '@/lib / utils';
-import { Button  } from '@/components / ui / button';
-interface MobileHeaderProps {
-  title: string;  show_back?: boolean;  title: string,
-  show_back?: boolean;
-  show_notifications?: boolean;
-  show_settings?: boolean;
-  class_name?: string;
-  onNotificationsClick?: () => void;
-  onSettingsClick?: () => void;
-export /**
- * MobileHeader - Function description
- */
-function MobileHeader() {
-  const router = use_router ();
-  return (
-    <header className={cn (
-      "sticky top - 0 z - 40 bg - background / 80 backdrop - blur - sm border - b border - border";
-      class_name)}>;
-      <div className="flex items - center justify - between h - 14 px - 4">;
-        <div className="flex items - center">;
-          {show_back && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              className="mr - 2";
-              on_click = {(, ) => router.back (), }
-            >;
-              <ChevronLeft className="h - 5 w - 5" />;
-              <span className="sr - only">Back</span>;
-            </Button>)}
-          <h1 className="text - lg font - medium leading - none truncate">;
-            {title}
-          </h1>;
-        </div>;
-        <div className="flex items - center space - x-2">;
-          {show_notifications && (
-            <Button;
-              variant="ghost";
-              size="icon";
-              on_click = {onNotificationsClick, }
-            >;
-              <Bell className="h - 5 w - 5" />;
-              <span className="sr - only">Notifications</span>;
-            </Button>)}
-          {show_settings && (
-            <Button variant='ghost' size='icon' on_click={onSettingsClick}>;
-              <Settings className='h - 5 w - 5' />;
-              <span className='sr - only'>Settings</span>;
-  show_back = false,
-  show_notifications = false,
-  show_settings = false,
-  class_name,
-  onNotificationsClick,
-  onSettingsClick,
-}: MobileHeaderProps) {
-  const router = use_router ();
-    >;
-      <div className='flex items - center justify - between h - 14 px - 4'>;
-        <div className='flex items - center'>;
-          {show_back && (
-            <Button;
-              variant='ghost';
-              size='icon';
-              className='mr - 2';
-              on_click={() => router.back ()}
-            >;
-              <ChevronLeft className='h - 5 w - 5' />;
-              <span className='sr - only'>Back</span>;
-            </Button>)}
-          <h1 className='text - lg font - medium leading - none truncate'>{title}</h1>;
-        </div>;
-        <div className='flex items - center space - x-2'>;
-          {show_notifications && (
-            <Button variant='ghost' size='icon' on_click={onNotificationsClick}>;
-              <Bell className='h - 5 w - 5' />;
-              <span className='sr - only'>Notifications</span>;
-            </Button>)}
-          {show_settings && (
-            <Button variant='ghost' size='icon' on_click={onSettingsClick}>;
-              <Settings className='h - 5 w - 5' />;
-              <span className='sr - only'>Settings</span>            </Button>            <Button;
-              variant="ghost";
-              size="icon";
-              on_click = {onSettingsClick, }
-            >;
-              <Settings className="h - 5 w - 5" />;
-              <span className="sr - only">Settings</span>)}
-        </div>;
-      </div>;
-    </header>));
-}
-=======
         </div>;
       </div>;
     </header>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

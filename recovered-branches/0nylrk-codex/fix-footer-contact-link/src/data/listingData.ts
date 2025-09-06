@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { ProductListing } from '@/types/listings';
-import { SearchSuggestion } from '@/types/search';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ProductListing } from '@/types/listings';
-import { SearchSuggestion } from '@/types/search';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
@@ -212,43 +200,10 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-<<<<<<< HEAD
-    'AI models',
-    'GPT integration',
-    'Machine learning',
-    'Computer vision',
-    'Speech recognition',
-    'Data analysis',
-    'Content generation',
-    'Code assistant',
-    'Virtual assistant',
-    'Enterprise AI solutions',
-    'AI models'
-    'GPT integration'
-    'Machine learning'
-    'Computer vision'
-    'Speech recognition'
-    'Data analysis'
-    'Content generation'
-    'Code assistant'
-    'Virtual assistant'
-    'Enterprise AI solutions'
-  ];
-  return suggestions.map(text => ({
-    text
-    type: 'product', // Use a valid type from the SearchSuggestion interface
-  }));};  ];
-  return suggestions.map(text => ({
-=======
 
 
-=======
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -392,8 +347,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Enterprise AI solutions"
   ],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   
   return suggestions && suggestions.map(text => ({
     text;
@@ -583,78 +536,7 @@ export const generateFilterOptions = () =>: any {
       label: item,
       value: item,
     })),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    ratingOptions: [1, 2, 3, 4, 5],
-  };
-};
 
-export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-reviewCount: 58;
-featured: true;
-location: "Global";
-availability: "Immediate";
-ai_score: 98;
-}
-rating: 4.8;
-review_count: 32;
-location: "North America";
-availability: "4 - 6 Weeks";
-ai_score: 92;
-}
-rating: 4.7;
-review_count: 18;
-featured: true;
-location: "Global";
-availability: "2 - 3 Weeks";
-ai_score: 95;
-}
-rating: 4.6;
-review_count: 124;
-location: "Global";
-availability: "Immediate";
-ai_score: 88;
-}
-rating: 4.5;
-review_count: 47;
-location: "North America";
-availability: "1 - 2 Weeks";
-ai_score: 90;
-}
-rating: 4.8;
-review_count: 36;
-featured: true;
-location: "Global";
-availability: "Immediate";
-ai_score: 94;
-}];
-//Generate search suggestions based on existing listings ];
-  return {
-  product_types: product_types.map (type => ({
-  label: type, value: type;
-}) );
-locations: locations.map (location => ({
-  label: location, value: location;
-}) );
-availability_options: availability.map (item => ({
-  label: item, value: item;
-}) );
-rating_options: [1, 2, 3, 4, 5];
-}export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-;
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
@@ -824,11 +706,4 @@ export const generateFilterOptions = () => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

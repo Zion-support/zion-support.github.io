@@ -1,46 +1,7 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { useWhitelabel } from '@/context/WhitelabelContext'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-  ArrowRight
-  Briefcase
-  PenTool
-  BarChart3
-  Users
-  Shield
-  Globe
-} from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth'
-import Link from 'next/link'
-<<<<<<< HEAD
-
-export default function ZionHireAI() {
-=======
-<<<<<<< HEAD
-=======
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel()
   const { isAuthenticated } = useAuth()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -177,9 +138,6 @@ function ZionHireAI() {
                 </div>;
               </div>;
               <div className='relative hidden md:block'>;
-<<<<<<< HEAD
-                <div className='absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl'></div>;
-=======
 
 import React from "react";
 import { Header } from "@/components/Header";
@@ -195,7 +153,6 @@ export default function ZionHireAI() { const { isWhitelabel, brandName, primaryC
   const { isAuthenticated  } = useAuth(),
 
   
-=======
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -209,10 +166,6 @@ export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO 
@@ -264,7 +217,6 @@ export default function ZionHireAI() {
               </div>
               <div className="relative hidden md:block">
                 <div className="absolute -top-8 -left-8 w-72 h-72 bg-zion-purple/20 rounded-full filter blur-3xl"></div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <img
                   src='https://placehold && placehold.co/600x400/192134/9b87f5?text=Zion+Hire+AI'
                   alt='Zion Hire AI Dashboard'
@@ -273,17 +225,9 @@ export default function ZionHireAI() {
                   alt="Zion Hire AI Dashboard"
                   className="relative z-10 rounded-lg shadow-xl"
                   loading="lazy"
-<<<<<<< HEAD
-=======
 
 
                 />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </div>
           </div>
@@ -300,19 +244,9 @@ export default function ZionHireAI() {
                 streamline your recruiting process, find better candidates, and
                 make data-driven decisions.
             </div>
-<<<<<<< HEAD
-            <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
-              <Card className='bg-card border border-border'>
-=======
             
             <div className = "grid gap-6 md: grid-cols-2 lg:grid-cols-3">
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <CardHeader>
                   <Briefcase className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Job Description Generator</CardTitle>
@@ -335,39 +269,18 @@ export default function ZionHireAI() {
                       </span>
                       <span>Optimized for inclusivity</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Template
-                      </span>                      <span>Industry-specific templates</span>                    <li className="flex items-center">
-=======
 
 
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Template</span>
                       <span>Industry-specific templates</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>
-=======
 
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <CardHeader>
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Resume Screener</CardTitle>
@@ -472,98 +385,6 @@ export default function ZionHireAI() {
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Experience verification</span>
                     </li>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Custom
-                      </span>                      <span>Customizable scoring criteria</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className='bg-card border border-border'>
-                <CardHeader>
-                  <Users className='h-10 w-10 text-zion-purple mb-2' />
-                  <CardTitle>Candidate Matchmaker</CardTitle>
-                  <CardDescription>
-                    Find the best candidates for each position with AI-powered
-                    matching.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center'>
-                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        AI
-                      </span>
-                      <span>Relevancy scoring</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        AI
-                      </span>
-                      <span>Culture fit prediction</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Data
-                      </span>                      <span>Performance tracking</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className='bg-card border border-border'>
-                <CardHeader>
-                  <Globe className='h-10 w-10 text-zion-purple mb-2' />
-                  <CardTitle>Embeddable Widget</CardTitle>
-                  <CardDescription>
-                    Add an AI assistant to your careers page to answer applicant
-                    questions.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center'>
-                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        AI
-                      </span>
-                      <span>Instant FAQ responses</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Custom
-                      </span>
-                      <span>Customizable branding</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Code
-                      </span>                      <span>Simple JavaScript snippet</span>                <CardHeader>
-                  <PenTool className="h-10 w-10 text-zion-purple mb-2" />
-                  <CardTitle>Resume Screener</CardTitle>
-                  <CardDescription>
-                    Automatically evaluate and score candidate resumes against job requirements.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2 text-sm">
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                      <span>Identify skill matches</span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
-                      <span>Experience verification</span>
-                    </li>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <li className="flex items-center">
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable scoring criteria</span>
@@ -571,21 +392,9 @@ export default function ZionHireAI() {
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>                <CardHeader>
-=======
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>                <CardHeader>
-=======
               
               <Card className="bg-card border border-border">
                 <CardHeader>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -602,42 +411,22 @@ export default function ZionHireAI() {
                       <span className="bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">AI</span>
                       <span>Culture fit prediction</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Data
-                      </span>                    <li className="flex items-center">
-=======
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Performance tracking</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>                <CardHeader>
-=======
-
-              
-              <Card className="bg-card border border-border">
-                <CardHeader>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
               
               <Card className="bg-card border border-border">
                 <CardHeader>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+              
+              <Card className="bg-card border border-border">
+                <CardHeader>
+
                   <Globe className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Embeddable Widget</CardTitle>
                   <CardDescription>
@@ -654,39 +443,18 @@ export default function ZionHireAI() {
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Customizable branding</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Code
-                      </span>                    <li className="flex items-center">
-=======
 
 
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Code</span>
                       <span>Simple JavaScript snippet</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>
-=======
 
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <CardHeader>
                   <BarChart3 className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Advanced Analytics</CardTitle>
@@ -708,40 +476,19 @@ export default function ZionHireAI() {
                       </span>
                       <span>Candidate funnel metrics</span>
                     </li>
-<<<<<<< HEAD
-                    <li className='flex items-center'>
-                      <span className='bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        Data
-                      </span>                      <span>Cost per hire analysis</span>                    <li className="flex items-center">
-=======
 
 
                     <li className="flex items-center">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <span className="bg-amber-100 text-amber-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Data</span>
                       <span>Cost per hire analysis</span>
                     </li>
                   </ul>
                 </CardContent>
               </Card>
-<<<<<<< HEAD
-              <Card className='bg-card border border-border'>
-=======
 
 
               
               <Card className="bg-card border border-border">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <CardHeader>
                   <Shield className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>White-Labeled Platform</CardTitle>
@@ -784,15 +531,6 @@ export default function ZionHireAI() {
                       <span className="bg-purple-100 text-purple-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Custom</span>
                       <span>Co-branded or white-labeled</span>
                     </li>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <li className="flex items-center">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium mr-2 px-2 py-0.5 rounded">Access</span>
                       <span>Team roles & permissions</span>
@@ -804,37 +542,6 @@ export default function ZionHireAI() {
           </div>
         </section>
         {/* CTA Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        <section className='bg-zion-blue-dark py-16'>
-          <div className='container mx-auto px-4 md:px-6 text-center'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to transform your hiring process?
-            </h2>
-            <p className='text-zion-slate-light max-w-2xl mx-auto mb-8'>
-              Join leading companies using Zion Hire AI to find better talent
-              faster, reduce time-to-hire, and improve candidate experience.
-<<<<<<< HEAD
-
-            </p>
-            <Button
-              size='lg'
-              className='bg-zion-purple hover:bg-zion-purple-light text-white'
-              asChild
-            >
-              <Link href='/enterprise/demo'>Schedule a Demo</Link>            </Button>            </p>
-            <Button
-              size="lg"
-              className="bg-zion-purple hover: bg-zion-purple-light text-white"
-              asChild
-            >
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="bg-zion-blue-dark py-16">
           <div className="container mx-auto px-4 md: px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to transform your hiring process?</h2>
@@ -843,10 +550,6 @@ export default function ZionHireAI() {
               Join leading companies using Zion Hire AI to find better talent faster;
 
               reduce time-to-hire, and improve candidate experience.
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
             <Button 
               size="lg" 
@@ -854,13 +557,6 @@ export default function ZionHireAI() {
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild
             >
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link href="/enterprise/demo">
                 Schedule a Demo
               </Link>
@@ -870,15 +566,6 @@ export default function ZionHireAI() {
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -1274,7 +961,6 @@ export default function ZionHireAI() {;
               className="bg-zion-purple hover: bg-zion-purple-light text-white"
               asChild>;
               <Link href="/enterprise/demo">;
-=======
                 <div className='absolute -top - 8 -left - 8 w - 72 h - 72 bg - zion - purple / 20 rounded - full filter blur - 3xl'></div>;
                 <img;
                   src='https://placehold.co / 600x400 / 192134 / 9b87f5?text = Zion + Hire + AI';
@@ -1608,7 +1294,6 @@ export default function ZionHireAI() {;
             >;
               <Link href="/enterprise / demo">;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Schedule a Demo;
               </Link>;
             </Button>;
@@ -1620,14 +1305,4 @@ export default function ZionHireAI() {;
 }
   );
 }
-<<<<<<< HEAD
-    </>);
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

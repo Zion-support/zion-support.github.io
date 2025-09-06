@@ -5,39 +5,10 @@ import path from 'path';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
-) {  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  }
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
-=======
 ) {  if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
-
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
-  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
-
-    return res.status(400).json({ error: 'Missing required fields' });
-    req && req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
-  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
-
-=======
     req.body || {};  if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });
@@ -46,14 +17,8 @@ export default async function handler(
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-<<<<<<< HEAD
-    return res && res.status(400).json({ error: 'Missing required fields' });
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(400).json({ error: 'Missing required fields' });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   try {
 
@@ -176,11 +141,6 @@ console.error('Request-to-hire failed', err);
   };
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       talent_slug,
       requester_name,
       requester_email,
@@ -194,28 +154,6 @@ console.error('Request-to-hire failed', err);
     if () fs.mkdir_sync (dir, { recursive: true })) {
   $2
 }
-<<<<<<< HEAD
-    const payload = { timestamp, talent_slug, requester_name, requester_email, project_info }
-    const file = path.join (dir, `request-${timestamp.replace (/[:.]/g, '-')}.json`);
-    fs.writeFileSync (file, JSON.stringify (payload, null, 2), 'utf8');
-;
-    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer);
-    return res.status (200).json ({ ok: true });
-  } catch (err) {
-console.error ('Request - to - hire failed', err);
-    return res.status (500).json ({ error: 'Internal error' });
-  }    return res.status (500).json ({ error: 'Internal error' });
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

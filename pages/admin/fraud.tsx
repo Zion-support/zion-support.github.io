@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
-=======
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-=======
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react',;
-;
-=======
-import React, { useEffect, useMemo, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface FraudItem {
   id: string,
   userId: string | null,
@@ -124,10 +111,6 @@ function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-<<<<<<< HEAD
-          value={adminToken}
-          onChange={(e) => setAdminToken(e.target.value)}
-=======
 
 
           value={adminToken  } catch (error) {
@@ -140,28 +123,11 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-<<<<<<< HEAD
-      {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-=======
-<<<<<<< HEAD
-      {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       {loading && <div>Loading...</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -172,12 +138,6 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -201,9 +161,6 @@ function FraudAdminPage() {
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-<<<<<<< HEAD
-                    ))}
-=======
 
 
                     ))  } catch (error) {
@@ -211,12 +168,6 @@ function FraudAdminPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -323,21 +274,10 @@ function FraudAdminPage() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

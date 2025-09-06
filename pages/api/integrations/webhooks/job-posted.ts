@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -88,16 +80,8 @@ function handler() {
   res && res.status(200).json({ ok: true, results });
 }
 
-<<<<<<< HEAD
-  writeState(s => {
-    s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } })
-=======
-<<<<<<< HEAD
-=======
 
 res.status(200).json({ ok: true, results });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -128,7 +112,6 @@ export default async function handler(req, res) {
   writeState(s => {;
     s.events.push({ id: `${Date.now()}-job-posted`, type: 'zion.job.posted', timestamp: Date.now(), payload: { job } });
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });
 
   res.status(200).json({ ok: true, results })
@@ -145,22 +128,4 @@ export default async function handler(req, res) {
     write_state ((s) => s.logs.push (log));
     results.push ({ provider_id: conn.provider_id, ok: true });
   }
-<<<<<<< HEAD
-  // record Zapier event;
-  write_state ((s) => {
-    s.events.push ({
-      id: `${Date.now ()}-job - posted`,
-      type: "zion.job.posted",
-      timestamp: Date.now (),
-      payload: { job },
-    });
-  });
-;
-  res.status (200).json ({ ok: true, results });
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

@@ -1,48 +1,17 @@
-<<<<<<< HEAD
-export interface CustomerTicket {
-  id: string;
-  customer_id: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface CustomerTicket {
-=======
 export interface CustomerTicket {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  customerId: string;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  subject: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
-  category: string;
-<<<<<<< HEAD
-  assigned_to?: string;
-  created_at: Date;
-  updated_at: Date;
-  resolved_at?: Date;
-  customer_satisfaction?: number;
-=======
   assignedTo?: string;
   createdAt: Date;
   updatedAt: Date;
   resolvedAt?: Date;
   customerSatisfaction?: number;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   tags: string[];
 
   attachments: string[]
 
   conversationHistory: CustomerMessage[]
 }
-<<<<<<< HEAD
-export interface CustomerMessage {
-=======
 
 export interface CustomerMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -56,12 +25,8 @@ export interface CustomerMessage {;
 
   confidence: number
 }
-<<<<<<< HEAD
-export interface CustomerProfile {
-=======
 
 export interface CustomerProfile {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   email: string;
   name: string;
@@ -82,12 +47,8 @@ export interface CustomerProfile {;
   }
   tags: string[]
 }
-<<<<<<< HEAD
-export interface AIResponse {
-=======
 
 export interface AIResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   ticket_id: string;
   response: string;
@@ -99,12 +60,8 @@ export interface AIResponse {;
 
   generatedAt: Date
 }
-<<<<<<< HEAD
-export interface CustomerServiceMetrics {
-=======
 
 export interface CustomerServiceMetrics {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
@@ -119,24 +76,9 @@ export interface CustomerServiceMetrics {;
 
     customerSatisfaction: number
   }>
-<<<<<<< HEAD
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-<<<<<<< HEAD
-export interface CustomerServiceRequest {
-=======
 
 export interface CustomerServiceRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   customerId: string;
   subject: string;
   description: string;
@@ -147,12 +89,8 @@ export interface CustomerServiceRequest {;
 
   preferredChannel?: 'email' | 'chat' | 'phone'
 }
-<<<<<<< HEAD
-export interface CustomerServiceResponse {
-=======
 
 export interface CustomerServiceResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ticketId: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
@@ -162,16 +100,8 @@ export interface CustomerServiceResponse {;
 
   assignedAgent?: string
 }
-<<<<<<< HEAD
-export class AICustomerServiceService {
-=======
-<<<<<<< HEAD
-export class AICustomerServiceService {
-=======
 
 export class AICustomerServiceService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   private apiKey: string;
 
   private baseUrl: string
@@ -368,17 +298,8 @@ export class AICustomerServiceService {;
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-<<<<<<< HEAD
-  next_steps: string[],
-  assigned_agent?: string;
-=======
-<<<<<<< HEAD
-=======
 export interface CustomerTicket {;
-=======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   customerId: string,;
   subject: string,;
@@ -394,7 +315,6 @@ export const aiCustomerServiceService = new AICustomerServiceService(process.env
   tags: string[],;
   attachments: string[],;
   conversationHistory: CustomerMessage[];
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -632,12 +552,4 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
-<<<<<<< HEAD
-=======
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

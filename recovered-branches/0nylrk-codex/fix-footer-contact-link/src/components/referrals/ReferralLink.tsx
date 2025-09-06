@@ -1,80 +1,33 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-<<<<<<< HEAD
-
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-=======
-=======
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export function ReferralLink({
-  referralLink
-  onCopy
-  onShare
-}: ReferralLinkProps) {
-<<<<<<< HEAD
-  const [copied, setCopied] = useState(false);
-=======
   const [copied, setCopied] = useState(false);
   const handleCopy = () => {
     onCopy();
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   }
-=======
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
 
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleCopy = () => {
     onCopy();
     setCopied(true);
@@ -96,8 +49,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
-<<<<<<< HEAD
-=======
             <Input
               value={referralLink}
               readOnly
@@ -152,18 +103,8 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
         </div>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
   )
-=======
   )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -198,8 +139,6 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
       <CardContent>;
         <div className="flex flex-col space-y-3">;
           <div className="flex space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Input
               value={referralLink}
               readOnly
@@ -266,12 +205,4 @@ export function ReferralLink(): any ({ referralLink, onCopy, onShare }: Referral
 }
     </Card>);
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

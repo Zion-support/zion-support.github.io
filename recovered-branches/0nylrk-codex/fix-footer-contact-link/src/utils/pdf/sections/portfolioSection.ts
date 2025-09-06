@@ -1,22 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { jsPDF  } from 'jspdf';
-import { PortfolioProject  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addPortfolioSection(
-<<<<<<< HEAD
-=======
-=======
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -74,9 +60,6 @@ export function addPortfolioSection(;
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4
-<<<<<<< HEAD
-=======
-=======
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -142,24 +125,11 @@ export function addPortfolioSection(;
       if (project.demo_url) {;
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
         yPos += 4;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
     yPos += 10, // Add space between projects
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // If there are more projects than we're displaying
   if (projects.length > maxProjects) {
     doc.setFontSize(10);
@@ -167,41 +137,6 @@ export function addPortfolioSection(;
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
-<<<<<<< HEAD
-  }
-  return yPos + 5
-import {jsPDF} from 'jspdf';
-import {PortfolioProject} from '@/types / resume';
-import {PdfThemeColors} from '../theme_config';
-export function addPortfolioSection (
-  doc: jsPDF;
-  projects: PortfolioProject[];
-  colors: PdfThemeColors;
-  start_y: number;
-  max_projects: number = 2): number {
-  // Check condition
-if (return start_y) {
-  $2
-}
-  let y_pos = start_y;
-;
-  // Check if we need to add a new page;
-  // Check condition
-if ( {) {
-  $2
-}
-    doc.add_page (),
-    y_pos = 20;
-=======
-<<<<<<< HEAD
-  }
-  return yPos + 5
-}
-    doc.add_page (),
-    y_pos = 20;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -209,11 +144,6 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);

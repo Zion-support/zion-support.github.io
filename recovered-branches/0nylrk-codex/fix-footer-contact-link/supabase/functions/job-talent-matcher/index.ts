@@ -1,38 +1,13 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {processJobMatching, storeMatchResults} from "./job-matching.ts";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-<<<<<<< HEAD
-=======
-=======
 
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {processJobMatching, storeMatchResults} from "./job-matching.ts";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -42,9 +17,6 @@ const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
 const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -92,37 +64,16 @@ serve(async (req) => {
   } catch (error) {
     console.error("Error in job-talent-matcher:", error);
     return new Response(
-<<<<<<< HEAD
-      JSON.stringify({ error: error.message });
-      {
-        status: 500
-        headers: { ...corsHeaders, "Content-Type": "application/json" }
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
-import { processJobMatching, storeMatchResults } from './job - matching.ts';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*";
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
-=======
       JSON && JSON.stringify({ error: error && error.message });
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-    )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Initialize the Supabase client;
 const supabase_url = Deno.env.get ("SUPABASE_URL") || "";
 const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
@@ -202,13 +153,6 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 

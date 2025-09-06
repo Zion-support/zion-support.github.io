@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import {toast} from "@/hooks/use-toast"
@@ -8,8 +5,6 @@ import {NextSeo} from '@/components/NextSeo'
 import {Header} from "@/components/Header"
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { ProductListingCard } from "@/components/ProductListingCard",
 import { useState, useEffect, useRef, Suspense } from "react",
@@ -23,32 +18,6 @@ import { NextSeo } from '@/components/NextSeo',
 import { Header } from "@/components/Header",
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-const AUTO_SERVICE_TITLES = [
-  "AI-Powered Customer Support",
-  "Cloud Infrastructure Management",
-  "Predictive Analytics Consulting",
-  "Cybersecurity Automation Suite",
-  "Robotic Process Automation",
-  "Machine Learning Model Tuning",
-  "IoT Device Integration Service",
-  "Blockchain Data Solutions"
-],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import {toast} from "@/hooks/use-toast"
-import {NextSeo} from '@/components/NextSeo'
-import {Header} from "@/components/Header"
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton'
-import {logErrorToProduction} from '@/utils/productionLogger'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -58,44 +27,9 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
-<<<<<<< HEAD
-]
-function generateInnovationListing(index: number): ProductListing {
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-]
-function generateInnovationListing(index: number): ProductListing {
-<<<<<<< HEAD
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
-  const params = router.query as { slug?: string }
-  const slug = slugProp ?? params.slug
-      icon: <Briefcase className="w-6 h-6" />
-    }
-    'talents': {
-      title: "Talents"
-      description: "Connect with AI experts, developers, and tech specialists"
-      icon: <Brain className="w-6 h-6" />
-    }
-    'equipment': {
-      title: "Equipment"
-      description: "Rent or buy specialized hardware, servers, and devices"
-      icon: <Code className="w-6 h-6" />
-    }
-=======
-<<<<<<< HEAD
-=======
 ],
 
 function generateInnovationListing(index: number): ProductListing {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
   const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
   const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
@@ -148,23 +82,11 @@ function generateInnovationListing (index: number): ProductListing {
   const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
   const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const params = router.query as { slug?: string }
   const slug = slug_prop ?? params.slug;
       icon: <Briefcase className="w - 6 h - 6" />;
     }
     'talents': {
-<<<<<<< HEAD
-      title: "Talents"
-      description: "Connect with AI experts, developers, and tech specialists"
-      icon: <Brain className="w-6 h-6" />
-    }
-    'equipment': {
-      title: "Equipment"
-      description: "Rent or buy specialized hardware, servers, and devices"
-      icon: <Code className="w-6 h-6" />
-    }
-=======
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
       icon: <Brain className="w-6 h-6" />
@@ -174,155 +96,64 @@ function generateInnovationListing (index: number): ProductListing {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
       icon: <Brain className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
       icon: <PenLine className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
       icon: <BarChart className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
       icon: <Eye className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
       icon: <Bot className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
 
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-=======
     },
 
-=======
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
-=======
     },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
-<<<<<<< HEAD
-    };          icon: <Bot className="w-6 h-6" />}
-        setCategory(currentCategory)
-        innovationCounterRef.current = 0
-    : 'Category | Zion Marketplace'
-  const seoDescription =
-    category.description |'Explore listings in this category.'
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    };          icon: <Bot className="w-6 h-6" />}
-        setCategory(currentCategory)
-        innovationCounterRef.current = 0
-    : 'Category | Zion Marketplace'
-  const seoDescription =
-    category.description |'Explore listings in this category.'
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -429,19 +260,12 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace',
   const seoDescription =
     category.description || 'Explore listings in this category.',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -454,17 +278,9 @@ function generateInnovationListing (index: number): ProductListing {
                Back to Categories
             </Link>
           </div>
-<<<<<<< HEAD
-=======
 
 
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
@@ -609,33 +425,10 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   onRequestQuote = {handleRequestQuote,}
                   detailBasePath="/marketplace/listing"
                 />;
-<<<<<<< HEAD
               ))}
             </div>;
           )}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              ))}
-            </div>;
-          )}
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          </div>
-        </div>
-      </Suspense>
-    </>
-  )
-<<<<<<< HEAD
 }
-
-=======
-}
-<<<<<<< HEAD
-=======
           </div>;
         </div>;
       </Suspense>;
@@ -643,12 +436,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </p>;
           </div>;
           {is_loading ? (
@@ -667,16 +455,8 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       </Suspense>;
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
-=======
 
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

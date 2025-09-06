@@ -23,25 +23,14 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function EpisodePage() {
-=======
 export default function EpisodePage() {;
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function EpisodePage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { id } = router.query as { id?: string };
   const [episode, setEpisode] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const router = useRouter();
   const { id } = router.query as { id?: string }
@@ -154,10 +143,6 @@ if (return <div > Loading</div>) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     <div className='space-y-4'>
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
@@ -178,9 +163,3 @@ if (return <div > Loading</div>) {
     </div>
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
-import {SeverityIndicator} from "../common/SeverityIndicator";
-import {useNavigate} from "react-router-dom";
-import {toast} from "sonner";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -25,22 +7,8 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import { SeverityIndicator } from "../common/SeverityIndicator",
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-interface Milestone {
-=======
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-=======
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-interface Milestone {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface Milestone {
   id: string,
   title: string,
@@ -48,48 +16,8 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
-<<<<<<< HEAD
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
-  id: string
-  title: string
-  dueDate: string
-  status: "completed" | "in_progress" | "pending"
-  paymentStatus: "paid" | "pending" | "overdue"
-
-  amount: string
-}
-interface ProjectViewProps {
-  project: {
-
-    id: string
-    title: string
-    client: {
-      name: string
-      avatar?: string
-    }
-    startDate: string
-    endDate?: string;
-    status: string
-    totalAmount: string
-    progress: number
-
-<<<<<<< HEAD
-    description: string
-  }
-  milestones: Milestone[]
-}
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-
-=======
-
-<<<<<<< HEAD
-=======
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const navigate = useNavigate();
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
@@ -194,13 +122,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant={
                       milestone.paymentStatus === "paid" ? "default" :
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate(),;
@@ -306,12 +227,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     }
                   >
                     {milestone.paymentStatus}
@@ -340,8 +255,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
 
 
                   </Badge>;
@@ -369,12 +282,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       </section>

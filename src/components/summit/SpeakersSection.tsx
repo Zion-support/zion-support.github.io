@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import Image from "next/image";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Image from "next/image";
-=======
 import Image from 'next/image'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Twitter, Linkedin } from 'lucide-react'
 interface Speaker {
   name: string;
@@ -18,16 +9,10 @@ interface Speaker {
   linkedin?: string;
 }
 interface Speaker {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   name: string,
   title: string,
   avatar: string,
   twitter?: string
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Image from "next/image",
 import { Twitter, Linkedin } from 'lucide-react'
 
@@ -36,15 +21,8 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   linkedin?: string
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   name: string
   title: string
@@ -141,25 +119,8 @@ const speakers: Speaker[] = [;
     title: 'Founder & CEO',
     avatar: 'https://placehold.co / 100x100',
     twitter: '#',
-<<<<<<< HEAD
     linkedin: '#'}],
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    linkedin: '#',
-  },
-]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    linkedin: '#'}],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -169,8 +130,6 @@ export function SpeakersSection() {
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
               <Image
-<<<<<<< HEAD
-=======
 import Image from "next/image",;
 import { Twitter, Linkedin } from 'lucide-react';
 interface Speaker {;
@@ -197,12 +156,6 @@ export function SpeakersSection() {;
           {speakers.map((sp) => (;
             <div key={sp.name} className="text-center space-y-2">;
               <Image;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 src={sp.avatar}
                 alt={sp.name}
                 width={96}
@@ -216,14 +169,6 @@ export function SpeakersSection() {;
                 {sp.twitter && (
                   <a
                     href={sp.twitter}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -233,32 +178,10 @@ export function SpeakersSection() {;
                     <span className="sr-only">Twitter</span>
                   </a>
                 )}
-<<<<<<< HEAD
-                {sp && sp.linkedin && (;
-                  <a
-                    href={sp && sp.linkedin}
-                    aria-label='LinkedIn'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='flex items-center'>;
-                    <Linkedin className='h-4 w-4' aria-hidden='true' />;
-                    <span className='sr-only'>LinkedIn</span>                  </a>                    aria-label="LinkedIn";
-                    target="_blank";
-                    rel="noopener noreferrer";
-                    className="flex items-center";
-                  >;
-                    <Linkedin className="h-4 w-4" aria-hidden="true" />;
-                    <span className="sr-only">LinkedIn</span>;
-=======
                 {sp.linkedin && (;
                   <a;
                     href={sp.linkedin}
                     aria-label="LinkedIn"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center"
@@ -268,12 +191,6 @@ export function SpeakersSection() {;
 
 
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 )}
               </div>;
             </div>;
@@ -285,13 +202,7 @@ export function SpeakersSection() {;
 }
   );
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     aria - label='Twitter';
                     target='_blank';
                     rel='noopener noreferrer';
@@ -328,11 +239,5 @@ export function SpeakersSection() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

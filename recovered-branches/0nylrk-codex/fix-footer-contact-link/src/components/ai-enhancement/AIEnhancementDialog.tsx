@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react';
-import { Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle } from '@/components/ui/dialog';
-import { AIEnhancementPanel  } from './AIEnhancementPanel';
-import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementDialogProps {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -29,8 +13,6 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import {;
   Dialog,;
@@ -48,8 +30,6 @@ interface AIEnhancementDialogProps {;
   initialContent?: string;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   title: string
   isOpen: boolean

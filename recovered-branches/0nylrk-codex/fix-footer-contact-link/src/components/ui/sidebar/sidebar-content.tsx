@@ -22,22 +22,8 @@ export const SidebarInput = React.forwardRef<
 })
 SidebarInput.displayName = &quot;SidebarInput&quot;
 export const SidebarHeader = React.forwardRef<
-<<<<<<< HEAD
-  HTMLDivElement
-  React.ComponentProps<&quot;div&quot;>
-=======
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   return (
     <div;
@@ -50,22 +36,8 @@ export const SidebarHeader = React.forwardRef<
 })
 SidebarHeader.displayName = &quot;SidebarHeader&quot;
 export const SidebarFooter = React.forwardRef<
-<<<<<<< HEAD
-  HTMLDivElement
-  React.ComponentProps<&quot;div&quot;>
-=======
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   return (
     <div;
@@ -92,22 +64,8 @@ export const SidebarSeparator = React.forwardRef<
 })
 SidebarSeparator.displayName = &quot;SidebarSeparator&quot;
 export const SidebarContent = React.forwardRef<
-<<<<<<< HEAD
-  HTMLDivElement
-  React.ComponentProps<&quot;div&quot;>
-=======
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   return (
     <div;
@@ -123,22 +81,8 @@ export const SidebarContent = React.forwardRef<
 })
 SidebarContent.displayName = &quot;SidebarContent&quot;
 export const SidebarGroup = React.forwardRef<
-<<<<<<< HEAD
-  HTMLDivElement
-  React.ComponentProps<&quot;div&quot;>
-=======
-<<<<<<< HEAD
-  HTMLDivElement,;
-  React.ComponentProps<&quot;div&quot;>
-=======
   HTMLDivElement,
   React.ComponentProps<"div">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 >((props, ref) => {
   return (
     <div;

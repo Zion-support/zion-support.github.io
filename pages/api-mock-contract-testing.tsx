@@ -1,125 +1,8 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
-export default function ApiMockContractTestingPage() {
-<<<<<<< HEAD
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  }
-  const adItems = [
-    {
-      title: ' API Mock & Contract Testing Platform'
-      description:
-        'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
-      price: 'Starting at $69/month'
-      features: [
-        'OpenAPI/GraphQL import and live mock server'
-        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
-        'Dynamic data generators and scenario templates'
-        'Snapshot diffs and changelog with approvals'
-      ]
-      link: 'https://ziontechgroup.com/api-mock-contract-testing'
-      contactInfo
-    }
-  ];
-  const tiers = [
-    {
-      name: 'Starter'
-      price: '$69/month'
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks']
-    }
-    {
-      name: 'Team'
-      price: '$149/month'
-      items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts']
-    }
-    {
-      name: 'Enterprise'
-      price: 'Custom'
-      items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
-  ];
-
-  const tiers = [;
-    {;
-      name: 'Starter',;
-      price: '$69/month',;
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],;
-    },;
-    {;
-      name: 'Team',;
-      price: '$149/month',;
-      items: ['5 projects', 'Unlimited mocks', 'Record/replay', 'Slack alerts'],;
-    },;
-    {;
-      name: 'Enterprise',;
-      price: 'Custom',;
-      items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support'],;
-import Head from 'next / head';
-import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check, } from 'lucide-react';
-import Layout from '../components / layout / Layout';
-import ServiceAds from '../components / sections / ServiceAds';
-export default /**
- * ApiMockContractTestingPage - Function description
- */
-function ApiMockContractTestingPage() {
-  const contact_info = {
-=======
-=======
-<<<<<<< HEAD
-import {FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check,} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import ServiceAds from '../components/sections/ServiceAds';
-export default function ApiMockContractTestingPage() {
-  const contactInfo = {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
-    website: 'https://ziontechgroup.com',  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com',  }
-;
-  const ad_items = [;
-    {
-<<<<<<< HEAD
-      title: ' API Mock & Contract Testing Platform',
-      description:;
-        'Spin up OpenAPI / GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
-      price: 'Starting at $69 / month',
-=======
       title: '🧪 API Mock & Contract Testing Platform'
       description:
         'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.'
       price: 'Starting at $69/month'
       features: [
-<<<<<<< HEAD
-        'OpenAPI/GraphQL import and live mock server'
-        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)'
-        'Dynamic data generators and scenario templates'
-        'Snapshot diffs and changelog with approvals'
-      ]
-      link: 'https://ziontechgroup.com/api-mock-contract-testing'
-      contactInfo
-    }
-=======
         'OpenAPI/GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub/GitLab/Bitbucket)',
         'Dynamic data generators and scenario templates',
@@ -128,7 +11,6 @@ export default function ApiMockContractTestingPage() {
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo,;
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const tiers = [
     {
@@ -147,12 +29,6 @@ export default function ApiMockContractTestingPage() {
       items: ['SAML/SSO', 'RBAC', 'Private cloud/VPC', 'Premium support']
     },  ];
 
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FlaskConical, ShieldCheck, FileCode, GitBranch, Phone, Mail, MapPin, Check } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -169,7 +45,6 @@ export default function ApiMockContractTestingPage(req, res) {
       title: '🧪 API Mock & Contract Testing Platform';
       description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',;
       price: 'Starting at $69/month',;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       features: [;
         'OpenAPI / GraphQL import and live mock server',
         'Contract tests gated in CI (GitHub / GitLab / Bitbucket)',
@@ -182,24 +57,6 @@ export default function ApiMockContractTestingPage(req, res) {
   ];
 ;
   const tiers = [;
-<<<<<<< HEAD
-    {
-      name: 'Starter',
-      price: '$69 / month',
-      items: ['1 project', '5 mocks', 'OpenAPI import', 'CI status checks'],
-    },
-    {
-      name: 'Team',
-      price: '$149 / month',
-      items: ['5 projects', 'Unlimited mocks', 'Record / replay', 'Slack alerts'],
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      items: ['SAML / SSO', 'RBAC', 'Private cloud / VPC', 'Premium support'],
-    },  ];
-;
-=======
     { name: 'Starter', price: '$69/month', items: ['1 project5 mocksOpenAPI importCI status checks'] },;
     { name: 'Team', price: '$149/month', items: ['5 projectsUnlimited mocksRecord/replaySlack alerts'] };
     { name: 'Enterprise', price: 'Custom', items: ['SAML/SSORBACPrivate cloud/VPCPremium support']   } catch (error) {
@@ -208,12 +65,6 @@ export default function ApiMockContractTestingPage(req, res) {
   }
 }
   ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Layout>;
       <Head>;
@@ -288,54 +139,21 @@ export default function ApiMockContractTestingPage(req, res) {
               <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
-<<<<<<< HEAD
-              <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</a>
-=======
 
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-);
-                Book a Demo;
-              </a>            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </Layout>;
-  );
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   )
 }
 
     </Layout>);
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

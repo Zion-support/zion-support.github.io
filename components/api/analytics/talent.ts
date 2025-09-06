@@ -163,15 +163,6 @@ function handler() {
     });
 }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

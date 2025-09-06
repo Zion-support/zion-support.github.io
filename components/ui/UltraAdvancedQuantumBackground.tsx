@@ -175,19 +175,7 @@ if (return) {
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
-<<<<<<< HEAD
-          this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
-        }
-      }
-      draw() {
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
 
@@ -590,27 +578,7 @@ if ( {) {
         if (i + 1 < particles && particles.length) {;
           const p1 = particles[i];
           const p2 = particles[i + 1];
-<<<<<<< HEAD
-          const distance = Math && Math.sqrt((p1 && p1.x - p2 && p2.x) ** 2 + (p1 && p1.y - p2 && p2.y) ** 2);
-          if (distance < 100) {;
-            ctx && ctx.beginPath();
-            ctx && ctx.moveTo(p1 && p1.x, p1 && p1.y);
-            ctx && ctx.lineTo(p2 && p2.x, p2 && p2.y);
-            ctx && ctx.stroke();          }            ctx && ctx.stroke();
-      ctx.restore();
-      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate)
-    }
-    animate();
-    const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
-    }
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-=======
 
-=======
           const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
           if (distance < 100) {
             ctx.beginPath();
@@ -619,12 +587,6 @@ if ( {) {
 
             ctx.stroke();          }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
       }
@@ -800,17 +762,8 @@ if ( {) {
       />
       />;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -870,16 +823,7 @@ if ( {) {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-=======
-};
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",;
             delay: 2;
@@ -890,63 +834,13 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",;
   );
 };
 
-<<<<<<< HEAD
-export default UltraAdvancedQuantumBackground;  );
-}
-export default UltraAdvancedQuantumBackground;            ease: "linear"
-            delay: 2
-            ease: "linear"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent"
-          animate={{
-            x: [0, 100, 0]}}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear",
-=======
       {/* Content Layer */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             delay: 2
           }}
         />
       </div>
-<<<<<<< HEAD
-    </div>
-  )
-};
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",;
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  );
-}
-export default UltraAdvancedQuantumBackground;  )
-}
-export default UltraAdvancedQuantumBackground;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ease: 'linear',          }}
         />;
         <motion.div;
@@ -954,37 +848,8 @@ export default UltraAdvancedQuantumBackground;
           animate={{
             coordinate_x: [0, 100, 0],
           }}
-<<<<<<< HEAD
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground);
-}
-;
-export default UltraAdvancedQuantumBackground;
-;
-=======
         />
       </div>
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

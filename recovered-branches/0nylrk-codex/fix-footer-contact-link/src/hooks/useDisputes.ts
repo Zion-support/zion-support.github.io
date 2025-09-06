@@ -1,38 +1,7 @@
 
-<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
-import {toast} from "sonner";
-export function useDisputes() {;
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
-import { toast } from "sonner";
-export function useDisputes() {
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-=======
-=======
 import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes",
 import { toast } from "sonner",
 export function useDisputes() {
@@ -40,12 +9,6 @@ export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -186,25 +149,8 @@ export function useDisputes() {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
-<<<<<<< HEAD
-    }
-  }
-  const resolveDispute = async (
-    disputeId: string
-      console.error ("Error fetching dispute:", err);
-      toast.error ("Failed to fetch dispute details");
-=======
-<<<<<<< HEAD
-    }
-  }
-  const resolveDispute = async (
-<<<<<<< HEAD
-    disputeId: string
-=======
 
     disputeId: string, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -291,7 +237,6 @@ export function useDisputes() {;
       console.error("Error fetching dispute:", err),;
       toast.error("Failed to fetch dispute details"),;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       return null;
     }
   }
@@ -356,22 +301,10 @@ if (throw error) {
       toast.error ("Failed to update dispute status");
       return false;
     }
-<<<<<<< HEAD
-  }
-;
-  const resolve_dispute = async (
-    dispute_id: string,
-=======
 
   },;
   const resolveDispute = async (;
     disputeId: string,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -523,20 +456,8 @@ if ( {) {
     getDisputeById;
     create_dispute;
     updateDisputeStatus;
-<<<<<<< HEAD
-    resolveDispute;
-    getDisputeMessages
 
     addDisputeMessage
-=======
-
-    addDisputeMessage
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -630,10 +551,5 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

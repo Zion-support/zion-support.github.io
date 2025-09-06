@@ -1,33 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
- const response = await client.chat.completions.create ({
-<<<<<<< HEAD
- const response = await client && client.chat.completions && completions.create ({
-=======
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.'
 }
-=======
  const response = await client.chat.completions.create ({
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   model: 'gpt-4o-mini';
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.' 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // Create utility
 export const Create = () => {
   // Implementation here
   return null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
 {
   role: 'user', content: prompt 
@@ -113,30 +95,8 @@ export default async function handler(
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
-<<<<<<< HEAD
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
 
-  const { name, email, budget, timeline, description, talentSlug } =
-    req && req.body || {};
-  if (!name || !email || !description)
-    return res && res.status(400).json({ error: 'Missing required fields' });    const content = response && response.choices[0]?.message?.content || '';
-    const typeMatch = content && content.match(/type\s*:\s*(.+)$/im);
-    return { summary: content && content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
-  } catch (err) {
-    return { summary: description && description.slice(0, 280), type: 'unknown' }
-  };
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });

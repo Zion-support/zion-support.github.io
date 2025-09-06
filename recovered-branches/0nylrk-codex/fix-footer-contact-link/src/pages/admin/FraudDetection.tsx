@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Card, CardContent} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Button} from "@/components/ui/button";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {FraudFlag, FraudStats} from "@/types/fraud";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, useEffect } from "react",
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
@@ -22,21 +5,6 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Button } from "@/components/ui/button",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { FraudFlag, FraudStats } from "@/types/fraud";
-=======
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { FraudFlag, FraudStats } from "@/types/fraud";
-// Import refactored components
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Import refactored components
 
 import {FraudStatsCards, FraudFilters, FraudFlagsTable, FraudTabContent} from "@/components/admin/fraud-detection";
@@ -86,24 +54,6 @@ export default function FraudDetection() {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-  useEffect(() => {
-    fetchFraudFlags()
-  }, []);
-  // Apply filters
-  useEffect(() => {
-    let result = [...flags];
-    // Apply search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(
-        (flag) =>
-          flag.user_email?.toLowerCase().includes(query) |
-          flag.content_excerpt.toLowerCase().includes(query) |
-          flag.reason.toLowerCase().includes(query)
-      )
-=======
   },;
   useEffect(() => {;
     fetchFraudFlags();
@@ -120,12 +70,6 @@ export default function FraudDetection() {
           flag.content_excerpt.toLowerCase().includes(query) ||;
           flag.reason.toLowerCase().includes(query);
       );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Apply status filter
     if (statusFilter) {
@@ -197,13 +141,6 @@ export default function FraudDetection() {
             <Button
               onClick={fetchFraudFlags}
               className="bg-zion-purple hover:bg-zion-purple-light"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     setFilteredFlags(result);
   }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]),;
@@ -262,12 +199,6 @@ export default function FraudDetection() {
             <Button;
               onClick={fetchFraudFlags} ;
               className="bg-zion-purple hover:bg-zion-purple-light";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               disabled={isLoading}
             >
               Refresh Data
@@ -283,17 +214,9 @@ export default function FraudDetection() {
             <TabsTrigger value="dangerous">Dangerous</TabsTrigger>
             <TabsTrigger value="actioned">Actioned</TabsTrigger>
           </TabsList>
-<<<<<<< HEAD
-=======
 
 
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <TabsContent value="all" className="mt-6">
           <TabsList>;
             <TabsTrigger value="all">All Flags</TabsTrigger>;

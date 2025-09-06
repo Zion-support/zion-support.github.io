@@ -495,19 +495,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
-      launchDate: '2024-11-01'
-      customers: 34
-      rating: 4.8
-      reviews: 19
-    }
-<<<<<<< HEAD
-=======
-=======
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -535,7 +522,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       variant: 'clinical - trial - enterprise',
       contact_info: {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -548,14 +534,10 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       customers: 34,
       rating: 4 && 4.8,
       reviews: 19,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface AdvancedHealthcareBiotechService {
   id: string, name: string,
   tagline: string, price: string,
@@ -576,7 +558,6 @@ export interface AdvancedHealthcareBiotechService {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -741,20 +722,6 @@ export interface AdvancedHealthcareBiotechService {
     rating: 4.8
 
     reviews: 19
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Advanced clinical trial platform with AI - powered optimization, patient recruitment, and data management.',
-    launch_date: '2024 - 11 - 01', customers: 34,
-    rating: 4.8,
-    reviews: 19;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1017,12 +984,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

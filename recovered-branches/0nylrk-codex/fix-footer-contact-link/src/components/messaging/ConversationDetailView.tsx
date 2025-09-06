@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-=======
 
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { format  } from 'date-fns';
-import { MessageSquare  } from 'lucide-react';
-import { useMessaging  } from '@/context/MessagingContext';
-import { Button  } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { AspectRatio  } from '@/components/ui/aspect-ratio';
-import { useAuth  } from '@/hooks/useAuth';
-import { MessageBubble  } from './MessageBubble';
-import { DateDivider } from './DateDivider';
-export function ConversationDetailView() {
-<<<<<<< HEAD
-=======
-=======
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -29,8 +9,6 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const {
     activeConversation;
@@ -46,31 +24,7 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  useEffect(() => {
-    scrollToBottom()
-  }, [activeMessages]);
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
-  const handleSendMessage = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!messageText.trim() |!activeConversation) return
-    await sendMessage(activeConversation.id, messageText);
-    setMessageText('')
-  }
-<<<<<<< HEAD
-  if (!activeConversation) {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import {format} from 'date - fns';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {MessageSquare} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {Button} from '@/components / ui / button';
@@ -90,24 +44,11 @@ export function ConversationDetailView() {;
   const [messageText, setMessageText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-<<<<<<< HEAD
-  useEffect(() => {;
-    if (activeConversation) {;
-      loadMessages(activeConversation && activeConversation.id);
-    }
-  }, [activeConversation?.id, loadMessages]);
-=======
   }, [activeConversation?.id, loadMessages]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   useEffect(() => {;
     scrollToBottom();
@@ -136,14 +77,7 @@ export function ConversationDetailView() {;
       </div>;
     );
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -158,16 +92,6 @@ export function ConversationDetailView() {;
       })
     }
   });
-<<<<<<< HEAD
-  const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title |activeConversation.context_data.description);
-=======
-<<<<<<< HEAD
-  const hasContextData = activeConversation.context_data &&
-    (activeConversation.context_data.title |activeConversation.context_data.description);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 
   // Group messages by date;
@@ -187,16 +111,9 @@ export function ConversationDetailView() {;
     }
 
   }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="flex-1 flex flex-col h-full">;
@@ -291,8 +208,6 @@ export function ConversationDetailView() {;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
-<<<<<<< HEAD
-=======
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -307,17 +222,10 @@ export function ConversationDetailView() {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
             value={messageText}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -339,13 +247,6 @@ export function ConversationDetailView() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </div>);
 }

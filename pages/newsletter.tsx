@@ -1,41 +1,18 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ArrowRight,
   Users,
   Calendar,
@@ -50,34 +27,15 @@ import {
   Star,
   TrendingUp,
   Award,
-<<<<<<< HEAD
-  Clock,
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Clock,
-=======
   Clock,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
-=======
   Clock
 } from 'lucide-react';
-=======
   Clock,
 } from "lucide-react";
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const benefits = [
   {
@@ -90,25 +48,9 @@ const benefits = [
 ;
 const benefits = [;
   {
-<<<<<<< HEAD
-    title: "Exclusive Content",
-    description:;
-      "Get access to exclusive white papers, case studies, and industry insights.",
-    icon: FileText,
-  },
-  {
-    title: "Webinar Invitations",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "Webinar Invitations"
-
-=======
   {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -125,12 +67,6 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     title: 'Webinar Invitations',
     description: 'Receive invitations to our expert-led webinars and virtual events.',
     icon: Video
@@ -145,24 +81,11 @@ const benefits = [;
     description: 'Stay updated with the latest trends and developments in technology.',
     icon: TrendingUp
   }
-<<<<<<< HEAD
+
+
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      "Stay updated with the latest trends and developments in technology."
-    icon: TrendingUp
-  }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
-=======
     title: "Webinar Invitations",
     description:
       "Receive invitations to our expert-led webinars and virtual events.",
@@ -180,28 +103,14 @@ const benefits = [;
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 const testimonials = [
   {
-<<<<<<< HEAD
-    name: "Sarah Johnson",
-    role: "CTO, TechCorp",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    name: "Sarah Johnson",
-    role: "CTO, TechCorp",
-=======
 
 
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -223,12 +132,6 @@ const testimonials = [
 ];
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     name: 'Sarah Johnson',
     role: 'CTO, TechCorp',
     content: 'The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.',
@@ -248,21 +151,8 @@ export default function NewsletterPage() {
   }
 ];
 
-<<<<<<< HEAD
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-=======
-<<<<<<< HEAD
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
     name: "Sarah Johnson",
     role: "CTO, TechCorp",
     content:
@@ -287,109 +177,27 @@ export default function NewsletterPage() {;
 
 export default function NewsletterPage() {
   const [email, setEmail] = useState("");
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-const benefits = [;
-  {;
-    title: "Exclusive Content",;
-    description:;
-      "Get access to exclusive white papers, case studies, and industry insights.",;
-    icon: FileText,;
-  },;
-  {;
-    title: "Webinar Invitations",;
-    description:;
-      "Receive invitations to our expert-led webinars and virtual events.",;
-    icon: Video,;
-  },;
-  {;
-    title: "Early Access",;
-    description:;
-      "Be the first to know about new features, products, and services.",;
-    icon: Zap,;
-  },;
-  {;
-    title: "Industry Insights",;
-    description:;
-      "Stay updated with the latest trends and developments in technology.",;
-    icon: TrendingUp,;
-  },;
-];
-
-const testimonials = [;
-  {;
-    name: "Sarah Johnson",;
-    role: "CTO, TechCorp",;
-    content:;
-      "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",;
-    rating: 5,;
-  },;
-  {;
-    name: "Michael Chen",;
-    role: "Product Manager, InnovateLab",;
-    content:;
-      "I look forward to every newsletter. The content quality is exceptional and has helped me make better decisions.",;
-    rating: 5,;
-  },;
-  {;
-    name: "Emily Rodriguez",;
-    role: "Developer, CodeCraft",;
-    content:;
-      "The technical deep-dives and case studies have been incredibly helpful for my projects.",;
-    rating: 5,;
-  },;
-];
-
-export default function NewsletterPage() {;
-  const [email, setEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = async (e) => {;
-    e && e.preventDefault();
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setIsLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
     // Simulate API call;
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-<<<<<<< HEAD
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-=======
-<<<<<<< HEAD
-=======
 
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 
-=======
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setIsSubscribed(true);
     setIsLoading(false);
   }
@@ -397,47 +205,14 @@ export default function NewsletterPage() {;
     <Layout>
       <Head>
         <title>Newsletter - Zion Tech Group</title>
-<<<<<<< HEAD
+        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
         <meta
           name="description"
           content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
         />
+        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
       </Head>
       <div className="min-h-screen bg-gray-50">
-    <Layout>;
-      <Head>;
-        <title>Newsletter - Zion Tech Group</title>;
-        <meta
-          name="description"
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />;
-      </Head>;
-
-      <div className="min-h-screen bg-gray-50">;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-        <meta
-          name="description"
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />
-<<<<<<< HEAD
-=======
-        <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-      </Head>
-      <div className="min-h-screen bg-gray-50">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">;
           <div className="container mx-auto px-4">;
@@ -451,49 +226,17 @@ export default function NewsletterPage() {;
                 Stay Ahead with Our Newsletter
               </h1>
               <p className="text-xl mb-8 text-blue-100">
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </p>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -561,28 +304,10 @@ export default function NewsletterPage() {;
                 What You'll Get
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Join thousands of professionals who rely on our newsletter for
-                the latest insights and updates.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                Join thousands of professionals who rely on our newsletter for
-                the latest insights and updates.
-=======
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
->>>>>>> origin/automation-improvements-final
-=======
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
-=======
                 Join thousands of professionals who rely on our newsletter for
                 the latest insights and updates.
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -725,30 +450,13 @@ function NewsletterPage() {
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
                   </h3>
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
-=======
                   <p className="text-gray-600">{benefit.description}</p>
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </motion.div>
               ))}
             </div>
@@ -795,34 +503,11 @@ function NewsletterPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0 }}
               >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   10K+
                 </div>
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -846,34 +531,11 @@ function NewsletterPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
-=======
                 <div className="text-4xl font-bold text-blue-600 mb-2">
                   Weekly
                 </div>
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -919,28 +581,10 @@ function NewsletterPage() {
                 What Our Subscribers Say
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Don't just take our word for it. Here's what our community has
-                to say.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-                Don't just take our word for it. Here's what our community has
-                to say.
-=======
                 Don't just take our word for it. Here's what our community has to say.
->>>>>>> origin/automation-improvements-final
-=======
                 Don't just take our word for it. Here's what our community has to say.
-=======
                 Don't just take our word for it. Here's what our community has
                 to say.
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1052,33 +696,12 @@ function NewsletterPage() {
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                       <Star
                         key={i}
                         className="w-4 h-4 text-yellow-400 fill-current"
-<<<<<<< HEAD
-                      />;
-=======
                       />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -1110,49 +733,17 @@ function NewsletterPage() {
                 Ready to Join Our Community?
               </h2>
               <p className="text-xl mb-8 text-green-100">
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </p>
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -1196,34 +787,16 @@ function NewsletterPage() {
                 </form>;
               )}
               <div className="mt-8 text-green-100 text-sm">
-<<<<<<< HEAD
-                <p> No spam, ever</p>
-                <p> Unsubscribe anytime</p>
-                <p> Free forever</p>
-=======
                 <p>✓ No spam, ever</p>
                 <p>✓ Unsubscribe anytime</p>
                 <p>✓ Free forever</p>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-                <p> No spam, ever</p>;
-                <p> Unsubscribe anytime</p>;
-                <p> Free forever</p>;
-              </div>;
-            </motion && motion.div>;
-=======
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
                 >;
                   <div className="flex items - center mb - 4">;
                     {[...Array (testimonial.rating)].map ((_, i) => (
@@ -1245,7 +818,6 @@ function NewsletterPage() {
                   </div>;
                 </motion.div>))}
             </div>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </section>;
       </div>;
@@ -1259,13 +831,5 @@ function NewsletterPage() {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 }
-=======
 }
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

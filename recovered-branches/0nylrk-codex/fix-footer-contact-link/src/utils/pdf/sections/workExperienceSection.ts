@@ -1,32 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { jsPDF  } from 'jspdf';
-import { WorkExperience  } from '@/types/resume';
-import { PdfThemeColors  } from '../themeConfig';
-import { formatDate } from '../formatters';
-export function addWorkExperienceSection(
-<<<<<<< HEAD
-=======
-=======
 
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
   startY: number
 ): number {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   doc: jsPDF;
   work_experience: WorkExperience[];
   colors: PdfThemeColors;
@@ -79,21 +63,9 @@ export function addWorkExperienceSection(;
       doc.setFontSize(10);
       const descriptionLines = doc.splitTextToSize(work.description, 170);
       doc.text(descriptionLines, 20, yPos + 16);
-<<<<<<< HEAD
-
-      yPos += (descriptionLines.length * 5) + 20
-    } else {
-      yPos += 20
-=======
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   return yPos + 5

@@ -1,43 +1,6 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react',
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import React, { useEffect, useMemo, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-
-
-
-import {useCurrentUser} from '../../utils/auth';
-
-
-const REASONS = [;
-  'Scope Disagreement',;
-  'Quality Issues',;
-  'Delivery Delay',;
-  'Payment Issue',;
-  'Communication Breakdown',;
-  'Other',;
-
-] as const;
-type ReasonType = (typeof REASONS)[number];
-export default function NewDisputePage() {
-  const router = useRouter();
-  const {
-    projectId: qProjectId
-    entityType
-    entityId
-    talentId
-    clientId
-  } = router.query as Record<string, string>;  const user = useCurrentUser();
-  const [projectId, setProjectId] = useState(qProjectId |'');
-=======
 
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
 const REASONS = [
@@ -49,30 +12,14 @@ const REASONS = [
   'Other'
 ] as const;
 type ReasonType = (typeof REASONS)[number];
-<<<<<<< HEAD
-export default function NewDisputePage() {
-  const router = useRouter();
-  const {
-    projectId: qProjectId
-    entityType
-    entityId
-    talentId
-    clientId
-  } = router.query as Record<string, string>;  const user = useCurrentUser();
-  const [projectId, setProjectId] = useState(qProjectId |'');
-=======
 
 export default function NewDisputePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function NewDisputePage() {;
   const router = useRouter();
@@ -100,30 +47,6 @@ export default function NewDisputePage() {;
     e.preventDefault();
     if (!projectId |!description |!clientUserId |!talentUserId)
       return alert('Please fill required fields');    setSubmitting(true);
-<<<<<<< HEAD
-    try {
-      const res = await fetch('/api/disputes', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          projectId
-          entityType
-          entityId
-          clientUserId
-          talentUserId
-          reason
-          reasonDetails
-          description
-        })
-      });      if (!res.ok) throw new Error('Failed to create');
-      const { dispute } = await res.json();
-      if (files.length > 0) {
-        const filePayload = await Promise.all(
-          files.map(async f => ({
-            fileName: f.name
-            mimeType: f.type
-            base64: await toBase64(f)
-=======
     try {;
       const res = await fetch('/api/disputes', {;
         method: 'POST',;
@@ -131,31 +54,6 @@ export default function NewDisputePage() {;
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      if (files && files.length > 0) {;
-        const filePayload = await Promise && Promise.all(;
-          files && files.map(async f => ({;
-            fileName: f && f.name,;
-            mimeType: f && f.type,;
-            base64: await toBase64(f),;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }))        );
-        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
-          body: JSON.stringify({ files: filePayload })
-        });
-      }
-<<<<<<< HEAD
-      router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
-    } catch (e: any) {
-      alert(e.message |'Error');
-    } finally {
-      setSubmitting(false);    }
-=======
 
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`);
     } catch (e: any) {
@@ -164,8 +62,6 @@ export default function NewDisputePage() {;
       setSubmitting(false);    }
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (files.length > 0) {;
         const filePayload = await Promise.all(;
           files.map(async (f) => ({;
@@ -198,11 +94,6 @@ export default function NewDisputePage() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <EnhancedLayout>
       <div className="max-w-2xl mx-auto">
@@ -241,18 +132,7 @@ export default function NewDisputePage() {;
             <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div>
-<<<<<<< HEAD
-            <label className='block text-sm font-medium'>Attachments</label>
-            <input
-              type='file'
-              multiple
-              onChange={e => setFiles(Array.from(e.target.files |[]))}
-              className='mt-1'
-            />
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -270,273 +150,16 @@ import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {useCurrentUser} from '../../utils / auth';
 ;
-<<<<<<< HEAD
-const REASONS = [;
-  'Scope Disagreement',
-  'Quality Issues',
-  'Delivery Delay',
-  'Payment Issue',
-  'Communication Breakdown',
-  'Other',
-] as const;
-;
-type ReasonType = (typeof REASONS)[number];
-;
-export default /**
- * NewDisputePage - Function description
- */
-function NewDisputePage() {
-  const router = use_router ();
-  const {
-    project_id: qProjectId,
-    entity_type,
-    entity_id,
-    talent_id,
-    client_id,
-  } = router.query as Record < string, string>;  const user = useCurrentUser ();
-;
-  const [project_id, setProjectId] = useState (qProjectId || '');
-  const [reason, set_reason] = useState < ReasonType>('Scope Disagreement');
-  const [reason_details, setReasonDetails] = useState ('');
-  const [description, set_description] = useState ('');
-  const [files, set_files] = useState < File[]>([]);
-  const [talentUserId, setTalentUserId] = useState (talent_id || '');
-  const [clientUserId, setClientUserId] = useState (
-    client_id || (user.role === 'client' ? user.id : ''));
-  const [submitting, set_submitting] = useState (false);
-;
-  useEffect (() => {
-    if (setProjectId (qProjectId)) {
-  $2
-}  }, [qProjectId]);
-;
-  async /**
- * handle_submit - Function description
- */
-function handle_submit() {
-    e.prevent_default ();
-    if (
-      return alert ('Please fill required fields')) {
-  $2
-}    set_submitting (true);
-    try {
-      const res = await fetch ('/api / disputes', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })});
-      if (!res.ok) throw new Error('Failed to create');
-      const { dispute } = await res.json();
-
-      if (files.length > 0) {
-        const filePayload = await Promise.all(
-          files.map(async (f) => ({
-            fileName: f.name,
-            mimeType: f.type,
-            base64: await toBase64(f)}))
-        );
-        await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ files: filePayload })})
-      }
-
-      router.push(`/disputes/${encodeURIComponent(dispute.id)}`)
-    } catch (e: any) {
-      alert(e.message || 'Error')
-    } finally {
-      setSubmitting(false)
-    }
-  }
-  return (
-    <EnhancedLayout>;
-      <div className='max-w-2xl mx-auto'>;
-        <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>;
-        <form onSubmit={handleSubmit} className='space-y-4'>;
-          <div>;
-            <label className='block text-sm font-medium'>Project ID</label>;
-            <input
-              value={projectId}
-              onChange={e => setProjectId(e && e.target.value)}
-              required;
-              className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-            />;
-          </div>;
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-            <div>;
-              <label className='block text-sm font-medium'>;
-                Client User ID;
-              </label>;
-              <input
-                value={clientUserId}
-                onChange={e => setClientUserId(e && e.target.value)}
-                required;
-                className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-              />;
-            </div>;
-            <div>;
-              <label className='block text-sm font-medium'>;
-                Talent User ID;
-              </label>;
-              <input
-                value={talentUserId}
-                onChange={e => setTalentUserId(e && e.target.value)}
-                required;
-                className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-              />;
-            </div>;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>Reason</label>;
-            <select
-              value={reason}
-              onChange={e => setReason(e && e.target.value as ReasonType)}
-              className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-            >;
-              {REASONS && REASONS.map(r => (;
-                <option key={r} value={r}>;
-                  {r}
-                </option>;
-              ))}
-            </select>;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>;
-              Reason Details (optional);
-            </label>;
-            <input
-              value={reasonDetails}
-              onChange={e => setReasonDetails(e && e.target.value)}
-              className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-            />;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>Description</label>;
-            <textarea
-              value={description}
-              onChange={e => setDescription(e && e.target.value)}
-              required;
-              rows={5}
-              className='mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black';
-            />;
-          </div>;
-          <div>;
-            <label className='block text-sm font-medium'>Attachments</label>;
-            <input
-              type='file'
-              multiple
-              onChange={e => setFiles(Array.from(e.target.files |[]))}
-              className='mt-1'
-            />
-          </div>
-          <div className='pt-2'>
-            <button
-              disabled={submitting}
-              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>;
-            <label className='block text - sm font - medium'>Reason</label>;
-            <select;
-              value={reason}
-              on_change={e => set_reason (e.target.value as ReasonType)}
-              className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
-            >;
-              {REASONS.map (r => (
-                <option key={r} value={r}>;
-                  {r}
-                </option>))}
-            </select>;
-          </div>;
-          <div>;
-            <label className='block text - sm font - medium'>;
-              Reason Details (optional);
-            </label>;
-            <input;
-              value={reason_details}
-              on_change={e => setReasonDetails (e.target.value)}
-              className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm font - medium'>Description</label>;
-            <textarea;
-              value={description}
-              on_change={e => set_description (e.target.value)}
-              required;
-              rows={5}
-              className='mt - 1 w - full border rounded px - 3 py - 2 bg - white dark:bg - black';
-            />;
-          </div>;
-          <div>;
-            <label className='block text - sm font - medium'>Attachments</label>;
-            <input;
-              type='file';
-              multiple;
-              on_change={e => set_files (Array.from (e.target.files || []))}
-              className='mt - 1';
-            />;
-          </div>;
-          <div className='pt - 2'>;
-            <button;
-              disabled={submitting}
-              className='px - 4 py - 2 rounded bg - blue - 600 text - white hover:bg - blue - 700 disabled:opacity - 50';
-            >;
-              {submitting ? 'Submitting...' : 'Submit Dispute'}
-            </button>          </div>;
-        </form>;
-      </div>;
-    </EnhancedLayout>;
-  );
-function toBase64(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-const reader = new FileReader();
-    reader.onload = () => resolve(String(reader.result));
-    reader.onerror = reject;
-    reader.readAsDataURL(file);
-function toBase64(): any (file: File): Promise<string> {;
-  return new Promise((resolve, reject) => {;
-    const reader = new FileReader();
-    reader && reader.onload = () => resolve(String(reader && reader.result));
-    reader && reader.onerror = reject;
-    reader && reader.readAsDataURL(file);
-  });
-  });
-
-    reader.readAsDataURL(file)
-  })
-}
-    </EnhancedLayout>);
-function toBase64 (file: File): Promise < string> {
-  return new Promise ((resolve, reject) => {
-const reader = new FileReader ();
-    reader.onload = () => resolve (String (reader.result));
-    reader.onerror = reject;
-    reader.readAsDataURL (file);
-  });
-;
-=======
 function toBase64(file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
 
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

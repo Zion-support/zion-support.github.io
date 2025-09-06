@@ -1,26 +1,6 @@
-<<<<<<< HEAD
-export interface BlogAuthor {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface BlogAuthor {
-=======
 export interface BlogAuthor {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  name: string;
-
-  title: string
-
-  avatarUrl: string
-}
-<<<<<<< HEAD
-export interface BlogPost {
-=======
 
 export interface BlogPost {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   slug: string;
@@ -51,8 +31,6 @@ export interface GeneratedBlogContent {
   imagePrompt?: string
 }
 // Type for generated newsletter content
-<<<<<<< HEAD
-=======
 export interface GeneratedNewsletterContent {;
   subject: string;
   previewText: string;
@@ -61,11 +39,6 @@ export interface GeneratedNewsletterContent {;
 
   cta: string
 }
-=======
-<<<<<<< HEAD
-export interface BlogAuthor {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   name: string,;
   title: string,;
   avatarUrl: string;
@@ -100,22 +73,9 @@ export interface GeneratedBlogContent {;
 }
 ;
 // Type for generated newsletter content;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export interface GeneratedNewsletterContent {
   subject: string;
   previewText: string;
 
-<<<<<<< HEAD
-  body: string
-
-  cta: string
-}
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

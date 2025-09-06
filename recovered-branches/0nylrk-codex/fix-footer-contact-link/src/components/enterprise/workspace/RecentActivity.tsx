@@ -1,70 +1,19 @@
 
-<<<<<<< HEAD
 import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function RecentActivity() {
   // Mock activity data
 
   const activities = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      id: "act-1"
-      user: "Michael Chen"
-      action: "posted a new job"
-      target: "Senior React Developer"
-      timestamp: "1h ago"
-<<<<<<< HEAD
-      type: "job"
-    }
-=======
-=======
       id: "act-1",
       user: "Michael Chen",
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
-<<<<<<< HEAD
-      type: "job";
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       type: "job"
-<<<<<<< HEAD
-    }
-=======
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -92,8 +41,6 @@ export function RecentActivity() {
   ];
   const getBadgeForType = (type: string) => {
     switch (type) {
-<<<<<<< HEAD
-=======
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>,
       case "candidate":
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>,
@@ -145,12 +92,6 @@ export function RecentActivity() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -194,8 +135,6 @@ export function RecentActivity() {;
 
   const getBadgeForType = (type: string) => {;
     switch (type) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       case "job": return <Badge variant="outline" className="bg-blue-100 text-blue-800 border-blue-200">Job</Badge>;
       case "candidate":;
         return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;
@@ -252,13 +191,6 @@ export function RecentActivity() {;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </Card>);
 }

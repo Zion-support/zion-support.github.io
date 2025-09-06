@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Mail, CheckCircle, XCircle, AlertTriangle, ArrowRight, Copy, RefreshCw, Shield, Zap, BarChart3 } from 'lucide-react';
-export default function EmailValidatorPage() {const [emails, setEmails] = useState('');
-  const [validationResults, setValidationResults] = useState<any[]>([]);
-  const [isValidating, setIsValidating] = useState(false);
-  const [bulkMode, setBulkMode] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Card from '../components/ui/Card',;
@@ -25,8 +8,6 @@ export default function EmailValidatorPage() {;
   const [validationResults, setValidationResults] = useState<any[]>([]),;
   const [isValidating, setIsValidating] = useState(false),;
   const [bulkMode, setBulkMode] = useState(false),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const validateEmails = async () => {;
     if (!emails.trim()) return;
     setIsValidating(true);
@@ -74,10 +55,6 @@ export default function EmailValidatorPage() {;
     } else if (hasTypo) {status = 'suspicious';
       score = 60;
       issues.push('Possible typo in domain');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     }
 ;
     // Additional checks;
@@ -85,8 +62,6 @@ export default function EmailValidatorPage() {;
       status = 'invalid',;
       score = 0,;
       issues.push('Email too long');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
@@ -165,12 +140,6 @@ if (email.length > 254) {
       status = 'invalid',
       score = 0,
       issues.push('Email too long')
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Additional checks;
     if (email.length > 254) {status = 'invalid';
@@ -181,49 +150,6 @@ if (email.length > 254) {
       score = 0;
       issues.push('Local part too long');
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:components/email-validator.tsx
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    return {email;
-      status;
-      score;
-      issues;
-      domain;
-      isDisposable;
-      hasTypo;
-      timestamp: new Date().toLocaleTimeString();
-    }
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD:components/email-validator.tsx
-},
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'valid':
-    }
-  }
-  const getStatusColor = (status: string) => {switch (status) {;
-      case 'valid':;
-        return 'text-green-400';
-      case 'suspicious':;
-        return 'text-yellow-400';
-      case 'disposable':;
-        return 'text-orange-400';
-      case 'invalid':;
-        return 'text-red-400';
-      default:;
-        return 'text-gray-400';
-<<<<<<< HEAD
-=======
-=======
   },
   const getStatusIcon = (status: string) => {switch (status) {
       case 'valid':
@@ -251,12 +177,6 @@ if (email.length > 254) {
         return 'text-red-400',
       default:
         return 'text-gray-400'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   const getScoreColor = (score: number) => {if (score >= 80) return 'text-green-400';
@@ -346,24 +266,12 @@ if (email.length > 254) {
                     <textarea
                       value={emails}
                       onChange={(e) => setEmails(e.target.value)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   </Button>;
                   {validation_results.length > 0 && (
                     <Button;
-<<<<<<< HEAD
-                      onClick={clearResults}
-variant=&quot;outline&quot;
-=======
 
-=======
                       placeholder="john@example.com&#10,jane@company.org&#10,user@domain.net"                      rows={8}
                       className=&quot;w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none&quot;
                     />
@@ -421,12 +329,6 @@ onClick={validateEmails}
                     <Button,
 onClick={clearResults}
                       variant=&quot;outline&quot;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       className=&quot;border-gray-600 text-gray-300 hover:bg-gray-700&quot;
                     >
                       Clear
@@ -502,9 +404,6 @@ onClick={clearResults}
                           </span>;
                         </div>;
                         <span className={`text - sm font - medium ${getScoreColor (result.score)}`}>;
-<<<<<<< HEAD
-=======
-=======
                 <div className=&quot;mb-6 p-4 bg-gray-900 rounded-lg border border-gray-700&quot;>
                   <div className=&quot;grid grid-cols-2 gap-4 text-sm&quot;>                    <div>
                       <span className=&quot;text-gray-400&quot;>Total:</span>
@@ -526,11 +425,6 @@ onClick={clearResults}
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
 {validationResults.length > 0 ? (
                 <div className=&quot;space-y-3 max-h-96 overflow-y-auto&quot;>
@@ -550,12 +444,6 @@ key={index}
                             {result.email}                          </span>
                         </div>
                         <span className={_`text-sm font-medium ${getScoreColor(result.score)}`}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           Score: {result.score}
 </span>
                       </div>
@@ -564,22 +452,6 @@ key={index}
                         <span className=&quot;ml-2&quot;>{result.domain}</span>
                       </div>
                       {result.issues.length > 0 && (
-<<<<<<< HEAD
-                        <div className=&quot;text - sm & quot;>;
-                          <span className=&quot;text - gray - 400 & quot;>Issues:</span>;
-                          <ul className=&quot;mt - 1 space - y-1 & quot;>;
-                            {result.issues.map ((issue: string, issue_index: number) => (
-                              <li key={issue_index} className=&quot;text - red - 300 flex items - center & quot;>;
-                                <XCircle className=&quot;w - 3 h - 3 mr - 2 flex - shrink - 0&quot; />;
-                                {issue}
-                              </li>))}
-                          </ul>;
-                        </div>;
-                      )}
-{result.isDisposable && (
-                        <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>
-                           Disposable email domain detected
-=======
 
                         <div className=&quot;text-sm&quot;>
                           <span className=&quot;text-gray-400&quot;>Issues:</span>
@@ -589,25 +461,13 @@ key={index}
                                 <XCircle className=&quot;w-3 h-3 mr-2 flex-shrink-0&quot; />
 
                                 {issue}                              </li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </ul>;
 
 
 
                       {result.isDisposable && (
                         <div className=&quot;mt-2 p-2 bg-orange-500/20 border border-orange-500/30 rounded text-sm text-orange-300&quot;>                          ⚠️ Disposable email domain detected
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         </div>
                       )}
                       {result.hasTypo && (
@@ -630,27 +490,14 @@ key={index}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
 
 
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Features */}
 <section className=&quot;py-20 bg-gray-800&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
           <div className=&quot;text-center mb-16&quot;>
-<<<<<<< HEAD
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
-              Advanced Email Validation Features
-=======
             <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>              Advanced Email Validation Features
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
               Comprehensive email validation with real-time checking and intelligent analysis.
@@ -658,141 +505,47 @@ key={index}
           </div>
           <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8&quot;>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>🔍</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Syntax Validation</h3>
               <p className=&quot;text-gray-400&quot;>
                 Checks email format, length, and RFC compliance standards for maximum accuracy.
               </p>
             </Card>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>🛡️</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Disposable Detection</h3>
               <p className=&quot;text-gray-400&quot;>
                 Identifies temporary and disposable email addresses to prevent fraud and abuse.
               </p>
             </Card>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>💡</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Typo Detection</h3>
               <p className=&quot;text-gray-400&quot;>
                 Smart algorithms detect common typos in popular email domains like Gmail and Yahoo.
               </p>
             </Card>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>📊</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Deliverability Score</h3>
               <p className=&quot;text-gray-400&quot;>
                 Get a comprehensive score indicating the likelihood of successful email delivery.
               </p>
             </Card>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>⚡</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Bulk Validation</h3>
               <p className=&quot;text-gray-400&quot;>
                 Validate thousands of email addresses simultaneously with our high-performance engine.
               </p>
             </Card>
             <Card className=&quot;text-center p-8 bg-gray-700 border border-gray-600&quot;>
-<<<<<<< HEAD
-              <div className=&quot;text-4xl mb-4&quot;></div>
-=======
               <div className=&quot;text-4xl mb-4&quot;>🌍</div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <h3 className=&quot;text-xl font-bold text-white mb-4&quot;>Global Coverage</h3>
               <p className=&quot;text-gray-400&quot;>
                 Supports all international email formats and domain types worldwide.
               </p>
             </Card>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Use Cases */}
-      <section className=&quot;py-20 bg-gray-900&quot;>
-        <div className=&quot;max-w-6xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
-          <div className=&quot;text-center mb-16&quot;>
-            <h2 className=&quot;text-3xl sm:text-4xl font-bold text-white mb-6&quot;>
-              Perfect For Every Use Case
-            </h2>
-            <p className=&quot;text-xl text-gray-400 max-w-3xl mx-auto&quot;>
-              From user registration to email marketing, our validation service ensures quality and deliverability.
-            </p>
-          </div>
-          <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-8&quot;>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;></div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>User Registration</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Ensure only valid email addresses are used during user signup, reducing bounce rates and improving user experience.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li> Prevent fake accounts and spam</li>
-                <li> Improve user onboarding success</li>
-                <li> Reduce support tickets</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;></div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Email Marketing</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Clean your email lists before campaigns to maximize deliverability and improve engagement metrics.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li> Higher open and click rates</li>
-                <li> Better sender reputation</li>
-                <li> Reduced bounce rates</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;></div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>E-commerce</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Validate customer emails during checkout to ensure order confirmations and updates reach customers.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li> Improve customer communication</li>
-                <li> Reduce order abandonment</li>
-                <li> Better customer support</li>
-              </ul>
-            </Card>
-            <Card className=&quot;p-8 bg-gray-800 border border-gray-700&quot;>
-              <div className=&quot;text-4xl mb-4&quot;></div>
-              <h3 className=&quot;text-2xl font-bold text-white mb-4&quot;>Business Applications</h3>
-              <p className=&quot;text-gray-400 mb-6&quot;>
-                Integrate email validation into your business processes for data quality and compliance.
-              </p>
-              <ul className=&quot;space-y-2 text-gray-300&quot;>
-                <li> Data quality assurance</li>
-                <li> Compliance requirements</li>
-                <li> Operational efficiency</li>
-              </ul>
-            </Card>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-}
-=======
           </div>
         </div>
       </section>
@@ -859,13 +612,8 @@ key={index}
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD:components/email-validator.tsx
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -899,9 +647,3 @@ href=&quot;/pricing&quot;
       </section>
     </>
   )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_broken_files/components/email-validator.tsx
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_broken_files/components/email-validator.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

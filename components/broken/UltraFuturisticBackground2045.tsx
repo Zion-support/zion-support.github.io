@@ -357,25 +357,11 @@ if ( {) {
           animate={{
             background_position: ['0px 0px50px 50px']}}
           transition={{
-<<<<<<< HEAD
-            duration: 20
-            repeat: Infinity
-            ease: 'linear'
-          }}
-        />
-=======
 
         />;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -533,26 +519,13 @@ if ( {) {
           transition={{
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
           animate={{
-<<<<<<< HEAD
-            y: [0, -20, 0]
-            opacity: [0.2, 0.5, 0.2]
-=======
             y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           animate={{
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -569,7 +542,6 @@ if ( {) {
             repeat: Infinity,
             ease: 'easeInOut';
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }}
         />;
         {/* Additional floating elements */}
@@ -621,15 +593,7 @@ if ( {) {
             ease: 'linear'
           }}
         />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -719,21 +683,7 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut',          }}
           transition={{
-<<<<<<< HEAD
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-        />
-      </div>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />
@@ -796,63 +746,10 @@ if ( {) {
         <div className="absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5" />
       </div>
 
-<<<<<<< HEAD
-      {/* Content */}
-      <div className="relative z-30">
-        {children}
-      </div>
-
-      {/* Animated Border Effects */}
-      <div className="fixed inset-0 pointer-events-none z-40">
-        <motion.div
-          className="absolute inset-0 border border-transparent"
-          style={{
-            background: 'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent)',
-    backgroundSize: '200% 100%'
-          }}
-          animate={{
-            backgroundPosition: ['-200% 0200% 0']}}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
-      </div>
-    </div>
-  )
-};
-
 export default UltraFuturisticBackground2045;
-
-            ease: 'linear',          }}
-        />;
-      </div>;
-    </div>);
-}export default UltraFuturisticBackground2045;            ease: 'linear';
-          }}
-        />;
-      </div>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2045;
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default UltraFuturisticBackground2045;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default UltraFuturisticBackground2045;
 
 }
 }
 }
-=======
 export default UltraFuturisticBackground2045;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

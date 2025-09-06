@@ -1,45 +1,11 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign} from "lucide-react";
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-=======
-<<<<<<< HEAD
-import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-interface BrowseItem {
-
-interface BrowseItem {;
-  id: string,;
-  title: string,;
-  subtitle: string,;
-  description: string,;
-=======
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface BrowseItem {
 
   id: string
@@ -61,68 +27,13 @@ interface BrowseCardsProps {
   items: BrowseItem[]
   type: "jobs" | "talents"
 
-<<<<<<< HEAD
-  onViewDetails: (id: string) => void
-}
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-=======
 
   onViewDetails: (id: string) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const [savedItems, setSavedItems] = useState<string[]>([]);
-
-  const toggleSaved = (id: string) => {
-    setSavedItems(prev =>
-      prev.includes(id)
-        ? prev.filter(itemId => itemId !== id)
-        : [...prev, id]
-    )
-  }
-
-  return (
-    <div className="space-y-4 pb-24">;
-      {items && items.map((item) => (;
-        <Card key={item && item.id} className="overflow-hidden">;
-          <CardContent className="p-0">;
-            <div className="p-4">;
-              <div className="flex justify-between">;
-                <div className="flex items-center gap-3">;
-                  {type === "talents" ? (;
-                    <Avatar className="h-12 w-12">;
-                      <AvatarImage src={item && item.image} />;
-                      <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
-                    </Avatar>;
-                  ) : (;
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
-                      <span className="text-primary font-semibold">JOB</span>;
-                    </div>;
-                  )}
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
-                  </div>
-                </div>
-<<<<<<< HEAD
-                <button
-=======
-<<<<<<< HEAD
-                <button
-=======
 
                 <button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -131,19 +42,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-<<<<<<< HEAD
-                </button>
-              </div>
-              <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant="outline"
-                    className="text-xs font-normal"
-                  >
-=======
 
-=======
 
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -223,12 +122,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {badge}
                   </Badge>;
                 ))}

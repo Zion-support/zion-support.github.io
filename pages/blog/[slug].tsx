@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-=======
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -23,9 +15,6 @@ import path from 'path',;
 function parseMarkdown(filePath: string): BlogPost | null {
   if (!fs.existsSync(filePath)) {
     return null
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -128,10 +117,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   }, [slug, initialPost])
   if (error) {
     return <div>{error}</div>
-<<<<<<< HEAD
-=======
 
-=======
 const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
   const router = use_router (),
   const { slug } = router.query,
@@ -141,7 +127,6 @@ const BlogPostPage: React.FC < BlogPostPageProps> = ({ initial_post }) => {
     // Check condition
 if ( {) {
   $2
-=======
 
 function parseMarkdown(filePath: string): BlogPost | null {;
   if (!fs.existsSync(filePath)) {;
@@ -149,11 +134,6 @@ function parseMarkdown(filePath: string): BlogPost | null {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (!post) {
     return <div>Article not found</div>
@@ -193,8 +173,6 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
-<<<<<<< HEAD
-=======
 
 
 }
@@ -267,27 +245,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
               target.src = '/images/blog-placeholder.svg'
-<<<<<<< HEAD
-            }}
-          />
-          <div>
-            <p className="m-0 font-medium">{post.author.name}</p>
-            {post.author.title && (
-              <p className="m-0 text-sm text-zion-slate-light">
-                {post.author.title}
-              </p>
-            )}
-=======
 
 
                 {post.author.title  } catch (error) {
@@ -301,12 +262,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
         {post.featuredImage && (
@@ -328,8 +283,6 @@ if ( {) {
             <img;
               src={post.featured_image}
               alt={post.title}
-<<<<<<< HEAD
-=======
 
 
               src={post.featuredImage  } catch (error) {
@@ -342,12 +295,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="object-cover w-full h-full"
               onError={(e) => {
                 const target = e.currentTarget as HTMLImageElement
@@ -436,10 +383,6 @@ if ( {) {
   return { props: { initial_post: post }, revalidate: 60 }
 },
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               }  } catch (error) {
     console.error("Error:", error);
@@ -452,14 +395,6 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return { props: { initialPost: post }, revalidate: 60 }
-},;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
         <ReactMarkdown>{body}</ReactMarkdown>;
         <AuthorBio author={post.author} />;
@@ -522,9 +457,3 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
   }
 }
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

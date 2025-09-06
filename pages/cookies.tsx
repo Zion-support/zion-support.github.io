@@ -1,46 +1,9 @@
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Shield
-  Settings
-  Info
-  ExternalLink
-  ArrowRight
-  CheckCircle
-  XCircle
-  AlertTriangle
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function CookiePolicyPage() {
-  const [cookiePreferences, setCookiePreferences] = useState({
-=======
-=======
   Shield,
   Settings,
   Info,
@@ -49,25 +12,13 @@ export default function CookiePolicyPage() {
   CheckCircle,
   XCircle,
   AlertTriangle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    necessary: true
-    analytics: false
-    marketing: false
-    functional: false
-<<<<<<< HEAD
-=======
-=======
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });
   const cookieTypes = [
     {
@@ -480,87 +431,13 @@ export default function CookiePolicyPage() {;
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
-                  </p>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>;
   );
-}
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-  );
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-<<<<<<< HEAD
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { motion } from 'framer-motion';
-import Head from 'next/head';
-import Layout from '../components/Layout';
-
-
-export default function CookiesPage() {
-export default function CookiesPage() {;
-  return (
-    <UltraAdvancedFuturisticBackground>;
-      <SEO
-        title='Cookie Policy | Zion Tech Group'
-        description='Information about cookies used by Zion Tech Group.'
-        canonical='https://ziontechgroup.com/cookies/'
-      />
-      <div className='container mx-auto px-4 py-24 text-white'>
-        <div className='max-w-3xl mx-auto space-y-6'>
-          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
-          <p className='text-gray-300'>
-            We use minimal, privacyrespecting analytics. Some thirdparty
-            embeds may set cookies. You can block nonessential cookies via your
-            browser.
-          </p>
-          <ul className='list-disc list-inside text-gray-300 space-y-1'>
-      <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
-import React from 'react';
-import SEO from '../components/SEO';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-=======
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -575,64 +452,15 @@ export default function CookiesPage() {
             <li>Retention: session or shortterm</li>
             <li>Optout: browser settings and extensions</li>
           </ul>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          <p className='text-gray-400 text-sm'>
-            Questions?{' '}
-            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
-              kleber@ziontechgroup.com
-            </a>
-          </p>
-        </div>
-<<<<<<< HEAD
-      </Layout>
-    </>
   );
- <li>Purpose: performance and security</li> <li>Retention: session or shortterm</li> <li>Optout: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-=======
-<<<<<<< HEAD
-      </Layout>
-    </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  );
-=======
-<<<<<<< HEAD
-      </Layout>
-    </>;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     </MainLayout>);
 }
 import { motion } from 'framer-motion';
@@ -673,21 +501,13 @@ function CookiesPage() {
             <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
               kleber@ziontechgroup.com;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </a>;
           </p>;
         </div>;
       </Layout>;
-<<<<<<< HEAD
-    </>;
-  );
-=======
 
 
-=======
 }
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
  <li>Purpose: performance and security</li> <li>Retention: session or shortterm</li> <li>Optout: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com" >kleber@ziontechgroup && ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> ;
       </div>;
@@ -696,18 +516,3 @@ function CookiesPage() {
 }
     </>);
 ;
-<<<<<<< HEAD
-<li > Purpose: performance and security</li> <li > Retention: session or shortterm</li> <li > Optout: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

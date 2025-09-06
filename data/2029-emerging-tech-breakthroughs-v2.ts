@@ -587,19 +587,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.'
-      launchDate: '2025-06-01'
-      customers: 3
-      rating: 5.0
-      reviews: 2
-    }
-<<<<<<< HEAD
-=======
-=======
       color: 'from - pink - 600 via - purple - 600 to - indigo - 600',
       text_color: 'text - pink - 400',
       link: 'https://ziontechgroup.com / quantum - ai - consciousness - platform',
@@ -627,7 +614,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       variant: 'ai - futuristic',
       contact_info: {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -640,14 +626,10 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
       customers: 3,
       rating: 5 && 5.0,
       reviews: 2,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface EmergingTechBreakthroughServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -668,7 +650,6 @@ export interface EmergingTechBreakthroughServiceV2 {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -868,20 +849,6 @@ export interface EmergingTechBreakthroughServiceV2 {
     rating: 5.0
 
     reviews: 2
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Production consciousness platform with research validation, ethical compliance, and ongoing support. Includes consciousness research training and certification.',
-    launch_date: '2025 - 06 - 01', customers: 3,
-    rating: 5.0,
-    reviews: 2;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechBreakthroughServiceV2 {;
   id: string,;
@@ -1188,12 +1155,6 @@ export const emergingTechBreakthroughServicesV2: EmergingTechBreakthroughService
     customers: 3,;
     rating: 5.0;
     reviews: 2;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

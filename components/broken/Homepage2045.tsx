@@ -3,80 +3,6 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Play
-  Star
-  Users
-  Award
-  TrendingUp
-  Brain
-  Shield
-  Rocket
-  Loader2
-  ChevronDown
-  Zap
-  Globe
-  Lock
-  Cpu
-  Database
-  Cloud
-  Palette
-  Heart
-  Phone
-  Mail
-  MapPin
-  Search
-  Grid
-  List
-  Atom
-  Target
-  Sparkles;
-} from 'lucide-react';
-import Link from 'next/link';import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
-
-<<<<<<< HEAD
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
- } from 'lucide-react';
-import {;
-  ArrowRight,;
-  Play,;
-  Star,;
-  Users,;
-  Award,;
-  TrendingUp,;
-  Brain,;
-  Shield,;
-  Rocket,;
-  Loader2,;
-  ChevronDown,;
-  Zap,;
-  Globe,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Palette,;
-  Heart,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Search,;
-  Grid,;
-  List,;
-  Atom,;
-  Target,;
-  Sparkles,;
-} from 'lucide-react';
-import Link from 'next/link';import { ;
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
-=======
-=======
   ArrowRight,
   Play,
   Star,
@@ -108,30 +34,15 @@ import Link from 'next/link';import { ;
 } from 'lucide-react';
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
-=======
 
 // Import our new innovative services
-<<<<<<< HEAD
-import { innovative2040FuturisticServices  } from '../data/innovative-2040-futuristic-services';
-import { innovative2040ITServices  } from '../data/innovative-2040-it-services';
-import { revolutionary2043AdvancedServices  } from '../data/revolutionary-2043-advanced-services';
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
 // Loading fallback component
 
@@ -227,8 +138,6 @@ const Homepage2045: React.FC = () => {
       }
     }
   }
-<<<<<<< HEAD
-=======
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 }
     animate: { opacity: 1, scale: 1 }
@@ -267,59 +176,7 @@ const Homepage2045: React.FC = () => {
       </div>
     );
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <Layout>
-      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
-        {/* Hero Section */}
-        <section
-          id='hero'
-          className='relative min-h-screen flex items-center justify-center overflow-hidden'
-        >
-          {/* Animated Background Elements */}
-          <div className='absolute inset-0 pointer-events-none'>
-            <motion.div
-              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
-              animate={{
-                rotate: [0, 360]
-                scale: [1, 1.1, 1]
-                opacity: [0.3, 0.6, 0.3]
-              }}
-              transition={{
-                duration: 8
-                repeat: Infinity
-                ease: 'easeInOut',              }}
-            />
-            <motion.div
-              className='absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full'
-              animate={{
-                rotate: [360, 0]
-                scale: [1, 1.2, 1]
-                opacity: [0.3, 0.7, 0.3]
-              }}
-              transition={{
-                duration: 6
-                repeat: Infinity
-                ease: 'easeInOut'
-              }}
-            />
-            <motion.div
-              className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
-              animate={{
-                rotate: [45, 405]
-                scale: [1, 1.15, 1]
-                opacity: [0.3, 0.5, 0.3]
-              }}
-              transition={{
-                duration: 10
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-<<<<<<< HEAD
-=======
         staggerChildren: 0.1,
         delayChildren: 0.2,
       },
@@ -327,7 +184,6 @@ const Homepage2045: React.FC = () => {
 
   };
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 }
     animate: { opacity: 1, scale: 1 }
@@ -682,60 +538,24 @@ if ( {) {
                 scale: [1, 1.2, 1],
                 opacity: [0.3, 0.7, 0.3],
               }}
-<<<<<<< HEAD
-              transition={{
-                duration: 10
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-            />
-            <motion.div
-              className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-              animate={{
-                rotate: [45, 405];
-                scale: [1, 1.15, 1];
-                opacity: [0.3, 0.5, 0.3]}}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: "easeInOut"
               }}
-=======
-=======
-              }}
-=======
               }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             />
           </div>
           {/* Hero Content */}
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.8 }}
-              className='mb-8'>          <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-=======
 
-=======
 
           {/* Hero Content */}
           <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
               transition={{ duration: 0.8 }}
 
               className='mb-8'            >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
@@ -776,17 +596,7 @@ if ( {) {
               </motion && motion.p>;
             </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -820,32 +630,13 @@ if ( {) {
               </Link>;
             </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -919,38 +710,19 @@ if ( {) {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section id="featured-services" className="py-20 relative">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
 
-=======
 
         {/* Featured Services Section */}
         <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center mb-16'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -973,137 +745,11 @@ if ( {) {
                 Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology.
               </p>
             </motion.div>
-<<<<<<< HEAD
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />;
-          </div>;
-          {/* Hero Content */}
-          <div className='relative z - 10 text - center max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='mb - 8'            >          <div className="relative z - 10 text - center max - w-6xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='mb - 8'              className="mb - 8";
-            >;
-              <motion.h1;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className='text - 5xl md:text - 7xl font - bold mb - 6';
-              >;
-                <span className='bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent'>                  Future of Technology                className="text - 5xl md:text - 7xl font - bold mb - 6";
-              >;
-                <span className="bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent">;
-                  Future of Technology;
-                </span>;
-              </motion.h1>;
-              <motion.p;
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                animate={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto';
-              >;
-                Transform your business with Zion Tech Group's revolutionary AI;
-                services, quantum computing, and cutting - edge emerging;
-                technologies. Leading the future of technology innovation.              </motion.p>                className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto";
-              >;
-                Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting - edge emerging technologies. Leading the future of technology innovation.;
-              </motion.p>;
-            </motion.div>;
-            {/* CTA Buttons */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className='flex flex - col sm:flex - row gap - 4 justify - center items - center';
-            >;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105'              >;
-                Get Started;
-              </Link>;
-              <Link;
-                href='/services';
-                className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'              >              className="flex flex - col sm:flex - row gap - 4 justify - center items - center";
-            >;
-              <Link;
-                href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105";
-              >;
-                Get Started;
-              </Link>;
-              <Link;
-                href='/services';
-                className='px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105'                href="/services";
-                className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105";
-              >;
-                Explore Services;
-              </Link>;
-            </motion.div>;
-            {/* Stats */}
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-              className='mt - 16 grid grid - cols - 1 md:grid - cols - 3 gap - 8';
-            >;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2'>;
-                  500+;
-                </div>;
-                <div className='text - gray - 400'>Innovative Services</div>;
-              </div>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2'>;
-                  4.9 / 5;
-                </div>;
-                <div className='text - gray - 400'>Customer Rating</div>;
-              </div>;
-              <div className='text - center'>;
-                <div className='text - 3xl md:text - 4xl font - bold text - pink - 400 mb - 2'>;
-                  1000+;
-                </div>;
-                <div className='text - gray - 400'>Happy Clients</div>              </div>            >;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2">500+</div>;
-                <div className="text - gray - 400">Innovative Services</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2">4.9 / 5</div>;
-                <div className="text - gray - 400">Customer Rating</div>;
-              </div>;
-              <div className="text - center">;
-                <div className="text - 3xl md:text - 4xl font - bold text - pink - 400 mb - 2">1000+</div>;
-                <div className="text - gray - 400">Happy Clients</div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Featured Services Section */}
-        <section id='featured - services' className='py - 20 relative'>;
-          <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>            <motion.div        <section id="featured - services" className="py - 20 relative">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-=======
-=======
 
             <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text - center mb - 16';
@@ -1304,29 +950,9 @@ if ( {) {
           </div>
         </section>
         {/* Latest Innovations Section */}
-<<<<<<< HEAD
-        <section
-          id='latest-innovations'
-          className='py-20 relative bg-gray-900/30'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion && motion.div        <section id="latest-innovations" className="py-20 relative bg-gray-900/30">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}
-              className='text-center mb-16'
-=======
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -1436,15 +1062,7 @@ if ( {) {
                 View All Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </motion.div>
           </div>
         </section>
@@ -1525,27 +1143,18 @@ if ( {) {
   once: true
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
 };export default Homepage2045;export default Homepage2045;
-<<<<<<< HEAD
-=======
 
 
-=======
 
         {/* Contact CTA Section */}
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
-=======
         <section id='contact-cta' className='py-20 relative'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -1582,9 +1191,6 @@ if ( {) {
 };
 
 export default Homepage2045;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </motion.div>))}            </div>                    </div>;
                   </Link>;
                 </motion.div>))}
@@ -1667,28 +1273,11 @@ export default Homepage2045;
     </Layout>);
   animate: {
   transition: {
-<<<<<<< HEAD
-  stagger_children: 0.1, delay_children: 0.2;
-}
-  /* CTA Buttons */;
-}<motion.div > <Link href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > Get Started </a> <Link href="/services" className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105" > Explore Services </a> </motion.div> {
-  /* Stats */;
-}<motion.div > <div className="text - center" > <div className="text - 3xl md:text - 4xl font - bold text - cyan - 400 mb - 2" >500+</div> <div className="text - gray - 400" >Innovative Services</div> </div> <div className="text - center" > <div className="text - 3xl md:text - 4xl font - bold text - purple - 400 mb - 2" >4.9 / 5</div> <div className="text - gray - 400" >Customer Rating</div> </div> <div className="text - center" > <div className="text - 3xl md:text - 4xl font - bold text - pink - 400 mb - 2" >1000+</div> <div className="text - gray - 400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" > <span className="bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent" > Revolutionary Services </span> </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Discover our cutting - edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) );
-}</div> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6" > <span className="bg - gradient - to - r from - purple - 400 to - pink - 500 bg - clip - text text - transparent" > Latest Innovations </span> </h2> <p className="text - xl text - gray - 300 max - w-3xl mx - auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>);
-}</div> </div> <div className="flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors" > <span className="mr - 2 text - sm" >Learn More</span> <ArrowRight className="w - 4 h - 4 group - hover:translate - x-1 transition - transform" /> </div> </div> </div> </a> </motion.div>) );
-=======
 
 
   staggerChildren: 0.1, delayChildren: 0.2 
 
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-=======
-};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
   /* CTA Buttons */ 
 
@@ -1697,8 +1286,6 @@ export default Homepage2045;
 }<motion.div > <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2" >500+</div> <div className="text-gray-400" >Innovative Services</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2" >4.9/5</div> <div className="text-gray-400" >Customer Rating</div> </div> <div className="text-center" > <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2" >1000+</div> <div className="text-gray-400" >Happy Clients</div> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our cutting-edge solutions that are transforming industries and pushing the boundaries of what's possible with technology. </p> </motion.div> </div> </div> </a> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Latest Innovations </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Explore our newest revolutionary services that are setting new standards in technology innovation. </p> </motion.div> New </span>)
 }</div> </div> <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors" > <span className="mr-2 text-sm" >Learn More</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /> </div> </div> </div> </a> </motion.div>) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</div> {
   /* View All Services CTA */;
 }<motion.div > <Link href="/services" className="inline - flex items - center px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > View All Services <ArrowRight className="ml - 2 w - 5 h - 5" /> </a> </motion.div> </div> </section> <motion.div initial= {
@@ -1712,25 +1299,10 @@ export default Homepage2045;
   duration: 0.8;
 }viewport= {
   {
-<<<<<<< HEAD
-  once: true;
-}> Ready to Transform? </span> </h2> <p className="text - xl text - gray - 300 mb - 8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center" > <Link href="/contact" className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white rounded - lg font - semibold text - lg hover:from - cyan - 600 hover:to - purple - 600 transition - all duration - 300 shadow - lg shadow - cyan - 500 / 25 hover:shadow - xl hover:shadow - cyan - 500 / 30 transform hover:scale - 105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px - 8 py - 4 border border - cyan - 400 / 50 text - cyan - 400 rounded - lg font - semibold text - lg hover:bg - cyan - 400 / 10 transition - all duration - 300 transform hover:scale - 105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>);
-}export default Homepage2045;export default Homepage2045;
-;
-=======
-<<<<<<< HEAD
-  once: true
-}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
-};export default Homepage2045;export default Homepage2045;
-
-<<<<<<< HEAD
-=======
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
@@ -1738,6 +1310,3 @@ export default Homepage2045;
 };export default Homepage2045;
 
 export default Homepage2045;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

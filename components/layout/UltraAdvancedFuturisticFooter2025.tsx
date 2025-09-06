@@ -25,48 +25,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Mail
-  Phone
-  MapPin
-  Globe
-  Twitter
-  Linkedin
-  Github
-  ArrowUp
-  Crown
-  Zap
-  Brain
-  Rocket
-  Shield
-  Users
-  BookOpen
-  Briefcase
-  Atom;
-<<<<<<< HEAD
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Globe,;
-  Twitter,;
-  Linkedin,;
-  Github,;
-  ArrowUp,;
-  Crown,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Shield,;
-  Users,;
-  BookOpen,;
-  Briefcase,;
-  Atom,;
-=======
-=======
   Mail,
   Phone,
   MapPin,
@@ -84,8 +42,6 @@ import {;
   BookOpen,
   Briefcase,;
   Atom,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -819,38 +775,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
-<<<<<<< HEAD
-            key={i}  }
-        {[...Array(30)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}  }
-
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">;
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            key={i}  }
-=======
             key={i}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 -z-10">
-=======
-<<<<<<< HEAD
-            key={i}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
@@ -983,54 +909,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
-<<<<<<< HEAD
-            <motion.div variants={itemVariants} className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
-                    <Crown className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-xl blur-lg opacity-50"></div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">Future Technology Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Pioneering the future with revolutionary AI consciousness, quantum computing, and autonomous systems. Transforming businesses through next-generation technology.
-              </p>
-              <p className="text-gray-300 leading-relaxed mb-6 max-w-md">
-                Leading provider of innovative technology solutions, specializing in AI, automation, and future-ready services.
-                We help businesses transform and thrive in the digital age.
-              </p>
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-pink-400" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Globe className="w-4 h-4 text-blue-400" />
-                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ziontechgroup.com
                   </a>
                 </div>
@@ -1080,73 +959,15 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
               </div>;
             </motion && motion.div>;
 
-<<<<<<< HEAD
-            {/* Footer Sections */}
-            {footerSections && footerSections.map((section, index) => (;
-              <motion && motion.div key={section && section.title} variants={itemVariants}>;
-                <h4 className='text-lg font-semibold text-white mb-6 flex items-center space-x-2'>;
-                  {section && section.title === 'Services' && (;
-                    <Briefcase className='w-5 h-5 text-cyan-400' />;
-                  )}
-                  {section && section.title === 'Solutions' && (;
-                    <Zap className='w-5 h-5 text-purple-400' />;
-                  )}
-                  {section && section.title === 'Company' && (;
-                    <Users className='w-5 h-5 text-pink-400' />;
-                  )}
-                  {section && section.title === 'Resources' && (;
-                    <BookOpen className='w-5 h-5 text-blue-400' />;
-                  )}
-                  <span>{section && section.title}</span>;
-                </h4>;
-                <ul className='space-y-3'>;
-                  {section && section.items.map(item => (;
-                    <li key={item && item.label}>;
-                      <Link
-                        href={item && item.href}
-                        className='text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'>                  <span>{section && section.title}</span>;
-                </h4>;
-                <ul className="space-y-3">;
-                  {section && section.items.map((item) => (;
-                    <li key={item && item.label}>;
-                      <Link
-                        href={item && item.href}
-                        className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">;
-                        {item && item.label}
-                      </Link>;
-                    </li>;
-                  ))}
-                </ul>;
-              </motion && motion.div>;
-            ))}
-          </motion.div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='mt-16 pt-12 border-t border-gray-800/50'>;
-            <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Social Links */}
               <div className='flex items-center space-x-6'>;
                 <span className='text-gray-400 font-medium'>Follow Us:</span>;
@@ -1202,15 +1023,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   />;
                   <motion&& motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -1220,11 +1034,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -1236,12 +1045,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1262,17 +1065,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </motion && motion.div>;
         </div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -1361,16 +1154,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1504,18 +1288,9 @@ export default UltraAdvancedFuturisticFooter2025;
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
-<<<<<<< HEAD
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-=======
 
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -1552,31 +1327,15 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>;
 ;
 export default UltraAdvancedFuturisticFooter2025;
 ;
-<<<<<<< HEAD
-=======
 
-=======
   );
-<<<<<<< HEAD
-}
-=======
 };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
 
-<<<<<<< HEAD
-=======
 export default UltraAdvancedFuturisticFooter2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraAdvancedFuturisticFooter2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

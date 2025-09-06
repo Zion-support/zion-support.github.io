@@ -1,40 +1,6 @@
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-export function NewsletterForm() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setIsSubmitting(true);
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {useState} from "react";
-export function NewsletterForm() {;
-
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { useState } from "react";
-=======
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function NewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -46,7 +12,6 @@ export function NewsletterForm() {
     e.preventDefault(),
     setIsSubmitting(true),
     
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
@@ -140,20 +105,9 @@ function NewsletterForm() {
           >;
             {is_submitting ? "Subscribing..." : "Subscribe"}
           </Button>;
-<<<<<<< HEAD
-        </form>)}
-    </div>);
-=======
 
         </form>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
     </div>
   );
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

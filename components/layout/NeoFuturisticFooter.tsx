@@ -49,33 +49,6 @@ import {;
   Github,;
   Linkedin,;
   ExternalLink,;
-<<<<<<< HEAD
-} from 'lucide-react';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-const contactInfo = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export default function NeoFuturisticFooter() {
-<<<<<<< HEAD
-  return (  website: 'https://ziontechgroup.com'
-}
-=======
-<<<<<<< HEAD
-  return (  website: 'https://ziontechgroup.com';
-};
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function NeoFuturisticFooter() {;
   return (
@@ -267,28 +240,6 @@ function NeoFuturisticFooter() {
     </footer>
   );
 }
-<<<<<<< HEAD
-                href='https://www && www.linkedin.com/company/zion-tech-group/'
-                className='text-slate-400 hover:text-white'>;
-                <Linkedin className='w-5 h-5' />;
-              </a>            </div>;
-          </div>;
-        </div>;
-          <div className="space-y-2 text-sm">;
-            <div className="font-semibold text-slate-100 mb-2">Resources</div>;
-            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
-            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
-            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
-            <div className="flex items-center gap-3 pt-2">;
-              <a aria-label="GitHub" href="https://github && github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
-              <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
-          </div>;
-        </div>;
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         <div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>;
           <div className='text-xs text-slate-500'>;
@@ -415,20 +366,8 @@ function NeoFuturisticFooter() {
     </footer>);
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -2,32 +2,16 @@ import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-<<<<<<< HEAD
-=======
-=======
 
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-<<<<<<< HEAD
-=======
 
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
@@ -42,8 +26,6 @@ import { Input  } from '@/components / ui / input';
 import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
 import { Card, CardContent  } from '@/components / ui / card';
 
-=======
-=======
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -57,12 +39,6 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
@@ -79,16 +55,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
       <FormField
         control={control}
         name="title"
-<<<<<<< HEAD
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Job Title</FormLabel>;
-            <FormControl>;
-              <Input placeholder="e && e.g. Senior React Developer" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-=======
 
         render={({ field }) => (
           <FormItem>
@@ -98,12 +64,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       />
       <FormField
@@ -120,18 +80,9 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({
         )}
       />
       <FormField
-<<<<<<< HEAD
-=======
-=======
 
       />;
       <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         control={control}
         name="category"
         render={({ field }) => (;
@@ -213,30 +164,15 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 30"
-<<<<<<< HEAD
-                  value={minBudget |rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  value={minBudget |rest.value}
-                  onChange={(e) => {
-                    setMinBudget(e.target.value);
-=======
 
                   value={minBudget || rest.value}
                   onChange={e => {;
                     setMinBudget(e.target.value),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   value={minBudget || rest.value}
 
                   onChange={e => {;
                     setMinBudget(e.target.value),;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     onChange(e);
           </FormItem>)}
       />;
@@ -273,25 +209,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 <Input
                   type="number"
                   placeholder="e.g. 60"
-<<<<<<< HEAD
-                  value={maxBudget |rest.value}
-                  onChange={(e) => {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  value={maxBudget |rest.value}
-                  onChange={(e) => {
-=======
                   value={maxBudget || rest.value}
                   onChange={e => {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   value={maxBudget || rest.value}
 
                   onChange={e => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     setMaxBudget(e.target.value);
                     onChange(e);
             </FormItem>)}
@@ -312,15 +234,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                     on_change (e);
                   }}
                   {...rest}
-<<<<<<< HEAD
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-          )}
-        />
-      </div>
-=======
                 />
               </FormControl>
               <FormMessage />
@@ -328,20 +241,8 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
           )}
         />
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Card>
-        <CardContent className="pt-4">
-          <ClientBudgetRecommender
-            jobTitle={control._formValues.title |""}
-            category={control._formValues.category |""}
-            experienceLevel={control._formValues.experienceLevel |""}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
@@ -378,24 +279,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         control={control}
         name="location";
         render={({ field }) => (
-<<<<<<< HEAD
-          <FormItem>;
-            <FormLabel > Location</FormLabel>;
-            <FormControl>;
-              <Input;
-                placeholder="e.g. Remote, San Francisco, etc.";
-                {...field}
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
-        )}
-      />;
-    </div>;
-  );
-}
-
-=======
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
@@ -404,27 +287,9 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormMessage />
           </FormItem>
         )}
-<<<<<<< HEAD
-      />
-    </div>
-<<<<<<< HEAD
-  );
-}
-;
-
-=======
 
 );
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       />;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Skill  } from '@/types/resume';
-import { useAuth  } from '@/hooks/useAuth';
-import { handleResumeError, showSuccessToast } from './useResumeUtils';
-export function useSkills() {
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useSkills() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -29,15 +13,6 @@ export function useSkills() {;
     if (!user) {
       setError('You must be logged in to add skills')
       return false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Skill } from '@/types/resume',;
@@ -51,11 +26,6 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to add skills'),;
       return false;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setIsLoading(true);
     setError(null);
@@ -75,28 +45,6 @@ export function useSkills() {;
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-    }
-  }
-  const deleteSkill = async (skillId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete skills')
-      return false
-=======
-<<<<<<< HEAD
-    }
-  }
-  const deleteSkill = async (skillId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to delete skills')
-      return false
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     setError(null),;
@@ -122,11 +70,6 @@ export function useSkills() {;
     if (!user) {;
       setError('You must be logged in to delete skills'),;
       return false;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setIsLoading(true);
     setError(null);
@@ -149,15 +92,6 @@ export function useSkills() {;
     addSkill;
 
     deleteSkill
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
@@ -179,10 +113,6 @@ if ( {) {
       set_error ('You must be logged in to add skills'),
       return false;
     }
-<<<<<<< HEAD
-    setIsLoading (true);
-    set_error (null);
-=======
 
   },;
   return {;
@@ -190,14 +120,8 @@ if ( {) {
     error;
     addSkill;
     deleteSkill;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     try {
       const { error } = await supabase;

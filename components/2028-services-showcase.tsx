@@ -4,41 +4,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
-
-<<<<<<< HEAD
-=======
-=======
   CheckCircle,
   ArrowRight,
   Star,
@@ -66,8 +31,6 @@ import {
   Music,;
   Gamepad2,;} from 'lucide-react';import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -446,52 +409,10 @@ export default function ServicesShowcase2028() {;
               </Link>;
               <Link
                 href="/revolutionary-2028-pricing"
-<<<<<<< HEAD
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Pricing</span>
-                <DollarSign className="w-5 h-5" />
-              </Link>
-            </div>
-            {/* Stats */}
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 pt-16'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-purple-400'>50+</div>
-                <div className='text-purple-300'>Innovative Services</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-blue-400'>99.9%</div>
-                <div className='text-blue-300'>Accuracy Rate</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-pink-400'>500+</div>
-                <div className='text-pink-300'>Happy Clients</div>
-              </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-cyan-400'>24/7</div>
-                <div className='text-cyan-300'>Support Available</div>              </div>              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">99.9%</div>
-                <div className="text-blue-300">Accuracy Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400">500+</div>
-                <div className="text-pink-300">Happy Clients</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400">24/7</div>
-                <div className="text-cyan-300">Support Available</div>
-=======
 
 
             {/* Stats */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </div>
           </motion.div>
@@ -651,14 +572,6 @@ export default function ServicesShowcase2028() {;
                       ))}
                     </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Link
                       href={`/services#${category && category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                       className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'>;
@@ -671,25 +584,13 @@ export default function ServicesShowcase2028() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
 
           </div>;
         </div>;
       </section>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Featured Services */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1022,18 +923,9 @@ export default function ServicesShowcase2028() {;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Market Analysis */}
       <section className='py - 20 bg - black / 50'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
@@ -1056,18 +948,7 @@ export default function ServicesShowcase2028() {;
             </p>;
           </div>;
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <motion&& motion.div
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -1222,42 +1103,21 @@ export default function ServicesShowcase2028() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion && motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
-<<<<<<< HEAD
-=======
 
-=======
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='space-y-8'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Ready to{' '}
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
                 Transform;
@@ -1302,207 +1162,8 @@ export default function ServicesShowcase2028() {;
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
-    </>
-);
-}
-                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2'>;
-                <span>View Case Studies</span>;
-                <TrendingUp className='w-5 h-5' />;
-              </Link>;
-            </div>;
-
-            <div className='flex items-center justify-center space-x-8 text-purple-300'>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>30-Day Free Trial</span>;
-              </div>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-green-400' />;
-                <span>24/7 Expert Support</span>;
-              </div>;
-              <div className='flex items-center space-x-2'>;
-                <CheckCircle className='w-5 h-5 text-green-400' />                <span>Money-Back Guarantee</span>              <div className="flex items-center space-x-2">;
-                <CheckCircle className="w-5 h-5 text-green-400" />;
-                <span>Money-Back Guarantee</span>;
-              </div>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-      <UltraFuturisticFooter2028 />;
-    </>;
   );
 }
-=======
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
-);
-}
-
-}
-<<<<<<< HEAD
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
-            <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
-              Understand the market dynamics and growth potential of our futuristic services.;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className='text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl';
-            >;
-              <TrendingUp className='w - 16 h - 16 text - green - 400 mx - auto mb - 6' />;
-              <h3 className='text - 2xl font - bold text - white mb - 4'>;
-                Market Growth;
-              </h3>;
-              <p className='text - purple - 300 mb - 6'>;
-                Our services target markets with exponential growth potential,
-                with some sectors growing at 300 - 800% annually.;
-              </p>;
-              <div className='text - 3xl font - bold text - green - 400'>500%+</div>;
-              <div className='text - purple - 300'>Average Annual Growth</div>            </motion.div>            >;
-              <TrendingUp className="w - 16 h - 16 text - green - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4">Market Growth</h3>;
-              <p className="text - purple - 300 mb - 6">;
-                Our services target markets with exponential growth potential,
-                with some sectors growing at 300 - 800% annually.;
-              </p>;
-              <div className="text - 3xl font - bold text - green - 400">500%+</div>;
-              <div className="text - purple - 300">Average Annual Growth</div>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className='text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl';
-            >;
-              <DollarSign className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6' />;
-              <h3 className='text - 2xl font - bold text - white mb - 4'>;
-                Market Size;
-              </h3>;
-              <p className='text - blue - 300 mb - 6'>;
-                Combined market size of our service categories exceeds $500;
-                billion with rapid expansion expected.;
-              </p>;
-              <div className='text - 3xl font - bold text - blue - 400'>$500B+</div>;
-              <div className='text - blue - 300'>Total Addressable Market</div>            </motion.div>            >;
-              <DollarSign className="w - 16 h - 16 text - blue - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4">Market Size</h3>;
-              <p className="text - blue - 300 mb - 6">;
-                Combined market size of our service categories exceeds;
-                $500 billion with rapid expansion expected.;
-              </p>;
-              <div className="text - 3xl font - bold text - blue - 400">$500B+</div>;
-              <div className="text - blue - 300">Total Addressable Market</div>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-              className='text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl';
-            >;
-              <Shield className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6' />;
-              <h3 className='text - 2xl font - bold text - white mb - 4'>;
-                Competitive Edge;
-              </h3>;
-              <p className='text - pink - 300 mb - 6'>;
-                First - to - market solutions with proprietary technology and AI;
-                algorithms that competitors cannot replicate.;
-              </p>;
-              <div className='text - 3xl font - bold text - pink - 400'>90%</div>;
-              <div className='text - pink - 300'>Market Share in Niche</div>            </motion.div>            >;
-              <Shield className="w - 16 h - 16 text - pink - 400 mx - auto mb - 6" />;
-              <h3 className="text - 2xl font - bold text - white mb - 4">Competitive Edge</h3>;
-              <p className="text - pink - 300 mb - 6">;
-                First - to - market solutions with proprietary technology;
-                and AI algorithms that competitors cannot replicate.;
-              </p>;
-              <div className="text - 3xl font - bold text - pink - 400">90%</div>;
-              <div className="text - pink - 300">Market Share in Niche</div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='space - y-8';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to{' '}
-              <span className='bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent'>;
-                Transform;
-              </span>{' '}
-              Your Business?;
-            </h2>;
-            <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
-              Join hundreds of forward - thinking companies already leveraging our;
-              futuristic services to gain competitive advantages and drive;
-              innovation.;
-            </p>;
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2';
-              >;
-                <span > Start Your Journey</span>;
-                <ArrowRight className='w - 5 h - 5' />;
-              </Link>;
-              <Link;
-                href='/case - studies';
-                className='px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2';
-              >;
-                <span > View Case Studies</span>;
-                <TrendingUp className='w - 5 h - 5' />;
-              </Link>;
-            </div>;
-            <div className='flex items - center justify - center space - x-8 text - purple - 300'>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 30 - Day Free Trial</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
-                <span > 24 / 7 Expert Support</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > Money - Back Guarantee</span>              <div className="flex items - center space - x-2">;
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
-                <span > Money - Back Guarantee</span>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <UltraFuturisticFooter2028 />;
-    </>);
-}
-=======
-}
-=======
     </>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {cn} from "@/lib/utils";
-import {ForumPost} from "@/types/community";
-import {ProfileBadge} from "@/components/profile/ProfileBadge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
@@ -25,22 +7,8 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
-=======
-<<<<<<< HEAD
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
-=======
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface PostCardProps {
 
   post: ForumPost
@@ -76,22 +44,10 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
           </div>
           <div className="text-sm text-muted-foreground">
             Posted by {post.authorName} {timeAgo}
-<<<<<<< HEAD
-          </div>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {post.tags?.map(tag => (
-              <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
-=======
           </div>;
           <div className="flex flex-wrap gap-2 mt-2">;
             {post.tags?.map(tag => (;
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {tag}
               </Badge>
             ))}
@@ -125,12 +81,6 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             <Badge className="bg-zion-purple">Featured</Badge>
           </div>
         )}
-<<<<<<< HEAD
-      </CardFooter>
-    </Card>
-  )
-}
-=======
 
           </div>;
           <div className="text-sm text-muted-foreground">;
@@ -176,18 +126,12 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             <Badge className="bg-zion-purple">Featured</Badge>;
           </div>;
         )}
-=======
 
 
       </CardFooter>;
     </Card>;
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default PostCard;
 
 import { formatDistanceToNow } from './date - fns';

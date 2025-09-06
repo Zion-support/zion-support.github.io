@@ -33,15 +33,9 @@ class ErrorBoundary extends React.Component {
 }
 import React from "react";
 export default function EnhancedCard({
-<<<<<<< HEAD
-  children
-  className = ""
-}: {
-=======
   children,
   className = "",
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   children: React.ReactNode;
   className?: string;
 }) {;

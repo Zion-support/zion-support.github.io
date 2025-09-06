@@ -1,74 +1,19 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from "react";
-import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-  CardContent
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-} from "@/components/ui/card";
-import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
-import { JobMatchCard } from "@/components/jobs/JobMatchCard";
-
-import { useJobMatches } from "@/hooks/useJobMatches";
-import { Skeleton } from "@/components/ui/skeleton";
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobMatchesProps {
   jobId: string
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
-=======
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     useJobMatches(jobId);
 
-=======
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
     return (
       <Card>
@@ -89,33 +34,13 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-32" />
               </div>
             </div>
-<<<<<<< HEAD
-          ))}
-        </CardContent>
-      </Card>
-    );
-  }
-  if (matches.length === 0) {
-    return (
-      <EmptyMatchesCard
-        onRefresh={triggerAIMatching}
-        isProcessing={isProcessing}
-      />
-    );
-  }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",;
 import { useJobMatches } from "@/hooks/useJobMatches",;
 import { Skeleton } from "@/components/ui/skeleton",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface JobMatchesProps {;
   jobId: string;
 }
@@ -157,20 +82,11 @@ export function JobMatches({ jobId }: JobMatchesProps) {
       />;
     );
   }
-<<<<<<< HEAD
-=======
-=======
 ;
   if (matches.length === 0) {;
     return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
   }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
@@ -263,24 +179,10 @@ if ( {) {
           category={match.talent_profile?.category || "Development"}
           match_percent={match.match_score || 0}
           skills={match.talent_profile?.skills || []}
-<<<<<<< HEAD
-        />))}
-    </div>);
-=======
 
         />
       ))}
-<<<<<<< HEAD
     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </div>
-=======
-    </div>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

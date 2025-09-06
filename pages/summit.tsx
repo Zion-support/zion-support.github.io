@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const partners: Partner[] = [ {
   name: 'Gov Partner'
 }
@@ -15,35 +7,12 @@ const partners: Partner[] = [ {
 {
   name: 'University Partner'
 }];
-<<<<<<< HEAD
-const onSubmit = async (e: React && React.FormEvent) => {;
-  e && e.preventDefault ();
-setSubmitting (true);
-setResult (null);
-try {;
-  const res = await fetch ('/api/summit/register', {;
-  name: 'Gov Partner';
-}
-{
-  name: 'Venture Partner';
-}
-{
-  name: 'University Partner';
-}];
-const on_submit = async (e: React.FormEvent) => {
-  e.prevent_default ();
-set_submitting (true);
-set_result (null);
-try {
-  const res = await fetch ('/api / summit / register', {
-=======
 const onSubmit = async (e: React.FormEvent) => {
   e.preventDefault ();
 setSubmitting (true);
 setResult (null);
 try {
   const res = await fetch ('/api/summit/register', {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   method: 'POST';
 headers: {
   'Content-Type': 'application/json'
@@ -66,32 +35,15 @@ setForm ({
 })
 }finally {
   setSubmitting (false)
-<<<<<<< HEAD
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter'
-=======
-<<<<<<< HEAD
-export default function SummitPage() {
-  const [platform, setPlatform] = React.useState<
-    'youtube' | 'twitch' | 'twitter'
-=======
 
 export default function SummitPage() {
   const [platform, setPlatform] = React.useState<
     'youtube' | 'twitch' | 'twitter';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   >('youtube');
   const [embedId, setEmbedId] = React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-<<<<<<< HEAD
-    name: ''
-    email: ''
-    role: ''
-    country: ''
-=======
 
 
 
@@ -101,45 +53,23 @@ export default function SummitPage() {;
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   >('youtube');
   const [embedId, setEmbedId] = React && React.useState<string>('dQw4w9WgXcQ');
   const { isPast, days, hours, minutes, seconds } =;
     useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({
-<<<<<<< HEAD
-    name: ''
-    email: ''
-    role: ''
-    country: ''
-=======
 
     name: '',
     email: '',
     role: '',
     country: '',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });
   const [submitting, setSubmitting] = React && React.useState(false);
   const [result, setResult] = React && React.useState<{;
     ok?: boolean;
     error?: string;
   } | null>(null);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const speakers: Speaker[] = [
-    {
-      name: 'Featured Speaker: Your Name'
-      title: 'Founder, Zion'
-      avatarUrl: '/favicon.svg'
-<<<<<<< HEAD
-      bio: 'Visionary behind Zion Protocol  building AI-native digital nations.'
-=======
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       twitter: 'https://twitter.com'
       linkedin: 'https://www.linkedin.com'
       highlight: true
@@ -161,11 +91,6 @@ export default function SummitPage() {;
     { name: 'Venture Partner' }
     { name: 'University Partner' }
   ];
-<<<<<<< HEAD
-  const onSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault();
-    setSubmitting(true);
-=======
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
@@ -187,9 +112,6 @@ export default function SummitPage() {;
   }
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -245,7 +167,6 @@ export default function SummitPage() {
       title: 'Founder, Zion',
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
-=======
   'Content - Type': 'application / json';
 }
 body: JSON.stringify ({
@@ -296,7 +217,6 @@ function SummitPage() {
       avatar_url: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI - native digital nations.',
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
       highlight: true},
@@ -429,10 +349,6 @@ function SummitPage() {
             </a>;
             <a
               href='#agenda'
-<<<<<<< HEAD
-              className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'>;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className='inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10'
             >
               Agenda
@@ -445,15 +361,7 @@ function SummitPage() {
           className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
-<<<<<<< HEAD
-          <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote  Launching Zion Protocol</li>
-            <li>Panel 1  The Future of Digital Nations</li>
-            <li>Panel 2  ZionDAO in Action</li>
-            <li>Demo  ZionGPT Live</li>
-            <li>Featured Speaker  Founder</li>
-=======
           <ol className='space-y-3 list-decimal list-inside'>            <li>Opening Keynote — Launching Zion Protocol</li>
-=======
       <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
         <div className="max-w-4xl">
           <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
@@ -471,16 +379,10 @@ function SummitPage() {
           <h2 className="text-2xl font-bold mb-4">Agenda</h2>
           <ol className="space-y-3 list-decimal list-inside">
             <li>Opening Keynote — Launching Zion Protocol</li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
             <li>Demo — ZionGPT Live</li>
             <li>Featured Speaker — Founder</li>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </ol>
         </section>
         <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
@@ -667,11 +569,7 @@ if ( {) {
                   </a>;
                 )}              </div>;
             </div>;
-<<<<<<< HEAD
-=======
 
-=======
-=======
 
 
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
@@ -681,11 +579,6 @@ if ( {) {
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
@@ -697,9 +590,6 @@ if ( {) {
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
               </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       </section>
@@ -724,28 +614,17 @@ if ( {) {
               ) : (;
                 p && p.name;
               )}            </div>;
-<<<<<<< HEAD
-=======
 
-=======
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       </section>
@@ -945,11 +824,6 @@ if ( {) {
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <select
               aria-label="Platform"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -982,11 +856,6 @@ if ( {) {
       <section id="register" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-4">Register</h2>
         <form onSubmit={onSubmit} className="grid md:grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <label className="block text-sm mb-1">Name</label>
             <input
@@ -1037,25 +906,10 @@ if ( {) {
           </div>
         </form>
       </section>
-<<<<<<< HEAD
-      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
-        <h2 className='text-xl font-semibold'>
-          AI Session Summaries (Optional)
-        </h2>
-        <p className='text-sm opacity-70 mt-2'>
-          Auto-generated summaries and ZionGPT moderation prompts coming soon.
-        </p>
-      </section>
-    </>
-);
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -1144,10 +998,6 @@ if ( {) {
           Auto - generated summaries and ZionGPT moderation prompts coming soon.;
         </p>;
       </section>;
-<<<<<<< HEAD
-    </>);
-;
-=======
 
     </>;
   );
@@ -1156,9 +1006,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

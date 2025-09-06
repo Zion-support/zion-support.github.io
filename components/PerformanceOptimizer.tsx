@@ -25,30 +25,6 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Zap
-  Clock
-  TrendingUp
-  Activity
-  Gauge
-  Cpu
-  Database
-  Network;
-<<<<<<< HEAD
-import {;
-  Zap,;
-  Clock,;
-  TrendingUp,;
-  Activity,;
-  Gauge,;
-  Cpu,;
-  Database,;
-  Network,;
-=======
-=======
   Zap,
   Clock,
   TrendingUp,
@@ -57,8 +33,6 @@ import {;
   Cpu,
   Database,;
   Network,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 
 interface PerformanceMetrics {;
@@ -750,31 +724,14 @@ if ( { // LCP should be under 2.5s) {
         </div>;
       </div>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Metrics Display */}
       {showMetrics && (;
         <motion&& motion.div
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-          className='grid grid-cols-2 md:grid-cols-3 gap-4 mb-6'
-=======
 
         >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div className='text-center p-3 rounded-lg bg-white/5 border border-white/10'>
             <Clock className='w-6 h-6 text-blue-400 mx-auto mb-2' />
             <div className='text-lg font-bold text-white'>
@@ -824,38 +781,16 @@ if ( { // LCP should be under 2.5s) {
       )}
       {/* Optimization Controls */}
       <div className='space-y-3'>        <button      <div className="space-y-3">;
-<<<<<<< HEAD
-        <button
-=======
 
-=======
           </div>
         </motion.div>
       )}
-<<<<<<< HEAD
-      {/* Optimization Controls */}
-<<<<<<< HEAD
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-=======
 
       {/* Optimization Controls */}
-=======
-<<<<<<< HEAD
-      <div className='space-y-3'>        <button      <div className="space-y-3">
-        <button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='space-y-3'>        <button
 
         <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -945,24 +880,15 @@ export default PerformanceOptimizer;
 interface PerformanceMetrics {
 };
 
-<<<<<<< HEAD
-export default PerformanceOptimizer;
-=======
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>
         <ul className="text-xs text-white/60 space-y-1">
-=======
 
 
         )}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Performance Tips */}
       <div className='mt-6 pt-4 border-t border-white/10'>
         <h4 className='text-sm font-semibold text-white/80 mb-3'>
@@ -971,11 +897,6 @@ export default PerformanceOptimizer;
 
         <ul className='text-xs text-white/60 space-y-1'>          <li>• Use WebP images for better compression</li>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <li>• Use WebP images for better compression</li>
           <li>• Implement lazy loading for images</li>
           <li>• Minimize CSS and JavaScript bundles</li>
@@ -984,7 +905,6 @@ export default PerformanceOptimizer;
         </ul>
       </div>
     </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 interface PerformanceMetrics {;
   }, [measure_performance]);
@@ -1198,238 +1118,8 @@ addResourceHint (image, 'image');
       {criticalCSS && (;
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />;
       )}
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-{/* Preload critical resources */}
-      {preload_images.map ((image, index) => (
-        <link;
-key={`preload - image-${index}}          rel="preload""          as="image""          href={image}"        />))}
-      {preload_fonts.map ((font, index) => (
-        <link;
-key={`preload - font-${index}`}          rel="preload""          as="style""          href={font}"          on_load={() => {
-            const link = document.query_selector (link[href="${font}"]`);
-"            if ( {"              (link as HTMLLinkElement).rel = 'stylesheet) {
-  $2
-}
-}'          }}`        />))}
-      {/* Performance hints */}
-      <meta http_equiv="x - dns - prefetch - control" content="on" />"      "      {/* Service Worker registration */}
-      <script;
-        dangerouslySetInnerHTML={{
-          __html:             // Check condition
-if ( {'              window.addEventListener ('load', function () {'                navigator.service_worker.register ('/sw.js')'                  .then (function (registration) {'                    console.log ('SW registered: ', registration)) {
-  $2
-}
-'                  })'                  .catch (function (registration_error) {
-                    console.log ('SW registration failed: ', registration_error);'                  });'              });
-}
-          ``        }}/>;
-    </Head>);
-}
-  );
-}
-;
-export default PerformanceOptimizer;
-;
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  memory?: {;
-    used: number;
-    total: number;
-    limit: number;
-  }
-}
-interface PerformanceOptimizerProps {
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
-  enable_reporting?: boolean;
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate
-  enableReporting = false
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const measureWebVitals = useCallback(() => {
-    if (typeof window === 'undefined' |!('performance' in window)) return;
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType('paint');
-    // Core Web Vitals
-    const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime |0;
-    const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime |0;
-    const ttfb = navigation.responseStart - navigation.requestStart;
-    // Memory usage (if available)
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize
-      total: (performance as any).memory.totalJSHeapSize
-      limit: (performance as any).memory.jsHeapSizeLimit
-    } : undefined;
-    const newMetrics: PerformanceMetrics = {
-      fcp
-      lcp
-      fid: 0, // First Input Delay - would need user interaction to measure
-      cls: 0, // Cumulative Layout Shift - would need observer
-      ttfb
-      memory
-    }
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics);
-    }
-    if (enableReporting && process.env.NODE_ENV === 'development') {
-      console.log('Performance Metrics:', newMetrics);
-    }
-  }, [onMetricsUpdate, enableReporting]);
-  useEffect(() => {
-    if (document.readyState === 'complete') {
-      measureWebVitals();
-    } else {;
-      window && window.addEventListener('load', measureWebVitals);
-    }
-    return () => {
-      window.removeEventListener('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-  // Monitor for performance issues
-  useEffect(() => {
-    if (!metrics) return;
-    const warnings: string[] = [];
-    if (metrics.fcp > 1800) warnings.push('First Contentful Paint is slow (>1.8s)');
-    if (metrics.lcp > 2500) warnings.push('Largest Contentful Paint is slow (>2.5s)');
-    if (metrics.ttfb > 600) warnings.push('Time to First Byte is slow (>600ms)');
-    if (metrics.memory) {
-      const memoryUsage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (memoryUsage > 80) warnings.push('High memory usage detected');
-    }
-    if (warnings.length > 0 && enableReporting) {
-      console.warn('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enableReporting]);
-  return null;
-};
-
-export default PerformanceOptimizer;
-
-const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
-  onMetricsUpdate,
-  enable_reporting = false;
-}) => {
-  const [metrics, set_metrics] = useState < PerformanceMetrics | null>(null);
-;
-  const measureWebVitals = useCallback (() => {
-    if () return) {
-  $2
-}
-    const navigation = performance.getEntriesByType ('navigation')[0] as PerformanceNavigationTiming;
-    const paint = performance.getEntriesByType ('paint');
-;
-    // Core Web Vitals;
-    const fcp = paint.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0;
-    const lcp = performance.getEntriesByType ('largest - contentful - paint')[0]?.start_time || 0;
-    const ttfb = navigation.response_start - navigation.request_start;
-;
-    // Memory usage (if available);
-    const memory = (performance as any).memory ? {
-      used: (performance as any).memory.usedJSHeapSize,
-      total: (performance as any).memory.totalJSHeapSize,
-      limit: (performance as any).memory.jsHeapSizeLimit;
-    } : undefined;
-;
-    const new_metrics: PerformanceMetrics = {
-      fcp,
-      lcp,
-      fid: 0, // First Input Delay - would need user interaction to measure;
-      cls: 0, // Cumulative Layout Shift - would need observer;
-      ttfb,
-      memory;
-    }
-;
-    set_metrics (new_metrics);
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      onMetricsUpdate (new_metrics);
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      console.log ('Performance Metrics:', new_metrics);
-    }
-  }, [onMetricsUpdate, enable_reporting]);
-;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      measureWebVitals ();
-    } else {
-      window.addEventListener ('load', measureWebVitals);
-    }
-    return () => {
-      window.removeEventListener ('load', measureWebVitals);
-    }
-  }, [measureWebVitals]);
-;
-  // Monitor for performance issues;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    const warnings: string[] = [];
-;
-    if (warnings.push ('First Contentful Paint is slow (>1.8s)')) {
-  $2
-}
-    if (warnings.push ('Largest Contentful Paint is slow (>2.5s)')) {
-  $2
-}
-    if (warnings.push ('Time to First Byte is slow (>600ms)')) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      const memory_usage = (metrics.memory.used / metrics.memory.limit) * 100;
-      if (warnings.push ('High memory usage detected')) {
-  $2
-}
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      console.warn ('Performance Issues Detected:', warnings);
-    }
-  }, [metrics, enable_reporting]);
-;
-  return null;
-}
-;
-export default PerformanceOptimizer;
-;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   );
 
 export default PerformanceOptimizer;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default PerformanceOptimizer;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,67 +1,19 @@
 
-<<<<<<< HEAD
 import React from "react",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {cn} from "@/lib/utils";
-import {CheckIcon} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { cn } from "@/lib/utils";
-import { CheckIcon } from "lucide-react";
-interface StepProps {
-
-  status: "incomplete" | "current" | "complete"
-  label: string
-
-  description?: string;
-  className?: string;
-}
-export function Step({
-  status;
-  label;
-  description;
-  className}: StepProps) {;
-<<<<<<< HEAD
-=======
-=======
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   className?: string
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function Step({;
-  status;
-  label;
-  description;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function Step({
   status,
   label,
   description,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <li
 
@@ -86,18 +38,6 @@ export function Step({
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
-<<<<<<< HEAD
-            {/* Step number would go here */}
-          </span>;
-        )}
-      </div>
-      <div className="ml-4 min-w-0">
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Step number would go here */}
           </span>;
         )}
@@ -117,13 +57,9 @@ export function Step({
     </li>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       </div>;
 
       <div className="ml-4 min-w-0">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <h3
           className={cn("text-sm font-medium", {
             "text-zion-slate-light": status === "incomplete";
@@ -138,34 +74,22 @@ export function Step({
     </li>;
   );
 }
-<<<<<<< HEAD
-interface StepsProps {
-  currentStep: number
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StepsProps {
   currentStep: number
   className?: string;
   children: React.ReactNode
 }
-<<<<<<< HEAD
-export function Steps({ currentStep, className, children }: StepsProps) {
-=======
 
 export function Steps({ currentStep, className, children }: StepsProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const childrenArray = React.Children.toArray(children);
-=======
 ;
 interface StepsProps {;
   currentStep: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   className?: string;
   children: React && React.ReactNode;
 }
@@ -189,20 +113,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
-          />
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -228,11 +138,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>

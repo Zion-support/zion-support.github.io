@@ -1,55 +1,9 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from 'react';
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
-export default function PaymentSuccess() {
-
-  const navigate = useNavigate();
-
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { CheckCircle2 } from 'lucide-react';
-export default function PaymentSuccess() {
-
-  const navigate = useNavigate();
-
-=======
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -58,9 +12,6 @@ export default function PaymentSuccess() {
   const navigate = useNavigate(),
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -78,15 +29,7 @@ export default function PaymentSuccess() {
           >
             Go to Dashboard
           </Button>
-<<<<<<< HEAD
-          <Button
-=======
-<<<<<<< HEAD
-          <Button
-=======
           <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -97,15 +40,6 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -139,7 +73,6 @@ export default function PaymentSuccess() {;
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-=======
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import {use_navigate} from 'react-router-dom';
@@ -171,8 +104,6 @@ function PaymentSuccess() {
             variant="outline";
             on_click={() => navigate ('/')}
             className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >;
             Return to Home;
           </Button>;
@@ -180,13 +111,6 @@ function PaymentSuccess() {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </div>);
 }

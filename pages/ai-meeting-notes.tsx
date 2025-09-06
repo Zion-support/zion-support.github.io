@@ -9,22 +9,8 @@ export default function AIMeetingNotesPage() {
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">AI Meeting Notes</h1>
 					<p className="mt-4 text-gray-300">Transcribe calls, summarize discussions, and capture action items automatically.</p>
 					<div className="mt-8 flex gap-3">
-<<<<<<< HEAD
-						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
-						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
-=======
-<<<<<<< HEAD
-						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</a>
-						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
-=======
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 					</div>
 				</div>
 			</section>

@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
-<<<<<<< HEAD
-export async function connectMetaMask(): Promise<string[]> {
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
 
   if (typeof window === 'undefined' || !window.ethereum) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -24,16 +13,8 @@ export async function connectMetaMask(): Promise<string[]> {
   }
 }
 export async function getAccounts(): Promise<string[]> {
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
 
   if (typeof window === 'undefined' || !window.ethereum) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return [];
   }
   try {
@@ -47,16 +28,8 @@ export async function getAccounts(): Promise<string[]> {
   }
 }
 export async function getBalance(address: string): Promise<string> {
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
 
   if (typeof window === 'undefined' || !window.ethereum) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -72,16 +45,8 @@ export async function getBalance(address: string): Promise<string> {
   }
 }
 export async function signMessage(message: string, address: string): Promise<string> {
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
-<<<<<<< HEAD
-  if (typeof window === 'undefined' |!window.ethereum) {
-=======
 
   if (typeof window === 'undefined' || !window.ethereum) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -102,25 +67,12 @@ declare global {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
-<<<<<<< HEAD
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
-    }
-=======
-      removeListener: (event: string, callback: (accounts: string[]) => void) => void;
-<<<<<<< HEAD
-    }
-=======
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     };
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

@@ -1,27 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import {useInterviews} from "@/hooks/useInterviews";
-import {Interview} from "@/types/interview";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {InterviewCard} from "@/components/interviews/InterviewCard";
-import {Button} from "@/components/ui/button";
-import {Calendar, Clock, Video} from "lucide-react";
-import {format, isAfter, parseISO, startOfDay} from "date-fns";
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
 import { Interview } from "@/types/interview",
@@ -32,32 +9,14 @@ import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Calendar, Clock, Video } from "lucide-react";
-import { format, isAfter, parseISO, startOfDay } from "date-fns";
-function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews();
-  const [activeTab, setActiveTab] = useState("upcoming");
-<<<<<<< HEAD
-=======
-=======
 import { Calendar, Clock, Video } from "lucide-react",
 import { format, isAfter, parseISO, startOfDay } from "date-fns",
 
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews(),
   const [activeTab, setActiveTab] = useState("upcoming"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
@@ -114,21 +73,8 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-<<<<<<< HEAD
-              <InterviewCard
-                key={interview.id}
-=======
-<<<<<<< HEAD
-              <InterviewCard
-                key={interview.id}
-=======
               <InterviewCard 
                 key={interview.id} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
 import { Interview } from "@/types/interview",;
@@ -203,12 +149,6 @@ function InterviewsContent() {;
             {interviews.map((interview) => (;
               <InterviewCard;
                 key={interview.id} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
@@ -244,15 +184,6 @@ function InterviewsContent() {;
                   {upcomingInterviews.length}
                 </span>
               )}
-<<<<<<< HEAD
-            </TabsTrigger>;
-            <TabsTrigger value="pending">;
-              Pending;
-              {pendingInterviews && pendingInterviews.length > 0 && (;
-                <span className="ml-2 bg-amber-500 rounded-full px-2 py-0 && 0.5 text-xs">;
-                  {pendingInterviews && pendingInterviews.length}
-                </span>;
-=======
             </TabsTrigger>
             <TabsTrigger value="pending">
               Pending
@@ -260,7 +191,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {pendingInterviews.length}
                 </span>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               )}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -309,26 +239,12 @@ function InterviewsContent() {;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
               </div>
             )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          </TabsContent>
-        </Tabs>
-      </main>
-      <Footer />
-    </>
-  )
-<<<<<<< HEAD
-=======
-=======
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
     </>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default function Interviews() {
   return (
@@ -337,9 +253,6 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -517,23 +430,6 @@ export default function Interviews() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-    </>);
-}
-export default /**
- * Interviews - Function description
- */
-function Interviews() {
-  return (
-    <ProtectedRoute>;
-      <InterviewsContent />;
-    </ProtectedRoute>);
-}
-=======
 
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

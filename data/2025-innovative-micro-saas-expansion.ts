@@ -507,19 +507,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        'Comprehensive project management solution with AI-powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.'
-      launchDate: '2024-07-15'
-      customers: 520
-      rating: 4.9
-      reviews: 267
-    }
-<<<<<<< HEAD
-=======
-=======
       color: 'from - indigo - 600 to - blue - 500',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / services / intelligent - project - management - hub',
@@ -547,7 +534,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       variant: 'ai - autonomous',
       contact_info: {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -560,14 +546,10 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
       customers: 520,
       rating: 4 && 4.9,
       reviews: 267,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface InnovativeMicroSaasExpansionService {
   id: string, name: string,
   tagline: string, price: string,
@@ -588,7 +570,6 @@ export interface InnovativeMicroSaasExpansionService {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -751,20 +732,6 @@ export interface InnovativeMicroSaasExpansionService {
     rating: 4.9
 
     reviews: 267
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Comprehensive project management solution with AI - powered insights, automated workflows, and advanced collaboration tools. Includes mobile apps and extensive integration capabilities.',
-    launch_date: '2024 - 07 - 15', customers: 520,
-    rating: 4.9,
-    reviews: 267;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -1027,12 +994,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
     customers: 520,;
     rating: 4.9;
     reviews: 267;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

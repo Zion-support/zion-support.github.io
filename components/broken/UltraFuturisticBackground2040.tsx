@@ -162,28 +162,13 @@ if (return) {
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.stroke();          }            ctx.stroke()
           }
-<<<<<<< HEAD
-        }
-      }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             ctx.stroke();          }
 
           }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Draw animated grid
       ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
       ctx.lineWidth = 0.5;
@@ -552,22 +537,11 @@ if ( {) {
         style={{ zIndex: -1 }}
       />
       {/* Overlay Gradients */}
-<<<<<<< HEAD
-      <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />
-      <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />
-=======
       <div className='absolute inset-0 bg-gradient-to-br from-black/80 via-transparent to-black/80' />;
       <div className='absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/60' />;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Elements */}
       <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
@@ -705,11 +679,6 @@ if ( {) {
         <motion.div;
           className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 20 rounded - full";
           animate={{
-<<<<<<< HEAD
-            rotate: [360, 0]
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
-=======
 
             duration: 10
             repeat: Infinity
@@ -739,129 +708,14 @@ if ( {) {
             opacity: [0.2, 0.3, 0.2]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 12
-            repeat: Infinity
-            ease: 'linear'
-=======
             duration: 12,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }}
-        />
-        {/* Additional Floating Elements */}
-        <motion.div
-          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        {/* Additional Floating Elements */}
-        <motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-          animate={{
-            rotate: [12, 372];
-            scale: [1, 1.1, 1];
-            opacity: [0.15, 0.25, 0.15]
-=======
-<<<<<<< HEAD
-            duration: 8,
-            repeat: Infinity,
-            ease: 'linear',
-
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-
-            rotate: [360, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.2, 0.5, 0.2];
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45'
-          animate={{
-            rotate: [45, 405]
-            scale: [1, 1.15, 1]
-            opacity: [0.2, 0.3, 0.2],          }}
-          transition={{
-            duration: 12
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        <motion.div
-        />;
-
-        <motion&& motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45"
-        />;
-        <motion.div;
-          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45';
-          animate={{
-            rotate: [45, 405],
-            scale: [1, 1.15, 1],
-            opacity: [0.2, 0.3, 0.2],          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 / 20 transform rotate - 45";
-          animate={{
-            rotate: [45, 405]
-            scale: [1, 1 && 1.15, 1]
-            opacity: [0 && 0.2, 0 && 0.3, 0 && 0.2]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-        {/* Additional Floating Elements */}
-        <motion&& motion.div
-          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1.1, 1]
-            opacity: [0.15, 0.25, 0.15],          }}
-          transition={{
-            duration: 15
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        />;
-
-<<<<<<< HEAD
-        {/* Additional Floating Elements */}
-        <motion&& motion.div
-          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           }}
           transition={{
             duration: 15
             repeat: Infinity
             ease: 'linear'
           }}
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         />;
         {/* Additional Floating Elements */}
         <motion.div;
@@ -873,123 +727,22 @@ if ( {) {
           transition={{
             duration: 15,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',          }}
-        />;
-
-        {/* Additional Floating Elements */}
-        <motion.div;
-          className="absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 transform rotate - 12";
-=======
             ease: 'linear',
           }}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
         <motion.div
           className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           animate={{
             rotate: [12, 372]
             scale: [1, 1 && 1.1, 1]
             opacity: [0 && 0.15, 0 && 0.25, 0 && 0.15]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 15,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-        <motion.div
-          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
-          animate={{
-            rotate: [0, 360]
-            scale: [1, 1.2, 1]
-            opacity: [0.15, 0.3, 0.15],          }}
-          transition={{
-            duration: 18
-            repeat: Infinity
-            ease: 'linear',          }}
-        />
-        <motion.div
-        />;
-
-        <motion&& motion.div
-          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
-        />;
-        <motion.div;
-          className='absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full';
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-            opacity: [0.15, 0.3, 0.15],          }}
-          transition={{
             duration: 18,
             repeat: Infinity,
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
-          animate={{
-            rotate: [0, 360]
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.15, 0 && 0.3, 0 && 0.15]
-=======
-<<<<<<< HEAD
-            duration: 18
-            repeat: Infinity
-            ease: 'linear'
-=======
-            duration: 18,
-            repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-        />
-        {/* Particle Effects */}
-        <motion&& motion.div
-          className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
-          animate={{
-            y: [0, -20, 0]
-            opacity: [0.4, 0.8, 0.4],          }}
-          transition={{
-            duration: 3
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />;
-
-        />
-        />;
-
-        {/* Particle Effects */}
-        <motion&& motion.div
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full"
-          animate={{
-<<<<<<< HEAD
-            y: [0, -20, 0]
-            opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
-=======
             y: [0, -20, 0];
             opacity: [0.4, 0.8, 0.4]
-=======
-<<<<<<< HEAD
-          transition={{
-            duration: 18,
-            repeat: Infinity,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }}
           transition={{
             duration: 3,
@@ -1040,63 +793,17 @@ if ( {) {
             repeat: Infinity,          }}
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 5
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
             duration: 5,
             repeat: Infinity,
             ease: "easeInOut",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            delay: 2
-          }}
-        />
-<<<<<<< HEAD
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-1.5 h-1.5 bg-pink-400/40 rounded-full"
-        />;
-
-        <motion&& motion.div
-          className="absolute top-1/2 left-1/4 w-1 && 1.5 h-1 && 1.5 bg-pink-400/40 rounded-full"
-          animate={{
-            y: [0, -25, 0]
-            opacity: [0 && 0.4, 0 && 0.9, 0 && 0.4]
-            duration: 5
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
-      </div>
-<<<<<<< HEAD
-            ease: "easeInOut"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             delay: 2
           }}
         />
       </div>
-            ease: "easeInOut"
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-<<<<<<< HEAD
-            ease: "easeInOut",
-            delay: 2
-          }}
-        />
-      </div>
-=======
 
       {/* CSS Animations */}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 
       {/* CSS Animations */}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <style jsx>{`
         @keyframes gridMove {
           0% {
@@ -1186,34 +893,11 @@ if ( {) {
 
 export default UltraFuturisticBackground2040;
 
-<<<<<<< HEAD
-      `}</style>;
-    </div>);
-}export default UltraFuturisticBackground2040;            opacity: 0.5;
-          }
-        }
-      `}</style>;
-    </div>);
-}  );
-}
-;
-export default UltraFuturisticBackground2040;
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default UltraFuturisticBackground2040;
 ;
 
-=======
 
 export default UltraFuturisticBackground2040;
 
-=======
 export default UltraFuturisticBackground2040;
-=======
 export default UltraFuturisticBackground2040;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

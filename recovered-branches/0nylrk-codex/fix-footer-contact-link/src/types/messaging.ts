@@ -51,29 +51,6 @@ export interface MessagingContextType {
   activeConversation: Conversation | null;
   activeMessages: Message[];
 
-<<<<<<< HEAD
-  isLoading: boolean
-  sendMessage: (conversationId: string, content: string) => Promise<void>
-  createConversation: (
-    recipientId: string
-    initialMessage: string
-
-    contextType?: 'job' | 'talent' | 'general';
-    contextId?: string;
-    contextData?: ConversationContextData
-  ) => Promise<void>;
-  markAsRead: (conversationId: string) => Promise<void>;
-  /**
-   * Set the currently active conversation. Passing `null` will clear the
-   * selection.
-   */
-  setActiveConversation: (value: Conversation | null) => void;
-
-  fetchConversations: () => Promise<void>
-
-  loadMessages: (conversationId: string) => Promise<void>
-}
-=======
    * Set the currently active conversation. Passing `null` will clear the;
    * selection.;
    */;
@@ -82,9 +59,3 @@ export interface MessagingContextType {
   loadMessages: (conversationId: string) => Promise<void>;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

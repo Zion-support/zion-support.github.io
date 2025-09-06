@@ -1,133 +1,3 @@
-<<<<<<< HEAD
-
-import { ProfileData } from '@/types/profile';
-export const MOCK_PROFILES: Record<string, ProfileData> = {
-  'service-provider-1': {
-    id: 'service-provider-1'
-    name: 'TechSolutions Inc.'
-    title: 'Enterprise AI Integration Services'
-    avatarUrl:
-      'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200'
-    coverImageUrl:
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600'
-    bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.'
-    location: 'San Francisco, CA'
-    rating: 4.9
-    reviewCount: 124
-    aiScore: 95
-    profileType: 'service' as 'service' | 'talent'
-    hourlyRate: 200
-    skills: [
-      { name: 'AI Integration', level: 5, endorsements: 87 }
-      { name: 'Machine Learning', level: 5, endorsements: 76 }
-      { name: 'Cloud Infrastructure', level: 4, endorsements: 62 }
-      { name: 'Enterprise Solutions', level: 5, endorsements: 93 }
-      { name: 'Data Engineering', level: 4, endorsements: 54 }
-      { name: 'API Development', level: 4, endorsements: 48 }
-    ]
-    projects: [
-      {
-        id: 'p1'
-        title: 'Healthcare AI Platform'
-        description:
-          'Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.'
-        imageUrl:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300'
-        tags: ['Healthcare', 'AI', 'Machine Learning']
-        date: 'Oct 2023'
-      }
-        tags: ['Healthcare', 'AI', 'Machine Learning'],
-        date: 'Oct 2023',
-      },
-      {
-        id: 'p2'
-        title: 'Financial Analytics Suite'
-        description:
-          'Developed predictive models for investment analysis with 92% accuracy.'
-        imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300'
-        tags: ['Finance', 'Analytics', 'Python']
-        date: 'Jun 2023'
-      }
-        tags: ['Finance', 'Analytics', 'Python'],
-        date: 'Jun 2023',
-      },
-      {
-=======
-<<<<<<< HEAD
-
-      {
-
-          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import { ProfileData } from '@/types/profile';
-export const MOCK_PROFILES: Record<string, ProfileData> = {
-  'service-provider-1': {
-    id: 'service-provider-1'
-    name: 'TechSolutions Inc.'
-    title: 'Enterprise AI Integration Services'
-    avatarUrl:
-      'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200'
-    coverImageUrl:
-<<<<<<< HEAD
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600'
-    bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.'
-    location: 'San Francisco, CA'
-    rating: 4.9
-    reviewCount: 124
-    aiScore: 95
-    profileType: 'service' as 'service' | 'talent'
-    hourlyRate: 200
-    skills: [
-      { name: 'AI Integration', level: 5, endorsements: 87 }
-      { name: 'Machine Learning', level: 5, endorsements: 76 }
-      { name: 'Cloud Infrastructure', level: 4, endorsements: 62 }
-      { name: 'Enterprise Solutions', level: 5, endorsements: 93 }
-      { name: 'Data Engineering', level: 4, endorsements: 54 }
-      { name: 'API Development', level: 4, endorsements: 48 }
-    ]
-    projects: [
-      {
-        id: 'p1'
-        title: 'Healthcare AI Platform'
-        description:
-          'Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.'
-        imageUrl:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300'
-        tags: ['Healthcare', 'AI', 'Machine Learning']
-        date: 'Oct 2023'
-      }
-      {
-        id: 'p2'
-        title: 'Financial Analytics Suite'
-        description:
-          'Developed predictive models for investment analysis with 92% accuracy.'
-        imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300'
-        tags: ['Finance', 'Analytics', 'Python']
-        date: 'Jun 2023'
-      }
-      {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        id: 'p3'
-        title: 'Supply Chain Optimization'
-        description:
-          'Implemented ML algorithms to optimize logistics, reducing costs by 28%.'
-        imageUrl:
-          'https://images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300'
-        tags: ['Logistics', 'Optimization', 'AI']
-        date: 'Jan 2023'
-      }
-    ]
-<<<<<<< HEAD
-        tags: ['Logistics', 'Optimization', 'AI'],
-        date: 'Jan 2023',
-      },
-    ],
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     experience: [
       {
         id: 'e1'
@@ -269,8 +139,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
-<<<<<<< HEAD
-=======
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" }
@@ -278,8 +146,6 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     experience: [;
       {
         id: 'e1',
@@ -296,24 +162,16 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         company: 'TechGiant Inc.',
         description:
           'Developed and deployed ML models for product recommendation systems.',
-<<<<<<< HEAD
-        startDate: 'Jun 2018',
-        endDate: 'Feb 2021',
-=======
         start_date: 'Jun 2018',
         end_date: 'Feb 2021',
 
-=======
 
 
 
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
 import { ProfileData } from "@/types/profile",
 export const MOCK_PROFILES: Record<string ProfileData> = {
   "service-provider-1": {
@@ -324,10 +182,6 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
     coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600",
     bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.",
     location: "San Francisco, CA",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     rating: 4.9,
     reviewCount: 124,
     aiScore: 95,
@@ -348,8 +202,6 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
         imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300",
         tags: ["Healthcare", "AI", "Machine Learning"],
         date: "Oct 2023"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       },
       {
         id: 'e3',
@@ -384,14 +236,4 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
       ];
     }
   }
-<<<<<<< HEAD
-
-  }
-=======
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

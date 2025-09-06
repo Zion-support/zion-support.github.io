@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import Head from 'next/head';
-interface Slide {
-import Head from 'next/head';
-
-interface Slide {;
-import Head from 'next / head';
-;
-interface Slide {
-  id: string;
-  title: string;
-  content: string;
-  chart?: {;
-    type: string;
-    data: Array<{ label: string; value: number }>;
-  }
-function SlidePreview({
-  slide
-  isActive
-  onClick
-}: {
-  slide: Slide;
-  is_active: boolean;
-  on_click: () => void;
-}) {
-    >
-      <div className='font-semibold text-sm line-clamp-2'>
-        {slide.title |'Untitled'}
-      </div>
-      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
-        {slide.content |''}
-      </div>
-    </button>
-  );
-export const getServerSideProps: GetServerSideProps = async ctx => {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -68,13 +26,8 @@ function SlidePreview({
       </div>
     </button>
   );
-<<<<<<< HEAD
-export const getServerSideProps: GetServerSideProps = async ctx => {
-=======
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
@@ -82,19 +35,6 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    mission: ''
-    fundingStage: ''
-    vision: ''
-    roundType: ''
-    targetRaise: ''
-    assets: []
-<<<<<<< HEAD
-=======
-=======
 
     mission: '',
     fundingStage: '',
@@ -102,8 +42,6 @@ export default function PitchGenerator() {
     roundType: '',
     targetRaise: '',
     assets: [],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -142,209 +80,11 @@ export default function PitchGenerator() {
     [];
   );
   const autoFetchMetrics = useCallback(async () => {;
-<<<<<<< HEAD
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/metrics');
-  );
-  const autoFetchMetrics = useCallback(async () => {;
-    const files = Array.from(e.dataTransfer.files || []);
-    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
-<<<<<<< HEAD
-    } catch (e) {
-      return {}
-    } finally {
-      setLoading(false);    }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }, []);
-
-  const prevent = (e: React.DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation()
-  };
-
-  const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []);
-
-  const autoFetchMetrics = useCallback(async () => {
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/metrics');
-      const data = await res && res.json();
-    >;
-      <div className='font - semibold text - sm line - clamp - 2'>;
-        {slide.title || 'Untitled'}
-      </div>;
-      <div className='text - xs text - gray - 500 dark:text - gray - 400 line - clamp - 3 mt - 1 whitespace - pre - wrap'>;
-        {slide.content || ''}
-      </div>;
-    </button>);
-;
-export const getServerSideProps: GetServerSideProps = async ctx => {
-  const result = await requireAdminRole (ctx);
-  // @ts - ignore;
-  // Check condition
-if (return result) {
-  $2
-}
-  return result;
-}
-;
-export default /**
- * PitchGenerator - Function description
- */
-function PitchGenerator() {
-  const [builder, set_builder] = useState < BuilderState>({
-    mission: '',
-    funding_stage: '',
-    vision: '',
-    round_type: '',
-    target_raise: '',
-    assets: [],
-  });  const [slides, set_slides] = useState < Slide[]>([]);
-  const [active_index, setActiveIndex] = useState (0);
-  const [loading, set_loading] = useState (false);
-  const [version_tag, setVersionTag] = useState < string | null>(null);
-  const [history, set_history] = useState<;
-    { id: string; created_at: string, version: string }[];
-  >([]);
-  const active_slide = slides[active_index];
-;
-  const onAssetDrop = useCallback ((e: React.DragEvent < HTMLDivElement>) => {
-    e.prevent_default ();
-    const files = Array.from (e.data_transfer.files || []);
-    set_builder (boolean => ({ ...b, assets: [...b.assets, ...files] }));  }, []);
-;
-  const prevent = (e: React.DragEvent) =>: any {
-    e.prevent_default ();
-    e.stop_propagation (),
-  }
-;
-  const operator_prompt = useMemo (
-    () =>;
-      `Create a 10 - slide investor pitch deck for a high - growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`,
-    []);
-  const autoFetchMetrics = useCallback (async () => {
-    set_loading (true);
-    try {
-      const res = await fetch ('/api / admin / pitch / metrics');
-      const data = await res.json ();
-      return data;
-    } catch (e) {
-      return {}
-    } finally {
-      set_loading (false);    }
-  }, []);
-  const buildDeck = useCallback(async () => {
-  }, []);
-
-  const buildDeck = useCallback(async () => {;
-    setLoading(true);
-    try {;
-      const metrics = await autoFetchMetrics();
-      const res = await fetch('/api/admin/pitch/generate', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          operatorPrompt
-          inputs: builder
-          metrics
-        })
-      });
-      const json = await res.json();
-      const newSlides: Slide[] = json.slides |[];      setSlides(newSlides);
-      setActiveIndex(0);
-      const v = json.version |`v${new Date().toISOString()}`;
-      setVersionTag(v);
-      setHistory(h => [
-        { id: uid(), createdAt: new Date().toISOString(), version: v }
-        ...h
-      const res = await fetch('/api/admin/pitch/generate', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          operatorPrompt,;
-          inputs: builder,;
-          metrics,;
-        }),;
-      });
-      const json = await res && res.json();
-      const newSlides: Slide[] = json && json.slides || [];      setSlides(newSlides);
-      setActiveIndex(0);
-      const v = json && json.version || `v${new Date().toISOString()}`;
-      setVersionTag(v);
-      setHistory(h => [;
-        { id: uid(), createdAt: new Date().toISOString(), version: v },;
-        ...h,;
-      ]);
-    } catch (e) {;
-      // noop;
-    } finally {;
-      setLoading(false);
-    }
-  }, [autoFetchMetrics, builder, operatorPrompt]);
-  const rephraseSlide = useCallback(
-    async (idx: number) => {
-      if (!slides[idx]) return;
-      setLoading(true)
-      try {
-        const res = await fetch('/api/admin/pitch/rewrite', {
-          method: 'POST'
-          headers: { 'Content-Type': 'application/json' }
-          body: JSON.stringify({ slide: slides[idx] })
-        });
-        const json = await res.json ();
-        set_slides (arr =>;
-          arr.map ((s, i) =>;
-            index === idx;
-              ? {
-                  ...s
-                  title: json.title |s.title
-                  content: json.content |s.content
-
-  const rephraseSlide = useCallback(;
-    async (idx: number) => {;
-      if (!slides[idx]) return;
-      setLoading(true),;
-      try {;
-        const res = await fetch('/api/admin/pitch/rewrite', {;
-          method: 'POST',;
-          headers: { 'Content-Type': 'application/json' },;
-          body: JSON && JSON.stringify({ slide: slides[idx] }),;
-        });
-        const json = await res && res.json();
-        setSlides(arr =>;
-          arr && arr.map((s, i) =>;
-            i === idx;
-              ? {;
-                  ...s,;
-                  title: json && json.title || s && s.title,;
-                  content: json && json.content || s && s.content,;
-                }
-              : s;
-          );
-        );
-      } catch (e) {;
-      } finally {;
-        setLoading(false);
-      }
-    }
-    [slides]
-  );
-  const addSlide = useCallback(async () => {;
-<<<<<<< HEAD
-=======
-=======
 
     } catch (error) {
       return {  } catch (error) {
@@ -408,12 +148,6 @@ function PitchGenerator() {
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -480,202 +214,7 @@ function PitchGenerator() {
     } finally {;
       setLoading(false);    }
   }, [slides, versionTag]);
-<<<<<<< HEAD
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides(arr =>
-      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
-    );  }
-  const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null
-    const { type, data } = slide.chart;
-=======
 
-<<<<<<< HEAD
-  const exportGoogleSlides = useCallback(async () => {;
-    setLoading(true);
-    try {;
-      const res = await fetch('/api/admin/pitch/export', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({;
-          slides,;
-          format: 'gslides',;
-          version: versionTag,;
-        }),;
-      });
-      const json = await res && res.json();
-      if (json && json.url) {;
-        window && window.open(json.url, '_blank');
-      }
-    } catch (e) {;
-    } finally {;
-      setLoading(false);    }
-  }, [slides, versionTag]);
-  const updateActiveSlide = (updates: Partial<Slide>) => {
-    setSlides(arr =>
-      arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
-    );  }
-  const renderChartPreview = (slide: Slide) => {
-    if (!slide.chart) return null
-    const { type, data } = slide.chart;
-
-  const updateActiveSlide = (updates: Partial<Slide>) => {;
-    setSlides(arr =>;
-      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
-    );  };
-
-  const renderChartPreview = (slide: Slide) => {;
-    if (!slide && slide.chart) return null,;
-    const { type, data } = slide && slide.chart;
-    return (
-      <div className='mt-3'>;
-        <div className='text-xs text-gray-500 dark:text-gray-400'>;
-          Chart preview: {type}
-        </div>;
-        <div className='flex gap-2 items-end h-24 mt-2'>;
-          {type === 'bar' &&;
-            data && data.map(d => (;
-              <div
-                key={d && d.label}
-                className='bg-blue-500 w-6'
-                style={{ height: `${Math && Math.max(4, d && d.value)}px` }}
-                title={`${d && d.label}: ${d && d.value}`}
-              />;
-            ))}
-          {type === 'funnel' && (;
-            <div className='w-full'>;
-              <div className='flex flex-col gap-1'>;
-                {data && data.map((d, idx) => (;
-                  <div
-                    key={d && d.label}
-                    className='bg-purple-500 text-white text-xs px-2 py-1'
-                    style={{ width: `${100 - idx * 12}%` }}>;
-                    {d && d.label}: {d && d.value}
-                  </div>                ))}
-              </div>;
-            </div>;
-          )}
-          {type === 'timeline' && (;
-            <div className='text-xs grid grid-cols-4 gap-2 w-full'>;
-              {data && data.map(d => (;
-                <div key={d && d.label} className='border p-1 rounded'>;
-                  <div className='font-medium'>{d && d.label}</div>                  <div>{d && d.value}</div>;
-                </div>;
-              ))}
-            </div>;
-          )}
-              ))}
-            </div>;
-          )}
-        </div>;
-      </div>;
-    );
-  }
-
-  return (
-    <>;
-      <Head>;
-        <title>Pitch Generator - Admin</title>;
-        <meta name="description" content="Generate pitch decks and presentations" />;
-      </Head>;
-      <div className='space-y-6'>;
-        <div className='flex items-center justify-between'>;
-          <h1 className='text-2xl font-semibold'>Pitch Generator</h1>;
-          <div className='flex gap-2'>;
-            <button
-              onClick={buildDeck}
-              disabled={loading}
-              className='px-3 py-2 rounded bg-blue-600 text-white disabled:opacity-50'>;
-              Generate Deck;
-            </button>;
-            <button
-              onClick={exportPdf}
-              disabled={loading |slides.length === 0}
-              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'
-            >
-              Download PDF
-            </button>
-            <button
-              onClick={exportGoogleSlides}
-              disabled={loading |slides.length === 0}
-              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'
-            >
-              Export to Google Slides
-            </button>
-          </div>
-        </div>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-          <div className='lg:col-span-1 space-y-4'>
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>Inputs</div>
-              <label className='block text-sm mb-1'>Company mission</label>
-              Export to Google Slides;
-            </button>;
-          </div>;
-        </div>;
-
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>;
-          <div className='lg:col-span-1 space-y-4'>;
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>;
-              <div className='font-medium mb-2'>Inputs</div>;
-              <label className='block text-sm mb-1'>Company mission</label>;
-              <input
-                value={builder && builder.mission}
-                onChange={e =>;
-                  setBuilder({ ...builder, mission: e && e.target.value });
-                }
-                className='w-full border rounded px-2 py-1 bg-transparent';
-              />;
-              <label className='block text-sm mt-3 mb-1'>;
-                Current funding stage;
-              </label>;
-              <input
-                value={builder && builder.fundingStage}
-                onChange={e =>;
-                  setBuilder({ ...builder, fundingStage: e && e.target.value });
-                }
-                className='w-full border rounded px-2 py-1 bg-transparent';
-              />;
-              <label className='block text-sm mt-3 mb-1'>Vision/goals</label>;
-              <textarea
-                value={builder && builder.vision}
-                onChange={e =>;
-                  setBuilder({ ...builder, vision: e && e.target.value });
-                }
-                className='w-full border rounded px-2 py-1 bg-transparent';
-                rows={3}
-              />;
-              <label className='block text-sm mt-3 mb-1'>Round type</label>;
-              <select
-                value={builder && builder.roundType}
-                onChange={e =>;
-                  setBuilder({ ...builder, roundType: e && e.target.value as any });
-                }
-                className='w-full border rounded px-2 py-1 bg-transparent';
-              >;
-                <option value=''>Select</option>                <option>Seed</option>;
-                <option>Series A</option>;
-                <option>Token Sale</option>;
-              </select>;
-              <label className='block text-sm mt-3 mb-1'>;
-                Target raise amount;
-              </label>;
-              <input
-                value={builder && builder.targetRaise}
-                onChange={e =>;
-                  setBuilder({ ...builder, targetRaise: e && e.target.value });
-                }
-                className='w-full border rounded px-2 py-1 bg-transparent'
-              />
-              <div
-                onDrop={onAssetDrop}
-                onDragOver={prevent}
-                onDragEnter={prevent}
-                className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
-              >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -690,22 +229,16 @@ function PitchGenerator() {
   }
 }
   }, [slides, versionTag]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
 
 
     return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
         <div className="flex gap-2 items-end h-24 mt-2">
@@ -731,11 +264,6 @@ function PitchGenerator() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -743,19 +271,6 @@ function PitchGenerator() {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
-<<<<<<< HEAD
-              ))}
-            </div>
-          )}
-<<<<<<< HEAD
-        </div>
-      </div>
-    )
-  };
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -767,17 +282,11 @@ function PitchGenerator() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
@@ -797,31 +306,18 @@ function PitchGenerator() {
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Drag & drop logos, photos here
                 <div className='text-xs mt-1'>
                   {builder.assets.length} file(s) added
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>Auto Data</div>
-              <button
-                onClick={autoFetchMetrics}
-=======
 
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -829,22 +325,7 @@ function PitchGenerator() {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>History</div>
-              <div className='text-xs text-gray-500 dark:text-gray-400'>
-                Version: {versionTag |''}
-=======
-<<<<<<< HEAD
-            <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
-              <div className='font-medium mb-2'>History</div>
-              <div className='text-xs text-gray-500 dark:text-gray-400'>
-<<<<<<< HEAD
-                Version: {versionTag |'—'}
-=======
                 Version: {versionTag || '—'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -1002,25 +483,15 @@ function PitchGenerator() {
                   </button>;
                 </div>              </div>;
             )}
-<<<<<<< HEAD
-            )}
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
 </main>
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -1080,8 +551,6 @@ function PitchGenerator() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </div>;
       </main>;
@@ -1156,19 +625,8 @@ function PitchGenerator() {
 </main>;
     </>);
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

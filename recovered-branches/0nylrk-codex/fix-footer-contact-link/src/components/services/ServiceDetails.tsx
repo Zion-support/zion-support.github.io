@@ -1,27 +1,11 @@
 
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Server, Clock, MapPin } from "lucide-react";
-=======
 
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Server, Clock, MapPin } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ServiceDetailsProps {
   country: string
 }
@@ -30,9 +14,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ServiceDetailsProps {
   country: string;
 }
@@ -145,24 +126,7 @@ function ServiceDetails() {
             src={getRegionalImage(country)}
             alt={`Datacenter in ${country}`}
             className="w-full object-cover h-48 transform transition-transform duration-500 hover:scale-110"
-<<<<<<< HEAD
-          />
-        </div>
-        <div className="space-y-4">
-          <div>
-            <h4 className="text-lg font-medium text-white mb-2 flex items-center">
-              <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
-              Service Locations
-            </h4>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-              {datacenters.map((dc, idx) => (
-                <div
-                  key={idx}
-                  className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
-                >
-=======
 
-=======
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Server, Clock, MapPin } from "lucide-react",;
@@ -255,12 +219,6 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {;
                   key={idx} ;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light";
                 >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {dc}
                 </div>;
               ))}

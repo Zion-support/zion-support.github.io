@@ -1,55 +1,4 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Header } from '@/components/Header';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { TestimonialCarousel } from '@/components/TestimonialCarousel';
-import { FloatingCTA } from '@/components/FloatingCTA';
-import { HeroSection } from '@/components/HeroSection';
-import { CategoriesSection } from '@/components/CategoriesSection';
-import { BenefitsSection } from '@/components/BenefitsSection';
-import { HowItWorksSection } from '@/components/HowItWorksSection';
-import { WaitlistSection } from '@/components/WaitlistSection';
-import { BlogSection } from '@/components/BlogSection';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { FeaturedListingsSection } from '@/components/FeaturedListingsSection';
-import { FeaturesGuideSection } from '@/components/FeaturesGuideSection';
-import { SocialShareSection } from '@/components/SocialShareSection';
-import { useTranslation } from 'react-i18next';
-import { useLanguage } from '@/context/LanguageContext';
-import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Users
-  Zap
-  Settings
-  Search
-  MessageSquare
-  Sparkles
-  BarChart3
-  Smartphone
-<<<<<<< HEAD
-import {;
-  ArrowRight,;
-  Users,;
-  Zap,;
-  Settings,;
-  Search,;
-  MessageSquare,;
-  Sparkles,;
-=======
 } from 'lucide-react';
-=======
   ArrowRight,
   Users,
   Zap,
@@ -57,24 +6,15 @@ import {;
   Search,
   MessageSquare,
   Sparkles,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BarChart3,;
   Smartphone,;
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function LandingPage() {;
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
-=======
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
-=======
 import { Header } from "@/components/Header",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { TestimonialCarousel } from "@/components/TestimonialCarousel",
@@ -99,12 +39,6 @@ export default function LandingPage() {
   const { t } = useTranslation(),
   const { isRTL } = useLanguage(),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Tools and features showcase
 
   const toolsFeatures = [
@@ -240,23 +174,7 @@ function LandingPage() {
                   <span>{t("general && general.explore")}</span>;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
               </Link>;
-<<<<<<< HEAD
-            ))}
-            ))}
-          </div>
-        </div>
-      </section>
-      <CategoriesSection />
-      <BenefitsSection />
-      <CategoriesSection />
-      <BenefitsSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />
-=======
 
-=======
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
@@ -288,7 +206,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
     {
       title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,
-=======
 
       title: t("home.tool_ai_matcher"),
       description: t("home.tool_ai_matcher_desc"),
@@ -326,19 +243,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div className='min-h-screen bg-zion-blue text-white'>
-      <SEO
-        title={t('home.seo_title')}
-        description={t('home.seo_description')}
-        keywords={t('home.seo_keywords')}
-        canonical='https://app.ziontechgroup.com/'      />
-      <Header />
-      <HeroSection />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
         title={t("home.seo_title")} 
@@ -349,11 +253,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <Header />
       <HeroSection />
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -377,11 +276,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -392,7 +286,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
       
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <CategoriesSection />
       <BenefitsSection />
       {/* Add the comprehensive features guide section */}
@@ -408,20 +301,10 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <SocialShareSection />
       <FloatingCTA />
     </div>
-<<<<<<< HEAD
-          </div>;
-        </div>;
-      </section>;
-
-=======
   );
 }
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     <div className='min - h-screen bg - zion - blue text - white'>;
       <SEO;
         title={t ('home.seo_title')}
@@ -473,35 +356,18 @@ export default function LandingPage() { const { t  } = useTranslation(),
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <CategoriesSection />;
       <BenefitsSection />;
       <CategoriesSection />;
       <BenefitsSection />;
-<<<<<<< HEAD
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-
-=======
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
       <CategoriesSection />;
       <BenefitsSection />;
-<<<<<<< HEAD
-
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />;
-
-=======
-      {/* Add the comprehensive features guide section */}
-      <FeaturesGuideSection />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <TestimonialCarousel />;
@@ -533,14 +399,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <FloatingCTA />;
     </div>);
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

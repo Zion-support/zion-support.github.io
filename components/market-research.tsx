@@ -26,30 +26,6 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  TrendingUp
-  BarChart3
-  DollarSign
-  Users
-  Globe
-  Target
-  Clock
-  Award
-  ArrowRight
-  ExternalLink
-  PieChart
-  LineChart
-  Activity
-  Zap;
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
-<<<<<<< HEAD
-=======
-=======
   TrendingUp,
   BarChart3,
   DollarSign,
@@ -64,21 +40,8 @@ import { Zap } from 'lucide-react';
   LineChart,
   Activity,;
   Zap,;
-<<<<<<< HEAD
 } from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-} from 'lucide-react';import { TrendingUp, BarChart3, DollarSign, Users, Globe, Target, Clock, Award, ArrowRight, ExternalLink, PieChart, LineChart, Activity, Zap } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Zap } from 'lucide-react';
-=======
-} from 'lucide-react';
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -232,9 +195,6 @@ export default function MarketResearchPage() {
       color: 'from-teal-500 to-cyan-600'
       icon: <Users className="w-8 h-8 text-white" />
     }
-<<<<<<< HEAD
-=======
-=======
 
         'AI content generation tools',
         'Predictive analytics platforms',
@@ -243,17 +203,12 @@ export default function MarketResearchPage() {
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
-<<<<<<< HEAD
-    },    {
-
-=======
     },    {      opportunities: [
         'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
       ];
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className="w-8 h-8 text-white" />
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
 
       name: 'Database & Analytics',
@@ -369,8 +324,6 @@ export default function MarketResearchPage() {
       icon: <Users className='w-8 h-8 text-white' />,
     },  ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const competitiveAnalysis = [
     {
@@ -1173,30 +1126,9 @@ export default function MarketResearchPage() {;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Market Segments */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Segments */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1338,23 +1270,12 @@ export default function MarketResearchPage() {;
                                 {trend}
                               </li>;
                             ))}
-<<<<<<< HEAD
-                          </ul>
-                        </div>
-=======
 
                           </ul>;
                         </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         {/* Top Players */}
                         <div>;
                           <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
@@ -1375,25 +1296,13 @@ export default function MarketResearchPage() {;
                                 {player}
                               </li>;
                             ))}
-<<<<<<< HEAD
-                          </ul>
-                        </div>
-                      </div>
-=======
 
                           </ul>;
                         </div>;
                       </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>;
                         <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
@@ -1424,53 +1333,21 @@ export default function MarketResearchPage() {;
                     </div>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Competitive Analysis */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-=======
                         </div>
-=======
 
 
                         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                   </div>
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Competitive Analysis */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1631,27 +1508,7 @@ export default function MarketResearchPage() {;
                   </div>;
 
                   {/* Strengths */}
-<<<<<<< HEAD
-                  <div className='mb-4'>;
-                    <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                      Strengths:;
-                    </h4>;
-                    <ul className='space-y-1 text-xs text-gray-300'>;
-                      {analysis && analysis.strengths.map((strength, strengthIndex) => (;
-                        <li key={strengthIndex} className='flex items-start'>;
-                          <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {strength}                  <div className="mb-4">;
-                    <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>;
-                    <ul className="space-y-1 text-xs text-gray-300">;
-                      {analysis && analysis.strengths.map((strength, strengthIndex) => (;
-                        <li key={strengthIndex} className="flex items-start">;
-                          <span className="w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
-                        </li>;
-                      ))}
-                    </ul>
-                  </div>
-=======
 
-=======
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-green-400 mb-2">Strengths:</h4>
                     <ul className="space-y-1 text-xs text-gray-300">
@@ -1659,33 +1516,18 @@ export default function MarketResearchPage() {;
                         <li key={strengthIndex} className="flex items-start">
                           <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
                           {strength}
-=======
 
 
                           {strength}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       ))}
 
                     </ul>;
                   </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Weaknesses */}
                   <div>;
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>;
@@ -1706,30 +1548,9 @@ export default function MarketResearchPage() {;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Market Trends */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Market Trends */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1805,40 +1626,8 @@ export default function MarketResearchPage() {;
                         trend && trend.impact === 'High' ? 'bg-red-500/20 text-red-400' :
                         trend && trend.impact === 'Medium' ? 'bg-yellow-500/20 text-yellow-400' :
                         'bg-green-500/20 text-green-400'
-<<<<<<< HEAD
-                      }`}>
-                        {trend.impact} Impact
-                      </span>
-                      <span className="px-2 py-1 rounded text-xs font-medium bg-blue-500/20 text-blue-400">
-                        {trend.timeline}
-                      </span>
-                    </div>
-                  </div>
-                  <p className='text-gray-300 mb-4'>{trend.description}</p>
-                  <div className='mb-4'>
-                    <h4 className='text-sm font-semibold text-gray-400 mb-2'>
-                      Examples:
-                    </h4>
-                    <ul className='space-y-1 text-xs text-gray-300'>
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className='flex items-start'>
-                          <span className='w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {example}
-                  <p className="text-gray-300 mb-4">{trend.description}</p>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Examples:</h4>
-                    <ul className="space-y-1 text-xs text-gray-300">
-                      {trend.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-start">
-                          <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         </li>
                       ))}
                     </ul>
@@ -1858,27 +1647,9 @@ export default function MarketResearchPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Pricing Strategies */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Strategies */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1989,21 +1760,8 @@ export default function MarketResearchPage() {;
                     </ul>
                   </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Cons */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -2111,37 +1869,14 @@ export default function MarketResearchPage() {;
         </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-dots opacity-10' />;
-        <div className='container-cursor text-center relative z-10'>;
-          <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>;
-            Ready to Apply This Market Intelligence?;
-          </h2>;
-          <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
-            Use our market research and competitive analysis to inform your;
-            business strategy, pricing decisions, and market positioning.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Apply This Market Intelligence?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2149,8 +1884,6 @@ export default function MarketResearchPage() {;
             business strategy, pricing decisions, and market positioning.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               size='lg'
@@ -2200,15 +1933,5 @@ export default function MarketResearchPage() {;
 }
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -44,11 +44,7 @@ export function TemplateSaveForm({
     }
   })
   const onSubmit = async (values: FormValues) => {    if (!currentValues && !editTemplate) {
-<<<<<<< HEAD
-      return
-=======
       return;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     setSaving(true)
     try {
@@ -69,19 +65,8 @@ export function TemplateSaveForm({
       onComplete()
     } finally {
       setSaving(false)
-<<<<<<< HEAD
-import { useState } from 'react';
-import { useForm, type ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-=======
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 import { useState } from "react",
 import { useForm, type ControllerRenderProps } from "react-hook-form",
@@ -110,7 +95,6 @@ import { useState } from "react",;
 import { useForm, type ControllerRenderProps } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { z } from "zod",;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Loader2 } from 'lucide-react';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
 import { ContractTemplate } from '@/types/contracts';
@@ -266,19 +250,10 @@ if ( {) {
           render={({
             field
           }: {
-<<<<<<< HEAD
-            field: ControllerRenderProps<FormValues, 'title'>
-          }) => (            <FormItem>
-=======
 
     }
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -288,12 +263,6 @@ if ( {) {
           name="title"
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <FormLabel>Template Name</FormLabel>
               <FormControl>
                 <Input {...field} placeholder='Enter template name' />
@@ -337,19 +306,9 @@ if ( {) {
             </FormItem>;
           )}
         />
-<<<<<<< HEAD
-        <div className='flex gap-2 justify-end'>
-          <Button type='button' variant='outline' onClick={onCancel}>
-=======
         
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Cancel
           </Button>
           <Button type='submit' disabled={saving}>
@@ -357,52 +316,21 @@ if ( {) {
               <>;
                 <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
                 Saving...;
-<<<<<<< HEAD
-              </>) : (
-              `${edit_template ? 'Update' : 'Save'} Template`)}
-=======
               </>;
             ) : (;
               `${editTemplate ? 'Update' : 'Save'} Template`;
-=======
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Saving...
               </>
             ) : (
-<<<<<<< HEAD
-              `${editTemplate ? 'Update' : 'Save'} Template`
-            )}
-          </Button>
-        </div>
-      </form>
-    </Form>
-  )
-setSaving (true)
-try {
-  if (editTemplate) {
-  await updateTemplate.mutateAsync ({
-  <FormItem> <FormLabel>Template Name</FormLabel> <FormControl> <Input {
-  ...field "
-}placeholder="Enter template name" />
-}/> <FormField >Set as default template</FormLabel> <FormControl> <Switch /> </FormControl> <FormMessage /> </FormItem>) "
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (`$ {"
-<<<<<<< HEAD
-  editTemplate ? "Update" : "Save"
-}Template`)
-}</Button> </div> </form> </Form>)
-}"}
-=======
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               `${editTemplate ? "Update" : "Save"} Template`
 
             )}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </Button>;
         </div>;
       </form>;
@@ -435,16 +363,5 @@ if ( {) {
 }Template`);
 }</Button> </div> </form> </Form>);
 }"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

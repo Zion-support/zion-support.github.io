@@ -1,51 +1,11 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {BrowseFilters} from "../components/browse/BrowseFilters";
-import {BrowseCards} from "../components/browse/BrowseCards";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
 import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-// Mock data for demonstration
-
-const jobsData = [
-  {
-    id: "1"
-    title: "Senior React Developer"
-    subtitle: "TechCorp Inc."
-    description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required."
-    location: "Remote"
-    badges: ["React", "TypeScript", "GraphQL"];
-    price: "$70-90/hr"
-    timePosted: "2 days ago"
-=======
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
-=======
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for demonstration
 
     id: "1",
@@ -56,7 +16,6 @@ import { useAuth } from "@/hooks/useAuth",
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70-90/hr",
     timePosted: "2 days ago",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     match: 92
   }
   {
@@ -161,16 +120,7 @@ export function MobileBrowse() {
       <BrowseFilters type={browseType} />;
 
       <div className="py-4 px-4">;
-<<<<<<< HEAD
-        <BrowseCards
-=======
         <BrowseCards;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}

@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Switch} from "@/components/ui/switch";
-import {Badge} from "@/components/ui/badge";
-import {Separator} from "@/components/ui/separator";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -32,22 +7,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-<<<<<<< HEAD
-=======
-=======
 import { Badge } from "@/components/ui/badge",
 import { Separator } from "@/components/ui/separator",
 import {
@@ -57,49 +16,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-// Define form schema
-
-const serviceProfileSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters long");
-  title: z.string().min(5, "Business name/title is required");
-  bio: z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
-  location: z.string().min(2, "Location is required");
-  services: z.string().min(2, "Enter at least one service");
-  hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number"})
-  availability: z.enum(["available", "limited", "unavailable"]);
-  enhancedProfile: z.boolean().default(true)
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()})
-type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
-export function ServiceProviderRegistrationForm() {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [serviceTags, setServiceTags] = useState<string[]>([]);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null)
-  const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
-=======
-<<<<<<< HEAD
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { useAuth } from "@/hooks/useAuth";
-=======
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -118,8 +41,6 @@ const serviceProfileSchema = z.object({
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Initialize form with default values
   const form = useForm<ServiceFormValues>({
     resolver: zodResolver(serviceProfileSchema)
@@ -150,31 +71,7 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  }
-  // Handle avatar upload
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader()
-      reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string)
-      }
-      reader.readAsDataURL(file)
-    }
-<<<<<<< HEAD
-  }
-  // Generate enhanced profile with AI
-  const generateEnhancedProfile = async () => {
-    const formData = form.getValues();
-    if (!formData.bio |formData.bio.length < 20) {
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -239,10 +136,8 @@ export function ServiceProviderRegistrationForm() {;
   const handleAddService = () => {;
     const serviceInput = form && form.getValues("services");
     if (serviceInput && !serviceTags && serviceTags.includes(serviceInput)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setServiceTags([...serviceTags, serviceInput]);
       form && form.setValue("services", "");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   // Handle avatar upload
@@ -255,9 +150,6 @@ export function ServiceProviderRegistrationForm() {;
       }
       reader.readAsDataURL(file)
     }
-<<<<<<< HEAD
-  }
-=======
   },;
   // Handle avatar upload;
   const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -270,16 +162,10 @@ export function ServiceProviderRegistrationForm() {;
       reader.readAsDataURL(file);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
     const formData = form.getValues();
@@ -288,32 +174,6 @@ export function ServiceProviderRegistrationForm() {;
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    try {
-      setIsGenerating(true);
-      // Call the Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('service-profile-enhancer', {
-        body: {
-          providerData: {
-            name: formData.name
-            title: formData.title
-            bio: formData.bio
-            services: serviceTags
-            location: formData.location
-          }
-        }
-      });
-      if (error) {
-        throw new Error(error.message)
-<<<<<<< HEAD
-      }
-      setGeneratedContent(data as { summary: string, services: string[] })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -323,7 +183,6 @@ export function ServiceProviderRegistrationForm() {;
         title: "More information needed",;
         description: "Please provide at least a detailed bio before generating enhanced content."}),;
       return;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     try {
       setIsGenerating(true);
@@ -338,19 +197,9 @@ export function ServiceProviderRegistrationForm() {;
             location: formData.location
           }
         }
-<<<<<<< HEAD
-      });
-      if (error) {
-        throw new Error(error.message)
-=======
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       setGeneratedContent(data as { summary: string, services: string[] })
       toast({
@@ -414,61 +263,24 @@ if ( {) {
               }
             }
           });
-<<<<<<< HEAD
-          if (aiData) {
-            finalSummary = (aiData as any).summary |values.bio;
-            // Merge AI suggested services with user-provided services
-            const aiServices = (aiData as any).services |[];
-            finalServices = [...new Set([...serviceTags, ...aiServices])]
-          }
-=======
 
           if (aiData) {;
             finalSummary = (aiData as any).summary || values && values.bio;
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
-<<<<<<< HEAD
-        }
-      } else if (generatedContent) {
-        finalSummary = generatedContent.summary;
-        finalServices = [...new Set([...serviceTags, ...generatedContent.services])]
-<<<<<<< HEAD
-      }
-      // Get user email for notification
-      const { data: userData } = await supabase.auth.getUser()
-      const userEmail = userData.user?.email;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
         }
       } else if (generatedContent) {;
-<<<<<<< HEAD
-        finalSummary = generatedContent && generatedContent.summary;
-        finalServices = [...new Set([...serviceTags, ...generatedContent && generatedContent.services])];
-=======
 
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
@@ -762,24 +574,10 @@ if ( {) {
                               />;
                             </div>;
                           </FormControl>;
-<<<<<<< HEAD
-                          <FormMessage className="text-red-400" />;
-                        </FormItem>;
-                      )}
-                    />
-                  </div>
-                </div>
-=======
 
                     />;
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1089,19 +887,9 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
-<<<<<<< HEAD
-                  </div>
-                </div>
-=======
 
                   </div>;
                 </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -49,9 +41,6 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -187,10 +176,7 @@ export default function PricingEnhanced2026Page() {
   ]
   ];
 
-<<<<<<< HEAD
-=======
 
-=======
     ...innovative2026MicroSaasServicesV2,;
     ...emergingTech2026ServicesV2,;
     ...enterpriseIT2026ServicesV2,;
@@ -258,14 +244,7 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -379,9 +358,6 @@ export default function PricingEnhanced2026Page() {
           <meta name="description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services. Achieve remarkable ROI with our cutting-edge solutions." />
           <meta name="keywords" content="2026 pricing, AI services pricing, quantum computing pricing, enterprise IT pricing, micro SaaS pricing, ROI guarantee" />
           <link rel="icon" href="/favicon.svg" />
-<<<<<<< HEAD
-          {/* Open Graph */}
-=======
 
 
           {/* Open Graph */  } catch (error) {
@@ -389,12 +365,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
@@ -556,30 +526,11 @@ export default function PricingEnhanced2026Page() {
           <meta property="og:url" content="https://ziontechgroup.com / pricing - enhanced - 2026" />;
           <meta property="og:image" content="https://ziontechgroup.com / og - image.svg" />;
           {/* Twitter */}
-<<<<<<< HEAD
-          <meta name="twitter:card" content="summary_large_image" />;
-          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
-          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
-          <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
-        </Head>;
-        {/* Enhanced Header Section */}
-        <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-=======
-=======
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
@@ -608,60 +559,20 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              Achieve remarkable ROI with transparent, competitive pricing.
-            </p>
-            className="max - w-7xl mx - auto text - center";
-          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6">;
-              Enhanced 2026 Pricing;
-            </h1>;
-            <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
-              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.;
-              Achieve remarkable ROI with transparent, competitive pricing.;
-            </p>;
-            {/* Billing Cycle Toggle */}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
-<<<<<<< HEAD
-            {/* Billing Cycle Toggle */}
-=======
             {/* Billing Cycle Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -674,16 +585,6 @@ export default function PricingEnhanced2026Page() {
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly' ? 'translate-x-8' : 'translate-x-1'
                   }`}
-<<<<<<< HEAD
-                />
-              </button>
-              <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
-                Yearly <span className="text-cyan-400 text-sm">(Save 20%)</span>
-              </span>
-            </div>
-            {/* Contact Information */}
-=======
-=======
             <div className="flex items - center justify - center space - x-4 mb - 8">;
               <span className={`text - lg ${billing_cycle === 'monthly' ? 'text - white' : 'text - gray - 400'}`}>Monthly</span>;
               <button;
@@ -703,12 +604,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -755,8 +650,6 @@ export default function PricingEnhanced2026Page() {
           </motion.div>;
         </div>;
         {/* Enhanced Pricing Tiers */}
-<<<<<<< HEAD
-=======
 
 
         {/* Enhanced Pricing Tiers */  } catch (error) {
@@ -764,12 +657,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -779,11 +666,6 @@ export default function PricingEnhanced2026Page() {
                   initial={{ opacity: 0, coordinate_y: 20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                  className="relative"
-                >
-                  <UltraFuturisticCard
-=======
 
 
                   key={tier.name  } catch (error) {
@@ -806,11 +688,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -831,15 +708,9 @@ export default function PricingEnhanced2026Page() {
                           Most Popular
                         </div>
                       </div>
-<<<<<<< HEAD
-                    )}
-<<<<<<< HEAD
-=======
                   className="relative";
                 >;
                   <UltraFuturisticCard;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     variant={tier.variant}
                     className={`h - full ${tier.popular ? 'ring - 2 ring - cyan - 500 ring - opacity - 50' : ''}`}
                   >;
@@ -851,21 +722,11 @@ export default function PricingEnhanced2026Page() {
                       </div>
                     )}
                     
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -879,9 +740,6 @@ export default function PricingEnhanced2026Page() {
                         <span className="text-gray-400">{tier.period}</span>
                         {tier.savings && (
                           <div className="text-sm text-green-400 mt-1">{tier.savings}</div>
-<<<<<<< HEAD
-                        )}
-=======
 
 
                         )  } catch (error) {
@@ -889,12 +747,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -930,20 +782,6 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* Enhanced Service Categories */}
-        <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 mb - 20">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -964,12 +802,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -982,47 +814,6 @@ export default function PricingEnhanced2026Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
-<<<<<<< HEAD
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Service Categories & Pricing;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Explore our comprehensive service categories with transparent pricing and competitive advantages;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-              {service_categories.map ((category, index) => (
-                <motion.div;
-                  key={category.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant="quantum-advanced" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-center mb-4">
-                        <div className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}>
-                          <category.icon className="w-6 h-6 text-white" />
-                        </div>
-                        <h3 className="text-xl font-bold text-white">{category.name}</h3>
-                      </div>
-                      <p className="text-gray-400 mb-4">{category.description}</p>
-                      <div className="mb-4">
-                        <span className="text-2xl font-bold text-cyan-400">{category.avgPrice}</span>
-                        <div className="text-sm text-green-400">{category.savings}</div>
-                      </div>
-                      <ul className="space-y-2 mb-4">
-                        {category.services.map((service, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {service}
-                          </li>
-                        ))}
-=======
-=======
                             {service  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1034,21 +825,12 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </ul>
                       
                       <Button
                         variant="primary"
                         size="sm"
                         className="w-full"
-<<<<<<< HEAD
-                        onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')}
-=======
 
 
                         onClick={() => window.open(`/2026-services-showcase-enhanced`, '_blank')  } catch (error) {
@@ -1056,12 +838,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -1090,8 +866,6 @@ export default function PricingEnhanced2026Page() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -1130,12 +904,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -1148,45 +916,6 @@ export default function PricingEnhanced2026Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
-<<<<<<< HEAD
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
-                Featured Services;
-              </h2>;
-              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-                Discover our most popular and innovative services that are transforming businesses worldwide;
-              </p>;
-            </motion.div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
-              {featured_services.map ((service, index) => (
-                <motion.div;
-                  key={service.name}
-                  initial={{ opacity: 0, coordinate_y: 20 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant="holographic" className="h-full">
-                    <div className="p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="text-4xl">{service.icon}</div>
-                        <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
-                          <div className="text-sm text-gray-400">Starting price</div>
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                      <p className="text-gray-400 mb-4">{service.description}</p>
-                      <ul className="space-y-2 mb-4">
-                        {service.features.map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
-                            <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-=======
-=======
                             {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1198,12 +927,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </ul>
                       
                       <div className="flex space-x-2">
@@ -1211,9 +934,6 @@ export default function PricingEnhanced2026Page() {
                           variant="primary"
                           size="sm"
                           className="flex-1"
-<<<<<<< HEAD
-                          onClick={() => window.open(service.link, '_blank')}
-=======
 
 
                           onClick={() => window.open(service.link, '_blank')  } catch (error) {
@@ -1221,12 +941,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -1251,20 +965,6 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* Enhanced Footer CTA */}
-        <div className="relative z - 10 px - 4 sm:px - 6 lg:px - 8 pb - 20">;
-          <div className="max - w-4xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1285,12 +985,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1303,9 +997,6 @@ export default function PricingEnhanced2026Page() {
                 <Button
                   variant="primary"
                   size="lg"
-<<<<<<< HEAD
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-=======
 
 
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
@@ -1313,12 +1004,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1326,9 +1011,6 @@ export default function PricingEnhanced2026Page() {
                 <Button
                   variant="secondary"
                   size="lg"
-<<<<<<< HEAD
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-=======
 
 
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
@@ -1336,12 +1018,6 @@ export default function PricingEnhanced2026Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1356,62 +1032,9 @@ export default function PricingEnhanced2026Page() {
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-  )
-}
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

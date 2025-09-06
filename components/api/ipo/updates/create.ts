@@ -52,44 +52,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
-<<<<<<< HEAD
-  }
-  updates.unshift (update);
-  writeJsonFile ('updates.json', updates);
-  res.status (200).json (update);export default /**
- * handler - Function description
- */
-function handler() {
-  if () return) {
-  $2
-}
-  if (return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
-  const { title, date, summary, kpis } = req.body || {}
-  if (return res.status (400).json ({ error: 'Missing title' })) {
-  $2
-}
-  const updates = readJsonFile ('updates.json', [] as any[]);
-  const update = { id: uuidv4 (), title, date: date || new Date ().toISOString ().slice (0, 10), summary: summary || '', kpis: kpis || '', opens: 0 }
-  updates.unshift (update);
-  writeJsonFile ('updates.json', updates);
-  res.status (200).json (update);
-}
-=======
 
   res.status(200).json(update)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

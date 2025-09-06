@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-//FCP recommendations if (metrics.fcp > 2000) {
-<<<<<<< HEAD
-=======
-=======
  //FCP recommendations if (metrics.fcp > 2000) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 //FCP recommendations if (metrics.fcp > 2000) {
-=======
  //FCP recommendations if (metrics.fcp > 2000) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   recs.push ({
 }return recs;
 }, []);

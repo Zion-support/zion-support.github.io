@@ -1,34 +1,9 @@
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useNavigate} from "react-router-dom";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {ProductListing} from "@/types/listings";
-import {Star, DollarSign} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useNavigate } from "react-router-dom",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { ProductListing } from "@/types/listings";
-import { Star, DollarSign } from "lucide-react";
-interface ProductListingCardProps {
-
-<<<<<<< HEAD
-  listing: ProductListing
-=======
 interface ProductListingCardProps {;
   listing: ProductListing,;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
@@ -39,13 +14,7 @@ export function ProductListingCard({
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list',
@@ -62,7 +31,6 @@ export function ProductListingCard({
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Get the first image or use a placeholder
   const imageUrl = listing.images && listing.images.length > 0
     ? listing.images[0]
@@ -93,14 +61,6 @@ export function ProductListingCard({
   }
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
@@ -134,9 +94,6 @@ export function ProductListingCard({
                 )}
               </div>;
             )}
-<<<<<<< HEAD
-          </div>
-=======
 
 ;
   return (
@@ -172,11 +129,6 @@ export function ProductListingCard({
                   <span className="text - xs ml - 1">({listing.review_count})</span>)}
               </div>)}
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -211,31 +163,16 @@ export function ProductListingCard({
             ) : (
               <span className="text-zion-slate-light">
                 {formatPrice()}
-<<<<<<< HEAD
-              </span>
-=======
               </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </div>
           <div className="flex gap-2">
             <Button
               size="sm"
               onClick={(e) => {
-<<<<<<< HEAD
-                e.stopPropagation();
-
-=======
 
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;

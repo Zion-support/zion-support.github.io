@@ -1,45 +1,14 @@
 
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-  authenticateRequest
-  calculateUsageSummary;
-} from '../../../utils/api/partnerAuth';
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import type { NextApiRequest, NextApiResponse } from 'next';
-import {
-<<<<<<< HEAD
-  authenticateRequest
-  calculateUsageSummary;
-=======
   authenticateRequest,;
   calculateUsageSummary,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/api/partnerAuth';
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-  try {
-  if (req && req.method !== 'GET') {
-    res && res.setHeader('Allow', 'GET');
-    return res && res.status(405).json({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticateRequest(req);
-  if (!auth) {
-    return res && res.status(401).json({ error: 'Unauthorized' });
-  }
-  const summary = await calculateUsageSummary(auth && auth.partner.id);
-  return res && res.status(200).json({ summary });
-=======
   if (req.method !== 'GET') {;
     res.setHeader('Allow', 'GET');
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -48,7 +17,6 @@ export default async function handler(
   if (!auth) {
     return res.status(401).json({ error: 'Unauthorized' });
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
 
@@ -63,60 +31,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const auth = null;
   return res.status(200).json({ summary })
 }
-<<<<<<< HEAD
-  authenticate_request,
-  calculateUsageSummary,
-} from '../../../utils / api / partner_auth';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'GET');
-    return res.status (405).json ({ error: 'Method Not Allowed' });
-  }
-  const auth = await authenticate_request (req);
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: 'Unauthorized' });
-  }
-  const summary = await calculateUsageSummary (auth.partner.id);
-  return res.status (200).json ({ summary });
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ("Allow", "GET");
-    return res.status (405).json ({ error: "Method Not Allowed" });
-  }
-  const auth = await authenticate_request (req);
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (401).json ({ error: "Unauthorized" });
-  }
-  const summary = await calculateUsageSummary (auth.partner.id);
-  return res.status (200).json ({ summary });
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

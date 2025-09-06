@@ -68,9 +68,6 @@ const mockSentry = {
   // Integrations
   Integrations: {
     BrowserTracing: class BrowserTracing {
-<<<<<<< HEAD
-=======
-=======
 
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
@@ -124,12 +121,6 @@ const mockSentry = {;
   // Integrations;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       constructor() {}
     }
     Http: class Http {
@@ -140,20 +131,9 @@ const mockSentry = {;
     }
     OnUnhandledRejection: class OnUnhandledRejection {
       constructor() {}
-<<<<<<< HEAD
-    }
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-  }
-=======
     },
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Transport
   makeBrowserOfflineTransport: noopReturn
   makeFetchTransport: noopReturn
@@ -324,41 +304,22 @@ export const withSentryConfig = mockSentry.withSentryConfig
 export const SentryWebpackPlugin = mockSentry.SentryWebpackPlugin
 export const Tracing = mockSentry.Tracing
 export const Integrations = mockSentry.Integrations
-<<<<<<< HEAD
-export const makeBrowserOfflineTransport =
-=======
 export const makeBrowserOfflineTransport = null;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   mockSentry.makeBrowserOfflineTransport
 export const makeFetchTransport = mockSentry.makeFetchTransport
 export const createTransport = mockSentry.createTransport
 export const SDK_VERSION = mockSentry.SDK_VERSION
 export const Severity = mockSentry.Severity
-<<<<<<< HEAD
-// Additional exports for compatibility
-export { mockSentry as Sentry }
-// All exports are already defined above
-=======
-<<<<<<< HEAD
-// Additional exports for compatibility
-export { mockSentry as Sentry }
-// All exports are already defined above
-
-=======
 
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
   
 
-=======
 
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Mock scope;
 const mock_scope = {
   set_user: noop,
@@ -440,11 +401,3 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 // All exports are already defined above;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

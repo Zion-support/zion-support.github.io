@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { UseFormReturn } from "react-hook-form";
-=======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -14,12 +7,8 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { UseFormReturn } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { 
   FormField;
   FormItem;
@@ -38,20 +27,10 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
-import { ContractFormValues } from "./ContractForm";
-=======
 
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -98,24 +77,6 @@ function PaymentTermsFields() {
           control={form.control}
           name="payment_terms";
           render={({ field }) => (
-<<<<<<< HEAD
-            <FormItem>;
-              <FormLabel > Payment Terms</FormLabel>;
-              <Select onValueChange={field.on_change} default_value={field.value}>;
-                <FormControl>;
-                  <SelectTrigger>;
-                    <SelectValue placeholder="Select payment terms" />;
-                  </SelectTrigger>;
-                </FormControl>;
-                <SelectContent>;
-                  <SelectItem value="hourly">Hourly Rate</SelectItem>;
-                  <SelectItem value="fixed">Fixed Price</SelectItem>;
-                  <SelectItem value="milestone">Milestone Payments</SelectItem>;
-                </SelectContent>;
-              </Select>;
-              <FormMessage />;
-            </FormItem>;
-=======
 
             <FormItem>
               <FormLabel>Payment Terms</FormLabel>
@@ -133,12 +94,6 @@ function PaymentTermsFields() {
               </Select>
               <FormMessage />
             </FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
         />
         <FormField

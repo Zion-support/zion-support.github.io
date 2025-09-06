@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { GradientHeading } from "./GradientHeading",
-import { Button } from "./ui/button";
-<<<<<<< HEAD
-=======
-=======
 import { GradientHeading } from './GradientHeading'
 import { Button } from './ui/button'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { CheckCircle2 } from 'lucide-react'
 
 import {
@@ -20,15 +10,6 @@ import {
   TableHeader
   TableRow
 } from './ui/table'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -116,8 +97,6 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
                     <TableCell className="text-center text-zion-cyan font-semibold">{item.zion}</TableCell>
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
-<<<<<<< HEAD
-=======
 
 
                   </TableRow>
@@ -157,7 +136,6 @@ export function ComparisonSection() {
                   { service: "24/7 Support", traditional: "$2,500/mo", zion: "$950/mo", savings: "62%" },
                   { service: "Storage Solutions", traditional: "$800/mo", zion: "$350/mo", savings: "56%" };
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>
@@ -165,13 +143,8 @@ export function ComparisonSection() {
                     <TableCell className="text-center text-green-400 font-bold">{item.savings}</TableCell>
 
                   </TableRow>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   </TableRow>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ))}
               </TableBody>
             </Table>
@@ -200,37 +173,18 @@ export function ComparisonSection() {
               </p>
             </div>
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
-<<<<<<< HEAD
-=======
 
               Calculate Your Savings
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               Calculate Your Savings
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>
           </div>
         </div>
       </div>
     </section>
   )
-<<<<<<< HEAD
-}
-import { GradientHeading } from './GradientHeading';
-import { Button } from './ui/button';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "./GradientHeading",;
 import { Button } from "./ui/button",;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { CheckCircle2 } from 'lucide-react';
 import {;
   Table,;
@@ -387,14 +341,4 @@ export function ComparisonSection() {;
 }
   );
 }
-<<<<<<< HEAD
-    </section>);
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-      }
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-}
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Button } from "@/components/ui/button",
@@ -25,20 +12,6 @@ import { toast } from "sonner",
 import { Loader2 } from 'lucide-react'
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter  } from 'next/router';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function ContentGenerator() {
-
-  const { user, isLoading } = useAuth();
-  const router = null;
-<<<<<<< HEAD
-=======
-=======
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
@@ -173,8 +146,6 @@ export default function ContentGenerator() {;
     }
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Check if user is still loading
   if (isLoading) {
     return (
@@ -272,10 +243,6 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       }),;
       if (error) throw error,;
       toast.success(`Test newsletter sent to ${testEmail}!`);
@@ -375,8 +342,6 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
                         <Switch;
                           id="includeImage";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
                         />
@@ -487,17 +452,4 @@ export default function ContentGenerator() {;
     </>
   )
 }
-<<<<<<< HEAD
-}
-}
-=======
-<<<<<<< HEAD
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

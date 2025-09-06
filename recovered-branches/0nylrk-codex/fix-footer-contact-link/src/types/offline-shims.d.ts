@@ -1,51 +1,13 @@
-<<<<<<< HEAD
-declare module 'react' {
-  const React: any;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-declare module 'react' {
-  const React: any;
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   export default React
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T }
   export function useRef<T>(initialValue: T | null): { current: T | null }
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined }
-<<<<<<< HEAD
-=======
-=======
   export default React,
   // Basic overloads for useRef to handle common cases;
   export function useRef<T>(initialValue: T): { current: T };
   export function useRef<T>(initialValue: T | null): { current: T | null };
   export function useRef<T = undefined>(initialValue?: T): { current: T | undefined };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   export const useEffect: any;
   export type Dispatch<A> = (value: A) => void;
   export type SetStateAction<S> = S | ((prevState: S) => S)
@@ -65,18 +27,8 @@ declare module 'react' {
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
-<<<<<<< HEAD
-  export type ReactElement = any
-  export type ComponentType<P = {}> = (props: P) => any
-=======
-<<<<<<< HEAD
-  export type ReactElement = any
-  export type ComponentType<P = {}> = (props: P) => any
-=======
   export type ReactElement = any,
   export type ComponentType<P = {}> = (props: P) => any,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -95,14 +47,6 @@ declare module 'react' {
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any
   export type CSSProperties = Record<string, string | number | undefined>
-<<<<<<< HEAD
-}
-declare module 'react-dom' {
-  export * from 'react-dom / index';
-}
-=======
-<<<<<<< HEAD
-=======
 }
 
 declare module 'react-dom' {
@@ -114,8 +58,6 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,
   export const Fragment: any;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -162,40 +104,14 @@ declare module 'react' {;
   export type LegacyRef<T = any> = any,;
   export type ElementRef<T = any> = any,;
   export type CSSProperties = Record<string string | number | undefined>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-declare module 'react-dom' {
-  export * from 'react-dom/index'
-}
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-declare module 'react/jsx-runtime' {
-  export const jsx: any;
-  export const jsxs: any
-
-  export const Fragment: any
-<<<<<<< HEAD
-}
-=======
-=======
-=======
 }
 ;
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;
   export const jsxs: any;
   export const Fragment: any;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

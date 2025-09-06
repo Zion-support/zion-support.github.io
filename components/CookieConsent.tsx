@@ -1,61 +1,7 @@
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
-export default function CookieConsent() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [preferences, setPreferences] = useState({
-    necessary: true
-    analytics: false
-    marketing: false
-    functional: false
-  });
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
-  const acceptAll = () => {
-    const allAccepted = {
-      necessary: true
-      analytics: true
-      marketing: true
-      functional: true
-    }
-=======
-import React, { useState, useEffect } from "react";
-import { X, Cookie, Settings } from "lucide-react";
-<<<<<<< HEAD
-export default function CookieConsent() {
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function CookieConsent() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({;

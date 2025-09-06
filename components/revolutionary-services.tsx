@@ -24,150 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
-<<<<<<< HEAD
-import {;
-  Check,;
-  Star,;
-  Zap,;
-  Shield,;
-  Users,;
-  Globe,;
-  ArrowRight,;
-  ExternalLink,;
-  TrendingUp,;
-  Clock,;
-  Target,;
-  Building,;
-  Rocket,;
-  Award,;
-  DollarSign,;
-  ChartBar,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Smartphone,;
-  Palette,;
-  Search,;
-  MessageSquare,;
-  FileText,;
-  Calendar,;
-  CreditCard,;
-  BarChart3,;
-  Settings,;
-  Zap as ZapIcon,;
-  Code,;
-  BookOpen,;
-  Activity,;
-  Database as DatabaseIcon,;
-  Play,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Filter,;
-  Grid,;
-  List,;
-  ChevronDown,;
-  ChevronUp,;
-  Sparkles,;
-  FlaskConical,;
-  Dna,;
-  Car,;
-  Leaf,;
-  Factory,;
-  Truck,;
-  Microscope,;
-  GraduationCap,;
-  ShieldCheck,;
-  Brain,;
-  Atom,;
-  Globe2,;
-  Bot,;
-  Eye,;
-  Trophy,;
-  FlaskConical as FlaskIcon,;
-  Dna as DnaIcon,;
-  Car as CarIcon,;
-  Leaf as LeafIcon,;
-  Factory as FactoryIcon,;
-  Truck as TruckIcon,;
-  Microscope as MicroscopeIcon,;
-  GraduationCap as GraduationCapIcon,;
-  ShieldCheck as ShieldCheckIcon,;
-=======
-=======
   Check,
   Star,
   Zap,
@@ -236,32 +92,16 @@ import {;
   Microscope as MicroscopeIcon,
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories
-  getRevolutionaryServicesByCategory
-  getPopularRevolutionaryServices
-  getRevolutionaryServicesByPriceRange;
-<<<<<<< HEAD
-=======
-=======
   revolutionaryMicroSaasServices,
   revolutionaryServiceCategories,
   getRevolutionaryServicesByCategory,
   getPopularRevolutionaryServices,;
   getRevolutionaryServicesByPriceRange,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -520,22 +360,13 @@ export default function RevolutionaryServicesPage() {;
       count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length
       color: 'from-yellow-500 to-orange-600'
     }
-<<<<<<< HEAD
-=======
   ];
-=======
 
 
   ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const containerVariants = {
     hidden: { opacity: 0 }
     website: 'https://ziontechgroup.com',  }    website: 'https://ziontechgroup.com';
@@ -653,29 +484,14 @@ export default function RevolutionaryServicesPage() {;
       y: 0
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        duration: 0.5
-      }
-    }
-=======
 
 
         duration: 0.5,
       },
     },
 
-<<<<<<< HEAD
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  };
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -769,20 +585,11 @@ export default function RevolutionaryServicesPage() {;
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-<<<<<<< HEAD
-=======
-=======
                 transition={{ duration: 0.8 }}
               >
 
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -795,20 +602,7 @@ export default function RevolutionaryServicesPage() {;
               <motion&& motion.div
                 className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >              </motion.p>
-              {/* Service Count Stats */}
-              <motion.div
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -1009,50 +803,7 @@ export default function RevolutionaryServicesPage() {;
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
-              whileInView="visible">;
-              {enhancedCategories && enhancedCategories.map((category, index) => (;
-                <motion&& motion.div
-                  key={category && category.name}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1 && 1.05 }}
-                  whileTap={{ scale: 0 && 0.95 }}>;
-                  <UltraFuturisticCard
-                    variant='quantum-advanced'
-                    size='small'
-                    className='text-center cursor-pointer h-full'
-                    onClick={() =>;
-                      setSelectedCategory(;
-                        category && category.name === selectedCategory;
-                          ? 'All';
-                          : category && category.name;
-                      );
-                    }
-                    <div
-                      className={`w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-br ${category && category.color} flex items-center justify-center text-white`}>;
-                      {category && category.icon}
-                    </div>;
-                    <h3 className='text-lg font-semibold text-white mb-2'>;
-                      {category && category.name}
-                    </h3>;
-                    <p className='text-sm text-gray-400 mb-3'>;
-                      {category && category.description}
-                    </p>;
-                    <div className='text-2xl font-bold text-cyan-400'>;
-                      {category && category.count}
-                    </div>;
-                    <div className='text-xs text-gray-500'>Services</div>                  </UltraFuturisticCard>                    <h3 className="text-lg font-semibold text-white mb-2">{category && category.name}</h3>;
-                    <p className="text-sm text-gray-400 mb-3">{category && category.description}</p>;
-                    <div className="text-2xl font-bold text-cyan-400">{category && category.count}</div>;
-                    <div className="text-xs text-gray-500">Services</div>;
-                </motion && motion.div>;
-              ))}
-            </motion.div>
-          </div>
-        </section>
-=======
 
-=======
               whileInView="visible"
               viewport={{ once: true }}
             >
@@ -1060,12 +811,6 @@ export default function RevolutionaryServicesPage() {;
                 <motion.div
                   key={category.name}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -1074,21 +819,14 @@ export default function RevolutionaryServicesPage() {;
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-12"
-<<<<<<< HEAD
-=======
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
               initial={{ opacity: 0, y: 20 }}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1118,57 +856,13 @@ export default function RevolutionaryServicesPage() {;
                 Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <motion.div
-                </span>;
-                <br />;
-                <span className="text-white">Revolutionary Services</span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Discover our most sought-after revolutionary micro SaaS services that are transforming industries worldwide.;
-              </p>;
-            </motion && motion.div>;
-
-            <motion&& motion.div 
-=======
-<<<<<<< HEAD
-            <motion.div
-=======
 
             <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
-<<<<<<< HEAD
-              viewport={{ once: true }}>;
-              {popularServices && popularServices.slice(0, 6).map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
-                  <UltraFuturisticCard
-              viewport={{ once: true }}
-            >;
-              {popular_services.slice (0, 6).map ((service, index) => (
-                <motion.div;
-                  key={service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -10 }}>;
-                  <UltraFuturisticCard
-                    variant={service && service.variant as any}
-                    size='large'
-                    className='h-full cursor-pointer'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     onClick={() => setSelectedService(service)}
                   >
                     <div className='text-center mb-6'>
@@ -1248,16 +942,8 @@ export default function RevolutionaryServicesPage() {;
             {/* Filters and Controls */}
             <motion.div
               className="mb-8"
-<<<<<<< HEAD
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1324,11 +1010,6 @@ export default function RevolutionaryServicesPage() {;
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
-                    >;
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
@@ -1336,147 +1017,8 @@ export default function RevolutionaryServicesPage() {;
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
-                    >;
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-                      </div>;
-                    </div>;
-                    <div className='space - y-3 mb - 6'>;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
-                        <div key={idx} className='flex items - center gap - 2'>;
-                          <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
-                          <span className='text - sm text - gray - 300'>;
-                            {feature}
-                          </span>                        </div>))}
-                    </div>;
-                    on_click={() => setSelectedService (service)}
-                  >;
-                    <div className="text - center mb - 6">;
-                      <div className="text - 4xl mb - 4">{service.icon}</div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 2">{service.name}</h3>;
-                      <p className="text - gray - 300 mb - 4">{service.tagline}</p>;
-                      <div className="text - 3xl font - bold text - cyan - 400 mb - 2">{service.price}</div>;
-                      <div className="text - sm text - gray - 400">{service.period}</div>;
-                    </div>;
-                    <div className="space - y-3 mb - 6">;
-                      {service.features.slice (0, 4).map ((feature, idx) => (
-                        <div key={idx} className="flex items - center gap - 2">;
-                          <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                          <span className="text - sm text - gray - 300">{feature}</span>;
-                        </div>))}
-                    </div>;
-                    <div className='text - center'>;
-                      <Button;
-                        variant='primary';
-                        size='md';
-                        on_click={() => window.open (service.link, '_blank')}
-                        className='w - full';
-                      >;
-                        Learn More;
-                        <ExternalLink className='ml - 2 w - 4 h - 4' />;
-                      </Button>                    </div>                    <div className="text - center">;
-                                                <Button;
-                            variant="primary";
-                            size="md";
-                            on_click={() => window.open (service.link, '_blank')}
-                              className="w - full";
-                          >;
-                            Learn More;
-                            <ExternalLink className="ml - 2 w - 4 h - 4" />;
-                          </Button>;
-                  </UltraFuturisticCard>;
-                </motion.div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Grid */}
-        <section id='services - grid' className='py - 16'>;
-          <div className='container mx - auto px - 4'>;
-            {/* Filters and Controls */}
-            <motion.div;
-              className='mb - 8'              initial={{ opacity: 0, coordinate_y: 20 }}        <section id="services - grid" className="py - 16">;
-          <div className="container mx - auto px - 4">;
-            {/* Filters and Controls */}
-            <motion.div;
-              className="mb - 8";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >;
-              <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
-                <div className='flex flex - wrap gap - 4'>;
-                  <select;
-                    value={selected_category}
-                    on_change={e => setSelectedCategory (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - cyan - 400 / 30 rounded - lg text - white focus:outline - none focus:border - cyan - 400';
-                  >;
-                    <option value='All'>All Categories</option>;
-                    {revolutionaryServiceCategories.map (category => (
-                      <option key={category} value={category}>;
-                        {category}
-                      </option>))}
-                  </select>;
-                  <select;
-                    value={price_range}
-                    on_change={e => setPriceRange (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - purple - 400 / 30 rounded - lg text - white focus:outline - none focus:border - purple - 400';
-                  >;
-                    {price_ranges.map (range => (
-                      <option key={range.value} value={range.value}>;
-                        {range.label}
-                      </option>))}
-                  </select>;
-                  <select;
-                    value={sort_by}
-                    on_change={e => setSortBy (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - green - 400 / 30 rounded - lg text - white focus:outline - none focus:border - green - 400';
-                  >;
-                    {sort_options.map (option => (
-                      <option key={option.value} value={option.value}>;
-                        {option.label}
-                      </option>))}
-                  </select>;
-                </div>;
-                <div className='flex items - center gap - 4'>;
-                  <div className='relative'>;
-                    <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400' />;
-                    <input;
-                      type='text';
-                      placeholder='Search services...';
-                      value={search_query}
-                      on_change={e => setSearchQuery (e.target.value)}
-                      className='pl - 10 pr - 4 py - 2 bg - slate - 800 border border - gray - 600 rounded - lg text - white focus:outline - none focus:border - cyan - 400 w - 64';
-                    />;
-                  </div>;
-                  <div className='flex border border - gray - 600 rounded - lg overflow - hidden'>                    <button;
-                      on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <Grid className='w - 4 h - 4' />                    </button>;
-                  <div className="flex border border - gray - 600 rounded - lg overflow - hidden">;
-                    <button;
-                      on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <Grid className='w - 4 h - 4' />                      <Grid className="w - 4 h - 4" />;
-                    </button>;
-                    <button;
-                      on_click={() => setViewMode ('list')}
-                      className={`px - 3 py - 2 ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <List className='w - 4 h - 4' />                    </button>                      <List className="w - 4 h - 4" />;
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-
-            {/* Services Display */}
-            <motion&& motion.div
-=======
             {/* Services Display */}
             <motion.div
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1484,58 +1026,20 @@ export default function RevolutionaryServicesPage() {;
               }
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
-              whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
-            </motion && motion.div>;
-
-            {/* Services Display */}
-            <motion&& motion.div
-              className={
-                view_mode === 'grid';
-                  ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
-                  : 'space - y-6';
-              }
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              className={viewMode === 'grid' 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-=======
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
-              whileInView="visible">;
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -1809,10 +1313,7 @@ export default function RevolutionaryServicesPage() {;
           {selectedService && (;
             <motion&& motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-<<<<<<< HEAD
-=======
 
-=======
 
         {/* Service Details Modal */}
         <AnimatePresence>
@@ -1820,15 +1321,7 @@ export default function RevolutionaryServicesPage() {;
             <motion.div
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -2147,111 +1640,6 @@ export default function RevolutionaryServicesPage() {;
           )}
         </AnimatePresence>
 
-<<<<<<< HEAD
-        {/* Contact Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              className="max-w-4xl mx-auto"
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Ready to Experience the Future?
-              </h2>
-              <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of companies already transforming their business
-                with our revolutionary micro SaaS services.
-              </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
-                <Button
-                  variant='primary'
-                  size='lg'
-                  onClick={() =>;
-                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
-                  }
-                >;
-                  Start Free Trial;
-                  <Rocket className='ml-2 w-5 h-5' />;
-                </Button>;
-                <Button
-                  variant='futuristic'
-                  size='lg'
-                  onClick={() =>;
-                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
-                  }
-                >
-                  Schedule Demo
-                  <Calendar className='ml-2 w-5 h-5' />
-                </Button>
-              </div>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
-                <div>
-                  <Phone className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
-                  <div className='text-white font-semibold'>
-                    {contactInfo.mobile}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Call us anytime</div>
-                </div>
-                <div>
-                  <Mail className='w-8 h-8 text-purple-400 mx-auto mb-2' />
-                  <div className='text-white font-semibold'>
-                    {contactInfo.email}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Email us 24/7</div>
-                </div>
-                <div>
-                  <MapPin className='w-8 h-8 text-green-400 mx-auto mb-2' />
-                  <div className='text-white font-semibold'>
-                    {contactInfo.address}
-                  </div>
-                  <div className='text-gray-400 text-sm'>Visit our office</div>                </div>                Ready to Experience the Future?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                                 <Button
-                   variant="primary"
-                   size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >
-                   Start Free Trial
-                   <Rocket className="ml-2 w-5 h-5" />
-                 </Button>
-                 <Button
-                   variant="futuristic"
-                   size="lg"
-                   onClick={() => window.open('https://ziontechgroup.com/contact_blank')}
-                 >
-                   Schedule Demo
-                   <Calendar className="ml-2 w-5 h-5" />
-                 </Button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                <div>
-                  <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.mobile}</div>
-                  <div className="text-gray-400 text-sm">Call us anytime</div>
-                </div>
-                <div>
-                  <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.email}</div>
-                  <div className="text-gray-400 text-sm">Email us 24/7</div>
-                </div>
-                <div>
-                  <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <div className="text-white font-semibold">{contactInfo.address}</div>
-                  <div className="text-gray-400 text-sm">Visit our office</div>
-                </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
@@ -2417,15 +1805,5 @@ export default function RevolutionaryServicesPage() {;
       </div>;
     </UltraFuturisticBackground>));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

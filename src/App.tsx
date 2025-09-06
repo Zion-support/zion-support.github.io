@@ -26,46 +26,31 @@ const LoadingSpinner = () => (
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/layout/Sidebar';
-import ErrorBoundary from './components/ErrorBoundary';
-// Import pages
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ContactPage from './pages/Contact';
-import ServicesPage from './pages/Services';
-import PricingPage from './pages/Pricing';
-export default function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <div className="main-content">
-            <Sidebar />
-            <main className="content">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/contact" element={<Contact />} />
-                </Routes>
-              </Suspense>
-            </main>
-          </div>
-          <Footer />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
           <PerformanceMonitor />
+          <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          <main className="transition-all duration-300 ease-in-out">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
         </div>
       </Router>
     </ErrorBoundary>
   );
-}
 };
 
 export default App;
-}

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import App from '../App';
@@ -27,33 +15,11 @@ describe('App', () => {
 });
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { render, screen, describe, it, expect } from 'lucide-react'; import App from '../App'; describe('App',() => { it('renders without crashing',() => { render(<App />); expect(screen.getByRole('main')).toBeInTheDocument()}
 }); it('displays correct content',() => { render(<App />)}
 }); it('handles user interactions',() => { render(<App />)})}
 });'
-<<<<<<< HEAD
 </App>'
-</App>'
-=======
-<<<<<<< HEAD
-</App>'
-=======
-<<<<<<< HEAD
-</App>'
-=======
-</App>'
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { render, screen } from '@testing-library/react'
 import { describe, it, expect } from 'vitest'
 import App from '../App'
@@ -64,9 +30,3 @@ describe('App'
   it('handles user interactions'
 import { render,screen } from \'@testing-library/react\'; import { describe,it,expect } from \'vitest\'; import App from \'../App\'; describe(\'App\',() => { it(\'renders without crashing\',() => { render(<App />); expect(screen.getByRole(\'main\')).toBeInTheDocument()}); it(\'displays correct content\',() => { render(<App />)}); it(\'handles user interactions\',() => { render(<App />)})});
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./App"; describe('App', () => { it('renders without crashing', () => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it('displays correct content', () => { render(<App />)}); it("handles user interactions"
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

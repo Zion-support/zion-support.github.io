@@ -1,122 +1,15 @@
-<<<<<<< HEAD
-
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Atom, Brain, Cpu, Zap, Shield, Globe
-  Rocket, Target, TrendingUp, Users, CheckCircle
-  ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react'
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
-    {
-      icon: Brain
-      title: "Quantum Consciousness Integration"
-      description: "Advanced AI consciousness with quantum processing capabilities"
-import { 
-  Atom, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle;
-  ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-const QuantumNeuralNetworkPlatform = () => {
-  const features = [
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-import { motion } from 'framer-motion',
-import {
-  Atom, Brain, Cpu, Zap, Shield, Globe,
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign;
-} from 'lucide-react',
-const QuantumNeuralNetworkPlatform = () =>: any {
-  const features = [;
-    {
-      icon: Brain,
-      title: "Quantum Consciousness Integration",
-      description: "Advanced AI consciousness with quantum processing capabilities",
-      color: "from-purple-500 to-pink-500"
-    }
-    {
-      icon: Atom
-      title: "Quantum Neural Processing"
-      description: "Revolutionary quantum computing for neural network operations"
-      color: "from-blue-500 to-cyan-500"
-    }
-    {
-      icon: Cpu
-      title: "Hybrid AI Architecture"
-      description: "Combines classical and quantum computing for optimal performance"
-      color: "from-emerald-500 to-teal-500"
-    }
-    {
-      icon: Shield
-      title: "Quantum Security"
-      description: "Unbreakable encryption using quantum cryptography"
-      color: "from-red-500 to-orange-500"
-    }
-  ]
-  const benefits = [
-    "1000x faster neural network training"
-    "Quantum-level security and encryption"
-    "Scalable consciousness simulation"
-    "Real-time quantum decision making"
-    "Advanced pattern recognition"
-    "Future-proof technology foundation"
-  ]
-  const useCases = [
-    {
-      title: "AI Research & Development"
-  ];
-
-  const useCases = [
-    {
-      title: "AI Research & Development",
-      description: "Accelerate AI breakthroughs with quantum processing power"
-    }
-    {
-      title: "Cybersecurity"
-      description: "Unbreakable security protocols using quantum encryption"
-    }
-    {
-      title: "Scientific Discovery"
-      description: "Solve complex scientific problems in minutes, not years"
-    }
-    {
-      title: "Financial Modeling"
-      description: "Advanced risk assessment and market prediction algorithms"
-    }
-  ]
-<<<<<<< HEAD
-  ];
-
-=======
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
 import { motion } from 'framer-motion',;
 import { 
   Atom, Brain, Cpu, Zap, Shield, Globe, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   Atom, Brain, Cpu, Zap, Shield, Globe,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react',
@@ -145,21 +38,11 @@ const QuantumNeuralNetworkPlatform = () => {
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const benefits = [
     "1000x faster neural network training",
@@ -169,13 +52,6 @@ const QuantumNeuralNetworkPlatform = () => {
     "Advanced pattern recognition",
     "Future-proof technology foundation"
   ],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const useCases = [
     {
       title: "AI Research & Development",
@@ -192,25 +68,12 @@ const QuantumNeuralNetworkPlatform = () => {
     {
       title: "Financial Modeling",
       description: "Advanced risk assessment and market prediction algorithms"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <Head>
@@ -223,9 +86,6 @@ const QuantumNeuralNetworkPlatform = () => {
         <meta property="og:url" content="https://ziontechgroup.com/quantum-neural-network-platform" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        {/* Hero Section */}
-=======
 
 
         {/* Hero Section */  } catch (error) {
@@ -233,29 +93,10 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-        {/* Hero Section */}
-        <section className="relative overflow - hidden py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 / 20 to - blue - 600 / 20"></div>;
-          <div className="relative max - w-7xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,7 +112,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className="flex justify-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full">
@@ -285,19 +125,7 @@ const QuantumNeuralNetworkPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
                 Revolutionary platform combining quantum computing with AI consciousness for unprecedented
-=======
-<<<<<<< HEAD
-                Revolutionary platform combining quantum computing with AI consciousness for unprecedented
-=======
-<<<<<<< HEAD
-                Revolutionary platform combining quantum computing with AI consciousness for unprecedented 
-=======
-                Revolutionary platform combining quantum computing with AI consciousness for unprecedented
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 performance, security, and capabilities in neural network operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -325,12 +153,6 @@ const QuantumNeuralNetworkPlatform = () => {
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
             <motion.div;
-<<<<<<< HEAD
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
 
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -352,12 +174,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -387,9 +203,6 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -415,12 +228,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
@@ -450,8 +257,6 @@ const QuantumNeuralNetworkPlatform = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -490,12 +295,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -526,9 +325,6 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -554,12 +350,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="flex items-center space-x-3"
                 >
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -586,8 +376,6 @@ const QuantumNeuralNetworkPlatform = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-=======
 
 
               ))  } catch (error) {
@@ -626,12 +414,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -661,9 +443,6 @@ const QuantumNeuralNetworkPlatform = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -689,12 +468,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
@@ -705,9 +478,6 @@ const QuantumNeuralNetworkPlatform = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* CTA Section */}
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -722,12 +492,6 @@ const QuantumNeuralNetworkPlatform = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -768,20 +532,8 @@ const QuantumNeuralNetworkPlatform = () => {
 }
 export default QuantumNeuralNetworkPlatform;
 
-<<<<<<< HEAD
-=======
-=======
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export default QuantumNeuralNetworkPlatform,;
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default QuantumNeuralNetworkPlatform,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
                 Ready to Experience the Future?;
@@ -802,19 +554,7 @@ export default QuantumNeuralNetworkPlatform,
           </div>;
         </section>;
       </div>;
-<<<<<<< HEAD
-    </>);
-},
-export default QuantumNeuralNetworkPlatform,
-;
-=======
     </>;
   );
 },;
 export default QuantumNeuralNetworkPlatform;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

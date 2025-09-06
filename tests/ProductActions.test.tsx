@@ -1,25 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-interface ProductActions.testProps {
-  // Add props here as needed
 }
-export default function ProductActions.test({ }: ProductActions.testProps) {
-  return (
-    <div>
-      <h1>ProductActions.test</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
@@ -51,4 +31,3 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

@@ -1,33 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-export const useDeleteMilestone = () => {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-=======
-<<<<<<< HEAD
-export const useDeleteMilestone = () => {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const deleteMilestone = async (milestoneId: string) => {
-    if (!user) return false;
-=======
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -37,7 +15,6 @@ export const useDeleteMilestone = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
 
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const deleteMilestone = async (milestoneId: string) => {
     if (!user) return false;
     try {
@@ -83,10 +60,7 @@ if (throw error) {
     } finally {
       setIsSubmitting (false);
     }
-<<<<<<< HEAD
-=======
 
-=======
 
         .eq('id', milestoneId),
       
@@ -101,17 +75,6 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-  
-  return {
-    deleteMilestone;
-    isSubmitting
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -141,11 +104,6 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return {
     deleteMilestone;

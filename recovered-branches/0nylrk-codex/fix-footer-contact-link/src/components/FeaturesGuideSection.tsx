@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Button} from "./ui/button";
 import {Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle} from "lucide-react";
-<<<<<<< HEAD
-export function FeaturesGuideSection() {
-  const features = [
-    {
-=======
 
-=======
 import { Link } from "react-router-dom",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -33,45 +19,18 @@ import {
   Plus,
   HelpCircle
 } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function FeaturesGuideSection() {
   const features = [
     {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      id: "ai-matcher"
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
-<<<<<<< HEAD
-      instructions: [
-        "Navigate to the AI Matcher page from the homepage or marketplace";
-        "Fill in your project requirements and specifications";
-        "Review the AI-recommended matches tailored to your needs";
-=======
-=======
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
-<<<<<<< HEAD
-      instructions: [;
-        "Navigate to the AI Matcher page from the homepage or marketplace";
-        "Fill in your project requirements and specifications";
-        "Review the AI-recommended matches tailored to your needs";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       instructions: [
         "Navigate to the AI Matcher page from the homepage or marketplace",
         "Fill in your project requirements and specifications",
         "Review the AI-recommended matches tailored to your needs",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         "Connect with matched talents or services directly"
       ]
       link: "/match"
@@ -263,28 +222,12 @@ function FeaturesGuideSection() {
   ];
 ;
   return (
-<<<<<<< HEAD
-    <section className="py-20 bg-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <GradientHeading>Your Complete Guide to Zion</GradientHeading>
-          <p className="text-zion-slate-light text-xl mt-4 max-w-3xl mx-auto">
-            Discover all the powerful tools and features available to help you navigate
-            the world of AI and tech services
-          </p>
-        </div>
-        <Tabs defaultValue="ai-matcher" className="w-full max-w-5xl mx-auto">
-          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1 mb-8">
-            {features.slice(0, 4).map(feature => (
-              <TabsTrigger
-=======
 
     <section className="py - 20 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
           <GradientHeading > Your Complete Guide to Zion</GradientHeading>;
           <p className="text - zion - slate - light text - xl mt - 4 max - w-3xl mx - auto">;
-=======
                 key={feature.id}
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
@@ -440,11 +383,6 @@ export function FeaturesGuideSection() {;
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -459,7 +397,6 @@ export function FeaturesGuideSection() {;
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {feature.title}
 
               </TabsTrigger>))}
@@ -468,7 +405,6 @@ export function FeaturesGuideSection() {;
             {features.slice (4).map (feature => (
               <TabsTrigger;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={feature.id}
                 value={feature.id}
                 className="data-[state = active]:bg - zion - blue - light data-[state = active]:text - zion - cyan";
@@ -521,10 +457,6 @@ export function FeaturesGuideSection() {;
               </div>;
             </TabsContent>;
           ))}
-<<<<<<< HEAD
-        </Tabs>
-        <div className="mt-12 text-center">
-=======
 
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
             asChild
@@ -538,16 +470,10 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </Tabs>;
 
         <div className="mt-12 text-center">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
@@ -604,15 +530,6 @@ export function FeaturesGuideSection() {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -56,9 +56,6 @@
 // Start the service;
 const healthMonitor = new HealthMonitor();
 healthMonitor && healthMonitor.start().catch(console && console.error);
-<<<<<<< HEAD
-=======
-=======
 };
 ; if (this.monitorProcesses) {; await this.checkProcessHealth()};
 ; if (this.monitorSystem) {; await this.checkSystemStatus()};
@@ -96,12 +93,6 @@ healthMonitor && healthMonitor.start().catch(console && console.error);
 ;
 // Start the service;
 const healthMonitor = new HealthMonitor();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-healthMonitor.start().catch(console.error);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 healthMonitor.start().catch(console.error);
 ;
       if (this.monitorProcesses) {;
@@ -299,8 +290,6 @@ healthMonitor.start().catch(console.error);
 const healthMonitor = new HealthMonitor(),
 healthMonitor.start().catch(console.error),
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ; // Check condition
 if ( {) {
@@ -361,10 +350,6 @@ if ( {) {
 ; // Set up interval for periodic health checks; set_interval (async () = > { await this.checkSystemHealth (); await this.checkApplicationHealth ()}, 60 * 1000), // Every minute; // Generate health report every hour; set_interval (async () = > { await this.generateHealthReport ()}, 60 * 60 * 1000), // Every hour}}
 ;
 // Start the service;
-<<<<<<< HEAD
-const health_monitor = new HealthMonitor ();
-health_monitor.start ().catch (console.error);
-=======
 const healthMonitor = new HealthMonitor();
 healthMonitor.start().catch(console.error);
 },;
@@ -372,9 +357,3 @@ healthMonitor.start().catch(console.error);
 // Start the service,;
 const healthMonitor = new HealthMonitor(),;
 healthMonitor.start().catch(console.error),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

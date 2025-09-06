@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -167,9 +159,6 @@ export default function Services2026ShowcaseEnhancedPage() {
           return b.rating - a.rating,
         default: return a.name.localeCompare(b.name)
       }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -352,13 +341,9 @@ export default function Services2026ShowcaseEnhancedPage() {
       }
     })
     return filtered
-<<<<<<< HEAD
-  }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy])
-=======
 
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
 
-=======
 
 export default function Services2026ShowcaseEnhancedPage(req, res) {
   try {
@@ -531,15 +516,10 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }),
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length
@@ -560,9 +540,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <meta name="description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services. Transform your business with cutting-edge technology." />
           <meta name="keywords" content="2026 services, micro SAAS, AI services, quantum computing, enterprise IT, blockchain, 5G networks, edge computing, zero trust security" />
           <link rel="icon" href="/favicon.svg" />
-<<<<<<< HEAD
-          {/* Open Graph */}
-=======
 
 
           {/* Open Graph */  } catch (error) {
@@ -570,20 +547,11 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <meta property="og:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase-enhanced" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-<<<<<<< HEAD
-          {/* Twitter */}
-=======
 
 
           {/* Twitter */  } catch (error) {
@@ -591,33 +559,18 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Services Showcase - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive collection of innovative 2026 micro SAAS services, AI solutions, quantum computing, and enterprise IT services." />
           <meta name="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
         </Head>
 
-<<<<<<< HEAD
-        {/* Enhanced Header Section */}
-=======
 
         {/* Enhanced Header Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -655,9 +608,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
-<<<<<<< HEAD
-=======
-=======
               {/* Service Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -686,22 +636,11 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
                   </motion.div>
-<<<<<<< HEAD
-                ))}
-              </div>
-              {/* Contact Information */}
-=======
 
 
                 ))  } catch (error) {
@@ -715,12 +654,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -751,8 +684,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           <div className="max - w-7xl mx - auto">;
             <div className="bg - gradient - to - r from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - sm border border - gray - 700 / 50 rounded - 2xl p - 8">;
               {/* Search Bar */}
-<<<<<<< HEAD
-=======
 
 
         {/* Enhanced Search and Filters */  } catch (error) {
@@ -768,12 +699,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -793,10 +718,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
                   <select
-<<<<<<< HEAD
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-=======
                     value={selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -807,12 +728,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
@@ -826,10 +741,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
                   <select
-<<<<<<< HEAD
-                    value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-=======
                     value={selectedPriceRange  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -840,12 +751,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {priceRanges.map((range) => (
@@ -859,10 +764,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
                   <select
-<<<<<<< HEAD
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-=======
                     value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -873,12 +774,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
@@ -889,8 +784,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                   </select>
                 </div>
                 {/* View Mode Toggle */}
-<<<<<<< HEAD
-=======
 
 
                         {option.name  } catch (error) {
@@ -911,12 +804,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
@@ -942,20 +829,11 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
-<<<<<<< HEAD
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
-=======
                   Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
                 </p>
               </div>
@@ -963,31 +841,17 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Enhanced Services Grid */}
-=======
 
         {/* Enhanced Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
               {filteredServices.length === 0 ? (
                 <motion.div
-<<<<<<< HEAD
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-=======
 
 
                   initial={{ opacity: 0 }  } catch (error) {
@@ -1005,12 +869,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4"></div>
@@ -1051,20 +909,11 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                         className="h-full"
                       >
                         <div className="p-6">
-<<<<<<< HEAD
-                          {/* Service Header */}
-=======
                           {/* Service Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
@@ -1108,12 +957,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                                 </li>))}
                             </ul>;
                             {service.features.length > 3 && (
-<<<<<<< HEAD
-                              <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
-                            )}
-                          </div>
-                          {/* Service Stats */}
-=======
 
 
                           {/* Description */  } catch (error) {
@@ -1127,11 +970,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-gray-200 mb-2">Key Features:</h4>
                             <ul className="space-y-1">
@@ -1164,12 +1002,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}</div>
@@ -1184,9 +1016,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                               <div className="text-gray-400">trial</div>
                             </div>
                           </div>
-<<<<<<< HEAD
-                          {/* Market Position */}
-=======
 
 
                           {/* Market Position */  } catch (error) {
@@ -1194,19 +1023,10 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
                           </div>
-<<<<<<< HEAD
-                          {/* ROI */}
-=======
 
 
                           {/* ROI */  } catch (error) {
@@ -1214,19 +1034,10 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="mb-4 p-3 bg-green-900/20 border border-green-500/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-green-400 mb-1">ROI Promise:</h4>
                             <p className="text-xs text-green-300">{service.roi}</p>
                           </div>
-<<<<<<< HEAD
-                          {/* Action Buttons */}
-=======
 
 
                           {/* Action Buttons */  } catch (error) {
@@ -1234,20 +1045,11 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           <div className="flex space-x-2">
                             <Button
                               variant="primary"
                               size="sm"
                               className="flex-1"
-<<<<<<< HEAD
-                              onClick={() => window.open(service.link, '_blank')}
-=======
 
 
                               onClick={() => window.open(service.link, '_blank')  } catch (error) {
@@ -1255,12 +1057,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             >
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
@@ -1287,20 +1083,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-        {/* Enhanced Footer CTA */}
-        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
-          <div className="max - w-4xl mx - auto text - center">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-=======
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1321,12 +1103,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1339,9 +1115,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <Button
                   variant="primary"
                   size="lg"
-<<<<<<< HEAD
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-=======
 
 
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')  } catch (error) {
@@ -1349,12 +1122,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1362,9 +1129,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
                 <Button
                   variant="secondary"
                   size="lg"
-<<<<<<< HEAD
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-=======
 
 
                   onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')  } catch (error) {
@@ -1372,12 +1136,6 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1392,62 +1150,9 @@ export default function Services2026ShowcaseEnhancedPage(req, res) {
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-  )
-}
-              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Button;
-                  variant="primary";
-                  size="lg";
-                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
-                >;
-                  <Mail className="w - 5 h - 5 mr - 2" />;
-                  Schedule Consultation;
-                </Button>;
-                <Button;
-                  variant="secondary";
-                  size="lg";
-                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
-                >;
-                  <Phone className="w - 5 h - 5 mr - 2" />;
-                  Call Now;
-                </Button>;
-              </div>;
-              <div className="mt - 8 text - sm text - gray - 400">;
-                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
-                <p>{contact_info.address}</p>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraFuturisticBackground>);
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

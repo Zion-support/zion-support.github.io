@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
@@ -15,33 +10,11 @@ import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from react-router-dom
-
-
-import React, { useEffect, useState } from 'react';
-=======
-import { useRouter } from 'next/router'; // Changed from react-router-dom
-<<<<<<< HEAD
-
-
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging  } from '@/context/MessagingContext';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
-import { useIsMobile  } from '@/hooks/use-mobile';
-import { toast  } from 'sonner';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-=======
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useState } from 'react',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { MessageSquare, Video } from 'lucide-react'
 import { useMessaging  } from '@/context/MessagingContext';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
@@ -51,17 +24,8 @@ import { toast  } from 'sonner';
 import { Button  } from '@/components/ui/button';
 import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { useRouter } from 'next/router', // Changed from react-router-dom
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function MessagingInbox() {;
-=======
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function MessagingInbox() {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const {
     conversations
@@ -76,44 +40,20 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null);
-<<<<<<< HEAD
-  useEffect((,) => {
-=======
 
   const { 
     conversations,
-<<<<<<< HEAD
-    activeConversation, ;
-    setActiveConversation;
-    markAsRead;
-    fetchConversations;
-=======
     activeConversation, 
     setActiveConversation, 
     markAsRead,
     fetchConversations,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     isLoading
   } = useMessaging(),
   const isMobile = useIsMobile(),
   const router = useRouter(), // Changed from navigate
-<<<<<<< HEAD
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  const [activeCall, setActiveCall] = useState<string | null>(null);
-  
-  useEffect((,) => {
-=======
-  const [activeCall, setActiveCall] = useState<string | null>(null),
-  
-  useEffect(() => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Fetch conversations when component mounts
     const loadData = async () => {
       try {
@@ -122,44 +62,18 @@ export default function MessagingInbox() {
         logErrorToProduction('Failed to load conversations:', { data: error })
         toast.error("Failed to load messages. Please try again.")
       }
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-    loadData()
-  }, [fetchConversations]);
-=======
     };
     
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     loadData()
   }, [fetchConversations]);
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first");
-<<<<<<< HEAD
-      return
-    }
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
-
-=======
       return;
     }
     
     const roomId = `msg-${activeConversation.id}`;
     setActiveCall(roomId);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     },
     
     loadData()
@@ -171,58 +85,22 @@ export default function MessagingInbox() {
       toast.error("Please select a conversation first"),
       return
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  }
-
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
-=======
     
     const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
-=======
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     // Show toast notification
     toast.success("Starting video call", {
       description: "Initializing video call connection..."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    });
-    
-    // Navigate to video call page
-    router.push(`/call/${roomId}`), // Changed from navigate
-  };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }),
     
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -232,23 +110,11 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-<<<<<<< HEAD
-            {activeConversation && (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {activeConversation && (
-              <Button
-                onClick = {startVideoCall,}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
 
             {activeConversation && (
               <Button 
                 onClick={startVideoCall}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
                 <Video className="h-4 w-4" />
@@ -258,11 +124,6 @@ export default function MessagingInbox() {
           </div>
 
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -272,18 +133,7 @@ export default function MessagingInbox() {
                 </div>
               ) : (
                 <ConversationsList
-<<<<<<< HEAD
-                  conversations = {conversations,}
-                  activeConversation = {activeConversation,}
-                  setActiveConversation = {setActiveConversation,}
-                  markAsRead = {markAsRead,}
-                />
-              )}
-<<<<<<< HEAD
-=======
               
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
@@ -308,7 +158,6 @@ export default function MessagingInbox() {;
   const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null),;
   useEffect(() => {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Fetch conversations when component mounts;
     const loadData = async () => {;
       try {;
@@ -351,8 +200,6 @@ export default function MessagingInbox() {;
             </h1>;
 
             {activeConversation && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Button
                 onClick = {startVideoCall,}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">;
@@ -376,16 +223,8 @@ export default function MessagingInbox() {;
                   markAsRead = {markAsRead,}
                 />;
               )}
-<<<<<<< HEAD
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
@@ -519,19 +358,9 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
   /* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

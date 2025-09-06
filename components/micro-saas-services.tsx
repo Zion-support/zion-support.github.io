@@ -73,18 +73,8 @@ import {
   Globe,
   Lock,
   BarChart3,
-<<<<<<< HEAD
-  Calendar,
-  Target,} from 'lucide-react';import {
-=======
-<<<<<<< HEAD
-  Calendar,
-  Target,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Calendar,;
   Target,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   Monitor
   Search
@@ -95,7 +85,6 @@ import {
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain;
   Monitor,
   Search,
@@ -224,72 +213,6 @@ export default function MicroSaasServicesPage() {
         enterprise: {
           price: 149
           features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            'Unlimited URLs'
-            'Real-time monitoring'
-            'All metrics'
-            'Custom dashboards'
-            '1-year retention'
-            'SLA guarantee'
-          ]
-        }
-      }
-      marketPrice: '$19-149/month'
-      competitors: ['Pingdom', 'GTmetrix', 'WebPageTest']
-      website: 'https://performance.ziontech.ai'
-      demo: 'https://demo.performance.ziontech.ai'
-    }
-    {
-<<<<<<< HEAD
-      id: 'seo-analytics'
-      name: 'SEO Analytics Dashboard'
-      description:
-        'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.'
-      icon: <Search className='w-8 h-8 text-white' />
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
-      gradient: 'from-green-400 to-emerald-500'
-      features: [
-        'Keyword tracking & ranking'
-        'Competitor analysis'
-        'Backlink monitoring'
-        'Technical SEO audits'
-        'Performance reporting'
-        'Mobile optimization insights'
-      ]
-      useCases: [
-        'SEO performance tracking'
-        'Competitor research'
-        'Keyword strategy development'
-        'Technical SEO audits'
-        'Link building campaigns'
-        'Content optimization'
-      ]
-      pricing: {
-        starter: {
-          price: 39
-          features: [
-            '100 keywords'
-            'Basic analysis'
-            'Monthly reports'
-            'Email support'
-            '7-day retention'
-          ]
-        }
-        professional: {
-          price: 89
-          features: [
-            '500 keywords'
-            'Advanced analysis'
-            'Weekly reports'
-            'Priority support'
-            '30-day retention'
-            'API access'
-          ]
-        }
-=======
       id: 'performance - monitor',
       name: 'Website Performance Monitor',
       description:;
@@ -335,7 +258,6 @@ export default function MicroSaasServicesPage() {
             'API access',
           ],
         },
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         enterprise: {
           price: 199
           features: [
@@ -541,9 +463,6 @@ export default function MicroSaasServicesPage() {
       competitors: ['Buffer', 'Hootsuite', 'Later']
       website: 'https://social.ziontech.ai'
       demo: 'https://demo.social.ziontech.ai'
-<<<<<<< HEAD
-=======
-=======
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
@@ -557,120 +476,11 @@ export default function MicroSaasServicesPage() {
       competitors: ['Buffer', 'Hootsuite', 'Later'],
       website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },  ];      demo: 'https://demo.social.ziontech.ai'
     }
   ];
   const marketInsights = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generation'
-      marketSize: '$1.2B'
-      growth: '+23%'
-      description:
-        'Rapidly growing market with increasing demand for automated content creation'
-    },    {
-      title: 'Performance Monitoring'
-      marketSize: '$3.8B'
-      growth: '+18%'
-      description:
-        'Essential for modern web applications and user experience optimization'
-    },    {
-      title: 'SEO Analytics'
-      marketSize: '$2.1B'
-      growth: '+21%'
-      description:
-        'Critical for digital marketing and search engine optimization'
-    },    {
-      title: 'API Management'
-      marketSize: '$4.2B'
-      growth: '+25%'
-      description: 'Growing demand for API security and traffic management'
-    },    {
-      title: 'Email Marketing'
-      marketSize: '$7.5B'
-      growth: '+15%'
-      description:
-        'Mature market with strong automation and personalization trends'
-    },    {
-      title: 'Social Media Management'
-      marketSize: '$2.8B'
-      growth: '+19%'
-      description:
-        'Increasing need for multi-platform social media coordination'
-    },  ];      description: 'Rapidly growing market with increasing demand for automated content creation'
-    }
-    {
-      title: 'Performance Monitoring'
-      marketSize: '$3.8B'
-      growth: '+18%'
-      description:
-        'Essential for modern web applications and user experience optimization'
-    },      description: 'Essential for modern web applications and user experience optimization'
-    }
-    {
-      title: 'SEO Analytics'
-      marketSize: '$2.1B'
-      growth: '+21%'
-      description:
-        'Critical for digital marketing and search engine optimization'
-    },      description: 'Critical for digital marketing and search engine optimization'
-    }
-    {
-      title: 'API Management'
-      marketSize: '$4.2B'
-      growth: '+25%'
-      description: 'Growing demand for API security and traffic management'
-    },      description: 'Growing demand for API security and traffic management'
-    }
-    {
-      title: 'Email Marketing'
-      marketSize: '$7.5B'
-      growth: '+15%'
-      description:
-        'Mature market with strong automation and personalization trends'
-    },      description: 'Mature market with strong automation and personalization trends'
-    }
-    {
-      title: 'Social Media Management'
-      marketSize: '$2.8B'
-      growth: '+19%'
-      description:
-        'Increasing need for multi-platform social media coordination'
-    },      description: 'Increasing need for multi-platform social media coordination'
-      description: 'Rapidly growing market with increasing demand for automated content creation'
-    };
-    {
-      title: 'Performance Monitoring',
-      market_size: '$3.8B',
-      growth: '+18%',
-      description: 'Essential for modern web applications and user experience optimization'
-    };
-    {
-      title: 'SEO Analytics',
-      market_size: '$2.1B',
-      growth: '+21%',
-      description: 'Critical for digital marketing and search engine optimization'
-    };
-    {
-      title: 'API Management',
-      market_size: '$4.2B',
-      growth: '+25%',
-      description: 'Growing demand for API security and traffic management'
-    };
-    {
-      title: 'Email Marketing',
-      market_size: '$7.5B',
-      growth: '+15%',
-      description: 'Mature market with strong automation and personalization trends'
-    };
-    {
-      title: 'Social Media Management',
-      market_size: '$2.8B',
-      growth: '+19%',
-      description: 'Increasing need for multi-platform social media coordination'
-=======
       id: 'seo - analytics',
       name: 'SEO Analytics Dashboard',
       description:;
@@ -908,7 +718,6 @@ export default function MicroSaasServicesPage() {
         enterprise: {
           price: 129,
           features: [;
-=======
 
 
             'Unlimited accounts',
@@ -928,7 +737,6 @@ export default function MicroSaasServicesPage() {
 
     },  ];      demo: 'https://demo.social.ziontech.ai'
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   ];
 
@@ -1200,52 +1008,13 @@ export default function MicroSaasServicesPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
-<<<<<<< HEAD
-                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
-                <div className="p-6">;
-                  <h3 className="text-xl font-bold text-white mb-4">{insight && insight.title}</h3>;
-                  <div className="flex items-center justify-center space-x-4 mb-4">;
-                    <div className="text-2xl font-bold text-cursor-blue">{insight && insight.marketSize}</div>;
-                    <div className="text-green-400 font-semibold">{insight && insight.growth}</div>;
-                  </div>;
-                  <p className="text-gray-400 text-sm">{insight && insight.description}</p>;
-                </div>;
-              </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Services Grid */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Services Grid */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1604,16 +1373,7 @@ export default function MicroSaasServicesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </Card>
           </div>
@@ -1853,15 +1613,5 @@ export default function MicroSaasServicesPage() {
 }
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -24,27 +24,15 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import type { Room } from 'livekit-client';
 
-<<<<<<< HEAD
-type Props = {;
-=======
 type Props = {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   room: Room | null;
   onLeave: () => void;
   accent?: 'blue' | 'cyan';};type Props = {
   room: Room | null
   onLeave: () => void
   accent?: 'blue' | 'cyan'
-<<<<<<< HEAD
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-=======
-<<<<<<< HEAD
-export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
-=======
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -102,100 +90,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
     } catch (e) {
       console.warn('Screen share failed', e)
   }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-<<<<<<< HEAD
-    <div className='flex items-center gap-3'>
-      <button
-        onClick={toggleMic}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}
-      >
-      </button>
-      <button
-        onClick={toggleCam}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}
-      >
-        {camEnabled ? 'Stop Video' : 'Start Video'}
-      </button>
-      <button
-        onClick={toggleScreenShare}
-        className='px-4 py-2 rounded bg-gray-700 text-white'
-      >
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>
-      <button
-        onClick={onLeave}
-        className='px-4 py-2 rounded bg-red-600 text-white'
-      >
-        Leave
-      </button>
-    </div>
-);
-}
-=======
-<<<<<<< HEAD
-
-    }
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  };
-
-  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {;
-      console && console.warn('Screen share failed', e);
-  };
-
-  return (
-<<<<<<< HEAD
-    <div className='flex items-center gap-3'>;
-      <button
-        onClick={toggleMic}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}>;
-      </button>;
-      <button
-        onClick={toggleCam}
-        className={`px-4 py-2 rounded ${accentClass} text-white`}>;
-        {camEnabled ? 'Stop Video' : 'Start Video'}
-      </button>;
-      <button
-        onClick={toggleScreenShare}
-        className='px-4 py-2 rounded bg-gray-700 text-white'>;
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>;
-      <button
-        onClick={onLeave}
-        className='px-4 py-2 rounded bg-red-600 text-white'
-      >
-        Leave
-      </button>
-    </div>
-);
-}
-    <div className="flex items-center gap-3">
-      <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-        {micEnabled ? 'Mute' : 'Unmute'}
-      </button>
-      <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>
-        {camEnabled ? 'Stop Video' : 'Start Video'}
-      </button>
-      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
-        {sharing ? 'Stop Share' : 'Share Screen'}
-      </button>
-      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
-    </div>
-  );
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { Room } from 'livekit - client';
 type Props = {
   room: Room | null;
@@ -280,12 +175,6 @@ if (return) {
       </button>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,56 +1,4 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-=======
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase  } from '@/components/icons';
-import { formatDistanceToNow  } from 'date-fns';
-import { toast  } from 'sonner';
-import { useAuth  } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-<<<<<<< HEAD
-import { ApplyToJobModal  } from '@/components/messaging/job-application';
-import { SEO  } from '@/components/SEO';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function JobDetails() {
-  // Cast to specify the expected route param type since useParams may be untyped
-  const { jobId } = useParams() as { jobId?: string }
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate  } from 'react-router-dom';
@@ -75,10 +23,6 @@ export default function JobDetails() {
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',
 import { useParams, useNavigate } from 'react-router-dom',
 import { Header } from '@/components/Header',
@@ -105,12 +49,8 @@ export default function JobDetails() {
   
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
   if (isLoading) {
     return (
@@ -197,11 +137,8 @@ export default function JobDetails() {
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill: string, i: number) => (
                       <Badge key={i} variant="secondary">
-<<<<<<< HEAD
-=======
 
 
-=======
 
 import React, { useState, useEffect } from 'react',;
 import { useParams, useNavigate } from 'react-router-dom',;
@@ -322,12 +259,6 @@ export default function JobDetails() {;
                   <div className="flex flex-wrap gap-2">;
                     {job && job.skills?.map((skill: string, i: number) => (;
                       <Badge key={i} variant="secondary">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         {skill}
                       </Badge>;
                     ))}

@@ -1,25 +1,11 @@
-<<<<<<< HEAD
- marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
-};
-
-marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 import { ServiceVariant } from '../types/service-variants',
 
 
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
 }
-<<<<<<< HEAD
-=======
 marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -356,27 +342,13 @@ benefits: ['Operational efficiencySafety improvements', 'Cost reductionScalabili
 capabilities: ['Multi-system coordinationAI optimization', 'Safety monitoringPerformance analytics'];
 marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
 }];
-<<<<<<< HEAD
-benefits: ['Operational efficiency_safety improvements', 'Cost reduction_scalability'];
-capabilities: ['Multi - system coordinationAI optimization', 'Safety monitoring_performance analytics'];
-market_advantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems';
-}];
-;
-=======
-<<<<<<< HEAD
-=======
-=======
 import { ServiceVariant } from '../types/service-variants',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-=======
 
-=======
 import { ServiceVariant } from '../types/service-variants',
 
 
 
-=======
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveMicroSaasService {
   id: string, name: string,
@@ -681,10 +653,5 @@ export const comprehensiveMicroSaasServices: ComprehensiveMicroSaasService[] = [
     marketAdvantage: 'First platform to provide comprehensive orchestration of multiple autonomous systems'
   }
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

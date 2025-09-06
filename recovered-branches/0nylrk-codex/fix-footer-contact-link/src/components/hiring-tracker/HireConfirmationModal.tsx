@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-=======
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-=======
 import React, { useState } from 'react',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Dialog;
   DialogContent;
@@ -32,8 +19,6 @@ export interface HireConfirmationModalProps {
 
   isOpen: boolean
   onClose: () => void
-<<<<<<< HEAD
-=======
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void
@@ -41,7 +26,6 @@ export interface HireConfirmationModalProps {
   isSubmitting?: boolean
 }
 export function HireConfirmationModal({
-=======
 
 
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
@@ -57,25 +41,19 @@ import {JobApplication} from "@/types/jobs";
 export interface HireConfirmationModalProps {;
   isOpen: boolean,;
   onClose: () => void,;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void
 
   isSubmitting?: boolean
 }
-<<<<<<< HEAD
-export function HireConfirmationModal({
-=======
 
 export function HireConfirmationModal({ ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   isOpen;
 
 export function HireConfirmationModal({ ;
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   isOpen;
 
   onClose
@@ -89,21 +67,7 @@ export function HireConfirmationModal({ ;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
-<<<<<<< HEAD
-  // Get talent information from either candidateData or application
-  const talentData = candidateData |(application?.talent_profile as TalentProfile);
-  const handleHireCandidate = async () => {
-    if (!projectName |!projectDescription) {
-      toast({
-        title: 'Required fields missing'
-        description: 'Please fill in both project name and description.'
-        variant: 'destructive'})
-      return
-=======
 
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -118,7 +82,6 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
 export interface HireConfirmationModalProps {
@@ -175,12 +138,6 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     if (!user) {
       toast({
@@ -196,15 +153,8 @@ export function HireConfirmationModal({;
         variant: 'destructive'})
       return
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setIsLoading(true);
     // Create a new project
     try {
@@ -337,8 +287,6 @@ if ( {) {
       toast({
         title: 'Candidate hired successfully'
         description: `${talentData.full_name} has been hired for the project.`})
-<<<<<<< HEAD
-=======
       onConfirm();
       onClose()
     } catch (error) {
@@ -350,14 +298,9 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-=======
     }
 
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -433,7 +376,6 @@ if ( {) {
       toast({;
         title: 'Candidate hired successfully',;
         description: `${talentData && talentData.full_name} has been hired for the project.`}),;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       onConfirm();
       onClose()
     } catch (error) {
@@ -445,17 +387,8 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-=======
 
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

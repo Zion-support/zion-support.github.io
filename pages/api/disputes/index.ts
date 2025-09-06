@@ -1,28 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-=======
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb';
 import { parseUserFromRequest } from '../../../utils/auth';
@@ -30,14 +11,10 @@ import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const user = parseUserFromRequest(req);
   if (req.method === "GET") {
     const all = await readAllDisputes();
@@ -75,26 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const id = generateCaseId();
     const dispute: DisputeCase = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    }
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       id,
       projectId: String(projectId),
       entityType,
@@ -175,15 +132,9 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   return res.status (405).end ("Method Not Allowed");
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -271,7 +222,6 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -304,9 +254,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

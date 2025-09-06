@@ -25,24 +25,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Instagram,
   Github,
   ArrowRight,
@@ -52,56 +34,14 @@ import {
   Shield,
   Zap,
   Globe,
-<<<<<<< HEAD
-  BarChart3,
-  Search,
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-  BarChart3,
-  Search
-} from 'lucide-react';
-import SearchModal from './SearchModal';
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-  BarChart3,
-  Search,;
-
-} from "lucide-react";
-import SearchModal from "./SearchModal";
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-<<<<<<< HEAD
-  BarChart3,
-  Search
-} from 'lucide-react';
-import SearchModal from './SearchModal';
-<<<<<<< HEAD
-=======
-=======
   BarChart3
 } from 'lucide-react;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-
-<<<<<<< HEAD
-=======
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-=======
->>>>>>> origin/automation-improvements-final
 
 
-=======
 
 
   Menu
@@ -127,27 +67,13 @@ import {
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
   BarChart3,
   Search,
 } from "lucide-react";
 import SearchModal from "./SearchModal";
->>>>>>> origin/main
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function Navigation() {
 export default function Navigation() {;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -657,23 +583,7 @@ export default function Navigation() {;
                 Pricing
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </AnimatePresence>;
               </div>;
 
@@ -684,14 +594,6 @@ export default function Navigation() {;
               </Link>;
             </div>;
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -701,43 +603,17 @@ export default function Navigation() {;
               >
                 <Search className="w-5 h-5" />
               </button>
-<<<<<<< HEAD
-              <Link
-                href="/contact"
-<<<<<<< HEAD
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-=======
-=======
-<<<<<<< HEAD
-              <Link 
-                href="/contact" 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-<<<<<<< HEAD
-=======
-=======
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href=/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               >
                 Get Started
               </Link>

@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-export interface MarketTrend {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface MarketTrend {
-=======
 export interface MarketTrend {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  keyword: string;
-  searchVolume: number;
-  trendDirection: 'rising' | 'falling' | 'stable';
-  growthRate: number;
-  relatedKeywords: string[];
-
-  marketOpportunity: 'high' | 'medium' | 'low'
-
-  timestamp: Date
-}
-<<<<<<< HEAD
-export interface CompetitorAnalysis {
-=======
 
 export interface CompetitorAnalysis {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   competitor_name: string;
   website: string;
@@ -41,12 +16,8 @@ export interface CompetitorAnalysis {;
 
   lastUpdated: Date
 }
-<<<<<<< HEAD
-export interface MarketSegment {
-=======
 
 export interface MarketSegment {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   size: number;
@@ -59,12 +30,8 @@ export interface MarketSegment {;
 
   solutions: string[]
 }
-<<<<<<< HEAD
-export interface MarketReport {
-=======
 
 export interface MarketReport {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   industry: string;
@@ -79,12 +46,8 @@ export interface MarketReport {;
 
   expiresAt: Date
 }
-<<<<<<< HEAD
-export interface MarketResearchRequest {
-=======
 
 export interface MarketResearchRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
@@ -94,12 +57,8 @@ export interface MarketResearchRequest {;
 
   customMetrics?: string[]
 }
-<<<<<<< HEAD
-export interface MarketResearchResponse {
-=======
 
 export interface MarketResearchResponse {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   success: boolean;
   data: {
     trends?: MarketTrend[];
@@ -114,16 +73,8 @@ export interface MarketResearchResponse {;
 
   estimatedROI: number
 }
-<<<<<<< HEAD
-export class AIMarketResearchService {
-=======
-<<<<<<< HEAD
-export class AIMarketResearchService {
-=======
 
 export class AIMarketResearchService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   private apiKey: string;
 
   private baseUrl: string
@@ -257,17 +208,9 @@ export class AIMarketResearchService {;
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
-<<<<<<< HEAD
-    segments?: MarketSegment[],
-=======
 
 export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
 
-=======
-<<<<<<< HEAD
-export interface MarketTrend {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   keyword: string,;
   searchVolume: number,;
@@ -334,7 +277,6 @@ export interface MarketResearchResponse {;
     trends?: MarketTrend[],;
     competitors?: CompetitorAnalysis[],;
     segments?: MarketSegment[],;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     report?: MarketReport;
   }
   insights: string[];
@@ -503,13 +445,4 @@ if ( {) {
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.corruptedFiles = [];
-    this.mergeConflictFiles = [];
-    this.syntaxErrorFiles = [];
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -71,25 +46,9 @@ class ComprehensiveSyntaxFixer {
   // Fix common syntax errors
   fixSyntaxErrors(content) {
     let fixed = content;
-<<<<<<< HEAD
-    
     // Fix merge conflicts by keeping the HEAD version
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-=======
-    // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-=======
-<<<<<<< HEAD
-=======
     fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -514,19 +473,7 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

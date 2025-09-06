@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Label  } from '@/components/ui/label';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Skill  } from '@/types/resume';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -20,23 +5,13 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
-<<<<<<< HEAD
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
-=======
-<<<<<<< HEAD
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
-=======
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -47,28 +22,12 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
-<<<<<<< HEAD
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Label} from '@/components/ui/label';
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
-import {Skill} from '@/types/resume';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
     const success = await onAddSkill(newSkill);
     if (success) {
       setSkillName('');
       setProficiency(3)
     }
-<<<<<<< HEAD
-  }
-  const handleEnhanceSkill = (enhancedCategory: string) => {
-    setSkillCategory(enhancedCategory)
-  }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -76,7 +35,6 @@ import { Label } from '@/components/ui/label',;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',;
 import { Skill } from '@/types/resume',;
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface AddSkillFormProps {;
   resumeId: string,;
   onAddSkill: (skill: Skill) => Promise<boolean>;
@@ -102,16 +60,8 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setSkillName('');
       setProficiency(3);
     }
-<<<<<<< HEAD
-  }
-=======
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   }
@@ -195,32 +145,6 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       </div>
     </form>
   )
-<<<<<<< HEAD
-}
-
-            />;
-            <Button type="submit">Add</Button>;
-          </div>;
-        </div>;
-      </div>;
-    </form>;
-  );
-};
-    </form>);
-}
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

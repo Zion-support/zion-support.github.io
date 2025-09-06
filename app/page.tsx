@@ -3,10 +3,7 @@ import Link from 'next/link';
 export default function HomePage() {
   return (
     <div className="animate-fade-in">
-<<<<<<< HEAD
-=======
       {/* Hero Section */}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <section className="text-center py-12 md:py-20">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build and scale with{' '}
@@ -16,31 +13,18 @@ export default function HomePage() {
           <span className="text-purple-600">Enterprise IT</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/services"
-=======
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
           automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
             href="/services" 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
-<<<<<<< HEAD
-          <a
-            href="https://ziontechgroup.com"
-=======
           <a 
             href="https://ziontechgroup.com" 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -63,19 +47,11 @@ export default function HomePage() {
             description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
             icon=""
           />
-<<<<<<< HEAD
-          <Card
-            title="IT Services"
-            href="/services/it-services"
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
-            icon=""
-=======
           <Card 
             title="IT Services" 
             href="/services/it-services" 
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
             icon="⚙️" 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />
         </div>
       </section>
@@ -89,15 +65,9 @@ export default function HomePage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<<<<<<< HEAD
-          <FeatureCard
-            title="Fast Delivery"
-            description="Rapid prototyping and deployment with modern tools and practices."
-=======
           <FeatureCard 
             title="Fast Delivery" 
             description="Rapid prototyping and deployment with modern tools and practices." 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           />
           <FeatureCard
             title="Scalable Architecture"
@@ -107,12 +77,6 @@ export default function HomePage() {
             title="24/7 Support"
             description="Round-the-clock monitoring and support for your critical systems."
           />
-<<<<<<< HEAD
-          <FeatureCard
-            title="Cost Effective"
-            description="Optimized solutions that reduce operational costs and improve efficiency."
-          />
-=======
           <FeatureCard 
             title="Cost Effective" 
             description="Optimized solutions that reduce operational costs and improve efficiency." 
@@ -144,19 +108,12 @@ export default function HomePage() {
           <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
       </section>
     </div>
   );
 }
 
-<<<<<<< HEAD
-function Card({ title, description, href, icon }: { title: string; description: string; href: string; icon: string }) {
-  return (
-    <Link
-      href={href}
-=======
 function Card({ title, description, href, icon }: { 
   title: string; 
   description: string; 
@@ -166,7 +123,6 @@ function Card({ title, description, href, icon }: {
   return (
     <Link 
       href={href} 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
@@ -178,14 +134,10 @@ function Card({ title, description, href, icon }: {
   );
 }
 
-<<<<<<< HEAD
-function FeatureCard({ title, description }: { title: string; description: string }) {
-=======
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="text-center p-6">
       <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>

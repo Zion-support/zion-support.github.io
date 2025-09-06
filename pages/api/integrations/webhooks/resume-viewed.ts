@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -60,28 +52,13 @@ function handler() {
       subject: "Resume viewed"
       resumeId: resume.id
     });
-<<<<<<< HEAD
-    writeState((s) => s.logs.push(log));
-    results.push({ providerId: conn.providerId, ok: true });
-
-  }
-  res.status(200).json({ ok: true, results });
-}
-=======
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
-<<<<<<< HEAD
-  res.status(200).json({ ok: true, results });
-}
-=======
 res.status(200).json({ ok: true, results });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -114,8 +91,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status (200).json ({ ok: true, results });
 }
-<<<<<<< HEAD
-=======
   res.status(200).json({ ok: true, results });
   } catch (error) {
     console.error("Error:", error);
@@ -129,10 +104,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

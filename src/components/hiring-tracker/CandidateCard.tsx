@@ -5,31 +5,12 @@ import { useState } from 'react'
 import { Draggable } from '@/lib/dnd-stub'
 import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
-<<<<<<< HEAD
-import { JobApplication } from '@/types/jobs'
-import { Card, CardContent } from '@/components/ui/card'
-=======
 import { JobApplication } from '@/types/jobs';
 import { Card, CardContent } from '@/components/ui/card';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  MessageSquare
-  User
-  FileText
-  MoreVertical
-  Calendar
-  AlertTriangle
-  BriefcaseIcon
-<<<<<<< HEAD
-=======
-=======
   MessageSquare,
   User,
   FileText,
@@ -37,8 +18,6 @@ import {
   Calendar,
   AlertTriangle,;
   BriefcaseIcon;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -58,13 +37,8 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge'
-<<<<<<< HEAD
-import { toast } from '@/hooks/use-toast'
-import { HireConfirmationModal } from './HireConfirmationModal'
-=======
 import { toast } from '@/hooks/use-toast';
 import { HireConfirmationModal } from './HireConfirmationModal';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Image from 'next/image'; // Import next/image
 
 interface CandidateCardProps {
@@ -77,17 +51,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showHireModal, setShowHireModal] = useState(false)
   const [avatarError, setAvatarError] = useState(false)
   // Check if application is stalled (no activity for 7 days)
-<<<<<<< HEAD
-  const isStalled =
-    application.updated_at &&
-    new Date(application.updated_at).getTime() <
-      Date.now() - 7 * 24 * 60 * 60 * 1000
-=======
   const isStalled = null;
     application.updated_at &&
     new Date(application.updated_at).getTime() <
       Date.now() - 7 * 24 * 60 * 60 * 1000
-=======
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -100,29 +67,12 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed t
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-<<<<<<< HEAD
-      title: 'Notes saved'
-      description: 'Your notes have been saved'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Notes saved'
-      description: 'Your notes have been saved'
-=======
       title: 'Notes saved',
       description: 'Your notes have been saved',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     })
     setShowNotes(false)
   }
@@ -133,13 +83,6 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
       description: 'Offer has been sent to the talent.'
     })
   }
-<<<<<<< HEAD
-  const candidateName = application.talent_profile?.full_name |'Candidate'
-import { useState } from 'react';
-=======
-<<<<<<< HEAD
-  const candidateName = application.talent_profile?.full_name |'Candidate'
-=======
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -148,8 +91,6 @@ import { useState } from 'react';
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -163,7 +104,6 @@ import { useState } from 'react';
       description: "Offer has been sent to the talent."
     })
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
@@ -175,8 +115,6 @@ import { useState } from 'react';
           <Card 
             className="mb-2 p-0 shadow-sm border"
 import { useState } from "react",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Local stub is used in place of the @hello-pangea/dnd package which isn't;
 // available in this environment.;
 import { Draggable } from '@/lib/dnd-stub';
@@ -254,15 +192,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 
   return (
     <>;
-<<<<<<< HEAD
-      <Draggable draggableId={application && application.id} index={index}>;
-        {provided => (;
-          <Card
-            className='mb-2 p-0 shadow-sm border'
-            ref={provided && provided.innerRef}            {...provided && provided.draggableProps}
-            {...provided && provided.dragHandleProps}>;
-            <CardContent className='p-3'>;
-=======
 
       <Draggable draggableId={application.id} index={index}>;
         {(provided) => (;
@@ -270,15 +199,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Candidate Header */}
               <div className='flex justify-between items-start mb-2'>;
                 <div className='flex items-center gap-2'>;
@@ -307,15 +230,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                     </p>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant='ghost' className='h-8 w-8 p-0'>
@@ -390,10 +305,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>;
               )}
               {/* Action Buttons */}
-<<<<<<< HEAD
-              <div className='flex justify-between mt-2 gap-1'>
-                <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
 
               <div className="flex justify-between mt-2 gap-1">
                 <Button 
@@ -402,19 +313,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
-<<<<<<< HEAD
-                <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
 
 
                 
@@ -424,12 +326,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {application.resume?.file_url ? (
                     <a
                       href={application && application.resume.file_url}
@@ -447,10 +343,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   variant='default'
                   size='sm'
                   className='flex-1'
-<<<<<<< HEAD
-                  onClick={() => setShowHireModal(true)}                >;
-                  <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
-=======
                   onClick={() => setShowHireModal(true)}                >
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire
                 </Button>
@@ -542,17 +434,10 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }application= {
   application
 }onConfirm= {
-<<<<<<< HEAD
-  handleHireConfirmed
-}/> </>)
-}'"}
-=======
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
                 <Button 
                   variant="default" 
@@ -561,8 +446,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   onClick={() => setShowHireModal(true)}
                 >;
                   <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </Button>;
               </div>;
             </CardContent>;
@@ -687,11 +570,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   handleHireConfirmed;
 }/> </>);
 }'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       </Draggable>;
       {/* Hire Confirmation Modal */}
       <HireConfirmationModal;
@@ -704,9 +582,3 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

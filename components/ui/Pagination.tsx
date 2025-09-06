@@ -23,52 +23,17 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
-<<<<<<< HEAD
-
-export type PaginationProps = {;
-  page: number;
-  page_size: number;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export type PaginationProps = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export type PaginationProps = {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   page: number;
   pageSize: number;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   total: number;
   onChange: (nextPage: number) => void;
 }
 export default function Pagination({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  page
-  pageSize
-  total
-  onChange
-}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
-  page: number
-  pageSize: number
-  total: number
-<<<<<<< HEAD
-  page: number,
-  page_size: number,
-  total: number,
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
-  onChange: (nextPage: number) => void
-}
-export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
-=======
   page,
   pageSize,
   total,
@@ -81,8 +46,6 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -325,25 +288,12 @@ export default Pagination;
 export default Pagination;
 }
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
 }
 export default Pagination;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -32,18 +32,5 @@ export default function MainNavigation({ }: MainNavigationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD:src.disabled/components/MainNavigation.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

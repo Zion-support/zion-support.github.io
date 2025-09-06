@@ -63,18 +63,8 @@ import {
   ExternalLink,
   Zap,
   Brain,
-<<<<<<< HEAD
-  Globe,
-  Rocket,} from 'lucide-react';import {
-=======
-<<<<<<< HEAD
-  Globe,
-  Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   Globe,;
   Rocket,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Search;
   Filter
   TrendingUp
@@ -83,7 +73,6 @@ import {
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Search;
   Filter,
   TrendingUp,
@@ -97,22 +86,9 @@ import {
   Zap;
   Brain;
   Globe;
-<<<<<<< HEAD
-  Rocket;
-  Rocket;
 
-
-export default function ToolComparisonPage() {
-=======
-
-<<<<<<< HEAD
-
-export default function ToolComparisonPage() {
-=======
 
 export default function ToolComparisonPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -869,21 +845,7 @@ function ToolComparisonPage() {
             </div>
           </div>
           {/* Stats */}
-<<<<<<< HEAD
-          <div
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-          >
-            <div className='text-center group'>
-              <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1024,9 +986,6 @@ function ToolComparisonPage() {
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
                 <button
-<<<<<<< HEAD
-=======
-=======
             <div className='flex flex-wrap gap-2'>
 
               {categories.map(category => (                <button
@@ -1038,12 +997,6 @@ function ToolComparisonPage() {
 
                 <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1064,22 +1017,12 @@ function ToolComparisonPage() {
             {/* Sort */}
             <div className="flex items-center space-x-2">
               <Filter className="w-5 h-5 text-gray-400" />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1230,30 +1173,12 @@ function ToolComparisonPage() {
           )}
         </div>
       </section>
-<<<<<<< HEAD
-      {/* Detailed Comparison Cards */}
-      <section className='py-24 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-20'>
-            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Detailed Comparison Cards */}
 
 
 
               Detailed Analysis
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1371,31 +1296,8 @@ function ToolComparisonPage() {
                     <ExternalLink className="w-4 h-4 ml-2" />;
                 </div>;
               </Card>;
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
-          </h2>;
-          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
-            Our experts can analyze your business needs and recommend the;
-            perfect combination of tools to accelerate your growth.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -1405,11 +1307,6 @@ function ToolComparisonPage() {
 
                     href={tool.website}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {tool.pricing}
                   </span>
                   <Button
@@ -1419,22 +1316,10 @@ function ToolComparisonPage() {
 
                   </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1443,19 +1328,12 @@ function ToolComparisonPage() {
 
 
             Need Help Choosing?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
             perfect combination of tools to accelerate your growth.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               variant='secondary'
@@ -1478,38 +1356,8 @@ function ToolComparisonPage() {
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-}
-              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'>              href="/saas-marketplace";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl";
-              Explore All Tools;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
   );
-}
-  );
-}
-    </>);
-}
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

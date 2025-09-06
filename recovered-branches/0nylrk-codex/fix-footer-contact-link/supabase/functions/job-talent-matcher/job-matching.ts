@@ -1,35 +1,13 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {JobData, MatchResult} from "./types.ts";
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-// Initialize the Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-=======
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {JobData, MatchResult} from "./types.ts";
-import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
@@ -37,8 +15,6 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
@@ -170,9 +146,6 @@ if ( {) {
       });
     }
   });
-<<<<<<< HEAD
-=======
-=======
       await supabase.rpc('create_notification', {
 
         _user_id: match.talentId,
@@ -181,15 +154,6 @@ if ( {) {
         _type: "job_match",
         _related_id: jobId
       })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  });
-  
-  await Promise.all(matchInsertPromises)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
@@ -223,8 +187,6 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     throw error;
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 /**;
  * Stores match results in the database and creates notifications;
@@ -256,8 +218,4 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
     }
   });
   await Promise.all(matchInsertPromises);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

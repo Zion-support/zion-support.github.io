@@ -22,15 +22,8 @@ export default async function handler(
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req && req.method !== 'GET') {
     res && res.setHeader('Allow', 'GET');
     return res && res.status(405).json({ error: 'Method Not Allowed' });
@@ -49,12 +42,7 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: "Failed to load certifications" })
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 }
 ;

@@ -154,8 +154,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$75,999'
     period: '/month'
     description:
-<<<<<<< HEAD
-=======
 
   {
     id: 'interplanetary-communication-network'
@@ -164,7 +162,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     price: '$75,999'
     period: '/month'
     description:
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Revolutionary interplanetary communication network that enables real-time communication across the solar system. Uses quantum communication, advanced satellite networks, and AI-powered routing for seamless interplanetary connectivity.'
     features: [
       'Real-time interplanetary communication'
@@ -179,12 +176,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Emergency communication channels'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-blue-600 to-cyan-600'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/interplanetary-communication-network'
-=======
     icon: '🌐'
     color: 'from-blue-600 to-cyan-600'
     textColor: 'text-blue-400'
@@ -479,14 +470,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
-    launchDate: '2029-03-01'
-    customers: 18
-    rating: 4.8
-    reviews: 52
-  }
-=======
     id: 'interplanetary - communication - network',
     name: 'Interplanetary Communication Network',
     tagline: 'Real - time solar system communication network',
@@ -497,7 +480,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     features: [;
       'Real - time interplanetary communication',
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Quantum communication protocols',
       'AI - powered routing optimization',
       'Multi - planet network management',
@@ -834,67 +816,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Backup power systems',
     ],
     popular: true,
-<<<<<<< HEAD
-    icon: '',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/space-energy-harvesting-platform',
-    marketPosition:
-      'First space energy harvesting platform. Comparable to renewable energy platforms ($50K+/month) but specialized in space applications.'
-    targetAudience:
-      'Space agencies, Energy companies, Research institutions, Government organizations, Commercial space companies, Investment firms'
-    trialDays: 120
-    setupTime: '4-8 months'
-    category: 'Space Architecture & Energy'
-    realService: true
-    technology: [
-      'Energy Harvesting'
-      'Solar Technology'
-      'Energy Storage'
-      'AI Optimization'
-      'Power Systems'
-      'Space Technology'
-    ]
-    integrations: [
-      'Solar panels'
-      'Energy storage systems'
-      'Power distribution'
-      'Monitoring systems'
-      'Research platforms'
-      'Analytics tools'
-    ]
-    useCases: [
-      'Space power generation'
-      'Energy optimization'
-      'Power distribution'
-      'Energy storage'
-      'Grid management'
-      'Backup power systems'
-    ]
-    roi: 'Energy companies report 800% ROI through space energy harvesting. Space agencies see 600% ROI in mission power efficiency.'
-    competitors: [
-      'Renewable energy platforms'
-      'Power management systems'
-      'Space research platforms'
-    ]
-    marketSize: '$70B renewable energy market'
-    growthRate: '350% annual growth'
-    variant: 'space-futuristic'
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
-    }
-    realImplementation: true
-    implementationDetails:
-      'Advanced space energy harvesting platform with multi-source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.'
-    launchDate: '2029-03-01'
-    customers: 18
-    rating: 4.8
-    reviews: 52
-  }
-=======
     icon: '⚡',
 
 
@@ -904,8 +825,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     rating: 4.8,
     reviews: 52,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -917,33 +836,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8
 
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
-    },
-    real_implementation: true,
-    implementation_details:;
-      'Advanced space energy harvesting platform with multi - source collection, AI optimization, energy storage, and power distribution. Includes monitoring systems and backup power capabilities.',
-    launch_date: '2029 - 03 - 01',
-    customers: 18,
-    rating: 4 && 4.8,
-    reviews: 52,
-  },
-];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup && ziontechgroup.com';
-=======
 
-=======
     reviews: 52
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -1391,13 +1285,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18;
     rating: 4.8,
     reviews: 52;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

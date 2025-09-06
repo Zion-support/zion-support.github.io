@@ -1,30 +1,10 @@
 
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Resend} from "npm: resend@2.0.0";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Resend } from "npm: resend@2.0.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -81,9 +61,6 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
-=======
-=======
 
     const { to, subject, html } = await req.json(),
 
@@ -100,11 +77,6 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { Resend } from "npm: resend@2.0.0",;
 const corsHeaders = {;
@@ -130,11 +102,6 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

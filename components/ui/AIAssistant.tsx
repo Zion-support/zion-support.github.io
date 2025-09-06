@@ -35,36 +35,6 @@ export type AIAssistantProps = {;
   authorizationToken?: string;
 }
 export default function AIAssistant({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
-<<<<<<< HEAD
-export default function AIAssistant(): any ({;
-  buttonLabel = "Generate with AI",;
-  title = "AI Writing Assistant",;
-  defaultPrompt,;
-  systemPrompt,;
-  onAccept,;
-  authorizationToken,;
-}: AIAssistantProps) {;
-export default function AIAssistant({
-  buttonLabel = 'Generate with AI',
-  title = 'AI Writing Assistant',
-  defaultPrompt,
-  systemPrompt,
-  onAccept,
-  authorizationToken
-}: AIAssistantProps) {
-=======
-=======
 
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
@@ -73,8 +43,6 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");

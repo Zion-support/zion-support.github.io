@@ -1,26 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {useParams, Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {formatDistanceToNow} from "date-fns";
-import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { useParams, Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -33,22 +11,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { formatDistanceToNow } from "date-fns",
 import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
 import PostCard from "@/components/community/PostCard",
-<<<<<<< HEAD
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
-=======
-<<<<<<< HEAD
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
-=======
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Mock user data
 
 const mockUser: CommunityUser = {
@@ -137,8 +101,6 @@ const userPosts: ForumPost[] = [
     downvotes: 0
     replyCount: 6
   }
-<<<<<<< HEAD
-=======
 ],
 
 
@@ -174,16 +136,7 @@ const userPosts: ForumPost[] = [
         </div>
       </AppLayout>
     )
-<<<<<<< HEAD
-  }
-  return (
-    <AppLayout>
-<<<<<<< HEAD
-      <SEO
-=======
       <SEO 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { useParams, Link } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -287,7 +240,6 @@ const userPosts: ForumPost[] = [;
     downvotes: 0,;
     replyCount: 6;
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 export default function CommunityProfilePage() {
   const { userId } = useParams();
@@ -325,22 +277,11 @@ export default function CommunityProfilePage() {
       </AppLayout>;
     );
   }
-<<<<<<< HEAD
-  return (
-    <AppLayout>
-      <SEO
-=======
 
 ;
   return (;
     <AppLayout>;
       <SEO;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`}
         description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`}
         keywords={`community, forum, profile, user profile, ${user.name}`}
@@ -413,30 +354,10 @@ export default function CommunityProfilePage() {
               </CardContent>
             </Card>
           </div>
-<<<<<<< HEAD
-          <div className="md:col-span-2">
-            <Tabs defaultValue="posts">
-              <TabsList>
-                <TabsTrigger value="posts">Posts</TabsTrigger>
-                <TabsTrigger value="activity">Recent Activity</TabsTrigger>
-              </TabsList>
-              <TabsContent value="posts" className="mt-6">
-                <h2 className="text-xl font-bold mb-4">Posts by {user.name}</h2>
-                {posts.length > 0 ? (
-                  <div className="space-y-4">
-                    {posts.map((post) => (
-                      <PostCard key={post.id} post={post} />
-=======
         </div>
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 {user.isModerator && (;
                   <Badge className="mt-2 bg-blue-500">Moderator</Badge>;
                 )}
@@ -490,8 +411,6 @@ export default function CommunityProfilePage() {
                   <div className="space-y-4">;
                     {posts && posts.map((post) => (;
                       <PostCard key={post && post.id} post={post} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </div>;
                 ) : (;
@@ -570,13 +489,6 @@ export default function CommunityProfilePage() {
       </div>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </AppLayout>);
 }

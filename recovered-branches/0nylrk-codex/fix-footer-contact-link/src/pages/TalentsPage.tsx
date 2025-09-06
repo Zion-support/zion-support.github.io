@@ -1,27 +1,7 @@
-<<<<<<< HEAD
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-// Sample talent listings
-const TALENT_LISTINGS: ProductListing[] = [
-  {
-
-
-import { DynamicListingPage } from "@/components/DynamicListingPage",
-import { ProductListing } from "@/types/listings",
-=======
 import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
-=======
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -140,54 +120,8 @@ export default function TalentsPage() {;
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      listings={TALENT_LISTINGS}
-      categoryFilters={TALENT_FILTERS}
-      initialPrice={{ min: 100, max: 200 }}
-    />
-  )
-<<<<<<< HEAD
-}
-      name: "Sarah Johnson",
-      id: "sarah - johnson",
-      avatar_url: "https://images.unsplash.com / photo - 1573496359142 - b8d87734a5a2?auto = format & fit = crop & w=100 & h=100"},
-    images: ["https://images.unsplash.com / photo - 1573497019418 - b400bb3ab074?auto = format & fit = crop & w=800 & h=500"],
-    created_at: "2023 - 10 - 15T13:45:00.000Z",
-    ai_score: 94,
-    rating: 4.9,
-    review_count: 21}],
-// Filter options specific to talents;
-const TALENT_FILTERS = [;
-  { label: 'Engineering', value: 'engineering' },
-  { label: 'Data Science', value: 'data - science' },
-  { label: 'DevOps', value: 'devops' },
-  { label: 'Security', value: 'security' },
-  { label: 'Development', value: 'development' },
-  { label: 'Consulting', value: 'consulting' }],
-export default /**
- * TalentsPage - Function description
- */
-function TalentsPage() {
-  return (
-    <DynamicListingPage;
-      title="AI & Tech Talent";
-      description="Connect with highly skilled professionals in AI, software development, data science, and more.";
-      category_slug="talents";
-      listings={TALENT_LISTINGS}
-      category_filters={TALENT_FILTERS}
-      initial_price={{ min: 100, max: 200 }}
-    />);
-}
-=======
 };
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 // Sample talent listings;
@@ -313,9 +247,3 @@ export default function TalentsPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

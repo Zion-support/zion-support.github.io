@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-import React from 'react';
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-<<<<<<< HEAD
-//Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-//Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
-=======
- //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -237,56 +222,6 @@ const Button = ({
   )
 }
 
-<<<<<<< HEAD
-  class_name = '';
-  children, on_click;
-}: {
-  href?: string;
-  variant?: 'primary' | 'secondary';
-  size?: 'sm' | 'md' | 'lg';
-  class_name?: string;
-  children: React.ReactNode,
-  on_click?: () =>: any void;
-}) => {
-  const base_classes = 'inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 focus: outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - gray - 900',
-  const variant_classes = {
-    primary: 'bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white shadow - lg hover:shadow - xl focus:ring - cyan - 500',
-    secondary: 'bg - gray - 700 hover:bg - gray - 600 text - white border border - gray - 600 hover:border - gray - 500 focus:ring - gray - 500';
-  }
-;
-  const size_classes = {
-    sm: 'px - 4 py - 2 text - sm',
-    md: 'px - 6 py - 3 text - base',
-    lg: 'px - 8 py - 4 text - lg';
-  }
-;
-  const classes = `${base_classes} ${variant_classes[variant" ${size_classes[size" ${class_name}`;
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <a href={href} className={classes}>;
-        {children}
-      </a>);
-  }
-  return (
-    <button on_click={on_click} className={classes}>;
-      {children}
-    </button>);
-}
-;
-=======
     </button>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

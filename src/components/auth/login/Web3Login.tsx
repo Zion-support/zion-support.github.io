@@ -13,51 +13,18 @@ import { Wallet } from 'lucide-react'import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
-<<<<<<< HEAD
-  const { loginWithWeb3 } = useAuth()
-  const { isWalletSystemAvailable } = useAppWallet()
-  const [isLoading, setIsLoading] = useState(false)
-  const handleWeb3Login = async () => {
-    if (!isWalletSystemAvailable) {
-      toast("Web3 login unavailable", {
-        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
-      return
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const handleWeb3Login = async () => {
-    if (!isWalletSystemAvailable) {
-      toast("Web3 login unavailable", {
-        description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."})
-      return
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
         description: "The Web3 login system is currently not available. Please ensure your Reown Project ID is configured."}),
       return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     try {
       setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
-<<<<<<< HEAD
-      const ethereum = (window as any).ethereum
-=======
       const ethereum = (window as any).ethereum,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      if (!ethereum) {
-        toast("Web3 wallet not found", {
-          description: "Please install MetaMask or another compatible wallet."})
-        return
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."})
@@ -68,32 +35,9 @@ export function Web3Login() {;
       toast("Login failed", {
         description: error.message |"Failed to connect wallet. Please try again."})
       logErrorToProduction('Web3 login error:', { data: error })
-<<<<<<< HEAD
-    } finally {
-      setIsLoading (false);
-    }
-  }
-  const buttonDisabled = isLoading |!isWalletSystemAvailable
-  const buttonTitle = !isWalletSystemAvailable
-    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-    : ""
-}
-=======
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-  const buttonDisabled = isLoading |!isWalletSystemAvailable
-  const buttonTitle = !isWalletSystemAvailable
-    ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-<<<<<<< HEAD
-    : ""
-}
-
-  )
-}
-=======
 import { useState  } from './react';
 import { Button  } from '@/components / ui / button';
 import { use_auth  } from '@/hooks / use_auth';
@@ -133,7 +77,6 @@ if ( {) {
       toast ("Login failed", {
         description: error.message || "Failed to connect wallet. Please try again."}),
       logErrorToProduction ('Web3 login error:', { data: error });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -141,14 +84,11 @@ if ( {) {
   const { loginWithWeb3 } = useAuth();
   const { isWalletSystemAvailable } = useAppWallet();
   const [isLoading, setIsLoading] = useState(false);
-=======
 
     : "";
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },
 
 
@@ -185,8 +125,6 @@ if ( {) {
   const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";
     : "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   )
 }
@@ -197,14 +135,7 @@ if ( {) {
 }
   );
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

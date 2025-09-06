@@ -1,47 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
 import { ClickableBadge } from '@/components/ui/clickable-badge'
 import {  Table,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { format } from "date-fns",
 import { JobApplication } from "@/types/jobs",
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { 
   Table,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  TableRow,
-} from '@/components/ui/table'
-import { ApplicationActions } from './ApplicationActions'
-import { StatusBadge } from './StatusBadge'
-import { Briefcase, User } from 'lucide-react';
-import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
-import React, { useState } from 'react'; // Import React and useState
-import { toast } from '@/hooks/use-toast';
-import Image from 'next/image'; // Import next/image
-
-<<<<<<< HEAD
-=======
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   TableRow
 } from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
@@ -62,15 +36,9 @@ interface ApplicationsTableProps {
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -148,44 +116,18 @@ const ApplicationAvatar = ({ application }: { application: JobApplication },) =>
           height={32} // for h-8 w-8
           className='rounded-full object-cover'
           onError={() => setAvatarError(true)}
-<<<<<<< HEAD
-          priority={false}        />;
-      ) : (;
-        <User className='h-4 w-4' />;
-=======
           priority={false}
         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ) : (
         <User className="h-4 w-4" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
     </AvatarPrimitive>
   )
 }
 export function ApplicationsTable({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  applications
-  processingId
-  onViewApplication
-  onStatusChange
-  onViewScore
-}: ApplicationsTableProps) {
-<<<<<<< HEAD
-=======
-=======
   applications,
   processingId,
   onViewApplication,
-=======
 },
 
 export function ApplicationsTable({ 
@@ -196,150 +138,6 @@ export function ApplicationsTable({
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const [hireModalOpen, setHireModalOpen] = useState(false)
-  const [selectedApplication, setSelectedApplication] =
-    useState<JobApplication | null>(null)
-  const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application)
-    setHireModalOpen(true)
-  }
-  const handleHireConfirmed = () => {
-    toast({
-      title: 'Hiring process initiated'
-      description: 'Offer has been sent to the talent.'
-    })
-  }
-<<<<<<< HEAD
-    </AvatarPrimitive>;
-  );
-};
-
-export function ApplicationsTable(): any ({;
-  applications,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationsTableProps) {;
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] =;
-    useState<JobApplication | null>(null);
-
-  const handleHireClick = (application: JobApplication) => {;
-    setSelectedApplication(application);
-    setHireModalOpen(true);
-  };
-  const handleHireConfirmed = () => {;
-    toast({;
-      title: 'Hiring process initiated',;
-      description: 'Offer has been sent to the talent.',;
-    });
-  };
-
-  return (
-    <>;
-      <div className='rounded-md border'>;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead>Candidate</TableHead>;
-              <TableHead className='hidden md:table-cell'>Applied</TableHead>;
-              <TableHead className='hidden md:table-cell'>Status</TableHead>;
-              <TableHead className='hidden lg:table-cell'>;
-                Match Score;
-              </TableHead>;
-              <TableHead className='text-right'>Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {applications && applications.map(application => (              <TableRow key={application && application.id}>;
-                <TableCell>;
-                  <div className='flex items-center gap-3'>;
-                    <ApplicationAvatar application={application} />{' '}
-                    {/* Use sub-component */}
-                    <div>
-                      <div className='font-medium'>
-                        {application.talent_profile?.full_name |'Candidate'}
-                      </div>
-                      <div className='text-xs text-muted-foreground mt-0.5'>
-                        {application.talent_profile?.professional_title |
-      <div className='rounded - md border'>;
-        <Table>;
-          <TableHeader>;
-            <TableRow>;
-              <TableHead > Candidate</TableHead>;
-              <TableHead className='hidden md:table - cell'>Applied</TableHead>;
-              <TableHead className='hidden md:table - cell'>Status</TableHead>;
-              <TableHead className='hidden lg:table - cell'>;
-                Match Score;
-              </TableHead>;
-              <TableHead className='text - right'>Actions</TableHead>;
-            </TableRow>;
-          </TableHeader>;
-          <TableBody>;
-            {applications.map (application => (              <TableRow key={application.id}>;
-                <TableCell>;
-                  <div className='flex items - center gap - 3'>;
-                    <ApplicationAvatar application={application} />{' '}
-                    {/* Use sub - component */}
-                    <div>;
-                      <div className='font - medium'>;
-                        {application.talent_profile?.full_name || 'Candidate'}
-                      </div>;
-                      <div className='text - xs text - muted - foreground mt - 0.5'>;
-                        {application.talent_profile?.professional_title ||;
-                          'Applicant'}
-                      </div>;
-                    </div>;
-                  </div>;
-                </TableCell>;
-                <TableCell className='hidden md:table-cell'>;
-                  {format(new Date(application && application.created_at), 'PP')}
-                </TableCell>;
-                <TableCell className='hidden md:table-cell'>;
-                  <StatusBadge status={application && application.status} />;
-                </TableCell>;
-                <TableCell className='hidden lg:table-cell'>;
-                  {application && application.match_score !== undefined &&;
-                  application && application.match_score !== null ? (;
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer'
-                      onClick={() => onViewScore(application)}                    >;
-                      {application && application.match_score}%;
-                    </ClickableBadge>;
-                  ) : (;
-                    <span className='text-muted-foreground text-sm'>;
-                      Not scored;
-                    </span>;
-                  )}
-                </TableCell>;
-                <TableCell className='text-right'>;
-                  <div className='flex items-center justify-end gap-2'>;
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
-                      onClick={() => handleHireClick(application)}                    >;
-                      <Briefcase className='h-3 w-3 mr-1' /> Hire;
-                    </ClickableBadge>;
-=======
-<<<<<<< HEAD
-
-},
-
-export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
-  onStatusChange,
-  onViewScore
-}: ApplicationsTableProps) {
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -355,11 +153,6 @@ export function ApplicationsTable({
     })
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <div className="rounded-md border">
@@ -377,11 +170,6 @@ export function ApplicationsTable({
 
             {applications.map((application) => (
               <TableRow key={application.id}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
@@ -411,43 +199,16 @@ export function ApplicationsTable({
                       className="cursor-pointer"
                       onClick={() => onViewScore(application)}
                     >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {application.match_score}%
                     </ClickableBadge>
                   ) : (
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
-<<<<<<< HEAD
-                <TableCell className='text-right'>
-                  <div className='flex items-center justify-end gap-2'>
-                    <ClickableBadge
-                      variant='outline'
-                      className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
-                      onClick={() => handleHireClick(application)}                    >
-                      <Briefcase className='h-3 w-3 mr-1' /> Hire
-                    </ClickableBadge>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                    <ApplicationActions
-                      application = {application,}
-                      processingId = {processingId,}
-                      onViewApplication = {onViewApplication,}
-                      onStatusChange = {onStatusChange,}
-<<<<<<< HEAD
-                    />;
-                  </div>;
-                </TableCell>;
-              </TableRow>;
-=======
                     />
                   </div>
                 </TableCell>
               </TableRow>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </TableBody>
         </Table>
@@ -474,18 +235,8 @@ export function ApplicationsTable({
   () => setAvatarError (true)
 }priority= {
   false "
-<<<<<<< HEAD
-}h-4 w-4"/>)
-}</AvatarPrimitive>)
-=======
-<<<<<<< HEAD
-}h-4 w-4"/>)
-}</AvatarPrimitive>)
-=======
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
@@ -567,18 +318,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed;
 }/> </>);
 }'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
     </>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

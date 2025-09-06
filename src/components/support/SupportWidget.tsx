@@ -149,11 +149,6 @@ function SupportWidget() {
         </div>)}
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 import React, { useState } from "react",
@@ -210,44 +205,11 @@ export function SupportWidget() {;
             <div className="flex items-center">
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Zion Support
               </h3>
             </div>
             <div className="flex items-center gap-2">
               <Button
-<<<<<<< HEAD
-                variant='ghost'
-                size='icon'
-                className='h-8 w-8 rounded-full'
-                onClick={() => router.push('/help')}
-                aria-label='Help center'              >
-                <Info className='h-5 w-5' />
-              </Button>
-              <Button
-                variant='ghost'
-                size='icon'
-                className='h-8 w-8 rounded-full'
-                onClick={() => setIsOpen(false)}
-                aria-label='Close support'              >
-                <X className='h-5 w-5' />
-              </Button>
-            </div>
-          </div>
-<<<<<<< HEAD
-          <ChatBotPanel />
-        </div>
-      )}
-    </>
-  )
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -268,7 +230,6 @@ export function SupportWidget() {;
             </div>
           </div>
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <ChatBotPanel />
         </div>
       )}
@@ -277,9 +238,3 @@ export function SupportWidget() {;
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

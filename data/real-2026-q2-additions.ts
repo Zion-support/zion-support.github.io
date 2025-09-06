@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const real2026Q2Additions = [
   {
-    id: 'ai-governance-compliance-hub',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const real2026Q2Additions = [
-  {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
@@ -49,46 +38,6 @@ export const real2026Q2Additions = [
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'
   }
-<<<<<<< HEAD
-    name: 'AI Governance & Compliance Hub',
-    category: 'AI & Data',
-    tagline:;
-      'Policy, risk, and model governance with automated evidence and audit trails.',
-    description:;
-      'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red - teaming evidence, and auditor - ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
-      'Policy mapping to ISO / IEC 23894, NIST AI RMF, EU AI Act',
-      'Automated risk and impact assessments with mitigations',
-      'Dataset lineage, consent tracking, and PII classification',
-      'Prompt and output red - teaming with evidence logging',
-      'Human - in - the - loop approvals and audit workflows',
-      'Realtime controls dashboard and drift alerts',
-      'Export auditor - ready reports (SOC2, ISO, HIPAA add - ons)',
-    ],
-    use_cases: [;
-      'Enterprise AI model governance',
-      'Regulatory readiness and audits',
-      'Vendor model risk management',
-    ],
-    integrations: [;
-      'Jira',
-      'ServiceNow',
-      'Slack',
-      'GitHub',
-      'Azure OpenAI',
-      'Vertex AI',
-      'Datadog',
-    ],
-    competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
-    price: '$2, 500',
-    period: '/month',
-    trialDays: 14,
-    setupTime: 'Fast',
-    marketPosition: 'Strong enterprise traction with compliance-led buyers',
-    roi: 'Reduce audit prep by 60% and non-compliance risk by 40%',
-    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-governance-compliance-hub',
-  },
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {
     id: 'ai-synthetic-data-factory'
     name: 'AI Synthetic Data Factory'
@@ -120,8 +69,6 @@ export const real2026Q2Additions = [
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory'
   }
-<<<<<<< HEAD
-=======
   {
     id: 'ecommerce-returns-orchestrator'
     name: 'E‑commerce Returns Orchestrator'
@@ -354,22 +301,6 @@ export const real2026Q2Additions = [
       'Ticketing and customer portals'
     ]
     useCases: [
-<<<<<<< HEAD
-      'MSPs and IT providers'
-      'Internal IT for SMBs'
-      'BYOD governance'
-    ]
-    integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow']
-    competitors: ['Atera', 'NinjaOne']
-    price: '$4'
-    period: '/device/month'
-    trialDays: 14
-    setupTime: 'Fast'
-    marketPosition: 'Cost-effective RMM for partners and IT teams'
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
-    link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-  }
-=======
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -387,7 +318,6 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Training data augmentation',
       'Privacy - preserving analytics',
       'Test data generation',
@@ -754,20 +684,10 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
-<<<<<<< HEAD
-    period: '/device/month',
-    trialDays: 14,
-    setupTime: 'Fast',
-    marketPosition: 'Cost-effective RMM for partners and IT teams',
-    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup ;
-=======
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
     period: '/device / month',
     trial_days: 14,
@@ -788,24 +708,6 @@ export const real2026Q2Additions = [
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
-<<<<<<< HEAD
-  }
-];
-
-    period: '/device / month';
-    trial_days: 14;
-    setup_time: 'Fast';
-    market_position: 'Cost - effective RMM for partners and IT teams';
-    roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
-    link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
-=======
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const real2026Q2Additions = [;
   {;
     id: 'ai-governance-compliance-hub',;
@@ -1008,11 +910,6 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

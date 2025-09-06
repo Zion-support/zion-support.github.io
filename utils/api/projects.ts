@@ -1,61 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-<<<<<<< HEAD
-  Project,
-  Milestone,
-  MilestoneStatus,
-  isMilestoneStatus,
-  isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-
-  isMilestoneStatus;
-} from '../types / milestones';
-import { CurrentUser } from './auth';
-;
-export interface Milestone {
-  id: string;
-  title: string;
-  description?: string;
-  due_date: string;
-  amount_usd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: any[];
-  created_at: string;
-  updated_at: string;
-}
-// Mock storage
-const projects: Project[] = [];
-export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) || null;
-=======
-<<<<<<< HEAD
-  Project,
-  Milestone,
-  MilestoneStatus,
-<<<<<<< HEAD
-=======
   Project
   Milestone
   MilestoneStatus
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   isMilestoneStatus
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 export interface Milestone {
-=======
   isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   summary: string;
@@ -87,52 +41,25 @@ export interface Milestone {;
 }
 // Mock storage
 const projects: Project[] = [];
-<<<<<<< HEAD
-export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) |null;
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return projects && projects.find(p => p && p.id === id) || null,
 }
 export function getAllProjects(): Project[] {
-<<<<<<< HEAD
-=======
-=======
 
 export function getProjectById(id: string): Project | null {;
   return projects.find(p => p.id === id) || null;
 }
 
 export function getAllProjects(): Project[] {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-<<<<<<< HEAD
-  }
-  projects.push(newProject);
-  return newProject;
-}
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
-=======
   };
   projects && projects.push(newProject);
 
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-=======
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -143,8 +70,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 
 export function updateProject(id: string, updates: Partial<Project>): Project | null {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const project = projects.find(p => p.id === id);
   if (!project) return null;
   
@@ -157,19 +82,6 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
     ...milestone,
@@ -178,8 +90,6 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
 
     updatedAt: new Date().toISOString();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   };
   
   project.milestones.push(newMilestone);
@@ -193,16 +103,8 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return newMilestone;
 }
-<<<<<<< HEAD
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-=======
-<<<<<<< HEAD
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-=======
 
 export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
   
@@ -216,16 +118,8 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
   
   return milestone;
 }
-<<<<<<< HEAD
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
-=======
-<<<<<<< HEAD
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
-=======
 
 export function deleteMilestone(project: Project, milestoneId: string): boolean {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
   
@@ -303,16 +197,4 @@ if (return false) {
 ;
   return true;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

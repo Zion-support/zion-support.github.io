@@ -1,20 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default async function handler(
   req: NextApiRequest
@@ -119,17 +112,8 @@ if ( {) {
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
-<<<<<<< HEAD
-      // Check condition
-if ( {) {
-  $2
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     const { action, reviewId, updates } = req.body as {
       action: Action, reviewId: string,
       updates?: { rating?: number, text?: string }
@@ -181,17 +165,8 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

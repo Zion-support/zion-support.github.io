@@ -1,15 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export const useSocialAuth = () => {
@@ -142,21 +135,10 @@ if ( {) {
     }
   }
 ;
-<<<<<<< HEAD
-=======
-=======
 
         title: "Twitter login failed",
         description: error.message || "An unexpected error occurred",
         variant: "destructive"})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 export const useSocialAuth = () => {;
@@ -214,11 +196,6 @@ export const useSocialAuth = () => {;
         variant: "destructive"});
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 }
 ;

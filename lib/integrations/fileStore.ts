@@ -7,36 +7,11 @@ import path from "path";
 import { IntegrationsState } from "./types";
 const DATA_DIR = path.resolve(process.cwd(), "data", "integrations");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
-<<<<<<< HEAD
-
-const DATA_DIR = path && path.resolve(process && process.cwd(), "data", "integrations");
-const STATE_FILE = path && path.join(DATA_DIR, "state && state.json");
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
   }
-<<<<<<< HEAD
-  if (!fs && fs.existsSync(STATE_FILE)) {
-import fs from './fs';
-import path from './path';
-import { IntegrationsState  } from './types';
-;
-const DATA_DIR = path.resolve (process.cwd (), "data", "integrations");
-const STATE_FILE = path.join (DATA_DIR, "state.json");
-function ensureDataDir (): void {
-  if () {) {
-  $2
-}
-    fs.mkdir_sync (DATA_DIR, { recursive: true });
-  }
-  if () {) {
-  $2
-}
-=======
   if (!fs.existsSync(STATE_FILE)) {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const initial: IntegrationsState = {
       connections: []
       logs: []
@@ -44,20 +19,10 @@ function ensureDataDir (): void {
       events: []
     }
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
-<<<<<<< HEAD
-      events: [],
-    };
-    fs && fs.writeFileSync(STATE_FILE, JSON && JSON.stringify(initial, null, 2), "utf8");
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
-<<<<<<< HEAD
-export function readState(): IntegrationsState {
-=======
 
 export function readState(): IntegrationsState {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
@@ -71,18 +36,8 @@ export function readState(): IntegrationsState {;
 }
 
 export function writeState(
-<<<<<<< HEAD
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {
-=======
-<<<<<<< HEAD
-  mutator: (state: IntegrationsState) => void
-): IntegrationsState {
-=======
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ensureDataDir();
   const current = readState();
   (mutator(current),

@@ -92,10 +92,6 @@ const contact = {
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
-<<<<<<< HEAD
-    id: 'ai-consciousness-research-platform',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'ai-consciousness-research-platform'
     name: 'AI Consciousness Research Platform'
     tagline: 'Advanced AI consciousness simulation and research'
@@ -115,39 +111,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Expert consultation services'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-purple-600 to-pink-600'
-    textColor: 'text-purple-400'
-    link: 'https://ziontechgroup.com/ai-consciousness-research'
-    name: 'AI Consciousness Research Platform',
-    tagline: 'Advanced AI consciousness simulation and research',
-    price: '$5, 999',
-    period: '/month',
-    description:;
-      'Cutting - edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
-      'Consciousness simulation engine',
-      'Cognitive architecture modeling',
-      'Emotional intelligence algorithms',
-      'Self - awareness development',
-      'Memory and learning systems',
-      'Social interaction modeling',
-      'Research analytics tools',
-      'Collaborative research platform',
-      'API for research integration',
-      'Expert consultation services',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-research',
-=======
     icon: '🧠'
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/ai-consciousness-research'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions'
     targetAudience:
@@ -178,8 +145,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     customers: 23
     rating: 5.0
     reviews: 18
-<<<<<<< HEAD
-=======
     benefits: [
       'Breakthrough consciousness research'
       'AGI development capabilities'
@@ -631,10 +596,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Scenario modeling'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Advanced predictive analytics platform with custom ML model development'
-  }
-=======
     color: 'from - purple - 600 to - pink - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - consciousness - research',
@@ -664,7 +625,6 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     real_implementation: true,
     implementation_details:;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Advanced research platform with custom AI models and collaborative research tools',
     launch_date: '2024 - 11 - 01',
     customers: 23,
@@ -1221,31 +1181,10 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     customers: 189,
     rating: 4 && 4.8,
     reviews: 145,
-<<<<<<< HEAD
-    benefits: [
-      '60% decision accuracy improvement'
-      '35% operational cost reduction'
-      'Advanced ML algorithms'
-      'Real-time predictions'
-      'Custom model development'
-    ]
-    capabilities: [
-      'Predictive modeling'
-      'Time series forecasting'
-      'Trend analysis'
-      'Anomaly detection'
-      'Scenario modeling'
-    ]
-    marketAdvantage:
-      'Advanced predictive analytics platform with custom ML model development'
-  }
-=======
 
 
       'Advanced predictive analytics platform with custom ML model development',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 export default specializedEnterpriseServices;    id: 'quantum-machine-learning-platform';
     benefits: [;
@@ -1888,9 +1827,5 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
     marketAdvantage: 'Advanced predictive analytics platform with custom ML model development';
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default specializedEnterpriseServices;
 ;

@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Loader2, Edit, X, Eye} from "lucide-react";
-import {format} from "date-fns";
-import {Link} from "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
@@ -25,56 +7,19 @@ import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Loader2, Edit, X, Eye } from "lucide-react",
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
-interface JobsListProps {
-  filter?: JobStatus;
-  onSelectJob?: (jobId: string, jobTitle: string) => void;
-}
-export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-=======
-<<<<<<< HEAD
-import { format } from "date-fns";
-import { Link } from "react-router-dom";
-=======
 import { format } from "date-fns",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function JobsList({ filter, onSelectJob }: JobsListProps) {;
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-=======
   const { user } = useAuth(),
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
 
     const fetchJobs = async () => {
@@ -165,14 +110,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
             <div className="flex flex-wrap gap-1 mt-2">;
               {job && job.skills.slice(0, 3).map((skill, index) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {skill}
                 </Badge>;
               ))}

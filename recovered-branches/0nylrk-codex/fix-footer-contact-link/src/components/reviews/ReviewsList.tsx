@@ -1,25 +1,11 @@
 
-<<<<<<< HEAD
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Review } from "@/types/reviews";
-import { ReviewCard } from "./ReviewCard";
-=======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {Review} from "@/types/reviews";
 import {ReviewCard} from "./ReviewCard";
-=======
 import { Review } from "@/types/reviews",
 import { ReviewCard } from "./ReviewCard",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
@@ -38,24 +24,6 @@ export function ReviewsList({
           .map ((_, i) => (
             <div;
               key={i}
-<<<<<<< HEAD
-              className="border rounded - lg p - 4 bg - card animate - pulse";
-            >;
-              <div className="flex items - center gap - 3 mb - 3">;
-                <div className="h - 10 w - 10 rounded - full bg - muted"></div>;
-                <div>;
-                  <div className="h - 4 w - 24 bg - muted rounded mb - 2"></div>;
-                  <div className="h - 3 w - 16 bg - muted rounded"></div>;
-                </div>;
-              </div>;
-              <div className="h - 20 bg - muted rounded mb - 3"></div>;
-              <div className="flex gap - 2">;
-                <div className="h - 6 w - 16 bg - muted rounded"></div>;
-                <div className="h - 6 w - 16 bg - muted rounded"></div>;
-              </div>;
-            </div>))}
-      </div>);
-=======
               className="border rounded-lg p-4 bg-card animate-pulse"
             >
               <div className="flex items-center gap-3 mb-3">
@@ -71,23 +39,12 @@ export function ReviewsList({
                 <div className="h-6 w-16 bg-muted rounded"></div>
               </div>
             </div>
-<<<<<<< HEAD
-          ))}
-      </div>
-    );
-  }
-=======
             <div className="h-20 bg-muted rounded mb-3"></div>
             <div className="flex gap-2">
               <div className="h-6 w-16 bg-muted rounded"></div>
               <div className="h-6 w-16 bg-muted rounded"></div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Review } from "@/types/reviews",;
 import { ReviewCard } from "./ReviewCard",;
 interface ReviewsListProps {;
@@ -115,14 +72,9 @@ export function ReviewsList(): any ({ reviews, isLoading, onReportReview }: Revi
               <div className="h-6 w-16 bg-muted rounded"></div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>;
     );
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (reviews.length === 0) {
     return (
@@ -160,10 +112,7 @@ if ( {) {
         <ReviewCard key={review.id} review={review} on_report={onReportReview} />))}
     </div>);
 }
-<<<<<<< HEAD
-=======
 
-=======
     <div className="space-y-4">
       {reviews.map((review) => (
 
@@ -175,12 +124,6 @@ if ( {) {
 
       ))}
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,28 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
-  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -32,23 +11,12 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 interface PdfExportButtonProps {
   resume: Resume
 }
-<<<<<<< HEAD
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-=======
-<<<<<<< HEAD
-export function PdfExportButton({ resume }: PdfExportButtonProps) {
-  const [isExporting, setIsExporting] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const [includePortfolio, setIncludePortfolio] = useState(true);
-=======
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -73,29 +41,15 @@ interface PdfExportButtonProps {;
 }
 
 export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isExporting, setIsExporting] = useState(false);
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [includePortfolio, setIncludePortfolio] = useState(true);
 
-<<<<<<< HEAD
-  const [fontFamily, setFontFamily] = useState<FontFamily>('default');
-  const handleExport = async () => {
-    if (isExporting) return;
-    setIsExporting(true);
-=======
   const [includePortfolio, setIncludePortfolio] = useState(true),
   const [fontFamily, setFontFamily] = useState<FontFamily>('default'),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
@@ -103,7 +57,6 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
     
     setIsExporting(true),
     
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     try {
       const options: ExportOptions = {
         theme;
@@ -170,7 +123,6 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
           <DropdownMenuRadioItem value="roboto">Roboto</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
         <DropdownMenuSeparator />
-<<<<<<< HEAD
         <DropdownMenuCheckboxItem
           checked={includePortfolio}
           onCheckedChange={setIncludePortfolio}
@@ -185,27 +137,6 @@ export function PdfExportButton(): any ({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>
     </DropdownMenu>
   )
-=======
-        <DropdownMenuCheckboxItem
-          checked={includePortfolio}
-          onCheckedChange={setIncludePortfolio}
-        >
-          Include Portfolio Projects
-        </DropdownMenuCheckboxItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem onClick={handleExport}>
-          <Download className="h-4 w-4 mr-2" />
-          Download PDF
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -299,11 +230,6 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';

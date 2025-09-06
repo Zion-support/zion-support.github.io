@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { defineConfig } from 'vite';
-=======
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 ;
@@ -59,12 +55,7 @@ export default defineConfig({
       '@': path && path.resolve(__dirname, './src')
     },
     extensions: ['.js && js.jsx.ts && ts.tsx']
-<<<<<<< HEAD
-=======
-=======
 
-=======
-=======
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import {defineConfig, splitVendorChunkPlugin} from 'vite';
 import react from '@vitejs/plugin-react';
@@ -91,7 +82,6 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   },
   build: {
     target: 'esnext'
@@ -151,24 +141,6 @@ export default defineConfig({
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
-<<<<<<< HEAD
-        assetFileNames: (asset_info) => {
-          const name = asset_info.name || '';
-          if ($/.test (name)) return 'images/[name]-[hash].[ext]') {
-  $2
-}
-          if ($/.test (name)) return 'fonts/[name]-[hash].[ext]') {
-  $2
-}
-          if ($/.test (name)) return 'css/[name]-[hash].[ext]') {
-  $2
-}
-          return 'assets/[name]-[hash].[ext]';
-          if (/\.(css)$/.test(assetInfo ;
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo && assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo && assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
-          return 'assets/[name]-[hash].[ext]',
-=======
         assetFileNames: (assetInfo) => {
           if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
@@ -194,7 +166,6 @@ export default defineConfig({
         safari10: true,
         properties: {
           regex: /^_/
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
     },
@@ -361,12 +332,7 @@ export default defineConfig({
 })
 });
 					const name = assetInfo ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-=======
 });
 
 
@@ -382,10 +348,6 @@ export default defineConfig({
   }
 });
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
     },
     terserOptions: {
@@ -458,4 +420,3 @@ export default defineConfig({
     },
   },
 });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,31 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react"
-import {Header} from "@/components/Header"
-import {SEO} from "@/components/SEO"
-import {useAuth} from "@/hooks/useAuth"
-import {useRouter} from "next/router"
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card"
-import {Input} from "@/components/ui/input"
-import {Label} from "@/components/ui/label"
-import {Button} from "@/components/ui/button"
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs"
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select"
-import {toast} from "sonner"
-import {supabase} from "@/integrations/supabase/client"
-import {Switch} from "@/components/ui/switch"
-import {logErrorToProduction} from '@/utils/productionLogger'
-export default function TenantOnboarding() {
-  const { user } = useAuth()
-  const [activeTab, setActiveTab] = useState("company")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -39,31 +12,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Switch } from "@/components/ui/switch";
-import { logErrorToProduction } from '@/utils/productionLogger';
-export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-=======
-=======
 import { Switch } from "@/components/ui/switch",
 import { logErrorToProduction } from '@/utils/productionLogger',
 export default function TenantOnboarding() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [formData, setFormData] = useState({
 
     brand_name: ""
@@ -76,25 +30,12 @@ export default function TenantOnboarding() {
     custom_domain: ""
 
     is_co_branded: true
-<<<<<<< HEAD
-  });
-  // Check if user has admin role
-  const isAdmin = null;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  });
-  // Check if user has admin role
-  const isAdmin = null;
-=======
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
       };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }),
   
   // Check if user has admin role
@@ -181,8 +122,6 @@ export default function TenantOnboarding() {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>
       <SEO 
@@ -455,15 +394,7 @@ export default function TenantOnboarding() {;
       }
   );
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -502,12 +433,5 @@ function TenantOnboarding() {
       }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

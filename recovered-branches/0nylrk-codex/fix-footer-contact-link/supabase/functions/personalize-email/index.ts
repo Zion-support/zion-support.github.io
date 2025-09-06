@@ -1,38 +1,17 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts"
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-=======
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -229,24 +208,10 @@ if ( {) {
     return new Response (JSON.stringify (generated_content), {
       headers: { ...cors_headers, "Content - Type": "application / json" }});
   } catch (error) {
-<<<<<<< HEAD
-    console.error ("Error in personalize - email function:", error);
-    return new Response (JSON.stringify ({ error: error.message }), {
-      status: 500,
-      headers: { ...cors_headers, "Content - Type": "application / json" }});
-=======
     console.error("Error in personalize-email function:", error),
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-});
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -346,11 +311,6 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

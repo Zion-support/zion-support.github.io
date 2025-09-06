@@ -1,39 +1,15 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
 import {toast} from "sonner";
 import {useAuth} from "./useAuth";
 import {createJob, updateJob, getJobById} from "@/services/jobService";
-<<<<<<< HEAD
-export const useJobs = (userId?: string, status?: JobStatus) => {
-=======
-<<<<<<< HEAD
-export const useJobs = (userId?: string, status?: JobStatus) => {
-=======
 export const useJobs = (userId?: string, status?: JobStatus) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  const clientId = userId |user?.id;
-=======
-<<<<<<< HEAD
-  const clientId = userId |user?.id;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { Job, JobStatus } from "@/types/jobs",
@@ -50,9 +26,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
   
   const clientId = userId || user?.id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const fetchJobs = async () => {
     if (!clientId) {
       setIsLoading(false);
@@ -130,19 +103,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     createJob;
     updateJob
     getJobById
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-}
-
-    delete_job;
-    create_job;
-    update_job,
-    getJobById;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Job, JobStatus } from "@/types/jobs",;
@@ -234,11 +194,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
     createJob,;
     updateJob;
     getJobById;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 

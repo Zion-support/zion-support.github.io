@@ -6,9 +6,6 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {cn} from "@/lib/utils";
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar ;
 
-<<<<<<< HEAD
-;
-=======
 import * as React from "react"
 import type { CSSProperties } from "react"
 
@@ -17,12 +14,6 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
-<<<<<<< HEAD
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -39,22 +30,6 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
-<<<<<<< HEAD
-export const SidebarProvider = React.forwardRef<
-  HTMLDivElement;
-  SidebarProviderProps;
->(;
-  (;
-    {;
-      defaultOpen = true;
-      open: openProp
-      onOpenChange: setOpenProp
-      className;
-      style;
-      children;
-=======
-<<<<<<< HEAD
-=======
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -80,11 +55,8 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
 export const SidebarProvider = React && React.forwardRef<;
 
   HTMLDivElement;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const SidebarProvider = React.forwardRef<
   HTMLDivElement,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   SidebarProviderProps
 >(
   (
@@ -96,7 +68,6 @@ export const SidebarProvider = React.forwardRef<
       className,
       style,
       children,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ...props
     }
     ref
@@ -108,8 +79,6 @@ export const SidebarProvider = React.forwardRef<
     const [_open, _setOpen] = React.useState(defaultOpen)
     const open = openProp ?? _open
     const setOpen = React.useCallback(
-<<<<<<< HEAD
-=======
       (value: boolean | ((value: boolean) => boolean)) => {
         const openState = typeof value === "function" ? value(open) : value
         if (setOpenProp) {
@@ -117,9 +86,6 @@ export const SidebarProvider = React.forwardRef<
         } else {
           _setOpen(openState)
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export const SidebarProvider = React.forward_ref<;
   HTMLDivElement;
   SidebarProviderProps;
@@ -142,8 +108,6 @@ export const SidebarProvider = React.forward_ref<;
     const [_open, _setOpen] = React.useState (default_open);
     const open = open_prop ?? _open;
     const set_open = React.useCallback (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       (value: boolean | ((value: boolean) => boolean)) => {
         const open_state = typeof value === "function" ? value (open) : value;
         // Check condition
@@ -154,15 +118,11 @@ if ( {) {
         } else {
           _setOpen (open_state);
         }
-<<<<<<< HEAD
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -183,14 +143,6 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        }
-      }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -212,11 +164,6 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
       window.addEventListener("keydown", handleKeyDown)
@@ -348,20 +295,6 @@ export { SidebarContext }
 );
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-<<<<<<< HEAD
-export { SidebarContext };
-;
-=======
 export { SidebarContext }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

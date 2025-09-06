@@ -1,37 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import Link from 'next/link';
-import { useRouter  } from 'next/router';
-import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { ModeToggle  } from '@/components/ModeToggle';
-import { useTranslation } from 'react-i18next';
-export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;
-  openLoginModal: (returnToPath: string) => void, // Added from plan
-}
-
-// Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
-// These are routes that should trigger the login modal if accessed while unauthenticated.
-const protectedRoutes = null;
-                // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
-                // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
-<<<<<<< HEAD
-=======
-=======
 name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),  )
 }
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -59,7 +30,6 @@ function isProtectedRoute(href: string): boolean {;
   return protectedRoutes.some(route => href.startsWith(route));
 }
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               }
               onClose(), // Close mobile menu on any click
             }}
@@ -91,17 +61,6 @@ name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),
 }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

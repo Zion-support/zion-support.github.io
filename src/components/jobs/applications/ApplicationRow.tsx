@@ -1,35 +1,13 @@
-<<<<<<< HEAD
-import { formatDistanceToNow } from 'date-fns'
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-=======
-<<<<<<< HEAD
-import { formatDistanceToNow } from 'date-fns'
-<<<<<<< HEAD
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-=======
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict
 import { TableRow, TableCell } from '@/components/ui/table'
 import { JobApplication, ApplicationStatus } from '@/types/jobs'
 import { StatusBadge } from './StatusBadge'
-<<<<<<< HEAD
-import { ScoreBadge } from './ScoreBadge'
-import { ApplicationActions } from './ApplicationActions'
-import Image from 'next/image'; // Import next/image
-import React, { useState } from 'react'; // Import useState
-=======
 import { ScoreBadge } from './ScoreBadge';
 import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
-=======
 import { formatDistanceToNow } from "date-fns",
 import { Calendar, User, FileText, BarChart } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -41,13 +19,7 @@ import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ApplicationRowProps {
   application: JobApplication;
   processing_id: string | null;
@@ -64,15 +36,6 @@ interface ApplicationRowProps {
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>
   onViewScore: (application: JobApplication,) => void
 
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ApplicationRow({
 
   application
@@ -82,60 +45,9 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name |'Unknown'
-import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed to avoid conflict;
-import { TableRow, TableCell } from '@/components/ui/table';
-import { JobApplication, ApplicationStatus } from '@/types/jobs';
-import { StatusBadge } from './StatusBadge';
-import { ScoreBadge } from './ScoreBadge';
-import { ApplicationActions } from './ApplicationActions';
-import Image from 'next/image'; // Import next/image;
-import React, { useState } from 'react'; // Import useState;
 
-interface ApplicationRowProps {;
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (;
-    applicationId: string,;
-    newStatus: ApplicationStatus;
-  ) => Promise<void>;
-  onViewScore: (application: JobApplication) => void;
-interface ApplicationRowProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string,) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus,) => Promise<void>,;
-  onViewScore: (application: JobApplication,) => void;
-}
-
-export function ApplicationRow(): any ({;
-  application,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationRowProps) {;
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application && application.talent_profile?.full_name || 'Unknown';
-
-=======
-<<<<<<< HEAD
-  const talentName = application.talent_profile?.full_name |'Unknown'
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-=======
   const talentName = application.talent_profile?.full_name || 'Unknown'
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <TableRow key={application && application.id}>;
       <TableCell>;
@@ -151,22 +63,10 @@ export function ApplicationRow(): any ({;
                 height={36} // Corresponds to h-9 w-9
                 className='rounded-full object-cover' // Ensure rounded and object-cover
                 onError={() => setAvatarError(true)}
-<<<<<<< HEAD
-                priority={false}              />;
-            ) : (;
-              <User className='h-5 w-5 text-gray-400' />;
-=======
                 priority={false}
               />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ) : (
               <User className="h-5 w-5 text-gray-400" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
           </AvatarPrimitive>
           <div>
@@ -178,15 +78,7 @@ export function ApplicationRow(): any ({;
         </div>
       </TableCell>
       <TableCell>
-<<<<<<< HEAD
-        <div className='flex items-center gap-1'>
-          <Calendar className='h-4 w-4 text-muted-foreground' />
-          <span>
-            {formatDistanceToNow(new Date(application.created_at), {
-              addSuffix: true
-=======
 
-=======
 
         <div className="flex items-center gap-1">
           <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -206,11 +98,6 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <ScoreBadge application={application} />
         </Button>
       </TableCell>
@@ -276,13 +163,11 @@ export function ApplicationRow({;
             ) : (;
               <User className="h-5 w-5 text-gray-400" />;
             )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AvatarPrimitive>;
           <div>;
             <div className='font-medium'>{talentName}</div>;
             <div className='text-xs text-muted-foreground'>;
               {application && application.talent_profile?.professional_title || 'Talent'}
-=======
     application_id: string,
     new_status: ApplicationStatus) => Promise < void>;
   onViewScore: (application: JobApplication) => void;
@@ -321,8 +206,6 @@ function ApplicationRow() {
             <div className='font - medium'>{talent_name}</div>;
             <div className='text - xs text - muted - foreground'>;
               {application.talent_profile?.professional_title || 'Talent'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>;
           </div>;
         </div>;
@@ -380,14 +263,7 @@ function ApplicationRow() {
     </TableRow>
   )
 }
-<<<<<<< HEAD
-
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {application.resume ? (
           <Button variant='ghost' size='sm' as_child>;
             <a;
@@ -410,12 +286,5 @@ function ApplicationRow() {
       </TableCell>;
     </TableRow>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

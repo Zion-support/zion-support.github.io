@@ -1,50 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useEffect  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { useReferrals  } from '@/hooks/useReferrals';
-import { ReferralStats  } from '@/components/referrals/ReferralStats';
-import { ReferralLink  } from '@/components/referrals/ReferralLink';
-import { ReferralTable  } from '@/components/referrals/ReferralTable';
-import { RewardsCard  } from '@/components/referrals/RewardsCard';
-import { ReferralGuide  } from '@/components/referrals/ReferralGuide';
-import { ReferralLeaderboard  } from '@/components/referrals/ReferralLeaderboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button  } from '@/components/ui/button';
-import { toast  } from '@/hooks/use-toast';
-import { Share, Users  } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-export default function ReferralsPage() {
-
-<<<<<<< HEAD
-import {useEffect} from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {useReferrals} from '@/hooks / useReferrals';
-import {ReferralStats} from '@/components / referrals / ReferralStats';
-import {ReferralLink} from '@/components / referrals / ReferralLink';
-import {ReferralTable} from '@/components / referrals / ReferralTable';
-import {RewardsCard} from '@/components / referrals / RewardsCard';
-import {ReferralGuide} from '@/components / referrals / ReferralGuide';
-import {ReferralLeaderboard} from '@/components / referrals / ReferralLeaderboard';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import {Button} from '@/components / ui / button';
-import {toast} from '@/hooks / use - toast';
-import {Share, Users} from 'lucide-react';
-import {useNavigate} from 'react-router-dom';
-export default function ReferralsPage() {;
-  const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
-  const {;
-    isLoading;
-    referralCode;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {use_navigate} from 'react-router-dom';
 export default /**
  * ReferralsPage - Function description
@@ -61,9 +15,6 @@ function ReferralsPage() {
     getReferralLink;
     copyReferralLink;
     shareOnSocialMedia} = useReferrals();
-<<<<<<< HEAD
-=======
-=======
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -82,8 +33,6 @@ import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -113,9 +62,6 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     if (!isAuthenticated) {
       toast({
@@ -123,9 +69,6 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program"
         variant: "destructive"})
       navigate("/login")
-<<<<<<< HEAD
-=======
-=======
 
   useEffect(() => {;
     if (!isAuthenticated) {;
@@ -134,7 +77,6 @@ export default function ReferralsPage() {
         description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
 
@@ -192,12 +134,6 @@ export default function ReferralsPage() {
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -232,7 +168,6 @@ export default function ReferralsPage() {;
         description: "Please login to access the referral program",;
         variant: "destructive"}),;
       navigate("/login");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
@@ -292,13 +227,6 @@ export default function ReferralsPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </div>);
 }

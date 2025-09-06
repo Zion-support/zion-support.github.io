@@ -1,16 +1,6 @@
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
-<<<<<<< HEAD
-
-  Bell
-  FileText
-  Home
-  Mail
-  Search
-  Settings
-  Users
-<<<<<<< HEAD
 } from "lucide-react";
 import {
   Sidebar
@@ -21,18 +11,6 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
-=======
-} from "lucide-react";
-import {
-  Sidebar
-  SidebarContent
-  SidebarGroup
-  SidebarMenu
-  SidebarMenuItem
-  SidebarMenuButton
-  SidebarGroupLabel
-  SidebarGroupContent
-=======
   Bell,
   FileText,
   Home,
@@ -50,56 +28,13 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
   SidebarGroupContent,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
   return (
-<<<<<<< HEAD
-    <Sidebar>
-      <SidebarContent>
-        <SidebarGroup>
-          <SidebarGroupLabel>Dashboard</SidebarGroupLabel>
-          <SidebarGroupContent>
-            <SidebarMenu>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/creator-dashboard">
-                    <Home size={16} />
-                    <span>Home</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/messaging">
-                    <Mail size={16} />
-                    <span>Messages</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton asChild>
-                  <a href="/notifications">
-                    <Bell size={16} />
-                    <span>Notifications</span>
-                  </a>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            </SidebarMenu>
-          </SidebarGroupContent>
-        </SidebarGroup>
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -123,17 +58,9 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -158,42 +85,7 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
     </Sidebar>
-                  </a>;
-                </SidebarMenuButton>;
-              </SidebarMenuItem>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
-                  <a href="/messaging">;
-                    <Mail size={16} />;
-                    <span>Messages</span>;
-                  </a>;
-                </SidebarMenuButton>;
-              </SidebarMenuItem>;
-              <SidebarMenuItem>;
-                <SidebarMenuButton asChild>;
-                  <a href="/notifications">;
-                    <Bell size={16} />;
-                    <span>Notifications</span>;
-                  </a>;
-                </SidebarMenuButton>;
-              </SidebarMenuItem>;
-            </SidebarMenu>;
-          </SidebarGroupContent>;
-        </SidebarGroup>;
-
-=======
-<<<<<<< HEAD
-=======
-    </Sidebar>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
@@ -209,7 +101,6 @@ export function AppSidebar() {;
   return (;
     <Sidebar>;
       <SidebarContent>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <SidebarGroup>;
           <SidebarGroupLabel>Content</SidebarGroupLabel>;
           <SidebarGroupContent>;

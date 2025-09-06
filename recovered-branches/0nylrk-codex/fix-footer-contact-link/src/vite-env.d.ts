@@ -34,51 +34,7 @@ declare let process: {env: {;
 }
 // Badge component type fixes
 declare module '@/components/ui/badge' {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   export interface BadgeProps {
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-  export interface BadgeProps {};
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  export const Badge: React.FC<BadgeProps>;
-}
-interface ImportMeta {
-  readonly env: ImportMetaEnv;
-}
-// Global type declarations;
-declare namespace React {
-  type ReactNode = React.ReactNode,
-  type FC < P = {}> = React.FC < P>,
-  type FormEvent < T = Element> = React.FormEvent < T>,
-  type KeyboardEvent < T = Element> = React.KeyboardEvent < T>,
-  type ChangeEvent < T = Element> = React.ChangeEvent < T>;
-}
-// Type declarations for modules used in Vite configuration;
-declare module 'vitest / config' {
-  export { define_config } from 'vite';
-}
-declare module '@vitejs/plugin-react - swc' {
-  import { Plugin } from 'vite',
-  export default function reactSWC (): Plugin;
-}
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
-    onDisconnect?: () => void;
-    className?: string;
-=======
-<<<<<<< HEAD
-=======
-  export interface BadgeProps {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     className?: string,
     variant?: "default" | "secondary" | "destructive" | "outline",
     children?: React.ReactNode,
@@ -86,7 +42,6 @@ declare module '@livekit/components-react' {export interface VideoCallProps {;
 },;
 // Badge component type fixes;
 declare module '@/components / ui / badge' {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   export interface BadgeProps {
   }
   export const Badge: React.FC<BadgeProps>;
@@ -123,50 +78,11 @@ declare module '@/components/ChatAssistant/ChatMessage' {export interface ChatMe
     message: string;
     timestamp?: Date;
     key?: string | number;
-<<<<<<< HEAD
-  }
-}
-// ProductListingCard type fixes;
-declare module '@/components/ProductListingCard' {export interface ProductListingCardProps {;
-    listing: any;
-    view?: any,  // Made optional to fix the errors;
-    onRequestQuote: (listingId: string) => void;
-    key?: string | number;
-  }
-  export const ProductListingCard: React.FC<ProductListingCardProps>;
-}
-// Removed custom lucide-react stub;
-// Create a replacement stub for LiveKit components;
-declare module '@livekit/components-react' {export interface VideoCallProps {;
-    room?: string;
-    token?: string;
-    serverUrl?: string;
-    onDisconnect?: () => void;
-    className?: string;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
-<<<<<<< HEAD
-declare module '@livekit/components-styles' {// Empty stub for the styles;
-=======
-<<<<<<< HEAD
-declare module '@livekit/components-styles' {// Empty stub for the styles;
-}
-=======
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // ProductListingCard type fixes;
 declare module '@/components/ProductListingCard' {;
   export interface ProductListingCardProps {;
@@ -191,10 +107,6 @@ declare module '@livekit / components - react' {
   export const LiveKitRoom: React.FC < any>;
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }
@@ -203,6 +115,4 @@ declare module '@livekit/components-styles' {;
 declare module '@livekit/components-styles' {;
 
   // Empty stub for the styles;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

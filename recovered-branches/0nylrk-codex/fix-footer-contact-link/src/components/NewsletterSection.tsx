@@ -1,25 +1,11 @@
 
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
-=======
 import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -36,21 +22,8 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
   )
-=======
   )
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { GradientHeading } from "@/components/GradientHeading",;
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {;
@@ -63,7 +36,6 @@ export function NewsletterSection() {;
             Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.;
           </p>;
           <div className="max-w-md mx-auto">;
-=======
 import { GradientHeading  } from '@/components / GradientHeading';
 import { EnhancedNewsletterForm  } from '@/components / EnhancedNewsletterForm';
 export /**
@@ -81,7 +53,6 @@ function NewsletterSection() {
           </p>;
           <div className="max - w-md mx - auto">;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <EnhancedNewsletterForm />;
           </div>;
         </div>;
@@ -91,19 +62,10 @@ function NewsletterSection() {
 }
     </section>);
 }
-<<<<<<< HEAD
-=======
 
-=======
 
   )
-=======
   )
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

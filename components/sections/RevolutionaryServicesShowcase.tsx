@@ -238,38 +238,8 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
         <motion.div
-<<<<<<< HEAD
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
-  return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
-=======
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-=======
-<<<<<<< HEAD
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -300,31 +270,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
           </p>
         </motion.div>
         {/* Category Filter */}
-<<<<<<< HEAD
-        <motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div
-            </span>;
-            <br />;
-            <span className="text-white">Services</span>;
-          </h2>;
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
-            Experience the future with our cutting-edge AI, quantum computing, and emerging technology solutions. ;
-            Transform your business with services that were once science fiction.;
-          </p>;
-        </motion && motion.div>;
 
-        {/* Category Filter */}
-        <motion&& motion.div
-          className='flex flex-wrap justify-center gap-4 mb-12'        <motion && motion.div 
-          className="flex flex-wrap justify-center gap-4 mb-12"
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
@@ -345,39 +291,16 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25';
                   : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600/50';
               }`}
-<<<<<<< HEAD
-            >;
-              {category && category.name}
-              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category && category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">;
-                {category && category.count}
-              </span>;
-            </button>;
-          ))}
-        </motion.div>
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </span>
             </button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </motion && motion.div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Services Grid */}
         <motion&& motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -392,14 +315,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               key={service && service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
@@ -542,19 +458,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
                   </div>;
                 )}
                 {/* Service Header */}
-<<<<<<< HEAD
-                <div className='relative z-10'>
-                  <div className='flex items-start justify-between mb-4'>
-                    <div className='flex items-center space-x-3'>
-                      <div className='text-4xl'>{service.icon}</div>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
                           {service.name}
@@ -720,62 +624,28 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
               </div>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
-        </motion.div>
-        {/* Load More Button */}
-        {visibleServices < filteredServices.length && (
-          <motion.div
-            className='text-center'            initial={{ opacity: 0 }}          <motion.div
-          <motion.div 
-            className="text-center"
-=======
 
         </motion && motion.div>;
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div
-<<<<<<< HEAD
-            className='text-center'            initial={{ opacity: 0 }}          <motion.div
-=======
 
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             className="text-center"
-=======
 
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div
             className='text-center'            initial={{ opacity: 0 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
-<<<<<<< HEAD
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'>              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40";
-            >;
-              Load More Revolutionary Services;
-            </button>;
-          </motion && motion.div>;
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               Load More Revolutionary Services
             </button>
@@ -785,23 +655,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {;
         <motion.div
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-=======
 
         {/* Call to Action */}
         <motion.div
-<<<<<<< HEAD
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
-          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
-=======
-          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -871,138 +729,8 @@ export default RevolutionaryServicesShowcase;  )
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};
-
-export default RevolutionaryServicesShowcase;  );
-};
-
-=======
-<<<<<<< HEAD
-}
-=======
   )
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default RevolutionaryServicesShowcase;  )
-}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default RevolutionaryServicesShowcase;
-
-                {/* Floating Particles */}
-                <div className='absolute inset - 0 pointer - events - none overflow - hidden'>;
-                  <div;
-                    className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
-                    style={{ left: '20%', top: '30%' }}
-                  ></div>;
-                  <div;
-                    className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
-                    style={{ left: '35%', top: '40%' }}
-                  ></div>;
-                  <div;
-                    className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
-                    style={{ left: '50%', top: '50%' }}
-                  ></div>;
-                  <div;
-                    className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
-                    style={{ left: '65%', top: '60%' }}
-                  ></div>;
-                  <div;
-                    className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60';
-                    style={{ left: '80%', top: '70%' }}
-                  ></div>                </div>                <div className="absolute inset - 0 pointer - events - none overflow - hidden">;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '20%', top: '30%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '35%', top: '40%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '50%', top: '50%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '65%', top: '60%' }}></div>;
-                  <div className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 60" style={{ left: '80%', top: '70%' }}></div>;
-              </div>;
-            </motion.div>))}
-        </motion.div>;
-        {/* Load More Button */}
-        {visible_services < filtered_services.length && (
-          <motion.div;
-            className='text - center'            initial={{ opacity: 0 }}          <motion.div;
-            className="text - center";
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >;
-            <button;
-              on_click={load_more}
-              className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40'            >              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40";
-            >;
-              Load More Revolutionary Services;
-            </button>;
-          </motion.div>)}
-        {/* Call to Action */}
-        <motion.div;
-          className='text - center mt - 20 p - 8 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 rounded - 2xl border border - cyan - 500 / 20'          initial={{ opacity: 0, coordinate_y: 30 }}        <motion.div;
-          className="text - center mt - 20 p - 8 bg - gradient - to - r from - cyan - 500 / 10 via - purple - 500 / 10 to - pink - 500 / 10 rounded - 2xl border border - cyan - 500 / 20";
-          initial={{ opacity: 0, coordinate_y: 30 }}
-          whileInView={{ opacity: 1, coordinate_y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >;
-          <h3 className='text - 3xl font - bold text - white mb - 4'>;
-            Ready to Experience the Future?;
-          </h3>;
-          <p className='text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto'>;
-            Join the revolution with our cutting - edge AI, quantum, and emerging;
-            technology services. Transform your business and stay ahead of the;
-            competition.;
-          </p>;
-          <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
-            <a;
-              href='/contact';
-              className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40';
-            >;
-              Start Your Transformation;
-            </a>;
-            <a;
-              href='/pricing';
-              className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'            >            Ready to Experience the Future?;
-          </h3>;
-          <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-            Join the revolution with our cutting - edge AI, quantum, and emerging technology services.;
-            Transform your business and stay ahead of the competition.;
-          </p>;
-          <div className="flex flex - col sm: flex - row items - center justify - center gap - 4">;
-            <a;
-              href="/contact";
-              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - lg shadow - cyan - 500 / 25 hover:shadow - cyan - 500 / 40";
-            >;
-              Start Your Transformation;
-            </a>;
-            <a;
-              href="/pricing";
-              className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
-            >;
-              View Pricing;
-            </a>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>);
-}
-;
-export default RevolutionaryServicesShowcase);
-}
-;
-export default RevolutionaryServicesShowcase;
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default RevolutionaryServicesShowcase;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

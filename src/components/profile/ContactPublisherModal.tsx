@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react'
-import FocusLock from 'react-focus-lock'
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-<<<<<<< HEAD
-=======
-=======
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -18,8 +5,6 @@ import {
   DialogContent,
   DialogHeader,;
   DialogTitle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -411,24 +396,9 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
       <FocusLock disabled={!isOpen} returnFocus>;
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-<<<<<<< HEAD
-          onKeyDown = {handleKeyDown,}          aria-modal="true"
-          aria-labelledby="contact-publisher-title">;
-          <DialogHeader>;
-            <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2">;
-              <Mail className="h-5 w-5 text-zion-cyan" />;
-              Contact Publisher;
-            </DialogTitle>;
-          </DialogHeader>;
-=======
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -437,8 +407,6 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (;
             <div className="mb-4 text-zion-slate-light">;
@@ -453,22 +421,10 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
             <FormField
               control = {form && form.control,}
               name="subject"
-<<<<<<< HEAD
-              render={({ field }: { field: any },) => (                <FormItem>;
-                  <FormLabel>Subject</FormLabel>;
-                  <FormControl>;
-=======
               render={({ field }: { field: any }) => (
                 <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Input
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
@@ -482,23 +438,11 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
             <FormField
               control = {form && form.control,}
               name="message"
-<<<<<<< HEAD
-              render={({ field }: { field: any },) => (                <FormItem>;
-                  <FormLabel>Message</FormLabel>;
-                  <FormControl>;
-=======
 
               render={({ field }: { field: any }) => (
                 <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <FormLabel>Message</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
@@ -522,23 +466,10 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
       </FocusLock>
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    </>
-  ) </>
-  )
-}
-<<<<<<< HEAD
-=======
-=======
     </>;
   ) </>;
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
       <FocusLock disabled={!is_open} return_focus>;
         <DialogContent;
@@ -598,8 +529,6 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
               <SendIcon className="mr - 2" />;
               {is_submitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Button>;
           </form>;
         </Form>;
@@ -608,27 +537,12 @@ export function ContactPublisherModal(): any ({  isOpen,  isOpen,;
     </Dialog>;
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
-<<<<<<< HEAD
-  );    </>;
-  );
-}
-    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>);
-}
-=======
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

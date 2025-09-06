@@ -2,22 +2,8 @@ import React, { useMemo, useState } from 'react',
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-import Link from 'next/link';
-import {;
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
-=======
-<<<<<<< HEAD
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-=======
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';

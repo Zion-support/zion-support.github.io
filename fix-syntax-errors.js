@@ -74,34 +74,13 @@ files && files.forEach((file) => {
   } catch (error) {
     console && console.error(`Error processing ${file}:`, error && error.message);
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }},
 ,
 // Run all fixes,
-<<<<<<< HEAD
-fixFooter();
-fixAccessibility();
-fixAiServices();
-fixApiDocs();
-fixCareers();
-,
-console.log(' Syntax error fixes completed');
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-;
-console.log (`\n_total files fixed: ${total_fixed}`);
-;
-=======
 fixFooter(),
 fixAccessibility(),
 fixAiServices(),
@@ -116,9 +95,3 @@ fixAiServices(),;
 fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

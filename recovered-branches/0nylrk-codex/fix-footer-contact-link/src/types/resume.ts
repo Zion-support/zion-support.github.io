@@ -2,28 +2,9 @@ export interface ResumeBasicInfo {
   id?: string;
   title: string;
 
-<<<<<<< HEAD
-  headline?: string
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ResumeBasicInfo {
-=======
 export interface ResumeBasicInfo {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id?: string;
-  title: string;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-  summary?: string
-}
-<<<<<<< HEAD
-export interface WorkExperience {
-=======
 
 export interface WorkExperience {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   company_name: string;
   role_title: string;
@@ -36,12 +17,8 @@ export interface WorkExperience {;
 
   location?: string
 }
-<<<<<<< HEAD
-export interface Education {
-=======
 
 export interface Education {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   institution: string;
   degree: string;
@@ -55,12 +32,8 @@ export interface Education {;
 
   location?: string
 }
-<<<<<<< HEAD
-export interface Skill {
-=======
 
 export interface Skill {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   name: string;
   proficiency?: number;
@@ -69,12 +42,8 @@ export interface Skill {;
 
   years_experience?: number
 }
-<<<<<<< HEAD
-export interface Certification {
-=======
 
 export interface Certification {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   name: string;
   issuing_organization: string;
@@ -85,12 +54,8 @@ export interface Certification {;
 
   credential_url?: string
 }
-<<<<<<< HEAD
-export interface PortfolioProject {
-=======
 
 export interface PortfolioProject {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   title: string;
   description?: string;
@@ -102,12 +67,8 @@ export interface PortfolioProject {;
 
   pdf_url?: string
 }
-<<<<<<< HEAD
-export interface Resume {
-=======
 
 export interface Resume {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -117,19 +78,9 @@ export interface Resume {;
   certifications: Certification[];
 
   portfolio_projects?: PortfolioProject[]
-<<<<<<< HEAD
 
   is_active: boolean
 }
-=======
-
-  is_active: boolean
-}
-=======
-<<<<<<< HEAD
-export interface ResumeBasicInfo {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id?: string,;
   title: string,;
   headline?: string,;
@@ -203,9 +154,3 @@ export interface Resume {;
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

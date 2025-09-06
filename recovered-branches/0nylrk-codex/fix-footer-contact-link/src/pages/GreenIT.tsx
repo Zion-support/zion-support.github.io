@@ -1,42 +1,10 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Leaf, Server, Cloud} from "lucide-react";
-import {Link} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-export default function GreenIT() {
-  const greenITSolutions = [
-    {
-      title: "Energy-Efficient Hardware",;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
 import { Leaf, Server, Cloud } from "lucide-react",
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-=======
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -172,15 +140,6 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -236,7 +195,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt-8">;
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-=======
     <AppLayout>;
       <SEO;
         title="Green IT Solutions - Sustainable Technology";
@@ -268,8 +226,6 @@ export default function GreenIT() {;
                   </p>;
                   <div className="mt - 8">;
                     <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       Explore Green IT Solutions;
                     </Button>;
                   </div>;
@@ -340,13 +296,6 @@ export default function GreenIT() {;
       </main>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </AppLayout>);
 }

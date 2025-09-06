@@ -1,61 +1,17 @@
-<<<<<<< HEAD
 import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-import Layout from '../components/layout/Layout';
-const AIEvaluationOrchestrator: React.FC = () => {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-
-const AIEvaluationOrchestrator: React.FC = () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from 'react',
-<<<<<<< HEAD
-import Head from 'next/head';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-const AIEvaluationOrchestrator: React.FC = () => {;
-  return (
-    <Layout>;
-      <Head>;
-<<<<<<< HEAD
-        <title>AI Evaluation Orchestrator | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Define evals, run batch tests, score prompts and models, and prevent regressions.'
-        />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/ai-evaluation-orchestrator'
-        />
-=======
 
 
 
 
-=======
 import Head from 'next/head',
 import Button from '../components/ui/Button',
 export default function AIEvaluationOrchestratorPage() {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>AI Evaluation Orchestrator | Zion Tech Group</title>
         <meta name="description" content="Define evals, run batch tests, score prompts and models, and prevent regressions." />
         <link rel="canonical" href="https://ziontechgroup.com/ai-evaluation-orchestrator" />
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </Head>
       <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white'>
         <div className='max-w-6xl mx-auto space-y-10'>
@@ -143,24 +99,11 @@ export default function AIEvaluationOrchestratorPage() {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       </div>
     </>
   )
 }
-<<<<<<< HEAD
-    </Layout>);
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

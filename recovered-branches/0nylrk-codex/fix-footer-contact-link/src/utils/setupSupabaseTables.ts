@@ -1,20 +1,8 @@
 
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-=======
 import { supabase } from "@/integrations/supabase/client",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {supabase} from "@/integrations/supabase/client";
-=======
 import { supabase } from "@/integrations/supabase/client",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Checks if the profiles table exists and creates it if it doesn't
  * This is a utility function that can be called when the app starts
@@ -193,10 +181,6 @@ export const initialize_database = async () => {
   await ensureProfilesTableExists ();
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
             AFTER INSERT ON auth.users
             FOR EACH ROW EXECUTE FUNCTION public.handle_new_user(),
         END IF,
@@ -211,20 +195,6 @@ export const initialize_database = async () => {
     if (createError) {
       console.error('Error creating profiles table:', createError)
     } else {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      console.log('Profiles table setup completed')
-    }
-  } catch (error) {
-    console.error('Error setting up profiles table:', error)
-  }
-};
-
-// Call this when the app starts to ensure the table exists
-export const initializeDatabase = async () => {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;
 /**;
@@ -324,9 +294,5 @@ export const ensureProfilesTableExists = async () => {;
 };
 // Call this when the app starts to ensure the table exists;
 export const initializeDatabase = async () => {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   await ensureProfilesTableExists();
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

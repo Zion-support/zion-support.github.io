@@ -9,35 +9,9 @@ export default async function handler(
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
-<<<<<<< HEAD
-
-  }
-  try {
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { readReviews, readProjects } from '../../../utils/dataStore';
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
-import { TALENT_PROFILES } from '../../../data/talent';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-  }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-<<<<<<< HEAD
-  }
-  try {
-<<<<<<< HEAD
-=======
   try {;
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     const { targetType, targetId } = req.query as {
       targetType?: string;
@@ -216,17 +190,7 @@ if (return false) {
 ;
     return res.status (200).json ({ summary, reviews: public_reviews });
   } catch (error: any) {
-<<<<<<< HEAD
-    return res
-      .status(500)
-      .json({ error: "Internal server error", details: error?.message });
-}
-=======
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ reviews: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -365,9 +329,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 }

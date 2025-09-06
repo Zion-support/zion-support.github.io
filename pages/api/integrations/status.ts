@@ -1,70 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { readState } from '../../../lib/integrations/fileStore',;
-import { PROVIDERS } from '../../../lib/integrations/registry',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' }),
-  const state = readState(),
-  const connections: Record<string, any> = {},
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id),
-    connections[p.id] = conn || { providerId: p.id, status: 'disconnected' }
-  }
-  res.status(200).json({ connections });
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import { readState } from '../../../lib/integrations/fileStore';
-import { PROVIDERS } from '../../../lib/integrations/registry';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' })
-  const state = readState()
-  const connections: Record<string, any> = {}
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
-  const state = readState();
-  const connections: Record<string, any> = {};
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find(c => c.providerId === p.id)
-    connections[p.id] = conn |{ providerId: p.id, status: 'disconnected' }
-
-  }
-<<<<<<< HEAD
-  res.status(200).json({ connections })
-}
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { read_state } from '../../../lib / integrations / file_store',
-import { PROVIDERS } from '../../../lib / integrations / registry',
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
-  $2
-}
-  const state = read_state (),
-  const connections: Record < string, any> = {},
-  for (const p of PROVIDERS) {
-    const conn = state.connections.find (c => c.provider_id === p.id),
-    connections[p.id] = conn || { provider_id: p.id, status: 'disconnected' }
-=======
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
-<<<<<<< HEAD
-=======
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -90,12 +30,5 @@ function handler() {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

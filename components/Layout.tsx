@@ -1,66 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-<<<<<<< HEAD
-
-import React from './react';
-import Head from './next / head';
-import Header from "./Header";
-import Footer from "./Footer";
-;
-=======
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
 
 
 
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -178,17 +125,7 @@ const Layout: React.FC < LayoutProps> = ({
       <main>{children}</main>
       <Footer />
     </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
 import React, { ReactNode } from "react";
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 interface LayoutProps {
   children: ReactNode,
@@ -199,56 +136,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <main className="min-h-screen">
       {children}
     </main>
-<<<<<<< HEAD
   );
 }
 export default Layout;
-        {no_index && <meta name="robots" content="noindex, nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={og_title || title} />;
-        <meta;
-          property="og:description";
-          content={og_description || description}
-        />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={og_title || title} />;
-        <meta;
-          name="twitter:description";
-          content={og_description || description}
-        />;
-        <meta name="twitter:image" content={og_image} />;
-        {/* JSON - LD */}
-        <script;
-          type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>);
-}
-;
-export default Layout;
-;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  );
-}
-export default Layout;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -283,24 +173,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   );
 };
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default Layout;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
   );
 };
 
 export default Layout;
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

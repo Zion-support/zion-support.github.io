@@ -1,55 +1,5 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { motion  } from 'framer-motion';
-import Link from 'next/link';
-
 import {
-=======
-import {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  Star
-  ArrowRight
-  Play
-  CheckCircle
-  Phone
-  Mail
-  MapPin;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-<<<<<<< HEAD
-=======
-=======
   Rocket,
   Brain,
   Atom,
@@ -66,8 +16,6 @@ import {
   Mail,;
   MapPin,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
 const contactInfo = {
@@ -294,15 +242,7 @@ function UltraFuturisticHero2032() {
             />
           ))}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Gradient Orbs */}
         <div className='absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse' />
         <div className='absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse' />
@@ -358,8 +298,6 @@ function UltraFuturisticHero2032() {
           <span className="text-purple-300 font-medium"> 2032 Revolutionary Technology</span>
           <Sparkles className="w-5 h-5 text-cyan-400" />
 
-<<<<<<< HEAD
-=======
           transition={{ duration: 0 && 0.6 }}
           className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm'>;
           <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -373,34 +311,16 @@ function UltraFuturisticHero2032() {
           <Sparkles className="w-5 h-5 text-cyan-400" />;
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
           <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
 
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Main Heading */}
         <motion&& motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -427,81 +347,23 @@ function UltraFuturisticHero2032() {
           <span className="text-white">Technology is Here</span>;
         </motion && motion.h1>;
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'
-        >
-          Experience the revolution with our cutting-edge AI consciousness
-          quantum computing, space technology, and emerging tech solutions.
-          Transform your business with technologies that were once science
-          fiction.        </motion.p>          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
-        >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
-          className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>;
-          Experience the revolution with our cutting-edge AI consciousness,;
-          quantum computing, space technology, and emerging tech solutions.;
-          Transform your business with technologies that were once science;
-          fiction.        </motion && motion.p>          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed";
-        >;
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with ;
-          technologies that were once science fiction.;
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed"
-        >
-          Experience the revolution with our cutting-edge AI consciousness, quantum computing, space technology, and emerging tech solutions. Transform your business with 
-          technologies that were once science fiction.
+
         </motion.p>
 
-          technologies that were once science fiction.
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-          technologies that were once science fiction.
-=======
-        </motion.p>
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
         </motion.p>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
-          className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Link
             href='/services'
             className='group inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/25'
@@ -536,32 +398,14 @@ function UltraFuturisticHero2032() {
           </Link>;
         </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'>          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16";
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {heroStats.map((stat, index) => (
             <motion.div
-=======
                 left: `${Math.random () * 100}%`,
                 top: `${Math.random () * 100}%`,
               }}              animate={{
@@ -592,7 +436,6 @@ function UltraFuturisticHero2032() {
           animate={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6 }}
           className='inline - flex items - center space - x-2 bg - gradient - to - r from - purple - 500 / 20 to - cyan - 500 / 20 border border - purple - 500 / 30 rounded - full px - 6 py - 3 mb - 8 backdrop - blur - sm';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >;
           {heroStats && heroStats.map((stat, index) => (;
             <motion&& motion.div
@@ -621,19 +464,11 @@ function UltraFuturisticHero2032() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-<<<<<<< HEAD
-              className="text-center group"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
               className='text-center group'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
                 <stat.icon className="w-8 h-8 text-white" />
@@ -645,44 +480,12 @@ function UltraFuturisticHero2032() {
             </motion.div>
           ))}
         </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Featured Services */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0 && 0.8, delay: 1 && 1.2 }}
-          className='mb-16'>;
-          <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>;
-            Featured Revolutionary Services;
-          </h2>;
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>            {featuredServices && featuredServices.map((service, index) => (        >;
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">;
-            Featured Revolutionary Services;
-          </h2>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-            {featuredServices && featuredServices.map((service, index) => (;
-              <motion&& motion.div
-                key={service && service.name}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.6, delay: 1 && 1.4 + index * 0 && 0.1 }}
-                className='group'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -700,14 +503,7 @@ function UltraFuturisticHero2032() {
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <Link
                   href={service && service.href}
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
@@ -776,46 +572,11 @@ function UltraFuturisticHero2032() {
                     {service && service.description}
                   </p>;
 
-<<<<<<< HEAD
-                  <div className='flex items-center justify-between'>;
-                    <div className='text-2xl font-bold text-cyan-400'>;
-                      {service && service.price}
-                    </div>;
-                    <div className='text-purple-400 group-hover:text-cyan-400 transition-colors'>;
-                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />;
-                    </div>;
-                  </div>;
-
-                  <div className='absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                </Link>                  ;
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-cyan-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />;
-                </Link>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </motion && motion.div>;
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
             Ready to Transform Your Business?
@@ -942,17 +703,8 @@ function UltraFuturisticHero2032() {
         </motion && motion.div>;
       </div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Action Button */}
       <motion&& motion.div
                 className='group';
@@ -1062,45 +814,7 @@ function UltraFuturisticHero2032() {
       <motion.div;
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-        transition={{ duration: 0 && 0.8, delay: 2 }}
-        className='fixed bottom-8 right-8 z-50'>;
-        <Link
-          href={`tel:${contactInfo && contactInfo.mobile}`}
-          className='group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40'>;
-          <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />;
-        </Link>;
-      </motion && motion.div>;
-    </section>;
-  );      >;
-        <Link
-          href={`tel:${contactInfo && contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40">;
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />;
-        </Link>;
-      </motion && motion.div>;
-    </section>;
-  );
-        className="fixed bottom-8 right-8 z-50"
-      >
-        <Link
-          href={`tel:${contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
-        >
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
-        </Link>
-      </motion.div>
-    </section>
-  )
-}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className='fixed bottom - 8 right - 8 z - 50';
       >;
         <Link;
@@ -1120,15 +834,10 @@ function UltraFuturisticHero2032() {
       </motion.div>;
     </section>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
         className='fixed bottom-8 right-8 z-50'
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -1137,31 +846,5 @@ function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
-<<<<<<< HEAD
-    </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </section>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  );      >
-        <Link
-          href={`tel:${contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
-        >
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
-        </Link>
-      </motion.div>
-    </section>
-  )
-}
-=======
-<<<<<<< HEAD
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     </section>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

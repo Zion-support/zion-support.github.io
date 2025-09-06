@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { toast } from '@/hooks/use-toast';
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -21,29 +8,12 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { toast } from "@/hooks/use-toast"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
-<<<<<<< HEAD
-  CardTitle,
-} from '@/components/ui/card'
-import { Sparkles } from 'lucide-react'
-import { Progress } from '@/components/ui/progress'
-export function UsageStats() {
-  const handleSaveChanges = () => {
-    toast({
-      title: 'Limits updated',
-      description: 'The new usage limits have been saved successfully.',
-    })
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React from "react",
 import { Badge } from "@/components/ui/badge",
@@ -71,18 +41,6 @@ export function UsageStats() {
     })
   }
 
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-
-import { Sparkles } from 'lucide-react'
-import { Progress } from "@/components/ui/progress";
-=======
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -97,48 +55,19 @@ import {
   CardTitle} from "@/components/ui/card",
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export function UsageStats() {
 
   const handleSaveChanges = () => {
     toast({
-<<<<<<< HEAD
-      title: 'Limits updated'
-      description: 'The new usage limits have been saved successfully.'
-    })
-  }
-=======
       title: "Limits updated",
       description: "The new usage limits have been saved successfully."})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
-    <div className='space-y-8'>
-      <div>
-        <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>
-        <p className='text-muted-foreground mb-6'>
-          Configure usage limits for your team to manage your subscription
-          resources.
-        </p>
-      </div>
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-=======
 
 
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -171,17 +100,9 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -214,17 +135,9 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -255,17 +168,9 @@ export function UsageStats() {
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -308,12 +213,6 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-      <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
-        <div className='flex items-center gap-4'>
-          <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
-            <Sparkles className='h-5 w-5 text-primary' />
-=======
 
 
       
@@ -321,12 +220,6 @@ export function UsageStats() {
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
             <Sparkles className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -338,24 +231,8 @@ export function UsageStats() {
         </div>
         <Button>Contact Us</Button>
       </div>
-<<<<<<< HEAD
     </div>
   )
-}"}
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-}"};
-=======
-    </div>
-  )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}"}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -384,13 +261,11 @@ export function UsageStats() {;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>;
         <p className='text-muted-foreground mb-6'>;
-=======
     <div className='space - y-8'>;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Usage Limits & Settings</h3>;
         <p className='text - muted - foreground mb - 6'>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
@@ -551,26 +426,8 @@ export function UsageStats() {;
           </div>;
         </div>;
         <Button>Contact Us</Button>;
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-
-}"}
-
-        <Button > Contact Us</Button>;
-      </div>;
-    </div>);
-}"}
-=======
       </div>;
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

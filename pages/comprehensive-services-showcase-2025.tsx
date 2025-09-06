@@ -12,100 +12,9 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
-const categories = [
-  'All Services'
-  'AI & Machine Learning'
-  'Customer Success'
-  'Supply Chain'
-  'Financial Planning'
-  'Sales Intelligence'
-  'HR Analytics'
-  'Decision Intelligence'
-  'Content Marketing'
-  'CRM & Customer Intelligence'
-  'Business Intelligence'
-];
-const pricingRanges = [
-  'All Prices'
-  'Under $300'
-  '$300 - $500'
-  '$500 - $800'
-  '$800+',];
-export default function ComprehensiveServicesShowcase2025() {
-const contactInfo = {;
-  mobile: '+1 302 464 0950',;
-  email: 'kleber@ziontechgroup && ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup && ziontechgroup.com',;
-};
-
-const categories = [;
-  'All Services',;
-  'AI & Machine Learning',;
-  'Customer Success',;
-  'Supply Chain',;
-  'Financial Planning',;
-  'Sales Intelligence',;
-  'HR Analytics',;
-  'Decision Intelligence',;
-  'Content Marketing',;
-  'CRM & Customer Intelligence',;
-  'Business Intelligence',;
-];
-
-const pricingRanges = [;
-  'All Prices',;
-  'Under $300',;
-  '$300 - $500',;
-  '$500 - $800',;
-  '$800+',];
-
-export default function ComprehensiveServicesShowcase2025() {;
-
-export default function ComprehensiveServicesShowcase2025() {;
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {motion, AnimatePresence} from 'framer-motion';
-import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
-
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
-
-const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Customer Success',
-  'Supply Chain',
-  'Financial Planning',
-  'Sales Intelligence',
-  'HR Analytics',
-  'Decision Intelligence',
-  'Content Marketing',
-  'CRM & Customer Intelligence',
-  'Business Intelligence',
-];
-
-const pricingRanges = [
-  'All Prices',
-  'Under $300',
-  '$300 - $500',
-  '$500 - $800',
-  '$800+',];
-
-export default function ComprehensiveServicesShowcase2025() {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { motion, AnimatePresence } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
@@ -128,12 +37,6 @@ const pricingRanges = [;
 ];
 export default function ComprehensiveServicesShowcase2025(req, res) {
   try {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
   const [searchQuery, setSearchQuery] = useState('');
@@ -181,22 +84,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-<<<<<<< HEAD
-        return b.rating - a.rating;
-      case 'popularity':;
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-      default: return 0
-    }
-  });
-
-    const searchMatch =;
-      service && service.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
-      service && service.category.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-
-    return categoryMatch && priceMatch && searchMatch;  });
-
-=======
         return (
           parseInt(a.price.replace('$', '')) -
           parseInt(b.price.replace('$', ''))
@@ -207,29 +94,7 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       default:
         return 0;    }
   });
-<<<<<<< HEAD
-  const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  }
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  }
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
   const filteredServices = comprehensiveRealServices2025.filter(service => {;
@@ -266,128 +131,10 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                        service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && priceMatch && searchMatch;
   });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Sort services;
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'name':;
-<<<<<<< HEAD
-        return a && a.name.localeCompare(b && b.name);
-      case 'price':;
-        return (
-          parseInt(a && a.price.replace('$', '')) -;
-          parseInt(b && b.price.replace('$', ''));
-        );      case 'rating':;
-        return b && b.rating - a && a.rating;
-      case 'popularity':;
-        return (b && b.popular ? 1 : 0) - (a && a.popular ? 1 : 0);
-      default:;
-        return 0;    }
-  });
-  const getPriceRange = (price: string) => {
-    const numPrice = parseInt(price.replace('$', ''));
-    if (numPrice < 300) return 'Under $300';
-    if (numPrice <= 500) return '$300 - $500';
-    if (numPrice <= 800) return '$500 - $800';
-    return '$800+';
-  }
-  const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.icon : Globe;
-  }
-  const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
-      category.toLowerCase().includes(cat.id.toLowerCase())
-    );
-    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
-  };
-
-  const getCategoryIcon = (category: string) => {;
-    const categoryData = categories && categories.find(cat =>;
-      category && category.toLowerCase().includes(cat && cat.id.toLowerCase());
-    );
-    return categoryData ? categoryData && categoryData.icon : Globe;
-  };
-
-  const getCategoryColor = (category: string) => {;
-    const categoryData = categories && categories.find(cat =>;
-      category && category.toLowerCase().includes(cat && cat.id.toLowerCase());
-    );
-    return categoryData ? categoryData && categoryData.color : 'from-gray-500 to-gray-600';  };
-
-  return (
-    <>;
-      <Head>;
-        <title>Comprehensive Services Showcase 2025 | Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting-edge technology.'
-        />;
-        <meta
-          name='keywords'
-          content='AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence'
-        />;
-        <meta
-          property='og:title'
-          content='Comprehensive Services Showcase 2025 | Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.'
-        />;
-        <meta
-          property='og:url'
-          content='https://ziontechgroup && ziontechgroup.com/comprehensive-services-showcase-2025'
-        />;
-        <meta property='og:type' content='website' />;
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/comprehensive-services-showcase-2025'
-        />
-      </Head>
-      {/* Hero Section */}
-      <section className='relative py-20 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden'>;
-        {/* Animated Background */}
-        <div className='absolute inset-0'>
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]' />
-          <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,211,238,0.05),transparent_50%)]' />
-          <div className='absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl animate-pulse'></div>
-          <div className='absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000'></div>
-          <div className='absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000'></div>
-        </div>
-        <div className='relative z-10 container mx-auto px-4 text-center'>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}>;
-            <h1 className='text-5xl lg:text-7xl font-bold mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>;
-                Comprehensive Services;
-              </span>;
-              <br />;
-              <span className='text-white'>Showcase 2025</span>;
-            </h1>;
-            <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed'>;
-              Discover our portfolio of{' '}
-              <span className='text-cyan-400 font-semibold'>;
-                real, innovative micro SAAS services;
-              </span>;
-              , cutting-edge IT solutions, and revolutionary AI platforms.;
-              Transform your business with;
-              <span className='text-blue-400 font-semibold'>;
-                {' '}
-                proven technology;
-              </span>{' '}
-              that delivers measurable results.
-            </p>
-            {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                  {comprehensiveRealServices2025.length}+
-=======
         return a.name.localeCompare(b.name);
       case 'price':;
         return parseInt(a.price.replace('$', '')) - parseInt(b.price.replace('$', '')),;
@@ -402,10 +149,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
   }),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
@@ -425,7 +168,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
     ),
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -496,11 +238,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{comprehensiveRealServices2025.length}+</div>
                   <div className="text-gray-400">Real Services</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-blue-400 mb-2">$2.5B+</div>
@@ -513,8 +250,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
@@ -964,10 +699,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               <p>
                 Visit us at:{' '}
                 <a
-<<<<<<< HEAD
-                  href={contactInfo.website}
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors'
-=======
                   href={`tel:${contactInfo.mobile}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1324,11 +1055,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
                         className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -1524,8 +1250,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
   }
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   {contactInfo.website}
                 </a>
@@ -1536,44 +1260,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
       </section>
     </>
 );
-<<<<<<< HEAD
-
-            <div className='text-center text-gray-400'>;
-              <p className='mb-2'>{contactInfo && contactInfo.address}</p>;
-              <p>;
-                Visit us at:{' '}
-                <a
-                  href={contactInfo && contactInfo.website}
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                  {contactInfo && contactInfo.website}
-                </a>;
-              </p>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-    </>;
-  );
-                  href={`tel:${contactInfo.mobile}`}
-                  className="flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  {contactInfo.mobile}
-                </a>
-                <a
-                  href={`mailto:${contactInfo.email}`}
-                  className="flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  {contactInfo.email}
-                </a>
-              </div>
-
-              <div className="text-center text-gray-400">
-                <p className="mb-2">{contactInfo.address}</p>
-                <p>Visit us at: <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>
-=======
-=======
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
                 <Mail className='w-5 h-5 mr-2' />;
@@ -1581,7 +1267,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
               </a>;
             </div>;
 
-=======
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1601,11 +1286,6 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                 <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <a
                   href={`tel:${contactInfo.mobile}`}
                   className="px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
@@ -1613,170 +1293,12 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
                   <Phone className="w-5 h-5 mr-2 inline" />
                   {contactInfo.mobile}
                 </a>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-    </>
-  )
-};
 
-export default ComprehensiveServicesShowcase2025;
-
-                          </span>;
-                          <span className='text - gray - 400'>;
-                            ({service.reviews});
-                          </span>;
-                        </div>;
-                        <span className='text - sm text - gray - 400'>;
-                          {getPriceRange (service.price)}
-                        </span>;
-                      </div>;
-                    </div>;
-                    {/* Features and Benefits */}
-                    <div className='mt - 6 grid grid - cols - 1 lg:grid - cols - 2 gap - 6'>;
-                      <div>;
-                        <h4 className='text - white font - semibold mb - 3'>;
-                          Key Features:;
-                        </h4>;
-                        <div className='space - y-2'>;
-                          {service.features.slice (0, 4).map ((feature, idx) => (
-                            <div key={idx} className='flex items - center'>;
-                              <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0' />;
-                              <span className='text - gray - 300 text - sm'>;
-                                {feature}
-                              </span>                            </div>))}
-                        </div>;
-                      </div>;
-                      <div>;
-                        <h4 className='text - white font - semibold mb - 3'>;
-                          Key Benefits:;
-                        </h4>;
-                        <div className='space - y-2'>;
-                          {service.key_benefits;
-                            .slice (0, 4);
-                            .map ((benefit, idx) => (
-                              <div key={idx} className='flex items - center'>;
-                                <div className='w - 2 h - 2 bg - cyan - 400 rounded - full mr - 3'></div>;
-                                <span className='text - gray - 300 text - sm'>;
-                                  {benefit}
-                                </span>;
-                              </div>))}
-                        </div>;
-                      </div>;
-                    </div>;
-                    {/* CTA and Additional Info */}
-                    <div className='mt - 6 flex flex - col lg:flex - row items - center justify - between gap - 4'>;
-                      <div className='flex items - center gap - 4 text - sm text - gray - 400'>;
-                        <span > Market: {service.market_size}</span>;
-                        <span > Growth: {service.growth_rate}</span>;
-                        <span > ROI: {service.roi}</span>;
-                      </div>;
-                      <Link;
-                        href={service.link}
-                        className='px - 8 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
-                      >;
-                        Learn More;
-                        <ArrowRight className='w - 4 h - 4 ml - 2 inline' />;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>)}
-          {/* No Results */}
-          {sorted_services.length === 0 && (
-            <div className='text - center py - 20'>;
-              <div className='text - 6xl mb - 6'></div>;
-              <h3 className='text - 2xl font - bold text - white mb - 4'>;
-                No services found;
-              </h3>;
-              <p className='text - gray - 400 mb - 6'>;
-                Try adjusting your filters or search terms to find what you're;
-                looking for.;
-              </p>;
-              <button;
-                on_click={() => {
-                  setSelectedCategory ('All Services');
-                  setSelectedPriceRange ('All Prices');
-                  setSearchQuery ('');
-                }}
-                className='px - 6 py - 3 bg - cyan - 500 text - white font - semibold rounded - lg hover:bg - cyan - 600 transition - all duration - 300';
-              >;
-                Clear All Filters;
-              </button>;
-            </div>)}
-        </div>;
-      </section>;
-      {/* Contact Section */}
-      <section className='py - 20 bg - gradient - to - b from - black to - gray - 900'>;
-        <div className='container mx - auto px - 4 text - center'>;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='max - w-4xl mx - auto';
-          >;
-            <h2 className='text - 4xl lg:text - 6xl font - bold mb - 6'>;
-              <span className='bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent'>;
-                Ready to Transform;
-              </span>;
-              <br />;
-              <span className='text - white'>Your Business?</span>;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
-              Let's discuss how our innovative services can help you achieve;
-              your business goals. Get in touch with our experts today.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 6 justify - center items - center mb - 8'>;
-              <a;
-                href={`tel:${contact_info.mobile}`}
-                className='flex items - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105';
-              >;
-                <Phone className='w - 5 h - 5 mr - 2' />;
-                {contact_info.mobile}
-              </a>;
-              <a;
-                href={`mailto:${contact_info.email}`}
-                className='flex items - center px - 6 py - 3 border border - cyan - 500 / 30 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 / 10 transition - all duration - 300';
-              >;
-                <Mail className='w - 5 h - 5 mr - 2' />;
-                {contact_info.email}
-              </a>;
-            </div>;
-            <div className='text - center text - gray - 400'>;
-              <p className='mb - 2'>{contact_info.address}</p>;
-              <p>;
-                Visit us at:{' '}
-                <a;
-                  href={contact_info.website}
-                  className='text - cyan - 400 hover:text - cyan - 300 transition - colors';
-                >;
-                  {contact_info.website}
-                </a>;
-              </p>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </>);
-export default ComprehensiveServicesShowcase2025;
-;
-=======
-
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
 export default ComprehensiveServicesShowcase2025,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

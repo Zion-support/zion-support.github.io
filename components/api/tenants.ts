@@ -160,10 +160,6 @@ if ( {) {
   }
 return res.status (405).json ({ error: 'Method not allowed' });
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 import {
   createTenant,
@@ -198,8 +194,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
-<<<<<<< HEAD
-=======
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -210,20 +204,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(200).json({ tenant: result })
   }
-<<<<<<< HEAD
-return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
-<<<<<<< HEAD
-
-  if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    const { tenantId, rotateKey } = req.body || {};
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

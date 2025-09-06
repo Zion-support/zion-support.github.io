@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-require("@testing-library/jest-dom");
-=======
-<<<<<<< HEAD
-// Jest setup file
-import '@testing-library/jest-dom';
-=======
 import "@testing-library/jest-dom";
->>>>>>> origin/main
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Mock Next.js router
 jest.mock("next/router", () => ({
   useRouter() {
@@ -74,20 +65,6 @@ Object.defineProperty(window, 'matchMedia', {
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-}
-// Mock ResizeObserver
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
@@ -130,8 +107,6 @@ beforeEach(() => {
 });
 });
 });
-<<<<<<< HEAD
-=======
 
 
 // Mock Next.js Link component
@@ -167,20 +142,6 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(query => ({
-    matches: false,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     media: query,
     onchange: null,
     addListener: jest.fn(),
@@ -190,10 +151,6 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
     "media": query,
     "onchange": null,
     "addListener": jest.fn(), // deprecated
@@ -201,19 +158,7 @@ Object.defineProperty(window, 'matchMedia', {
     "addEventListener": jest.fn(),
     "removeEventListener": jest.fn(),
     "dispatchEvent": jest.fn()}))});
-<<<<<<< HEAD
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-=======
-<<<<<<< HEAD
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
-=======
-import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
 // Global test setup,
 beforeEach(() => {
@@ -223,14 +168,4 @@ jest.clearAllMocks()
 beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
-<<<<<<< HEAD
 });
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
-});
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

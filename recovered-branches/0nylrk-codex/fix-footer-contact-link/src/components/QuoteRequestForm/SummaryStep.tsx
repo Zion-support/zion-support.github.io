@@ -1,62 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useEffect, useState} from "react";
-import {QuoteFormData} from "@/types/quotes";
-import {Card, CardContent} from "@/components/ui/card";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import {AIMatchingResults} from "@/components/AIMatchingResults";
-import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
-import {toast} from "@/hooks/use-toast";
-interface SummaryStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-
-export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
-  
-  // Run AI matching when the component mounts
-  useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      
-      setIsMatching(true);
-      try {
-        // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName} 
-          ${formData.projectDescription} 
-          ${formData.serviceType} 
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useEffect, useState } from "react",
 import { QuoteFormData } from "@/types/quotes",
 import { Card, CardContent } from "@/components/ui/card",
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
 import { AIMatchingResults } from "@/components/AIMatchingResults",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { toast } from "@/hooks/use-toast";
-interface SummaryStepProps {
-
-  formData: QuoteFormData
-
-  updateFormData: (data: Partial<QuoteFormData>) => void
-<<<<<<< HEAD
-=======
 }
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
@@ -76,7 +23,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `;
-=======
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
 import { toast } from "@/hooks/use-toast",
 interface SummaryStepProps {
@@ -93,7 +39,6 @@ import { toast } from "@/hooks/use-toast",;
 interface SummaryStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
@@ -104,22 +49,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
     const runMatching = async () => {
       if (!formData.projectDescription) return;
       setIsMatching(true);
-<<<<<<< HEAD
-      try {
-        // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName}
-          ${formData.projectDescription}
-          ${formData.serviceType}
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-        // Get AI matches
-        const results = await findMatches(
-          queryString;
-          formData && formData.serviceType;
-          3;
-=======
       try {;
         // Create a query string from the form data;
         const queryString = `;
@@ -129,19 +58,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
           ${formData.timeline}
         `,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // Get AI matches
         const results = await findMatches(
           queryString,
           formData.serviceType,
           3
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         );
         setMatches(results)
       } catch (error) {
@@ -180,10 +102,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       
         `,;
         // Get AI matches;
@@ -228,12 +146,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   return (;
     <div className="space-y-6">;
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* AI Matching Results */}
       <AIMatchingResults
         serviceType={formData.serviceType}
@@ -359,110 +271,4 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       </div>
     </div>
   )
-<<<<<<< HEAD
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-
-      {/* Timeline */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Timeline Type</Label>;
-                <div className="text-white capitalize">{formData && formData.timeline}</div>;
-              </div>;
-
-              {formData && formData.startDate && (;
-                <div>;
-                  <Label className="text-zion-slate-light">Start Date</Label>;
-                  <div className="text-white">;
-                    {formData && formData.startDate.toLocaleDateString()}
-                  </div>;
-                </div>;
-              )}
-
-              {formData && formData.endDate && (;
-                <div>;
-                  <Label className="text-zion-slate-light">End Date</Label>;
-                  <div className="text-white">;
-                    {formData && formData.endDate.toLocaleDateString()}
-                  </div>;
-                </div>;
-              )}
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-
-      {/* Budget */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Budget</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Budget Type</Label>;
-                <div className="text-white capitalize">{formData && formData.budget.type}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Amount</Label>;
-                <div className="text-white">;
-                  ${formData && formData.budget.amount && amount.toLocaleString()}
-                  {formData && formData.budget.maxAmount ? ` - $${formData && formData.budget.maxAmount && maxAmount.toLocaleString()}` : ''}
-                </div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-
-      {/* Contact Information */}
-      <div>;
-        <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>;
-        <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-          <CardContent className="pt-4">;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-              <div>;
-                <Label className="text-zion-slate-light">Name</Label>;
-                <div className="text-white">{formData && formData.contactInfo.name}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Company</Label>;
-                <div className="text-white">{formData && formData.contactInfo.company || "N/A"}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Email</Label>;
-                <div className="text-white">{formData && formData.contactInfo.email}</div>;
-              </div>;
-
-              <div>;
-                <Label className="text-zion-slate-light">Phone</Label>;
-                <div className="text-white">{formData && formData.contactInfo.phone || "N/A"}</div>;
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </div>;
-    </div>;
-  );
-    </div>);
 }
-=======
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-};
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

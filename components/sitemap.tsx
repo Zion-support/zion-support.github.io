@@ -6,62 +6,6 @@ export default function SitemapPage() {
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      name: "All Services Showcase"
-      href: "/comprehensive-services-showcase-2025"
-    }
-    { name: "Pricing", href: "/pricing" }
-    { name: "Market Pricing", href: "/market-pricing" }
-    { name: "Services Advertising", href: "/services-advertising" }
-    { name: "Resources", href: "/resources" }
-    { name: "Support", href: "/support" }
-    { name: "Contact", href: "/contact" }
-<<<<<<< HEAD
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Head from "next/head";
-
-export default function SitemapPage() {;
-  const links = [;
-    { name: "Home", href: "/" },;
-    { name: "Services", href: "/services" },;
-    {;
-      name: "All Services Showcase",;
-      href: "/comprehensive-services-showcase-2025",;
-    },;
-    { name: "Pricing", href: "/pricing" },;
-    { name: "Market Pricing", href: "/market-pricing" },;
-    { name: "Services Advertising", href: "/services-advertising" },;
-    { name: "Resources", href: "/resources" },;
-    { name: "Support", href: "/support" },;
-    { name: "Contact", href: "/contact" },;
-=======
-=======
       name: "All Services Showcase",
       href: "/comprehensive-services-showcase-2025",
     },
@@ -71,8 +15,6 @@ export default function SitemapPage() {;
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
     { name: "Contact", href: "/contact" },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;

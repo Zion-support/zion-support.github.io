@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-  // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
-  return res.status(201).json({ ok: true, file: { name, url: url |null } })
-=======
 
 import type { NextApiRequest, NextApiResponse } from "next",;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed" })
@@ -24,34 +9,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" })
 
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
-<<<<<<< HEAD
-  return res.status(201).json({ ok: true, file: { name, url: url |null } })
-}
-import type { NextApiRequest, NextApiResponse } from './next';,
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ ok: false, error: "Method not allowed" }), ) {
-  $2
-}
-  const { name, url } = req.body || {},
-  if (return res.status (400).json ({ ok: false, error: "Missing name" }), ) {
-  $2
-}
-  // Echo back URL, real impl would upload to storage (Supabase, S3, etc.);
-  return res.status (201).json ({ ok: true, file: { name, url: url || null } });
-}
-;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return res.status(201).json({ ok: true, file: { name, url: url || null } });
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req, res) {
@@ -73,11 +30,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

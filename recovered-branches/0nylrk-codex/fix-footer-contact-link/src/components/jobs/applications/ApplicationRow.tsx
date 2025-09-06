@@ -1,22 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {Calendar, User, FileText, BarChart} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {Avatar} from "@/components/ui/avatar";
-import {TableRow, TableCell} from "@/components/ui/table";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-import {StatusBadge} from "./StatusBadge";
-import {ScoreBadge} from "./ScoreBadge";
-import {ApplicationActions} from "./ApplicationActions";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -25,22 +7,8 @@ import { Avatar } from "@/components/ui/avatar",
 import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
-<<<<<<< HEAD
-import { ScoreBadge } from "./ScoreBadge";
-import { ApplicationActions } from "./ApplicationActions";
-=======
-<<<<<<< HEAD
-import { ScoreBadge } from "./ScoreBadge";
-import { ApplicationActions } from "./ApplicationActions";
-=======
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -50,35 +18,22 @@ interface ApplicationRowProps {
 
   onViewScore: (application: JobApplication) => void
 }
-<<<<<<< HEAD
-export function ApplicationRow({
-=======
-<<<<<<< HEAD
-=======
 
 export function ApplicationRow(): any ({;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   application;
   processingId;
   onViewApplication;
   onStatusChange;
   onViewScore;
 }: ApplicationRowProps) {;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onViewScore
 }: ApplicationRowProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -205,13 +160,6 @@ function ApplicationRow() {
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h - 4 w - 4 mr - 1" /> View;
             </a>;
-<<<<<<< HEAD
-          </Button>) : (
-          <span className="text - muted - foreground text - sm">No resume</span>)}
-      </TableCell>;
-      <TableCell className="text - right">;
-        <ApplicationActions;
-=======
 
           </Button>;
         ) : (;
@@ -220,12 +168,6 @@ function ApplicationRow() {
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}

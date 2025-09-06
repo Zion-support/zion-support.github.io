@@ -1,46 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-serve(async (req) => {
-  // Handle CORS preflight request
-  if (req && req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders })
-  }
-  try {
-    const supabaseClient = createClient(
-      Deno && Deno.env.get("SUPABASE_URL") ?? "";
-      Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ""
-    );
-    // Parse the request body
-    const { days_back = 7 } = await req.json();
-    // Calculate the start date
-    const startDate = new Date();
-    startDate.setDate(startDate.getDate() - days_back);
-    // Query analytics events
-    const { data, error } = await supabaseClient
-      .from("analytics_events")
-      .select("event_type, created_at")
-      .gte("created_at", startDate.toISOString());
-    if (error) {
-      console && console.error("Error fetching analytics data:", error);
-      throw error
-    }
-    // Group events by date and event type
-    const eventsByDate = {}
-    data.forEach((event) => {
-      const date = new Date(event.created_at).toISOString().split("T")[0];
-      if (!eventsByDate[date]) {
-<<<<<<< HEAD
-=======
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -79,12 +37,6 @@ serve(async (req) => {;
     data.forEach((event) => {;
       const date = new Date(event.created_at).toISOString().split("T")[0],;
       if (!eventsByDate[date]) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         eventsByDate[date] = { date }
       }
       if (!eventsByDate[date][event.event_type]) {
@@ -183,18 +135,10 @@ if ( {) {
         ...cors_headers,
         "Content - Type": "application / json"}
       status: 500});
-<<<<<<< HEAD
-=======
-=======
 
         ...corsHeaders,
         "Content-Type": "application/json"},
       status: 500})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       eventsByDate[date][event.event_type]++;
     }),;
@@ -212,11 +156,6 @@ if ( {) {
         ...corsHeaders,;
         "Content-Type": "application/json"},;
       status: 500});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

@@ -1,46 +1,20 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-interface Milestone {
-  title: string;
-  description: string;
-  dueDate: string
-  estimatedHours: number
-<<<<<<< HEAD
-=======
-=======
 
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 interface Milestone {
   title: string,
   description: string,
   dueDate: string,
   estimatedHours: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -50,26 +24,13 @@ interface Milestone {;
   description: string,;
   dueDate: string,;
   estimatedHours: number;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     // Get the OpenAI API key from environment variables
     const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
@@ -92,13 +53,7 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -123,12 +78,6 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -179,8 +128,6 @@ serve(async (req) => {
         messages: [
           {
             role: 'system'
-<<<<<<< HEAD
-=======
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
           {
             role: 'user'
@@ -203,11 +150,6 @@ serve(async (req) => {
         success: false
         error: error.message |'Failed to generate contract'
       });
-<<<<<<< HEAD
-      {
-        status: 500
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts",
 const cors_headers = {
@@ -293,22 +235,15 @@ if ( {) {
         `;
       });
 ;
-<<<<<<< HEAD
-=======
-=======
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
 
       { 
         status: 500, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       prompt += `;
       Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
       `;
@@ -365,9 +300,6 @@ if ( {) {
       });
       {
         status: 500
-<<<<<<< HEAD
-=======
-=======
 ;
     prompt += `;
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
@@ -407,12 +339,6 @@ if ( {) {
       }),;
       {;
         status: 500,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

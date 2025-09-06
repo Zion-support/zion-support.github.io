@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -24,10 +19,6 @@ import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost'
 import { BLOG_POSTS } from '@/data/blog-posts'
 
 import { Search } from 'lucide-react'
-<<<<<<< HEAD
-import { fetchWithRetry  } from '@/utils/fetchWithRetry';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { fetchWithRetry } from '@/utils/fetchWithRetry'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 import { useState, useEffect } from "react"
@@ -63,8 +54,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -117,22 +106,6 @@ const CATEGORIES = [
   'Infrastructure'
 ]
 export interface BlogProps {
-<<<<<<< HEAD
-  posts?: BlogPost[];
-export default /**
- * Blog - Function description
- */
-function Blog() {
-  log_info ('BlogPage rendering. Initial BLOG_POSTS:', { data: initial_posts });
-  const [search_query, setSearchQuery] = useState ('');
-  const [selected_category, setSelectedCategory] = useState ('All Categories');
-  const [posts, set_posts] = useState < BlogPost[]>([...initial_posts]);
-  const query = use_debounce (search_query, 300);
-  const [is_loading, setIsLoading] = useState (false);
-  const router = use_router ();
-  // Reset state when navigating away to avoid cross - page leakage;
-  useEffect ((, ) => {
-=======
   posts?: BlogPost[]
 }
 
@@ -145,14 +118,8 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return () => {
       setSearchQuery ('');
       setSelectedCategory ('All Categories');
@@ -169,88 +136,34 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
     const fetch_posts = async () => {
       setIsLoading (true);
       try {
-<<<<<<< HEAD
-        const data: BlogPost[] = await fetchWithRetry (
-          `/api / blog?query=${encodeURIComponent (query)}`);
-        set_posts (data);
-=======
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setPosts(data)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       } catch (err) {
         logErrorToProduction ('Failed to fetch blog posts', { data: err });
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-    }
-    fetchPosts()
-  }, [query])
-<<<<<<< HEAD
-=======
     },
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     fetchPosts()
   }, [query])
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
-      selectedCategory === 'All Categories' |
-=======
-<<<<<<< HEAD
-      selectedCategory === 'All Categories' |
-=======
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       post.category === selectedCategory
     return matchesCategory
   })
   // Get featured posts
   const featuredPosts = posts.filter(post => post.isFeatured)
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useDebounce } from '@/hooks/useDebounce';
-import { GradientHeading } from '@/components/GradientHeading';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {;
-  Select,;
-  SelectValue,;
-  SelectTrigger,;
-  SelectContent,;
-  SelectItem,;
-} from '@/components/ui/select';
-import { BlogPost } from '@/types/blog';
-import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
-import { BLOG_POSTS } from '@/data/blog-posts';
-=======
-=======
-<<<<<<< HEAD
-=======
     },
 
     fetchPosts()
@@ -260,7 +173,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -271,11 +183,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <SEO
@@ -289,85 +196,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-<<<<<<< HEAD
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              Expert perspectives on artificial intelligence, tech innovation
-              and digital transformation
-            </p>
-          </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 &&
-            (() => {
-              const featuredPost = featuredPosts[0]
-              if (!featuredPost) return null
-              return (
-                <div className='mb-16'>
-                  <h2 className='text-2xl font-bold text-white mb-6'>
-                    Featured Article
-                  </h2>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                    <div className='aspect-video overflow-hidden rounded-lg'>
-                      <img
-                        src={featuredPost.featuredImage}
-                        alt={
-                          featuredPost.featuredImageAlt |featuredPost.title
-                        }
-                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
-                        onError={e => {
-                          const target = e.currentTarget as HTMLImageElement
-                          target.src = '/images/blog-placeholder.svg'
-                        }}
-                      />
-                    </div>
-                    <div className='flex flex-col justify-center'>
-                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
-                        {featuredPost.category}
-                      </span>
-                      <h3 className='text-3xl font-bold text-white mb-4'>
-                        {featuredPost.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-6'>
-                        {featuredPost.excerpt}                      </p>
-                      <div className='flex items-center mb-6'>
-                        <img
-                          src={featuredPost.author.avatarUrl}
-                          alt={featuredPost.author.name}
-                          className='w-10 h-10 rounded-full mr-3'
-                          onError={e => {
-                            const target = e.currentTarget as HTMLImageElement
-                            target.src = '/images/blog-placeholder.svg'
-                          }}
-                        />
-                        <div>
-                          <p className='text-white font-medium'>
-                            {featuredPost.author.name}
-                          </p>
-                          <p className='text-sm text-zion-slate-light'>
-                            {featuredPost.publishedDate} •{' '}
-                            {featuredPost.readTime}
-                          </p>
-                        </div>
-                      </div>
-                      <Button
-                        asChild
-                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
-                      >
-                        <Link href={`/blog/${featuredPost.slug}`}>
-                          Read Article
-                        </Link>
-                      </Button>
-=======
-<<<<<<< HEAD
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (() => {
@@ -414,11 +242,6 @@ import { BLOG_POSTS } from '@/data/blog-posts';
                       <p className="text-sm text-zion-slate-light">
                         {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                   <Button 
@@ -447,8 +270,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { BlogPost } from "@/types/blog",;
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost",;
 import { BLOG_POSTS } from "@/data/blog-posts",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Search } from 'lucide-react';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
@@ -657,14 +478,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
                 </SelectContent>;
               </Select>;
@@ -676,12 +489,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
             )}
           </div>
           {/* Blog Posts Grid */}
-<<<<<<< HEAD
-          {!isLoading && filteredPosts && filteredPosts.length > 0 ? (;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-              {filteredPosts && filteredPosts.map(post => (                <Card
-                  key = {post && post.id,}
-=======
 
           {!isLoading && filteredPosts.length > 0 ? (
 
@@ -689,25 +496,11 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   asChild
                   className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg'>;
                   <Link href={`/blog/${post && post.slug}`} className='block group'>;
                     <div className='aspect-[16/9] relative overflow-hidden'>;
                       <img
-<<<<<<< HEAD
-                        src={post.featuredImage}
-                        alt={post.featuredImageAlt |post.title}
-                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
-                        onError={e => {
-                          const target = e.currentTarget as HTMLImageElement
-                          target.src = '/images/blog-placeholder.svg' }}
-=======
                         src={post.author.avatarUrl}
                         alt={post.author.name}
                         className="w-8 h-8 rounded-full mr-2"
@@ -715,12 +508,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       />
                     </div>
                     <CardContent className='p-6'>
@@ -778,14 +565,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                     </CardFooter>;
                   </Link>;
                 </Card>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               ))}
             </div>;
           ) : null}
@@ -912,21 +691,6 @@ export default function Blog() {
       date: "2025-01-15", readTime: "8 min read","
       category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
       featured: true}, { id: 2}, {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      id: 2
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
-      author: &quot,Prof. Michael Rodriguez&quot
-      date: &quot,2025-01-12&quot
-      readTime: &quot,12 min read&quot
-      category: &quot,Quantum Computing&quot
-      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
-<<<<<<< HEAD
-=======
-=======
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -935,8 +699,6 @@ export default function Blog() {
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1192,19 +954,6 @@ key = "{post.id}
 key = "{post.id}
                       initial="{{" opacity: 0, y: 20 }}"
                       animate="{{" opacity: 1, y: 0 }}"
-<<<<<<< HEAD
-                      transition="{{" duration: 0.8, delay: index * 0.1 }}"
-                      className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300">
-                    >,"
-                      <div className="flex flex-col md:flex-row gap-6">,"
-                        <div className = "md:w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">,"
-                          <div className="text-4xl opacity-20">,"
-                            {post.category === "AI & Machine Learning" && <Brain  />}"
-                            {post.category === "Quantum Computing" && <Atom  />}"
-                            {post.category === "Micro SaaS" && <Rocket  />}"
-                            {post.category === "Cybersecurity" && <Shield  />}"
-                            {post.category === "Digital Transformation" && <Globe  />}"
-=======
                       transition="{{" duration: 0 && 0.8, delay: index * 0 && 0.1 }}"
                       className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300">;
                     >,";
@@ -1397,8 +1146,6 @@ key = "{post.id}
   )
   )})))))))))
 }
-<<<<<<< HEAD
-=======
     <>";
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News & quot;";
         description="&quot;Stay" updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group & apos;s expert team.&quot;";
@@ -1584,7 +1331,6 @@ key = "{post.id}
                             {post.category === "Micro SaaS" && <Rocket  />}";
                             {post.category === "Cybersecurity" && <Shield  />}";
                             {post.category === "Digital Transformation" && <Globe  />}";
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             {post.category === "Cloud Computing" && <Code  />}
                           </div>
                         </div>;"
@@ -1808,15 +1554,8 @@ key = "{post.id}
 </>),
   )})))))))));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 variant="outline"
                 onClick={() => {
                   setSearchQuery(""),
@@ -1843,9 +1582,3 @@ key = "{post.id}
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

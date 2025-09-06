@@ -22,24 +22,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { useTranslation  } from 'react-i18next';
-import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
-=======
 
 
 import {supportedLocales, isRtl} from '../../utils/i18n';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const localeToFlag: Record<string, string> = {
 
   en: 'us'
@@ -48,19 +34,6 @@ const localeToFlag: Record<string, string> = {
   ar: 'sa'
 };  ar: 'sa'}
 const localeLabelKey: Record<string, string> = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
-export default function LanguageSwitcher() {
-<<<<<<< HEAD
-=======
-=======
 
   en: 'lang.english',
   pt: 'lang.portuguese',
@@ -68,8 +41,6 @@ export default function LanguageSwitcher() {
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';

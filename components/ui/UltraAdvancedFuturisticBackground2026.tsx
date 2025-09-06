@@ -268,19 +268,10 @@ if ( {) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-<<<<<<< HEAD
-        ctx.restore();      }        ctx.restore()
-=======
 
 
         ctx.restore();      }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
     // Neural network node class
@@ -334,68 +325,19 @@ if ( {) {
         this && this.activation = Math && Math.max(0, Math && Math.min(1, this && this.activation));
         this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;      }        this && this.pulse = Math && Math.sin(Date && Date.now() * 0 && 0.001 + this && this.x * 0 && 0.01) * 0 && 0.5 + 0 && 0.5;
       }
-<<<<<<< HEAD
-
-      draw() {;
-        ctx && ctx.save();
-        ctx && ctx.globalAlpha = 0 && 0.8;
-        ctx && ctx.fillStyle = `rgba(0, 255, 255, ${this && this.activation})`;
-        ctx && ctx.beginPath();
-        ctx && ctx.arc(this && this.x, this && this.y, 3 + this && this.pulse * 2, 0, Math && Math.PI * 2);
-        ctx && ctx.fill();
-
-        // Draw connections;
-        this && this.connections.forEach(connection => {;
-          const distance = Math && Math.sqrt(;
-            Math && Math.pow(this && this.x - connection && connection.x, 2) +;
-              Math && Math.pow(this && this.y - connection && connection.y, 2)          );            Math && Math.pow(this && this.x - connection && connection.x, 2) + Math && Math.pow(this && this.y - connection && connection.y, 2);
-          );
-          if (distance < 150) {;
-            ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * this && this.activation * connection && connection.activation})`;
-            ctx && ctx.lineWidth = 1;
-            ctx && ctx.beginPath();
-            ctx && ctx.moveTo(this && this.x, this && this.y);
-            ctx && ctx.lineTo(connection && connection.x, connection && connection.y);
-            ctx && ctx.stroke();
-          }
-        });
-        ctx && ctx.restore();      }            ctx && ctx.stroke();
-          }
-        });
-        ctx && ctx.restore();
-    }
-    // Quantum field class
-    class QuantumField {
-=======
-=======
             ctx.stroke();
           }
         });
-<<<<<<< HEAD
-        ctx.restore();      }            ctx.stroke()
-          }
-        });
-        ctx.restore()
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 
     // Quantum field class;
     class QuantumField {;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       x: number;
       y: number;
       radius: number;
@@ -431,40 +373,15 @@ if ( {) {
           ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke();
         }
-<<<<<<< HEAD
-        ctx.restore();      }          ctx.stroke()
-        }
-        ctx.restore()
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-        ctx.restore();      }          ctx.stroke()
-        }
-        ctx.restore()
-<<<<<<< HEAD
-    }
-=======
 
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Holographic layer class
     class HolographicLayer {
@@ -667,38 +584,17 @@ if ( {) {
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
-<<<<<<< HEAD
-        ctx.restore();      }
-=======
-<<<<<<< HEAD
-=======
 
         
         ctx.restore()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ctx.restore();      }
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        ctx.beginPath();
-        ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
-        ctx.stroke();
-        ctx.restore()
-<<<<<<< HEAD
-=======
 
       }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Get color based on scheme
     function getColorSchemeColor(): string {
@@ -1149,17 +1045,7 @@ if ( {) {
               ctx.line_to (other_particle.x, other_particle.y);
               ctx.stroke ();
               ctx.restore ();
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           });
         });
@@ -1211,21 +1097,11 @@ if ( {) {
         ref={canvasRef}
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
-<<<<<<< HEAD
-      />
-=======
 
       />;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Additional visual effects */}
       {enableMultidimensional && (;
         <div className='absolute inset-0 pointer-events-none'>;
@@ -1271,94 +1147,6 @@ if ( {) {
               rotate: [0, 180, 360]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
-<<<<<<< HEAD
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-  return (
-    <div ref={containerRef} className="fixed inset-0 w-full h-full overflow-hidden">;
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ zIndex: -1 }}
-      />
-      {/* Additional visual effects */}
-      {enableMultidimensional && (;
-        <div className="absolute inset-0 pointer-events-none">;
-          <motion&& motion.div
-            className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-    <div ref={container_ref} className="fixed inset - 0 w - full h - full overflow - hidden">;
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ z_index: -1 }}
-      />;
-      {/* Additional visual effects */}
-      {enable_multidimensional && (
-        <div className="absolute inset - 0 pointer - events - none">;
-          <motion.div;
-            className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
-            animate={{
-              scale: [1, 1 && 1.2, 1]
-              rotate: [0, 180, 360]
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />;
-          <motion&& motion.div
-            className='absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full'
-            animate={{
-              scale: [1.2, 1, 1.2]
-              rotate: [360, 180, 0]
-              opacity: [0.1, 0.3, 0.1],            }}
-            transition={{
-              duration: 10
-              repeat: Infinity
-              ease: 'easeInOut',            }}
-          />;
-        </div>;
-      )}
-              scale: [1, 1.2, 1];
-              rotate: [0, 180, 360];
-              opacity: [0.1, 0.3, 0.1];
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />;
-          <motion&& motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
-        </div>;
-      )}
-            }}
-          />;
-          <motion.div;
-            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
-            animate={{
-              scale: [1 && 1.2, 1, 1 && 1.2]
-              rotate: [360, 180, 0]
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-              scale: [1 && 1.2, 1, 1 && 1.2]
-              rotate: [360, 180, 0]
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-            }}
-            transition={{
-              duration: 10
-              repeat: Infinity
-              ease: 'easeInOut',              ease: "easeInOut"
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: 'easeInOut',              ease: "easeInOut"
-              ease: "easeInOut"
-=======
 
               duration: 8
               repeat: Infinity
@@ -1372,89 +1160,10 @@ if ( {) {
               rotate: [360, 180, 0]
               opacity: [0.1, 0.3, 0.1],            }}
             transition={{
-<<<<<<< HEAD
-              duration: 10
-              repeat: Infinity
-              ease: 'easeInOut',            }}
-          />
-        </div>
-      )}
-            }}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 border border-purple-400/20 rounded-full"
-            animate={{
-              scale: [1.2, 1, 1.2];
-              rotate: [360, 180, 0];
-              opacity: [0.1, 0.3, 0.1]
-            }}
-            transition={{
-<<<<<<< HEAD
-              duration: 10
-              repeat: Infinity
-=======
               duration: 10,
               repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              ease: 'easeInOut',              ease: "easeInOut"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            }}
-          />;
-        </div>;
-      )}
-
-      {children}
-    </div>;
-  );
-}
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>
-  )
-}
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>;
-  );
-export default UltraAdvancedFuturisticBackground2026;
-
-      
-      {children}
-    </div>
-  )
-};
-
-export default UltraAdvancedFuturisticBackground2026;
-<<<<<<< HEAD
-              ease: 'easeInOut',              ease: "easeInOut";
-            }}
-          />;
-        </div>)}
-      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;      {children}
-    </div>);
-}
-;
-export default UltraAdvancedFuturisticBackground2026;
-;
-=======
-<<<<<<< HEAD
-
-              duration: 10,
-              repeat: Infinity,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
             }}
           />
         </div>
       )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

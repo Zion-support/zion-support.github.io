@@ -1,25 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React, { useState, useEffect } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Progress  } from '@/components/ui/progress';
-<<<<<<< HEAD
-=======
-=======
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { AlertTriangle, Package, Zap } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface BundleInfo {
@@ -48,26 +32,14 @@ export function BundleAnalyzer() {
   const [shouldShow, setShouldShow] = useState(false)
   useEffect((,) => {
     // Only show in development or when explicitly enabled
-<<<<<<< HEAD
-    const show =
-      process.env.NODE_ENV === 'development' |
-=======
-<<<<<<< HEAD
-    const show =
-      process.env.NODE_ENV === 'development' |
-=======
     const show = null;
       process.env.NODE_ENV === 'development' ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return
     setIsVisible(true)
     collectBundleInfo()
   }, [])
-<<<<<<< HEAD
-=======
   const collectBundleInfo = async () => {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
@@ -103,14 +75,6 @@ export function BundleAnalyzer() {
       const cacheHitRate = null;
         chunkData.filter(chunk => chunk.cached).length / chunkData.length
       setBundleInfo({
-<<<<<<< HEAD
-        totalSize
-        gzippedSize
-        chunkCount: chunkData.length
-        loadTime: totalLoadTime / chunkData.length
-        cacheHitRate: cacheHitRate * 100
-      })
-=======
 import React, { useState, useEffect } from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -161,8 +125,6 @@ if (return) {
     setIsVisible (true);
     collectBundleInfo ();
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const collectBundleInfo = async () => {
     // Check condition
 if (return) {
@@ -170,45 +132,6 @@ if (return) {
 }
     setIsCollecting (true);
     try {
-<<<<<<< HEAD
-      // Get performance entries for script resources
-      const resourceEntries = performance.getEntriesByType(
-        'resource'
-      ) as PerformanceResourceTiming[]
-      const scriptEntries = resourceEntries.filter(
-        entry =>
-          entry.name.includes('/_next/static/') &&
-          (entry.name.endsWith('.js') |entry.name.endsWith('.css'))
-      )
-      // Calculate bundle information
-      let totalSize = 0
-      let totalLoadTime = 0
-      const chunkData: ChunkInfo[] = []
-      const chunkData: ChunkInfo[] = []
-      scriptEntries.forEach(entry => {
-        const size = entry.transferSize |entry.encodedBodySize |0
-        const loadTime = entry.responseEnd - entry.requestStart
-        const cached = entry.transferSize === 0
-        totalLoadTime += loadTime
-        chunkData.push({
-          name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
-          size
-          loadTime
-          cached
-        })
-      })
-      // Estimate gzipped size (roughly 70% of original)
-      const gzippedSize = totalSize * 0.7
-      const cacheHitRate =
-        chunkData.filter(chunk => chunk.cached).length / chunkData.length
-      setBundleInfo({
-        totalSize
-        gzippedSize
-        chunkCount: chunkData.length
-        loadTime: totalLoadTime / chunkData.length
-        cacheHitRate: cacheHitRate * 100
-      })
-=======
 
 
         totalSize,
@@ -217,8 +140,6 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
     } finally {
@@ -260,15 +181,8 @@ if ( {) {
 
   if (!shouldShow) {
     return null
-<<<<<<< HEAD
   }
-=======
-  }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -403,12 +317,6 @@ export function BundleAnalyzer() {;
     return null;
   }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!isVisible) {
     return (
       <div className='fixed bottom-20 right-4 z-50'>;
@@ -416,19 +324,9 @@ export function BundleAnalyzer() {;
           variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
-<<<<<<< HEAD
-          className='bg-background/80 backdrop-blur-sm'        >
-          <Package className='w-4 h-4 mr-2' />
-=======
           className="bg-background/80 backdrop-blur-sm"
         >
           <Package className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           Bundle Analyzer
         </Button>
       </div>
@@ -456,19 +354,9 @@ export function BundleAnalyzer() {;
                 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
-<<<<<<< HEAD
-                className='h-6 w-6 p-0'              >
-                
-=======
                 className="h-6 w-6 p-0"
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 ✕
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </Button>
             </div>
           </div>
@@ -516,33 +404,6 @@ export function BundleAnalyzer() {;
             </div>;
           </div>;
         </CardHeader>;
-<<<<<<< HEAD
-        <CardContent className='pt-0 space-y-3'>;
-          {bundleInfo ? (;
-            <>;
-              <div className='grid grid-cols-2 gap-2 text-xs'>;
-                <div className='flex justify-between'>;
-                  <span>Total Size:</span>;
-                  <Badge className={getSizeColor(bundleInfo && bundleInfo.totalSize)}>;
-                    {formatSize(bundleInfo && bundleInfo.totalSize)}
-                  </Badge>;
-                </div>;
-                <div className='flex justify-between'>;
-                  <span>Gzipped:</span>;
-                  <Badge variant='outline'>;
-                    {formatSize(bundleInfo && bundleInfo.gzippedSize)}
-                  </Badge>;
-                </div>;
-                <div className='flex justify-between'>;
-                  <span>Chunks:</span>;
-                  <Badge variant='outline'>{bundleInfo && bundleInfo.chunkCount}</Badge>;
-                </div>;
-                <div className='flex justify-between'>;
-                  <span>Avg Load:</span>;
-                  <Badge variant='outline'>;
-                    {bundleInfo && bundleInfo.loadTime.toFixed(0)}ms;
-                  </Badge>;
-=======
 
 
                 <div className="text-xs font-medium mb-2">Largest Chunks:</div>
@@ -553,11 +414,6 @@ export function BundleAnalyzer() {;
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -567,18 +423,11 @@ export function BundleAnalyzer() {;
                       </div>
 
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {formatSize(chunk.size)}
                       </Badge>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>;
               </div>;
 
@@ -626,50 +475,18 @@ export function BundleAnalyzer() {;
                   <span>Bundle size is large. Consider code splitting.</span>
                 </div>
               )}
-<<<<<<< HEAD
-            </>;
-          ) : (;
-            <div className='text-xs text-muted-foreground'>;
-              {isCollecting;
-                ? 'Analyzing bundle...';
-                : 'Click refresh to analyze'}
-            </div>;
-=======
 
             </>
           ) : (
-<<<<<<< HEAD
-            <div className='text-xs text-muted-foreground'>
-              {isCollecting
-                ? 'Analyzing bundle...'
-                : 'Click refresh to analyze'}
-            </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          )}
-        </CardContent>
-      </Card>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-=======
 } 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
         </CardContent>;
       </Card>;
     </div>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         
 
@@ -754,12 +571,5 @@ export function BundleAnalyzer() {;
       </Card>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

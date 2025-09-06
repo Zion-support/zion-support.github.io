@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -44,20 +40,8 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-    return this.props.children
-  }
-}
-
-<<<<<<< HEAD
-export default ErrorBoundary;
-    return this.props.children;
-  }
-}
-export default ErrorBoundary;
-=======
     return this.props.children;
   }
 }
 
 export default ErrorBoundary;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

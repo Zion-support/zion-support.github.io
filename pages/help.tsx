@@ -1,49 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
-<<<<<<< HEAD
-  Search
-  HelpCircle
-  BookOpen
-  MessageCircle
-  Phone
-  Mail
-  FileText
-  Video
-  Download
-  ExternalLink
-  ChevronDown
-  Cloud
-<<<<<<< HEAD
-=======
-=======
 
 
 import {
@@ -59,21 +22,9 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-<<<<<<< HEAD
-  Cloud,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-} from "lucide-react";
-=======
-<<<<<<< HEAD
-  Cloud
-} from 'lucide-react';
-=======
   Cloud,
 } from "lucide-react";
->>>>>>> origin/main
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 const helpArticles = [
   {
     id: "overview"
@@ -90,61 +41,7 @@ const helpArticles = [
     color: "green"
     articles: [
       {
-<<<<<<< HEAD
-        title: "AI Implementation Guide"
-        description: "How to implement AI solutions in your business"
-        readTime: "10 min read"
-        type: "Guide"
-      }
       {
-        title: "Machine Learning Models"
-        description: "Understanding different ML models and their applications"
-        readTime: "8 min read"
-        type: "Technical"
-      }
-<<<<<<< HEAD
-import React, { useState } from './react';
-import Head from './next / head';
-import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
-import {
-  Search,
-  HelpCircle,
-  BookOpen,
-  MessageCircle,
-  Phone,
-  Mail,
-  FileText,
-  Video,
-  Download,
-  ExternalLink,
-  ChevronDown,
-  Cloud,
-} from './lucide-react';
-;
-const help_articles = [;
-  {
-    id: "overview",
-    title: "Understanding Our Services",
-    description: "Overview of all available services and solutions",
-    read_time: "7 min read",
-    type: "Overview",
-  },
-  {
-    id: "ai - services",
-    title: "AI Services",
-    description: "Everything about our AI and machine learning solutions.",
-    icon: HelpCircle,
-    color: "green",
-    articles: [;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         title: "AI Implementation Guide",
         description: "How to implement AI solutions in your business",
         readTime: "10 min read",
@@ -157,15 +54,6 @@ const help_articles = [;
         type: "Technical",
       },
       {
-<<<<<<< HEAD
-        title: "AI Best Practices",
-        description: "Tips and best practices for AI development",
-        read_time: "6 min read",
-        type: "Best Practice",
-      },
-    ],
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         title: "AI Best Practices",
         description: "Tips and best practices for AI development",
         readTime: "6 min read",
@@ -177,15 +65,12 @@ const help_articles = [;
     id: "cloud-services",
     title: "Cloud Services",
     description: "Cloud infrastructure and deployment solutions.",
-<<<<<<< HEAD
-=======
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
         readTime: '6 min read',
         type: 'Best Practice'
       }
     ]
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   },
   {
     id: "cloud - services",
@@ -202,11 +87,6 @@ const help_articles = [;
       }
     articles: [;
       {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     icon: Cloud,
     color: "blue",
     articles: [
@@ -217,24 +97,13 @@ const help_articles = [;
         type: "Guide",
       },
       {
-<<<<<<< HEAD
-        title: "Cloud Security",
-        description: "Best practices for securing your cloud infrastructure",
-        read_time: "9 min read",
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
         title: "Cloud Security",
         description: "Best practices for securing your cloud infrastructure",
         readTime: "9 min read",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         type: "Security",
       },
     ],
   },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
         title: 'Cloud Security',
         description: 'Best practices for securing your cloud infrastructure',
         readTime: '9 min read',
@@ -243,13 +112,9 @@ const help_articles = [;
     ]
   }
 
-=======
-=======
       {
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         title: "Cloud Security"
         description: "Best practices for securing your cloud infrastructure"
         readTime: "9 min read"
@@ -257,36 +122,9 @@ const help_articles = [;
       }
     ]
   }
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 const helpCategories = [
   {
-<<<<<<< HEAD
-    title: "Getting Started",
-    description: "New to our platform? Start here.",
-    icon: BookOpen,
-    color: "blue",
-    articles: help_articles,
-  },
-];
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-=======
-<<<<<<< HEAD
-    title: "Getting Started",
-    description: "New to our platform? Start here.",
-    icon: BookOpen,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    color: "blue",
-    articles: helpArticles,
-  },
-=======
 
 
     title: "Getting Started"
@@ -295,115 +133,15 @@ export default function HelpPage() {
     color: "blue"
     articles: helpArticles
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-<<<<<<< HEAD
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-=======
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'blue',
     articles: helpArticles
   }
 ];
-<<<<<<< HEAD
-
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
-  const toggleCategory = (index: number) => {
-import {;
-  Search,;
-  HelpCircle,;
-  BookOpen,;
-  MessageCircle,;
-  Phone,;
-  Mail,;
-  FileText,;
-  Video,;
-  Download,;
-  ExternalLink,;
-  ChevronDown,;
-  Cloud,;
-} from "lucide-react";
-
-const helpArticles = [;
-  {;
-    id: "overview",;
-    title: "Understanding Our Services",;
-    description: "Overview of all available services and solutions",;
-    readTime: "7 min read",;
-    type: "Overview",;
-  },;
-  {;
-    id: "ai-services",;
-    title: "AI Services",;
-    description: "Everything about our AI and machine learning solutions.",;
-    icon: HelpCircle,;
-    color: "green",;
-    articles: [;
-      {;
-        title: "AI Implementation Guide",;
-        description: "How to implement AI solutions in your business",;
-        readTime: "10 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Machine Learning Models",;
-        description: "Understanding different ML models and their applications",;
-        readTime: "8 min read",;
-        type: "Technical",;
-      },;
-      {;
-        title: "AI Best Practices",;
-        description: "Tips and best practices for AI development",;
-        readTime: "6 min read",;
-        type: "Best Practice",;
-      },;
-    ],;
-  },;
-  {;
-    id: "cloud-services",;
-    title: "Cloud Services",;
-    description: "Cloud infrastructure and deployment solutions.",;
-    icon: Cloud,;
-    color: "blue",;
-    articles: [;
-      {;
-        title: "Cloud Migration Guide",;
-        description: "Step-by-step guide to migrating to the cloud",;
-        readTime: "12 min read",;
-        type: "Guide",;
-      },;
-      {;
-        title: "Cloud Security",;
-        description: "Best practices for securing your cloud infrastructure",;
-        readTime: "9 min read",;
-        type: "Security",;
-      },;
-    ],;
-  },;
-];
-
-const helpCategories = [;
-  {;
-    title: "Getting Started",;
-    description: "New to our platform? Start here.",;
-    icon: BookOpen,;
-    color: "blue",;
-    articles: helpArticles,;
-  },;
-];
-=======
-<<<<<<< HEAD
-export default function HelpPage() {
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function HelpPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 
@@ -411,37 +149,21 @@ export default function HelpPage() {;
     setExpandedCategory(expandedCategory === index ? null : index);
   };
 
-<<<<<<< HEAD
-=======
-=======
 
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState('');
->>>>>>> origin/automation-improvements-final
-=======
     color: "blue",
     articles: helpArticles,
   },
 ];
 
 export default function HelpPage() {
-<<<<<<< HEAD
-  const [searchTerm, setSearchTerm] = useState('');
-=======
   const [searchTerm, setSearchTerm] = useState("");
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category
@@ -452,18 +174,6 @@ export default function HelpPage() {
       )
     }))
     .filter((category) => category.articles.length > 0);
-<<<<<<< HEAD
-  const filteredCategories = helpCategories;
-    .map((category) => ({;
-      ...category,;
-      articles: category && category.articles.filter(;
-        (article) =>;
-          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
-          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()),;
-      ),;
-    }));
-    .filter((category) => category && category.articles.length > 0);
-=======
 
   const filteredCategories = helpCategories.map(category => ({
     ...category,
@@ -472,8 +182,6 @@ export default function HelpPage() {
       article.description.toLowerCase().includes(searchTerm.toLowerCase())
     )
   })).filter(category => category.articles.length > 0);
->>>>>>> origin/automation-improvements-final
-=======
   const filteredCategories = helpCategories
     .map((category) => ({
       ...category,
@@ -484,8 +192,6 @@ export default function HelpPage() {
       ),
     }))
     .filter((category) => category.articles.length > 0);
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <>;

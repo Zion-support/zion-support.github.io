@@ -1,51 +1,8 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
 
-<<<<<<< HEAD
-import Head from 'next / head';
 import { motion } from 'framer-motion';
 import {
-=======
-import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Search
-  Filter
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Cpu
-  Shield
-  Rocket
-  Globe
-  Database
-  Lock
-  Cloud
-  Atom
-  Sparkles
-  Target;
-<<<<<<< HEAD
-import {;
-  Search,;
-  Filter,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Brain,;
-  Cpu,;
-  Shield,;
-  Rocket,;
-  Globe,;
-  Database,;
-  Lock,;
-  Cloud,;
-  Atom,;
-  Sparkles,;
-  Target,;
-=======
-=======
   Search,
   Filter,
   Star,
@@ -62,8 +19,6 @@ import {;
   Atom,
   Sparkles,;
   Target,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
   // Combine all 2026 services
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -285,21 +240,9 @@ export default function ServicesShowcase2026() {;
             <motion&& motion.div
         </Head>
 
-<<<<<<< HEAD
-          <meta property="og:description" content="1500+ cutting - edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />;
-          <meta property="og:url" content="https://ziontechgroup.com / 2026 - services - showcase" />;
-          <meta property="og:type" content="website" />;
-          <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase" />;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Navigation */}
         <UltraAdvancedNavigation />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hero Section */}
         <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -456,23 +399,12 @@ export default function ServicesShowcase2026() {;
                         {category && category.name} ({category && category.count});
                       </option>;
                     ))}
-<<<<<<< HEAD
-                  </select>
-                </div>
-=======
 
                   </select>;
                 </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Sort By */}
                 <div className='relative'>;
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -506,43 +438,6 @@ export default function ServicesShowcase2026() {;
           </div>;
         </section>;
 
-<<<<<<< HEAD
-        {/* Services Grid */}
-        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>;
-          <div className='max-w-7xl mx-auto'>;
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices && filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">;
-          <div className="max-w-7xl mx-auto">;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
-                  className='group'>;
-                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
-                    {/* Service Header */}
-                    <div className='flex items-start justify-between mb-4'>;
-                      <div className='text-4xl'>{service && service.icon}</div>;
-                      {service && service.popular && (;
-                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >;
-                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">;
-                    {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">;
-                      <div className="text-4xl">{service && service.icon}</div>;
-                      {service && service.popular && (;
-                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">;
-                          Popular;
-                        </span>;
-                      )}
-                    </div>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -657,29 +552,7 @@ export default function ServicesShowcase2026() {;
                     </p>;
 
                     {/* Features */}
-<<<<<<< HEAD
-                    <div className='mb-4'>;
-                      <h4 className='text-white font-semibold mb-2 text-sm'>;
-                        Key Features:;
-                      </h4>;
-                      <ul className='space-y-1'>;
-                        {service && service.features.slice(0, 3).map((feature, idx) => (;
-                          <li
-                            key={idx}
-                            className='text-gray-400 text-xs flex items-center'>;
-                            <Zap className='w-3 h-3 text-cyan-400 mr-2 flex-shrink-0' />                            {feature}                    <div className="mb-4">;
-                      <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>;
-                      <ul className="space-y-1">;
-                        {service && service.features.slice(0, 3).map((feature, idx) => (;
-                          <li key={idx} className="text-gray-400 text-xs flex items-center">;
-                            <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />;
-                          </li>;
-                        ))}
-                      </ul>
-                    </div>
-=======
 
-=======
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>
                       <ul className="space-y-1">
@@ -687,7 +560,6 @@ export default function ServicesShowcase2026() {;
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                             {feature}
-=======
 
 
                       {service.name}
@@ -707,24 +579,11 @@ export default function ServicesShowcase2026() {;
 
                             {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -755,22 +614,9 @@ export default function ServicesShowcase2026() {;
 
                     {/* CTA Button */}
                     <a
-<<<<<<< HEAD
-                      href={service && service.link}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'>                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block";
-                    >;
-                      Learn More;
-                    </a>;
-                  </div>;
-                </motion && motion.div>;
-              ))}
-            </div>
-=======
 
-=======
                       href={service.link}
                       className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
-=======
 
 
                     {/* CTA Button */}
@@ -778,31 +624,17 @@ export default function ServicesShowcase2026() {;
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       Learn More
                     </a>
                   </div>
                 </motion.div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
 
             </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* No Results */}
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
@@ -828,32 +660,18 @@ export default function ServicesShowcase2026() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-=======
 
 
             )}
           </div>
         </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
                         </span>;
@@ -1021,16 +839,10 @@ export default function ServicesShowcase2026() {;
               <div className="flex flex-col sm: flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
-<<<<<<< HEAD
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
-                  Contact Us Now;
-                </a>;
-=======
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Us Now
                 </a>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <a
                   href='/pricing'
                   className='px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300'                  href="/pricing"
@@ -1044,109 +856,9 @@ export default function ServicesShowcase2026() {;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-);
-}
-                  className="px-8 py-4 border border-cyan-500/30 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">;
-                  View Pricing;
-                </a>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
   );
-}
-  );
-}
-              className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 rounded - 2xl p - 8 border border - gray - 700 / 50 backdrop - blur - sm';
-            >;
-              <h2 className='text - 3xl font - bold text - white mb - 6'>;
-                Ready to Transform Your Business?;
-              </h2>;
-              <p className='text - xl text - gray - 300 mb - 8'>;
-                Join thousands of companies already leveraging our revolutionary;
-                2026 AI, quantum, and IT solutions;
-              </p>;
-              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8'>;
-                <div className='flex items - center justify - center space - x-3 text - cyan - 300'>;
-                  <span className='text - 2xl'></span>;
-                  <span className='font - semibold'>{contact_info.mobile}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - purple - 300'>;
-                  <span className='text - 2xl'></span>;
-                  <span className='font - semibold'>{contact_info.email}</span>;
-                </div>;
-                <div className='flex items - center justify - center space - x-3 text - pink - 300'>;
-                  <span className='text - 2xl'></span>;
-                  <span className='font - semibold text - sm'>;
-                    {contact_info.address}
-                  </span>;
-                </div>;
-              </div>;
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                <a;
-                  href='/contact';
-                  className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105'                >;
-                  Contact Us Now;
-                </a>;
-                <a;
-                  href='/pricing';
-                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                >            >;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Ready to Transform Your Business?</h2>;
-              <p className="text - xl text - gray - 300 mb - 8">;
-                Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions;
-              </p>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 8">;
-                <div className="flex items - center justify - center space - x-3 text - cyan - 300">;
-                  <span className="text - 2xl"></span>;
-                  <span className="font - semibold">{contact_info.mobile}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-3 text - purple - 300">;
-                  <span className="text - 2xl"></span>;
-                  <span className="font - semibold">{contact_info.email}</span>;
-                </div>;
-                <div className="flex items - center justify - center space - x-3 text - pink - 300">;
-                  <span className="text - 2xl"></span>;
-                  <span className="font - semibold text - sm">{contact_info.address}</span>;
-                </div>;
-              </div>;
-              <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";
-                >;
-                  Contact Us Now;
-                </a>;
-                <a;
-                  href='/pricing';
-                  className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300'                  href="/pricing";
-                  className="px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 300 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
-                >;
-                  View Pricing;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>);
-}
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 
 
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

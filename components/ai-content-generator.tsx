@@ -346,124 +346,7 @@ import {;
     }
   ];
   const integrations = [
-<<<<<<< HEAD
-    { name: 'WordPress', icon: '', description: 'Direct plugin integration' }
-    {
-      name: 'Shopify'
-      icon: ''
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
-=======
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    {
-      name: 'Shopify'
-      icon: '🛒'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      description: 'E-commerce content automation'
-    }
-    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' }
-    { name: 'Mailchimp', icon: '', description: 'Email campaign content' }
-    { name: 'Slack', icon: '', description: 'Team collaboration' }
-    { name: 'Zapier', icon: '', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '', description: 'E-commerce content automation' }
-    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' }
-    { name: 'Mailchimp', icon: '', description: 'Email campaign content' }
-    { name: 'Slack', icon: '', description: 'Team collaboration' }
-      features: [;
-        'Unlimited words',
-        'All templates + custom',
-        'Full SEO suite',
-        'Dedicated support',
-        'Unlimited API access',
-        'Advanced analytics',
-        'White - label solution',
-        'Custom integrations',
-        'SLA guarantee',
-      ],
-      popular: false,
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700',
-    },  ];        'Unlimited words_all templates + custom_full SEO suite_dedicated support_unlimited API access_advanced analytics_white - label solution_custom integrations';
-        'SLA guarantee';
-      ];
-      popular: false,
-      color: 'border - purple - 600',
-      button_color: 'bg - purple - 600 hover:bg - purple - 700';
-    }
-  const use_cases = [;
-    {
-      title: 'Blog Writing',
-      description:;
-        'Generate engaging blog posts, articles, and long - form content in minutes.',
-      examples: [;
-        'Tech reviews',
-        'How - to guides',
-        'Industry insights',
-        'Product comparisons',
-      ],
-    },
-    {
-      title: 'Marketing Copy',
-      description:;
-        'Create compelling ad copy, landing pages, and marketing materials.',
-      icon: '',
-      examples: [;
-        'Facebook ads',
-        'Google ads',
-        'Landing pages',
-        'Email campaigns',
-      ],
-    },
-    {
-      title: 'Social Media',
-      description:;
-        'Generate engaging social media posts, captions, and hashtag suggestions.',
-      icon: '',
-      examples: [;
-        'Instagram posts',
-        'Twitter threads',
-        'LinkedIn articles',
-        'TikTok captions',
-      ],
-    },
-    {
-      title: 'E - commerce',
-      description:;
-        'Write product descriptions, category pages, and promotional content.',
-      icon: '',
-      examples: [;
-        'Product descriptions',
-        'Category pages',
-        'Promotional emails',
-        'FAQ sections',
-      ],
-    },  ];
-;
-  const integrations = [;
-    { name: 'WordPress', icon: '', description: 'Direct plugin integration' },      examples: ['Product descriptions_category pages_promotional emailsFAQ sections'];
-    }
-  ];
-;
-  const integrations = [;
-    { name: 'WordPress', icon: '', description: 'Direct plugin integration' },
-    {
-      name: 'Shopify',
-      icon: '',
-      description: 'E - commerce content automation',
-    },
-<<<<<<< HEAD
-    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '', description: 'Email campaign content' },
-    { name: 'Slack', icon: '', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '', description: '500+ app integrations' },  ];    { name: 'Shopify', icon: '', description: 'E - commerce content automation' },
-    { name: 'HubSpot', icon: '', description: 'Marketing automation sync' },
-    { name: 'Mailchimp', icon: '', description: 'Email campaign content' },
-    { name: 'Slack', icon: '', description: 'Team collaboration' },
-    { name: 'Zapier', icon: '', description: '500+ app integrations' }
-=======
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
@@ -471,22 +354,10 @@ import {;
     { name: 'HubSpot', icon: '📊', description: 'Marketing automation sync' },
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' },
     { name: 'Slack', icon: '💬', description: 'Team collaboration' },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
-<<<<<<< HEAD
-    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
   ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-  ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <Head>;
@@ -767,30 +638,16 @@ import {;
                   {feature && feature.description}
                 </p>;
               </Card>;
-<<<<<<< HEAD
-=======
 
                   {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -805,7 +662,6 @@ import {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
-=======
           AI Content Generator | Zion Tech Group - Advanced AI - Powered Content;
           Creation;
         </title>;
@@ -976,7 +832,6 @@ import {;
                 <p className='text - gray - 400 leading - relaxed'>                  {feature.description}            {features.map ((feature, index) => (
               <Card;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 key={index}
                 className="text - center group bg - gray - 800 / 50 border border - gray - 700 hover:border - purple - 500 / 30 hover:bg - gray - 800 / 80 transition - all duration - 300 hover:-translate - y-1";
                 style={{ animation_delay: `${(index * 0.1) + 0.2}s` }}
@@ -1054,39 +909,18 @@ import {;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />;
                           {example}
                         </div>;
-<<<<<<< HEAD
-=======
-=======
 
 
                           {example}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       ))}
                     </div>;
                   </div>;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -1162,8 +996,6 @@ import {;
                     {plan.price}
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
-<<<<<<< HEAD
-=======
                 )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -1171,72 +1003,11 @@ import {;
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    {plan.name}
-                  </h3>
-                  <div className='text-4xl font-bold text-white mb-2'>
-                    {plan.price}
-                    <span className='text-lg text-gray-400'>{plan.period}</span>
-                  </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>
-                  <p className="text-gray-400">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-=======
                       {feature}
-=======
-<<<<<<< HEAD
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {feature}
-                    </li>;
-                  ))}
-                </ul>
-                <Button
-                  href='/contact'
-                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size='lg'>;
-                  Get Started;
-                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  className={`w-full ${plan && plan.buttonColor} text-white`}
-                  size="lg";
-                >;
-                  Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />;
-                </Button>;
-              </Card>;
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -1250,16 +1021,8 @@ import {;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Card>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -1302,10 +1065,7 @@ import {;
                 <h3 className="font-semibold text-white mb-2">{integration && integration.name}</h3>;
                 <p className="text-sm text-gray-400">{integration && integration.description}</p>;
               </Card>;
-<<<<<<< HEAD
-=======
 
-=======
               Connect with your favorite tools and platforms
             </p>
           </div>
@@ -1323,55 +1083,21 @@ import {;
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>;
-        <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>;
-          <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>;
-            Ready to Transform Your Content Creation?;
-          </h2>;
-          <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>;
-            Join thousands of content creators who are already saving hours;
-            every day with AI-powered content generation.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-6 justify-center'>;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1379,8 +1105,6 @@ import {;
             every day with AI-powered content generation.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Button
               href='/contact'
               variant='secondary'
@@ -1554,11 +1278,6 @@ import {;
     </>;
   );
 }
-<<<<<<< HEAD
-    </>);
-}
-=======
-=======
               className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
             >
               <Play className="w-5 h-5 mr-2" />
@@ -1570,15 +1289,4 @@ import {;
     </>
 
   );
-<<<<<<< HEAD
 }
-
-=======
-<<<<<<< HEAD
-}
-;
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

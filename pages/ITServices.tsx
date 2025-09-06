@@ -1,107 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-import React from 'react';
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Layout from '../components/Layout';
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-import Layout from '../components/Layout';
-
-export default function ITServices() {
-  return (
-    <Layout
-      title="IT Services - Zion Tech Group"
-      description="Comprehensive IT services including cloud solutions, cybersecurity, and digital transformation."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              IT Services
-            </h1>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              IT Services
-            </h1>
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
->>>>>>> origin/automation-improvements-final
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">IT Services</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complete IT solutions to power your digital transformation.
             </p>
           </div>
           <div className="text-center">
-<<<<<<< HEAD
-            <p className="text-gray-600">
-              IT Services page is under construction.
-            </p>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <p className="text-gray-600">
-              IT Services page is under construction.
-            </p>
-=======
             <p className="text-gray-600">IT Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
-=======
             <p className="text-gray-600">IT Services page is under construction.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>
         </div>
       </div>
@@ -152,30 +57,11 @@ function ITServices() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
-  );
-}
-}
-    </Layout>);
-}
-=======
 
-=======
 
-=======
 
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
 import { Star } from 'lucide-react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -487,10 +373,8 @@ const stats = [
   { number: "500+", label: "IT Projects Completed" },
   { number: "24/7", label: "Support Available" }
 ];
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> origin/main
 
 export default function ITServices() {
   return (
@@ -517,20 +401,5 @@ export default function ITServices() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
 }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 }
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

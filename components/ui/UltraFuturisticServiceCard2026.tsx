@@ -179,8 +179,6 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular;
           </motion && motion.div>;
         )}
-<<<<<<< HEAD
-=======
 
           gradient: 'from - purple - 600 via - pink - 600 to - purple - 700',
           border_color: 'border - purple - 400 / 30',
@@ -294,14 +292,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p - 8 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm overflow - hidden">;
         {/* Enhanced Background Glow */}
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Popular Badge */}
         {service.popular && (
           <motion.div;
@@ -314,12 +305,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Popular;
           </motion.div>)}
 
-=======
 
         
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Service Header */}
         <div className="text - center mb - 8 relative z - 10">;
           <div className={`w - 24 h - 24 mx - auto mb - 6 rounded - full ${styles.icon_bg} flex items - center justify - center border ${styles.icon_border} text - 4xl backdrop - blur - sm`}>;
@@ -358,18 +346,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
               <span>{feature}</span>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD
-        </div>
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -426,17 +405,9 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -446,113 +417,7 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
 
-<<<<<<< HEAD
-export default UltraFuturisticServiceCard2026;
-          </div>;
-          <h3 className="text - 2xl font - bold text - white mb - 3 group - hover:text - gray - 100 transition - colors">;
-            {service.name}
-          </h3>;
-          <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
-            {service.tagline}
-          </p>;
-          <div className="text - 4xl font - bold text - cyan - 400 mb - 2 group - hover:text - cyan - 300 transition - colors">;
-            {service.price}
-            <span className="text - lg text - gray - 400 font - normal">/{service.period}</span>;
-          </div>;
-          {/* Category Badge */}
-          <div className="inline - flex items - center space - x-2 px - 3 py - 1 bg - gray - 800 / 50 border border - gray - 600 / 30 rounded - full text - xs text - gray - 300">;
-            <CategoryIcon className="w - 3 h - 3" />;
-            <span>{service.category}</span>;
-          </div>;
-        </div>;
-        {/* Features List */}
-        <div className="space - y-3 mb - 8 relative z - 10">;
-          <h4 className="text - sm font - semibold text - gray - 300 mb - 4 flex items - center">;
-            <Zap className="w - 4 h - 4 mr - 2 text - cyan - 400" />;
-            Key Features;
-          </h4>;
-          {service.features.slice (0, 6).map ((feature, idx) => (
-            <motion.div;
-              key={idx}
-              initial={{ opacity: 0, coordinate_x: -10 }}
-              animate={{ opacity: 1, coordinate_x: 0 }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex items - center space - x-3 text - sm text - gray - 300 group - hover:text - gray - 200 transition - colors";
-            >;
-              <div className="w - 2 h - 2 bg - cyan - 400 rounded - full group - hover:bg - cyan - 300 transition - colors"></div>;
-              <span>{feature}</span>;
-            </motion.div>))}
-        </div>;
-        {/* Enhanced Market Information */}
-        {service.market_price && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 space - y-3 relative z - 10">;
-            <div className="flex items - center justify - between text - xs">;
-              <span className="text - gray - 400">Market Price:</span>;
-              <span className="text - green - 400 font - semibold">{service.market_price}</span>;
-            </div>;
-            {service.competitors && (
-              <div className="text - xs text - gray - 500">;
-                Competes with: {service.competitors.slice (0, 2).join ()}
-              </div>)}
-          </div>)}
-        {/* Target Market & Use Cases */}
-        {service.target_market && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 space - y-3 relative z - 10">;
-            <div className="text - xs">;
-              <div className="text - gray - 400 mb - 2">Target Market:</div>;
-              <div className="text - gray - 300">{service.target_market}</div>;
-            </div>;
-            {service.use_cases && (
-              <div className="text - xs mt - 3">;
-                <div className="text - gray - 400 mb - 2">Use Cases:</div>;
-                <div className="text - gray - 300">{service.use_cases.slice (0, 3).join ()}</div>;
-              </div>)}
-          </div>)}
-        {/* Benefits Section */}
-        {service.benefits && (
-          <div className="border - t border - white / 10 pt - 4 mb - 6 relative z - 10">;
-            <h4 className="text - sm font - semibold text - gray - 300 mb - 3 flex items - center">;
-              <TrendingUp className="w - 4 h - 4 mr - 2 text - green - 400" />;
-              Key Benefits;
-            </h4>;
-            <div className="space - y-2">;
-              {service.benefits.slice (0, 3).map ((benefit, idx) => (
-                <div key={idx} className="text - xs text - gray - 400 flex items - start space - x-2">;
-                  <Check className="w - 3 h - 3 text - green - 400 mt - 0.5 flex - shrink - 0" />;
-                  <span>{benefit}</span>;
-                </div>))}
-            </div>;
-          </div>)}
-        {/* CTA Button */}
-        <div className="relative z - 10">;
-          <motion.button;
-            while_hover={{ scale: 1.02 }}
-            while_tap={{ scale: 0.98 }}
-            className={`w - full py - 3 px - 6 rounded - lg bg - gradient - to - r ${styles.gradient} text - white font - semibold transition - all duration - 300 hover:shadow - lg hover:shadow-${styles.text_color}/25 border border - white / 20 hover:border - white / 40`}
-          >;
-            Get Started;
-          </motion.button>;
-        </div>;
-        {/* Enhanced Hover Effects */}
-        <div className="absolute inset - 0 bg - gradient - to - br from - white / 0 via - white / 0 to - white / 0 group - hover: from - white / 5 group - hover:via - white / 2 group - hover:to - white / 5 transition - all duration - 500 rounded - 2xl"></div>;
-      </div>;
-    </motion.div>),
-});
-;
-UltraFuturisticServiceCard2026.display_name = 'UltraFuturisticServiceCard2026';
-;
-export default UltraFuturisticServiceCard2026;
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default UltraFuturisticServiceCard2026;
 
-=======
 export default UltraFuturisticServiceCard2026;
-=======
 export default UltraFuturisticServiceCard2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,32 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-export function LoginCard() {;
-=======
-<<<<<<< HEAD
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-=======
 import { LoginForm } from "./LoginForm",
 import { SocialLogin } from "./SocialLogin",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function LoginCard() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">
       <div className="text-center mb-10">
@@ -44,16 +20,7 @@ export function LoginCard() {
         <LoginForm />
         <SocialLogin />
       </div>
-<<<<<<< HEAD
-=======
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;

@@ -15,18 +15,6 @@ serve(async (req) => {
     const { bio, skills, title, name } = await req.json();
     if (!bio |bio.length < 20) {
       return new Response(
-<<<<<<< HEAD
-        JSON && JSON.stringify({ error: "Bio must be at least 20 characters long" });
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      )
-    }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        JSON.stringify({ error: "Bio must be at least 20 characters long" });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -45,20 +33,10 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
@@ -142,15 +120,8 @@ if ( {) {
             }`;
           }
         ];
-<<<<<<< HEAD
-        temperature: 0.7})});
-    const openAIData = await openAIResponse.json();
-    if (!openAIData.choices |openAIData.choices.length === 0) {
-=======
 
         temperature: 0 && 0.7})});
-=======
-=======
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -170,11 +141,6 @@ if ( {) {
           {;
             role: 'user',;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
@@ -190,7 +156,6 @@ if ( {) {
           }
         ],
         temperature: 0.7})}),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     const openAIData = await openAIResponse && openAIResponse.json();
     
@@ -198,10 +163,8 @@ if ( {) {
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
 
-=======
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       throw new Error("Failed to generate profile content")
     }
     // Extract the generated content from the response
@@ -269,19 +232,8 @@ if ( {) {
         parsed_response = { summary, suggested_skills }
       } else {
         throw new Error("Failed to parse the generated content")
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-    }
-<<<<<<< HEAD
-    return new Response(
-      JSON && JSON.stringify(parsedResponse);
-=======
 
     console && console.error("Error in profile-summary-generator function:", error);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
             Also, suggest 3-5 additional relevant skills that would complement their existing skills.;
             Return the result as a JSON object with these keys:;
@@ -328,38 +280,17 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(parsedResponse),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
     console.error("Error in profile-summary-generator function:", error);
     return new Response(
-<<<<<<< HEAD
-      JSON && JSON.stringify({ error: error && error.message });
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      JSON.stringify({ error: error.message });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       JSON.stringify({ error: error.message }),
     );
   } catch (error) {;
     console.error("Error in profile-summary-generator function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

@@ -1,10 +1,4 @@
 import React, { forwardRef } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export type ResumeData = {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -67,49 +61,18 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
-<<<<<<< HEAD
-    bullets?: string[];
-  }>;
-  education?: Array<{;
-=======
-<<<<<<< HEAD
-    bullets?: string[];
-  }>;
-  education?: Array<{
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    institution: string;
-    degree?: string;
-    start?: string;
-    end?: string;
-  }>;
-  certifications?: string[];
-<<<<<<< HEAD
-  portfolio?: Array<{;
-=======
   portfolio?: Array<{
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     title: string;
     description?: string;
     link?: string;
     technologies?: string[];
   }>;
-<<<<<<< HEAD
-}
-export type ResumePreviewProps = {
-=======
-<<<<<<< HEAD
-}
-export type ResumePreviewProps = {
-=======
 };
-=======
 
     {children}
 
 
 export type ResumePreviewProps = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
@@ -142,15 +105,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   }>
 }
 export type ResumePreviewProps = {
-<<<<<<< HEAD
-  data: ResumeData
-=======
-<<<<<<< HEAD
-  data: ResumeData
-=======
   data: ResumeData,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 }
@@ -169,34 +124,15 @@ export type ResumePreviewProps = {
 }
 ;
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-<<<<<<< HEAD
-  <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">
-    {children}
-  </h2>;
-);
-export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
-  ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-    const portfolioItems = (data.portfolio |[]).slice(
-      0
-      Math.max(0, maxPortfolioItems)
-=======
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   </h2>
 );
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
   ({ data, theme = 'light', maxPortfolioItems = 3 }, ref) => {
-<<<<<<< HEAD
-    const portfolioItems = (data.portfolio |[]).slice(
-      0
-      Math.max(0, maxPortfolioItems)
-=======
     const portfolioItems = (data.portfolio || []).slice(
       0,
       Math.max(0, maxPortfolioItems);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     );
       >
         <div className='p-8'>
@@ -244,101 +180,14 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
     return (
       <div;
         ref={ref}
-<<<<<<< HEAD
-        className={`resume-a4 ${theme === 'dark' ? 'dark' : ''} bg-white dark:bg-black text-gray-900 dark:text-gray-100`}>;
-        <div className="p-8">;
-          {/* Header */}
-          <header className="mb-6">;
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{data && data.name}</h1>;
-            <div className="mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap">;
-              {data && data.contact?.email && <span>{data && data.contact.email}</span>}
-              {data && data.contact?.phone && <span>{data && data.contact.phone}</span>}
-              {data && data.contact?.location && <span>{data && data.contact.location}</span>}
-              {data && data.contact?.website && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.website}
-                  target='_blank'
-                  rel='noreferrer'>                  {data && data.contact.website}
-                </a>;
-              )}
-              {data && data.contact?.linkedin && (                <a className="underline" href={data && data.contact.website} target="_blank" rel="noreferrer">;
-                  {data && data.contact.website}
-                </a>;
-              )}
-              {data && data.contact?.linkedin && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.linkedin}
-                  target='_blank'
-                  rel='noreferrer'>                  LinkedIn;
-                </a>;
-              )}
-              {data && data.contact?.github && (                <a className="underline" href={data && data.contact.linkedin} target="_blank" rel="noreferrer">;
-                  LinkedIn;
-                </a>;
-              )}
-              {data && data.contact?.github && (;
-                <a
-                  className='underline'
-                  href={data && data.contact.github}
-                  target='_blank'
-                  rel='noreferrer'>                  GitHub                <a className="underline" href={data && data.contact.github} target="_blank" rel="noreferrer">;
-                  GitHub;
-                </a>;
-              {data.contact?.email && <span>{data.contact.email}</span>}
-              {data.contact?.phone && <span>{data.contact.phone}</span>}
-              {data.contact?.location && <span>{data.contact.location}</span>}
-              {data.contact?.website && (
-                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">
-                  {data.contact.website}
-                </a>)}
-              {data.contact?.linkedin && (
-                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">
-                  LinkedIn
-                </a>
-              )}
-              {data.contact?.github && (
-                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">
-                  GitHub
-                </a>
-              )}
-            </div>
-          </header>
 
-          {/* Summary */}
-          {data && data.summary && (;
-            <section className='mb-5'>;
-              <SectionTitle>Professional Summary</SectionTitle>;
-              <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>;
-                {data && data.summary}
-              </p>            </section>            <section className="mb-5">;
-              <SectionTitle>Professional Summary</SectionTitle>;
-              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data && data.summary}</p>;
-            </section>;
-          )}
-          {/* Skills & Technologies */}
-          {(data.skills?.length |data.technologies?.length) && (
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
 
             </div>;
           </header>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Summary */}
 
           {data.summary && (
@@ -346,23 +195,11 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               <SectionTitle>Professional Summary</SectionTitle>
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          )}
-          {/* Skills & Technologies */}
 
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
 
           {/* Skills & Technologies */}
           {(data.skills?.length || data.technologies?.length) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <section className='mb-5'>
               <SectionTitle>Skills & Technologies</SectionTitle>
               <div className='mt-2 text-sm flex flex-wrap gap-2'>
@@ -382,69 +219,8 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     {s}
                   </span>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </section>
-          )}
-<<<<<<< HEAD
-                <a;
-                  className='underline';
-                  href={data.contact.linkedin}
-                  target='_blank';
-                  rel='noreferrer';
-                >                  LinkedIn;
-                </a>)}
-              {data.contact?.github && (                <a className="underline" href={data.contact.linkedin} target="_blank" rel="noreferrer">;
-                  LinkedIn;
-                </a>)}
-              {data.contact?.github && (
-                <a;
-                  className='underline';
-                  href={data.contact.github}
-                  target='_blank';
-                  rel='noreferrer';
-                >                  GitHub                <a className="underline" href={data.contact.github} target="_blank" rel="noreferrer">;
-                  GitHub;
-                </a>)}
-            </div>;
-          </header>;
-          {/* Summary */}
-          {data.summary && (
-            <section className='mb - 5'>;
-              <SectionTitle > Professional Summary</SectionTitle>;
-              <p className='mt - 2 text - sm leading - relaxed text - gray - 800 dark:text - gray - 200'>;
-                {data.summary}
-              </p>            </section>            <section className="mb - 5">;
-              <SectionTitle > Professional Summary</SectionTitle>;
-              <p className="mt - 2 text - sm leading - relaxed text - gray - 800 dark:text - gray - 200">{data.summary}</p>;
-            </section>)}
-          {/* Skills & Technologies */}
-          {(data.skills?.length || data.technologies?.length) && (
-            <section className='mb - 5'>;
-              <SectionTitle > Skills & Technologies</SectionTitle>;
-              <div className='mt - 2 text - sm flex flex - wrap gap - 2'>;
-                {data.skills?.map ((s, idx) => (
-                  <span;
-                    key={`skill-${idx}`}
-                    className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
-                  >                    {s}
-                  </span>))}
-                {data.technologies?.map ((t, idx) => (
-                  <span;
-                    key={`tech-${idx}`}
-                    className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
-                  >                    {t}              <SectionTitle > Skills & Technologies</SectionTitle>;
-              <div className="mt - 2 text - sm flex flex - wrap gap - 2">;
-                {data.skills?.map ((s, idx) => (
-                  <span key={`skill-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   >                    {t}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {s}
                   </span>))}
                 {data.technologies?.map ((t, idx) => (
@@ -453,23 +229,13 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     {t}
-<<<<<<< HEAD
-                  </span>))}
-              </div>;
-            </section>)}
-=======
 
                   </span>
                 ))}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </section>
           )}
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Experience */}
           {data.experience?.length ? (
             <section className='mb - 5'>;
@@ -480,21 +246,10 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     <div className='flex items - baseline justify - between'>;
                       <h3 className='font - medium text - gray - 900 dark:text - white'>;
                         {role.title}
-<<<<<<< HEAD
-                        {role.company ? `  ${role.company}` : ''}
-                      </h3>
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
-=======
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
-=======
 
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
                   <div key={`exp-${idx}`}>
@@ -504,128 +259,8 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                         {role.company ? `  ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                        {(role.start |role.end) && (
-                          <span>
-                            {role.start |''}
-                            {role.end ? `  ${role.end}` : ''}
-                          </span>
-          {data && data.experience?.length ? (;
-            <section className='mb-5'>;
-              <SectionTitle>Work Experience</SectionTitle>;
-              <div className='mt-2 space-y-3'>;
-                {data && data.experience.map((role, idx) => (;
-                  <div key={`exp-${idx}`}>;
-                    <div className='flex items-baseline justify-between'>;
-                      <h3 className='font-medium text-gray-900 dark:text-white'>;
-                        {role && role.title}
-                        {role && role.company ? `  ${role && role.company}` : ''}
-                      </h3>;
-                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role && role.start || role && role.end) && (              <SectionTitle>Work Experience</SectionTitle>;
-              <div className="mt-2 space-y-3">;
-                {data && data.experience.map((role, idx) => (;
-                  <div key={`exp-${idx}`}>;
-                    <div className="flex items-baseline justify-between">;
-                      <h3 className="font-medium text-gray-900 dark:text-white">;
-                        {role && role.title}
-                        {role && role.company ? `  ${role && role.company}` : ''}
-                      </h3>;
-                      <div className="text-xs text-gray-600 dark:text-gray-300">;
-                        {(role && role.start || role && role.end) && (;
-                          <span>;
-                            {role && role.start || ''}
-                            {role && role.end ? `  ${role && role.end}` : ''}
-                          </span>;
-                        )}
-                        {role && role.location ? `  ${role && role.location}` : ''}
-                      </div>;
-                    </div>;
-                    {role && role.bullets?.length ? (;
-                      <ul className='mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1'>                        {role && role.bullets.map((b, bIdx) => (                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">;
-                        {role && role.bullets.map((b, bIdx) => (;
-                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>;
-<<<<<<< HEAD
-                        {role.location ? `  ${role.location}` : ''}
-                      </div>;
-                    </div>;
-                    {role.bullets?.length ? (
-                      <ul className="mt-1 list-disc list-inside text-sm text-gray-800 dark:text-gray-200 space-y-1">
-                        {role.bullets.map((b, bIdx) => (
-                          <li key={`exp-${idx}-b-${bIdx}`}>{b}</li>
-                        ))}
-                      </ul>;
-                    ) : null}
-                  </div>;
-                ))}
-              </div>;
-            </section>;
-          ) : null}
-                      <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
-                        {role.bullets.map ((b, b_idx) => (
-                          <li key={`exp-${idx}-b-${b_idx}`}>{b}</li>))}
-                      </ul>) : null}
-                  </div>))}
-              </div>;
-            </section>) : null}
-          {/* Education */}
-          {data.education?.length ? (
-            <section className='mb - 5'>;
-              <div className='mt - 2 space - y-2'>;
-                {data.education.map ((ed, idx) => (
-                  <div key={`edu-${idx}`} className='text - sm'>;
-                    <div className='font - medium text - gray - 900 dark:text - white'>;
-                      {ed.institution}
-                    </div>
-                    <div className='text-gray-700 dark:text-gray-300'>
-                      {[
-                        ed.degree
-                        ed.start && ed.end
-                          ? `${ed.start}  ${ed.end}`
-                          : ed.start |ed.end
-                      ]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
-                    <div className="text-gray-700 dark:text-gray-300">
-                      {[ed.degree, ed.start && ed.end ? `${ed.start}  ${ed.end}` : ed.start |ed.end]
-          {data && data.education?.length ? (;
-            <section className='mb-5'>;
-              <div className='mt-2 space-y-2'>;
-                {data && data.education.map((ed, idx) => (;
-                  <div key={`edu-${idx}`} className='text-sm'>;
-                    <div className='font-medium text-gray-900 dark:text-white'>;
-                      {ed && ed.institution}
-                    </div>;
-                    <div className='text-gray-700 dark:text-gray-300'>;
-                      {[;
-                        ed && ed.degree,;
-                        ed && ed.start && ed && ed.end;
-                          ? `${ed && ed.start}  ${ed && ed.end}`;
-                          : ed && ed.start || ed && ed.end,;
-                      ]                        .filter(Boolean)                  <div key={`edu-${idx}`} className="text-sm">;
-                    <div className="font-medium text-gray-900 dark:text-white">{ed && ed.institution}</div>;
-                    <div className="text-gray-700 dark:text-gray-300">;
-                      {[ed && ed.degree, ed && ed.start && ed && ed.end ? `${ed && ed.start}  ${ed && ed.end}` : ed && ed.start || ed && ed.end];
-                        .join('  ')}
-                    </div>;
-                  </div>;
-          {data.education?.length ? (
-            <section className="mb-5">
-              <SectionTitle>Education</SectionTitle>
-              <div className="mt-2 space-y-2">
-                {data.education.map((ed, idx) => (
-                  <div key={`edu-${idx}`} className="text-sm">
-                    <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
-                    <div className="text-gray-700 dark:text-gray-300">
-                      {[ed.degree, ed.start && ed.end ? `${ed.start}  ${ed.end}` : ed.start || ed.end]
-                        .filter(Boolean)
-                        .join('  ')}
-=======
 
-=======
                         )}
-=======
                       </h3>;
                       <div className='text - xs text - gray - 600 dark:text - gray - 300'>                        {(role.start || role.end) && (              <SectionTitle > Work Experience</SectionTitle>;
               <div className="mt - 2 space - y-3">;
@@ -638,19 +273,12 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       </h3>;
                       <div className="text - xs text - gray - 600 dark:text - gray - 300">;
                         {(role.start || role.end) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
 
                         {(role.start || role.end) && (
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <span>
                             {role.start || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                             {role.end ? ` – ${role.end}` : ''}
                           </span>
                         )}
@@ -672,28 +300,15 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Education */}
 
 
-=======
 
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
-<<<<<<< HEAD
 
                         .filter(Boolean)
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
-                        .filter(Boolean)
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         .join(' • ')}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </div>
                   </div>
                 ))}
@@ -829,16 +444,8 @@ export default ResumePreview;
 ResumePreview.display_name = 'ResumePreview';
 ;
 export default ResumePreview;
-<<<<<<< HEAD
-;
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default ResumePreview;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default ResumePreview;
 
 }
@@ -850,8 +457,4 @@ export default ResumePreview;
 }
 }
 }
-=======
 export default ResumePreview;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

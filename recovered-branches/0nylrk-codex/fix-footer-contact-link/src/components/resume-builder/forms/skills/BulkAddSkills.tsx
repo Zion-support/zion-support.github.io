@@ -1,13 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -56,11 +48,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
         }
       }
     } catch (err: any) {
-<<<<<<< HEAD
-      setError(err.message |'Failed to categorize skills')
-    }
-  }
-=======
 
 
       if (enhancedContent) {;
@@ -87,32 +74,15 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
     } catch (err: any) {;
       setError(err && err.message || 'Failed to categorize skills');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -126,15 +96,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-<<<<<<< HEAD
-        <Button
-=======
-<<<<<<< HEAD
-        <Button
-=======
         <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           onClick={handleCategorizeSkills}
           disabled={isEnhancing |!bulkSkills.trim()}
           className="gap-2"
@@ -153,57 +115,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-}
-
-      set_error (err.message || 'Failed to categorize skills');
-    }
-  }
-;
-  return (
-    <div className="bg - muted / 40 p - 6 rounded - lg">;
-      <h3 className="text - md font - medium mb - 4">Bulk Add & AI Categorization</h3>;
-      <div className="space - y-4">;
-        <div className="space - y-2">;
-          <label className="text - sm font - medium">Enter multiple skills (comma separated)</label>;
-          <Textarea;
-            className="min - h-24";
-            placeholder="Python, React, TypeScript, Project Management, Communication...";
-            value={bulk_skills}
-            on_change={(e) => setBulkSkills (e.target.value)}
-          />;
-        </div>;
-        <Button;
-          on_click={handleCategorizeSkills}
-          disabled={is_enhancing || !bulk_skills.trim ()}
-          className="gap - 2";
-        >;
-          {is_enhancing ? (
-            <Loader2 className="h - 4 w - 4 animate - spin" />) : (
-            <Sparkles className="h - 4 w - 4" />)}
-          Categorize with AI;
-        </Button>;
-        <p className="text - xs text - muted - foreground mt - 1">;
-          AI will identify skills and categorize them automatically. This may take a moment to process.;
-        </p>;
-        {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      </div>;
-    </div>);
-}
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,34 +1,7 @@
-<<<<<<< HEAD
-// Merkle tree utilities
-export const merkle = {
-  // Add merkle tree functionality here
-  createTree: (leaves: string[]) => null
-  getProof: (tree: any, leaf: string) => []
-  verifyProof: (proof: any[], leaf: string, root: string) => false
-=======
-<<<<<<< HEAD:utils/sync/merkle.ts
-// Merkle tree utilities
-export const merkle = {
-  // Add merkle tree functionality here
-<<<<<<< HEAD
-  createTree: (leaves: string[]) => null
-  getProof: (tree: any, leaf: string) => []
-  verifyProof: (proof: any[], leaf: string, root: string) => false
-=======
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-<<<<<<< HEAD:backup-problematic-files/utils/sync/merkle.ts
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import crypto from "crypto",;
-import { ProposalVoteEntry } from "./types",;
-export function sha256Hex(input: string): string {;
-  return crypto.createHash("sha256").update(input).digest("hex");
-<<<<<<< HEAD
-=======
 }
 ;
 export function leafHashForVote(vote: ProposalVoteEntry): string {;
@@ -69,7 +42,6 @@ export function verifyVotesAgainstMerkleRoot(;
 ): boolean {;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
-=======
 
 import crypto from 'crypto';
 
@@ -78,7 +50,6 @@ export interface MerkleNode {
   left?: MerkleNode;
   right?: MerkleNode;
   data?: any;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ;
 export function leafHashForVote(vote: ProposalVoteEntry): string {;
@@ -120,19 +91,8 @@ export function verifyVotesAgainstMerkleRoot(;
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
 }
-<<<<<<< HEAD
-}
-=======
 
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
->>>>>>> main:utils/sync/merkle.ts
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/utils/sync/merkle.ts
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/utils/sync/merkle.ts
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

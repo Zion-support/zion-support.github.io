@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from 'react'
-import { Card } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-interface Conversation {
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
   id: string
 name: string
 avatar?: string
@@ -26,29 +9,8 @@ isTyping?: boolean
   conversations: Conversation[]
   activeConversation?: string
   onSelectConversation: (id: string) => void
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string
-name: string
-avatar?: string
-lastMessage: string
-timestamp: string
-unreadCount: number
-isTyping?: boolean
-}interface MobileConversationListProps {
-  conversations: Conversation[]
-  activeConversation?: string
-  onSelectConversation: (id: string) => void
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function MobileConversationList({
   conversations
   activeConversation
@@ -186,15 +148,12 @@ function MobileConversationList() {
             <div className='flex items-center gap-3 py-3 cursor-pointer'>;
               <Avatar>;
                 <AvatarImage
-<<<<<<< HEAD
-=======
                   src={conversation.avatar}
                   alt={conversation.name}
                 />                <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>                <AvatarImage src={conversation.avatar} alt={conversation.name} />
-=======
       
       <div className="px-4 pb-4 space-y-2">
         <div className="flex space-x-2">
@@ -218,17 +177,11 @@ function MobileConversationList() {
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   src={conversation && conversation.avatar}
                   alt={conversation && conversation.name}
                 />                <AvatarFallback>;
@@ -294,11 +247,7 @@ function MobileConversationList() {
             </div>;
             <div className='border-t border-border ml-12'></div>          </div>            <div className="border-t border-border ml-12"></div>;
           </div>;
-<<<<<<< HEAD
-=======
 
-=======
-=======
 
 
               
@@ -315,11 +264,6 @@ function MobileConversationList() {
                     {conversation.isTyping 
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </p>
                   
                   {conversation.unreadCount > 0 && (
@@ -328,11 +272,6 @@ function MobileConversationList() {
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
                       {conversation.unreadCount}
                     </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   )}
                 </div>
               </div>
@@ -342,9 +281,6 @@ function MobileConversationList() {
 
             <div className="border-t border-border ml-12"></div>
           </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ))}
       </div>
     </div>
@@ -352,13 +288,7 @@ function MobileConversationList() {
 }
   );
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className='space - y-2 pb - 24'>;
         {conversations.map (conversation => (
           <div;
@@ -404,11 +334,5 @@ function MobileConversationList() {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

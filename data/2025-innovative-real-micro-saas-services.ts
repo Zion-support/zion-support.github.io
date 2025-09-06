@@ -1,19 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-export interface InnovativeMicroSaasService {
-
-=======
-<<<<<<< HEAD
-export interface InnovativeMicroSaasService {
-
-=======
 
 export interface InnovativeMicroSaasService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   tagline: string;
@@ -53,19 +41,11 @@ export interface InnovativeMicroSaasService {;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
-  reviews: number;
-export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[] =
-  [
-    // AI & Consciousness Services
-=======
   reviews: number;
 ;
 export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[] =;
   [;
     // AI & Consciousness Services;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'ai-content-factory-pro'
       name: 'AI Content Factory Pro'
@@ -87,36 +67,12 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
         '24/7 AI monitoring and alerts'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '📊'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite'
       marketPosition:
         'Competes with Tableau ($70/month), Power BI ($9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.'
-<<<<<<< HEAD
-        'Predictive analytics and forecasting',
-        'Real - time dashboard and reporting',
-        'Natural language query interface',
-        'Automated insight generation',
-        'Multi - source data integration',
-        'Custom KPI tracking',
-        'Mobile - responsive design',
-        'API for third - party integrations',
-        '24 / 7 AI monitoring and alerts',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-blue-600 to-cyan-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence-suite',
-      marketPosition:
-        'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Small to medium businesses, Data analysts, Business consultants, Marketing agencies, E-commerce companies'
       trialDays: 14
@@ -149,8 +105,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       rating: 4.8
       reviews: 23
     }
-<<<<<<< HEAD
-=======
     // AI Content Generation Platform
     {
       id: 'ai-content-generation-platform'
@@ -683,14 +637,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'AI-powered legal document analysis platform with natural language processing and machine learning for contract analysis and legal insights.'
-      launchDate: '2024-02-20'
-      customers: 42
-      rating: 4.7
-      reviews: 20
-    }
-=======
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / ai - business - intelligence - suite',
@@ -708,7 +654,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       ],
       use_cases: [;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Sales performance analysis, Customer behavior insights, Financial forecasting, Marketing ROI tracking, Operational efficiency monitoring',
       ],
       roi: 'Businesses report 300% ROI through improved decision - making and operational efficiency.',
@@ -1588,14 +1533,10 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       customers: 42,
       rating: 4 && 4.7,
       reviews: 20,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface EnhancedRealMicroSaasService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1616,7 +1557,6 @@ export interface EnhancedRealMicroSaasService {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -2003,17 +1943,6 @@ export interface EnhancedRealMicroSaasService {
     customers: 42;
     rating: 4 && 4.7;
     reviews: 20
-<<<<<<< HEAD
-  }
-];
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -2022,13 +1951,6 @@ export interface EnhancedRealMicroSaasService {
     customers: 42;
     rating: 4.7;
     reviews: 20;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

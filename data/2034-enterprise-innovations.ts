@@ -1,36 +1,10 @@
-<<<<<<< HEAD
-export interface EnterpriseService2034 {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface EnterpriseService2034 {
-=======
 export interface EnterpriseService2034 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-<<<<<<< HEAD
-  use_cases: string[];
-  technology: string[];
-  market_size: string;
-  competitors: string[];
-  competitive_advantage: string;
-  implementation_time: string;
-=======
   useCases: string[];
   technology: string[];
   marketSize: string;
   competitors: string[];
   competitiveAdvantage: string;
   implementationTime: string;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   roi: string;
   support: string;
   documentation: string;
@@ -492,8 +466,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     website: 'https://ziontechgroup && ziontechgroup.com/quantum-blockchain-infrastructure',
   },
   {
-<<<<<<< HEAD
-=======
     id: 'quantum-blockchain-infrastructure'
     name: 'Quantum Blockchain Infrastructure Platform'
     description:
@@ -567,7 +539,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     website: 'https://ziontechgroup.com/quantum-blockchain-infrastructure'
   }
   {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'ai-autonomous-data-center'
     name: 'AI Autonomous Data Center Platform'
     description:
@@ -610,18 +581,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     ]
     marketSize: '$38.9B by 2035'
     competitors: ['VMware', 'Microsoft', 'Dell']
-<<<<<<< HEAD
-      'Advanced AI algorithms',
-      'IoT sensors',
-      'Machine learning systems',
-      'Automation frameworks',
-      'Predictive analytics',
-      'Real - time monitoring',
-    ],
-    marketSize: '$38 && 38.9B by 2035',
-    competitors: ['VMware', 'Microsoft', 'Dell'],
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     competitiveAdvantage:
       'Only fully autonomous AI-powered data center platform'
     implementationTime: '6-12 months'
@@ -639,24 +598,6 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Custom hardware'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'Data center standards'
-      'Energy efficiency'
-      'Security compliance'
-    ]
-    security: ['AI-powered security', 'Physical security', 'Access controls']
-    scalability: 'Unlimited data center management'
-    uptime: '99.999% data center platform availability'
-    contact: '+1 302 464 0950'
-    website: 'https://ziontechgroup.com/ai-autonomous-data-center'
-  }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Data center standards',
       'Energy efficiency',
       'Security compliance',
@@ -665,14 +606,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     scalability: 'Unlimited data center management',
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
-<<<<<<< HEAD
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center',
-  },
-=======
     website: 'https://ziontechgroup.com/ai-autonomous-data-center',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
 
     ];
@@ -699,23 +634,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     contact: '+1 302 464 0950'
 
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
-<<<<<<< HEAD
-    contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com / ai - autonomous - data - center';
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }
-];
-<<<<<<< HEAD
-;
-=======
 
-=======
 export interface EnterpriseService2034 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -953,12 +873,5 @@ export const enterprise2034Services: EnterpriseService2034[] = [;
     uptime: '99.999% data center platform availability',;
     contact: '+1 302 464 0950',;
     website: 'https://ziontechgroup.com/ai-autonomous-data-center';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -81,18 +81,8 @@ import {
   Star,
   ExternalLink,
   CheckCircle,
-<<<<<<< HEAD
-  TrendingUp,
-  Shield,} from 'lucide-react';import {
-=======
-<<<<<<< HEAD
-  TrendingUp,
-  Shield,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   TrendingUp,;
   Shield,;} from 'lucide-react';import { ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Brain;
   MessageSquare
   Image
@@ -103,7 +93,6 @@ import {
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain;
   MessageSquare,
   Image,
@@ -126,27 +115,12 @@ export default function AiToolsPage() {
       description:
         'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        'Advanced reasoning & analysis'
-        'Web browsing & real-time info'
-        'Plugin ecosystem access'
-        'Code generation & debugging'
-        'Professional writing assistance'
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
-<<<<<<< HEAD
-=======
-=======
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
         'Code generation & debugging',
         'Professional writing assistance',
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ];
       pricing: '$20/month'
       marketPrice: '$20/month'
@@ -891,30 +865,9 @@ export default function AiToolsPage() {
                   <p className="text-sm text-gray-400">{stat && stat.description}</p>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* AI Tools Grid */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Tools Grid */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1117,19 +1070,7 @@ export default function AiToolsPage() {
                   </div>;
                 </div>;
               </Card>;
-<<<<<<< HEAD
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* AI Categories Overview */}
-      <section className='section-padding bg-gradient-cursor-accent'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-=======
                           {feature}
                         </li>
                       ))}
@@ -1154,22 +1095,11 @@ export default function AiToolsPage() {
                 </div>
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Categories Overview */}
 
 
 
               AI Tool Categories
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Understanding the different types of AI tools helps you build a
@@ -1210,30 +1140,9 @@ export default function AiToolsPage() {
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* AI Implementation Guide */}
-      <section className='section-padding bg-gradient-cursor'>
-        <div className='container-cursor'>
-          <div className='text-center mb-20'>
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* AI Implementation Guide */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Getting Started with AI Tools
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1480,10 +1389,6 @@ export default function AiToolsPage() {
 }
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
               className='border-cursor-blue text-cursor-blue hover:bg-cursor-blue hover:text-white'            >              href="/micro-saas"
               variant="primary"
               size="lg"
@@ -1507,11 +1412,4 @@ export default function AiToolsPage() {
     </>
 );
 }
-=======
             <Button
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -28,50 +28,19 @@ interface AddMilestoneFormProps {
   projectEndDate?: string;
   projectType?: string;
 }
-<<<<<<< HEAD
-export function AddMilestoneForm({
-=======
-<<<<<<< HEAD
-export function AddMilestoneForm({
-=======
 
 
 
 export function AddMilestoneForm({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-<<<<<<< HEAD
-  projectType = 'Other'
-}: AddMilestoneFormProps) {
-  const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: ''
-      description: ''
-      amount: 0}})
-  const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values)
-    form.reset()
-  }
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
-    // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
-=======
 
-=======
       });
       return
-<<<<<<< HEAD
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -136,7 +105,6 @@ export function AddMilestoneForm({;
   const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
     // If there's only one milestone, submit it directly;
     if (milestones && milestones.length === 1) {;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       const milestone = milestones[0];
       onSubmit({
         title: milestone.title
@@ -145,13 +113,6 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       });
       return;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {

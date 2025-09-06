@@ -1,92 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React from "react",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import z from "zod",
-import { supabase } from "@/integrations/supabase/client",
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from "@/hooks/use-toast",
-import { useRouter } from "next/router";
-import Image from 'next/image', // Import next/image
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { useForm, ControllerRenderProps } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import z from 'zod'
-import { supabase } from '@/integrations/supabase/client'
-import { useAuth } from '@/hooks/useAuth'
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image
-import { logErrorToProduction } from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-
-  Form
-  FormControl
-  FormDescription
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { AIListingGenerator } from '@/components/listing/AIListingGenerator'
-import { Sparkles } from 'lucide-react'
-// Define the form schema with zod
-const productSchema = z.object({
-  title: z.string().min(3, 'Title must be at least 3 characters')
-  description: z.string().min(10, 'Description must be at least 10 characters')
-  price: z
-    .string()
-    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
-      message: 'Price must be a valid number'
-    })
-  category: z.string().min(1, 'Please select a category')
-  image:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional()
-  video:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional()
-  model:
-    typeof window === 'undefined'
-      ? z.any().optional()
-      : z.instanceof(File).optional()
-  tags: z.string().optional()
-})
-// Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>
-export function ProductSubmissionForm() {
-  const { user } = useAuth()
-  const { toast } = useToast()
-  const router = useRouter()
-  const [isSubmitting, setIsSubmitting] = React.useState(false)
-  const [imagePreview, setImagePreview] = React.useState(null as string | null)
-  const [activeTab, setActiveTab] = React.useState('manual')
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from "react",
 import { useForm, ControllerRenderProps } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -97,96 +8,16 @@ import { useToast } from "@/hooks/use-toast",
 import { useRouter } from "next/router",
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
     defaultValues: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      title: ''
-      description: ''
-      price: ''
-      category: ''
-      video: undefined
-      model: undefined
-      tags: ''
-    }
-  })
-  // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-<<<<<<< HEAD
-=======
-=======
       title: "",
       description: "",
       price: "",
       category: "",
       video: undefined,
       model: undefined,
-<<<<<<< HEAD
-      tags: '',
-    },;
-  });
-  // Handle image upload preview;
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    const file = e.target.files?.[0];    if (file) {
-      form.setValue('image', file)
-      const reader = new FileReader()
-      reader.onloadend = () => {
-<<<<<<< HEAD
-        setImagePreview (reader.result as string);
-      }
-      reader.readAsDataURL (file);
-    }
-  }
-  const handleVideoChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const file = e.target.files?.[0];    // Check condition
-if ( {) {
-  $2
-}
-      form.set_value ('video', file);
-    }
-  }
-  const handleModelChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
-    const file = e.target.files?.[0];    // Check condition
-if ( {) {
-  $2
-}
-      form.set_value ('model', file);
-    }
-  }
-  // Apply AI - generated content to the form;
-  const handleApplyGenerated = (content: any) =>: any {
-    form.set_value ('description', content.description);
-    form.set_value ('tags', content.tags.join (', '));
-    // Set a default price as the middle of the suggested range;
-    const average_price = (
-      (content.suggested_price.min + content.suggested_price.max) /;
-      2).to_fixed (2);
-    form.set_value ('price', average_price);
-    // Switch to the manual tab to show applied content;
-    setActiveTab ('manual');
-  }
-  // Handle form submission
-  const onSubmit = async (values: ProductFormValues,) => {
-    if (!user) {
-      toast({
-        title: 'Authentication Required'
-        description: 'You must be logged in to publish products'
-        variant: 'destructive'
-      })
-      return
-    }
-    setIsSubmitting(true)
-=======
         setImagePreview(reader.result as string)
       }
       reader.readAsDataURL(file)
@@ -215,16 +46,6 @@ if ( {) {
     // Switch to the manual tab to show applied content
     setActiveTab('manual')
   }
-=======
-<<<<<<< HEAD
-      title: "",
-      description: "",
-      price: "",
-      category: "",
-      video: undefined,
-      model: undefined,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       tags: ""}}),
   
   // Handle image upload preview
@@ -267,93 +88,23 @@ if ( {) {
     setActiveTab("manual")
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: 'Authentication Required'
-        description: 'You must be logged in to publish products'
-        variant: 'destructive'
-=======
         title: 'Authentication Required',
         description: 'You must be logged in to publish products',
         variant: 'destructive',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
       return;
     }
     setIsSubmitting(true)
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title
-        description: values.description
-        price: parseFloat(values.price)
-        category: values.category
-        currency: 'USD', // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : []
-<<<<<<< HEAD
         author: {
           name: user.displayName |'Anonymous Creator'
           id: user.id
         }
         createdAt: new Date().toISOString()
       }
-      const { data: product_record, error: product_error } = await supabase;
-        .from ('product_listings');
-        .insert ([product_data]);
-        .select ('id');
-        .single ();
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (product_error.message);
-      }
-      let imagePublicUrl: string | undefined
-      // If we have an image, upload it
-      if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(imagePath, values.image)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(imagePath)
-        imagePublicUrl = publicUrlData.publicUrl
-        // Update the product with the image URL
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({
-            images: [imagePublicUrl]
-          })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-=======
-        author: {
-          name: user.displayName |'Anonymous Creator'
-          id: user.id
-        }
-        createdAt: new Date().toISOString()
-      }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         title: "Authentication Required",
         description: "You must be logged in to publish products",
         variant: "destructive"}),
@@ -362,10 +113,6 @@ if ( {) {
 
     setIsSubmitting(true),
     
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       // Create the product listing
       const productData = {
@@ -376,109 +123,10 @@ if ( {) {
         currency: 'USD', // Default currency;
         tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
         author: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          name: user.displayName || 'Anonymous Creator',
-          id: user.id,
-        },
-        createdAt: new Date().toISOString(),
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      }
-      // Upload video if provided
-      if (values.video) {
-        const videoPath = `product_videos/${productRecord.id}/${values.video.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(videoPath, values.video)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(videoPath)
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ video_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-      }
-      // Upload model if provided
-      if (values.model) {
-        const modelPath = `product_models/${productRecord.id}/${values.model.name}`
-        const { error: uploadError } = await supabase.storage
-          .from('products')
-          .upload(modelPath, values.model)
-        if (uploadError) {
-          throw new Error(uploadError.message)
-        }
-        const { data: publicUrlData } = supabase.storage
-          .from('products')
-          .getPublicUrl(modelPath)
-        const { error: updateError } = await supabase
-          .from('product_listings')
-          .update({ model_url: publicUrlData.publicUrl })
-          .eq('id', productRecord.id)
-        if (updateError) {
-          throw new Error(updateError.message)
-        }
-      }
-      // Send listing to moderation service
-      try {
-        await supabase.functions.invoke ('moderate - listing', {
-          body: {
-            listingId: productRecord.id
-            listingType: 'product'
-            description: values.description
-            images: imagePublicUrl ? [imagePublicUrl] : []
-            sellerId: user.id
-          }
-        })
-      } catch (err) {
-        logErrorToProduction ('Error invoking moderation:', { data: err });
-      }
-      // Show success message
-      toast({
-        title: 'Product Published!'
-        description: 'Your product has been successfully published on Zion.'
-      })
-      // Redirect to product page
-      router.push(`/marketplace/listing/${productRecord.id}`)
-    } catch (error) {
-      toast({
-        title: 'Publication Failed'
-        description:
-          error instanceof Error ? error.message : 'An unknown error occurred'
-        variant: 'destructive'
-      })
-    } finally {
-      setIsSubmitting(false)
-import React from 'react';
-import { useForm, ControllerRenderProps } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import z from 'zod';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import Image from 'next/image'; // Import next/image;
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -498,8 +146,6 @@ import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router",;
 import Image from 'next/image', // Import next/image;
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {;
   Form,;
   FormControl,;
@@ -740,48 +386,17 @@ export function ProductSubmissionForm() {;
         logErrorToProduction('Error invoking moderation:', { data: err });
       }
 
-<<<<<<< HEAD
-      // Show success message;
-      toast({;
-        title: 'Product Published!',;
-        description: 'Your product has been successfully published on Zion.',;
-      });
-
-      // Redirect to product page;
-      router && router.push(`/marketplace/listing/${productRecord && productRecord.id}`);
-    } catch (error) {;
-      toast({;
-        title: 'Publication Failed',;
-        description:;
-          error instanceof Error ? error && error.message : 'An unknown error occurred',;
-        variant: 'destructive',;
-      });
-    } finally {;
-      setIsSubmitting(false);
-    }
-  }
-=======
       
       // Show success message
       toast({
         title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title: 'Publication Failed'
-=======
         title: 'Publication Failed',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
         variant: 'destructive'
@@ -790,7 +405,6 @@ export function ProductSubmissionForm() {;
       setIsSubmitting(false)
     }
   }
-=======
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
@@ -799,12 +413,6 @@ export function ProductSubmissionForm() {;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
       <TabsList className='grid grid-cols-2 mb-6'>;
@@ -815,25 +423,10 @@ export function ProductSubmissionForm() {;
         </TabsTrigger>;
         <TabsTrigger
           value='ai'
-<<<<<<< HEAD
-          className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
-        >
-          <Sparkles className='h-4 w-4 mr-2' />
-          AI-Powered Creation
-        </TabsTrigger>
-      </TabsList>
-      <TabsContent value='manual'>
-=======
 
 
       
       <TabsContent value="manual">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
             <FormField
@@ -883,11 +476,6 @@ export function ProductSubmissionForm() {;
               render={({
                 field
               }: {
-<<<<<<< HEAD
-                field: ControllerRenderProps<ProductFormValues, 'title'>
-              }) => {
-                const { onChange, onBlur, value, ref } = field; return (
-=======
 
               control={form.control}
 
@@ -895,12 +483,6 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "title"> }) => {
                 const { onChange, onBlur, value, ref } = field,
                 return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
@@ -909,9 +491,6 @@ export function ProductSubmissionForm() {;
                         onChange={onChange}
                         onBlur={onBlur}
                         value={value}
-<<<<<<< HEAD
-                        ref={ref}                      />
-=======
                         ref={ref}
                       />;
 
@@ -928,7 +507,6 @@ export function ProductSubmissionForm() {;
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
-=======
             <FormField;
               control={form.control}
               name="description"
@@ -947,11 +525,6 @@ export function ProductSubmissionForm() {;
                     <Textarea;
                       placeholder="Describe your product in detail...";
                       className="min-h-32";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {...field}
                     />
                   </FormControl>
@@ -967,29 +540,12 @@ export function ProductSubmissionForm() {;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField
                 control={form.control}
-<<<<<<< HEAD
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-                name='price'
-                render={({
-                  field,
-                }: {
-                  field: ControllerRenderProps<ProductFormValues, 'price'>
-                }) => (                  <FormItem>
-=======
-                name="price"
-                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
-                  <FormItem>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </FormControl>
                     <FormDescription>
                       Create a compelling title that describes your product
@@ -1107,14 +663,9 @@ export function ProductSubmissionForm() {;
                 render={({
                   field
                 }: {
-<<<<<<< HEAD
-                  field: ControllerRenderProps<ProductFormValues, 'category'>
-                }) => (                  <FormItem>
-=======
 
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
-=======
                   </FormItem>;
                 )}
               />;
@@ -1123,12 +674,6 @@ export function ProductSubmissionForm() {;
                 name="category"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (
                   <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -1164,24 +709,10 @@ export function ProductSubmissionForm() {;
             </div>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD
-              name='tags';
-              render={({
-                field
-              }: {
-                field: ControllerRenderProps<ProductFormValues, 'tags'>
-              }) => (                <FormItem>
-=======
 
               name="tags"
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -1190,47 +721,15 @@ export function ProductSubmissionForm() {;
                     />
                   </FormControl>
                   <FormDescription>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                    Add relevant tags to help users find your product (e.g., ai
-                    productivity, design)
-                  </FormDescription>
-                  <FormMessage />
-                </FormItem>
-<<<<<<< HEAD
-              )}
-            />
-            <FormField
-              control={form && form.control}
-              name='image'
-              render={() => (;
-                <FormItem>;
-                  <FormLabel>Product Image</FormLabel>;
-                  <FormControl>;
-=======
               )}
             />
             <FormField
               control={form.control}
               name='image'
-=======
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name='image'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               name="tags";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
                 <FormItem>;
@@ -1252,24 +751,10 @@ export function ProductSubmissionForm() {;
             <FormField;
               control={form.control}
               name="image"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               render={() => (
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                    <Input
-                      type='file'
-                      accept='image/*'
-                      onChange={handleImageChange}
-<<<<<<< HEAD
-                      className='cursor-pointer'                    />
-=======
 
 
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
@@ -1288,47 +773,24 @@ export function ProductSubmissionForm() {;
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended
                     size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-<<<<<<< HEAD
-=======
 
 
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
                         <Image
                           src={imagePreview}
-<<<<<<< HEAD
-                          alt='Product image preview'                          width={600} // Example width, adjust as needed
-=======
 
 
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           priority={false} // Preview images are not LCP
@@ -1463,8 +925,6 @@ export function ProductSubmissionForm() {;
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>;
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
-<<<<<<< HEAD
-=======
 
 
             />;
@@ -1472,11 +932,6 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="video"
               render={() => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -1494,11 +949,6 @@ export function ProductSubmissionForm() {;
               control={form.control}
               name="model"
               render={() => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -1511,22 +961,7 @@ export function ProductSubmissionForm() {;
                 </FormItem>
               )}
             />
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-            <div className='flex justify-end'>
-              <Button
-                type='submit'
-                disabled={isSubmitting}
-                className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
-                {isSubmitting ? 'Publishing...' : 'Publish Product'}
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <div className="flex justify-end">
               <Button 
                 type="submit" 
@@ -1534,12 +969,6 @@ export function ProductSubmissionForm() {;
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </Button>
             </div>
           </form>
@@ -1655,9 +1084,6 @@ const {
 }catch (error) {
   toast ({
 }finally {
-<<<<<<< HEAD
-  setIsSubmitting (false);
-=======
   setIsSubmitting (false)
 }
 }className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList>
@@ -1683,11 +1109,6 @@ const {
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) "
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>)
 }'"  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
       <TabsContent value="ai">
         <AIListingGenerator 
@@ -1700,11 +1121,6 @@ const {
       </TabsContent>;
     </Tabs>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";

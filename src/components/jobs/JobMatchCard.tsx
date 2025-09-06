@@ -1,41 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-}
-}
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Building, MapPin, Clock, DollarSign, Star } from 'lucide-react'
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-=======
-<<<<<<< HEAD
-import { formatDistanceToNow } from "date-fns";
-import { JobMatch } from "@/types/jobs";
-=======
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface JobMatchProps {
   matchId: string;
   talentId: string;
@@ -50,34 +20,6 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void
-<<<<<<< HEAD
-  talentId, ;
-  name, ;
-  title, ;
-  company, ;
-  avatar, ;
-  location, ;
-  category, ;
-  matchPercent, ;
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-}
-
-
-  talentId
-  name
-  title
-  company
-  avatar
-  location
-  category
-  matchPercent
-
-}
-}
-<<<<<<< HEAD
-=======
 
   // Generate a formatted date for display
   const postedDate = new Date(),
@@ -162,12 +104,7 @@ interface JobMatchProps {
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   talent_id,
   name,
   title,
@@ -178,12 +115,5 @@ interface JobMatchProps {
   match_percent,
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

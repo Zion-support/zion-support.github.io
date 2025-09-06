@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { signPayload } from "../../../utils/sync/signature",;
@@ -9,7 +6,6 @@ import { v4 as uuidv4 } from "uuid",;
 import { nextVersionFor } from "../../../utils/sync/versioning",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -33,31 +29,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    eventId: uuidv4()
-    type: "dao_endorsement" as const
-    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp |Date.now() }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-<<<<<<< HEAD
-    eventId: uuidv4(), type: "dao_endorsement" as const,
-    payload: {
-       id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() 
-    },
-    originInstanceId: state.config.instanceId, version,
-    timestamp: Date.now()};
-=======
-=======
     eventId: uuidv4(),
     type: "dao_endorsement" as const,
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() },
@@ -66,7 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     timestamp: Date.now()},
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   upsertEvent(state, event);
   writeState(state);
@@ -87,13 +57,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })
   );
 
-<<<<<<< HEAD
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-=======
   return res.status(200).json({ status: "created", version, eventId: event.eventId });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -117,7 +82,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
@@ -131,11 +95,6 @@ export default async function handler(req, res) {
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
@@ -247,11 +206,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

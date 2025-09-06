@@ -1,42 +1,8 @@
 
-<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
-interface MainNavigationProps {
-  isAdmin?: boolean;
-  unreadCount?: number;
-  className?: string;
-}
-
-export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const location = useLocation();
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Link, useLocation} from "react-router-dom";
-import {cn} from "@/lib/utils";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Link, useLocation } from "react-router-dom",
-import { cn } from "@/lib/utils",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -46,8 +12,6 @@ interface MainNavigationProps {
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const links = [
     {
       name: "Home"
@@ -99,21 +63,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
-<<<<<<< HEAD
-        {links && links.map((link) => (;
-          <li key={link && link.name}>;
-            <Link
-              to={link && link.href}
-              className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
-                link && link.matches(location && location.pathname)
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-              )}>;
-              {link && link.name}
-            </Link>;
-          </li>;
-=======
 
         {links.map((link) => (;
           <li key={link.name}>;
@@ -124,18 +73,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             >
               {link.name}
             </Link>
           </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ))}
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
@@ -158,14 +100,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               )}
             </Link>;
           </li>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       </ul>
     </nav>

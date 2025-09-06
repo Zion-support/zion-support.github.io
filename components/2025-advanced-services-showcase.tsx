@@ -1885,10 +1885,7 @@ if ( {) {
                   {category && category.icon}
                   {category && category.name}
                 </button>;
-<<<<<<< HEAD
-=======
 
-=======
                 </button>
               </div>
             </div>
@@ -1899,7 +1896,6 @@ if ( {) {
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
                 <button
-=======
       {/* Main Content */}
       <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 12'>;
         {/* Filters and Search */}
@@ -1966,17 +1962,10 @@ if ( {) {
             <div className="flex flex - wrap gap - 3">;
               {categories.map ((category) => (
 
-=======
 
 
                 <button
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
@@ -2065,18 +2054,9 @@ if ( {) {
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Results Summary */}
         <div className='mb - 8'>;
           <div className='bg - white dark:bg - gray - 800 rounded - xl p - 6 border border - gray - 200 dark:border - gray - 700'>;
@@ -2147,19 +2127,6 @@ if ( {) {
                   {filteredServices && filteredServices.map(service => (;
                     <ServiceCard key={service && service.id} service={service} />;
                   ))}
-<<<<<<< HEAD
-                </div>;
-              ) : (;
-                <div className='space-y-6'>;
-                  {filteredServices && filteredServices.map(service => (                    <ServiceList key={service && service.id} service={service} />                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                          {filteredServices && filteredServices.map((service) => (;
-          <ServiceCard key={service && service.id} service={service} />;
-        ))}
-                </div>;
-              ) : (;
-                <div className="space-y-6">;
-                  {filteredServices && filteredServices.map((service) => (;
-=======
                 </div>
               ) : (
                 <div className='space-y-6'>
@@ -2168,32 +2135,16 @@ if ( {) {
 
                     <ServiceList key={service.id} service={service} />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   ))}
                 </div>;
               )}
             </AnimatePresence>;
           )}
-<<<<<<< HEAD
-        </div>
-=======
 
         </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Call to Action */}
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -2368,15 +2319,5 @@ if ( {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
           </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,69 +1,12 @@
 
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { Badge } from "@/components/ui/badge",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {cn} from "@/lib/utils";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {StarIcon} from "lucide-react";
-interface ListingScoreCardProps {;
-  title: string,;
-  description: string,;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Button } from "@/components/ui/button";
-import { StarIcon } from "lucide-react";
-interface ListingScoreCardProps {
-
-  title: string
-  description: string
-  image?: string;
-  category: string
-
-  image?: string;
-  category: string,;
-  tags?: string[];
-  author?: string;
-  author_image?: string;
-  ai_score?: number;
-  rating?: number;
-  reviewCount?: number;
-  className?: string;
-}
-export function ListingScoreCard({
-  title;
-
-  description
-  image
-  category
-  tags;
-  author
-  authorImage;
-  aiScore = 0;
-  rating = 0;
-  reviewCount = 0;
-  className
-<<<<<<< HEAD
-=======
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group"
-=======
 import { Button } from "@/components/ui/button",
 import { StarIcon } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ListingScoreCardProps {
   title: string,
   description: string,
@@ -92,7 +35,6 @@ export function ListingScoreCard({
   rating = 0,
   reviewCount = 0,
   className 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }: ListingScoreCardProps) {
   return (
     <div className={cn(
@@ -130,25 +72,12 @@ export function ListingScoreCard({
                 <StarIcon
                   key={star}
                   className={cn(
-<<<<<<< HEAD
-                    "h-4 w-4"
-                    star <= Math.round(rating)
-                      ? "text-zion-cyan fill-zion-cyan"
 
                       : "text-zion-slate-light"
-=======
-
-                      : "text-zion-slate-light"
-=======
                     "h-4 w-4", 
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan" 
                       : "text-zion-slate-light"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { cn } from "@/lib/utils",;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -221,12 +150,6 @@ export function ListingScoreCard({;
                     star <= Math.round(rating);
                       ? "text-zion-cyan fill-zion-cyan";
                       : "text-zion-slate-light";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   )}
                 />;
               ))}
@@ -241,28 +164,9 @@ export function ListingScoreCard({;
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
-<<<<<<< HEAD
               </Badge>;
             ))}
           </div>;
-=======
-<<<<<<< HEAD
-              </Badge>
-            ))}
-          </div>
-<<<<<<< HEAD
-        )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-              </Badge>;
-            ))}
-          </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote

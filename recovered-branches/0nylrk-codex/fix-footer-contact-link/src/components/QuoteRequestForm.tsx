@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -22,24 +14,13 @@ import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
 import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
-<<<<<<< HEAD
-export function QuoteRequestForm() {
-=======
-<<<<<<< HEAD
-export function QuoteRequestForm() {
-=======
 
 export function QuoteRequestForm() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-=======
 
-=======
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -61,14 +42,7 @@ export function QuoteRequestForm() {
   const { toast } = useToast(),
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -205,25 +179,10 @@ export function QuoteRequestForm() {
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-<<<<<<< HEAD
-=======
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
-<<<<<<< HEAD
-              )}
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -374,7 +333,6 @@ export function QuoteRequestForm() {;
 
             <div className="flex justify-between mt-8">;
               {currentStep !== "service" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Button
                   variant="outline"
                   onClick={handleBack}
@@ -395,7 +353,6 @@ export function QuoteRequestForm() {;
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>;
@@ -413,13 +370,6 @@ export function QuoteRequestForm() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </div>);
 }

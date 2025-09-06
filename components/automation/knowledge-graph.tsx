@@ -1,34 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 ) )
 }</ul> </section> <section>) )
 }</ul> </section> </div>)
-<<<<<<< HEAD
-=======
-=======
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
  
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function KnowledgeGraph({ report }: Props) {
 };
 ) ) ;

@@ -1,25 +1,11 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-<<<<<<< HEAD
-=======
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
@@ -39,67 +25,21 @@ export function TeamStats() {;
           <Progress value={64} className="h-2" />
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
-<<<<<<< HEAD
-        <div className="space-y-4 pt-2">
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-1">
-              <p className="text-xs text-muted-foreground">Active projects</p>
-              <p className="text-xl font-bold">12</p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-xs text-muted-foreground">Job postings</p>
-              <p className="text-xl font-bold">8</p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-xs text-muted-foreground">Avg. time to hire</p>
-              <p className="text-xl font-bold">14d</p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-xs text-muted-foreground">
-                Interviews this month
-              </p>
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
 
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
       </CardContent>
-<<<<<<< HEAD
     </Card>
-=======
-<<<<<<< HEAD
-=======
-    </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -146,7 +86,6 @@ export function TeamStats() {;
 
         <div className="pt-4 text-center border-t border-border mt-4">;
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">;
-=======
 import React from './react';
 import {
   Card,
@@ -200,7 +139,6 @@ function TeamStats() {
         <div className="pt - 4 text - center border - t border - border mt - 4">;
           <button className="text - sm text - blue - 500 font - medium hover: text - blue - 700">;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             View Full Analytics;
           </button>;
         </div>;

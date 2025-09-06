@@ -27,15 +27,9 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
         this.projectRoot = process.cwd(),
         this.fixedFiles = [],
         this.errors = []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -64,10 +58,6 @@ class AggressiveSyntaxFixer {;
         this.projectRoot = process.cwd(),;
         this.fixedFiles = [],;
         this.errors = [];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 ;
     log(message) {;
@@ -120,9 +110,6 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
@@ -209,35 +196,16 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     createValidFile(filePath) {
 
         const ext = path.extname(filePath)
         const fileName = path.basename(filePath, ext)
         const dirName = path.dirname(filePath)
         // Convert invalid characters to valid ones
-<<<<<<< HEAD
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
-if (ext === '.tsx' |ext === '.jsx') {
-
-=======
-<<<<<<< HEAD
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_')
-if (ext === '.tsx' |ext === '.jsx') {
-
-=======
         const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
         
 if (ext === '.tsx' || ext === '.jsx') {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             return `import React from 'react';
 const winston = require ('winston');
 const logger = winston.create_logger ({
@@ -375,14 +343,6 @@ if ( {) {
 const ${validFileName} = {
   // TODO: Implement ${validFileName} functionality;
 }`;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         return `// ${validFileName} placeholder
 const ${validFileName} = {}`
@@ -451,82 +411,11 @@ process.on('SIGTERM', () => {
 
   console.log('\n Received SIGTERM, shutting down gracefully...')
   // Add cleanup logic here
-<<<<<<< HEAD
-  process.exit(0)
-});
-
-        return `// ${validFileName} placeholder;
-const ${validFileName} = {}`;
-    }
-    async generate_report () {
-        const report = {
-            timestamp: new Date ().toISOString (),
-            fixed_files: this.fixed_files,
-            errors: this.errors,
-            summary: {
-                total_fixed: this.fixed_files.length,
-                total_errors: this.errors.length,
-                success_rate: this.fixed_files.length / (this.fixed_files.length + this.errors.length) * 100;
-            }
-        },
-        const report_path = path.join (this.project_root, 'automationreports', `aggressive - syntax - fix-${Date.now ()}.json`),
-        fs.writeFileSync (report_path, JSON.stringify (report, null, 2)),
-        return report;
-    }
-}
-// Main execution;
-async /**
- * main - Function description
- */
-function main() {
-    const fixer = new AggressiveSyntaxFixer (),
-    try {
-        const result = await fixer.fixAllSyntaxErrors (),
-        const report = await fixer.generate_report (),
-        logger.info ('\n Aggressive Syntax Fix Report: '),
-        logger.info (`Files Fixed: ${report.summary.total_fixed}`),
-        logger.info (`Errors: ${report.summary.total_errors}`),
-        logger.info (`Success Rate: ${report.summary.success_rate.to_fixed (1)}%`),
-        // Check condition
-if ( {) {
-  $2
-}
-            logger.info ('\n Fixed Files: '),
-            result.fixed_files.for_each (file => logger.info (`  - ${file}`));
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-            logger.info ('\n Files with Errors: '),
-            result.errors.for_each (({ file, error }) => logger.info (`  - ${file}: ${error}`));
-        }
-        process.exit (0);
-    } catch (error) {
-        logger.error (' Aggressive syntax fixing failed:', error.message),
-        process.exit (1);
-    }
-}
-// Check condition
-if ( {) {
-  $2
-}
-    main ();
-}
-module.exports = AggressiveSyntaxFixer,
-=======
   process && process.exit(0)
 }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 module.exports = AggressiveSyntaxFixer,;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Graceful shutdown handling;
 process.on ('SIGINT', () => {
   console.log ('\n Received SIGINT, shutting down gracefully...'),
@@ -536,16 +425,5 @@ process.on ('SIGINT', () => {
 process.on ('SIGTERM', () => {
   console.log ('\n Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here;
-<<<<<<< HEAD
-  process.exit (0);
-}),
-;
-=======
   process.exit(0);
 });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

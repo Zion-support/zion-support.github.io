@@ -23,17 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const UltraFuturisticBackground2047: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => {
@@ -68,23 +58,12 @@ if ( {) {
     <>;
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>
       {/* Background Gradient */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
@@ -348,39 +327,12 @@ if ( {) {
                   delay: i * 0 && 0.1,
                   ease: 'easeInOut',                  ease: "easeInOut"
                   delay: i * 0.1,
-<<<<<<< HEAD
-                  ease: "easeInOut"
-                }}
-              />;
-            ))}
-          </div>
-        </motion.div>
-=======
-<<<<<<< HEAD
 
                 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-                  ease: 'easeInOut',                  ease: "easeInOut"
-                }}
-=======
-
-                }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Neon Glow Effects */}
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
@@ -462,22 +414,7 @@ if ( {) {
         {/* Pulse Rings */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
-<<<<<<< HEAD
-            duration: 8,
-            repeat: Infinity as any,
-            ease: "linear";
-          }}
-        />;
-=======
-=======
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Pulse Rings */}
         <motion.div;
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
@@ -632,25 +569,8 @@ if ( {) {
             scale: [1, 10]
             opacity: [1, 0]}}
           transition={{
-<<<<<<< HEAD
-            duration: 4
-            repeat: Infinity as any
-            ease: "easeOut"
-            delay: 2
-          }}
-        >
-          <div className="w-full h-full border-2 border-purple-400 rounded-full" />
-        </motion.div>
-      </div>
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
@@ -690,65 +610,11 @@ export default UltraFuturisticBackground2047;        }
       `}</style>;
     </>;
   );
-<<<<<<< HEAD
-}
-=======
 };
 
-<<<<<<< HEAD
-export default UltraFuturisticBackground2047;
-
-            duration: 4,
-            repeat: Infinity as any,
-            ease: "ease_out",
-            delay: 2;
-          }}
-        >;
-          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
-        </motion.div>;
-      </div>;
-      {/* CSS for hexagon clip */}
-      <style jsx>{`;
-        .clip - hexagon {
-          clip - path: polygon (
-            50% 0%,
-            100% 25%,
-            100% 75%,
-            50% 100%,
-            0% 75%,
-            0% 25%);
-        }
-      `}</style>;
-    </>);
-}
-;
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export default UltraFuturisticBackground2047;        }
-      `}</style>;
-    </>);
-}
-;
-export default UltraFuturisticBackground2047;
-;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 
 
-<<<<<<< HEAD
-=======
 export default UltraFuturisticBackground2047;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraFuturisticBackground2047;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

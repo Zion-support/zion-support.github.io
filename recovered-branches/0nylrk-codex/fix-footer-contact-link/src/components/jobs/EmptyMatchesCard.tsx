@@ -11,25 +11,13 @@ export function EmptyMatchesCard({
   isProcessing
 }: EmptyMatchesCardProps) {
   return (
-<<<<<<< HEAD
-=======
-=======
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export interface EmptyMatchesCardProps {;
-  onRefresh: () => void;
-  isProcessing: boolean;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 }
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
@@ -54,16 +42,6 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
-<<<<<<< HEAD
-        )}
-      </Button>
-<<<<<<< HEAD
-    </Card>
-  );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -74,8 +52,6 @@ export interface EmptyMatchesCardProps {;
 ;
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">;
       <div className="mb-4 flex justify-center">;
         <Sparkles className="h-12 w-12 text-muted-foreground" />;
@@ -131,14 +107,5 @@ function EmptyMatchesCard() {
           </>)}
       </Button>;
     </Card>);
-<<<<<<< HEAD
-}
-=======
 
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

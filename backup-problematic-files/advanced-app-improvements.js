@@ -9,21 +9,12 @@ function createAdvancedMonitoring() {
   const monitoringFiles = {
     'monitoring/health-check && check.js': `// Advanced health check system
 export class HealthChecker {
-<<<<<<< HEAD
-  constructor() {this.checks = new Map();
-=======
 
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
-<<<<<<< HEAD
-export class HealthChecker {
-  constructor() {this.checks = new Map();
-=======
 export class HealthChecker {;
   constructor() {;
     this.checks = new Map();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     this.results = new Map();  }
     this && this.checks = new Map();
     this && this.results = new Map();  }
@@ -263,19 +254,11 @@ export class AnalyticsTracker {
   }
 export const queryOptimizer = new QueryOptimizer();`
     'database/connection-pool.js': `// Database connection pooling
-<<<<<<< HEAD
-=======
 export class ConnectionPool {
-<<<<<<< HEAD
-  constructor(options = {}) {
-    this.maxConnections = options.maxConnections |10;
-    this.minConnections = options.minConnections |2;
-=======
 
   constructor(options = {}) {;
     this.maxConnections = options.maxConnections || 10;
     this.minConnections = options.minConnections || 2;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     this.connections = [];
     this.availableConnections = [];
     this.usedConnections = new Set();
@@ -310,7 +293,6 @@ export class ConnectionPool {
   }
 export const query_optimizer = new QueryOptimizer ();`,
     'database / connection - pool.js': `// Database connection pooling;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export class ConnectionPool {
   constructor(options = {}) {
     this.maxConnections = options.maxConnections |10;
@@ -454,17 +436,8 @@ main();// Run if called directly
 if (require.main === module) {
   main();
 }
-<<<<<<< HEAD
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
-=======
-<<<<<<< HEAD
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
-=======
 
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     console.log ('Starting advanced app improvements...');
 ;
     // Create all improvement systems;
@@ -491,10 +464,6 @@ if ( {) {
 }
   main ();
 }
-<<<<<<< HEAD
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
-;
-=======
 
 }
 }
@@ -502,5 +471,3 @@ export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessi
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

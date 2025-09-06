@@ -1,21 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState, useEffect  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { FilePlus, Loader2  } from 'lucide-react';
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
-<<<<<<< HEAD
-=======
-=======
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -25,8 +8,6 @@ import {ProjectForm} from './ProjectForm';
 import {PortfolioProject} from '@/types/resume';
 import {usePortfolio} from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
 
@@ -49,15 +30,7 @@ export function PortfolioBuilder() {;
     if (success) {
       fetchProjects();
     }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-  }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -87,14 +60,7 @@ export function PortfolioBuilder() {;
       fetchProjects();
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -125,26 +91,7 @@ export function PortfolioBuilder() {;
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-<<<<<<< HEAD
-              {editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
-=======
-<<<<<<< HEAD
-              {editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            <ProjectForm
-              project={editingProject |undefined}
-              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
-              onCancel={() => {;
-                setShowAddProject(false);
-                setEditingProject(null);
 
-<<<<<<< HEAD
-=======
-
-=======
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
             <ProjectForm;
@@ -153,8 +100,6 @@ export function PortfolioBuilder() {;
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             <ProjectForm 
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
@@ -163,8 +108,6 @@ export function PortfolioBuilder() {;
                 setShowAddProject(false);
                 setEditingProject(null);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               }}
             />;
           </CardContent>;

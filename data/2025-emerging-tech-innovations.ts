@@ -1,19 +1,7 @@
 import { ServiceVariant } from '../types/service-variants';
 
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
-;
-export interface EmergingTechInnovationService {
-
-=======
-<<<<<<< HEAD
-export interface EmergingTechInnovationService {
-
-=======
 
 export interface EmergingTechInnovationService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   name: string;
   tagline: string;
@@ -80,11 +68,6 @@ const contact = {
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
-<<<<<<< HEAD
-    id: 'quantum-internet-protocol-stack',
-    name: 'Quantum Internet Protocol Stack',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'quantum-internet-protocol-stack'
     name: 'Quantum Internet Protocol Stack'
     tagline:
@@ -105,35 +88,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Integration with classical internet infrastructure'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-=======
     icon: '🌐'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-indigo-600 to-purple-700'
     textColor: 'text-indigo-400'
     link: 'https://ziontechgroup.com/quantum-internet-protocol-stack'
     marketPosition: 'Pioneering quantum internet infrastructure platform'
-<<<<<<< HEAD
-      'Quantum key distribution (QKD) protocols',
-      'Quantum internet routing and switching',
-      'Quantum memory and storage systems',
-      'Quantum repeater networks',
-      'Quantum entanglement distribution',
-      'Post - quantum cryptography integration',
-      'Quantum network security and monitoring',
-      'Multi - protocol quantum communication',
-      'Quantum internet governance and compliance',
-      'Integration with classical internet infrastructure',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-indigo-600 to-purple-700',
-    textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-protocol-stack',
-    marketPosition: 'Pioneering quantum internet infrastructure platform',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Telecommunications companies, Government agencies, Research institutions, Financial institutions'
     trialDays: 14
@@ -164,14 +123,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 18
     rating: 4.9
     reviews: 12
-<<<<<<< HEAD
-      'Custom quantum internet infrastructure with protocol development and hardware integration',
-    launch_date: '2024 - 08 - 01',
-    customers: 18,
-    rating: 4 && 4.9,
-    reviews: 12,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       'Unbreakable quantum encryption'
       'Future-proof infrastructure'
@@ -212,33 +163,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Integration with vehicle systems'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-blue-600 to-cyan-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
-      'Advanced computer vision and perception',
-      'Real - time object detection and tracking',
-      'Predictive path planning and navigation',
-      'Behavioral prediction and modeling',
-      'Multi - sensor fusion and calibration',
-      'Safety - critical decision making',
-      'Real - time performance monitoring',
-      'Over - the - air updates and learning',
-      'Regulatory compliance and certification',
-      'Integration with vehicle systems',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-blue-600 to-cyan-700',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
-=======
     icon: '🚗'
     color: 'from-blue-600 to-cyan-700'
     textColor: 'text-blue-400'
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading AI platform for autonomous vehicle development and deployment'
     targetAudience:
@@ -267,12 +195,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 67
     rating: 4.8
     reviews: 45
-<<<<<<< HEAD
-    customers: 67,
-    rating: 4 && 4.8,
-    reviews: 45,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '3x faster development'
       '40% improvement in safety'
@@ -313,32 +235,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Advanced analytics and machine learning'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-400'
-    link: 'https://ziontechgroup.com/enterprise-digital-twin-platform'
-      'Predictive maintenance and analytics',
-      '3D modeling and simulation',
-      'IoT sensor integration and management',
-      'Performance optimization algorithms',
-      'Historical data analysis and trending',
-      'Custom dashboard and reporting',
-      'Integration with enterprise systems',
-      'Scalable architecture for large deployments',
-      'Advanced analytics and machine learning',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-emerald-600 to-teal-700',
-    textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/enterprise-digital-twin-platform',
-=======
     icon: '🔄'
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-400'
     link: 'https://ziontechgroup.com/enterprise-digital-twin-platform'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading digital twin platform for enterprise asset management and optimization'
     targetAudience:
@@ -371,12 +271,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 89
     rating: 4.7
     reviews: 67
-<<<<<<< HEAD
-    customers: 89,
-    rating: 4 && 4.7,
-    reviews: 67,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '30% reduction in maintenance costs'
       '25% improvement in efficiency'
@@ -417,31 +311,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Comprehensive analytics and reporting'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-gray-600 to-slate-700'
-    textColor: 'text-gray-400'
-    link: 'https://ziontechgroup.com/ai-robotics-orchestration'
-      'Autonomous learning and adaptation',
-      'Real - time performance monitoring',
-      'Predictive maintenance and health monitoring',
-      'Human - robot collaboration and safety',
-      'Custom robotics application development',
-      'Integration with existing automation systems',
-      'Advanced simulation and training environments',
-      'Comprehensive analytics and reporting',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-gray-600 to-slate-700',
-    textColor: 'text-gray-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-robotics-orchestration',
-=======
     icon: '🤖'
     color: 'from-gray-600 to-slate-700'
     textColor: 'text-gray-400'
     link: 'https://ziontechgroup.com/ai-robotics-orchestration'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading AI-powered robotics orchestration platform for intelligent automation'
     targetAudience:
@@ -472,12 +345,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 56
     rating: 4.6
     reviews: 42
-<<<<<<< HEAD
-    customers: 56,
-    rating: 4 && 4.6,
-    reviews: 42,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '40% improvement in efficiency'
       '30% reduction in costs'
@@ -517,35 +384,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Integration with research platforms'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-=======
     icon: '🧪'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-purple-600 to-pink-700'
     textColor: 'text-purple-400'
     link: 'https://ziontechgroup.com/quantum-materials-discovery'
     marketPosition: 'Pioneering quantum-powered materials discovery platform'
-<<<<<<< HEAD
-      'Quantum molecular simulation and modeling',
-      'AI - powered molecular design and optimization',
-      'High - throughput screening and analysis',
-      'Materials property prediction and optimization',
-      'Drug discovery and pharmaceutical development',
-      'Automated laboratory workflow integration',
-      'Advanced analytics and reporting',
-      'Collaboration and data sharing tools',
-      'Regulatory compliance and validation',
-      'Integration with research platforms',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
-    marketPosition: 'Pioneering quantum-powered materials discovery platform',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Pharmaceutical companies, Materials science firms, Research institutions, Chemical companies'
     trialDays: 14
@@ -563,11 +406,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ]
     roi: 'Accelerate materials discovery by 10-100x and reduce research costs by 60%'
     competitors: [
-<<<<<<< HEAD
-      'Schrdinger, Materials Project, Citrine Informatics, Exscientia'
-=======
       'Schrödinger, Materials Project, Citrine Informatics, Exscientia'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     ]
     marketSize: '$18B+ materials discovery market'
     growthRate: '40% YoY'
@@ -580,12 +419,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 28
     rating: 4.9
     reviews: 19
-<<<<<<< HEAD
-    customers: 28,
-    rating: 4 && 4.9,
-    reviews: 19,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '10-100x faster discovery'
       '60% reduction in costs'
@@ -626,33 +459,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Performance optimization and scaling'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-violet-600 to-purple-700'
-    textColor: 'text-violet-400'
-    link: 'https://ziontechgroup.com/enterprise-metaverse-platform'
-      '3D world building and environment creation',
-      'AI - powered content generation and NPCs',
-      'Multi - user collaboration and social features',
-      'VR / AR device compatibility and optimization',
-      'Advanced analytics and user behavior tracking',
-      'Customizable avatars and identity management',
-      'Integration with business systems and workflows',
-      'Real - time communication and collaboration tools',
-      'Content management and distribution',
-      'Performance optimization and scaling',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-violet-600 to-purple-700',
-    textColor: 'text-violet-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/enterprise-metaverse-platform',
-=======
     icon: '🌐'
     color: 'from-violet-600 to-purple-700'
     textColor: 'text-violet-400'
     link: 'https://ziontechgroup.com/enterprise-metaverse-platform'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Leading enterprise metaverse platform for business applications and collaboration'
     targetAudience:
@@ -681,12 +491,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 134
     rating: 4.7
     reviews: 98
-<<<<<<< HEAD
-    customers: 134,
-    rating: 4 && 4.7,
-    reviews: 98,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '70% reduction in travel costs'
       '40% improvement in collaboration'
@@ -726,33 +530,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Advanced energy analytics and insights'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-=======
     icon: '⚡'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-yellow-600 to-orange-700'
     textColor: 'text-yellow-400'
     link: 'https://ziontechgroup.com/quantum-energy-optimization'
     marketPosition: 'Leading quantum-powered energy optimization platform'
-<<<<<<< HEAD
-      'Renewable energy integration and optimization',
-      'Real - time energy monitoring and analytics',
-      'Predictive maintenance for energy infrastructure',
-      'Energy storage optimization and management',
-      'Carbon footprint tracking and reduction',
-      'Regulatory compliance and reporting',
-      'Integration with smart grid systems',
-      'Advanced energy analytics and insights',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-optimization',
-    marketPosition: 'Leading quantum-powered energy optimization platform',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Utility companies, Energy providers, Smart grid operators, Sustainability consultants'
     trialDays: 30
@@ -783,12 +565,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 45
     rating: 4.8
     reviews: 32
-<<<<<<< HEAD
-    customers: 45,
-    rating: 4 && 4.8,
-    reviews: 32,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '25% reduction in energy costs'
       '30% improvement in efficiency'
@@ -829,34 +605,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Integration with laboratory equipment'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-=======
     icon: '🧬'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     color: 'from-green-600 to-emerald-700'
     textColor: 'text-green-400'
     link: 'https://ziontechgroup.com/ai-biotechnology-research'
     marketPosition: 'Leading AI-powered biotechnology research platform'
-<<<<<<< HEAD
-      'Genetic sequence analysis and optimization',
-      'Protein structure prediction and modeling',
-      'Biological pathway analysis and simulation',
-      'High - throughput screening and analysis',
-      'Real - time laboratory data integration',
-      'Advanced bioinformatics and analytics',
-      'Collaborative research tools and workflows',
-      'Regulatory compliance and validation',
-      'Integration with laboratory equipment',
-    ],
-    popular: false,
-    icon: '',
-    color: 'from-green-600 to-emerald-700',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-biotechnology-research',
-    marketPosition: 'Leading AI-powered biotechnology research platform',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Biotech companies, Pharmaceutical companies, Research institutions, Healthcare organizations'
     trialDays: 30
@@ -885,12 +638,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 34
     rating: 4.7
     reviews: 23
-<<<<<<< HEAD
-    customers: 34,
-    rating: 4 && 4.7,
-    reviews: 23,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '5x faster research'
       '50% reduction in costs'
@@ -931,30 +678,10 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       '24/7 threat monitoring and response'
     ]
     popular: true
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/quantum-threat-intelligence'
-      'Autonomous incident response and remediation',
-      'Quantum - resistant encryption and security',
-      'Advanced malware analysis and reverse engineering',
-      'Threat hunting automation and orchestration',
-      'Compliance monitoring and reporting',
-      'Integration with security tools and systems',
-      '24 / 7 threat monitoring and response',
-    ],
-    popular: true,
-    icon: '',
-    color: 'from-red-600 to-pink-700',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-threat-intelligence',
-=======
     icon: '🛡️'
     color: 'from-red-600 to-pink-700'
     textColor: 'text-red-400'
     link: 'https://ziontechgroup.com/quantum-threat-intelligence'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     marketPosition:
       'Pioneering quantum-powered cybersecurity platform with AI-driven intelligence'
     targetAudience:
@@ -985,12 +712,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     customers: 89
     rating: 4.8
     reviews: 67
-<<<<<<< HEAD
-    customers: 89,
-    rating: 4 && 4.8,
-    reviews: 67,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     benefits: [
       '90% faster threat detection'
       '70% reduction in false positives'
@@ -1006,49 +727,12 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Threat hunting'
     ]
     marketAdvantage:
-<<<<<<< HEAD
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
-    benefits: [;
-      '90% faster threat detection',
-      '70% reduction in false positives',
-      'Quantum advantage',
-      'AI - driven intelligence',
-      '24 / 7 monitoring',
-    ],
-    capabilities: [;
-      'Quantum threat detection',
-      'AI behavioral analysis',
-      'Autonomous response',
-      'Quantum encryption',
-      'Threat hunting',
-    ],
-    market_advantage:;
-      'Only quantum - powered cybersecurity platform with proven AI integration',
-  },
-];      'Quantum threat detectionAI behavioral analysis_autonomous response_quantum encryption_threat hunting';
-    ];
-    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
-=======
-<<<<<<< HEAD
-      'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
-    ];
-    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
-  }
-];
-
-=======
 
       'Only quantum-powered cybersecurity platform with proven AI integration',
   },;
 ];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1514,11 +1198,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting';
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 

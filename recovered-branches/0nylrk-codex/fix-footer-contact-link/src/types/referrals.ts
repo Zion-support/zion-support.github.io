@@ -1,35 +1,16 @@
 
-<<<<<<< HEAD
-
-export type ReferralStatus = 'pending' | 'completed' | 'expired';
-export interface ReferralCode {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export interface ReferralCode {
-=======
 
 export interface ReferralCode {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   user_id: string;
   code: string;
   created_at: string
   updated_at: string
 }
-<<<<<<< HEAD
-export interface Referral {
-<<<<<<< HEAD
-=======
-=======
 }
 
 
 export interface Referral {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -44,17 +25,10 @@ export interface Referral {;
   reward_issued: boolean
   reward_issued_at: string | null
 }
-<<<<<<< HEAD
-export interface ReferralReward {
-<<<<<<< HEAD
-=======
-=======
 }
 
 
 export interface ReferralReward {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   user_id: string;
   referral_id: string;
@@ -63,25 +37,13 @@ export interface ReferralReward {;
   created_at: string
   expires_at: string | null
 }
-<<<<<<< HEAD
-export interface ReferralStats {
-=======
-<<<<<<< HEAD
-export interface ReferralStats {
-=======
 
 export interface ReferralStats {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
 
   totalRewards: number
-<<<<<<< HEAD
-}
-=======
-=======
   created_at: string,
   expires_at: string | null;
 }
@@ -94,9 +56,3 @@ export interface ReferralStats {;
   totalRewards: number;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

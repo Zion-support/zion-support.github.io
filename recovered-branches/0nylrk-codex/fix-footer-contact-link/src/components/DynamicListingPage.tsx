@@ -1,43 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import {GradientHeading} from "@/components/GradientHeading";
-import {ProductListingCard} from "@/components/ProductListingCard";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Slider} from "@/components/ui/slider";
-import {ProductListing, ListingView} from "@/types/listings";
-import {Search, Filter, LayoutGrid, List, Star} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-interface PriceRange {
-  min: number,
-  max: number
-}
-
-interface DynamicListingPageProps {
-  title: string,
-  description: string,
-  categorySlug: string,
-  listings: ProductListing[],
-  categoryFilters: { label: string, value: string }[],
-  initialPrice?: PriceRange
-}
-
-export function DynamicListingPage({;
-  title;
-  description;
-  categorySlug;
-  listings: allListings,
-  categoryFilters;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState, useEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -48,19 +8,6 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { Skeleton } from "@/components/ui/skeleton",
 import { Slider } from "@/components/ui/slider",
 import { ProductListing, ListingView } from "@/types/listings",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-interface PriceRange {
-
-  min: number
-
-  max: number
-<<<<<<< HEAD
-=======
 }
 interface DynamicListingPageProps {
 
@@ -88,7 +35,6 @@ export function DynamicListingPage({
   const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
-=======
 import { Search, Filter, LayoutGrid, List, Star } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
 interface PriceRange {
@@ -109,7 +55,6 @@ import { toast } from "@/hooks/use-toast",;
 interface PriceRange {;
   min: number,;
   max: number;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface DynamicListingPageProps {
 
@@ -125,26 +70,8 @@ export function DynamicListingPage({
   title;
   description;
   categorySlug;
-<<<<<<< HEAD
-
-  listings: allListings
-  categoryFilters;
-  initialPrice = { min: 0, max: 10000 }
-}: DynamicListingPageProps) {;
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-  const [view, setView] = useState<ListingView>("grid");
-  const [isLoading, setIsLoading] = useState(false);
-  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-=======
   listings: allListings,;
   categoryFilters,;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -157,7 +84,6 @@ export function DynamicListingPage({
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     const listingsWithPrice = allListings.filter(l => l.price !== null);
     if (listingsWithPrice.length > 0) {
@@ -306,20 +232,11 @@ if ( {) {
               title: listing.title,
               category: listing.category,
               image: listing.images?.[0];
-<<<<<<< HEAD
-=======
 
-=======
               id: listing.id,;
               title: listing.title,;
               category: listing.category,;
               image: listing.images?.[0];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           }
         });
@@ -332,14 +249,6 @@ if ( {) {
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {description}
           </p>
         </div>
@@ -365,24 +274,11 @@ if ( {) {
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
                     <SelectItem value="all" className="text-white">All Categories</SelectItem>;
-<<<<<<< HEAD
-                    {categoryFilters && categoryFilters.map((filter) => (;
-                      <SelectItem key={filter && filter.value} value={filter && filter.value} className="text-white">;
-                        {filter && filter.label}
-                      </SelectItem>;
-=======
 
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {filter.label}
                       </SelectItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     ))}
                   </SelectContent>
                 </Select>
@@ -407,8 +303,6 @@ if ( {) {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
@@ -422,13 +316,7 @@ if ( {) {
                     step={(priceRange.max - priceRange.min) / 100}
                     value={currentPriceFilter}
                     onValueChange={handleSliderChange}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="mb-4"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
                     <span>${currentPriceFilter[0].toLocaleString()}</span>
@@ -436,7 +324,6 @@ if ( {) {
                   </div>
                 </div>
               </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <div className="mb-6">
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Minimum Rating
@@ -540,36 +427,13 @@ if ( {) {
                           ))}
                           <span className="ml-1">& Up</span>;
                         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       )}
                     </Button>;
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-              <Button
-                variant="outline"
-                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
-                onClick={() => {;
-                  console && console.log("Resetting filters");
-                  setSearchQuery("");
-                  setSelectedCategory("all")
-                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
-=======
-<<<<<<< HEAD
-              <Button
-                variant="outline"
-=======
               <Button 
                 variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
 
@@ -579,7 +443,6 @@ if ( {) {
                   setCurrentPriceFilter([priceRange.min, priceRange.max]),
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   setSelectedRating(null)
                 }}
               >
@@ -592,15 +455,7 @@ if ( {) {
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
-<<<<<<< HEAD
-=======
-=======
                   <ProductListingCard 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>;
               </div>;
               <Button;
@@ -613,8 +468,6 @@ if ( {) {
                   setCurrentPriceFilter ([price_range.min, price_range.max]);
                   setSelectedRating (null);
                 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               >;
                 Reset Filters;
               </Button>;
@@ -722,21 +575,9 @@ if ( {) {
               </div>;
             ) : filteredListings && filteredListings.length > 0 ? (;
               <div className={`grid gap-6 ${view === "grid" ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}>;
-<<<<<<< HEAD
-                {filteredListings && filteredListings.map((listing) => (;
-                  <ProductListingCard
-                    key={listing && listing.id}
-=======
                 {filteredListings.map((listing) => (;
                   <ProductListingCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     key={listing.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     listing={listing}
                     view={view}
                     onRequestQuote={handleRequestQuote}
@@ -774,25 +615,12 @@ if ( {) {
                 <p className="text - zion - slate - light mb - 6">Try adjusting your filters or search query</p>;
                 <Button;
                   variant="outline";
-<<<<<<< HEAD
-                  on_click={() => {
-                    setSearchQuery ("");
-                    setSelectedCategory ("all");
-                    setCurrentPriceFilter ([price_range.min, price_range.max]);
-                    setSelectedRating (null);
-=======
 
                   onClick={() => {;
                     setSearchQuery(""),;
                     setSelectedCategory("all");
                     setCurrentPriceFilter([priceRange.min, priceRange.max]);
                     setSelectedRating(null);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;

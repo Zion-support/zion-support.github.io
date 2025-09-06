@@ -25,66 +25,6 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  FaRocket
-  FaBrain
-  FaCloud
-  FaShieldAlt
-  FaChartLine
-  FaCogs
-  FaLightbulb
-  FaGlobe
-  FaMobile
-  FaDatabase
-  FaNetworkWired
-  FaRobot
-  FaSearch;
-import {
-  SiNextdotjs
-  SiReact
-  SiTypescript
-  SiTailwindcss
-  SiPrisma
-  SiSupabase
-  SiVercel
-  SiDocker
-  SiKubernetes
-  SiAws
-  SiGooglecloud
-  SiMicrosoftazure;
-<<<<<<< HEAD
-import {;
-  FaRocket,;
-  FaBrain,;
-  FaCloud,;
-  FaShieldAlt,;
-  FaChartLine,;
-  FaCogs,;
-  FaLightbulb,;
-  FaGlobe,;
-  FaMobile,;
-  FaDatabase,;
-  FaNetworkWired,;
-  FaRobot,;
-  FaSearch,;
-import {;
-  SiNextdotjs,;
-  SiReact,;
-  SiTypescript,;
-  SiTailwindcss,;
-  SiPrisma,;
-  SiSupabase,;
-  SiVercel,;
-  SiDocker,;
-  SiKubernetes,;
-  SiAws,;
-  SiGooglecloud,;
-  SiMicrosoftazure,;
-=======
-=======
   FaRocket,
   FaBrain,
   FaCloud,
@@ -111,8 +51,6 @@ import {
   SiAws,
   SiGooglecloud,;
   SiMicrosoftazure,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'react-icons/si';
 
 interface Service {;
@@ -165,36 +103,13 @@ interface ServiceCategory {;
   name: string;
   description: string;
   icon: React.ReactNode;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   color: string;  id: string,
   name: string,
   description: string,
   icon: React.ReactNode,
   color: string
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
-  color: string;  id: string
-  name: string
-  description: string
-  icon: React.ReactNode
-
-  color: string
-}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -616,13 +531,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       enterprise: 1999
     
     },
-<<<<<<< HEAD
-    technologies: ['Apache KafkaApache SparkSnowflakeDatabricksAirflow'],
-    benefits: [
-      'Unified data viewReal-time insightsImproved data qualityReduced integration costs'
-    ]
-  };
-=======
 
     technologies: [;
       'Apache Kafka',
@@ -647,70 +555,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    icon: <FaCloud className='w-6 h-6' />,
-    features: [
-      'Kubernetes orchestration',
-      'Microservices architecture',
-      'CI/CD pipelines',
-      'Auto-scaling',
-      'Multi-cloud deployment',
-      'DevOps automation',
-    ],
-    pricing: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
-    },
-    technologies: [
-      'Kubernetes',
-      'Docker',
-      'Helm',
-      'ArgoCD',
-      'Prometheus',
-      'Grafana',
-    ],
-    benefits: [
-      'Faster deployment',
-      'Improved scalability',
-      'Better resource utilization',
-      'Enhanced reliability',
-    ],
-  },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  {
-    id: 'cloud-native-platform',
-    title: 'Cloud-Native Development Platform',
-    description: 'Modern cloud-native development and deployment platform',
-<<<<<<< HEAD
-    icon: <FaCloud className="w-6 h-6" />,
-    category: 'cloud',
-    features: [
-      'Kubernetes orchestrationMicroservices architectureCI/CD pipelinesAuto-scalingMulti-cloud deploymentDevOps automation'
-    ];
-    pricing: {
-      
-      starter: 199,
-      professional: 599,
-      enterprise: 1499
-    
-    },
-    technologies: ['KubernetesDockerHelmArgoCDPrometheusGrafana'],
-    benefits: [
-      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
-    ]
-  }
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 
 const services: Service[] = [;
@@ -951,19 +796,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -1050,38 +883,16 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           </p>;
         </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-          className='mb-12'>;
-          <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>;
-            <div className='relative flex-1 max-w-md'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <input
                 type='text'
                 placeholder='Search services, technologies, or features...'
@@ -1192,8 +1003,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           </div>;
         </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
               className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500'
             >
               <option value='name'>Sort by Name</option>
@@ -1206,12 +1015,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           </div>
         </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1221,109 +1024,47 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           <div className='flex flex-wrap justify-center gap-4'>            <buttonclassName="mb-12">;
           <div className="flex flex-wrap justify-center gap-4">;
             <button
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
-<<<<<<< HEAD
-            >;
-              All Services;
-            </button>;
-            {serviceCategories && serviceCategories.map(category => (              <button            {serviceCategories && serviceCategories.map((category) => (;
-              <button
-                key={category && category.id}
-                onClick={() => setSelectedCategory(category && category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${;
-                  selectedCategory === category && category.id;
-                    ? `bg-gradient-to-r ${category && category.color} text-white shadow-lg`;
-                    : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                   selectedCategory === category.id
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`
                     : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }`}
               >;
                 {category && category.icon}
                 {category && category.name}
               </button>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </motion.div>
-=======
 
           </div>;
         </motion && motion.div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-        >;
-          {filteredServices && filteredServices.map((service, index) => (;
-            <motion&& motion.div
-              key={service && service.id}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ y: -5, scale: 1 && 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1394,23 +1135,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-              <p className="text-gray-300 mb-4 line-clamp-3">{service && service.description}</p>;
-
-              <div className="flex flex-wrap gap-2 mb-4">;
-                {service && service.technologies.slice(0, 3).map((tech) => (;
-                  <span
-                    key={tech}
-                    className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">;
-=======
                   >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {tech}
                   </span>;
                 ))}
@@ -1472,17 +1198,8 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
           ))}
         </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1502,15 +1219,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>;
         )}
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1518,51 +1227,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-<<<<<<< HEAD
-            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}>;
-            <motion&& motion.div
-              initial={{ scale: 0 && 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0 && 0.9, opacity: 0 }}
-              className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
-              onClick={e => e && e.stopPropagation()}
-            >;
-              <div className='flex items-start justify-between mb-6'>;
-                <div className='flex items-center gap-4'>;
-                  <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl'>;
-                    {selectedService && selectedService.icon}
-                  </div>;
-                  <div>;
-                    <h2 className='text-3xl font-bold text-white mb-2'>;
-                      {selectedService && selectedService.title}
-                    </h2>;
-                    <p className='text-gray-400'>;
-                      {;
-                        serviceCategories && serviceCategories.find(;
-                          c => c && c.id === selectedService && selectedService.category;
-                        )?.name;
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0 && 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -1578,8 +1251,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
                         serviceCategories.find(
                           c => c.id === selectedService.category
                         )?.name
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       }
                     </p>                  </div>;
                 </div>;
@@ -1642,37 +1313,18 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>;
                         {feature}
                       </li>;
-<<<<<<< HEAD
-                    ))}
-                  </ul>
-                </div>
-=======
-=======
 
 
                         {feature}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
 
                   </ul>;
                 </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Benefits */}
                 <div>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -1690,58 +1342,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>;
                       </li>;
                     ))}
-<<<<<<< HEAD
-                  </ul>
-                </div>
-              </div>
-              {/* Technologies */}
-              <div className='mt-8'>;
-                <h3 className='text-xl font-bold text-white mb-4'>;
-                  Technologies;
-                </h3>;
-                <div className='flex flex-wrap gap-3'>;
-                  {selectedService && selectedService.technologies.map(tech => (;
-                    <span
-                      key={tech}
-                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'>              <div className="mt-8">;
-                <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>;
-                <div className="flex flex-wrap gap-3">;
-                  {selectedService && selectedService.technologies.map((tech) => (;
-                    <span
-                      key={tech}
-                      className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
-                      {tech}
-                    </span>;
-                  ))}
-                </div>
-=======
 
                   </ul>;
                 </div>;
               </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Technologies */}
 
 
-=======
 
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
 
                     >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {tech}
                     </span>;
                   ))}
@@ -1750,22 +1365,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
               </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Pricing */}
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
               {/* Pricing */}
               <div className='mt-8'>;
@@ -1801,307 +1404,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {;
             </motion && motion.div>;
           </motion && motion.div>;
         )}
-<<<<<<< HEAD
-      </AnimatePresence>;
-    </div>;
-  );
-};
-
-export default EnhancedServicesShowcase2025;  );
-        )}
       </AnimatePresence>
     </div>
 );
-}
-export default EnhancedServicesShowcase2025;  )
-}
-};
-
-export default EnhancedServicesShowcase2025;  );
   )
 };
 
-=======
-      </AnimatePresence>
-    </div>
-);
-<<<<<<< HEAD
-}
-=======
-  )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-};
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default EnhancedServicesShowcase2025;  )
-}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default EnhancedServicesShowcase2025;
-
-              while_hover={{ coordinate_y: -5, scale: 1.02 }}
-              className='bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - xl p - 6 cursor - pointer hover:bg - white / 20 transition - all duration - 300';
-              on_click={() => handleServiceSelect (service)}
-            >;
-              <div className='flex items - center gap - 3 mb - 4'>;
-                <div className='p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg'>;
-                  {service.icon}
-                </div>;
-                <div>;
-                  <h3 className='text - xl font - bold text - white'>;
-                    {service.title}
-                  </h3>;
-                  <p className='text - sm text - gray - 400'>;
-                    {
-                      service_categories.find (c => c.id === service.category);
-                        ?.name;
-                    }
-                  </p>;
-                </div>;
-              </div>;
-              <p className='text - gray - 300 mb - 4 line - clamp - 3'>;
-                {service.description}
-              </p>;
-              <div className='flex flex - wrap gap - 2 mb - 4'>;
-                {service.technologies.slice (0, 3).map (tech => (
-                  <span;
-                    key={tech}
-                    className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'                  >              on_click={() => handleServiceSelect (service)}
-            >;
-              <div className="flex items - center gap - 3 mb - 4">;
-                <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg">;
-                  {service.icon}
-                </div>;
-                <div>;
-                  <h3 className="text - xl font - bold text - white">{service.title}</h3>;
-                  <p className="text - sm text - gray - 400">{service_categories.find (c => c.id === service.category)?.name}</p>;
-                </div>;
-              </div>;
-              <p className="text - gray - 300 mb - 4 line - clamp - 3">{service.description}</p>;
-              <div className="flex flex - wrap gap - 2 mb - 4">;
-                {service.technologies.slice (0, 3).map ((tech) => (
-                  <span;
-                    key={tech}
-                    className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300";
-                  >;
-                    {tech}
-                  </span>))}
-                {service.technologies.length > 3 && (
-                  <span className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'>                    +{service.technologies.length - 3} more;
-                  </span>)}
-              </div>;
-              <div className='flex items - center justify - between'>;
-                <div className='text - 2xl font - bold text - blue - 400'>                  <span className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300">;
-                    +{service.technologies.length - 3} more;
-                  </span>)}
-              </div>;
-              <div className='flex items - center justify - between'>;
-                <div className='text - 2xl font - bold text - blue - 400'>;
-                  ${service.pricing.starter}
-                  <span className='text - sm text - gray - 400 font - normal'>;
-                    /month;
-                  </span>;
-                </div>;
-                <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>                  Learn More                  ${service.pricing.starter}
-                  <span className="text - sm text - gray - 400 font - normal">/month</span>;
-                </div>;
-                <button className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">;
-                  Learn More;
-                </button>;
-              </div>;
-            </motion.div>))}
-        </motion.div>;
-        {/* No Results */}
-        {filtered_services.length === 0 && (
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className='text - center py - 16';
-          >;
-            <div className='text - 6xl mb - 4'></div>;
-            <h3 className='text - 2xl font - bold text - gray - 300 mb - 2'>;
-              No services found;
-            </h3>;
-            <p className='text - gray - 400'>;
-              Try adjusting your search terms or category filters;
-            </p>          </motion.div>            className="text - center py - 16";
-          >;
-            <div className="text - 6xl mb - 4"></div>;
-            <h3 className="text - 2xl font - bold text - gray - 300 mb - 2">No services found</h3>;
-            <p className="text - gray - 400">Try adjusting your search terms or category filters</p>)}
-      </div>;
-      {/* Service Detail Modal */}
-      <AnimatePresence>;
-        {selected_service && (
-          <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_modal}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4";
-            on_click={close_modal}
-          >;
-            <motion.div;
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className='bg - gray - 900 border border - white / 20 rounded - 2xl p - 8 max - w-4xl w - full max - h-[90vh] overflow - y-auto';
-              on_click={e => e.stop_propagation ()}
-            >;
-              <div className='flex items - start justify - between mb - 6'>;
-                <div className='flex items - center gap - 4'>;
-                  <div className='p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl'>;
-                    {selected_service.icon}
-                  </div>;
-                  <div>;
-                    <h2 className='text - 3xl font - bold text - white mb - 2'>;
-                      {selected_service.title}
-                    </h2>;
-                    <p className='text - gray - 400'>;
-                      {
-                        service_categories.find (
-                          c => c.id === selected_service.category)?.name;
-                      }
-                    </p>                  </div>;
-                </div>;
-                <button;
-                  on_click={close_modal}
-                  className='p - 2 hover:bg - white / 10 rounded - lg transition - colors'            >;
-              <div className="flex items - start justify - between mb - 6">;
-                <div className="flex items - center gap - 4">;
-                  <div className="p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl">;
-                    {selected_service.icon}
-                  </div>;
-                  <div>;
-                    <h2 className="text - 3xl font - bold text - white mb - 2">{selected_service.title}</h2>;
-                    <p className="text - gray - 400">{service_categories.find (c => c.id === selected_service.category)?.name}</p>;
-                  </div>;
-                </div>;
-                <button;
-                  on_click={close_modal}
-                  className='p - 2 hover:bg - white / 10 rounded - lg transition - colors';
-                >;
-                  <span className='text - 2xl'></span>;
-                </button>;
-              </div>;
-              <p className='text - gray - 300 text - lg mb - 8'>;
-                {selected_service.description}
-              </p>;
-              <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-                {/* Features */}
-                <div>;
-                  <h3 className='text - xl font - bold text - white mb - 4'>;
-                    Key Features;
-                  </h3>;
-                  <ul className='space - y-2'>;
-                    {selected_service.features.map ((feature, index) => (
-                      <li;
-                        key={index}
-                        className='flex items - center gap - 2 text - gray - 300';
-                      >;
-                        <div className='w - 2 h - 2 bg - blue - 500 rounded - full'></div>                        {feature}                >;
-                  <span className="text - 2xl"></span>;
-                </button>;
-              </div>;
-              <p className="text - gray - 300 text - lg mb - 8">{selected_service.description}</p>;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-                {/* Features */}
-                <div>;
-                  <h3 className="text - xl font - bold text - white mb - 4">Key Features</h3>;
-                  <ul className="space - y-2">;
-                    {selected_service.features.map ((feature, index) => (
-                      <li key={index} className="flex items - center gap - 2 text - gray - 300">;
-                        <div className="w - 2 h - 2 bg - blue - 500 rounded - full"></div>;
-                        {feature}
-                      </li>))}
-                  </ul>;
-                </div>;
-                {/* Benefits */}
-                <div>;
-                  <h3 className='text - xl font - bold text - white mb - 4'>;
-                    Key Benefits;
-                  </h3>;
-                  <ul className='space - y-2'>;
-                    {selected_service.benefits.map ((benefit, index) => (
-                      <li;
-                        key={index}
-                        className='flex items - center gap - 2 text - gray - 300';
-                      >;
-                        <div className='w - 2 h - 2 bg - green - 500 rounded - full'></div>                        {benefit}                  <h3 className="text - xl font - bold text - white mb - 4">Key Benefits</h3>;
-                  <ul className="space - y-2">;
-                    {selected_service.benefits.map ((benefit, index) => (
-                      <li key={index} className="flex items - center gap - 2 text - gray - 300">;
-                        <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
-                      </li>))}
-                  </ul>;
-                </div>;
-              </div>;
-              {/* Technologies */}
-              <div className='mt - 8'>;
-                <h3 className='text - xl font - bold text - white mb - 4'>;
-                  Technologies;
-                </h3>;
-                <div className='flex flex - wrap gap - 3'>;
-                  {selected_service.technologies.map (tech => (
-                    <span;
-                      key={tech}
-                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                    >              <div className="mt - 8">;
-                <h3 className="text - xl font - bold text - white mb - 4">Technologies</h3>;
-                <div className="flex flex - wrap gap - 3">;
-                  {selected_service.technologies.map ((tech) => (
-                    <span;
-                      key={tech}
-                      className="px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300";
-                      {tech}
-                    </span>))}
-                </div>;
-              </div>;
-              {/* Pricing */}
-              <div className='mt - 8'>;
-                <h3 className='text - xl font - bold text - white mb - 4'>;
-                  Pricing Plans;
-                </h3>;
-                <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 4'>;
-                  {Object.entries (selected_service.pricing).map (
-                    ([plan, price]) => (
-                      <div;
-                        key={plan}
-                        className='p - 4 bg - white / 5 border border - white / 20 rounded - lg text - center';
-                      >;
-                        <h4 className='text - lg font - bold text - white capitalize mb - 2'>;
-                          {plan}
-                        </h4>;
-                        <div className='text - 3xl font - bold text - blue - 400 mb - 2'>;
-                          ${price}
-                          <span className='text - sm text - gray - 400 font - normal'>;
-                            /month;
-                          </span>;
-                        </div>;
-                        <button className='w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>;
-                          Get Started;
-                        </button>;
-                      </div>))}                </div>                      <button className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300">;
-                        Get Started;
-                      </button>;
-                    </div>))}
-              </div>;
-            </motion.div>;
-          </motion.div>)}
-      </AnimatePresence>;
-    </div>);
-}
-;
-export default EnhancedServicesShowcase2025);
-}
-;
-export default EnhancedServicesShowcase2025;
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-export default EnhancedServicesShowcase2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

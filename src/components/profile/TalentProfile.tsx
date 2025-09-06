@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-=======
-<<<<<<< HEAD
-import React from 'react'
-<<<<<<< HEAD
-=======
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { HireNowCTA } from './HireNowCTA'
@@ -23,11 +16,8 @@ interface TalentProfileProps {
   onRequestHire: () => void
   onMessageTalent?: () => void
 export function TalentProfile({
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -172,9 +162,6 @@ export function TalentProfile({
                       <MessageSquare className='mr-2 h-5 w-5' />;
                       Message;
                     </Button>;
-<<<<<<< HEAD
-=======
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
@@ -185,45 +172,14 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   profile,
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
-<<<<<<< HEAD
-  const { isAuthenticated } = useAuth(),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  const { isAuthenticated } = useAuth()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  // Create proper availability object from talent profile
-
-
-  return (
-    <div className='container mx-auto px-4 py-8'>
-      {/* Profile Header */}
-      <ProfileHero
-        name={profile.full_name}
-        title={profile.professional_title}
-        avatarUrl={profile.profile_picture_url}
-        profileType='talent'
-        rating={profile.average_rating}
-        reviewCount={profile.rating_count}      />
-      {/* Main content area */}
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8'>
-=======
-<<<<<<< HEAD
-=======
   const { isAuthenticated } = useAuth(),
   
   // Create proper availability object from talent profile
   const availability: Availability = {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     status: profile.availability_type === 'full_time' ? 'available' : 
             profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
@@ -302,11 +258,6 @@ export function TalentProfile({;
       />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -343,11 +294,6 @@ export function TalentProfile({;
               ratingCount={profile.rating_count}
             />;
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -377,15 +323,8 @@ export function TalentProfile({;
                       onClick={onMessageTalent}
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Message
                     </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   )}
                 </div>;
               </div>;
@@ -396,17 +335,8 @@ export function TalentProfile({;
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </p>;
                 <div className='flex flex - wrap gap - 4 justify - center'>;
                   <Button;
@@ -432,12 +362,5 @@ export function TalentProfile({;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

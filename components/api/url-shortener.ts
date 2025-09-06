@@ -211,23 +211,10 @@ if ( {) {
   }
 // Handle redirects for short URLs
 export async function getServerSideProps({
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  params
-}: {
-  params: { shortCode: string }
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
-<<<<<<< HEAD
-=======
-=======
   params,
 }: {;
   params: { shortCode: string };
 }) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
   if (!shortUrl |!shortUrl.isActive) {
@@ -297,26 +284,8 @@ if ( {) {
     }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       destination: shortUrl.originalUrl,
       permanent: false,
     },
-<<<<<<< HEAD
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  };      destination: shortUrl.originalUrl;
-      permanent: false
-    }
-};
-}
-=======
-  };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

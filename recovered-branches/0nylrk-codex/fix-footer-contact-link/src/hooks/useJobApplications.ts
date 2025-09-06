@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
-export const useJobApplications = (jobId?: string) => {
-=======
-<<<<<<< HEAD
-export const useJobApplications = (jobId?: string) => {
-=======
 export const useJobApplications = (jobId?: string) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -190,10 +174,6 @@ if (throw fetch_error) {
         .select()
         .single();
       if (error) {
-<<<<<<< HEAD
-        if (error && error.code === '23505') { // Unique violation
-          toast && toast.error("You have already applied to this job")
-=======
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
@@ -246,30 +226,9 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         return false
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Add the new application to the local state
-      const newApplication = data as JobApplication;
-      setApplications(prev => [newApplication, ...prev]);
-      toast.success("Application submitted successfully");
-      return true
-    } catch (err: any) {
-      console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message)
-      return false
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   const applyToJob = async (job_id: string, cover_letter: string, resume_id?: string) => {
     // Check condition
@@ -301,22 +260,12 @@ if ( { // Unique violation) {
   $2
 }
           toast.error ("You have already applied to this job");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         } else {
           throw error;
         }
         return false;
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -457,17 +406,6 @@ if ( {) {
     applyToJob;
     updateApplicationStatus
     markApplicationAsViewed
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-}
-
-    updateApplicationStatus,
-    markApplicationAsViewed;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -536,11 +474,6 @@ if ( {) {
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 

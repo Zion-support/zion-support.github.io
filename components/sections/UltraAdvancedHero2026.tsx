@@ -1,64 +1,5 @@
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { motion  } from 'framer-motion';
-import Link from 'next/link';
-
 import {
-=======
-import {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Brain
-  Rocket
-  Globe
-  Sparkles
-  CheckCircle
-  Phone
-  Mail
-  MapPin;
-<<<<<<< HEAD
-import {;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Globe,;
-  Sparkles,;
-  CheckCircle,;
-  Phone,;
-  Mail,;
-  MapPin,;
-=======
-=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -71,8 +12,6 @@ import {;
   Phone,
   Mail,;
   MapPin,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -186,26 +125,6 @@ function UltraAdvancedHero2026() {
           {/* Badge */}
           <motion&& motion.div
             variants={itemVariants}
-<<<<<<< HEAD
-            className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'
-          >
-            <Sparkles className='w-5 h-5 text-purple-400' />
-            <span className='text-purple-300 text-sm font-medium'>
-              2026 Revolutionary Technology Solutions
-            </span>
-          </motion.div>
-          {/* Main Heading */}
-          <motion&& motion.h1
-            variants={itemVariants}
-            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'
-          >
-            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>
-              The Future
-            </span>
-            <br />
-            <span className='text-white'>is Now</span>
-          </motion.h1>
-=======
 
             className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
             <Sparkles className='w-5 h-5 text-purple-400' />;
@@ -215,13 +134,7 @@ function UltraAdvancedHero2026() {
           </motion && motion.div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -235,14 +148,7 @@ function UltraAdvancedHero2026() {
           </motion && motion.h1>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -253,23 +159,12 @@ function UltraAdvancedHero2026() {
               {' '}
               1000% ROI guaranteed;
             </span>{' '}
-<<<<<<< HEAD
-            with our revolutionary solutions.
-          </motion.p>
-=======
 
             with our revolutionary solutions.;
           </motion && motion.p>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
@@ -415,31 +310,7 @@ function UltraAdvancedHero2026() {
             </div>;
           </motion && motion.div>;
 
-<<<<<<< HEAD
-          {/* Key Benefits */}
-          <motion&& motion.div
-            variants={itemVariants}
-            className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto'
-          >
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-xl border border-blue-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-blue-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                First-to-Market Technology
-              </span>
-            </div>
-            <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl border border-purple-500/20 rounded-xl'>
-              <CheckCircle className='w-6 h-6 text-purple-400 flex-shrink-0' />
-              <span className='text-gray-200 font-medium'>
-                1000% ROI Guaranteed
-              </span>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -527,15 +398,8 @@ function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
-<<<<<<< HEAD
-            <Link
-<<<<<<< HEAD
-=======
-=======
 
             <Link 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -561,29 +425,14 @@ function UltraAdvancedHero2026() {
             </Link>;
           </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
-=======
 
           {/* Call to Action Buttons */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Get Started Today
             </Link>
           </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Contact Information */}
           <motion&& motion.div
             variants={itemVariants}
@@ -723,17 +572,8 @@ function UltraAdvancedHero2026() {
             </div>;
           </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Trust Indicators */}
           <motion&& motion.div
             variants={itemVariants}
@@ -987,15 +827,5 @@ function UltraAdvancedHero2026() {
       </div>;
     </section>));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

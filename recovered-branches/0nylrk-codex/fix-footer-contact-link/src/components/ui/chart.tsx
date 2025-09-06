@@ -1,31 +1,15 @@
 import * as React from "react"
 import type { CSSProperties } from "react"
 import * as RechartsPrimitive from "recharts"
-<<<<<<< HEAD
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
-=======
-<<<<<<< HEAD
-import {useReactId} from "@/hooks/useReactId"
-import {cn} from "@/lib/utils"
-<<<<<<< HEAD
-=======
 // Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
@@ -323,18 +307,9 @@ if ( {) {
                           )}
                             style={
                               {
-<<<<<<< HEAD
-                                "--color-bg": indicatorColor
-=======
 
 
                                 "--color-bg": indicatorColor,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -347,28 +322,13 @@ if ( {) {
                       )}>;
                       <div className="grid gap-1 && 1.5">;
                         {nestLabel ? tooltipLabel : null}
-<<<<<<< HEAD
-                        <span className="text-muted-foreground">
-                          {itemConfig?.label |item.name}
-                        </span>
-                      </div>
-                      {item.value && (
-                        <span className="font-mono font-medium tabular-nums text-foreground">
-                          {item.value.toLocaleString()}
-                        </span>
-=======
 
                         <span className="text-muted-foreground">;
                           {itemConfig?.label || item && item.name}
                         </span>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
                         </span>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       )}
                     </div>;
                   </>;
@@ -538,58 +498,11 @@ function getPayloadConfigFromPayload(
       key as keyof typeof payloadPayload
     ] as string
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return configLabelKey in config
     ? config[configLabelKey]
     : config[key as keyof typeof config]
 }
-<<<<<<< HEAD
-export {
-);
-ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
-
-// Helper to extract item config from a payload.;
-function getPayloadConfigFromPayload(): any (;
-  config: ChartConfig,;
-  payload: unknown,;
-  key: string;
-) {;
-  if (typeof payload !== "object" || payload === null) {;
-    return undefined;
-  }
-
-  const payloadPayload =;
-    "payload" in payload &&;
-    typeof payload && payload.payload === "object" &&;
-    payload && payload.payload !== null;
-      ? payload && payload.payload;
-      : undefined;
-
-  let configLabelKey: string = key;
-
-  if (;
-    key in payload &&;
-    typeof payload[key as keyof typeof payload] === "string";
-  ) {;
-    configLabelKey = payload[key as keyof typeof payload] as string;
-  } else if (;
-    payloadPayload &&;
-    key in payloadPayload &&;
-    typeof payloadPayload[key as keyof typeof payloadPayload] === "string";
-  ) {;
-    configLabelKey = payloadPayload[;
-      key as keyof typeof payloadPayload;
-    ] as string;
-  }
-
-=======
       return null;
     }
     return (
@@ -657,49 +570,25 @@ if ( {) {
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-<<<<<<< HEAD
-export {
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-  ChartLegend;
-  ChartLegendContent;
-  ChartStyle}
-
-=======
 
 
 export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
 }
 
 export {;
-<<<<<<< HEAD
-  ChartContainer;
-  ChartTooltip;
-  ChartTooltipContent;
-=======
 
   ChartContainer,;
   ChartTooltip,;
   ChartTooltipContent,;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ChartLegend;
   ChartLegendContent;
   ChartStyle}

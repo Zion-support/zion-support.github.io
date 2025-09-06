@@ -1,13 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type SkeletonProps = {
-  className?: string;
-}
-=======
 export type SkeletonProps = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -74,42 +66,8 @@ export default function Skeleton({ className = '' }: SkeletonProps) {
         @keyframes shimmer {;
           100% { transform: translateX(100%) }
         }
-<<<<<<< HEAD
-      `}</style>;
-    </div>;
-  );
-import React from "react";
-interface SkeletonProps {;
-=======
       `}</style>
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  );
-import React from "react";
-interface SkeletonProps {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: boolean}
-export const Skeleton: React.FC<SkeletonProps> = ({ "
-  className = "
-  width
-  height
-  rounded = false}) => {
-  const style: React.CSSProperties = {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ";
   if (width) style.width = typeof width === "number" ? "${width}px" : width
 if (height) style.height = typeof height === "number" ? "${height}px" : height
@@ -206,17 +164,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 export default Component;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
-=======
     </div>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

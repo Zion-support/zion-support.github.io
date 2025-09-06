@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-import {;
-  AlertTriangle,;
-  ExternalLink,;
-  RefreshCw,;
-  Settings,;
-  CheckCircle,;
-} from 'lucide-react';import { Button } from '@/components/ui/button';import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import React from 'react'
-import Link from 'next/link'
-import {
-  AlertTriangle
-  ExternalLink
-  RefreshCw
-  Settings
-  CheckCircle
-<<<<<<< HEAD
-=======
-=======
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -32,8 +6,6 @@ import {
   RefreshCw,
   Settings,;
   CheckCircle;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -66,36 +38,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
     if (onRetry) {;
       onRetry();
     } else {;
-<<<<<<< HEAD
-      window && window.location.reload();
-    }
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4'>;
-      <div className='max-w-2xl w-full'>;
-        {/* Main Error Card */}
-        <div className='bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6'>
-          <div className='text-center mb-6'>
-            <div className='mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center'>
-              <AlertTriangle className='h-8 w-8 text-red-600' />
-            </div>
-            <h1 className='text-3xl font-bold text-gray-900 mb-2'>
-              Authentication Service Unavailable
-            </h1>
-            <p className='text-gray-600'>
-              The sign-up system needs to be configured before users can create
-              accounts
-            </p>
-          </div>
-          <Alert variant='destructive' className='mb-6'>
-            <AlertTriangle className='h-4 w-4' />
-            <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables
-              are not configured. New users cannot sign up until this is
-              resolved.            </AlertDescription>
-          </Alert>
-          {/* Technical Details */}        {/* Main Error Card */}
-=======
       window.location.reload();
     }
   },
@@ -104,12 +46,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         {/* Main Error Card */}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">
           <div className="text-center mb-6">
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">
@@ -122,22 +58,8 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               The sign-up system needs to be configured before users can create accounts
             </p>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Alert variant="destructive" className="mb-6">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertDescription>
-              <strong>Critical Issue #1:</strong> Auth0 environment variables are not configured.
-=======
 
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -146,21 +68,8 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
             </AlertDescription>
           </Alert>
           {/* Technical Details */}
-<<<<<<< HEAD
-          <div className='bg-gray-50 rounded-lg p-4 mb-6'>
-            <h3 className='font-semibold text-gray-900 mb-2'>
-              Missing Configuration:
-            </h3>
-            <ul className='text-sm text-gray-700 space-y-1'>              <li> AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-=======
 
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <h3 className="font-semibold text-gray-900 mb-2">Missing Configuration:</h3>
             <ul className="text-sm text-gray-700 space-y-1">
               <li> AUTH0_SECRET</li>
@@ -193,20 +102,12 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
           </Alert>;
 
           {/* Technical Details */}        {/* Main Error Card */}
-<<<<<<< HEAD
-=======
-=======
           {/* Action Buttons */}
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
               <Button 
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -218,8 +119,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 flex items-center justify-center p-4">;
       <div className="max-w-2xl w-full">;
         {/* Main Error Card */}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <div className="bg-white rounded-2xl shadow-xl border border-red-200 p-8 mb-6">;
           <div className="text-center mb-6">;
             <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-red-100 flex items-center justify-center">;
@@ -326,10 +225,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
             <Button
               onClick={handleRefresh}
               variant='outline'
-<<<<<<< HEAD
-              className='flex-1'            >
-              <RefreshCw className='w-4 h-4 mr-2' />              Check Again              <RefreshCw className="w-4 h-4 mr-2" />
-=======
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
             {showSetupButton && (
@@ -348,12 +243,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               className="flex-1"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               Check Again
             </Button>
           </div>
@@ -364,36 +253,7 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
           </div>;
 
           {/* Quick Setup Steps */}
-<<<<<<< HEAD
-          <div className='border-t pt-6'>;
-            <h3 className='font-semibold text-gray-900 mb-3'>;
-              Quick Setup Steps:;
-            </h3>;
-            <ol className='space-y-3 text-sm'>;
-              <li className='flex items-start gap-3'>;
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>;
-                  1;
-                </span>;
-                <div>;
-                  <strong>Create Auth0 Account:</strong>;
-                  <br />;
-                  <a
-                    href='https://manage && manage.auth0.com/'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-blue-600 hover:underline inline-flex items-center gap-1'
-                  >
-                    Visit Auth0 Dashboard <ExternalLink className='w-3 h-3' />
-                  </a>
-                </div>
-              </li>
-              <li className='flex items-start gap-3'>
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
-                  2
-                </span>                <div>                <div>
-=======
 
-=======
 
 
           <div className="border-t pt-6">
@@ -401,13 +261,7 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <strong>Create Auth0 Account:</strong>
                   <br />
                   <a
@@ -420,16 +274,8 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
                   </a>
                 </div>
               </li>
-<<<<<<< HEAD
-=======
 
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">2</span>
                 <div>
@@ -438,23 +284,11 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
                   Create a "Regular Web Application" named "Zion AI Marketplace"
                 </div>
               </li>
-<<<<<<< HEAD
-              <li className='flex items-start gap-3'>
-                <span className='flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold'>
-                  3
-                </span>
-=======
 
 
               
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div>
                   <strong>Configure Environment:</strong>
                   <br />
@@ -499,14 +333,6 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
                 <div>
                   <strong>Restart Application:</strong>
                   <br />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes
                 </div>
               </li>
@@ -583,69 +409,24 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-            <Link
-              href="/talent"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link
-              href="/talent"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <Link 
               href="/talent" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-            <Link
-              href="/help"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link
-              href="/help"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
             <Link 
               href="/help" 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>Contact Support</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
-<<<<<<< HEAD
-            <Link
-              href="/status"
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-            >
-              <span>System Status</span>
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link
-              href="/status"
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-            >
-              <span>System Status</span>
-=======
-=======
             
-=======
 
-=======
             
 
 
@@ -654,53 +435,8 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>System Status</span>
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/talent'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>View Talent Pool</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/help'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>Contact Support</span>
-              <ExternalLink className='w-4 h-4' />
-            </Link>
-            <Link
-              href='/status'
-              className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'
-            >
-              <span>System Status</span>
-              <ExternalLink className='w-4 h-4' />            </Link>              <ExternalLink className="w-4 h-4" />
-            </Link>
-<<<<<<< HEAD
-          </div>
-        </div>
-
-=======
-=======
-<<<<<<< HEAD
-            
-            <Link 
-              href="/status" 
-              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
-            >
-              <span>System Status</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-              <ExternalLink className="w-4 h-4" />
-            </Link>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
 
@@ -714,35 +450,17 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
               <div className="flex items-center justify-center gap-2 text-green-700 mb-2">
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <p className="text-sm text-green-600 mb-3">
                 Run the setup script to configure Auth0 interactively:
               </p>
-<<<<<<< HEAD
-              <code className='bg-green-100 text-green-800 px-3 py-1 rounded text-sm'>                npm run setup:auth0              </div>
-              <p className="text-sm text-green-600 mb-3">
-                Run the setup script to configure Auth0 interactively:
-              </p>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <code className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm">
                 npm run setup:auth0
               </code>
             </div>
           </div>
         )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Link
               href="/talent" 
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800">;
@@ -822,15 +540,7 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
             <button
               onClick = {() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
               className="text-blue-600 hover: underline"
-<<<<<<< HEAD
-=======
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
           </p>
@@ -838,24 +548,11 @@ export function AuthConfigurationError(): any ({ onRetry, showSetupButton = true
       </div>
     </div>
   )
-<<<<<<< HEAD
-export default AuthConfigurationError }
-export default AuthConfigurationError
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AuthConfigurationError }
-export default AuthConfigurationError
-
-              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
-=======
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;
             For detailed instructions, see{' '}
@@ -873,7 +570,6 @@ export default AuthConfigurationError;
 
   );
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 
 export default AuthConfigurationError;}
@@ -981,17 +677,6 @@ export default AuthConfigurationError;
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError,
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
 export default AuthConfigurationError;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

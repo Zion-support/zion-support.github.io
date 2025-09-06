@@ -1,50 +1,11 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {DynamicListingPage} from "@/components/DynamicListingPage";
-import {ProductListing} from "@/types/listings";
-import {AppLayout} from "@/layout/AppLayout";
-import {TrustedBySection} from "@/components/TrustedBySection";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
-import {Globe} from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
 import { AppLayout } from "@/layout/AppLayout",
 import { TrustedBySection } from "@/components/TrustedBySection",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-=======
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Globe } from "lucide-react";
-// Sample service listings
-const SERVICE_LISTINGS: ProductListing[] = [
-  {
-
-    id: "service-1"
-    title: "AI Development & Integration"
-    description: "Full-stack AI development services to integrate advanced machine learning models into your existing business systems."
-    category: "Development"
-    price: 5000
-    currency: "$"
-    tags: ["AI Integration", "Machine Learning", "Enterprise"];
-=======
 import { Link } from "react-router-dom",
 import { Globe } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -155,27 +116,10 @@ const SERVICE_FILTERS = [
   { label: 'Analytics', value: 'analytics' }
   { label: 'Consulting', value: 'consulting' }
   { label: 'Strategy', value: 'strategy' }]
-<<<<<<< HEAD
-=======
-=======
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
         categorySlug="services"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        listings={SERVICE_LISTINGS}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 3000, max: 10000 }}
-      />
-      <TrustedBySection />
-    </AppLayout>
-  )
-};
-;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { DynamicListingPage } from "@/components/DynamicListingPage",;
 import { ProductListing } from "@/types/listings",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -254,7 +198,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {;
     id: "service-5",;
     title: "IT Infrastructure Modernization",;
-=======
 import { DynamicListingPage } from '@/components / DynamicListingPage';
 import { ProductListing } from '@/types / listings';
 import { AppLayout } from '@/layout / AppLayout';
@@ -333,8 +276,6 @@ const SERVICE_LISTINGS: ProductListing[] = [;
   {
     id: "service - 5",
     title: "IT Infrastructure Modernization",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",;
     price: 8500,;
@@ -414,23 +355,4 @@ export default function ServicesPage() {;
     </AppLayout>
   )
 }
-<<<<<<< HEAD
-      <DynamicListingPage;
-        title="IT & AI Services";
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management.";
-        category_slug="services";
-        listings={SERVICE_LISTINGS}
-        category_filters={SERVICE_FILTERS}
-        initial_price={{ min: 3000, max: 10000 }}
-      />;
-      <TrustedBySection />;
-    </AppLayout>);
-}
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-=======
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -38,50 +23,13 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </li>
         </ul>
       </main>
     </div>
-<<<<<<< HEAD
   )
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ),
-};
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  )
-<<<<<<< HEAD
-}
-export default AutoIndex;
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          </li>;
-        </ul>;
-      </main>;
-    </div>;
-<<<<<<< HEAD
-  ),;
-};
-
-=======
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default AutoIndex;
 
 import Head from 'next / head';

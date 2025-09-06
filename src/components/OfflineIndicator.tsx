@@ -1,51 +1,18 @@
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { WifiOff, Wifi } from 'lucide-react';
-import { WifiOff, Wifi } from 'lucide-react'
-
-import { Alert, AlertDescription } from '@/components/ui/alert'
-export const OfflineIndicator = () => {
-  const [isOnline, setIsOnline] = useState(true)
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine
-      setIsOnline(online)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-=======
 import { useState, useEffect } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { WifiOff, Wifi } from 'lucide-react'
-=======
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
 import { Alert, AlertDescription } from '@/components/ui/alert',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
-<<<<<<< HEAD
-  const [isOnline, setIsOnline] = useState(true)
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine
-      setIsOnline(online)
-=======
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react',
 import { WifiOff, Wifi } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
 
 
 export const OfflineIndicator = () => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isOnline, setIsOnline] = useState(true),
   const [showOfflineAlert, setShowOfflineAlert] = useState(false),
 
@@ -54,12 +21,6 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
@@ -83,14 +44,6 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     };
 
@@ -122,14 +75,6 @@ if (return null) {
   $2
 }
   return (
-<<<<<<< HEAD
-    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>;
-      <Alert variant={isOnline ? 'default' : 'destructive'}>;
-        <div className='flex items-center gap-2'>;
-            <Wifi className='h-4 w-4' />;
-          ) : (;
-            <WifiOff className='h-4 w-4' />;
-=======
     <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>
       <Alert variant={isOnline ? 'default' : 'destructive'}>
         <div className='flex items-center gap-2'>
@@ -150,11 +95,6 @@ if (return null) {
     </div>
   )
 } }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }, [showOfflineAlert]),
 
   if (!showOfflineAlert) return null;
@@ -167,7 +107,6 @@ if (return null) {
             <Wifi className="h-4 w-4" />
           ) : (
             <WifiOff className="h-4 w-4" />
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
           <AlertDescription>;
             {isOnline;
@@ -187,14 +126,7 @@ if (return null) {
       </Alert>;
     </div>;
   );
-<<<<<<< HEAD
-};};
-=======
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 };
     <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
       <Alert variant={is_online ? 'default' : 'destructive'}>;
@@ -211,13 +143,6 @@ if (return null) {
       </Alert>;
     </div>);
 } }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 };
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

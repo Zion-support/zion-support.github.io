@@ -1,49 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import Layout from "../components/Layout";
 import React from 'react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD
-export default function Contact() {;
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import Layout from '../components/Layout';
-=======
-=======
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
-=======
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
-=======
 import React from "react";
 import Layout from "../components/Layout";
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 
-=======
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -102,7 +68,6 @@ export default function Contact() {
   }
 }
   };
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Layout
       title="Contact Us - Zion Tech Group"
@@ -153,21 +118,7 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
 import Head from 'next/head';
 
 const ContactPage: React.FC = () => {
@@ -252,29 +203,15 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
-=======
 
     </>
 
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 import React from './react';
 import Layout from "../components / Layout";
@@ -305,11 +242,3 @@ function Contact() {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,32 +1,7 @@
 
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
-
-=======
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
@@ -74,8 +49,6 @@ if ( {) {
           variant: "destructive"});
         return { error: auth_error }
       }
-<<<<<<< HEAD
-=======
 
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -87,15 +60,9 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       setIsLoading(true),;
       if (!data.id) {;
       }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Update profiles table
       const { error: profileError } = await supabase
         .from("profiles")
@@ -150,15 +117,12 @@ if ( {) {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-=======
 
 ;
   return { update_profile }
 }
 ;
 
-=======
 
         title: "Profile update failed",
         description: error.message || "An unexpected error occurred",
@@ -166,14 +130,6 @@ if ( {) {
       return { error }
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Update profiles table;
       const { error: profileError } = await supabase;
@@ -210,11 +166,6 @@ if ( {) {
       setIsLoading(false);
     }
   };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return { updateProfile }
 }
 

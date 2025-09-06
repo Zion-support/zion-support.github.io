@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { CategoryCard } from "@/components/CategoryCard";
-import { GradientHeading } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
-=======
 import { CategoryCard } from '@/components/CategoryCard'
 import { GradientHeading } from '@/components/GradientHeading'
 import ErrorBoundary from '@/components/GlobalErrorBoundary'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally, this would come from a shared data source or API
@@ -127,27 +114,6 @@ export default function AllCategoriesPage() {;
                 href={category && category.href}
               />;
             ))}
-<<<<<<< HEAD
-          </div>
-        <ErrorBoundary>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-            {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
-              <CategoryCard
-                key={category && category.title}
-                title={category && category.title}
-                description={category && category.description}
-                icon={category && category.icon}
-            {categories && categories.map((category,) => (;
-              <CategoryCard
-                key = {category && category.title,}
-                title = {category && category.title,}
-                description = {category && category.description,}
-                icon = {category && category.icon,}
-                // The CategoryCard itself is a Link to its specific category page
-                // So we don't pass the category && category.link to a 'to' prop here directly
-                // The 'link' in the categories array above is used by CategoryCard's internal Link
-=======
 
           </div>;
 
@@ -155,27 +121,16 @@ export default function AllCategoriesPage() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
             {categories.map((category) => (;
               <CategoryCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
 
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 // The CategoryCard itself is a Link to its specific category page;
                 // So we don't pass the category.link to a 'to' prop here directly;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               />;
             ))}
           </div>
@@ -186,13 +141,7 @@ export default function AllCategoriesPage() {;
 }
   );
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <ErrorBoundary>;
           <div className='grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
             {categories.map (category => (
@@ -228,12 +177,6 @@ export default function AllCategoriesPage() {;
       </div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

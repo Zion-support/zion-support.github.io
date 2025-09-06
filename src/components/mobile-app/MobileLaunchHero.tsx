@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-import { ArrowRight, Smartphone } from 'lucide-react'
-
-=======
-<<<<<<< HEAD
-import React from 'react'
-import Link from 'next/link'
-<<<<<<< HEAD
-=======
 import { ArrowRight, Smartphone } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { AppStoreButtons } from './AppStoreButtons'
@@ -17,34 +6,13 @@ export const MobileLaunchHero: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = '#'; // Replace with actual App Store URL
   const googlePlayUrl = '#'; // Replace with actual Google Play URL
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Button } from '@/components/ui/button'
-import { AppStoreButtons } from './AppStoreButtons'
-import { Card, CardContent } from '@/components/ui/card'
-export const MobileLaunchHero: React.FC = () => {
-  // App store links - these would come from environment variables in production
-  const appStoreUrl = '#'; // Replace with actual App Store URL
-  const googlePlayUrl = '#'; // Replace with actual Google Play URL
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MobileLaunchHero: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
   const googlePlayUrl = "#", // Replace with actual Google Play URL
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <section className='relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-purple/40 py-16 md:py-24'>
       <div className='container mx-auto px-4 lg:px-8'>
@@ -55,18 +23,7 @@ export const MobileLaunchHero: React.FC = () => {
               <br />
               In Your Pocket
             </h1>
-<<<<<<< HEAD
-            <p className='text-lg md:text-xl opacity-90 mb-8'>
-              Find top AI talent or global IT jobs on the go. Track projects
-=======
-<<<<<<< HEAD
-            <p className='text-lg md:text-xl opacity-90 mb-8'>
-<<<<<<< HEAD
-              Find top AI talent or global IT jobs on the go. Track projects
-=======
               Find top AI talent or global IT jobs on the go. Track projects,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               message candidates, and get AI-powered matches instantly with our
               mobile app.
             </p>
@@ -76,15 +33,7 @@ export const MobileLaunchHero: React.FC = () => {
               />
             </div>
             <div className="mb-8">
-<<<<<<< HEAD
-              <AppStoreButtons
-=======
-<<<<<<< HEAD
-              <AppStoreButtons
-=======
               <AppStoreButtons 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -109,16 +58,8 @@ export const MobileLaunchHero: React.FC = () => {
                   variant='ghost'
                   size='lg'
                   className='text-white hover:bg-white/10'
-<<<<<<< HEAD
-                >                  See Features
-=======
-<<<<<<< HEAD
-                >                  See Features
-=======
 
                 >                  See Features              
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
             
             <p className="text-lg md:text-xl opacity-90 mb-8">
@@ -140,12 +81,6 @@ export const MobileLaunchHero: React.FC = () => {
                 </Button>
               </Link>
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link href="#features">
                 <Button variant="ghost" size="lg" className="text-white hover:bg-white/10">
                   See Features
@@ -156,21 +91,8 @@ export const MobileLaunchHero: React.FC = () => {
           <div className='flex-1 flex justify-center md:justify-end'>
             <div className='relative'>
               {/* Phone mockup with glow effect */}
-<<<<<<< HEAD
-              <div className='absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2'></div>
-              <Card className='relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3'>
-                <CardContent className='p-0'>
-                  <div className='w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center'>
-                    <Smartphone className='w-40 h-40 text-white opacity-40' />                    {/* In production, replace with actual app screenshot */}              <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
-=======
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Card className="relative w-[280px] h-[560px] rounded-3xl overflow-hidden border-2 border-white/30 bg-zion-blue-dark shadow-2xl transform rotate-3">
                 <CardContent className="p-0">
                   <div className="w-full h-full bg-gradient-to-br from-zion-blue-dark to-zion-purple/60 flex items-center justify-center">
@@ -187,22 +109,8 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  )
 }
-<<<<<<< HEAD
-
-import React from 'react';
-import Link from 'next/link';
-=======
-<<<<<<< HEAD
-
-import React from 'react';
-import Link from 'next/link';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import Link from "next/link",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ArrowRight, Smartphone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AppStoreButtons } from './AppStoreButtons';
@@ -294,14 +202,6 @@ export const MobileLaunchHero: React.FC = () => {;
     </section>;
   );
 };
-<<<<<<< HEAD
-"  );
-};
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 };
 
@@ -392,12 +292,5 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

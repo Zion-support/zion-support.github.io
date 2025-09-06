@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import { format } from 'date-fns';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { format } from 'date-fns';
-=======
 import {format} from 'date-fns';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -52,35 +43,6 @@ export function checkUrlForReferralCode(): string | null {
   }
 }
 /**;
-<<<<<<< HEAD
-* Stores referral code in local_storage when detected in URL;
-*/;
-export function checkUrlForReferralCode (): string | null {
-  // Check condition
-if (return null) {
-  $2
-}
-  const url = new URL (window.location.href);
-  const ref_code = url.search_params.get ('ref');
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    local_storage.set_item ('referral_code', ref_code);
-    // Remove it from URL to keep it clean;
-    url.search_params.delete ('ref');
-    window.history.replace_state ({}, document.title, url.to_string ());
-    return ref_code;
-  }
-  return local_storage.get_item ('referral_code');
-}
-/**;
-* Track referral when a user signs up;
-*/;
-export async /**
- * track_referral - Function description
-=======
 
  * Stores referral code in localStorage when detected in URL;
  */;
@@ -94,23 +56,12 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return localStorage.getItem('referral_code')
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**
  * Track referral when a user signs up
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
  */
 function track_referral() {
   try {
@@ -130,12 +81,8 @@ function track_referral() {
 
     if (response.ok) {
       // Clear the stored referral code
-<<<<<<< HEAD
-      localStorage && localStorage.removeItem('referral_code')
-=======
 
       localStorage.removeItem('referral_code')
-=======
 ;
 /**;
  * Track referral when a user signs up;
@@ -158,12 +105,6 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)

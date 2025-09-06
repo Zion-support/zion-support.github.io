@@ -149,37 +149,12 @@ function Button() {
       className={classes}
       on_click={on_click}
       disabled={disabled}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      {children}
-    </button>
-);
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     >
       {children}
     </button>
   );
-<<<<<<< HEAD
-}
-    </button>);
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

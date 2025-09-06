@@ -3,38 +3,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Phone
-  Mail
-  MapPin
-  Globe
-  Zap
-  Brain
-  Atom
-  Rocket
-  Shield
-  Cpu
-  Target
-  Microscope
-  Users
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Youtube
-  Github
-  ArrowRight
-  Heart
-  Star
-  Award
-  CheckCircle;} from 'lucide-react';import {
-  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
-<<<<<<< HEAD
-=======
-=======
   Phone,
   Mail,
   MapPin,
@@ -60,8 +28,6 @@ import {
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -625,59 +591,9 @@ export default function UltraFuturisticFooter2030() {;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {/* Company Info */}
-<<<<<<< HEAD
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h3>
-                  <p className="text-sm text-gray-400">2030 Future Technology</p>
-                </div>
-              </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Pioneering the future with cutting-edge AI, quantum computing, and emerging technologies.
-                Transforming businesses through innovative solutions and intelligent automation.
-              </p>
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Phone className="w-4 h-4 text-purple-400" />
-                  <a href={`tel:${contactInfo.mobile}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.mobile}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Mail className="w-4 h-4 text-purple-400" />
-                  <a href={`mailto:${contactInfo.email}`} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.email}
-                  </a>
-                </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <MapPin className="w-4 h-4 text-purple-400" />
-                  <span>{contactInfo.address}</span>
-                </div>
-                <div className="flex items-center space-x-3 text-sm text-gray-300">
-                  <Globe className="w-4 h-4 text-purple-400" />
-                  <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
-                    {contactInfo.website.replace('https://', '')}
-=======
 
-<<<<<<< HEAD
-];
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     {contactInfo.website.replace('https://', '')}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </a>
                 </div>
               </div>
@@ -688,29 +604,10 @@ export default function UltraFuturisticFooter2030() {;
             </div>;
 
             {/* Service Categories */}
-<<<<<<< HEAD
-            <div className='space-y-6'>;
-              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
-                <Rocket className='w-5 h-5 text-purple-400' />;
-                <span>Our Services</span>;
-              </h4>;
-              <div className='grid grid-cols-1 gap-4'>;
-                {serviceCategories && serviceCategories.slice(0, 3).map((category, index) => (;
-                  <div key={index} className='space-y-2'>;
-                    <h5 className='text-sm font-medium text-purple-300'>;
-                      {category && category.title}
-                    </h5>;
-                    <div className='space-y-1'>                      {category && category.services.map((service, serviceIndex) => (;
-=======
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -720,8 +617,6 @@ export default function UltraFuturisticFooter2030() {;
                       {category.title}
                     </h5>
                     <div className='space-y-1'>                      {category.services.map((service, serviceIndex) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <Link
                           key={serviceIndex}
                           href={service && service.href}
@@ -743,23 +638,12 @@ export default function UltraFuturisticFooter2030() {;
                     </div>;
                   </div>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-=======
 
               </div>;
             </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Quick Links */}
             <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;
@@ -803,28 +687,9 @@ export default function UltraFuturisticFooter2030() {;
                     {link && link.name}
                   </Link>;
                 ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-            {/* Social & Certifications */}
-            <div className='space-y-6'>
-              <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
-                <Users className='w-5 h-5 text-green-400' />
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Social & Certifications */}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <span>Connect & Trust</span>
               </h4>
               {/* Social Links */}
@@ -868,40 +733,16 @@ export default function UltraFuturisticFooter2030() {;
                       <social.icon className="w-5 h-5" />
                     </a>
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-              {/* Certifications */}
-              <div className='space-y-3'>;
-                <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>;
-                  <Award className='w-4 h-4' />;
-                  <span>Certifications</span>;
-                </h5>;
-                <div className='grid grid-cols-1 gap-2'>;
-                  {certifications && certifications.map((cert, index) => (;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
                   {certifications.map((cert, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <div
                       key={index}
                       className='flex items-center space-x-2 text-xs text-gray-400'>;
@@ -913,22 +754,7 @@ export default function UltraFuturisticFooter2030() {;
                       <CheckCircle className="w-3 h-3 text-green-400" />;
                       <span>{cert}</span>;
                     </div>;
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
 
-=======
-
-=======
               <div className="space-y-3">
                 <h5 className="text-sm font-medium text-green-300 flex items-center space-x-2">
                   <Award className="w-4 h-4" />
@@ -941,12 +767,6 @@ export default function UltraFuturisticFooter2030() {;
                       <span>{cert}</span>
                     </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>;
@@ -996,19 +816,5 @@ export default function UltraFuturisticFooter2030() {;
   );
 }
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-;
-}
-<<<<<<< HEAD
-    </footer>);
-}
-=======
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

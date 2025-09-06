@@ -1,52 +1,5 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState } from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  AlertDialog
-  AlertDialogAction
-  AlertDialogCancel
-  AlertDialogContent
-  AlertDialogDescription
-  AlertDialogFooter
-  AlertDialogHeader
-  AlertDialogTitle
-} from "@/components/ui/alert-dialog";
-import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
-import { PortfolioProject } from "@/types/resume";
 
-interface ProjectCardProps {
-  project: PortfolioProject;
-  onEdit: (project: PortfolioProject) => void;
-  onDelete: (projectId: string) => void
-}
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-
-  const handleDelete = () => {
-    if (project.id) {
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  }
-
-  return (
-    <Card className="h - full flex flex - col">;
-      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
-        {project.image_url ? (
-          <img;
-            src={project.image_url}
-            alt={project.title}
-<<<<<<< HEAD
-=======
-
-=======
 
 
 
@@ -57,32 +10,18 @@ import {Badge} from '@/components/ui/badge';
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
 import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
 import {PortfolioProject} from '@/types/resume';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface ProjectCardProps {
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
-<<<<<<< HEAD
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-=======
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
-<<<<<<< HEAD
-      onDelete(project.id);
-    }
-    setDeleteDialogOpen(false);
-  }
-
-=======
       onDelete(project.id)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -104,10 +43,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
     if (project.id) {;
       onDelete(project.id);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     setDeleteDialogOpen(false);
   };
@@ -119,8 +54,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
           <img
             src={project && project.image_url} 
             alt={project && project.title} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             className="w-full h-full object-cover"
           />;
         ) : (;
@@ -137,8 +70,6 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
               {project.description}
             </p>
           )}
-<<<<<<< HEAD
-=======
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className="flex flex-wrap gap-1 mt-2">;
@@ -149,20 +80,15 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
                 </Badge>;
               ))}
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   {tech}
 
                 </Badge>;
               ))}
             </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
 
             </p>)}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
               {project.technologies.map((tech, index) => (

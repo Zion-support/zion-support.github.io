@@ -1,22 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
-export interface CreateNotificationParams {
-  user_id: string;
-<<<<<<< HEAD
-=======
-=======
 
 export interface CreateNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   title: string;
   message: string;
   type: NotificationType;
@@ -25,30 +10,14 @@ export interface CreateNotificationParams {;
   actionUrl?: string | null
   actionText?: string | null
 }
-<<<<<<< HEAD
-export interface CreateNotificationResult {
-=======
-<<<<<<< HEAD
-export interface CreateNotificationResult {
-=======
 
 export interface CreateNotificationResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   success: boolean;
   notificationId?: string
   error?: any
 }
-<<<<<<< HEAD
-export interface HireRequestNotificationParams {
-=======
-<<<<<<< HEAD
-export interface HireRequestNotificationParams {
-=======
 
 export interface HireRequestNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   talentId: string;
   adminId?: string;
   requesterName: string;
@@ -57,52 +26,23 @@ export interface HireRequestNotificationParams {;
   projectSummary?: string
   hireRequestId: string
 }
-<<<<<<< HEAD
-export interface OnboardingNotificationParams {
-=======
-<<<<<<< HEAD
-export interface OnboardingNotificationParams {
-  user_id: string;
-  missing_milestone: string,
-  user_role: 'talent' | 'client';
-
-}
-export interface SystemNotificationParams {
-  user_id: string;
-=======
 
 
 export interface OnboardingNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
-<<<<<<< HEAD
-export interface SystemNotificationParams {
-  user_id: string;
-=======
-<<<<<<< HEAD
-export interface SystemNotificationParams {
-=======
 
 export interface SystemNotificationParams {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   title: string;
   message: string;
   actionUrl?: string | null;
   actionText?: string | null
 
   sendEmail?: boolean
-<<<<<<< HEAD
 }
-=======
-}
-=======
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',;
 export interface CreateNotificationParams {;
   userId: string,;
@@ -146,9 +86,3 @@ export interface SystemNotificationParams {;
   sendEmail?: boolean;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

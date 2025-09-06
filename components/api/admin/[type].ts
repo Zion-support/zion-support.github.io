@@ -26,53 +26,10 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
-<<<<<<< HEAD
-  };    search;
-  const filters: Record<string, any> = {};
-  Object && Object.keys(rest).forEach(k => {
-    if (k && k.startsWith('f_')) filters[k && k.slice(2)] = rest[k];
-  });
-  return {
-    search
-    sort
-    order: (order as any) |'desc'
-    page: page ? Number(page) : 0
-    pageSize: pageSize ? Number(pageSize) : 20
-    filters
-    format: (format as any) |undefined
-  };    search;
-    sort;
-    order: (order as any) || 'desc', page: page ? Number(page) : 0,
-    pageSize: pageSize ? Number(pageSize) : 20, filters,
-    format: (format as any) || undefined}
-}
-
-=======
-<<<<<<< HEAD
-  };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-=======
-<<<<<<< HEAD
-  };    search;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    sort;
-    order: (order as any) |'desc';
-    page: page ? Number(page) : 0;
-    pageSize: pageSize ? Number(pageSize) : 20;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
     filters,
     format: (format as any) || undefined}
 }
-=======
   };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     filters
     format: (format as any) |undefined}
@@ -94,16 +51,8 @@ function toCsv(rows: any[]): string {
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
-) {
-  const type = (req.query.type as AdminType) |'';
-<<<<<<< HEAD
-=======
-=======
 ) {;
   const type = (req.query.type as AdminType) || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
@@ -115,17 +64,9 @@ export default async function handler(
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
 }
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const type = (req.query.type as AdminType) |'';
-<<<<<<< HEAD
-=======
-=======
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const type = (req.query.type as AdminType) || '';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
   const useSupabase = isSupabaseConfigured();
   if (req.method === 'GET') {
@@ -188,228 +129,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
-<<<<<<< HEAD
-      if (params && params.search) {
-        const s = params && params.search.toLowerCase();
-        filtered = filtered && filtered.filter(r =>
-          JSON && JSON.stringify(r).toLowerCase().includes(s)
-        );
-      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          filtered = filtered && filtered.filter(
-            (r: any) => String((r as any)[k]) === String(v)
-          );        }        filtered = filtered && filtered.filter((r) => JSON && JSON.stringify(r).toLowerCase().includes(s))
-      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          filtered = filtered && filtered.filter((r: any) => String((r as any)[k]) === String(v))
-      }
-      if (params && params.sort) {
-        filtered && filtered.sort((a: any, b: any) => {
-          const av = (a as any)[params && params.sort!];
-          const bv = (b as any)[params && params.sort!];
-          return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
-          );        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
-      if (params.search) {
-        const s = params.search.toLowerCase();
-        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
-        }
-import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils / admin / types';
-import { v4 as uuidv4 } from 'uuid';
-import { supabase as client } from '../../../utils / supabase / client';
-import { MOCK_DATA } from '../../../utils / admin / mock_data';
-;
-  return (
-    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co');
-;
-function parseListParams (req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, page_size, format, ...rest } =;
-    req.query as Record < string, string>;
-  const filters: Record < string, any> = {}
-  Object.keys (rest).for_each (key => {
-    if () filters[k.slice (2)] = rest[k]) {
-  $2
-}
-  });
-  return {
-    search,
-    sort,
-    order: (order as any) || 'desc',
-    page: page ? Number (page) : 0,
-    page_size: page_size ? Number (page_size) : 20,
-    filters,
-    format: (format as any) || undefined,
-  }    search;
-    sort;
-    order: (order as any) || 'desc';
-    page: page ? Number (page) : 0;
-    page_size: page_size ? Number (page_size) : 20;
-    filters,
-    format: (format as any) || undefined}
-}
-function to_csv (rows: any[]): string {
-  // Check condition
-if (return '') {
-  $2
-}
-  const headers = Object.keys (rows[0]);
-  const escape = (v: any) =>: any {
-    // Check condition
-if (return '') {
-  $2
-}
-    const string = typeof v === 'string' ? v : JSON.stringify (v);
-    return '"' + s.replace (/"/g, '""') + '"';
-  }
-  const lines = [headers.join (', ')].concat (
-    rows.map (r => headers.map (h => escape (r[h])).join (', ')));
-  return lines.join ('\n');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const type = (req.query.type as AdminType) || '';
-  if ()) {
-  $2
-}
-    return res.status (400).json ({ error: 'Invalid type' });  }
-  const lines = [headers.join ()].concat (rows.map ((r) => headers.map ((h) => escape (r[h])).join ()));
-  return lines.join ('\n');
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const type = (req.query.type as AdminType) || '';
-  if () return res.status (400).json ({ error: 'Invalid type' })) {
-  $2
-}
-  const use_supabase = isSupabaseConfigured ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const params = parseListParams (req);
-    // Check condition
-if ( {) {
-  $2
-}
-      const table = type;
-      let query = client.from (table).select ('*', { count: 'exact' });
-      // Check condition
-if ( {) {
-  $2
-}
-        // heuristic: search name / title / email;
-        query = query.or (
-          'name.ilike.%' +;
-            params.search +;
-            '%, title.ilike.%' +;
-            params.search +;
-            '%, email.ilike.%' +;
-            params.search +;
-            '%');
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          if (query = query.eq (k, v)) {
-  $2
-}
-        }
-      }
-      if (
-        query = query.order (params.sort, { ascending: params.order === 'asc' })) {
-  $2
-}      const from = params.page * params.page_size;      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          if (query = query.eq (k, v)) {
-  $2
-}
-        }
-      }
-      if (query = query.order (params.sort, { ascending: params.order === 'asc' })) {
-  $2
-}
-      const from = params.page * params.page_size;
-      const to = from + params.page_size - 1;
-      const { data, error, count } = await query.range (from, to);
-      if (return res.status (500).json ({ error: error.message })) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        res.set_header ('Content - Type', 'text / csv');
-        res.set_header (
-          'Content - Disposition',
-          `attachment; filename="${type}.csv"`);
-        return res.status (200).send (to_csv (data || []));      }        res.set_header ('Content - Typetext / csv');
-        res.set_header ('Content - Disposition', `attachment, filename="${type}.csv"`);
-        return res.status (200).send (to_csv (data || []));
-      }
-      return res.status (200).json ({ items: data || [], total: count || 0 });
-    } else {
-      // fallback;
-      const all = (MOCK_DATA[type] || []).slice ();
-      let filtered = all;
-      // Check condition
-if ( {) {
-  $2
-}
-        const string = params.search.toLowerCase ();
-        filtered = filtered.filter (r =>;
-          JSON.stringify (r).toLowerCase ().includes (s));
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          filtered = filtered.filter (
-            (r: any) => String ((r as any)[k]) === String (v));        }        filtered = filtered.filter ((r) => JSON.stringify (r).toLowerCase ().includes (s));
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          filtered = filtered.filter ((r: any) => String ((r as any)[k]) === String (v));
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        filtered.sort ((array: any, boolean: any) => {
-=======
 
 
       }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
@@ -427,28 +151,13 @@ if ( {) {
           'Content-Disposition'
           `attachment; filename="${type}.csv"`
         );
-<<<<<<< HEAD
-        return res && res.status(200).send(toCsv(pageItems));
-      return res && res.status(200).json({ items: pageItems, total });
-=======
 
         return res.status(200).send(toCsv(pageItems));
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return res.status(200).json({ items: pageItems, total });
-    }
-  }
-=======
 
       }
-=======
-=======
 
       }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ items: pageItems, total });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   if (req.method === 'PATCH') {
@@ -491,26 +200,12 @@ if ( {) {
       list[idx] = updated as any;
       return res && res.status(200).json({ item: updated });    }      return res && res.status(200).json({ item: updated })
     }
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       return res.status(200).json({ item: updated });    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
@@ -543,121 +238,9 @@ return res.status(405).json({ error: 'Method not allowed' });
       return res.status(200).json({ ok: true })
     }
   }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-  return res.status(405).json({ error: 'Method not allowed' });
-}
-      const start = params.page * params.page_size;
-      const end = start + params.page_size;
-      const page_items = filtered.slice (start, end);
-      // Check condition
-if ( {) {
-  $2
-}
-        res.set_header ('Content - Type', 'text / csv');
-        res.set_header (
-          'Content - Disposition',
-          `attachment; filename="${type}.csv"`);
-        return res.status (200).send (to_csv (page_items));
-      return res.status (200).json ({ items: page_items, total });
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const { id, updates } = req.body as {
-      id: string;
-      updates: Record < string, any>;
-    }
-    if (return res.status (400).json ({ error: 'Missing id' })) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      const { data, error } = await client;
-        .from (type);
-        .update ({ ...updates, updated_at: new Date ().toISOString () });
-        .eq ('id', id);
-        .select ('*');
-        .single ();
-      if (return res.status (500).json ({ error: error.message })) {
-  $2
-}
-      return res.status (200).json ({ item: data });
-    } else {
-      const list = MOCK_DATA[type] || [];
-      const idx = list.find_index ((r: any) => r.id === id),
-      if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-      const updated = {
-        ...list[idx],
-        ...updates,
-        updated_at: new Date ().toISOString (),
-      }
-      list[idx] = updated as any;
-      return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated });
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const id = (req.query.id as string) || '';
-    if (return res.status (400).json ({ error: 'Missing id' })) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      const { error } = await client.from (type).delete ().eq ('id', id);
-      if (return res.status (500).json ({ error: error.message })) {
-  $2
-}
-      return res.status (200).json ({ ok: true });
-      const list = MOCK_DATA[type] || [];
-      const idx = list.find_index ((r: any) => r.id === id);
-      if (return res.status (404).json ({ error: 'Not found' })) {
-  $2
-}
-      list.splice (idx, 1);
-      return res.status (200).json ({ ok: true });    }
-  }
-  return res.status (405).json ({ error: 'Method not allowed' });
-;
-}return res.status (200) .send (to_csv (data || []) );
-}return res.status (200) .send (to_csv (page_items) );      return res.status (200).json ({ ok: true });
-    }
-  }
-return res.status (405).json ({ error: 'Method not allowed' });
-;
-}return res.status (200) .send (to_csv (data || []) );
-}return res.status (200) .send (to_csv (page_items) );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-return res.status(405).json({ error: 'Method not allowed' });
-}return res.status (200) .send (toCsv (data |[]) );
-}return res.status (200) .send (toCsv (pageItems) );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-<<<<<<< HEAD
-
-  return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+

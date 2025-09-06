@@ -1,22 +1,9 @@
 
-<<<<<<< HEAD
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
-// Get openAI API key from environment variables
-=======
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
-=======
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
-=======
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Get openAI API key from environment variables
 
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
@@ -61,8 +48,6 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console && console.error("Error in normalizeSkillsWithAI:", error);
     // If AI normalization fails, return the original skills
     return skills
-<<<<<<< HEAD
-=======
 
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts",;
@@ -110,12 +95,6 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 /**
@@ -134,47 +113,20 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       Required Skills: ${jobDetails && jobDetails.skills.join(", ")}
       Budget Range: $${jobDetails && jobDetails.budget.min} - $${jobDetails && jobDetails.budget.max}
     `;
-<<<<<<< HEAD
-    // Create talent profiles text for AI evaluation
-    const talentProfilesText = talents && talents.map((talent, index) => {
-      return `
-=======
 ;
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map ((talent, index) => {
       return `;
 
-=======
       Job Title: ${jobDetails.title}
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
-<<<<<<< HEAD
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    `;
-    // Create talent profiles text for AI evaluation
-    const talentProfilesText = talents.map((talent, index) => {
-      return `
-=======
-<<<<<<< HEAD
-=======
-      Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     `,;
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -274,48 +226,8 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     console.error("Error in findBestMatches:", error);
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  }
-}
-/**
- * Fallback method that uses basic string matching to find talent matches
- * @param jobDetails The job to match
- * @param talents Array of talent profiles
- * @returns Array of matches with scores
- */
-export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {
-  const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase());
-  return talents.map(talent => {
-    const talentSkills = Array.isArray(talent.skills)
-      ? talent.skills.map((skill: string) => skill.toLowerCase())
-      : [];
-    // Find matching skills
-    const matchedSkills = requiredSkills.filter((skill: string) =>
-      talentSkills.some((talentSkill: string) => talentSkill.includes(skill) |skill.includes(talentSkill))
-    );
-    // Calculate a basic match score
-<<<<<<< HEAD
-    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 100);
-    return {
-      talentId: talent && talent.id;
-      score: matchScore;
-      matchedSkills: matchedSkills
 
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-=======
-
-      reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
-=======
-<<<<<<< HEAD
-    console.error("Error in findBestMatches:", error),
-    
-    // If AI matching fails, perform a basic skill matching
-    return performBasicSkillMatching(jobDetails, talents)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         Bio Summary: ${talent.bio ? talent.bio.substring(0, 100) + "..." : "No bio"}
         Skills: ${Array.isArray(talent.skills) ? talent.skills.join(", ") : "No skills listed"}
         Experience: ${talent.years_experience} years;
@@ -403,12 +315,6 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score

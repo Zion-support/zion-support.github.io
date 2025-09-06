@@ -1,45 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/components/ui/use-toast",
-import { useTranslation } from "react-i18next",
-import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile",
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { useTranslationService } from "@/hooks/useTranslationService";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function TranslationManager() {
-
-
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
     let source_text = '';
     for (const lang of supported_languages.map (l => l.code)) {
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -53,18 +16,6 @@ import { useTranslation } from "react-i18next",
 import { AlertTriangle, Check, Globe, Search, Loader2 } from 'lucide-react'
 import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-<<<<<<< HEAD
-import { useTranslationService } from "@/hooks/useTranslationService";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export default function TranslationManager() {
-
-
-    let sourceText = ''
-    for (const lang of supportedLanguages.map(l => l.code)) {
-
-}
-}
-=======
 import { useTranslationService } from "@/hooks/useTranslationService",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export default function TranslationManager() {
@@ -513,9 +464,3 @@ export default function TranslationManager() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

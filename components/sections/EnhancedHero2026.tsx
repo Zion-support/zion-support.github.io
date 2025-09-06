@@ -25,32 +25,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ArrowRight
-  Star
-  TrendingUp
-  Zap
-  Shield
-  Globe
-  Brain
-  Rocket
-  CheckCircle;
-<<<<<<< HEAD
-import {;
-  ArrowRight,;
-  Star,;
-  TrendingUp,;
-  Zap,;
-  Shield,;
-  Globe,;
-  Brain,;
-  Rocket,;
-  CheckCircle,;
-=======
-=======
   ArrowRight,
   Star,
   TrendingUp,
@@ -60,8 +34,6 @@ import {;
   Brain,
   Rocket,;
   CheckCircle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 
 interface EnhancedHero2026Props {;
@@ -115,19 +87,9 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-        staggerChildren: 0.2
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        staggerChildren: 0.2
-      }
-=======
         staggerChildren: 0.2,
       },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     },  };        staggerChildren: 0.2
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
   }
@@ -247,138 +209,33 @@ export default function EnhancedHero2026(): any ({;
               opacity: [0.3, 0.8, 0.3]
               scale: [1, 1.5, 1],            }}
             transition={{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,            }}  }
-<<<<<<< HEAD
-
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
-=======
-=======
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.4),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.4),transparent_50%)]" />
-      {/* Floating Elements */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 pointer-events-none">;
-        {Array && Array.from({ length: 20 }).map((_, i) => (;
-          <motion&& motion.div
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`,
-            }}
-            animate={{
-              coordinate_y: [0, -30, 0],
-              opacity: [0.3, 0.8, 0.3],
-              scale: [1, 1.5, 1],            }}
-            transition={{
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: Math.random () * 2,            }}  }
-;
-  return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden">;
-      {/* Enhanced Background Elements */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 900 via - purple - 900 / 20 to - slate - 900" />;
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_20%_80%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
-      <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.4), transparent_50%)]" />;
-      {/* Floating Elements */}
-      <div className="absolute inset - 0 pointer - events - none">;
-        {Array.from ({ length: 20 }).map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full";
-=======
       <div className="absolute inset-0 pointer-events-none">
         {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`}}
             animate={{
-<<<<<<< HEAD
-              y: [0, -30, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.5, 1]
-            }}
-            transition={{
-              duration: 3 + Math.random() * 2
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: Math.random() * 2,              ease: "easeInOut"
-              delay: Math.random() * 2
-              y: [0, -30, 0];
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`}}
-            animate={{
-              coordinate_y: [0, -30, 0];
-              opacity: [0.3, 0.8, 0.3];
-              scale: [1, 1.5, 1];
-=======
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            }}
-            transition={{
-              duration: 3 + Math.random () * 2,
-              repeat: Infinity,
-<<<<<<< HEAD
-              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-          />;
-=======
 
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-<<<<<<< HEAD
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-              ease: 'easeInOut',
-              delay: Math.random() * 2,              ease: "easeInOut",
-              delay: Math.random() * 2
-            }}
-=======
 
             }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ))}
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -493,16 +350,9 @@ export default function EnhancedHero2026(): any ({;
             ))}
           </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
                   {stat.label}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </motion.div>
             ))}
@@ -510,9 +360,6 @@ export default function EnhancedHero2026(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Enhanced CTA Section */}
           <motion && motion.div variants={itemVariants} className='space-y-6'>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
@@ -550,16 +397,8 @@ export default function EnhancedHero2026(): any ({;
               
               <Button 
                 href="/contact" 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -575,14 +414,8 @@ export default function EnhancedHero2026(): any ({;
                 </span>
                 <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Button>
-<<<<<<< HEAD
-              <Button
-                href="/contact"
-=======
               <Button 
                 href="/contact" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -660,17 +493,8 @@ export default function EnhancedHero2026(): any ({;
             </div>;
           </motion && motion.div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Contact Information */}
           <motion&& motion.div
             variants={itemVariants}
@@ -835,15 +659,5 @@ export default function EnhancedHero2026(): any ({;
       </div>;
     </section>));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

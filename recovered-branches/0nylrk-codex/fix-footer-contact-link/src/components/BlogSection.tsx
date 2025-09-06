@@ -35,11 +35,8 @@ export function BlogSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {recentPosts.map((post, index) => (
-<<<<<<< HEAD
-=======
 
 
-=======
             <Card key={post.id} className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">
               <div className="h-48 bg-zion-blue-dark relative overflow-hidden">
                 <img 
@@ -47,26 +44,14 @@ export function BlogSection() {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
-<<<<<<< HEAD
-                  onError={(
-<<<<<<< HEAD
-                    e: React.SyntheticEvent<HTMLImageElement, Event>
-                  ) => {
-                    const target = e.currentTarget as HTMLImageElement;
-
-=======
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     e: React.SyntheticEvent<HTMLImageElement, Event>,
                   ) => {;
                     const target = e.currentTarget as HTMLImageElement;
-=======
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -101,7 +86,6 @@ import { BLOG_POSTS } from "@/data/blog-posts",;
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {;
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime();
 }).slice(0, 3),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function BlogSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark" id="blog">;
@@ -124,8 +108,6 @@ export function BlogSection() {;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {recentPosts && recentPosts.map((post, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <Card
               key={post && post.id}
               className="bg-zion-blue-light border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 overflow-hidden">;
@@ -267,17 +249,7 @@ function BlogSection() {
         </div>;
       </div>;
     </section>);
-<<<<<<< HEAD
-}
-=======
 
 }
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

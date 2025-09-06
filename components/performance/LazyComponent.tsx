@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-}
-import React, { Suspense, lazy } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { lazy, Suspense } from 'react';
 
 interface LazyComponentProps {
@@ -24,26 +15,17 @@ export const LazyComponent: React.FC<LazyComponentProps> = ({
   return (
     <Suspense fallback={fallback}>
       <LazyLoadedComponent {...props} />
-=======
 import React from 'react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 };
 import React, { Suspense, lazy } from 'react';
 ;
 
-=======
 
 import React from 'react'
 }
 import React, { Suspense, lazy } from 'react';
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
@@ -58,45 +40,18 @@ const LazyComponent: React.FC<LazyComponentProps> = ({
   return (
     <Suspense fallback={fallback}>
       <Component {...props} />
->>>>>>> origin/main
     </Suspense>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
-<<<<<<< HEAD
 export default LazyComponent;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-export default LazyComponent;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from 'react';
-};
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react',;
 },
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React from 'react';
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const LazyComponent: React.FC < LazyComponentProps> = ({
   component: Component,
   fallback = <div className="animate - pulse bg - gray - 200 h - 32 rounded" />,
@@ -110,15 +65,6 @@ const LazyComponent: React.FC < LazyComponentProps> = ({
 export default LazyComponent;
 import React from 'react',
 },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

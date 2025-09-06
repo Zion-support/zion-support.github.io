@@ -1,41 +1,17 @@
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState, useEffect  } from 'react';
-import { useNavigate  } from 'react-router-dom';
-import { useAuth  } from '@/hooks/useAuth';
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-<<<<<<< HEAD
-=======
-=======
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
-<<<<<<< HEAD
-
-  title: string
-  description: string
-  icon: React.ReactNode
-=======
-<<<<<<< HEAD
-=======
   title: string,
   description: string,
   icon: React.ReactNode,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   action: {
     text: string
 
@@ -56,10 +32,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   const navigate = useNavigate();
   const { user } = useAuth();
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -84,24 +56,6 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
-<<<<<<< HEAD
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-
-    url: string
-  }
-  skipText?: string
-}
-interface OnboardingWizardProps {
-
-  type: 'client' | 'talent'
-  onComplete: () => void
-  onSkip: () => void
-
-  className?: string
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
 
@@ -111,8 +65,6 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Define steps based on user type
   const clientSteps: WizardStep[] = [
     {
@@ -181,56 +133,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        text: "Enable Matchmaking"
-        url: "/talent-dashboard"
-      }
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  ];
-  const steps = type === 'client' ? clientSteps : talentSteps;
-  // Navigate to the specified URL
-  const handleAction = () => {
-    if (currentStep < steps.length - 1) {
-      navigate(steps[currentStep].action.url);
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      navigate(steps[currentStep].action.url);
-      onComplete()
-    }
-  }
-  // Skip the current step
-  const handleSkip = () => {
-    if (currentStep < steps.length - 1) {
-      setCurrentStep(currentStep + 1)
-    } else {
-      // Last step
-      onSkip()
-    }
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-  }
-=======
         text: "Enable Matchmaking",
         url: "/talent-dashboard"
       }
     }
-=======
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],;
   const steps = type === 'client' ? clientSteps : talentSteps,;
   // Navigate to the specified URL;
@@ -253,14 +160,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
       <CardHeader>

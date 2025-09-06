@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src.disabled/components/OptimizedImage.jsx
-<<<<<<< HEAD
-"export\": const OptimizedImage = ({ ;
-export: const OptimizedImage = ({ ;""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 "export\": const OptimizedImage = ({ ;
 export: const OptimizedImage = ({ ;""
 "export\": const OptimizedImage = ({ ;

@@ -1,40 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
-<<<<<<< HEAD
-export const useUpdateMilestone = () => {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { recordMilestoneActivity } = useRecordActivity();
-=======
-<<<<<<< HEAD
-export const useUpdateMilestone = () => {
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { recordMilestoneActivity } = useRecordActivity();
-  const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
-    if (!user) return false;
-    try {
-      setIsSubmitting(true);
-=======
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -47,7 +21,6 @@ export const useUpdateMilestone = () => {
   const { recordMilestoneActivity } = useRecordActivity(),
 
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const updateMilestoneStatus = async (milestoneId: string, newStatus: MilestoneStatus, comment?: string) => {
     if (!user) return false;
     try {
@@ -183,9 +156,6 @@ if (throw error) {
   }
 }
 
-<<<<<<< HEAD
-=======
-=======
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -202,18 +172,6 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-  };
-  
-  return {
-    updateMilestoneStatus;
-    updateMilestone;
-    isSubmitting
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -280,11 +238,5 @@ export const useUpdateMilestone = () => {;
     updateMilestoneStatus,;
     updateMilestone;
     isSubmitting;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-=======
-=======
 import { Badge } from '@/components/ui/badge'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ShieldAlert } from 'lucide-react'
 
 import {
@@ -23,20 +14,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let message = null;
     default:
       break
-<<<<<<< HEAD
-import { Badge } from '@/components/ui/badge';
-import { ShieldAlert } from 'lucide-react';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-
-interface DisputeStatusBadgeProps {;
-=======
-<<<<<<< HEAD
-  }
-=======
     case 'resolved':
       variant = 'outline'
       message = 'This dispute has been resolved'
@@ -45,10 +22,7 @@ interface DisputeStatusBadgeProps {;
       variant = 'outline'
       message = 'This dispute has been closed'
       break
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 interface DisputeStatusBadgeProps {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
@@ -103,8 +77,6 @@ function DisputeStatusBadge() {
     </Tooltip>
   )
 }
-<<<<<<< HEAD
-=======
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
@@ -123,13 +95,8 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       variant = "outline",
       message = "This dispute has been closed",
       break,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     default:
       break
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
     <Tooltip>
@@ -141,22 +108,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipTrigger>
       <TooltipContent>
         <p>{message}</p>
-<<<<<<< HEAD
-      </TooltipContent>;
-    </Tooltip>;
-  );
-};
-}
-=======
       </TooltipContent>
     </Tooltip>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -190,7 +144,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
         <Badge variant={variant} className='flex items-center gap-1'>;
           <ShieldAlert className='h-3 w-3' />;
           <span>Under Dispute</span>;
-=======
   }
   return (
     <Tooltip>;
@@ -199,7 +152,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
           <ShieldAlert className='h - 3 w - 3' />;
           <span > Under Dispute</span>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </Badge>;
       </TooltipTrigger>;
       <TooltipContent>;
@@ -207,18 +159,5 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       </TooltipContent>;
     </Tooltip>;
   );
-<<<<<<< HEAD
-}
-
-
-    </Tooltip>);
-}
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

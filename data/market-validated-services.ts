@@ -28,8 +28,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
-=======
 export const marketValidatedServices: MarketValidatedService[] = [
   // AI and Assistants
   {
@@ -505,29 +503,9 @@ export const marketValidatedServices: MarketValidatedService[] = [
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
-<<<<<<< HEAD
-      'Managed vector DB'
-      'Ingestion pipelines'
-      'Metadata filters'
-      'Access controls'
-    ]
-    category: 'AI & Search'
-    link: 'https://ziontechgroup.com/vector-search-starter'
-    variant: 'quantum'
-    rating: 4.6
-    customers: 410
-    trialDays: 14
-    setupTime: '2 hours'
-    contactInfo
-  }
-];import { ServiceVariant  } from "../types/service-variants";
-
-export interface MarketValidatedService {
-=======
 ;
 const contact_info = {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1318,12 +1296,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
   },
 ];import { ServiceVariant  } from "../types/service-variants";
 export interface MarketValidatedService {
-<<<<<<< HEAD
-=======
-=======
 export interface MarketValidatedService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 	id: string;
 	name: string;
 	tagline: string;
@@ -1729,13 +1702,3 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		contactInfo
 	}];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

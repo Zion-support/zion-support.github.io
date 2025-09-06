@@ -1,61 +1,9 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import puppeteer from 'puppeteer';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import puppeteer from 'puppeteer',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '10mb'}}}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method not allowed' })
-    return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  }
-  const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' }
-  if (!html) {
-    res.status(400).json({ error: 'Missing html' })
-    return
-  }
-  const browser = await puppeteer.launch({
-    headless: true
-    args: ['--no-sandbox--disable-setuid-sandbox']})
-  try {
-    const page = await browser.newPage()
-    await page.setContent(html, { waitUntil: 'networkidle0' })
-    const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })
-    await browser.close()
-    res.setHeader('Content-Typeapplication/pdf')
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
-
-<<<<<<< HEAD
-    headless: true,
-=======
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
-=======
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const config = {;
   api: {;
     bodyParser: {;
@@ -68,10 +16,6 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ;
@@ -92,27 +36,13 @@ export default async function handler(req, res) {
     await page.setContent(html, { waitUntil: 'networkidle0' }),
     const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),
     await browser.close(),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.setHeader('Content-Typeapplication/pdf'),
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
-<<<<<<< HEAD
-    try { await browser.close() } catch {}
-    res.status(500).json({ error: e?.message || 'Failed to render PDF' })
-  };
-};
-=======
 ;
   const browser = await puppeteer.launch({;
     headless: true;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     args: ['--no-sandbox--disable-setuid-sandbox']});
 
   try {
@@ -129,8 +59,6 @@ export default async function handler(req, res) {
     res.status(500).json({ error: e?.message |'Failed to render PDF' })
   }
 }
-<<<<<<< HEAD
-=======
     res.status(500).json({ error: e?.message || 'Failed to render PDF' });
     } catch (error) {
     console.error("Error:", error);
@@ -143,11 +71,6 @@ export default async function handler(req, res) {
 
 
   }
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { NextApiRequest, NextApiResponse } from 'next',
 import puppeteer from 'puppeteer',
 export const config = {
@@ -189,12 +112,6 @@ if ( {) {
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

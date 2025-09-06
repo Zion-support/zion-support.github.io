@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { useState, useEffect, useCallback, useMemo  } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-=======
 
 
     let filteredTalents = allTalents
     }
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { ArrowUp, Filter, SortAsc, Users, TrendingUp, Star, Verified, MapPin } from 'lucide-react'
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
 import { generateAITalents, getTalentMarketStats, getRecommendedTalents  } from '@/utils/talentAutoFeedAlgorithm';
@@ -68,11 +53,6 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     let filtered_talents = all_talents;
     }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   // Error state
   if (error) {
@@ -222,9 +202,3 @@ const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,49 +1,7 @@
 
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import type { Wallet, TokenTransaction } from '@/types/tokens';
-export function useWallet() {;
-  const { user } = useAuth();
-  const [wallet, setWallet] = useState<Wallet | null>(null),
-  const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
-  const [loading, setLoading] = useState(true);
-
-  const [error, setError] = useState<string | null>(null);
-
-  async function fetchWallet() {
-    if (!user?.id) {
-      setWallet(null);
-      setLoading(false);
-      return
-    }
-    try {
-      setLoading(true);
-      const { data, error } = await supabase
-        .from('wallets')
-        .select('*')
-        .eq('user_id', user && user.id)
-        .single();
-      if (error) {
-        throw error
-      }
-      setWallet(data)
-    } catch (err: any) {
-      console && console.error('Error fetching wallet:', err);
-      setError(err && err.message)
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useEffect, useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
   const { user } = useAuth();
@@ -207,9 +165,6 @@ if (return) {
     transactions;
     loading;
     error;
-<<<<<<< HEAD
-    fetchWallet;
-=======
 
 import { useEffect, useState } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -306,12 +261,6 @@ export function useWallet() {;
     loading,;
     error,;
     fetchWallet,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     fetchTransactions;
     earnTokens;
 

@@ -1,117 +1,12 @@
 // Mock source map utility
 export function getSourceMapWithExistence() {
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-
-const ROOT = process.cwd();
-
-export interface SourceNode {
-  id: string;
-  name: string;
-  type: 'file' | 'directory' | 'component';
-  path: string;
-  exists: boolean;
-  children?: SourceNode[];
   return {
-    nodes: [],
-    edges: [];
-  }
-}
-export /**
- * getGitStatus - Function description
- */
-function getGitStatus() {
-  return {
-    connected: false,
-    branch: 'main';
-  }
-}
-export function getSourceMapWithExistence (): SourceNode[] {
-  const nodes = buildZionSourceMap ();
-  return nodes.map (markExistenceRecursive);
-}
-export interface DeployTemplateResult {
-  createdPaths: string[];
-  skippedPaths: string[];
-}
-
-export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
-=======
-  return {
-<<<<<<< HEAD
-    nodes: []
-    edges: []
-  }
-=======
     nodes: [],
     edges: [];
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function getGitStatus() {
   return {
-<<<<<<< HEAD
-    connected: false
-    branch: 'main'
-  }
-}
-
-function buildZionSourceMap(): SourceNode[] {
-  return [
-    {
-      id: 'src',
-      name: 'src',
-      type: 'directory',
-      path: 'src',
-      exists: false,
-      children: [
-        {
-          id: 'components',
-          name: 'components',
-          type: 'directory',
-          path: 'src/components',
-          exists: false
-        },
-        {
-          id: 'pages',
-          name: 'pages',
-          type: 'directory',
-          path: 'src/pages',
-          exists: false
-        },
-        {
-          id: 'utils',
-          name: 'utils',
-          type: 'directory',
-          path: 'src/utils',
-          exists: false
-        }
-      ]
-    }
-  ];
-}
-
-function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path);
-  return {
-    ...node,
-    exists,
-    children: node.children?.map(markExistenceRecursive)
-  };
-}
-
-export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
-}
-export interface DeployTemplateResult {
-<<<<<<< HEAD
-=======
-=======
     connected: false,
     branch: 'main';
   };
@@ -123,8 +18,6 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   createdPaths: string[];
   skippedPaths: string[];
 export function ensureDirectory(dirPath: string): void {
@@ -156,15 +49,8 @@ export function deployBasicTemplateForPath(
     skippedPaths && skippedPaths.push(readmeFile);
   }
 
-<<<<<<< HEAD
-=======
   return { createdPaths, skippedPaths }
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return { createdPaths, skippedPaths };
 // Source map utilities
 export interface SourceMapInfo {
@@ -298,12 +184,5 @@ export function deployBasicTemplateForPath (
   }
   return { created_paths, skipped_paths }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

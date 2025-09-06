@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-=======
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-=======
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
 
   Select
@@ -114,73 +94,28 @@ export function MobileResumeBuilder() {;
         <Button
           variant = {currentStep === "basics" ? "default" : "outline",}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-          onClick = {(,) => setCurrentStep("basics"),}
-        >;
-          Basics;
-        </Button>;
-=======
           onClick={() => setCurrentStep("basics")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Basics
         </Button>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Button
           variant = {currentStep === "experience" ? "default" : "outline",}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-          onClick = {() => setCurrentStep("experience"),}
-        >;
-          Experience;
-        </Button>;
-=======
           onClick={() => setCurrentStep("experience")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Experience
         </Button>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Button
           variant = {currentStep === "education" ? "default" : "outline",}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-          onClick = {() => setCurrentStep("education"),}
-        >;
-          Education;
-        </Button>;
-=======
           onClick={() => setCurrentStep("education")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           Education
         </Button>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Button
           variant = {currentStep === "skills" ? "default" : "outline",}
           className="flex-1 rounded-full"
-<<<<<<< HEAD
-          onClick = {() => setCurrentStep("skills"),}
-=======
           onClick={() => setCurrentStep("skills")}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         >
           Skills
         </Button>
@@ -189,17 +124,7 @@ export function MobileResumeBuilder() {;
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -232,33 +157,9 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-=======
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            rows = {4,}
-          />
-        </div>
-      </CardContent>
-    </Card>
-  )
-}
-=======
-<<<<<<< HEAD
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -360,7 +261,6 @@ function BasicsStep() {;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="summary">Professional Summary</Label>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
@@ -371,12 +271,6 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
           <Textarea 
@@ -385,8 +279,6 @@ function BasicsStep() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -395,28 +287,10 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-  const removeEducation = (id: string,) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  }
-  const removeSkill = (id: string,) => {
-    setSkills(skills.filter(skill => skill.id !== id))
-<<<<<<< HEAD
-  }
-}
-  )
-}
-
-=======
   };
 };
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   Select;
   SelectContent;
   SelectItem;
@@ -547,8 +421,6 @@ function ExperienceStep() {
   },
   const remove_experience = (id: string, ) =>: any {
     set_experiences (experiences.filter (exp => exp.id !== id));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   const remove_education = (id: string, ) =>: any {
     set_educations (educations.filter (edu => edu.id !== id));
@@ -586,8 +458,6 @@ function ExperienceStep() {;
 
   );
 }
-<<<<<<< HEAD
-=======
 ;
 function SkillsStep() {;
   const [skills, setSkills] = useState([;
@@ -675,11 +545,6 @@ function SkillsStep() {;
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

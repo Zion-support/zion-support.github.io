@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React, { useState, useEffect } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Label  } from '@/components/ui/label';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast  } from '@/hooks/use-toast';
-import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from 'lucide-react'
-import { cn  } from '@/lib/utils';
-import { fireEvent  } from '@/lib/analytics';
-import {logErrorToProduction} from '@/utils/productionLogger';
-const signupSchema = null;
-<<<<<<< HEAD
-=======
-=======
 
 
 type SignupFormData = z.infer<typeof signupSchema>
@@ -50,8 +28,6 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -446,8 +422,6 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
               <span className={cn('font-medium', 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
@@ -583,11 +557,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </div>;
       {/* Confirm Password Field */}
@@ -657,9 +626,3 @@ type SignupFormData = z.infer < typeof signup_schema>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

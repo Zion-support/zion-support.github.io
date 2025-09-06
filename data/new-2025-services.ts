@@ -2848,9 +2848,6 @@ reviews: 6
     launchDate: '2025-03-07', customers: 10,
     rating: 4.6,
     reviews: 6
-<<<<<<< HEAD
-=======
-=======
 
     id: 'llm-safety-observability-suite',
     name: 'LLM Safety & Observability Suite',
@@ -2882,33 +2879,7 @@ reviews: 6
     marketSize: '$3.5B+ AI safety & governance',
     growthRate: '200% annual growth',
     variant: 'holographic-matrix',
-<<<<<<< HEAD
-    contactInfo: contact,    features: [
-      'Prompt/output policy engineJailbreak and injection detectionPII redaction and audit trailHallucination and grounding scoreDashboards and CI quality gates';
-    ];
-    popular: true;
-    icon: '🛡️';
-    color: 'from-rose-600 to-red-700';
-    textColor: 'text-rose-300';
-    link: 'https://ziontechgroup.com/services/llm-safety-observability-suite';
-    marketPosition: 'Comparable to Lakera/Guardrails AI at a lower entry price with built-in observability.';
-    targetAudience: 'Teams shipping AI copilots and assistants';
-    trialDays: 14;
-    setupTime: '30 minutes';
-    category: 'AI & Data';
-    realService: true;
-    technology: ['TypeScriptOpenAIAnthropicOpenTelemetry'];
-    integrations: ['SlackPagerDutyDatadogGitHub Actions'];
-    useCases: ['Prevent unsafe outputsCompliance readinessModel regression detection'];
-    roi: 'Reduce incidents by 70% and review cost by 50% in 8 weeks';
-    competitors: ['LakeraGuardrails AIAzure AI Content Safety'];
-    marketSize: '$3.5B+ AI safety & governance';
-    growthRate: '200% annual growth';
-    variant: 'holographic-matrix';
-    contactInfo: contact;
-=======
     contactInfo: contact,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     realImplementation: true,
     implementationDetails: 'Inline middleware, policy DSL, exporters and dashboards.',
     launchDate: '2025-03-10',
@@ -3577,26 +3548,10 @@ reviews: 6
     launchDate: '2025-03-07',
     customers: 10,
     rating: 4.6,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-reviews: 6,
-  },;
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reviews: 6
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

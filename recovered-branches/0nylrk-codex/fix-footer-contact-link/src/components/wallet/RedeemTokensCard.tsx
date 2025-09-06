@@ -1,22 +1,11 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-<<<<<<< HEAD
-=======
 
-=======
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -29,14 +18,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type RewardOption = {
   id: string
   title: string
@@ -128,14 +110,6 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -225,7 +199,6 @@ export function RedeemTokensCard() {;
                       size="sm" 
                       variant={wallet && wallet.balance>= option && option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option && option.cost}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -239,7 +212,6 @@ export function RedeemTokensCard() {;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
-=======
 import React, { useState } from './react';
 import { use_wallet } from '@/hooks / use_wallet';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -253,7 +225,6 @@ type RewardOption = {
   description: string,
   cost: number,
   type: 'credit' | 'feature' | 'course';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
               </Button>;
             </div>;
@@ -262,13 +233,6 @@ type RewardOption = {
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </Card>);
 }

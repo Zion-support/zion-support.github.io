@@ -1,99 +1,25 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
-import { useRouter  } from 'next/router';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
-import { useRouter  } from 'next/router';
-=======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
-<<<<<<< HEAD
-
-import { RatingStars } from '@/components/RatingStars'
-import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
-import type { AppDispatch } from '@/store'
-import { addItem } from '@/store/cartSlice'
-import { toast } from '@/hooks/use-toast'
-import { useCurrency } from '@/hooks/useCurrency'
-import Image from 'next/image'; // Import next/image
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useMemo } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useRouter } from 'next/router';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ProductListing } from '@/types/listings';
-=======
-<<<<<<< HEAD
-
-import { RatingStars } from '@/components/RatingStars'
-=======
 import React, { useState } from 'react'
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
 import { useRouter } from 'next/router'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ProductListing } from '@/types/listings'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { DollarSign } from 'lucide-react';
 import { RatingStars } from '@/components/RatingStars';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { FavoriteButton } from '@/components/FavoriteButton'; import { useDispatch } from 'react-redux'
 import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
-<<<<<<< HEAD
-import Image from 'next/image'; // Import next/image;
-=======
 import Image from 'next/image'; // Import next/image
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-interface ProductListingCardProps {;
-  listing: ProductListing;
-  view?: 'grid' | 'list';
-  onRequestQuote?: (id: string) => void;
-<<<<<<< HEAD
-  detailBasePath?: string
-=======
   detailBasePath?: string;
-=======
-=======
-=======
 import React, { useState } from 'react',
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
 import { useRouter } from 'next/router',
@@ -101,7 +27,6 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -117,96 +42,32 @@ interface ProductListingCardProps {
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 const ProductListingCardComponent = ({
-<<<<<<< HEAD
-  listing
-  view = 'grid'
-  onRequestQuote
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-=======
   listing,
   view = 'grid',
   onRequestQuote,
-<<<<<<< HEAD
-  detailBasePath = '/marketplace/listing'
-}: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-    ? listing.images[0] 
-    : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  detailBasePath = '/marketplace/listing',
-}: ProductListingCardProps) => {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const isGrid = view === 'grid'
-  const router = useRouter()
-  const [loading, setLoading] = useState(false);  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0 && listing.images[0]
-      ? listing.images[0]
-      : '/placeholder.svg'
-  )
-  const [imageError, setImageError] = useState(false)
-<<<<<<< HEAD
-  const stockStatus =
-    listing.stock === undefined
-      ? 'In stock'
-      : listing.stock <= 0
-=======
   const stockStatus = null;
     listing.stock === undefined
       ? 'In stock'
       : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ? 'Out of stock'
         : listing.stock <= 5
           ? 'Low stock'
           : 'In stock'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
       : 'In stock',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const stockVariant =
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   const stockVariant = null;
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         ? 'destructive'
         : listing.stock <= 5
           ? 'warning'
@@ -215,8 +76,6 @@ const ProductListingCardComponent = ({
   const getPrice = () => {
     if (listing.price === null) return 'Custom pricing'
     return formatPrice(listing.price)
-<<<<<<< HEAD
-=======
   }
   const handleImageError = () => {
     if (!imageError) {
@@ -242,7 +101,6 @@ if ( {) {
       return;
     }
     router.push (`${detailBasePath}/${listing.id}`);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   const handleImageError = () =>: any {
     // Check condition
@@ -314,28 +172,11 @@ if ( {) {
         if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
           handleViewListing()
-<<<<<<< HEAD
-        }      }}
-    >;
-      {/* Image */}
-      <div
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-        onClick={handleViewListing} // Keep existing onClick for navigation
-        role='button'
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={e => {
-          if (e.key === 'Enter' |e.key === ' ') {
-            e.preventDefault()
-            handleViewListing()
-=======
         }      }}
     >
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
-=======
-<<<<<<< HEAD
-=======
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -361,7 +202,6 @@ if ( {) {
     listing.stock === undefined
       ? 'success'
       : listing.stock <= 0
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
@@ -518,120 +358,15 @@ const ProductListingCardComponent = ({;
       {/* Image */}
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
-<<<<<<< HEAD
-        onKeyDown={e => {
-<<<<<<< HEAD
-          if (e.key === 'Enter' |e.key === ' ') {
-            e.preventDefault()
-            handleViewListing()
-=======
-=======
         onKeyDown={(e) => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }  return ()
-    <div
-      data-testid= "equipment-link";'`
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
-      onClick={handleViewListing}
-      tabIndex={0};"
-      onKeyDown={(e) => {
-        if(e.key === 'Enter' |e.key === ' ') {
-          e.preventDefault ()
-          handleViewListing () }
-      }}
-      {/* Image */}
-      <div'
-        className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
-        onClick={handleViewListing} // Keep existing onClick for navigation;"
-        tabIndex={-1} // Remove from tab order as parent is focusable
-        onKeyDown={(e) => {
-          if(e.key === 'Enter' |e.key === ' ') {
-            e.preventDefault ()
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing ();
-        }      }}
-    >;
-      {/* Image */}
-      <div;
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0', }
-        on_click={handleViewListing} // Keep existing on_click for navigation;
-        role='button';
-        tab_index={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={e => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
-            handleViewListing ();
-          }  return ();
-    <div;
-      data - testid= "equipment - link";'`;
-      className={`bg - card / 70 backdrop - blur - md border border - primary / 10 sm:border - primary / 20 rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary hover:animate - glowing - border transition - all duration - 300`}
-      on_click={handleViewListing}
-      tab_index={0}";
-      onKeyDown={(e) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          e.prevent_default ();
-          handleViewListing () }
-      }}
-      {/* Image */}
-      <div';
-        class_name = {is_grid ? 'block w - full' : 'block w - 48 flex - shrink - 0'}
-        on_click={handleViewListing} // Keep existing on_click for navigation;";
-        tab_index={-1} // Remove from tab order as parent is focusable;
-        onKeyDown={(e) => {
-          // Check condition
-if ( {) {
-  $2
-}
-            e.prevent_default ();
-            handleViewListing () }
-        }}
-      >;
-        <div className={`relative ${imageContainerClasses}`}>;
-          {' '}
-          {/* Ensure this container has dimensions */}
-<<<<<<< HEAD
-          <Image
-            src = {imageSrc,}
-            alt = {listing && listing.title,}
-            fill = {true,}
-            style={{ objectFit: 'cover' }}
-            onError = {handleImageError,}
-=======
 
 
-=======
-<<<<<<< HEAD
-        onKeyDown={(e) => {
-
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            handleViewListing()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         }}
       >;
@@ -642,12 +377,6 @@ if ( {) {
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -663,17 +392,8 @@ if ( {) {
           {stockStatus && (;
             <Badge
               variant={stockVariant as any}
-<<<<<<< HEAD
-              className='absolute top-2 left-2'>;
-=======
               className="absolute top-2 left-2"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {stockStatus}
             </Badge>;
           )}
@@ -685,32 +405,17 @@ if ( {) {
         className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
         <div>;
           {/* Category & Rating */}
-<<<<<<< HEAD
-          <div className='flex justify-between items-center mb-2'>;
-            <Badge
-              variant='outline'
-              className='bg-background text-foreground/80 border-primary/10'>;
-              {listing && listing.category}
-=======
 
-=======
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {listing.category}
             </Badge>
             {listing.rating && (
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Title & Description */}
 
           <Image;
@@ -751,7 +456,6 @@ if ( {) {
               className='bg - background text - foreground / 80 border - primary / 10';
             >;
               {listing.category}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </Badge>;
             {listing && listing.rating && (;
               <RatingStars value={listing && listing.rating} count={listing && listing.reviewCount} />;
@@ -778,17 +482,9 @@ if ( {) {
                 <span
                   key={idx}
                   className='text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full'>;
-<<<<<<< HEAD
-=======
-=======
           <div onClick={handleViewListing} className="block">
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {listing.uspHeadline}
               </p>
             )}
@@ -808,12 +504,6 @@ if ( {) {
                   key={idx} 
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {tag}
                 </span>;
               ))}
@@ -870,25 +560,9 @@ if ( {) {
               size='sm'
               variant='default'
               className='bg-green-600 hover:bg-green-700 text-white'
-<<<<<<< HEAD
-              onClick={e => {
-                e.stopPropagation(); // Prevent card click event                // Add to cart first, then redirect to checkout
-                dispatch(
-                  addItem({
-                    id: listing.id
-                    title: listing.title
-                    price: listing.price ?? 0
-                  })
-                )
-=======
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
@@ -911,11 +585,6 @@ if ( {) {
                 addToCart()
               }}
               disabled={loading}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {loading ? (
                 <>
@@ -941,12 +610,6 @@ if ( {) {
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 router.push('/checkout')
               }}
               disabled = {loading,}
@@ -1039,13 +702,8 @@ ProductListingCard.displayName = 'ProductListingCard'
                 Request Quote
               </Button>) }
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-=======
         </div>;
       </div>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </div>;) }
 export default React.memo(ProductListingCard)
 export default ProductListingCard
@@ -1056,20 +714,9 @@ export default ProductListingCard
 export default ProductListingCard
 export default ProductListingCard
 '"`
-<<<<<<< HEAD
-export const ProductListingCard = React.memo(ProductListingCardComponent)
-ProductListingCard.displayName = 'ProductListingCard'
-=======
-<<<<<<< HEAD
-export const ProductListingCard = React.memo(ProductListingCardComponent)
-ProductListingCard.displayName = 'ProductListingCard'
-
-=======
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             
             {onRequestQuote && (
               <Button 
@@ -1141,7 +788,6 @@ ProductListingCard.displayName = 'ProductListingCard';
       </div>;
     </div>) }
 export default React.memo (ProductListingCard);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default ProductListingCard;
 export default ProductListingCard;
@@ -1156,17 +802,6 @@ ProductListingCard && ProductListingCard.displayName = 'ProductListingCard';
 
 export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 },;
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

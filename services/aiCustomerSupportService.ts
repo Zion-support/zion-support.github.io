@@ -1,35 +1,6 @@
-<<<<<<< HEAD
-export interface Attachment {
-  id: string;
-  filename: string;
-  original_name: string;
-  mime_type: string;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Attachment {
-=======
 export interface Attachment {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string;
-  filename: string;
-  originalName: string;
-  mimeType: string;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  size: number;
-  url: string;
-
-  uploadedAt: Date
-
-  uploadedBy: string
-}
-<<<<<<< HEAD
-export interface SupportTicket {
-=======
 
 export interface SupportTicket {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   description: string;
@@ -49,12 +20,8 @@ export interface SupportTicket {;
   firstResponseTime?: number, // in minutes
   resolutionTime?: number, // in hours
 }
-<<<<<<< HEAD
-export interface TicketMessage {
-=======
 
 export interface TicketMessage {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   content: string;
   senderType: 'customer' | 'agent' | 'system';
@@ -65,12 +32,8 @@ export interface TicketMessage {;
 
   attachments: Attachment[]
 }
-<<<<<<< HEAD
-export interface Customer {
-=======
 
 export interface Customer {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   email: string;
@@ -85,12 +48,8 @@ export interface Customer {;
 
   createdAt: Date
 }
-<<<<<<< HEAD
-export interface SupportAgent {
-=======
 
 export interface SupportAgent {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   email: string;
@@ -102,230 +61,6 @@ export interface SupportAgent {;
   maxTickets: number
 
   performance: AgentPerformance
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-}
-export interface AgentPerformance {
-
-  ticketsResolved: number
-
-  averageResolutionTime: number, // in hours
-  customerSatisfaction: number, // 1-5
-  firstResponseTime: number, // in minutes
-  escalationRate: number, // percentage
-}
-export interface ChatbotSession {
-  id: string;
-  customer_id: string;
-  start_time: Date;
-  end_time?: Date;
-  messages: ChatbotMessage[];
-  intent: string;
-  confidence: number;
-  resolved: boolean;
-
-  escalated: boolean
-
-  satisfaction: number, // 1-5
-}
-export interface ChatbotMessage {
-  id: string;
-  content: string;
-  sender: 'customer' | 'bot';
-  timestamp: Date;
-
-  intent?: string
-
-  confidence?: number
-}
-export interface KnowledgeBaseArticle {
-  id: string;
-  title: string;
-  content: string;
-  category: string;
-  tags: string[];
-  views: number;
-  helpful: number;
-  notHelpful: number;
-
-  lastUpdated: Date
-
-  createdBy: string
-}
-export interface SupportAnalytics {
-  total_tickets: number;
-  open_tickets: number;
-  resolved_tickets: number;
-  averageResolutionTime: number;
-  averageFirstResponseTime: number;
-  customerSatisfaction: number;
-
-  chatbotResolutionRate: number
-  topCategories: Array<{ category: string, count: number }>;
-
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
-}
-export interface AIRecommendation {
-  type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
-  title: string;
-  description: string;
-  impact: 'low' | 'medium' | 'high';
-
-  confidence: number
-
-  actionItems: string[]
-}
-class AICustomerSupportService {
-  private tickets: SupportTicket[] = [];
-  private customers: Customer[] = [];
-  private agents: SupportAgent[] = [];
-  private chatbot_sessions: ChatbotSession[] = [];
-  private knowledge_base: KnowledgeBaseArticle[] = [];
-  private analytics: SupportAnalytics;
-  constructor() {
-
-    this.initializeSampleData()
-
-    this.updateAnalytics()
-  }
-  private initializeSampleData() {
-    // Initialize sample customers
-
-    this.customers = [
-;
-  constructor () {
-    this.initializeSampleData (),
-    this.update_analytics ();
-  }
-  private initializeSampleData () {
-    // Initialize sample customers;
-    this.customers = [;
-      {
-        id: 'cust_001';
-        name: 'John Doe';
-        email: 'john && john.doe@company && company.com';
-        company: 'TechCorp Inc.';
-        plan: 'pro';
-        total_tickets: 5;
-        resolved_tickets: 4;
-        averageResponseTime: 15;
-        satisfactionScore: 4.5;
-        lastContactDate: new Date('2025-01-10')
-        createdAt: new Date('2024-06-01')
-        satisfaction_score: 4.5;
-        lastContactDate: new Date ('2025 - 01 - 10'),
-        created_at: new Date ('2024 - 06 - 01');
-      }
-      {
-        id: 'cust_002';
-        name: 'Jane Smith';
-        email: 'jane && jane.smith@startup && startup.com';
-        company: 'StartupXYZ';
-        plan: 'basic';
-        total_tickets: 3;
-        resolved_tickets: 3;
-        averageResponseTime: 25;
-        satisfactionScore: 4.0;
-        lastContactDate: new Date('2025-01-08')
-        createdAt: new Date('2024-08-15')
-      }
-    ];
-    // Initialize sample agents
-    this && this.agents = [
-        satisfaction_score: 4.0;
-        lastContactDate: new Date ('2025 - 01 - 08'),
-        created_at: new Date ('2024 - 08 - 15');
-      }
-    ];
-;
-    // Initialize sample agents;
-    this.agents = [;
-      {
-        id: 'agent_001';
-        name: 'Mike Johnson';
-        email: 'mike && mike.johnson@ziontech && ziontech.com';
-        role: 'tier2';
-        skills: ['Technical SupportAPI IntegrationDatabase Issues'];
-        is_available: true;
-        current_tickets: 2;
-        max_tickets: 5;
-        performance: {
-          ticketsResolved: 45;
-          averageResolutionTime: 2.5;
-          customerSatisfaction: 4.6;
-          firstResponseTime: 12
-          escalationRate: 8
-          tickets_resolved: 45;
-          averageResolutionTime: 2.5;
-          customer_satisfaction: 4.6;
-          firstResponseTime: 12,
-          escalation_rate: 8;
-        }
-      }
-      {
-        id: 'agent_002';
-        name: 'Lisa Chen';
-        email: 'lisa && lisa.chen@ziontech && ziontech.com';
-        role: 'tier1';
-        skills: ['General SupportBillingAccount Management'];
-        is_available: true;
-        current_tickets: 1;
-        max_tickets: 8;
-        performance: {
-          ticketsResolved: 78;
-          averageResolutionTime: 1.8;
-          customerSatisfaction: 4.4;
-          firstResponseTime: 8
-          escalationRate: 15
-        }
-      }
-    ];
-    // Initialize sample tickets
-    this && this.tickets = [
-          tickets_resolved: 78;
-          averageResolutionTime: 1.8;
-          customer_satisfaction: 4.4;
-          firstResponseTime: 8,
-          escalation_rate: 15;
-        }
-      }
-    ];
-;
-    // Initialize sample tickets;
-    this.tickets = [;
-      {
-        id: 'ticket_001';
-        title: 'API Integration Issue';
-        description: 'Getting 500 error when trying to integrate with our CRM system';
-        status: 'in_progress';
-        priority: 'high';
-        category: 'technical';
-        customer_id: 'cust_001';
-        assignedAgentId: 'agent_001';
-        tags: ['apiintegrationerror'];
-        attachments: [];
-        messages: [;
-          {
-            id: 'msg_001';
-            content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
-            senderType: 'customer';
-            senderId: 'cust_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:00:00Z')
-            attachments: []
-          }
-          {
-            id: 'msg_002'
-            content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
-            senderType: 'agent';
-            senderId: 'agent_001';
-            isInternal: false;
-            createdAt: new Date('2025-01-10T10:15:00Z')
-            attachments: []
-<<<<<<< HEAD
-=======
           }
         ];
         createdAt: new Date('2025-01-10T10:00:00Z');
@@ -346,7 +81,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05')
         createdBy: 'agent_001'
-=======
 export interface Attachment {;
   id: string,;
   filename: string,;
@@ -411,8 +145,6 @@ export interface SupportAgent {;
   currentTickets: number,;
   maxTickets: number,;
   performance: AgentPerformance;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export interface AgentPerformance {;
@@ -422,8 +154,6 @@ export interface AgentPerformance {;
   firstResponseTime: number, // in minutes;
   escalationRate: number, // percentage;
 }
-<<<<<<< HEAD
-=======
 
 export interface ChatbotSession {;
   id: string;
@@ -615,7 +345,6 @@ class AICustomerSupportService {
         notHelpful: 12;
         lastUpdated: new Date('2025-01-05'),
         createdBy: 'agent_001'
-=======
   id: string,;
   filename: string,;
   originalName: string,;
@@ -688,7 +417,6 @@ export interface AgentPerformance {;
   firstResponseTime: number, // in minutes;
   escalationRate: number, // percentage;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export interface ChatbotSession {;
   id: string,;
@@ -856,7 +584,6 @@ class AICustomerSupportService {;
             isInternal: false,;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
             attachments: [];
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         ];
         createdAt: new Date('2025-01-10T10:00:00Z');
@@ -864,24 +591,6 @@ class AICustomerSupportService {;
         firstResponseTime: 15
       }
     ];
-<<<<<<< HEAD
-    // Initialize knowledge base
-    this && this.knowledgeBase = [
-      {
-        id: 'kb_001';
-        title: 'Getting Started with API Integration';
-        content: 'Learn how to integrate our API with your existing systems...';
-        category: 'API Documentation';
-        tags: ['apiintegrationgetting - started'];
-        views: 1250;
-        helpful: 89;
-        notHelpful: 12;
-        lastUpdated: new Date('2025-01-05')
-        createdBy: 'agent_001'
-      }
-    ];
-  }
-=======
 ;
     // Initialize knowledge base;
     this.knowledgeBase = [;
@@ -896,20 +605,10 @@ class AICustomerSupportService {;
         notHelpful: 12,;
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     ]
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
@@ -936,16 +635,7 @@ class AICustomerSupportService {;
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-<<<<<<< HEAD
-      ticket.status = status;
-      ticket.updatedAt = new Date();
-      if (status === 'resolved') {
-        ticket.resolvedAt = new Date()
-        if (ticket.createdAt && ticket.resolvedAt) {
-          ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
-=======
 
-=======
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -981,25 +671,12 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
       this.updateAnalytics()
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (!ticket) {
@@ -1131,24 +808,11 @@ if ( {) {
     }
     session.messages.push(message);
     // Simulate AI intent detection
-<<<<<<< HEAD
-    if (message && message.sender === 'customer') {
-      const intent = this && this.detectIntent(message && message.content);
-      session && session.intent = intent && intent.intent;
-      session && session.confidence = intent && intent.confidence
-    }
-    return message
-  }
-  private detectIntent(message: string): { intent: string, confidence: number } {
-    const lowerMessage = message.toLowerCase();
-    if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-=======
 
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
       session.confidence = intent.confidence
-=======
 ;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {;
     const ticket = this.tickets.find(t => t.id === ticketId),;
@@ -1206,37 +870,18 @@ if ( {) {
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return message
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private detectIntent(message: string): { intent: string, confidence: number } {
-    const lowerMessage = message.toLowerCase();
-    if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
-=======
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1258,14 +903,7 @@ if ( {) {
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {
@@ -1286,10 +924,6 @@ if ( {) {
       createdBy: 'system'
       lastUpdated: new Date()
     }
-<<<<<<< HEAD
-    this.knowledgeBase.push(article);
-    return article
-=======
   }
 ;
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
@@ -1304,12 +938,6 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -1319,15 +947,8 @@ if ( {) {
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -1430,18 +1051,7 @@ if ( {) {
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
-<<<<<<< HEAD
-        confidence: 75
-        actionItems: [
-          'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles'
-        ]
-      })
-    }
-    return recommendations
-  }
-=======
 
-=======
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -1491,20 +1101,10 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return recommendations
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   private updateAnalytics(): void {
     const totalTickets = this.tickets.length;
     const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
@@ -1605,14 +1205,9 @@ if ( {) {
       averageFirstResponseTime;
       customer_satisfaction;
       chatbotResolutionRate;
-<<<<<<< HEAD
-      top_categories;
-      agent_performance;
-=======
 
       topCategories;
       agentPerformance
-=======
 ;
   private updateAnalytics(): void {;
     const totalTickets = this.tickets.length,;
@@ -1660,12 +1255,6 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
   }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
@@ -1696,17 +1285,8 @@ if ( {) {
     return this && this.analytics
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const aiCustomerSupportService = new AICustomerSupportService();
 
   async get_ticket (ticket_id: string): Promise < SupportTicket | null> {

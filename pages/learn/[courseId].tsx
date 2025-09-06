@@ -1,81 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useEffect, useMemo, useState  } from 'react';
-import { useRouter  } from 'next/router';
-import ProgressBar from '../../components/learn/ProgressBar',
-import Quiz from '../../components/learn/Quiz',
-import CertificatePreview from '../../components/learn/CertificatePreview';
-import CoachWidget from '../../components/learn/CoachWidget';
-export default function CourseView() {
-
-<<<<<<< HEAD
-=======
-=======
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import ProgressBar from '../../components/learn/ProgressBar';
 import Quiz from '../../components/learn/Quiz';
 import CertificatePreview from '../../components/learn/CertificatePreview';
 import CoachWidget from '../../components/learn/CoachWidget';
-<<<<<<< HEAD
-export default function CourseView() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const router = useRouter();
-  const { courseId } = router.query as { courseId: string }
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({
-    percent: 0
-    completedLessons: []
-  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-  useEffect(() => {
-    if (!courseId) return;
-    async function load() {
-      const [courseResp, progResp] = await Promise.all([
-        fetch(`/api/learn/courses/${courseId}`)
-        fetch(`/api/learn/progress?userId=demo-user`),      ]);
-      const courseData = await courseResp.json();
-      const progData = await progResp.json();
-      setCourse(courseData.course);
-      const cp = (progData.progress && progData.progress[courseId]) |{
-        percent: 0
-        completedLessons: []
-      }
-<<<<<<< HEAD
-
-export default function CourseView() {;
-  const router = useRouter();
-  const { courseId } = router && router.query as { courseId: string };
-  const [course, setCourse] = useState<any>(null);
-  const [progress, setProgress] = useState<any>({;
-    percent: 0,;
-    completedLessons: [],;
-  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
-  const [finalPassed, setFinalPassed] = useState(false);
-
-  useEffect(() => {;
-    if (!courseId) return;
-    async function load() {;
-      const [courseResp, progResp] = await Promise && Promise.all([;
-        fetch(`/api/learn/courses/${courseId}`),;
-        fetch(`/api/learn/progress?userId=demo-user`),      ]);
-      const courseData = await courseResp && courseResp.json();
-      const progData = await progResp && progResp.json();
-      setCourse(courseData && courseData.course);
-      const cp = (progData && progData.progress && progData && progData.progress[courseId]) || {;
-        percent: 0,;
-        completedLessons: [],;
-      };
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
@@ -191,100 +121,13 @@ export default function CourseView() {;
                   >                    {l && l.title}
                   </button>;
                 </li>;
-<<<<<<< HEAD
-              ))}
-            </ul>
-          </aside>
-          <section className='lg:col-span-3 space-y-4'>
-            {currentLesson ? (
-              <div className='border rounded p-4'>
-                <div className='font-medium'>{currentLesson.title}</div>
-                <div className='mt-2 text-sm whitespace-pre-line'>
-                  {currentLesson.content}
-                </div>
-                {currentLesson.quiz?.questions?.length ? (
-                  <div className='mt-4'>
-                    <Quiz
-                      questions={currentLesson && currentLesson.quiz.questions}
-                      onComplete={onModuleQuizComplete}
-                    />;
-                  </div>;
-                ) : (;
-                  <button
-                    className='mt-3 px-4 py-2 bg-green-600 text-white rounded'
-                    onClick={() => markLessonComplete(currentLesson && currentLesson.id)}
-                  >;
-                    Mark Complete;
-                  </button>;
-                )}
-              </div>;
-            ) : (;
-              <div className='text-sm text-gray-500'>Select a lesson</div>;
-            )}
-            {course.finalQuiz?.questions?.length ? (
-              <div className='border rounded p-4'>
-                <div className='font-medium mb-2'>Final Certification Quiz</div>
-                <Quiz
-                  questions={course && course.finalQuiz.questions}
-                  onComplete={onFinalQuizComplete}
-                />;
-                {finalPassed && (;
-                  <div className='mt-3 text-green-700'>;
-                    Passed! You can download your certificate below.;
-                  </div>                )}
-              </div>;
-            ) : null}
-            {finalPassed && <CertificatePreview courseId={courseId} />}          </section>
-        </div>
-      </div>
-      <div className='space-y-4'>
-        <CoachWidget />
-        <div className='border rounded p-3'>
-          <div className='font-medium'>Profile Boost</div>
-          <div className='text-sm text-gray-600 mt-1'>
-            Opt-in to boost your visibility in matches when certified skills
-            apply.
-          </div>
-          <button
-            className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded'
-            onClick={() => alert('Preference saved (demo)')}
-          >
-            Enable Boost
-          </button>
-        </div>
-      </div>
-    </div>
-);
-          >;
-            Enable Boost;
-          </button>;
-        </div>;
-      </div>;
-    </div>;
-  );
 
-          <section className="lg:col-span-3 space-y-4">
-=======
-
-=======
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
-=======
-<<<<<<< HEAD
-import { useEffect, useMemo, useState } from 'react';
-import { useRouter } from 'next/router';
-
-import ProgressBar from '../../components/learn/ProgressBar';
-import Quiz from '../../components/learn/Quiz';
-import CertificatePreview from '../../components/learn/CertificatePreview';
-import CoachWidget from '../../components/learn/CoachWidget';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function CourseView(req, res) {
   try {
   const router = useRouter();
@@ -351,11 +194,6 @@ export default function CourseView(req, res) {
   }
 }
   if (!course) return <div>Loading...</div>,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
@@ -369,15 +207,6 @@ export default function CourseView(req, res) {
             <div className="text-xs text-gray-500 mt-1">Progress: {progress.percent || 0}%</div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className='grid lg:grid-cols-5 gap-4'>
-          <aside className='lg:col-span-2 border rounded p-3 h-max'>
-            <div className='font-medium mb-2'>Lessons</div>
-            <ul className='space-y-2'>
-              {course.lessons?.map((l: any) => (
-                <li key={l.id}>
-<<<<<<< HEAD
-=======
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l.id)}
@@ -388,14 +217,12 @@ export default function CourseView(req, res) {
             </ul>
           </aside>
           <section className='lg:col-span-3 space-y-4'>
-=======
         <div className="grid lg:grid-cols-5 gap-4">
           <aside className="lg:col-span-2 border rounded p-3 h-max">
             <div className="font-medium mb-2">Lessons</div>
             <ul className="space-y-2">
               {course.lessons?.map((l: any) => (
                 <li key={l.id}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
                     {l.title  } catch (error) {
     console.error("Error:", error);
@@ -412,12 +239,6 @@ export default function CourseView(req, res) {
             </ul>
           </aside>
           <section className="lg:col-span-3 space-y-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -452,14 +273,6 @@ export default function CourseView(req, res) {
       </div>
 
       <div className="space-y-4">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -468,26 +281,9 @@ export default function CourseView(req, res) {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
+
+}
   )
 }
-    </div>);
-;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  )
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

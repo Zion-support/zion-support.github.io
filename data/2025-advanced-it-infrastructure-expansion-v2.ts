@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const advancedITInfrastructureExpansion2025V2 = [
   {
     name: 'Autonomous DevOps Platform'
@@ -1248,47 +1240,22 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ]
   }
   {
-<<<<<<< HEAD
-    name: 'Zero - Trust Security',
-    description: 'Comprehensive zero - trust security platform',
-    category: 'Cybersecurity',
-    pricing: '$599 / month',
-    features: [;
-=======
     name: 'Zero-Trust Security'
     description: 'Comprehensive zero-trust security platform'
     category: 'Cybersecurity'
     pricing: '$599/month'
     features: [
-<<<<<<< HEAD
-      'Identity verification'
-      'Access control'
-      'Threat detection'
-      'Performance monitoring'
-    ]
-  }
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Identity verification',
       'Access control',
       'Threat detection',
       'Performance monitoring',
     ],
-<<<<<<< HEAD
-  },
-];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
-    ]
-
-=======
 
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Identity verificationAccess controlThreat detectionPerformance monitoring'
     ]
 
-=======
 ];      'Identity verification_access control_threat detection_performance monitoring';
     ];
 
@@ -1751,11 +1718,6 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     features: [;
       'Identity verificationAccess controlThreat detectionPerformance monitoring';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

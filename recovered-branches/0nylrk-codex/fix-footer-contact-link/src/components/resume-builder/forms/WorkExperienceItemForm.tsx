@@ -1,11 +1,4 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-=======
 import {useState} from 'react';
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -23,11 +16,8 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
 import { z } from "zod",
@@ -42,19 +32,9 @@ import { cn } from "@/lib/utils",
 import { Switch } from "@/components/ui/switch",
 import { format } from "date-fns",
 import { CalendarIcon, Loader2 } from "lucide-react",
-<<<<<<< HEAD
-import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
-import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
-=======
 
 import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
 import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Define form schema
 
 const formSchema = z.object({
@@ -72,33 +52,15 @@ interface WorkExperienceItemFormProps {
   onSubmit: (data: WorkExperience) => Promise<void>
   onCancel: () => void
 }
-<<<<<<< HEAD
-export function WorkExperienceItemForm({
-  initialData;
-  onSubmit;
-  onCancel}: WorkExperienceItemFormProps) {;
-  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function WorkExperienceItemForm({;
-  initialData;
-  onSubmit;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function WorkExperienceItemForm({
   initialData,
   onSubmit,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onCancel}: WorkExperienceItemFormProps) {
 
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Set up form
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
@@ -177,10 +139,6 @@ export function WorkExperienceItemForm({
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-            <FormField
-=======
 
 import {useState} from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -275,11 +233,6 @@ function WorkExperienceItemForm() {
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             />
             <FormField
@@ -309,12 +262,6 @@ function WorkExperienceItemForm() {
                 </FormItem>)}
             />;
             <FormField;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               control={form.control}
               name="is_current";
               render={({ field }) => (

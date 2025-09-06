@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-// Marketplace data store utilitiesexport interface Project {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Marketplace data store utilitiesexport interface Project {
-=======
 
 // Marketplace data store utilitiesexport interface Project {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   title: string;
   summary: string;
@@ -38,27 +29,12 @@
     type: 'fixed' | 'hourly' | 'milestone';
   };
   createdAt: string;
-<<<<<<< HEAD
-  updatedAt: string;
-    type: 'fixed' | 'hourly' | 'milestone',
-  }
-  created_at: string;
-  updated_at: string,
-=======
   updatedAt: string
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-<<<<<<< HEAD
-export interface Offer {
-<<<<<<< HEAD
-=======
-=======
 }
 
 
 export interface Offer {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -78,31 +54,13 @@ export interface Offer {;
   agreementUrl?: string;
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
-<<<<<<< HEAD
-  notes?: string;
-      due_date: string,
-    }>;
-  }
-  agreement_url?: string;
-  status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
-  expires_at?: string;
-  notes?: string,
-=======
   notes?: string
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-<<<<<<< HEAD
-export interface Application {
-<<<<<<< HEAD
-=======
-=======
   notes?: string
 }
 
 
 export interface Application {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   project_id: string;
   talent_slug: string;
@@ -112,29 +70,13 @@ export interface Application {;
   proposedRate?: number;
   proposedTimeline?: string;
   portfolioItems?: string[];
-<<<<<<< HEAD
-  notes?: string;
-  cover_letter?: string;
-  proposed_rate?: number;
-  proposed_timeline?: string;
-  portfolio_items?: string[];
-  notes?: string,
-=======
   notes?: string
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-<<<<<<< HEAD
-export interface Message {
-<<<<<<< HEAD
-=======
-=======
   notes?: string
 }
 
 
 export interface Message {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -146,25 +88,13 @@ export interface Message {;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;
-<<<<<<< HEAD
-  isRead: boolean;
-  is_read: boolean,
-=======
   isRead: boolean
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
-<<<<<<< HEAD
-export interface Conversation {
-<<<<<<< HEAD
-=======
-=======
   isRead: boolean
 }
 
 
 export interface Conversation {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -664,20 +594,11 @@ export async function getProject(id: string): Promise<Project | null> {
 }
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
   return marketplaceStore && marketplaceStore.updateProject(id, updates);
-<<<<<<< HEAD
-=======
-=======
   return marketplaceStore.getProject(id)
 }
-<<<<<<< HEAD
-export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {
-=======
 
 export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateProject(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export async function deleteProject(id: string): Promise<boolean> {
   return marketplaceStore.deleteProject(id);
@@ -693,20 +614,11 @@ export async function getOffer(id: string): Promise<Offer | null> {
 }
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
   return marketplaceStore && marketplaceStore.updateOffer(id, updates);
-<<<<<<< HEAD
-=======
-=======
   return marketplaceStore.getOffer(id)
 }
-<<<<<<< HEAD
-export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
-=======
 
 export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateOffer(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export async function deleteOffer(id: string): Promise<boolean> {
   return marketplaceStore.deleteOffer(id);
@@ -722,20 +634,11 @@ export async function getApplication(id: string): Promise<Application | null> {
 }
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
   return marketplaceStore && marketplaceStore.updateApplication(id, updates);
-<<<<<<< HEAD
-=======
-=======
   return marketplaceStore.getApplication(id)
 }
-<<<<<<< HEAD
-export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
-=======
 
 export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateApplication(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export async function deleteApplication(id: string): Promise<boolean> {
   return marketplaceStore.deleteApplication(id);
@@ -751,20 +654,11 @@ export async function getMessage(id: string): Promise<Message | null> {
 }
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
   return marketplaceStore && marketplaceStore.updateMessage(id, updates);
-<<<<<<< HEAD
-=======
-=======
   return marketplaceStore.getMessage(id)
 }
-<<<<<<< HEAD
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
-=======
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return marketplaceStore.updateMessage(id, updates);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export async function deleteMessage(id: string): Promise<boolean> {
   return marketplaceStore.deleteMessage(id);
@@ -777,175 +671,7 @@ export function createProjectData(
   clientId: string
   additionalData?: Partial<Project>
 ): Omit<Project, 'id' | 'createdAt' | 'updatedAt'> {
-<<<<<<< HEAD
   return {
-    title
-    summary
-    clientId
-    startDateIso: new Date().toISOString()
-    status: 'DRAFT'
-    timeline: []
-    documents: []
-    ...additionalData
-  }
-}
-export function createOfferData(
-  clientId: string
-  talentSlug: string
-  scopeSummary: string
-  paymentTerms: Offer['paymentTerms']
-  additionalData?: Partial<Offer>
-): Omit<Offer, 'id' | 'createdAtIso'> {
-  return {
-    clientId
-    talentSlug
-    startDateIso: new Date().toISOString()
-    scopeSummary
-    paymentTerms
-    status: 'SENT'
-    ...additionalData
-  }
-}
-export function createApplicationData(
-  projectId: string
-  talentSlug: string
-  additionalData?: Partial<Application>
-): Omit<Application, 'id' | 'appliedAtIso'> {
-  return {
-    projectId
-    talentSlug
-    status: 'PENDING'
-    ...additionalData
-  }
-}
-export function createMessageData(
-  conversationId: string
-  senderId: string
-  recipientId: string
-  body: string
-  additionalData?: Partial<Message>
-): Omit<Message, 'id' | 'sentAtIso'> {
-  return {
-    conversationId
-    senderId
-    recipientId
-    body
-    isRead: false
-    ...additionalData
-  }
-}
-export function generateId(prefix: string = 'item'): string {
-  return `${prefix}_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
-}
-  // Search methods;
-  async search_projects (query: string): Promise < Project[]> {
-    const lowercase_query = query.toLowerCase ();
-    return Array.from (this.projects.values ()).filter (project =>;
-      project.title.toLowerCase ().includes (lowercase_query) ||;
-      project.summary.toLowerCase ().includes (lowercase_query)),
-  }
-  async search_offers (query: string): Promise < Offer[]> {
-    const lowercase_query = query.toLowerCase ();
-    return Array.from (this.offers.values ()).filter (offer =>;
-      offer.scope_summary.toLowerCase ().includes (lowercase_query)),
-  }
-  // Cleanup methods;
-  async clear_all (): Promise < void> {
-    this.projects.clear ();
-    this.offers.clear ();
-    this.applications.clear ();
-    this.messages.clear ();
-    this.conversations.clear ();
-  }
-  // Statistics;
-  async get_stats (): Promise<{
-    total_projects: number;
-    total_offers: number;
-    total_applications: number;
-    total_messages: number;
-    total_conversations: number,
-  }> {
-    return {
-      total_projects: this.projects.size,
-      total_offers: this.offers.size,
-      total_applications: this.applications.size,
-      total_messages: this.messages.size,
-      total_conversations: this.conversations.size;
-    }
-  }
-}
-// Singleton instance;
-export const marketplace_store = new MarketplaceStore ();
-;
-// Main functions for external use;
-export async function create_project (project: Project): Promise < Project> {
-  return marketplace_store.create_project (project),
-}
-export async function get_project (id: string): Promise < Project | null> {
-  return marketplace_store.get_project (id),
-}
-export async function update_project (id: string, updates: Partial < Project>): Promise < Project | null> {
-  return marketplace_store.update_project (id, updates);
-}
-export async function delete_project (id: string): Promise < boolean> {
-  return marketplace_store.delete_project (id),
-}
-export async function create_offer (offer: Offer): Promise < Offer> {
-  return marketplace_store.create_offer (offer),
-}
-export async function get_offer (id: string): Promise < Offer | null> {
-  return marketplace_store.get_offer (id),
-}
-export async function update_offer (id: string, updates: Partial < Offer>): Promise < Offer | null> {
-  return marketplace_store.update_offer (id, updates);
-}
-export async function delete_offer (id: string): Promise < boolean> {
-  return marketplace_store.delete_offer (id),
-}
-export async function create_application (application: Application): Promise < Application> {
-  return marketplace_store.create_application (application),
-}
-export async function get_application (id: string): Promise < Application | null> {
-  return marketplace_store.get_application (id),
-}
-export async function update_application (id: string, updates: Partial < Application>): Promise < Application | null> {
-  return marketplace_store.update_application (id, updates);
-}
-export async function delete_application (id: string): Promise < boolean> {
-  return marketplace_store.delete_application (id),
-}
-export async function create_message (message: Message): Promise < Message> {
-  return marketplace_store.create_message (message),
-}
-export async function get_message (id: string): Promise < Message | null> {
-  return marketplace_store.get_message (id),
-}
-export async function update_message (id: string, updates: Partial < Message>): Promise < Message | null> {
-  return marketplace_store.update_message (id, updates);
-}
-export async function delete_message (id: string): Promise < boolean> {
-  return marketplace_store.delete_message (id),
-}
-// Utility functions;
-export function createProjectData (
-  title: string,
-  summary: string,
-  client_id: string,
-  additional_data?: Partial < Project>): Omit < Project, 'id' | 'created_at' | 'updated_at'> {
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  return {
-<<<<<<< HEAD
-    title
-    summary
-    clientId
-    startDateIso: new Date().toISOString()
-    status: 'DRAFT'
-    timeline: []
-    documents: []
-    ...additionalData
-  }
-=======
     title,
     summary,
     clientId,
@@ -955,7 +681,6 @@ export function createProjectData (
     documents: [],
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createOfferData(
   clientId: string
@@ -965,16 +690,6 @@ export function createOfferData(
   additionalData?: Partial<Offer>
 ): Omit<Offer, 'id' | 'createdAtIso'> {
   return {
-<<<<<<< HEAD
-    clientId
-    talentSlug
-    startDateIso: new Date().toISOString()
-    scopeSummary
-    paymentTerms
-    status: 'SENT'
-    ...additionalData
-  }
-=======
     clientId,
     talentSlug,
     startDateIso: new Date().toISOString(),
@@ -983,7 +698,6 @@ export function createOfferData(
     status: 'SENT',
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createApplicationData(
   projectId: string
@@ -991,19 +705,11 @@ export function createApplicationData(
   additionalData?: Partial<Application>
 ): Omit<Application, 'id' | 'appliedAtIso'> {
   return {
-<<<<<<< HEAD
-    projectId
-    talentSlug
-    status: 'PENDING'
-    ...additionalData
-  }
-=======
     projectId,
     talentSlug,
     status: 'PENDING',
     ...additionalData;
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function createMessageData(
   conversationId: string
@@ -1013,21 +719,8 @@ export function createMessageData(
   additionalData?: Partial<Message>
 ): Omit<Message, 'id' | 'sentAtIso'> {
   return {
-<<<<<<< HEAD
-    conversationId
-    senderId
-    recipientId
-    body
-    isRead: false
-    ...additionalData
-  }
-}
-export function generateId(prefix: string = 'item'): string {
-  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
 
 
-=======
     conversationId,
     senderId,
     recipientId,
@@ -1036,14 +729,8 @@ export function generateId(prefix: string = 'item'): string {
     ...additionalData;
   };
 }
-<<<<<<< HEAD
-=======
 
 export function generateId(prefix: string = 'item'): string {;
   return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

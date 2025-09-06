@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -7,53 +6,6 @@ import { SEO } from "@/components/SEO",
 import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
 import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {WhitelabelRequestForm} from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import {TenantsList} from "@/components/admin/whitelabel/TenantsList";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-export default function WhitelabelManager() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from 'react',
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-<<<<<<< HEAD
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  // Check if user has admin role
-
-  const isAdmin = user?.role === "admin";
-  if (!isAdmin) {
-    return <Navigate to="/unauthorized" />
-  }
-  return (
-<<<<<<< HEAD
-    <>
-=======
 
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.
                 </p>
@@ -65,12 +17,6 @@ export default function WhitelabelManager() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -92,7 +38,6 @@ export default function WhitelabelManager() {;
   return (;
 
     <>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <SEO
         title="White-Label Management - Zion AI Marketplace"
         description="Create and manage white-label instances of the Zion AI Marketplace platform."
@@ -237,13 +182,6 @@ export default function WhitelabelManager() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </>);
 }

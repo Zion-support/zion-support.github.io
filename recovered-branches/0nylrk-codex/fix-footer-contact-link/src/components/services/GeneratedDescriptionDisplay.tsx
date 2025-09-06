@@ -1,33 +1,9 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import {
-  Card
-  CardContent
-  CardHeader
-  CardTitle
-  CardFooter
-} from "@/components/ui/card";
-<<<<<<< HEAD
-
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
-=======
-=======
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -35,64 +11,23 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
-<<<<<<< HEAD
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export function GeneratedDescriptionDisplay({
-  description
-  onSave
-
-<<<<<<< HEAD
-}: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-
-  const handleSave = () => {;
-    onSave(editedDescription);
-    setIsEditing(false);
-    toast({
-      title: "Description Saved"
-      description: "Your edited description has been saved."
-    });
-  }
-=======
-=======
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
-<<<<<<< HEAD
-}: GeneratedDescriptionDisplayProps) {;
-
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast(),
   const [isEditing, setIsEditing] = useState(false),
   const [editedDescription, setEditedDescription] = useState(description),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
     })
   },
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
@@ -115,14 +50,6 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
 import React, { useState } from './react';
 import { use_toast  } from '@/hooks / use - toast';

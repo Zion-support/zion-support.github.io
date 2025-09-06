@@ -1,25 +1,12 @@
 
 import React from 'react',
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Upload, FileText } from 'lucide-react';
-=======
 import { Upload, FileText } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Upload, FileText } from 'lucide-react',
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
@@ -57,25 +44,9 @@ function UploadSection() {
         </p>;
         <Button variant="outline" className="relative">;
           Browse Files;
-<<<<<<< HEAD
-          <input
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            accept=".pdf"
-            onChange={onFileUpload}
-          />
-        </Button>
-      </div>
-=======
 
 
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -88,17 +59,6 @@ function UploadSection() {
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      )}
-    </div>
-  );
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react',;
@@ -139,8 +99,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>;
           </div>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
     </div>;
   );
@@ -165,14 +123,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           </div>;
         </div>)}
     </div>);
-<<<<<<< HEAD
-}
-=======
 
 }
-<<<<<<< HEAD
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

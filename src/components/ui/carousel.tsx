@@ -22,15 +22,7 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -73,11 +65,6 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return context as CarouselContextProps;
 }
@@ -87,23 +74,6 @@ const Carousel = React.forwardRef<
 >(
   (
     {
-<<<<<<< HEAD
-      orientation = &quot;horizontal&quot;
-=======
-<<<<<<< HEAD
-      orientation = &quot;horizontal&quot;
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      opts
-      setApi
-      plugins
-      className
-      children
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       orientation = "horizontal",
 
       opts,
@@ -111,9 +81,6 @@ const Carousel = React.forwardRef<
       plugins,
       className,
       children,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       ...props
     }
     ref
@@ -148,33 +115,10 @@ const Carousel = React.forwardRef<
           event.preventDefault()
           scrollNext()
         }
-<<<<<<< HEAD
-      }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      }
-      [scrollPrev, scrollNext];
-    );
-    React.useEffect(() => {if (!api |!setApi) {;
-        return;
-      }
-      setApi(api);
-    }, [api, setApi]);
-    React.useEffect(() => {if (!api) {;
-        return;
-      }
-onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
-=======
 
       };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       },;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       [scrollPrev, scrollNext];
     );
     React.useEffect(() => {if (!api |!setApi) {;
@@ -185,28 +129,11 @@ onSelect(api)
     React.useEffect(() => {if (!api) {;
         return;
       }
-<<<<<<< HEAD
-onSelect(api)
-      api.on(&quot;reInit&quot;, onSelect)
-      api.on(&quot;select&quot;, onSelect)
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-onSelect(api)
-      api.on(&quot;reInit&quot; onSelect)
-      api.on(&quot;select&quot; onSelect)
-
-      return () => {
-        api?.off(&quot;select&quot; onSelect)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
       return () => {
         api?.off("select", onSelect)
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       set_api (api);
     }, [api, set_api]);
@@ -220,8 +147,6 @@ if ( {) {
 on_select (api);
       api.on (&quot;re_init & quot;, on_select);
       api.on (&quot;select & quot;, on_select);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       return () => {
         api?.off (&quot;select & quot;, on_select);
       }
@@ -242,29 +167,12 @@ on_select (api);
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
-<<<<<<< HEAD
-className={cn (&quot;relative & quot;, class_name)}
-          role=&quot;region & quot;
-          aria - roledescription=&quot;carousel & quot;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-className={cn(&quot;relative&quot;, className)}
-=======
 className={cn(&quot;relative&quot; className)}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
-=======
           className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {...props}
         >;
           {children}
@@ -283,23 +191,11 @@ const CarouselContent = React.forwardRef<
       <div;
         ref={ref}
         className={cn(
-<<<<<<< HEAD
-          &quot;flex&quot;
-          orientation === &quot;horizontal&quot;
-            ? &quot;-ml-4 snap-x snap-mandatory&quot;
-            : &quot;-mt-4 flex-col snap-y snap-mandatory&quot;
-=======
 
           "flex",
           orientation === "horizontal"
             ? "-ml-4 snap-x snap-mandatory"
             : "-mt-4 flex-col snap-y snap-mandatory",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           className
         )}
         {...props}
@@ -319,19 +215,9 @@ const CarouselItem = React.forwardRef<
       role=&quot;group&quot;
       aria-roledescription=&quot;slide&quot;
       className={cn(
-<<<<<<< HEAD
-        &quot;min-w-0 shrink-0 grow-0 basis-full snap-start&quot;
-        orientation === &quot;horizontal&quot; ? &quot;pl-4&quot; : &quot;pt-4&quot;
-=======
 
         "min-w-0 shrink-0 grow-0 basis-full snap-start",
         orientation === "horizontal" ? "pl-4" : "pt-4",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className
       )}
       {...props}
@@ -350,53 +236,19 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-<<<<<<< HEAD
-        &quot;absolute h-8 w-8 rounded-full&quot;
-        orientation === &quot;horizontal&quot;
-          ? &quot;left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90&quot;
-=======
 
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "left-1 sm:left-2 md:-left-12 top-1/2 -translate-y-1/2"
           : "top-1 sm:top-2 md:-top-12 left-1/2 -translate-x-1/2 rotate-90",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
-=======
-<<<<<<< HEAD
->
-      <ArrowLeft className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Previous slide</span>
-<<<<<<< HEAD
-    </Button>
-  )
-})
-CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >
       <ArrowLeft className="h-4 w-4" />
       <span className="sr-only">Previous slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </Button>
   )
 })
@@ -412,73 +264,24 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-<<<<<<< HEAD
-        &quot;absolute h-8 w-8 rounded-full&quot;
-        orientation === &quot;horizontal&quot;
-          ? &quot;right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2&quot;
-          : &quot;bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90&quot;
-=======
 
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
           ? "right-1 sm:right-2 md:-right-12 top-1/2 -translate-y-1/2"
           : "bottom-1 sm:bottom-2 md:-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
-<<<<<<< HEAD
->
-      <ArrowRight className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Next slide</span>
-=======
-<<<<<<< HEAD
->
-      <ArrowRight className=&quot;h-4 w-4&quot; />
-      <span className=&quot;sr-only&quot;>Next slide</span>
-<<<<<<< HEAD
-    </Button>
-  )
-})
-CarouselNext.displayName = &quot;CarouselNext&quot;
-export {
-  type CarouselApi
-  Carousel
-  CarouselContent
-  CarouselItem
-  CarouselPrevious
-  CarouselNext}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     >
       <ArrowRight className="h-4 w-4" />
       <span className="sr-only">Next slide</span>
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     </Button>
   )
 })
 CarouselNext.displayName = &quot;CarouselNext&quot;
 export {
-<<<<<<< HEAD
-  type CarouselApi
-  Carousel
-  CarouselContent
-  CarouselItem
-  CarouselPrevious
-  CarouselNext}
-=======
   type CarouselApi,
   Carousel,
   CarouselContent,
@@ -488,9 +291,3 @@ export {
   CarouselPrevious,
   CarouselNext}
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

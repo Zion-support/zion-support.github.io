@@ -1,33 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import {motion} from 'framer-motion';
-import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star,} from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import Head from 'next/head';
-import { motion } from 'framer-motion';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Brain, BarChart3, TrendingUp, Users, Target, Zap;
-  Shield, Database, Globe, ArrowRight, CheckCircle, Star
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-<<<<<<< HEAD
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -36,12 +9,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AIBusinessIntelligencePage() {
 
   const features = [
@@ -123,250 +90,6 @@ const AIBusinessIntelligence: React.FC = () => {
         'Predictive maintenance, quality control, and supply chain optimization'
       results: '45% reduction in downtime, 35% improvement in product quality'
     },  ];
-<<<<<<< HEAD
-  const pricing = [
-    {
-      plan: 'Starter'
-      price: '$499'
-      period: '/month'
-      description: 'Perfect for small businesses getting started with AI'
-      features: [
-        'Basic predictive analytics'
-        '5 customizable dashboards'
-        'Standard reporting'
-        'Email support'
-        'Up to 10 users'
-      ]
-      popular: false
-    }
-    {
-      plan: 'Professional'
-      price: '$1,299'
-      period: '/month'
-      description: 'Advanced features for growing businesses'
-      features: [
-        'Advanced predictive analytics'
-        'Unlimited dashboards'
-        'Custom reporting'
-        'Priority support'
-        'Up to 50 users'
-        'API access'
-        'Custom integrations'
-      ]
-      popular: true
-    }
-    {
-      plan: 'Enterprise'
-      price: 'Custom'
-      period: ''
-      description: 'Full-scale solution for large organizations'
-      features: [
-        'Everything in Professional'
-        'Custom AI models'
-        'Dedicated support team'
-        'Unlimited users'
-        'On-premise deployment'
-        'Custom training'
-        'SLA guarantees'
-      ]
-      popular: false
-    }
-import Head from 'next / head';
-import {motion} from 'framer-motion';
-import {Brain, BarChart3, TrendingUp, Users, Target, Zap, Shield, Database, Globe, ArrowRight, CheckCircle, Star, } from 'lucide-react';
-import EnhancedNavigation from '../components / EnhancedNavigation';
-import EnhancedFooter from '../components / EnhancedFooter';
-export default /**
- * AIBusinessIntelligencePage - Function description
- */
-function AIBusinessIntelligencePage() {
-  const features = [;
-    {
-      icon: Brain,
-      title: 'Predictive Analytics',
-      description:;
-        'Forecast future trends and customer behavior with 95% accuracy using advanced machine learning algorithms.',
-      color: 'from - purple - 500 to - pink - 500',
-    },
-    {
-      icon: BarChart3,
-      title: 'Real - time Dashboards',
-      description:;
-        'Monitor key performance indicators in real - time with customizable, interactive dashboards.',
-      color: 'from - blue - 500 to - cyan - 500',
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description:;
-        'Automatically identify bottlenecks and optimize business processes for maximum efficiency.',
-      color: 'from - green - 500 to - emerald - 500',
-    },
-    {
-      icon: Users,
-      title: 'Customer Insights',
-      description:;
-        'Deep understanding of customer behavior, preferences, and lifetime value through AI analysis.',
-      color: 'from - orange - 500 to - red - 500',
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description:;
-        'Data - driven decision making with scenario modeling and risk assessment capabilities.',
-      color: 'from - indigo - 500 to - purple - 500',
-    },
-    {
-      icon: Zap,
-      title: 'Automated Reporting',
-      description:;
-        'Generate comprehensive reports automatically, saving hours of manual work each week.',
-      color: 'from - yellow - 500 to - orange - 500',
-    },
-  ];
-;
-const AIBusinessIntelligence: React.FC = () => {
-  const benefits = [;
-    'Increase revenue by 25 - 40% through data - driven insights',
-    'Reduce operational costs by 15 - 30% with process optimization',
-    'Improve customer retention by 20 - 35% with predictive analytics',
-    'Accelerate decision - making by 60% with real - time data',
-    'Reduce manual reporting time by 80% with automation',
-    'Achieve 99.9% data accuracy with AI - powered validation',  ];
-;
-  const use_cases = [;
-    {
-      industry: 'Retail & E - commerce',
-      description:;
-        'Customer segmentation, inventory optimization, and demand forecasting',
-      results:;
-        '35% increase in conversion rates, 25% reduction in inventory costs',
-    },
-    {
-      industry: 'Financial Services',
-      description:;
-        'Risk assessment, fraud detection, and portfolio optimization',
-      results: '40% improvement in risk prediction, 60% faster fraud detection',
-    },
-    {
-      industry: 'Healthcare',
-      description:;
-        'Patient outcome prediction, resource allocation, and treatment optimization',
-      results:;
-        '30% improvement in patient outcomes, 20% reduction in operational costs',
-    },
-    {
-      industry: 'Manufacturing',
-      description:;
-        'Predictive maintenance, quality control, and supply chain optimization',
-      results: '45% reduction in downtime, 35% improvement in product quality',
-    },  ];
-;
-  const pricing = [;
-    {
-      plan: 'Starter',
-      price: '$499',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [;
-        'Basic predictive analytics',
-        '5 customizable dashboards',
-        'Standard reporting',
-        'Email support',
-        'Up to 10 users',
-      ],
-      popular: false,
-    },
-    {
-      plan: 'Professional',
-      price: '$1, 299',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
-      features: [;
-        'Advanced predictive analytics',
-        'Unlimited dashboards',
-        'Custom reporting',
-        'Priority support',
-        'Up to 50 users',
-        'API access',
-        'Custom integrations',
-      ],
-      popular: true,
-    },
-    {
-      plan: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Full - scale solution for large organizations',
-      features: [;
-        'Everything in Professional',
-        'Custom AI models',
-        'Dedicated support team',
-        'Unlimited users',
-        'On - premise deployment',
-        'Custom training',
-        'SLA guarantees',
-      ],
-      popular: false,
-    },
-  ];
-;
-  return (
-    <Layout>;
-      <Head>;
-        <title>AI Business Intelligence - Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights to drive growth and efficiency.'
-        />;
-        <meta
-          name='keywords'
-          content='AI business intelligence, predictive analytics, business analytics, data insights, machine learning, business intelligence platform'
-        />;
-        <meta
-          property='og:title'
-          content='AI Business Intelligence - Zion Tech Group'
-        />;
-        <meta
-          property='og:description'
-          content='Transform your business with AI-powered business intelligence. Get predictive analytics, real-time dashboards, and data-driven insights.'
-        />;
-        <meta property='og:type' content='website' />;
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/ai-business-intelligence'
-        />      </Head>
-      <EnhancedNavigation />
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>;
-        <div className='max-w-7xl mx-auto px-6'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}
-            className='text-center'>;
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
-              AI-Powered;
-              <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>;
-                {' '}
-                Business Intelligence;
-              </span>;
-            </h1>;
-            <p className='text-xl text-white/70 max-w-4xl mx-auto leading-relaxed mb-8'>;
-              Transform raw data into actionable insights with our advanced AI;
-              platform. Make data-driven decisions, predict future trends, and;
-              optimize every aspect of your business with machine;
-              learning-powered analytics.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a
-                href='/contact'
-                className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
-                Get Started Today;
-              </a>;
-              <a
-                href='#demo'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-=======
 
   const pricing = [;
     {;
@@ -456,11 +179,6 @@ const AIBusinessIntelligence: React.FC = () => {
   }
 }
             className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered
@@ -484,8 +202,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 href="#demo"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Watch Demo
               </a>
             </div>
@@ -792,7 +508,6 @@ const AIBusinessIntelligence: React.FC = () => {
                       <span className="text-slate-700">{feature}</span>
                     </li>
                   ))}
-=======
       </section>
       {/* Features */  } catch (error) {
     console.error("Error:", error);
@@ -1128,11 +843,6 @@ const AIBusinessIntelligence: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
 
                 <a
@@ -1142,36 +852,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 </a>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* CTA */}
-      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
-        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6 }}>;
-            <h2 className='text-4xl font-bold text-white mb-6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text-xl text-blue-100 mb-8'>;
-              Join hundreds of businesses already using AI to drive growth and;
-              efficiency.;
-            </p>;
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-              <a
-                href='/contact'
-                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
-                Start Free Trial;
-              </a>;
-              <a
-                href='/contact'
-                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'              >
-      <EnhancedFooter />;
-    </>;
-  );
-=======
 
           </div>;
         </div>;
@@ -1199,11 +879,6 @@ const AIBusinessIntelligence: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1220,8 +895,6 @@ const AIBusinessIntelligence: React.FC = () => {
                 href="/contact"
                 className="border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Schedule Demo
               </a>
             </div>
@@ -1230,78 +903,11 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
       <EnhancedFooter />
     </>
-<<<<<<< HEAD
-);
+
+
+}
+}
   )
 }
-                    </span>;
-                  </div>;
-                  <p className='text - slate - 600'>{plan.description}</p>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map (feature => (
-                    <li key={feature} className='flex items - center space - x-3'>;
-                      <CheckCircle className='w - 5 h - 5 text - green - 500 flex - shrink - 0' />;
-                      <span className='text - slate - 700'>{feature}</span>                    </li>))}
-                </ul>;
-                <a;
-                  href='/contact';
-                  className='block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105'                >;
-                  Get Started;
-                </a>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* CTA */}
-      <section className='py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
-        <div className='max - w-4xl mx - auto px - 6 text - center'>          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-          >;
-            <h2 className='text - 4xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - xl text - blue - 100 mb - 8'>;
-              Join hundreds of businesses already using AI to drive growth and;
-              efficiency.;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <a;
-                href='/contact';
-                className='bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105'              >;
-                Start Free Trial;
-              </a>;
-              <a;
-                href='/contact';
-                className='border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200'              >;
-                Schedule Demo;
-              </a>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <EnhancedFooter />;
-    </>);
-;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-  )
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

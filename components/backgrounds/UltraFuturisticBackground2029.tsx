@@ -224,94 +224,7 @@ export default function UltraFuturisticBackground2029() {;
                   ctx && ctx.moveTo(particle && particle.x, particle && particle.y);
                   ctx && ctx.lineTo(partner && partner.x, partner && partner.y);
                   ctx && ctx.stroke();                }                  ctx && ctx.stroke();
-<<<<<<< HEAD
-        canvas.height / 2);
-      gradient.addColorStop (0, 'rgba (0, 0, 0, 0.8)');
-      gradient.addColorStop (0.3, 'rgba (6, 182, 212, 0.1)');
-      gradient.addColorStop (0.6, 'rgba (139, 92, 246, 0.05)');
-      gradient.addColorStop (1, 'rgba (0, 0, 0, 0.9)');
-;
-      ctx.fill_style = gradient;
-      ctx.fill_rect (0, 0, canvas.width, canvas.height);
-;
-      // Update and draw particles;
-      particles_ref.current.for_each ((particle, index) => {
-        // Update position;
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-;
-        // Wrap around edges;
-        // Check condition
-if (particle.coordinate_x = canvas.width) {
-  $2
-}
-        // Check condition
-if (particle.coordinate_x = 0) {
-  $2
-}
-        // Check condition
-if (particle.coordinate_y = canvas.height) {
-  $2
-}
-        // Check condition
-if (particle.coordinate_y = 0) {
-  $2
-}
-        // Draw particle;
-        ctx.save ();
-        ctx.global_alpha = particle.opacity;
-;
-        // Different effects for different particle types;
-        switch (particle.type) {
-          case 'quantum':;
-            // Quantum particles with glow effect;
-            ctx.shadow_color = particle.color;
-            ctx.shadow_blur = 20;
-            ctx.begin_path ();
-            ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-            ctx.fill_style = particle.color;
-            ctx.fill ();
-;
-            // Quantum entanglement lines;
-            // Check condition
-if ( {) {
-  $2
-}
-              const partner =;
-                particles_ref.current[;
-                  (index + 50) % particles_ref.current.length;
-                ];
-              // Check condition
-if ( {) {
-  $2
-}
-                const distance = Math.sqrt (
-                  Math.pow (particle.x - partner.x, 2) +;
-                    Math.pow (particle.y - partner.y, 2)                );            // Quantum entanglement lines;
-            // Check condition
-if ( {) {
-  $2
-}
-              const partner = particles_ref.current[(index + 50) % particles_ref.current.length];
-              // Check condition
-if ( {) {
-  $2
-}
-                const distance = Math.sqrt (
-                  Math.pow (particle.x - partner.x, 2) + Math.pow (particle.y - partner.y, 2));
-                // Check condition
-if ( {) {
-  $2
-}
-                  ctx.stroke_style = `rgba (0, 255, 255, ${0.3 * (1 - distance / 100)})`;
-                  ctx.line_width = 1;
-                  ctx.begin_path ();
-                  ctx.move_to (particle.x, particle.y);
-                  ctx.line_to (partner.x, partner.y);
-                  ctx.stroke ();                }                  ctx.stroke ();
-=======
 
-=======
             
             // Quantum entanglement lines
             if (index % 10 === 0) {
@@ -327,17 +240,9 @@ if ( {) {
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
                   ctx.stroke();                }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }
               }
             }
@@ -688,17 +593,8 @@ if ( {) {
       />
       />;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -710,125 +606,18 @@ if ( {) {
         {/* Quantum field ripples */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
-<<<<<<< HEAD
-      />;
-      {/* Canvas for particle effects */}
-      <canvas;
-        ref={canvas_ref}
-        className='absolute inset - 0 w - full h - full';
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className='absolute inset - 0'>;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
-=======
-          animate={{
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            scale: [1, 1.2, 1]
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-<<<<<<< HEAD
-            duration: 4
-            repeat: Infinity
-=======
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            ease: 'easeInOut',      {/* Canvas for particle effects */}
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full"
-        style={{ filter: 'blur(0.5px)' }}
-      />
-      {/* Additional visual layers */}
-      <div className="absolute inset-0">
-        {/* Quantum field ripples */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-<<<<<<< HEAD
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className="absolute inset - 0">;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
-=======
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
-<<<<<<< HEAD
-          }}
-          transition={{
-            duration: 4
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
-=======
             ease: 'easeInOut',
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }}
-        />
-        {/* Holographic matrix */}
-        <motion.div
-          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          animate={{
-            scale: [1, 1 && 1.2, 1]
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        {/* Holographic matrix */}
-        <motion&& motion.div
-          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
-          animate={{
-            scale: [1.2, 1, 1.2]
-            opacity: [0.3, 0.1, 0.3],          }}
-          transition={{
-            duration: 5
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />;
-
-        />
-        />;
-
-        {/* Holographic matrix */}
-        <motion&& motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-        />;
-        {/* Holographic matrix */}
-        <motion.div;
-          className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
-          animate={{
-<<<<<<< HEAD
-            scale: [1 && 1.2, 1, 1 && 1.2]
-            opacity: [0 && 0.3, 0 && 0.1, 0 && 0.3]
-          animate={{
-            scale: [1 && 1.2, 1, 1 && 1.2]
-            opacity: [0 && 0.3, 0 && 0.1, 0 && 0.3]
-=======
 
             scale: [1.2, 1, 1.2],
             opacity: [0.3, 0.1, 0.3],          }}
@@ -843,185 +632,25 @@ if ( {) {
           animate={{
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3]
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-          transition={{
-            duration: 5
-            repeat: Infinity
-<<<<<<< HEAD
-=======
             ease: 'easeInOut'
-=======
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-            ease: 'easeInOut'
-=======
-<<<<<<< HEAD
-            ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-        />
-        {/* Neural network nodes */}
-        <motion&& motion.div
-          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
-          animate={{
-            scale: [1, 1.1, 1]
-            opacity: [0.2, 0.4, 0.2],          }}
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-        {/* Neural network nodes */}
-        <motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-<<<<<<< HEAD
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
-          animate={{
-            scale: [1, 1 && 1.1, 1]
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2]
-=======
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2]
-<<<<<<< HEAD
-          }}
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut'
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-          }}
-        />
-      </div>
-      {/* Floating orbs with glow effects */}
-      <div className='absolute inset-0 pointer-events-none'>;
-        {[...Array(8)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}
-            className='absolute w-2 h-2 rounded-full bg-cyan-400'
-            style={{
-              left: `${20 + i * 10}%`
-              top: `${30 + i * 8}%`
-              filter: 'blur(1px)'
-              boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
-            }}
-            animate={{
-              y: [0, -20, 0]
-              opacity: [0.3, 0.8, 0.3]
-              scale: [1, 1.2, 1],            }}          }}
-        />
-      </div>
-=======
-<<<<<<< HEAD
-            ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }}
-        />
-      </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      {/* Floating orbs with glow effects */}
-      <div className="absolute inset-0 pointer-events-none">;
-        {[...Array(8)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400"
-            style={{
-              left: `${20 + (i * 10)}%`
-              top: `${30 + (i * 8)}%`
-              filter: 'blur(1px)'
-              boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
-            }}
-            animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
-<<<<<<< HEAD
-        />
-      </div>
-      
-      {/* Floating orbs with glow effects */}
-      <div className="absolute inset - 0 pointer - events - none">;
-        {[...Array (8)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute w - 2 h - 2 rounded - full bg - cyan - 400";
-            style={{
-              left: `${20 + (i * 10)}%`,
-              top: `${30 + (i * 8)}%`,
-              filter: 'blur (1px)',
-              box_shadow: '0 0 20px rgba (0, 255, 255, 0.6)';
-            }}
-            animate={{
-              coordinate_y: [0, -20, 0];
-              opacity: [0.3, 0.8, 0.3];
-              scale: [1, 1.2, 1]
-              scale: [1, 1.2, 1];
-            }}
-=======
-
-=======
-<<<<<<< HEAD
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',
-
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
 
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: 'easeInOut'
-          }}
 
-            }}
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
             duration: 4,
             repeat: Infinity,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             transition={{
               duration: 3 + i * 0.5
               repeat: Infinity
@@ -1053,15 +682,5 @@ if ( {) {
       </div>;
     </div>));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

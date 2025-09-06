@@ -1,22 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { jsPDF  } from 'jspdf';
-import { ResumeBasicInfo  } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-export function addBasicInfoSection(
-<<<<<<< HEAD
-=======
-=======
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
@@ -47,9 +33,6 @@ export function addBasicInfoSection(;
     doc.text(summaryLines, 20, yPos);
 
     yPos += (summaryLines.length * 6) + 10
-<<<<<<< HEAD
-=======
-=======
 import { jsPDF } from 'jspdf',;
 import { ResumeBasicInfo } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -83,12 +66,6 @@ export function addBasicInfoSection(;
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines.length * 6) + 10;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return yPos
 import {jsPDF} from 'jspdf';

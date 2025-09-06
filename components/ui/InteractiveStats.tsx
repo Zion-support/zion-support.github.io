@@ -29,8 +29,6 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value;
 }
-<<<<<<< HEAD
-=======
 
       if (progress < 1) raf = requestAnimationFrame(step)
     };
@@ -39,18 +37,6 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export default function InteractiveStats() {
-
-export default function InteractiveStats() {;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
@@ -64,24 +50,6 @@ export default function InteractiveStats() {;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
     </div>;
   );
-<<<<<<< HEAD
-    </div>;
-  );
-}
-function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
-  return (
-    <div className="p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur">
-      <div className="text-3xl font-bold">{value}{suffix}</div>
-      <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
-    </div>
-);
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function Stat({
   label
   value
@@ -132,21 +100,10 @@ function Stat() {
       <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
 
   );
 }
-=======
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -49,12 +49,6 @@ const contact = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
-  website: 'https://ziontechgroup && ziontechgroup.com',
-};
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
   [
     // AI-Powered Business Intelligence & Analytics
@@ -80,36 +74,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         '24/7 AI monitoring and alerts'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '📊'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400'
       link: 'https://ziontechgroup.com/ai-business-intelligence-suite'
       marketPosition:
         'Competes with Tableau ($70/month), Power BI ($9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.'
-<<<<<<< HEAD
-        'Predictive analytics and forecasting',
-        'Real - time dashboard and reporting',
-        'Natural language query interface',
-        'Automated insight generation',
-        'Multi - source data integration',
-        'Custom KPI tracking',
-        'Mobile - responsive design',
-        'API for third - party integrations',
-        '24 / 7 AI monitoring and alerts',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-blue-600 to-cyan-600',
-      textColor: 'text-blue-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence-suite',
-      marketPosition:
-        'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Small to medium businesses, Data analysts, Business consultants, Marketing agencies, E-commerce companies'
       trialDays: 14
@@ -152,29 +122,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.8
       reviews: 23
     }
-<<<<<<< HEAD
-        'Sales performance analysis',
-        'Customer behavior insights',
-        'Financial forecasting',
-        'Marketing ROI tracking',
-        'Operational efficiency monitoring',
-      ],
-      roi: 'Businesses report 300% ROI through improved decision - making and operational efficiency.',
-      competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView'],
-      marketSize: '$29 && 29.5B BI market',
-      growthRate: '15% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',
-      launchDate: '2024-11-01',
-      customers: 45,
-      rating: 4 && 4.8,
-      reviews: 23,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI Content Creation & Marketing
     {
       id: 'ai-content-factory-pro'
@@ -198,36 +145,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile app access'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '✍️'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-green-600 to-emerald-600'
       textColor: 'text-green-400'
       link: 'https://ziontechgroup.com/ai-content-factory-pro'
       marketPosition:
         'Competes with Copy.ai ($49/month), Jasper ($39/month). Our advantage: Advanced AI models, better SEO optimization, and comprehensive content management.'
-<<<<<<< HEAD
-        'SEO optimization and keyword research',
-        'Brand voice consistency',
-        'Multi - language content creation',
-        'Content calendar and scheduling',
-        'Plagiarism detection',
-        'Performance analytics',
-        'Team collaboration tools',
-        'API integration capabilities',
-        'Mobile app access',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-green-600 to-emerald-600',
-      textColor: 'text-green-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-content-factory-pro',
-      marketPosition:
-        'Competes with Copy && Copy.ai ($49/month), Jasper ($39/month). Our advantage: Advanced AI models, better SEO optimization, and comprehensive content management.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Content creators, Marketing teams, Agencies, E-commerce businesses, Bloggers'
       trialDays: 7
@@ -242,13 +165,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AWS'
         'Redis'
       ]
-<<<<<<< HEAD
-        'MongoDB',
-        'AWS',
-        'Redis',
-      ],
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       integrations: [
         'WordPress'
         'Shopify'
@@ -277,29 +193,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.7
       reviews: 34
     }
-<<<<<<< HEAD
-        'Blog post creation',
-        'Social media content',
-        'Email marketing',
-        'Product descriptions',
-        'Ad copy generation',
-      ],
-      roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
-      competitors: ['Copy && Copy.ai', 'Jasper', 'Writesonic', 'ContentBot'],
-      marketSize: '$12 && 12.5B content marketing market',
-      growthRate: '18% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.',
-      launchDate: '2024-10-15',
-      customers: 78,
-      rating: 4 && 4.7,
-      reviews: 34,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI Customer Service & Support
     {
       id: 'ai-customer-service-automation'
@@ -323,32 +216,10 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'API for custom integrations'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-purple-600 to-pink-600'
-      textColor: 'text-purple-400'
-      link: 'https://ziontechgroup.com/ai-customer-service-automation'
-        'Automated ticket routing and prioritization',
-        'Sentiment analysis and customer satisfaction tracking',
-        'Multi - language support (50+ languages)',
-        'Integration with CRM systems',
-        'Performance analytics and reporting',
-        'Customizable response templates',
-        'Escalation management',
-        'Mobile app for agents',
-        'API for custom integrations',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-purple-600 to-pink-600',
-      textColor: 'text-purple-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-automation',
-=======
       icon: '🤖'
       color: 'from-purple-600 to-pink-600'
       textColor: 'text-purple-400'
       link: 'https://ziontechgroup.com/ai-customer-service-automation'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competes with Zendesk ($49/month), Intercom ($39/month). Our advantage: AI automation reduces response time by 90% and handles 70% of inquiries automatically.'
       targetAudience:
@@ -393,29 +264,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.6
       reviews: 28
     }
-<<<<<<< HEAD
-        'Customer inquiry handling',
-        'Ticket automation',
-        'FAQ management',
-        'Customer satisfaction tracking',
-        'Support analytics',
-      ],
-      roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
-      competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout'],
-      marketSize: '$18 && 18.5B customer service software market',
-      growthRate: '22% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.',
-      launchDate: '2024-09-20',
-      customers: 56,
-      rating: 4 && 4.6,
-      reviews: 28,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered E-commerce Optimization
     {
       id: 'ai-ecommerce-optimizer'
@@ -439,32 +287,10 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile optimization tools'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-orange-600 to-red-600'
-      textColor: 'text-orange-400'
-      link: 'https://ziontechgroup.com/ai-ecommerce-optimizer'
-        'Dynamic pricing optimization',
-        'Inventory management and forecasting',
-        'Customer behavior analysis',
-        'A / B testing automation',
-        'Conversion rate optimization',
-        'Personalized shopping experiences',
-        'Real - time analytics dashboard',
-        'Multi - platform integration',
-        'Mobile optimization tools',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-orange-600 to-red-600',
-      textColor: 'text-orange-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-ecommerce-optimizer',
-=======
       icon: '🛒'
       color: 'from-orange-600 to-red-600'
       textColor: 'text-orange-400'
       link: 'https://ziontechgroup.com/ai-ecommerce-optimizer'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competes with Dynamic Yield ($1000+/month), Optimizely ($1000+/month). Our advantage: Affordable pricing for SMBs with enterprise-level AI capabilities.'
       targetAudience:
@@ -509,29 +335,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.5
       reviews: 19
     }
-<<<<<<< HEAD
-        'Product recommendation engines',
-        'Dynamic pricing strategies',
-        'Inventory optimization',
-        'Customer segmentation',
-        'Conversion optimization',
-      ],
-      roi: 'E - commerce businesses report 25 - 40% increase in average order value and 30% improvement in conversion rates.',
-      competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-      marketSize: '$22 && 22.8B e-commerce optimization market',
-      growthRate: '20% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.',
-      launchDate: '2024-08-10',
-      customers: 32,
-      rating: 4 && 4.5,
-      reviews: 19,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered HR & Recruitment
     {
       id: 'ai-hr-recruitment-suite'
@@ -555,35 +358,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Integration with job boards'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '👥'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-indigo-600 to-blue-600'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/ai-hr-recruitment-suite'
       marketPosition:
         'Competes with Workday ($6/user/month), BambooHR ($6.19/user/month). Our advantage: AI automation reduces hiring time by 50% and improves candidate quality.'
-<<<<<<< HEAD
-        'Automated interview scheduling',
-        'Performance tracking and analytics',
-        'Employee onboarding automation',
-        'Talent pipeline management',
-        'Compliance and legal documentation',
-        'Multi - language support',
-        'Mobile app for candidates',
-        'Integration with job boards',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-indigo-600 to-blue-600',
-      textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-recruitment-suite',
-      marketPosition:
-        'Competes with Workday ($6/user/month), BambooHR ($6 && 6.19/user/month). Our advantage: AI automation reduces hiring time by 50% and improves candidate quality.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'HR departments, Recruitment agencies, Small to medium businesses, Startups'
       trialDays: 14
@@ -619,29 +399,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.4
       reviews: 22
     }
-<<<<<<< HEAD
-        'Candidate screening',
-        'Resume parsing',
-        'Interview scheduling',
-        'Performance management',
-        'Employee onboarding',
-      ],
-      roi: 'HR teams save 20 - 30 hours per week and improve hiring quality by 40%.',
-      competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],
-      marketSize: '$15 && 15.8B HR software market',
-      growthRate: '12% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.',
-      launchDate: '2024-07-15',
-      customers: 41,
-      rating: 4 && 4.4,
-      reviews: 22,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered Financial Management
     {
       id: 'ai-financial-management-platform'
@@ -665,36 +422,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Mobile app for on-the-go management'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '💰'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-yellow-600 to-orange-600'
       textColor: 'text-yellow-400'
       link: 'https://ziontechgroup.com/ai-financial-management-platform'
       marketPosition:
         'Competes with Mint (Free), YNAB ($11.99/month), Personal Capital (Free). Our advantage: AI-powered insights, better forecasting, and comprehensive financial planning tools.'
-<<<<<<< HEAD
-        'Cash flow forecasting and analysis',
-        'Automated budget planning',
-        'Investment portfolio tracking',
-        'Financial goal setting and monitoring',
-        'Tax optimization suggestions',
-        'Real - time financial dashboard',
-        'Multi - currency support',
-        'Bank account integration',
-        'Mobile app for on - the - go management',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-yellow-600 to-orange-600',
-      textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-management-platform',
-      marketPosition:
-        'Competes with Mint (Free), YNAB ($11 && 11.99/month), Personal Capital (Free). Our advantage: AI-powered insights, better forecasting, and comprehensive financial planning tools.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Individuals, Small businesses, Financial advisors, Freelancers'
       trialDays: 30
@@ -737,29 +470,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.6
       reviews: 31
     }
-<<<<<<< HEAD
-        'Personal finance management',
-        'Business financial planning',
-        'Investment tracking',
-        'Budget optimization',
-        'Financial goal achievement',
-      ],
-      roi: 'Users report 25% improvement in savings and 40% better financial decision - making.',
-      competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance'],
-      marketSize: '$8 && 8.9B personal finance software market',
-      growthRate: '16% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.',
-      launchDate: '2024-06-20',
-      customers: 67,
-      rating: 4 && 4.6,
-      reviews: 31,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered Project Management
     {
       id: 'ai-project-management-suite'
@@ -783,36 +493,12 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Advanced reporting and insights'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-=======
       icon: '📋'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       color: 'from-teal-600 to-cyan-600'
       textColor: 'text-teal-400'
       link: 'https://ziontechgroup.com/ai-project-management-suite'
       marketPosition:
         'Competes with Asana ($10.99/user/month), Monday.com ($8/user/month), ClickUp ($5/user/month). Our advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.'
-<<<<<<< HEAD
-        'Automated project scheduling',
-        'Resource allocation optimization',
-        'Risk assessment and mitigation',
-        'Team performance analytics',
-        'Real - time collaboration tools',
-        'Project timeline forecasting',
-        'Integration with popular tools',
-        'Mobile app for team members',
-        'Advanced reporting and insights',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-teal-600 to-cyan-600',
-      textColor: 'text-teal-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-project-management-suite',
-      marketPosition:
-        'Competes with Asana ($10 && 10.99/user/month), Monday && Monday.com ($8/user/month), ClickUp ($5/user/month). Our advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       targetAudience:
         'Project managers, Development teams, Marketing agencies, Consulting firms'
       trialDays: 14
@@ -855,29 +541,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.5
       reviews: 26
     }
-<<<<<<< HEAD
-        'Project planning and scheduling',
-        'Team collaboration',
-        'Resource management',
-        'Risk assessment',
-        'Performance tracking',
-      ],
-      roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
-      competitors: ['Asana', 'Monday && Monday.com', 'ClickUp', 'Basecamp'],
-      marketSize: '$6 && 6.8B project management software market',
-      growthRate: '14% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.',
-      launchDate: '2024-05-25',
-      customers: 53,
-      rating: 4 && 4.5,
-      reviews: 26,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered Learning & Training
     {
       id: 'ai-learning-management-system'
@@ -901,32 +564,10 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Advanced reporting and insights'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-violet-600 to-purple-600'
-      textColor: 'text-violet-400'
-      link: 'https://ziontechgroup.com/ai-learning-management-system'
-        'Adaptive content difficulty',
-        'Automated assessment generation',
-        'Progress tracking and analytics',
-        'Content recommendation engine',
-        'Multi - format content support',
-        'Collaborative learning tools',
-        'Mobile learning app',
-        'Integration with LMS platforms',
-        'Advanced reporting and insights',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-violet-600 to-purple-600',
-      textColor: 'text-violet-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-learning-management-system',
-=======
       icon: '🎓'
       color: 'from-violet-600 to-purple-600'
       textColor: 'text-violet-400'
       link: 'https://ziontechgroup.com/ai-learning-management-system'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competes with Canvas ($40/user/year), Blackboard ($40/user/year), Moodle (Free). Our advantage: AI personalization improves learning outcomes by 30% and reduces dropout rates.'
       targetAudience:
@@ -971,28 +612,6 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       rating: 4.4
       reviews: 21
     }
-<<<<<<< HEAD
-        'Higher education',
-        'Corporate training',
-        'Online courses',
-        'Skill development',
-      ],
-      roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
-      competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology'],
-      marketSize: '$18 && 18.6B learning management system market',
-      growthRate: '19% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-        'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.',
-      launchDate: '2024-04-30',
-      customers: 38,
-      rating: 4 && 4.4,
-      reviews: 21,
-    },
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // AI-Powered Healthcare Solutions
     {
       id: 'ai-healthcare-assistant'
@@ -1016,32 +635,10 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Integration with EHR systems'
       ]
       popular: false
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-red-600 to-pink-600'
-      textColor: 'text-red-400'
-      link: 'https://ziontechgroup.com/ai-healthcare-assistant'
-        'Automated appointment scheduling',
-        'Medical record management',
-        'Prescription tracking and reminders',
-        'Health analytics and insights',
-        'Telemedicine integration',
-        'Insurance claim processing',
-        'Compliance and security features',
-        'Mobile app for patients',
-        'Integration with EHR systems',
-      ],
-      popular: false,
-      icon: '',
-      color: 'from-red-600 to-pink-600',
-      textColor: 'text-red-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-assistant',
-=======
       icon: '🏥'
       color: 'from-red-600 to-pink-600'
       textColor: 'text-red-400'
       link: 'https://ziontechgroup.com/ai-healthcare-assistant'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competes with Epic ($1200/user/month), Cerner ($1000/user/month), Allscripts ($800/user/month). Our advantage: Affordable pricing for small practices with enterprise-level AI capabilities.'
       targetAudience:
@@ -1080,98 +677,32 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       contactInfo: contact
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.'
-      launchDate: '2024-03-15'
-      customers: 24
-      rating: 4.3
-      reviews: 18
-    }
-<<<<<<< HEAD
-        'Patient care management',
-        'Appointment scheduling',
-        'Medical record keeping',
-        'Telemedicine services',
-        'Healthcare analytics',
-      ],
-      roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
-      competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion'],
-      marketSize: '$31 && 31.5B healthcare IT market',
-      growthRate: '17% annual growth',
-      contactInfo: contact,
-      realImplementation: true,
-      implementationDetails:
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
       launchDate: '2024-03-15',
       customers: 24,
       rating: 4.3,
       reviews: 18,
-<<<<<<< HEAD
-    },
-=======
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
 ) => {
-<<<<<<< HEAD
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(
-    service => service && service.category === category
-  );
-}
-export const getPopularInnovativeMicroSaasServices2026 = () => {
-=======
   return innovativeMicroSaasServices2026.filter(
     service => service.category === category;
   );
-<<<<<<< HEAD
-}
-export const getPopularInnovativeMicroSaasServices2026 = () => {
-=======
 };
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service && service.price.replace('$', ''));
-=======
-<<<<<<< HEAD
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    return price >= minPrice && price <= maxPrice;
-  });
-};    return price >= minPrice && price <= maxPrice
-  })
-<<<<<<< HEAD
-};
-=======
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: any {
@@ -1190,21 +721,5 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
-<<<<<<< HEAD
-}    return price >= min_price && price <= max_price;
-  });
-}
-;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-};    return price >= minPrice && price <= maxPrice
-  })
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

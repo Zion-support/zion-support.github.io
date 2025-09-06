@@ -1,36 +1,11 @@
 
-<<<<<<< HEAD
 import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-export function ApiReference() {;
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React, { useState } from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
-<<<<<<< HEAD
-=======
-=======
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Sample endpoint data
 
   const endpoints = [
@@ -134,23 +109,11 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
-<<<<<<< HEAD
-=======
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
   "category": "design",
   "budget": {
-<<<<<<< HEAD
-    "min": 3000;
-    "max": 5000
-    "currency": "USD"
-  }
-  "status": "open";
-  "created_at": "2023-05-15T10:12:00Z"
-}`
-        }
-=======
     "min": 3000,
     "max": 5000,
     "currency": "USD"
@@ -159,7 +122,6 @@ function ApiReference() {
   "created_at": "2023-05-15T10:12:00Z"
 }`
         },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         "400": {
           description: "Bad request"
           example: `{
@@ -167,26 +129,9 @@ function ApiReference() {
   "message": "Invalid input",
   "details": [
     {
-<<<<<<< HEAD
-      "field": "title"
-      "error": "Title is required"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    }
-  ]
-}`
-        }
-<<<<<<< HEAD
-      }
-=======
       "field": "title",
       "error": "Title is required"
-=======
       };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
 import { CodeBlock } from "@/components/developers/CodeBlock",;
@@ -267,7 +212,6 @@ export function ApiReference() {;
           description: "Job created successfully",;
           example: `{;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   "id": "job-456";
   "id": "job - 456";
   "title": "UX Designer";
@@ -297,16 +241,7 @@ export function ApiReference() {;
   ];
 }`;
         }
-<<<<<<< HEAD
-      }
-=======
       },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -508,25 +443,10 @@ export function ApiReference() {;
                           </span>
                           <span className="text-white">{response.description}</span>
                         </div>
-<<<<<<< HEAD
-                        <CodeBlock
-                          code={response.example}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <CodeBlock
-                          code={response && response.example} 
-
-=======
 
                         
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <CodeBlock 
                           code={response.example} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           language="json"
                           showLineNumbers={true}
                         />;
@@ -635,13 +555,7 @@ export function ApiReference() {;
     </ApiDocsLayout>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ApiReference;
 

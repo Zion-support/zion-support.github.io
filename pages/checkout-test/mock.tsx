@@ -32,24 +32,6 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 export default function MockCheckoutPage() {;
   const router = useRouter();
   const { mock } = router.query;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  if (!mock) {
-    router.push('/checkout');
-    return <div>Redirecting...</div>;
-
-  }
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>
-      <div className='container mx-auto max-w-2xl'>
-        <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>
-          <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />
-          <h1 className='text-3xl font-bold text-white mb-4'>
-<<<<<<< HEAD
-=======
             Mock Checkout Complete!
           </h1>
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6'>
@@ -64,44 +46,14 @@ export default function MockCheckoutPage() {;
               What happened:
             </h3>
             <ul className='text-zion-slate-light space-y-1 text-sm'>
-=======
   if (!mock) {;
-=======
   if (!mock) {;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     router.push('/checkout');
     return <div>Redirecting...</div>;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>
-      <div className='container mx-auto max-w-2xl'>
-        <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>
-          <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />
-          <h1 className='text-3xl font-bold text-white mb-4'>
-            Mock Checkout Complete!
-          </h1>
-          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6'>
-            <p className='text-yellow-400 text-sm'>
-              <strong>Development Mode:</strong> This is a mock checkout page
-              shown when using dummy Stripe keys. In production, users would be
-              redirected to the actual Stripe checkout flow.
-            </p>
-          </div>
-          <div className='text-left bg-zion-blue/50 rounded-lg p-4 mb-6'>
-            <h3 className='text-lg font-semibold text-white mb-2'>
-              What happened:
-            </h3>
-            <ul className='text-zion-slate-light space-y-1 text-sm'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
@@ -110,7 +62,6 @@ export default function MockCheckoutPage() {;
           <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
           
           <h1 className="text-3xl font-bold text-white mb-4">
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Mock Checkout Complete!
           </h1>
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6'>
@@ -120,34 +71,14 @@ export default function MockCheckoutPage() {;
               redirected to the actual Stripe checkout flow.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className='text-left bg-zion-blue/50 rounded-lg p-4 mb-6'>
-            <h3 className='text-lg font-semibold text-white mb-2'>
-              What happened:
-            </h3>
-            <ul className='text-zion-slate-light space-y-1 text-sm'>
-              <li> Checkout request received successfully</li>
-              <li>
-                 Mock session ID generated: cs_test_mock_session_id_
-                {Date.now()}
-              </li>              <li> Cart items would be processed</li>
-              <li> Payment would be handled by Stripe</li>
-              <li> Order confirmation would be sent</li>
-=======
           <div className="text-left bg-zion-blue/50 rounded-lg p-4 mb-6">
             <h3 className="text-lg font-semibold text-white mb-2">What happened:</h3>
             <ul className="text-zion-slate-light space-y-1 text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <li>• Checkout request received successfully</li>
               <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
               <li>• Cart items would be processed</li>
               <li>• Payment would be handled by Stripe</li>
               <li>• Order confirmation would be sent</li>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </ul>
           </div>
           <div className='space-y-4'>
@@ -160,30 +91,10 @@ export default function MockCheckoutPage() {;
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
-<<<<<<< HEAD
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Button
-                asChild
-                variant='outline'
-                className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
-              >
-                <Link href='/cart'> Back to Cart</Link>
-              </Button>
-              <Button
-                asChild
-                className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'
-              >
-                <Link href='/marketplace'>
-=======
 
 
           <div className="space-y-4">
             <div className="text-zion-slate-light text-sm">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <p>To test with real Stripe: </p>
               <ol className="list-decimal list-inside space-y-1 mt-2">
                 <li>Configure real Stripe test keys in environment variables</li>
@@ -191,7 +102,6 @@ export default function MockCheckoutPage() {;
                 <li>Use test card: 4242 4242 4242 4242</li>
               </ol>
             </div>
-=======
 
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -203,12 +113,6 @@ export default function MockCheckoutPage() {;
               
               <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue">
                 <Link href="/marketplace">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   Continue Shopping
                   <ArrowRight className='h-4 w-4 ml-2' />                </Link>
               </Button>
@@ -217,19 +121,9 @@ export default function MockCheckoutPage() {;
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-);
-          <h1 className='text-3xl font-bold text-white mb-4'>;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
 
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -243,8 +137,6 @@ export default function MockCheckoutPage() {;
         <div className="bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center">;
           <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />;
           <h1 className="text-3xl font-bold text-white mb-4">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Mock Checkout Complete!;
           </h1>;
 
@@ -303,25 +195,9 @@ export default function MockCheckoutPage() {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-    </div>;
-  );
-  )
-} 
-    </div>);
-;
-=======
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 } ;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

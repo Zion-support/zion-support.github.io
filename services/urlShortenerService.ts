@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-export interface ShortUrl {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ShortUrl {
-=======
 export interface ShortUrl {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  originalUrl: string;
-  shortCode: string;
-  shortUrl: string;
-  createdAt: Date;
-  expiresAt?: Date;
-
-  isActive: boolean
-
-  userId?: string
-}
-<<<<<<< HEAD
-export interface UrlAnalytics {
-=======
 
 export interface UrlAnalytics {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   totalClicks: number;
   uniqueVisitors: number;
   referrers: string[];
@@ -37,12 +12,8 @@ export interface UrlAnalytics {;
 
   clickHistory: ClickEvent[]
 }
-<<<<<<< HEAD
-export interface ClickEvent {
-=======
 
 export interface ClickEvent {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   timestamp: Date;
   ip_address: string;
@@ -56,16 +27,8 @@ export interface ClickEvent {;
 
   os: string
 }
-<<<<<<< HEAD
-export interface CreateShortUrlRequest {
-=======
-<<<<<<< HEAD
-export interface CreateShortUrlRequest {
-=======
 
 export interface CreateShortUrlRequest {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   originalUrl: string;
   customCode?: string;
 
@@ -149,11 +112,6 @@ class UrlShortenerService {
     if (url.expiresAt && url.expiresAt < new Date()) {
       url.isActive = false
       return null
-=======
-<<<<<<< HEAD
-export interface ShortUrl {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   originalUrl: string,;
   shortCode: string,;
@@ -236,22 +194,10 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return url
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
@@ -268,9 +214,6 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date();
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
-<<<<<<< HEAD
-=======
-=======
 ;
   async trackClick(shortCode: string, clickData: Omit<ClickEvent 'id'>): Promise<void> {;
     const url = this.urls.get(shortCode),;
@@ -288,12 +231,6 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date(),;
       if (!analytics.referrers.includes(clickData.referrer)) {;
         analytics.referrers.push(clickData.referrer);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -312,14 +249,7 @@ class UrlShortenerService {;
   async getUserUrls(userId: string): Promise<ShortUrl[]> {
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
     const url = this.urls.get(shortCode);
     if (!url |(userId && url.userId !== userId)) return false;
@@ -344,19 +274,6 @@ class UrlShortenerService {;
 ;
     return short_url;
   }
-<<<<<<< HEAD
-  async getShortUrl (short_code: string): Promise < ShortUrl | null> {
-    const url = this.urls.get (short_code);
-    // Check condition
-if (return null) {
-  $2
-}
-    if () {) {
-  $2
-}
-      url.is_active = false,
-      return null;
-=======
 
 ;
   async updateUrl(shortCode: string, updates: Partial<ShortUrl>, userId?: string): Promise<boolean> {;
@@ -371,12 +288,6 @@ if (return null) {
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     return url;
   }
@@ -455,17 +366,7 @@ if ( {) {
     }
     return result;
   }
-<<<<<<< HEAD
-  private generateId(): string {
-    return Math && Math.random().toString(36).substr(2, 9)
-  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -501,13 +402,4 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,37 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function ServicesIndexPage () {
-<<<<<<< HEAD
-=======
-=======
  export default function ServicesIndexPage () {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 export default function ServicesIndexPage () {
-=======
  export default function ServicesIndexPage () {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
-<<<<<<< HEAD
-  'Content-Type': 'application/json'
-}
-=======
-<<<<<<< HEAD
-  'Content-Type': 'application/json'
-}
-=======
   'Content-Type': 'application/json' ;
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -264,56 +241,16 @@ function ServicesIndexPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-            </div>;
-          </div>;
-        </div>;
-      </div>;
 
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
         service={selected}
         onSubmit={handleSubmit}
-<<<<<<< HEAD
-      />
-    </div>
-  )
-}
+
 export default ServicesPage;
 
-      <QuoteRequestModal;
-        open={modal_open}
-        on_close={() => setModalOpen (false)}
-        service={selected}
-        on_submit={handle_submit}
-      />;
-    </div>);
-}
-;
-export default ServicesPage;
-;
-=======
 
-<<<<<<< HEAD
-=======
-export default ServicesPage;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-=======
 }
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,47 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { Briefcase, Users, Check } from 'lucide-react'
-type UserRole = 'talent' | 'client' | null
-interface RolePickerProps {
-  onSelect: (role: UserRole) => void
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null)
-  const handleSelect = (role: UserRole) => {
-    setSelectedRole(role)
-    onSelect(role)
-  }
-  return (
-    <div className='space-y-4 px-4'>
-      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
-      <p className='text-muted-foreground'>
-        Choose how you want to use our platform
-      </p>
-      <div className='space-y-3 mt-6'>
-        <Card
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
-<<<<<<< HEAD
-type UserRole = any;
-  return (
-    <div className='space-y-4 px-4'>
-      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
-      <p className='text-muted-foreground'>
-        Choose how you want to use our platform
-      </p>
-      <div className='space-y-3 mt-6'>
-        <Card
-=======
 type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
@@ -63,11 +21,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
       <div className="space-y-3 mt-6">
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
@@ -90,16 +43,8 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-        <Card
-=======
 
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
@@ -122,7 +67,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent } from "@/components/ui/card",;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Briefcase, Users, Check } from 'lucide-react';
 type UserRole = 'talent' | 'client' | null;
 
@@ -200,24 +144,9 @@ type UserRole = any;
     </div>;
   );
 }
-<<<<<<< HEAD
+;
 
     </div>);
 }
-=======
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

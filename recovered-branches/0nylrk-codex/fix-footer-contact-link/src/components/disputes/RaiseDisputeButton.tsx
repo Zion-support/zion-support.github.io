@@ -1,25 +1,12 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-=======
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { 
   Dialog;
   DialogContent;
@@ -43,19 +30,9 @@ interface RaiseDisputeButtonProps {
 export function RaiseDisputeButton({
   projectId;
 
-<<<<<<< HEAD
-  milestoneId
-  variant = "outline"
-  size;
-  className
-=======
 
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -72,7 +49,6 @@ export function RaiseDisputeButton({
   variant = "outline", 
   size,
   className 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }: RaiseDisputeButtonProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -100,19 +76,9 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <DisputeForm
-=======
           
           <DisputeForm 
-=======
           <DisputeForm 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {;
@@ -165,7 +131,6 @@ export function RaiseDisputeButton({;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay } from '@/components / ui / dialog';
@@ -207,22 +172,11 @@ function RaiseDisputeButton() {
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <DialogDescription>;
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
-<<<<<<< HEAD
-
-          <DisputeForm
-=======
           <DisputeForm;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

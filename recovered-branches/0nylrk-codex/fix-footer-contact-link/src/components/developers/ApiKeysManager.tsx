@@ -41,8 +41,6 @@ export function ApiKeysManager() {
     fetchApiKeys();
   });
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -50,11 +48,6 @@ import { useState } from "react",
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",
 import { format } from "date-fns",
 import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -69,32 +62,10 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const {
-    keys;
-
-    loading
-    newApiKey;
-    fetchApiKeys
-    createApiKey
-    regenerateApiKey
-
-    revokeApiKey;
-    clearNewApiKey
-  } = useApiKeys();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
-=======
   const { ;
     keys;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   const { 
     keys,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     loading, 
     newApiKey,
     fetchApiKeys, 
@@ -108,7 +79,6 @@ export function ApiKeysManager() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Create key form state
   const [keyName, setKeyName] = useState(""),
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -119,7 +89,6 @@ export function ApiKeysManager() {
 
   }),
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const handleCreateKey = async () => {
     if (keyName.trim() === "" |selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
@@ -204,21 +173,8 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-<<<<<<< HEAD
-                        <Checkbox
-                          id={scope.value}
-=======
-<<<<<<< HEAD
-                        <Checkbox
-                          id={scope.value}
-=======
                         <Checkbox 
                           id={scope.value} 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
 import { format } from "date-fns",;
@@ -352,12 +308,6 @@ export function ApiKeysManager() {;
                       <div key={scope.value} className="flex items-center space-x-2">;
                         <Checkbox;
                           id={scope.value} ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -437,118 +387,6 @@ export function ApiKeysManager() {;
                         ) : (;
                           <Badge variant="secondary" className="bg-red-900 text-white border-red-800">Revoked</Badge>;
                         )}
-<<<<<<< HEAD
-                      </div>
-                    </div>
-                  </div>
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button variant="ghost" size="icon">
-                        <MoreVertical size={16} />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
-                      <Button variant="ghost" size="icon">;
-                        <MoreVertical size={16} />;
-                      </Button>;
-                    </DropdownMenuTrigger>;
-                    <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;
-                      <DropdownMenuItem
-                        onClick={() => setShowRegenerateConfirm(key && key.id)}
-                        className="cursor-pointer";
-                        disabled={!key && key.is_active}
-                      >;
-                        <RefreshCw size={14} className="mr-2" /> Regenerate;
-                      </DropdownMenuItem>;
-                      <DropdownMenuItem
-                        onClick={() => setShowDeleteConfirm(key.id)}
-                        className="cursor-pointer text-red-500"
-                        disabled={!key.is_active}
-                      >
-                        <X size={14} className="mr-2" /> Revoke
-                      </DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope) => (
-                    <Badge
-                      key={scope}
-                      </DropdownMenuItem>;
-                    </DropdownMenuContent>;
-                  </DropdownMenu>;
-                </div>;
-
-                <div className="mt-3 flex flex-wrap gap-2">;
-                  {key && key.scopes.map((scope) => (;
-                    <Badge
-                      key={scope} 
-                      variant="secondary"
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">;
-                      {scope}
-                    </Badge>;
-                  ))}
-                </div>
-                <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
-                  <span>Created: {format(new Date(key.created_at), 'MMM d, yyyy')}</span>
-                  <Popover>
-                    <PopoverTrigger className="flex items-center hover:text-zinc-300">
-                      <Clock size={12} className="mr-1" />
-                      Last used: {key.last_used_at
-                        ? format(new Date(key.last_used_at), 'MMM d, yyyy')
-                        : 'Never'}
-                    </PopoverTrigger>
-                    <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">
-                      <p className="text-sm mb-1">Last Used</p>
-                      <p className="text-xs text-zinc-400">
-                        {key.last_used_at
-                          ? format(new Date(key.last_used_at), 'MMM d, yyyy HH:mm:ss')
-                <div className="mt - 3 flex flex - wrap gap - 2">;
-                  {key.scopes.map ((scope) => (
-                    <Badge;
-                      key={scope}
-                      variant="secondary";
-                      className="bg - zinc - 800 text - zinc - 300 hover:bg - zinc - 800";
-                    >;
-                      {scope}
-                    </Badge>))}
-                </div>;
-                <div className="mt - 3 text - xs text - zinc - 500 flex items - center space - x-4">;
-                  <span > Created: {format (new Date (key.created_at), 'MMM d, yyyy')}</span>;
-                  <Popover>;
-                    <PopoverTrigger className="flex items - center hover:text - zinc - 300">;
-                      <Clock size={12} className="mr - 1" />;
-                      Last used: {key.last_used_at;
-                        ? format (new Date (key.last_used_at), 'MMM d, yyyy');
-                        : 'Never'}
-                    </PopoverTrigger>;
-                    <PopoverContent className="bg - zinc - 900 border - zinc - 800 text - white w - 64 p - 3">;
-                      <p className="text - sm mb - 1">Last Used</p>;
-                      <p className="text - xs text - zinc - 400">;
-                        {key.last_used_at;
-                          ? format (new Date (key.last_used_at), 'MMM d, yyyy HH:mm:ss');
-                          : 'This API key has never been used'}
-                      </p>;
-                    </PopoverContent>;
-                  </Popover>;
-                  {key && key.expires_at && (;
-                    <span>Expires: {format(new Date(key && key.expires_at), 'MMM d, yyyy')}</span>;
-                  )}
-                </div>;
-              </div>;
-            ));
-          )}
-        </div>
-      </CardContent>
-      <CardFooter className="justify-between border-t border-zinc-800 py-4">
-        <div className="text-xs text-zinc-500">
-          Keep your API keys secure. They have the same permissions as your account.
-        </div>
-        <Button variant="outline" size="sm" onClick={fetchApiKeys}>
-          Refresh
-        </Button>
-      </CardFooter>
-=======
 
                       </div>;
                     </div>;
@@ -556,7 +394,6 @@ export function ApiKeysManager() {;
 
                   <DropdownMenu>;
                     <DropdownMenuTrigger asChild>;
-=======
         {/* New API Key Alert */}
         {newApiKey && (
           <div className="mb - 6 p - 4 border border - green - 800 bg - green - 900 / 30 rounded - md">;
@@ -608,12 +445,6 @@ export function ApiKeysManager() {;
                   <DropdownMenu>;
                     <DropdownMenuTrigger as_child>;
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Regenerate Key Confirmation Dialog */}
       <AlertDialog
         open={showRegenerateConfirm !== null}

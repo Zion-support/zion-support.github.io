@@ -1,33 +1,5 @@
 
-<<<<<<< HEAD
 import { TabsContent } from "@/components/ui/tabs",
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {TabsContent} from "@/components/ui/tabs";
-import {Resume} from "@/types/resume";
-import {BasicInfoForm} from '../forms/basic-info';
-import {WorkExperienceForm} from '../forms/WorkExperienceForm';
-import {EducationForm} from '../forms/EducationForm';
-import {SkillsForm} from '../forms/SkillsForm';
-import {CertificationsForm} from '../forms/CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { TabsContent } from "@/components/ui/tabs",
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Resume } from "@/types/resume";
-import { BasicInfoForm  } from '../forms/basic-info';
-import { WorkExperienceForm  } from '../forms/WorkExperienceForm';
-import { EducationForm  } from '../forms/EducationForm';
-import { SkillsForm  } from '../forms/SkillsForm';
-import { CertificationsForm  } from '../forms/CertificationsForm';
-import { PreviewResume } from '../PreviewResume';
-<<<<<<< HEAD
-=======
-=======
 import { Resume } from "@/types/resume",
 import { BasicInfoForm } from '../forms/basic-info',
 import { WorkExperienceForm } from '../forms/WorkExperienceForm',
@@ -35,12 +7,6 @@ import { EducationForm } from '../forms/EducationForm',
 import { SkillsForm } from '../forms/SkillsForm',
 import { CertificationsForm } from '../forms/CertificationsForm',
 import { PreviewResume } from '../PreviewResume',
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -48,39 +14,18 @@ interface ResumeStepContentProps {
   onNextStep: () => void
   onPrevStep: () => void
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export const ResumeStepContent = ({
-  activeTab;
-  resume
-  onNextStep
-  onPrevStep
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-export const ResumeStepContent = ({ ;
-  activeTab;
-=======
 export const ResumeStepContent = ({ 
   activeTab,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   resume, 
   onNextStep, 
   onPrevStep 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }: ResumeStepContentProps) => {
   return (
     <>
       <TabsContent value="basic-info">
         <BasicInfoForm
           resumeId={resume?.id!}
-<<<<<<< HEAD
-=======
           initialData={resume?.basic_info}
           onSave={(data) => {
             // Here you would typically save the data to your backend
@@ -90,15 +35,7 @@ export const ResumeStepContent = ({
         />
       </TabsContent>
       <TabsContent value="work-experience">
-<<<<<<< HEAD
-        <WorkExperienceForm
-=======
         <WorkExperienceForm 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { TabsContent } from "@/components/ui/tabs",;
 import { Resume } from "@/types/resume",;
 import { BasicInfoForm } from '../forms/basic-info',;
@@ -126,7 +63,6 @@ export const ResumeStepContent = ({ ;
         <BasicInfoForm
           resumeId={resume?.id!} 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           initialData={resume?.basic_info}
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
@@ -136,9 +72,6 @@ export const ResumeStepContent = ({ ;
         />
       </TabsContent>
       <TabsContent value="work-experience">
-<<<<<<< HEAD
-        <WorkExperienceForm
-=======
 
           onComplete={onNextStep} ;
         />;
@@ -146,12 +79,6 @@ export const ResumeStepContent = ({ ;
 
       <TabsContent value="work-experience">;
         <WorkExperienceForm;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
@@ -183,54 +110,11 @@ export const ResumeStepContent = ({ ;
         />
       </TabsContent>
       <TabsContent value="preview">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <PreviewResume
-          resume={resume as Resume}
-          onBack={onPrevStep}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        />
-      </TabsContent>
-    </>
-  )
-<<<<<<< HEAD
-}
-
-        />;
-      </TabsContent>;
-
-      <TabsContent value="preview">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        <PreviewResume
-          resume={resume as Resume}
-          onBack={onPrevStep}
-<<<<<<< HEAD
-        />
-      </TabsContent>
-    </>
-  )
-}
-
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />;
       </TabsContent>;
     </>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { TabsContent } from '@/components / ui / tabs';
 import { Resume } from '@/types / resume';
 import {BasicInfoForm} from '../forms / basic - info';

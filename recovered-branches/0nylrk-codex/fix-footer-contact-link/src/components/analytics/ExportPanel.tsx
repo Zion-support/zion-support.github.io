@@ -1,25 +1,11 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-<<<<<<< HEAD
-=======
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -42,9 +28,6 @@ export function ExportPanel() {;
       }, 1500));
   }
 
-<<<<<<< HEAD
-=======
-=======
 
 export function ExportPanel() {
 
@@ -63,7 +46,6 @@ export function ExportPanel() {
     toast({
       title: `Exporting as ${format.toUpperCase()}`,
 
-=======
       description: "Your export is being prepared and will download shortly."}),
     
     // In a real implementation, this would trigger an API call to generate and download the export
@@ -74,12 +56,6 @@ export function ExportPanel() {
     }, 1500)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -167,13 +143,5 @@ function ExportPanel() {
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }

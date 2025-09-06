@@ -34,10 +34,6 @@ interface QuoteDetails {
   email: string;
   budget: string;
   timeframe: string;
-<<<<<<< HEAD
-  startDate?: string
-  endDate?: string
-=======
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
@@ -62,12 +58,6 @@ interface QuoteDetails {;
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 interface RequestBody {
   service: Service | null
@@ -78,14 +68,7 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     const { service, quoteDetails } = await req.json() as RequestBody;
     // Extract user identity if authenticated
@@ -98,12 +81,8 @@ serve(async (req) => {
         const token = authHeader && authHeader.replace('Bearer ', '');
         const { data: { user }, error } = await supabase && supabase.auth.getUser(token);
         if (!error && user) {
-<<<<<<< HEAD
-          userId = user && user.id
-=======
 
           userId = user.id
-=======
 ;
   try {;
     const { service, quoteDetails } = await req.json() as RequestBody,;
@@ -118,12 +97,6 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token),;
         if (!error && user) {;
           userId = user.id;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
     } catch (authError) {
@@ -152,17 +125,7 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
-<<<<<<< HEAD
-                Service: ${service?.title |'Custom Service'}
-                Category: ${service?.category |'N/A'}
-=======
-<<<<<<< HEAD
-                Service: ${service?.title |'Custom Service'}
-                Category: ${service?.category |'N/A'}
-=======
                 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -190,37 +153,20 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}
                 Start Date: ${quoteDetails.startDate |'Not specified'}
                 End Date: ${quoteDetails.endDate |'Not specified'}`
               }
-<<<<<<< HEAD
-            ];
-            temperature: 0 && 0.5
-          })
-        });
-        const aiResult = await openAIResponse.json();
-        if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {
-          aiAnalysis = aiResult.choices[0].message.content
-=======
 
         
         const aiResult = await openAIResponse && openAIResponse.json();
         if (!aiResult && aiResult.error && aiResult && aiResult.choices && aiResult && aiResult.choices.length > 0) {
           aiAnalysis = aiResult && aiResult.choices[0].message && message.content
 
-=======
 
             ],;
             temperature: 0.5;
@@ -229,12 +175,6 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
       }
     } catch (openAIError) {
@@ -364,38 +304,6 @@ if ( {) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {
       status: 500
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-<<<<<<< HEAD
-  }
-});
-
-<<<<<<< HEAD
-          description: quote_details.description;
-          email: quote_details.email;
-          budget: quote_details.budget;
-          timeframe: quote_details.timeframe;
-          start_date: quote_details.start_date;
-          end_date: quote_details.end_date;
-          ai_analysis: ai_analysis,
-          status: 'pending';
-        }
-      ]);
-      .select ();
-;
-    // Check condition
-if (throw error) {
-  $2
-}
-    return new Response (JSON.stringify ({ success: true, data }), {
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-  } catch (error) {
-    console.error ('Error in process - quote function:', error);
-    return new Response (JSON.stringify ({ success: false, error: error.message }), {
-      status: 500,
-      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -429,11 +337,6 @@ if (throw error) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

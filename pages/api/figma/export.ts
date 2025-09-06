@@ -1,61 +1,14 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import JSZip from "jszip";
-import {
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import JSZip from "jszip";
-import {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  getZionDesignMap
-  buildTokenSet
-  buildUIKit
-  UIKitKind
-<<<<<<< HEAD
-=======
-=======
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
   UIKitKind,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from './next';
-import JSZip from './jszip';
-import {
-  getZionDesignMap,
-  buildTokenSet,
-  buildUIKit,
-  UIKitKind,
-} from '../../../utils / design - map';
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  try {
-    const kit = (req.query.kit as string) |"tailwind";
-=======
-<<<<<<< HEAD
-  try {
-
-    const kit = (req && req.query.kit as string) || "tailwind";
-
-    const kind = (
-      ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
-    ) as UIKitKind;
-=======
   try {;
     const kit = (req.query.kit as string) || "tailwind";
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     const kind = (
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
@@ -88,15 +41,11 @@ function handler() {
       "Content-Disposition",
       `attachment; filename=zion-design-${kind}.zip`,
     );
-<<<<<<< HEAD
-=======
     res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -118,7 +67,6 @@ export default async function handler(req, res) {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const zip = new JSZip();
     const map = getZionDesignMap();
     const tokens = await buildTokenSet();
@@ -142,7 +90,6 @@ export default async function handler(req, res) {
     );
 
     );
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     res && res.status(200).send(buffer);
   } catch (e: any) {
     res.status(500).json({ error: e?.message |"Export failed" });
@@ -182,8 +129,6 @@ export default async function handler(req, res) {
     res.status (500).json ({ error: e?.message || "Export failed" });
   }
 }
-<<<<<<< HEAD
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -200,13 +145,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   }
 }
-=======
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

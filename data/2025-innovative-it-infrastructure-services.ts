@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const innovativeITInfrastructureServices2025 = [
   {
     id: 'quantum-edge-computing-orchestrator',
@@ -496,23 +488,6 @@ export const innovativeITInfrastructureServices2025 = [
       'Compliance tools'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'SOC2'
-      'ISO 27001'
-      'Uptime Institute'
-      'Energy Star'
-      'Industry-specific regulations'
-    ]
-<<<<<<< HEAD
-  },];
-    marketSize: '$31.2B',
-    targetAudience: 'Data center operators, cloud providers, enterprise businesses, colocation facilities',
-    competitiveAdvantage: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities',
-=======
-=======
     id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
     description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     features: [
@@ -549,7 +524,6 @@ export const innovativeITInfrastructureServices2025 = [
     marketSize: '$28.7B',
     targetAudience: 'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms',
     competitiveAdvantage: 'Quantum computing integration for unprecedented processing speed, intelligent edge orchestration, and industry-leading security',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     useCases: [
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     market_size: '$31.2B',
@@ -576,36 +550,16 @@ export const innovativeITInfrastructureServices2025 = [
       'ISO 27001',
       'Uptime Institute',
       'Energy Star',
-<<<<<<< HEAD
-      'Industry - specific regulations',
-    ],
-  }, ];
-      'Data center operations automation_energy efficiency optimization_predictive maintenance_capacity planning and optimization_cost reduction and management';
-    ];
-    integrations: ['Data center infrastructure_monitoring systems_energy management_security platforms_compliance tools'];
-    compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry - specific regulations'];
-=======
 
 
-=======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       'Industry-specific regulations',
     ],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const innovativeITInfrastructureServices2025 = [;
   {;
     id: 'quantum-edge-computing-orchestrator',;
@@ -811,11 +765,6 @@ export const innovativeITInfrastructureServices2025 = [;
     ],;
     integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],;
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 

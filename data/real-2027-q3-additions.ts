@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const real2027Q3Additions = [
   {
-    id: 'it-asset-discovery-agent',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const real2027Q3Additions = [
-  {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'it-asset-discovery-agent'
     name: 'IT Asset Discovery Agent'
     tagline: 'Agentless network-wide discovery and enrichment'
@@ -45,11 +34,7 @@ export const real2027Q3Additions = [
     category: 'Cloud & Infrastructure'
     link: '/managed-postgres-ha'
     realService: true
-<<<<<<< HEAD
-    roi: 'Eliminate 24 on-call incidents/month and improve p99 latency by 2040%.'
-=======
     roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   {
     id: 'vector-search-starter'
@@ -220,11 +205,7 @@ export const real2027Q3Additions = [
     category: 'Operations'
     link: '/incident-copilot'
     realService: true
-<<<<<<< HEAD
-    roi: 'Reduce incident resolution time by 3050% and improve learning capture.'
-=======
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   {
     id: 'ai-market-research'
@@ -243,11 +224,7 @@ export const real2027Q3Additions = [
     category: 'AI & Data'
     link: '/ai-market-research'
     realService: true
-<<<<<<< HEAD
-    roi: 'Save 1020 analyst hours per week while increasing coverage.'
-=======
     roi: 'Save 10–20 analyst hours per week while increasing coverage.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   {
     id: 'ai-sales-automation'
@@ -266,11 +243,7 @@ export const real2027Q3Additions = [
     category: 'Sales & Marketing'
     link: '/ai-sales-automation'
     realService: true
-<<<<<<< HEAD
-    roi: 'Increase meetings booked by 2040% with consistent outreach.'
-=======
     roi: 'Increase meetings booked by 20–40% with consistent outreach.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   {
     id: 'ai-legal-contract-analyzer'
@@ -308,11 +281,7 @@ export const real2027Q3Additions = [
     category: 'Content & Marketing'
     link: '/ai-content-generator'
     realService: true
-<<<<<<< HEAD
-    roi: 'Publish 35x more content while improving rankings.'
-=======
     roi: 'Publish 3–5x more content while improving rankings.'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   {
     id: 'email-dmarc-analyzer'
@@ -342,23 +311,6 @@ export const real2027Q3Additions = [
     description:
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'
     features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'Discovery via traffic/specs'
-      'OWASP API Top 10 checks'
-      'PR annotations and CI gating'
-      'Change detection and drift alerts'
-    ]
-    category: 'Security & Identity'
-    link: '/api-security-scanner'
-    realService: true
-    roi: 'Prevent high-severity API incidents and cut MTTR.'
-  }
-<<<<<<< HEAD
-=======
-=======
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
@@ -369,27 +321,12 @@ export const real2027Q3Additions = [
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
-<<<<<<< HEAD
-  }
-];
-
-=======
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -719,9 +656,6 @@ export const real2027Q3Additions = [;
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-=======
-=======
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -743,11 +677,6 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

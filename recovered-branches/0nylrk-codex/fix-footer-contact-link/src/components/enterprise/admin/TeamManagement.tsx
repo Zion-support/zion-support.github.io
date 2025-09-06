@@ -1,25 +1,4 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-<<<<<<< HEAD
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
-=======
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -31,10 +10,7 @@ import {toast} from "@/hooks/use-toast";
 export function TeamManagement() {;
   const [isAddingMember, setIsAddingMember] = useState(false);
   const [newMemberEmail, setNewMemberEmail] = useState("");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Table;
   TableBody;
@@ -57,21 +33,11 @@ import { Badge } from "@/components/ui/badge",
 import { PlusCircle, Trash, Mail, UserPlus } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 export function TeamManagement() {
-<<<<<<< HEAD
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
-=======
   const [isAddingMember, setIsAddingMember] = useState(false),
   const [newMemberEmail, setNewMemberEmail] = useState(""),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Mock team members data
 
   const teamMembers = [
@@ -426,35 +392,8 @@ if ( {) {
                       <Button;
                         variant="ghost";
                         size="sm";
-<<<<<<< HEAD
-                        on_click={() => handleResendInvite (member.email)}
-                      >;
-                        <Mail className="h - 4 w - 4 mr - 1" />;
-                        Resend;
-                      </Button>) : (
-                      <Button;
-                        variant="ghost";
-                        size="sm";
-                        className="text - destructive hover:text - destructive";
-                        on_click={() => handleRemoveMember (member.id)}
-                      >;
-                        <Trash className="h - 4 w - 4" />;
-                      </Button>)}
-                  </div>;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-=======
 
                         className="text-destructive hover:text-destructive";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         onClick={() => handleRemoveMember(member.id)}
                       >
                         <Trash className="h-4 w-4" />
@@ -469,5 +408,4 @@ if ( {) {
       </div>
     </div>
   )
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }

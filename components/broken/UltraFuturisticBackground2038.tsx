@@ -30,8 +30,6 @@ import React, { useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
-=======
   theme?:
     | 'quantum'
     | 'neon'
@@ -41,12 +39,6 @@ import { motion } from 'framer-motion';
     | 'consciousness';
   children?: React.ReactNode;
 export default function UltraFuturisticBackground2038({
-<<<<<<< HEAD
-  intensity = 'medium'
-  theme = 'consciousness'
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ;
   intensity?: 'low' | 'medium' | 'high';
   theme?:;
@@ -56,13 +48,6 @@ export default function UltraFuturisticBackground2038({
     | 'cyberpunk';
     | 'space';
     | 'consciousness';
-<<<<<<< HEAD
-  children?: React.ReactNode;
-export default function UltraFuturisticBackground2038({
-  intensity = 'medium'
-  theme = 'consciousness'
-  children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({
-=======
 
   children?: React && React.ReactNode;
 
@@ -71,13 +56,10 @@ export default function UltraFuturisticBackground2038(): any ({;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
 
-=======
 
   intensity = 'medium',
   theme = 'consciousness',
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   intensity = 'medium';
   theme = 'consciousness';
   children;
@@ -774,20 +756,9 @@ if ( {) {
 }
               ctx.fill_style = `rgba (139, 92, 246, ${alpha})`;
               ctx.fill_rect (x, y, 20, 20);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
               ctx.fillRect(x, y, 20, 20);            }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }
           }
         }
@@ -912,8 +883,6 @@ if ( {) {
           ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
           ctx && ctx.fill();
         }
-<<<<<<< HEAD
-=======
 
             particle.x, particle.y, 0;
             particle.x, particle.y, fieldSize
@@ -937,219 +906,9 @@ if ( {) {
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        // Boundary wrapping with quantum tunneling effect
-        if (
-          particle.x < 0 |
-          particle.x > canvas.width |
-          particle.y < 0 |
-          particle.y > canvas.height
-        ) {
-          if (Math.random() > 0.8) {
-            // Quantum tunneling
-            particle.x = Math.random() * canvas.width;
-            particle.y = Math.random() * canvas.height;
-          } else {
-            particle.x = (particle.x + canvas.width) % canvas.width;
-            particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
-          ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill()
-        }
-        // Boundary wrapping with quantum tunneling effect
-        if (particle.x < 0 |particle.x > canvas.width |
-            particle.y < 0 |particle.y > canvas.height) {
-          if (Math.random() > 0.8) { // Quantum tunneling
-            particle.x = Math.random() * canvas.width;
-            particle.y = Math.random() * canvas.height
-        particle.quantum_state = (particle.quantum_state + 0.02) % (Math.PI * 2);
-;
-        // Quantum entanglement effects;
-        // Check condition
-if ( {) {
-  $2
-}
-          particles.for_each ((other_particle, other_index) => {
-            // Check condition
-if (> 0.99) {) {
-  $2
-}
-              const distance = Math.sqrt (
-                Math.pow (particle.x - other_particle.x, 2) +;
-                  Math.pow (particle.y - other_particle.y, 2)              );                Math.pow (particle.x - other_particle.x, 2) +;
-                Math.pow (particle.y - other_particle.y, 2));
-              // Check condition
-if ( {) {
-  $2
-}
-                ctx.stroke_style = `rgba (139, 92, 246, ${0.3 * (1 - distance / 100)})`;
-                ctx.line_width = 1;
-                ctx.begin_path ();
-                ctx.move_to (particle.x, particle.y);
-                ctx.line_to (other_particle.x, other_particle.y);
-                ctx.stroke ();
-              }
-            }
-          });        }
-        // Consciousness wave effects;
-        if ( {                ctx.stroke ()) {
-  $2
-}
-              }
-            }
-          });
-        // Consciousness wave effects;
-        // Check condition
-if ( {) {
-  $2
-}
-          const wave_x =;
-            particle.x + Math.sin (particle.phase) * particle.amplitude;
-          const wave_y =;
-            particle.y + Math.cos (particle.phase) * particle.amplitude;
-          const wave_x = particle.x + Math.sin (particle.phase) * particle.amplitude;
-          const wave_y = particle.y + Math.cos (particle.phase) * particle.amplitude;
-;
-          ctx.stroke_style = `rgba (255, 0, 128, ${particle.opacity * 0.6})`;
-          ctx.line_width = 2;
-          ctx.begin_path ();
-          ctx.move_to (particle.x, particle.y);
-          ctx.line_to (wave_x, wave_y);
-          ctx.stroke ();        }
-        // Holographic effects;
-        // Check condition
-if ( {) {
-  $2
-}
-          const hologram_size =;
-            particle.size * (1 + Math.sin (particle.phase) * 0.3);          ctx.stroke ();
-        }
-        // Holographic effects;
-        // Check condition
-if ( {) {
-  $2
-}
-          const hologram_size =;
-            particle.size * (1 + Math.sin (particle.phase) * 0.3);
-          ctx.stroke_style = `rgba (78, 205, 196, ${particle.opacity})`;
-          ctx.line_width = 1;
-          ctx.stroke_rect (
-            particle.x - hologram_size / 2,
-            particle.y - hologram_size / 2,
-            hologram_size,
-            hologram_size);        }          ctx.stroke_style = `rgba (78, 205, 196, ${particle.opacity})`;
-          ctx.line_width = 1;
-          ctx.stroke_rect (
-            particle.x - hologram_size / 2,
-            particle.y - hologram_size / 2,
-            hologram_size,
-            hologram_size);
-        }
-        // Quantum field effects;
-        // Check condition
-if ( {) {
-  $2
-}
-          const field_size = particle.size * 3;
-          const gradient = ctx.createRadialGradient (
-            particle.x,
-            particle.y,
-            0,
-            particle.x,
-            particle.y,
-            field_size);
-          gradient.addColorStop (
-            0,
-            `rgba (139, 92, 246, ${particle.opacity * 0.8})`);
-          gradient.addColorStop (1, 'rgba (139, 92, 246, 0)');
-;
-          ctx.fill_style = gradient;
-          ctx.fill_rect (
-            particle.x - field_size / 2,
-            particle.y - field_size / 2,
-            field_size,
-            field_size);        }
-        // Standard particle rendering;
-        // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `${particle.color}${Math.floor (particle.opacity * 255);
-            .to_string (16);
-            .pad_start (2, '0')}`);
-          gradient.addColorStop (0, `rgba (139, 92, 246, ${particle.opacity * 0.8})`);
-          gradient.addColorStop (1, 'rgba (139, 92, 246, 0)');
-;
-          ctx.fill_style = gradient;
-          ctx.fill_rect (
-            particle.x - field_size / 2,
-            particle.y - field_size / 2,
-            field_size,
-            field_size);
-        }
-        // Standard particle rendering;
-        // Check condition
-if ( {) {
-  $2
-}
-          ctx.fill_style = `${particle.color}${Math.floor (particle.opacity * 255);
-            .to_string (16);
-            .pad_start (2, '0')}`;
-          ctx.begin_path ();
-          ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill ();
-        }
-        // Boundary wrapping with quantum tunneling effect;
-        // Check condition
-if ( {) {
-  $2
-}
-          // Check condition
-if (> 0.8) {) {
-  $2
-}
-            // Quantum tunneling;
-            particle.coordinate_x = Math.random () * canvas.width;
-            particle.coordinate_y = Math.random () * canvas.height;
-          } else {
-<<<<<<< HEAD
-            particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
-            particle.coordinate_y = (particle.y + canvas.height) % canvas.height;          }          ctx.begin_path ();
-          ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
-          ctx.fill ();
-        }
-        // Boundary wrapping with quantum tunneling effect;
-        // Check condition
-if ( {) {
-  $2
-}
-          // Check condition
-if (> 0.8) { // Quantum tunneling) {
-  $2
-}
-            particle.coordinate_x = Math.random () * canvas.width;
-            particle.coordinate_y = Math.random () * canvas.height;
-          } else {
-            particle.coordinate_x = (particle.x + canvas.width) % canvas.width;
-            particle.coordinate_y = (particle.y + canvas.height) % canvas.height;
-=======
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
-=======
-<<<<<<< HEAD
-
-        // Standard particle rendering
-        if (particle.type === 'particle') {
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
         // Regenerate particles
@@ -1253,42 +1012,9 @@ if ( {) {
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
-<<<<<<< HEAD
-                  left: `${(i * 5) % 100}%`
-                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-                animate={{
-                  height: [32, 64, 32]
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  left: `${(i * 5) % 100}%`
-=======
                   left: `${(i * 5) % 100}%`,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
-                animate={{
-                  height: [32, 64, 32];
-                  opacity: [0.2, 0.6, 0.2]}}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                transition={{
-                  duration: 3 + i * 0.2
-                  repeat: Infinity
-                  ease: "easeInOut"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-                  left: `${(i * 5) % 100}%`,
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                   top: `${(i * 3) % 100}%`,
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }}
                 animate={{
                   height: [32, 64, 32]
@@ -1337,21 +1063,10 @@ if ( {) {
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
-<<<<<<< HEAD
-                  duration: 4 + i * 0.3
-                  repeat: Infinity
-                  ease: "easeInOut"
-=======
 
 
                   top: `${(i * 7) % 100}%`,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -1379,68 +1094,13 @@ if ( {) {
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
                 style={{
-<<<<<<< HEAD
                   left: `${(i * 12) % 100}%`,
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
-              <motion&& motion.div
-                key={i}
-                className="absolute w-96 h-96 border border-pink-500/20 rounded-full"
-                style={{
-                  left: `${(i * 12) % 100}%`
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion.div
                   left: `${(i * 12) % 100}%`,
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
-              <motion&& motion.div
-                  left: `${(i * 12) % 100}%`,
-                  top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
-              <motion.div;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  left: `${(i * 12) % 100}%`
-=======
-                  left: `${(i * 12) % 100}%`,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
-              <motion.div
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                key={i}
-                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
-                style={{
-                  left: `${(i * 12) % 100}%`
-                  top: `${(i * 8) % 100}%`}}
-                animate={{
-                  scale: [1, 1 && 1.5, 1]
-                  opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
-                transition={{
-<<<<<<< HEAD
-                  duration: 6 + i * 0.5
-                  repeat: Infinity
-
-                  ease: "easeInOut"
-=======
-<<<<<<< HEAD
-                  duration: 6 + i * 0.5
-                  repeat: Infinity
-=======
-                  left: `${(i * 12) % 100}%`,
-=======
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: "easeInOut"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   top: `${(i * 8) % 100}%`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-                  ease: "easeInOut"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -1450,25 +1110,11 @@ if ( {) {
                   duration: 6 + i * 0.5
                   repeat: Infinity
                   ease: 'easeInOut',                }}
-<<<<<<< HEAD
-              />;
-            ))}
-          </div>;
-        )}
-      </div>
-=======
 
       </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {children}
     </div>;
   );
@@ -1553,10 +1199,6 @@ animate ();
   children;
 }</div>)   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 />) ) 
 }</div>) 
@@ -1566,16 +1208,4 @@ animate ();
 }</div>) 
 }</div> {
   children 
-<<<<<<< HEAD
 }</div>)
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-}</div>)   )
-}
-;
-=======
-}</div>)
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

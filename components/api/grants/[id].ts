@@ -2,21 +2,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
-<<<<<<< HEAD
-  GrantApplication
-  UpdateGrantPayload;
-} from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
-import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
-const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
-=======
-<<<<<<< HEAD
-  GrantApplication
-  UpdateGrantPayload;
-=======
   GrantApplication,;
   UpdateGrantPayload,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -36,7 +23,6 @@ function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -81,32 +67,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
-<<<<<<< HEAD
-=======
 
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
-=======
   ensureDir(),
 
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const { id } = req.query as { id: string }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { id } = req.query as { id: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   if (req.method === 'GET') {
     const g = readGrant(id);

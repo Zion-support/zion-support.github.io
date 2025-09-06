@@ -1,38 +1,13 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { Certification  } from '@/types/resume';
-import { format } from 'date-fns';
-interface CertificationsSectionProps {
-  certifications: Certification[]
-}
-export function CertificationsSection({ certifications }: CertificationsSectionProps) {
 
-<<<<<<< HEAD
-  const formatDate = (date: Date | string | undefined) => {
-    if (!date) return ''
-    if (typeof date === 'string') {
-      return format(new Date(date), 'MMM yyyy')
-=======
-
-=======
 import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;
@@ -40,7 +15,6 @@ export function CertificationsSection({ certifications }: CertificationsSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     return format(date, 'MMM yyyy')
   }

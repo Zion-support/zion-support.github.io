@@ -1,32 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-<<<<<<< HEAD
-=======
 
-=======
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -61,15 +43,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <span>{text}</span>
     </div>
   )
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -99,7 +72,6 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       text: "Top Rated",;
       colors: "bg-purple-500/20 text-purple-400"}},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { icon: Icon, text, colors } = badgeConfig[type];
   return (
 
@@ -112,14 +84,7 @@ export function ProfileBadge(): any ({ type, className }: ProfileBadgeProps) {;
       <span>{text}</span>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from './react';
 import { BadgeCheck, Star, Clock, Award } from './lucide-react';
 import { cn } from '@/lib / utils';

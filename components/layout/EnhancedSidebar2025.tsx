@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-]
-<<<<<<< HEAD
-=======
-=======
  ] 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ] 
-=======
  ] 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -791,15 +778,7 @@ const supportLinks = [
                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />;
               )}
             </button>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <AnimatePresence>
               {expandedSections.has(section.title) && (
                 <motion.div
@@ -857,15 +836,7 @@ const supportLinks = [
                 </div>;
               )}
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Contact Information */}
             <div className="p-6 border-b border-cyan-500/30">
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center space-x-2">
@@ -944,13 +915,6 @@ const supportLinks = [
                 {sidebarItems && sidebarItems.map((item) => (;
                   <div key={item && item.name}>;
                     <button
-<<<<<<< HEAD
-                      onClick={() => toggleCategory(item.name)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                    >
-                      <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
-=======
 
                   className="ml - 8 space - y-1";
                 >;
@@ -1044,14 +1008,7 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1076,14 +1033,7 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Service Categories */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1100,7 +1050,6 @@ const supportLinks = [
                       <div className="flex items - center space - x-3">;
                         <div className={`w - 8 h - 8 bg - gradient - to - r ${item.is_hot ? 'from - indigo - 500 to - purple - 600' : 'from - cyan - 500 to - blue - 600'} rounded - lg flex items - center justify - center`}>;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           {item.icon}
                         </div>;
                         <span className="text - gray - 300 group - hover:text - white transition - colors duration - 200">;
@@ -1113,17 +1062,7 @@ const supportLinks = [
                         }`}
                       />
                     </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <AnimatePresence>
                       {expandedCategory === item.name && (
                         <motion.div
@@ -1210,15 +1149,6 @@ const supportLinks = [
         <div className="pt-4 border-t border-gray-800 px-3">;
           <Link
             href="/contact"
-<<<<<<< HEAD
-            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
-            <span>Get Started Today</span>
-            <ArrowRight className="w-4 h-4 ml-2 inline" />
-          </Link>
-        </div>
-      </div>
-=======
 
                         </span>;
                       </div>;
@@ -1261,14 +1191,7 @@ const supportLinks = [
                 ))}
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;
@@ -1333,7 +1256,6 @@ const supportLinks = [
           </Link>;
         </div>;
       </div>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Floating Elements */}
       <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
       <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>

@@ -1,36 +1,7 @@
-<<<<<<< HEAD
-export interface NextGenAi2026Service {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface NextGenAi2026Service {
-=======
 export interface NextGenAi2026Service {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 export interface NextGenAi2026Service {;
-=======
     address: string;
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -46,12 +17,6 @@ export interface NextGenAi2026Service {;
     address: string;
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
     address: string;
   }
@@ -128,41 +93,9 @@ export const nextGenAI2026Services: NextGenAi2026Service[] = [
     category: "Next-Gen AI 2026",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
-=======
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950",
-=======
-      mobile: "+1 302 464 0950",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709";
     }
   }
-<<<<<<< HEAD
-],
-],
-=======
-<<<<<<< HEAD
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-],
-
-=======
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

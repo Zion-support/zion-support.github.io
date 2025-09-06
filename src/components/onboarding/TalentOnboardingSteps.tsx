@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus'
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker'
-export function TalentOnboardingSteps() {
-  const { user } = useAuth()
-  const onboardingStatus = useOnboardingStatus()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
@@ -97,32 +76,11 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 }
 
-<<<<<<< HEAD
-}
-import React from 'react';
-import { use_auth } from '@/hooks / use_auth';
-import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react';
-import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-export /**
- * TalentOnboardingSteps - Function description
- */
-function TalentOnboardingSteps() {
-  const { user } = use_auth ();
-  const onboarding_status = useOnboardingStatus ();
-  const steps: OnboardingStep[] = [;
-=======
 export function TalentOnboardingSteps() {
   const { user } = useAuth(),
   const onboardingStatus = useOnboardingStatus(),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const steps: OnboardingStep[] = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'profile',
       label: 'Complete your profile',
@@ -145,31 +103,11 @@ export function TalentOnboardingSteps() {
       action: 'Set',
     },
     {
-<<<<<<< HEAD
-      id: 'match',
-      label: 'Receive your first job match',
-      completed: onboarding_status.match_received,
-      link: '/talent - dashboard',
-=======
 
       id: "match",
       label: "Receive your first job match",
       completed: onboardingStatus.matchReceived,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      link: '/talent-dashboard',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      action: 'View Matches',
-    },
-  ];
-  return <OnboardingTracker steps={steps} />;
-<<<<<<< HEAD
-}
-=======
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       link: "/talent-dashboard",
       action: "View Matches"}],
   
@@ -210,9 +148,3 @@ export function TalentOnboardingSteps() {;
   return <OnboardingTracker steps={steps} />;
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

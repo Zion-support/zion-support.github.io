@@ -1,77 +1,21 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {useHireRequest} from "@/hooks/useHireRequest";
-import {TalentProfile} from "@/types/talent";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { z } from "zod",
-<<<<<<< HEAD
-import { useHireRequest } from "@/hooks/useHireRequest";
-import { TalentProfile } from "@/types/talent";
-interface UseHireRequestFormProps {
-  talent: TalentProfile;
-  on_close: () => void;
-  initialJobTitle?: string;
-  user_details?: {
-    name?: string;
-
-    email?: string
-
-    id?: string
-=======
-<<<<<<< HEAD
-import { useHireRequest } from "@/hooks/useHireRequest";
-import { TalentProfile } from "@/types/talent";
-=======
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
   initialJobTitle?: string,
   userDetails?: {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
     id?: string
-<<<<<<< HEAD
-  }
-}
-export interface FormValues {
-=======
-<<<<<<< HEAD
-  }
-}
-
-export interface FormValues {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  requesterName: string;
-  requesterEmail: string;
-  projectOverview: string;
-  timeline: string;
-<<<<<<< HEAD
-=======
     name?: string,
     email?: string,
     id?: string
-=======
   budgetMin: number,
   budgetMax: number
 }
@@ -79,8 +23,6 @@ export interface FormValues {;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { submitHireRequest } = useHireRequest();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -96,7 +38,6 @@ interface UseHireRequestFormProps {;
     email?: string,;
     id?: string;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }
 export interface FormValues {
@@ -200,19 +141,6 @@ function useHireRequestForm() {
       const result = await submitHireRequest(requestData);
       if (result && result.success) {
         onClose()
-<<<<<<< HEAD
-      }
-    } catch (error) {
-      console && console.error("Error submitting hire request:", error)
-          id: talent.id || "";
-          full_name: talent.full_name,
-          professional_title: talent.professional_title}
-        requester: {
-          name: values.requester_name;
-          email: values.requester_email,
-          id: user_details?.id;
-=======
-=======
 
           id: talent.id || "",
           full_name: talent.full_name,
@@ -227,18 +155,6 @@ function useHireRequestForm() {
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        }
-      };
-
-      const result = await submitHireRequest(requestData);
-      if (result.success) {
-        onClose()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -291,36 +207,11 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       const result = await submitHireRequest(requestData),;
       if (result.success) {;
         onClose();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
-<<<<<<< HEAD
-      console.error ("Error submitting hire request:", error);
-    } finally {
-      setIsSubmitting (false);
-    }
-=======
       console.error("Error submitting hire request:", error)
     } finally {
       setIsSubmitting(false)
-<<<<<<< HEAD
-    }
-  }
-  return {
-    form;
-    isSubmitting;
-
-    onSubmit
-<<<<<<< HEAD
-  }
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -331,11 +222,6 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
     onSubmit;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
   return {
     form;

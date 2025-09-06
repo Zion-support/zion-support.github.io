@@ -1,36 +1,9 @@
 
-<<<<<<< HEAD
 import { Droppable } from "react-beautiful-dnd",
 import { JobApplication } from "@/types/jobs",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Droppable} from "react-beautiful-dnd";
-import {JobApplication} from "@/types/jobs";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {CandidateCard} from "./CandidateCard";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Droppable } from "react-beautiful-dnd",
-import { JobApplication } from "@/types/jobs",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { CandidateCard } from "./CandidateCard";
-=======
 import { Badge } from "@/components/ui/badge",
 import { CandidateCard } from "./CandidateCard",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface KanbanColumnProps {
 
   id: string
@@ -40,11 +13,6 @@ interface KanbanColumnProps {
 
   count: number
 }
-<<<<<<< HEAD
-export function KanbanColumn({
-=======
-<<<<<<< HEAD
-=======
 
 import {Droppable} from "react-beautiful-dnd";
 import {JobApplication} from "@/types/jobs";
@@ -61,22 +29,15 @@ interface KanbanColumnProps {;
 
 export function KanbanColumn(): any ({;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   id;
   title;
   description;
   applications;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function KanbanColumn({
   id,
   title,
   description,
   applications,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -143,18 +104,7 @@ function KanbanColumn() {
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
-<<<<<<< HEAD
-                <CandidateCard
-=======
-<<<<<<< HEAD
-                <CandidateCard
-=======
                 <CandidateCard 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -221,12 +171,6 @@ export function KanbanColumn({;
             >;
               {applications.map ((application, index) => (
                 <CandidateCard;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   key={application.id}
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}

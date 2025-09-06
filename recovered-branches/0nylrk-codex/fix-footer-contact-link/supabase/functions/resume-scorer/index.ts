@@ -11,26 +11,6 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-  const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
-  const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
-  if (!openAiKey) {
-    return new Response(
-      JSON.stringify({ error: "OpenAI API key is not configured" });
-      { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  }
-  const supabase = createClient(supabaseUrl, supabaseAnonKey);
-  try {
-    const { applicationId } = await req.json();
-<<<<<<< HEAD
-=======
-=======
 
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -40,8 +20,6 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -49,10 +27,6 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -61,10 +35,7 @@ serve(async (req) => {
 
   try {
     const { applicationId } = await req.json(),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -171,31 +142,11 @@ if ( {) {
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        Bio: ${application.talent_profile?.bio |""}
-        Cover Letter: ${application.cover_letter |""}
-        Skills: ${application.talent_profile?.skills?.join(", ") |""}
-      `;
-      resumeSkills = application.talent_profile?.skills |[]
-    }
-    // 4. Prepare job details
-    const jobTitle = application.job?.title |"";
-    const jobDescription = application.job?.description |"";
-    const jobSkills = application.job?.skills |[];
-<<<<<<< HEAD
-=======
-=======
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     );
   }
 ;
@@ -277,10 +228,6 @@ if ( {) {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     // 4. Prepare job details
@@ -288,9 +235,6 @@ if ( {) {
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
@@ -461,10 +405,6 @@ if ( {) {
     let matchResult;
     try {
       // Extract JSON from the response
-<<<<<<< HEAD
-      const content = aiResult.choices[0].message.content;
-      matchResult = JSON.parse(content);
-=======
 
 
                 },
@@ -473,35 +413,9 @@ if ( {) {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
-<<<<<<< HEAD
-              }
-              "suggestion": "Recommended for Review"
-            }`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }
-        ];
-        temperature: 0.5})});
-    if (!openAIResponse.ok) {
-      const errorData = await openAIResponse.json();
-      throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
-    }
-    const aiResult = await openAIResponse.json();
-    let matchResult;
-    try {
-      // Extract JSON from the response
-      const content = aiResult.choices[0].message.content;
-      matchResult = JSON.parse(content);
-=======
               },
               "suggestion": "Recommended for Review"
             }`
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -565,10 +479,6 @@ if ( {) {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     const aiResult = await openAIResponse.json(),
@@ -580,8 +490,6 @@ if ( {) {
       matchResult = JSON.parse(content),
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
         throw new Error("Invalid response format")
@@ -684,21 +592,11 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }
       }
     );
-<<<<<<< HEAD
-=======
-=======
 
       JSON.stringify({ error: error.message }),
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-    )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -750,11 +648,6 @@ if ( {) {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 

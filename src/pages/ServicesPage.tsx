@@ -25,8 +25,6 @@ class ErrorBoundary extends React.Component {
     allServices = [...allServices, ...newServices]
     let filteredServices = allServices
 }
-<<<<<<< HEAD
-=======
 import React from 'react'
 const ServicesPage: React.FC = () => {
   return (
@@ -155,11 +153,8 @@ const ServicesPage: React.FC = () => {
 }
 export default ServicesPage
 }
-=======
 
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 const ServicesPage: React.FC = () => {
   return (
@@ -294,15 +289,4 @@ const ServicesPage: React.FC = () => {
   );
 };
 export default ServicesPage;
-<<<<<<< HEAD
-}
-    </div>);
-}
 export default ServicesPage;
-}
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-export default ServicesPage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

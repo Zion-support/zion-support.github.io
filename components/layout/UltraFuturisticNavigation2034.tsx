@@ -3,232 +3,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Network
-  Server
-  HardDrive
-  Monitor
-  Laptop
-  Watch
-  Headphones
-  Speaker
-  Mic
-  Keyboard
-  Mouse
-  CpuIcon
-  DatabaseIcon
-  CloudIcon
-  LockIcon
-  ShieldIcon
-  GlobeIcon
-  ZapIcon
-  SparklesIcon
-  BrainIcon
-  AtomIcon
-  HeartIcon
-  RocketIcon
-  ShieldIcon as ShieldIcon2
-  TargetIcon
-  MicroscopeIcon
-  StarIcon
-  ArrowRight
-  Infinity
-  Crown
-  Gem
-  Sparkles as SparklesIcon2
-  ShoppingCart
-  UserCheck
-  FileText
-  BarChart
-  PaletteIcon
-  VideoIcon
-  LockIcon as LockIcon2
-  GlobeIcon as GlobeIcon2
-  CpuIcon as CpuIcon2
-  Handshake
-  LifeBuoy
-  Activity
-  Linkedin
-  Twitter
-  Facebook
-  Instagram
-  Youtube
-  Github;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
-<<<<<<< HEAD
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Zap,;
-  Sparkles,;
-  Shield,;
-  Microscope,;
-  DollarSign,;
-  Home,;
-  Users,;
-  Briefcase,;
-  BookOpen,;
-  MessageCircle,;
-  Star,;
-  TrendingUp,;
-  Target,;
-  Layers,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  ShieldCheck,;
-  Earth,;
-  Factory,;
-  Car,;
-  Building,;
-  GraduationCap,;
-  Scale,;
-  Palette,;
-  Camera,;
-  Video,;
-  Music,;
-  Gamepad2,;
-  Heart,;
-  Leaf,;
-  Sun,;
-  Moon,;
-  Wind,;
-  Droplets,;
-  Mountain,;
-  Code,;
-  Wrench,;
-  Smartphone,;
-  BarChart3,;
-  Eye,;
-  Network,;
-  Server,;
-  HardDrive,;
-  Monitor,;
-  Laptop,;
-  Watch,;
-  Headphones,;
-  Speaker,;
-  Mic,;
-  Keyboard,;
-  Mouse,;
-  CpuIcon,;
-  DatabaseIcon,;
-  CloudIcon,;
-  LockIcon,;
-  ShieldIcon,;
-  GlobeIcon,;
-  ZapIcon,;
-  SparklesIcon,;
-  BrainIcon,;
-  AtomIcon,;
-  HeartIcon,;
-  RocketIcon,;
-  ShieldIcon as ShieldIcon2,;
-  TargetIcon,;
-  MicroscopeIcon,;
-  StarIcon,;
-  ArrowRight,;
-  Infinity,;
-  Crown,;
-  Gem,;
-  Sparkles as SparklesIcon2,;
-  ShoppingCart,;
-  UserCheck,;
-  FileText,;
-  BarChart,;
-  PaletteIcon,;
-  VideoIcon,;
-  LockIcon as LockIcon2,;
-  GlobeIcon as GlobeIcon2,;
-  CpuIcon as CpuIcon2,;
-  Handshake,;
-  LifeBuoy,;
-  Activity,;
-  Linkedin,;
-  Twitter,;
-  Facebook,;
-  Instagram,;
-  Youtube,;
-  Github,;} from 'lucide-react';import { ;
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, ;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Menu,
   X,
@@ -331,21 +105,12 @@ import {
   Twitter,
   Facebook,
   Instagram,
-<<<<<<< HEAD
-  Youtube,
-  Github,} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
-  Microscope, DollarSign, Home, Users, Briefcase,
-=======
 
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -595,63 +360,6 @@ const serviceCategories = [
     icon: AtomIcon,
     color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
     description: 'Quantum computing and beyond',
-<<<<<<< HEAD
-    services: [
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', description: 'Harness quantum computing for ML', price: '$1,999/month' };
-      { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', description: 'Decentralized AI for the future', price: '$899/month' },
-      { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', description: 'AI at the edge for real-time processing', price: '$599/month' },
-      { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', description: 'Predict climate change with AI', price: '$1,299/month' }
-    ]
-  };
-  {
-    title: ' Enterprise IT Solutions',
-    icon: CpuIcon,
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-    description: 'Autonomous enterprise infrastructure',
-    services: [
-      { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', description: 'Protect and monitor your APIs', price: '$399/month' },
-      { name: 'Customer Success Automation', href: '/customer-success-automation', description: 'Automate customer success workflows', price: '$199/month' },
-      { name: 'HR Automation Suite', href: '/hr-automation-suite', description: 'Streamline HR processes with AI', price: '$179/month' },
-      { name: 'Project Management AI', href: '/project-management-ai-platform', description: 'AI-powered project management', price: '$199/month' }
-    ]
-  };
-  {
-    title: ' Business Automation',
-    icon: ShoppingCart,
-    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
-    description: 'Streamline business operations',
-    services: [
-      { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', description: 'Automate your entire e-commerce operation', price: '$249/month' },
-      { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', description: 'Automate your entire marketing operation', price: '$279/month' },
-      { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', description: 'Real-time financial insights', price: '$349/month' },
-      { name: 'Legal Document Automation', href: '/legal-document-automation', description: 'Automate legal document creation', price: '$399/month' }
-    ]
-  };
-  {
-    title: ' Robotics & Automation',
-    icon: RocketIcon,
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
-    description: 'Intelligent automation solutions',
-    services: [
-      { name: 'Autonomous Robotics Platform', href: '/autonomous-robotics-platform', description: 'Build and deploy intelligent robots', price: '$2,499/month' };
-      { name: 'AI Content Generator Elite', href: '/ai-content-generator-elite', description: 'Professional AI content creation', price: '$49/month' },
-      { name: 'AI Guardrails Suite', href: '/ai-guardrails-suite', description: 'Policy and safety for LLM apps', price: '$199/month' },
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' }
-    ]
-  };
-  {
-    title: ' Research & Development',
-    icon: MicroscopeIcon,
-    color: 'from - orange - 600 via - red - 600 to - pink - 600',
-    description: 'Breakthrough research solutions',
-    services: [
-      { name: 'Quantum DNA Computing', href: '/quantum-dna-computing-platform', description: 'DNA-based quantum computation', price: '$35,999/month' };
-      { name: 'Space Mining Automation', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
-      { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' };
-      { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
-    ];
-  }
-=======
 
     services: [;
       {
@@ -685,18 +393,9 @@ const serviceCategories = [
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ];
   }
-<<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
-=======
 
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -766,16 +465,8 @@ const socialLinks = [
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
 ];
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2034() {
-=======
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2034() {
-=======
 
 export default function UltraFuturisticNavigation2034() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -897,21 +588,7 @@ export default function UltraFuturisticNavigation2034() {;
   return (
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
-      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>
-          <div className='flex items-center space-x-6'>
-            <div className='flex items-center space-x-2'>
-              <Phone className='w-4 h-4 text-cyan-400' />
-              <span className='hover:text-cyan-400 transition-colors'>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {contactInfo.mobile}
               </span>
             </div>
@@ -1019,37 +696,6 @@ export default function UltraFuturisticNavigation2034() {;
         </div>;
       </div>;
 
-<<<<<<< HEAD
-      {/* Main Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
-            : 'bg-transparent'
-        }`}
-      >
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='flex items-center justify-between h-20'>            {/* Logo */}      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20'
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
-          : 'bg-transparent'
-      }`}>;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex items-center justify-between h-20">;
-            <motion&& motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              className='flex items-center space-x-3'
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -1115,59 +761,15 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='hidden lg:flex items-center space-x-8'>;
               {quickLinks && quickLinks.map(link => (;
                 <Link
-<<<<<<< HEAD
-                  key={link && link.name}
-                  href={link && link.href}
-                  className='text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
-                  {link && link.name}
-                </Link>;
-              ))}
-            <div className="hidden lg:flex items-center space-x-8">;
-              {quickLinks && quickLinks.map((link) => (;
-                <Link
-                  key={link && link.name}
-                  href={link && link.href}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                  {link && link.name}
-                </Link>;
-              ))}
-=======
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-<<<<<<< HEAD
-                  {link.name}
-                </Link>
-              ))}
-=======
-=======
 
                 >
                   {link.name}
                 </Link>
               ))}
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <div className="grid grid-cols-2 gap-4">
-                    {serviceCategories.slice(0, 4).map((category) => (
-                      <div key={category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">
-                        <div className="flex items-center space-x-2 mb-2">
-                          <category.icon className="w-5 h-5 text-cyan-400" />
-                          <h3 className="text-sm font-semibold text-white">{category.title.split(' ')[0]}</h3>
-                        </div>
-                        <p className="text-xs text-gray-400 mb-2">{category.description}</p>
-                        <div className="space-y-1">
-                          {category.services.slice(0, 2).map((service) => (
-                            <Link
-=======
 ;
 const social_links = [;
   {
@@ -1371,7 +973,6 @@ function UltraFuturisticNavigation2034() {
                   className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium";
                   {link.name}
                 </Link>))}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Services Dropdown */}
               <div className='relative group'>;
                 <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>;
@@ -1393,56 +994,13 @@ function UltraFuturisticNavigation2034() {
                         <p className='text-xs text-gray-400 mb-2'>;
                           {category && category.description}
                         </p>;
-<<<<<<< HEAD
-                        <div className='space-y-1'>;
-                          {category && category.services.slice(0, 2).map(service => (;
-                            <Link
-                              key={service && service.name}
-                              href={service && service.href}
-                              className='block text-xs text-gray-300 hover:text-cyan-400 transition-colors'>              {/* Services Dropdown */}
-              <div className="relative group">;
-                <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">;
-                  <span>Services</span>;
-                  <ChevronDown className="w-4 h-4" />;
-                </button>;
-                <div className="absolute top-full left-0 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">;
-                  <div className="grid grid-cols-2 gap-4">;
-                    {serviceCategories && serviceCategories.slice(0, 4).map((category) => (;
-                      <div key={category && category.title} className="p-3 rounded-lg hover:bg-cyan-500/10 transition-colors">;
-                        <div className="flex items-center space-x-2 mb-2">;
-                          <category && category.icon className="w-5 h-5 text-cyan-400" />;
-                          <h3 className="text-sm font-semibold text-white">{category && category.title.split(' ')[0]}</h3>;
-                        </div>;
-                        <p className="text-xs text-gray-400 mb-2">{category && category.description}</p>;
-                        <div className="space-y-1">;
-                          {category && category.services.slice(0, 2).map((service) => (;
-                            <Link
-                              key={service && service.name}
-                              href={service && service.href}
-                              className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors">;
-                              {service && service.name}
-                            </Link>;
-                              key={service.name}
-                              href={service.href}
-                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
-                            >;
-=======
                         <div className='space - y-1'>;
                           {category.services.slice (0, 2).map (service => (
                             <Link;
                               key={service.name}
                               href={service.href}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-=======
-<<<<<<< HEAD
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             >
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               {service.name}
                             </Link>
                           ))}
@@ -1522,17 +1080,8 @@ function UltraFuturisticNavigation2034() {
           </div>;
         </div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1540,20 +1089,6 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.3 }}
-              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'>;
-              <div className='px-4 py-6 space-y-4'>;
-                {quickLinks && quickLinks.map(link => (                  <Link
-                    key={link && link.name}
-                    href={link && link.href}
-                    onClick={() => setIsOpen(false)}
-                    className='block text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'                  >;
-                    {link && link.name}
-                  </Link>;
-                ))}
-              className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20";
-=======
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
             >
@@ -1578,49 +1113,11 @@ function UltraFuturisticNavigation2034() {
                     {link.name}
                   </Link>
                 ))}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                {/* Mobile Services Accordion */}
-                {serviceCategories.map(category => (
-                  <div
-                    key={category.title}
-                    className='border-b border-cyan-500/20 pb-4'
-                  >
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className='flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown
-                        className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === category.title ? 'rotate-180' : ''
-                        }`}
-                      />                    </button>                {/* Mobile Services Accordion */}
-                {serviceCategories.map((category) => (
-                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
-                    <button
-                      onClick={() => toggleDropdown(category.title)}
-                      className="flex items-center justify-between w-full text-left text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                    >
-                      <span>{category.title}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                        activeDropdown === category.title ? 'rotate-180' : ''
-                      }`} />
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
                         <motion.div
-=======
         {/* Mobile Menu */}
         <AnimatePresence>;
           {is_open && (
@@ -1630,7 +1127,6 @@ function UltraFuturisticNavigation2034() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className='lg:hidden bg - black / 95 backdrop - blur - xl border - t border - cyan - 500 / 20';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >;
               <div className="px-4 py-6 space-y-4">;
                 {quickLinks && quickLinks.map((link) => (;
@@ -1769,13 +1265,6 @@ function UltraFuturisticNavigation2034() {
   );      <div className="h-20"></div>;
     </>;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </motion.div>)}
         </AnimatePresence>;
       </nav>;
@@ -1784,10 +1273,4 @@ function UltraFuturisticNavigation2034() {
     </>);      <div className="h - 20"></div>;
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

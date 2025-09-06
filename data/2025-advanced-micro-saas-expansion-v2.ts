@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export const advancedMicroSaasExpansion2025V2 = [
   {
     name: 'AI Content Factory Pro'
@@ -461,33 +453,17 @@ export const advancedMicroSaasExpansion2025V2 = [;
     category: 'Cybersecurity'
     pricing: '$549/month'
     features: [
-<<<<<<< HEAD
-      'Real-time monitoring'
-      'Threat intelligence'
-      'Automated response'
-      'Incident management'
-    ]
-  }
-=======
       'Real-time monitoring',
       'Threat intelligence',
       'Automated response',
       'Incident management',
     ],
-<<<<<<< HEAD
-  },
-];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
-    ]
-
-=======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
     ]
   }
 ];
 
-=======
 export const advancedMicroSaasExpansion2025V2 = [;
   {;
     name: 'AI Content Factory Pro',;
@@ -659,11 +635,6 @@ export const advancedMicroSaasExpansion2025V2 = [;
     features: [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

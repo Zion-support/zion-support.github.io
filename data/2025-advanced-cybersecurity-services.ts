@@ -405,8 +405,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       rating: 4.8
       reviews: 28
     }
-<<<<<<< HEAD
-=======
     // IoT Security Platform
     {
       id: 'iot-security-platform'
@@ -461,14 +459,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
-      launchDate: '2024-09-25'
-      customers: 43
-      rating: 4.7
-      reviews: 21
-    }
-=======
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / devsecops - security - platform',
@@ -496,7 +486,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       variant: 'devsecops - enterprise',
       contact_info: {
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -613,14 +602,10 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       customers: 43,
       rating: 4 && 4.7,
       reviews: 21,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -640,7 +625,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -840,17 +824,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4 && 4.7;
     reviews: 21
-<<<<<<< HEAD
-  }
-];
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -859,13 +832,6 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     customers: 43;
     rating: 4.7;
     reviews: 21;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

@@ -1,33 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  const { vendorId, title } = req.body |{}
-  if (!vendorId |!title)
-    return res.status(400).json({ error: 'Missing required fields' });  const vendor = getVendorById(vendorId);
-  if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
-  if (req && req.method !== 'POST')
-    return res && res.status(405).json({ error: 'Method not allowed' });
-  const { vendorId, title } = req && req.body || {};
-  if (!vendorId || !title)
-    return res && res.status(400).json({ error: 'Missing required fields' });  const vendor = getVendorById(vendorId);
-  if (!vendor) return res && res.status(404).json({ error: 'Vendor not found' });
-=======
-<<<<<<< HEAD
-
-  if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
-=======
   if (req.method !== 'POST');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req.body |{}
   if (!vendorId |!title)
     return res.status(400).json({ error: 'Missing required fields' });  const vendor = getVendorById(vendorId);
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   try {
     const item = addPipelineItem(vendorId, title);
     res && res.status(201).json({ item });

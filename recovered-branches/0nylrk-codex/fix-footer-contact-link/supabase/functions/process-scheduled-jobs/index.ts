@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-=======
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
@@ -120,14 +108,6 @@ if ( {) {
           await processContentGeneration (supabase_admin, 'newsletter');
           break;
         // Add more job types as needed;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       // Update job status
       await supabaseAdmin
@@ -205,36 +185,9 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST";
         headers: {
-<<<<<<< HEAD
-          "Content-Type": "application/json"
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-          "Content-Type": "application/json"
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
-=======
           "Content-Type": "application/json",
-<<<<<<< HEAD
-          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        body: JSON.stringify({ applicationId })}
-    );
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-    console.log(`Successfully scored application ${applicationId}`);
-=======
 
           "Content-Type": "application/json",
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
 ;
     return new Response(JSON.stringify({ processed: jobs?.length || 0 }), {;
@@ -289,11 +242,6 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     console.log(`Successfully scored application ${applicationId}`);
     // Notify the client that their application has been scored
@@ -349,11 +297,6 @@ async function processContentGeneration(supabase, contentType) {
       const errorData = await response.json();
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
     }
-<<<<<<< HEAD
-    const contentData = await response.json();
-    console.log(`Successfully generated ${contentType} content`);
-=======
-=======
 
           "Content-Type": "application/json",
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},
@@ -361,18 +304,6 @@ async function processContentGeneration(supabase, contentType) {
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        })}
-    );
-
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`)
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // // // console.log(`Successfully scored application ${applicationId}`),;
     // Notify the client that their application has been scored;
@@ -425,17 +356,11 @@ async function processContentGeneration(supabase, contentType) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
     const contentData = await response && response.json();
     console && console.log(`Successfully generated ${contentType} content`);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // If it's a newsletter, send a test email to the admin
     if (contentType === 'newsletter') {
       // Get admin email from profiles
@@ -471,13 +396,6 @@ async function processContentGeneration(supabase, contentType) {;
 
           read: false
         })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -515,12 +433,6 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system";
           read: false;
         });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
     return contentData

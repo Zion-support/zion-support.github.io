@@ -1,27 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  BarChart
-  DollarSign
-  LineChart
-  TrendingUp
-  Users
-} from "lucide-react";
-<<<<<<< HEAD
-=======
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -33,22 +10,14 @@ export function PartnerDashboard() {
     pendingRevenue: 200.0
   }
 
-=======
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -147,16 +116,7 @@ export function PartnerDashboard() {
         </CardContent>
       </Card>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -266,13 +226,6 @@ export function PartnerDashboard() {;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     </div>);
 }

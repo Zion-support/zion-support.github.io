@@ -1,78 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {useToast} from "@/hooks/use-toast";
-import {useAuth} from "@/hooks/useAuth";
-import {ContractTemplate} from "@/types/contracts";
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export function useContractTemplates() {;
-  const { user, isAuthenticated } = useAuth();
-  const queryClient = useQueryClient();
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from "react",
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { ContractTemplate } from "@/types/contracts";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export function useContractTemplates() {
-  const { user, isAuthenticated } = useAuth();
-
-  const queryClient = useQueryClient();
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-  // Fetch templates for the current user
-  const {
-    data: templates = []
-    isLoading: isLoadingTemplates
-    error: templatesError
-  } = useQuery({
-    queryKey: ['contractTemplates', user?.id];
-    queryFn: async () => {
-      if (!isAuthenticated |!user) {
-        return []
-<<<<<<< HEAD
-      }
-      const { data, error } = await supabase
-        .from('contract_templates')
-        .select('*')
-        .order('is_default', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (error) {
-        throw error
-=======
-<<<<<<< HEAD
-      }
-      const { data, error } = await supabase
-        .from('contract_templates')
-        .select('*')
-        .order('is_default', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (error) {
-        throw error
-<<<<<<< HEAD
-      }
-      return data as ContractTemplate[]
-    }
-    enabled: isAuthenticated && !!user
-  });
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -104,11 +34,6 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
       return data as ContractTemplate[]
     }
@@ -135,8 +60,6 @@ export function useContractTemplates() {;
             .update({ is_default: false })
             .eq('user_id', user && user.id)
             .eq('is_default', true)
-<<<<<<< HEAD
-=======
 
 import { useState } from './react';
 import { use_query, use_mutation, useQueryClient } from '@tanstack / react - query';
@@ -168,13 +91,8 @@ if ( {) {
 }
         return [];
       }
-<<<<<<< HEAD
-    }
-=======
 
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 ;
       // Check condition
@@ -215,7 +133,6 @@ if ( {) {
             .update ({ is_default: false });
             .eq ('user_id', user.id);
             .eq ('is_default', true);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         // Insert the new template
         const { data, error } = await supabase
@@ -233,17 +150,8 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
-    }
-=======
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -282,35 +190,8 @@ if ( {) {
             .eq('user_id', user && user.id)
             .eq('is_default', true)
             .neq('id', templateId)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        }
-        // Update the template
-        const { data, error } = await supabase
-          .from('contract_templates')
-          .update({
-            title: title;
-            template_data: templateData;
-            is_default: isDefault
-            updated_at: new Date().toISOString()
-          })
-          .eq('id', templateId)
-          .eq('user_id', user.id)
-          .select()
-          .single();
-        if (error) throw error;
-        return data as ContractTemplate
-      } finally {
-        setIsLoading(false)
-      }
-<<<<<<< HEAD
-    }
-=======
 
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -350,7 +231,6 @@ if ( {) {
             .eq('user_id', user.id);
             .eq('is_default', true);
             .neq('id', templateId);
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         }
         // Update the template
         const { data, error } = await supabase
@@ -370,17 +250,8 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
-    }
-=======
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -527,16 +398,7 @@ if (throw error) {
       toast({
         title: "Default template set"
         description: "Default contract template has been updated."})
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onError: (error: Error) => {
       console && console.error("Error setting default template:", error);
       toast({
@@ -554,9 +416,6 @@ if (throw error) {
     deleteTemplate
 
     setDefaultTemplate
-<<<<<<< HEAD
-=======
-=======
     on_success: () => {
       query_client.invalidate_queries ({ query_key: ['contract_templates', user?.id] });
       toast ({
@@ -580,11 +439,5 @@ if (throw error) {
     update_template;
     delete_template,
     setDefaultTemplate;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

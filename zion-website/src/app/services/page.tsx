@@ -164,33 +164,10 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* Service Process */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Our Process</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            How We Deliver Results
-          </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our proven methodology ensures successful project delivery and maximum value
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             How We Deliver Results
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
@@ -219,35 +196,12 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* Why Choose Us */}
-<<<<<<< HEAD
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl lg:text - center & quot;>;
-          <h2 className=&quot;text - base font - semibold leading - 7 text - blue - 400 & quot;>Why Choose Us</h2>;
-          <p className=&quot;mt - 2 text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            The Zion Tech Group Advantage;
-          </p>;
-          <p className=&quot;mt - 6 text - lg leading - 8 text - gray - 300 & quot;>;
-            Discover what sets us apart and why leading organizations choose us for their AI transformation.;
-          </p>;
-        </div>;
-        <div className=&quot;mx - auto mt - 16 max - w-2xl sm:mt - 20 lg:mt - 24 lg:max - w-none & quot;>;
-          <dl className=&quot;grid max - w-xl grid - cols - 1 gap - x-8 gap - y-16 lg:max - w-none lg:grid - cols - 2&quot;>;
-            {reasonsToChoose.map ((reason) => (
-              <div key={reason.name} className=&quot;flex flex - col group & quot;>;
-                <dt className=&quot;flex items - center gap - x-3 text - base font - semibold leading - 7 text - white & quot;>;
-                  <reason.icon className=&quot;h - 5 w - 5 flex - none text - blue - 400 & quot; aria - hidden=&quot;true & quot; />;
-=======
 
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             The Zion Tech Group Advantage
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -260,8 +214,6 @@ export default function ServicesPage() {
               <div key={reason.name} className="flex flex-col group">
                 <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
                   <reason.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {reason.name}
                 </dt>;
                 <dd className=&quot;mt - 4 flex flex - auto flex - col text - base leading - 7 text - gray - 300 & quot;>;
@@ -272,41 +224,11 @@ export default function ServicesPage() {
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-<div className=&quot;mx - auto mt - 32 max - w-7xl px - 6 sm:mt - 40 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl text - center & quot;>;
-          <h2 className=&quot;text - 3xl font - bold tracking - tight text - white sm:text - 4xl & quot;>;
-            Ready to get started?;
-          </h2>;
-          <p className=&quot;mx - auto mt - 6 max - w-xl text - lg leading - 8 text - gray - 300 & quot;>;
-            Let's discuss how our AI services can transform your business and accelerate your growth.;
-          </p>;
-          <div className=&quot;mt - 10 flex items - center justify - center gap - x-6 & quot;>;
-            <a;
-              href=&quot;/contact & quot;
-              className=&quot;rounded - md bg - blue - 600 px - 3.5 py - 2.5 text - sm font - semibold text - white shadow - sm hover:bg - blue - 500 focus - visible:outline focus - visible:outline - 2 focus - visible:outline - offset - 2 focus - visible:outline - blue - 600 transition - all duration - 200 hover:scale - 105 & quot;
-            >;
-              Schedule Consultation;
-            </Link>;
-            <a href=&quot;/solutions & quot; className=&quot;text - sm font - semibold leading - 6 text - white hover:text - blue - 400 transition - colors duration - 200 & quot;>;
-              View Solutions <span aria - hidden=&quot;true & quot;></span>;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-}
-=======
 
 
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
@@ -330,5 +252,3 @@ export default function ServicesPage() {
 };
 
 export default Page;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

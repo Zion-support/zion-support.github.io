@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import { Project } from '@/types/projects';
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Project  } from '@/types/projects';
-import { useState } from "react",
-=======
 import { Project } from '@/types/projects'
 import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Star } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -47,17 +35,10 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview
   const hasLeftReview = userReview != null
 
-<<<<<<< HEAD
-=======
 
   const canLeaveReview = isCompleted && (isClient || isTalent) && !userReview,
   const hasLeftReview = userReview != null,
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -70,21 +51,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           submit feedback
         </CardDescription>
       </CardHeader>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <CardContent>
-        {isCompleted ? (
-          <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
@@ -117,27 +85,12 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review;
                       </Button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   </div>;
                 ) : null}
               </div>;
             )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <ReviewsList
               reviews = {reviews,}
               isLoading = {isLoading,}
@@ -169,22 +122,14 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     </Card>
   )
 }
-<<<<<<< HEAD
-=======
 
 }
 
-=======
 ;
             <ReviewsList;
               reviews={reviews}
               isLoading={isLoading}
               onReportReview={reportReview}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           </div>
         ) : (
@@ -195,34 +140,11 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
             </p>
           </div>
         )}
-<<<<<<< HEAD
-      </CardContent>
-      {/* Review Modal */}
-      {(isClient |isTalent) && (
-        <LeaveReviewModal
-          projectId = {project.id,}
-          revieweeId = {revieweeId,}
-          revieweeName = {revieweeName,}
-          isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),}
-        />
-      )}
-<<<<<<< HEAD
-    </Card>
-  )
-}
-}
-=======
     </Card>;
   );
 };
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { Project } from '@/types / projects';
 import { useState } from 'react';
 import { Star } from 'lucide-react';
@@ -332,14 +254,5 @@ function ProjectReviewSection() {
         />)}
     </Card>);
 }
-<<<<<<< HEAD
-}
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

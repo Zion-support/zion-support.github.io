@@ -2,20 +2,6 @@
 import React from "react";
 import Head from "next/head";
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star
-<<<<<<< HEAD
-=======
-=======
   Phone,
   Mail,
   MapPin,
@@ -23,24 +9,14 @@ import {
   ArrowRight,
   Shield,
   Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-<<<<<<< HEAD
-    s.link.endsWith("/quantum-internet-security-platform")
-=======
-<<<<<<< HEAD
-    s.link.endsWith("/quantum-internet-security-platform")
-=======
 
     s.link.endsWith("/quantum-internet-security-platform"),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
   if (!service) return null;
 
@@ -153,9 +129,6 @@ function QuantumInternetSecurityPage() {
   // Check condition
 if (return null) {
   $2
-<<<<<<< HEAD
-=======
-=======
                 className="w-full"
               >
                 Request a Security Demo
@@ -181,14 +154,6 @@ if (return null) {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD:pages-disabled/quantum-iot.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main:pages-disabled/quantum-iot.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-internet-security-platform.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
   return (
     <UltraAdvancedFuturisticBackground>;

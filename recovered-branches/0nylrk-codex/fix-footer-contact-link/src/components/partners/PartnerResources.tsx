@@ -1,32 +1,7 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-=======
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ResourceItem {
 
   id: string
@@ -123,23 +98,10 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
-<<<<<<< HEAD
-                    {resource && resource.type === 'link' ? 'Visit Link' : 'Download'}
-                  </Button>;
-                </CardContent>;
-              </Card>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             ))}
           </div>
         </CardContent>
@@ -193,40 +155,7 @@ export function PartnerResources() {
       </Card>
     </div>
   )
-<<<<<<< HEAD
-          <CardDescription>;
-            Best practices for promoting the Zion AI Marketplace;
-          </CardDescription>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
-            <h3 className="text-lg font-semibold text-white">Do's</h3>;
-            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">;
-              <li>Use our official brand assets from the resources provided</li>;
-              <li>Share your unique referral link in your content</li>;
-              <li>Highlight the benefits of the Zion AI Marketplace for both talent and clients</li>;
-              <li>Be transparent that you're a partner and may earn from referrals</li>;
-              <li>Focus on how the platform can help your audience solve their AI talent needs</li>;
-            </ul>;
-          </div>;
-
-          <div className="space-y-2">;
-            <h3 className="text-lg font-semibold text-white">Don'ts</h3>;
-            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">;
-              <li>Make unrealistic promises about earnings or results</li>;
-              <li>Use manipulative or misleading marketing tactics</li>;
-              <li>Spam your referral link across unrelated content</li>;
-              <li>Modify or alter our brand assets in unauthorized ways</li>;
-              <li>Create fake accounts or use bots to generate referrals</li>;
-            </ul>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </div>;
         </CardContent>;
       </Card>;
@@ -250,16 +179,6 @@ export function PartnerResources() {
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
-    </div>);
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

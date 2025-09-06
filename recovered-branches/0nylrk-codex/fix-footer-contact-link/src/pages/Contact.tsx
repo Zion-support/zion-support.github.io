@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import {useState} from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Card} from "@/components/ui/card";
-import {toast} from "@/components/ui/use-toast";
-import z from "zod";
-import {ChatAssistant} from "@/components/ChatAssistant";
-import {Mail, MessageSquare, MapPin, Phone} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -32,53 +10,18 @@ import { Card } from "@/components/ui/card",
 import { toast } from "@/components/ui/use-toast",
 import z from "zod",
 import { ChatAssistant } from "@/components/ChatAssistant",
-<<<<<<< HEAD
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-export default function Contact() {
-  const [formData, setFormData] = useState({
-
-    name: ""
-    email: ""
-    subject: ""
-
-    message: ""
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-=======
-<<<<<<< HEAD
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-=======
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-export default function Contact() {
-  const [formData, setFormData] = useState({
-
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-<<<<<<< HEAD
-    message: "";
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     message: ""
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -239,19 +182,9 @@ export default function Contact() {
                     required
                   />
                 </div>
-<<<<<<< HEAD
-                <Button
-                  type="submit"
-=======
-<<<<<<< HEAD
-                <Button
-                  type="submit"
-=======
 
                 <Button 
                   type="submit" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
                   disabled={isSubmitting}>;
                   {isSubmitting ? "Sending..." : "Send Message"}
@@ -377,15 +310,6 @@ export default function Contact() {
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Chat Assistant Modal */}
       {isChatOpen && (;
         <ChatAssistant

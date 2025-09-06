@@ -1,23 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
-import {Search, Filter} from "lucide-react";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
@@ -27,22 +8,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
 import { Search, Filter } from "lucide-react",
-<<<<<<< HEAD
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-=======
-<<<<<<< HEAD
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-=======
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -137,8 +104,6 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false
-<<<<<<< HEAD
-=======
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -247,12 +212,6 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -348,15 +307,7 @@ export default function SupportRequests() {;
                   className="pl-10"
                 />
               </div>
-<<<<<<< HEAD
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-=======
-<<<<<<< HEAD
-              <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
-=======
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -367,15 +318,7 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
-=======
-<<<<<<< HEAD
-              <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
-=======
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -386,15 +329,7 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
-<<<<<<< HEAD
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
-=======
-<<<<<<< HEAD
-              <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
-=======
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -443,11 +378,8 @@ export default function SupportRequests() {;
                               ? 'secondary'
                               : 'outline'
                           }>
-<<<<<<< HEAD
-=======
 
                   onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
 
 ;
     return true;
@@ -609,12 +541,6 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             {request.status}
                           </Badge>
                         </TableCell>

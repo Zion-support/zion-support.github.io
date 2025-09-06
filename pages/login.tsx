@@ -1,405 +1,26 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Layout from "./components/Layout";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 import {
-=======
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Layout from './components/Layout';
->>>>>>> origin/automation-improvements-final
 import {
-<<<<<<< HEAD
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Cloud,
-  Brain,
-  Code,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Unlock,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  DizzyFace2,
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import Layout from "./components / Layout";
 import {
-<<<<<<< HEAD
-  Mail,
-  Lock,
-  Eye,
-  EyeOff,
-  ArrowRight,
-  CheckCircle,
-  AlertCircle,
-  User,
-  Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Cloud,
-  Brain,
-  Code,
-  Settings,
-  Wrench,
-  Cog,
-  Activity,
-  PieChart,
-  BarChart,
-  TrendingUp,
-  DollarSign,
-  ShoppingCart,
-  Home,
-  Trash2,
-  Camera,
-  Heart,
-  ClipboardList,
-  TreePine,
-  Droplets,
-  Building,
-  Rocket,
-  Lightbulb,
-  Target,
-  MessageSquare,
-  HelpCircle,
-  Info,
-  XCircle,
-  Plus,
-  Minus,
-  ChevronUp,
-  ChevronRight,
-  ChevronLeft,
-  ChevronDown,
-  ArrowUp,
-  ArrowDown,
-  ArrowLeft,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  RotateCw,
-  RefreshCw,
-  Upload,
-  Share,
-  Copy,
-  Edit,
-  Trash,
-  Save,
-  Unlock,
-  Bell,
-  BellOff,
-  Star as StarIcon,
-  Heart as HeartIcon,
-  ThumbsUp,
-  ThumbsDown,
-  MessageCircle,
-  Send,
-  Paperclip,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Sad,
-  Surprised,
-  Wink,
-  Kiss,
-  Tongue,
-  Wink2,
-  KissWinkHeart,
-  KissClosedEyes,
-  StuckOutTongue,
-  StuckOutTongueWinkingEye,
-  StuckOutTongueClosedEyes,
-  Disappointed,
-  Worried,
-  Angry2,
-  Rage,
-  Cry,
-  Scream,
-  Confounded,
-  Hugging,
-  Smirk,
-  NoMouth,
-  NeutralFace,
-  Expressionless,
-  Unamused,
-  RollingEyes,
-  Thinking,
-  LyingFace,
-  HandOverMouth,
-  ShushingFace,
-  ExplodingHead,
-  CowboyHatFace,
-  DisguisedFace,
-  Sunglasses,
-  NerdFace,
-  MonocleFace,
-  Confused,
-  WorriedFace,
-  SlightlyFrowningFace,
-  OpenMouth,
-  Hushed,
-  Astonished,
-  Flushed,
-  PleadingFace,
-  FrowningFace,
-  AnguishedFace,
-  FearfulFace,
-  ColdSweat,
-  DisappointedRelieved,
-  CryFace,
-  LoudlyCryingFace,
-  ScreamFace,
-  StuckOutTongueFace,
-  DroolingFace,
-  UnamusedFace,
-  SweatSmile,
-  Sweat,
-  WearyFace,
-  TiredFace,
-  SleepyFace,
-  YawningFace,
-  DizzyFace,
-  ExplodingHeadFace,
-  CowboyHatFace2,
-  DisguisedFace2,
-  SunglassesFace,
-  NerdFace2,
-  MonocleFace2,
-  ConfusedFace,
-  WorriedFace2,
-  SlightlyFrowningFace2,
-  OpenMouthFace,
-  HushedFace,
-  AstonishedFace,
-  FlushedFace,
-  PleadingFace2,
-  FrowningFace2,
-  AnguishedFace2,
-  FearfulFace2,
-  ColdSweatFace,
-  DisappointedRelievedFace,
-  CryFace2,
-  LoudlyCryingFace2,
-  ScreamFace2,
-  StuckOutTongueFace2,
-  DroolingFace2,
-  UnamusedFace2,
-  SweatSmileFace,
-  SweatFace,
-  WearyFace2,
-  TiredFace2,
-  SleepyFace2,
-  YawningFace2,
-  DizzyFace2,
-=======
 
 import {;
   Mail,;
@@ -577,39 +198,16 @@ import {;
   SleepyFace2,;
   YawningFace2,;
   DizzyFace2,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function LoginPage() {
-  const [formData, setFormData] = useState({
-    email: ""
-    password: ""
-export default function LoginPage() {;
-  const [formData, setFormData] = useState({;
-    email: "",;
-    password: "",;
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-=======
->>>>>>> origin/automation-improvements-final
-=======
   DizzyFace2
 } from 'lucide-react';
-=======
   DizzyFace2,
 } from "lucide-react";
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
   Mail
@@ -788,40 +386,13 @@ export default function LoginPage() {;
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD
-    email: ""
-    password: ""
-=======
     email: "",
     password: "",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  const [error, setError] = useState("");
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [error, setError] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -829,22 +400,10 @@ export default function LoginPage() {
     setFormData(prev => ({
       ...prev,
       [name]: value
-<<<<<<< HEAD
       ...prev
       [name]: value
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
-=======
-      ...prev
-      [name]: value
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
 
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
   const [error, setError] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -852,20 +411,11 @@ export default function LoginPage() {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }));
   }
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-=======
     setIsLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     const { name, value } = e && e.target;
@@ -891,13 +441,6 @@ export default function LoginPage() {
       }
     } catch (err) {;
       setError("Login failed. Please try again.");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
     setError('');
 
     try {
@@ -913,11 +456,6 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError('Login failed. Please try again.');
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
     setError("");
 
     try {
@@ -933,9 +471,6 @@ export default function LoginPage() {
       }
     } catch (err) {
       setError("Login failed. Please try again.");
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     } finally {
     } finally {;
       setIsLoading(false);
@@ -945,32 +480,12 @@ export default function LoginPage() {
     <Layout>
       <Head>
         <title>Login - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <meta
           name="description"
           content="Sign in to your Zion Tech Group account to access your dashboard and services."
         />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
         <meta name="description" content="Sign in to your Zion Tech Group account to access your dashboard and services." />
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       </Head>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -987,27 +502,8 @@ export default function LoginPage() {
               Sign in to your account
             </h2>
             <p className="mt-2 text-sm text-gray-600">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Or{" "}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              Or{" "}
               Or{' '}
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-              Or{' '}
-=======
               Or{" "}
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500"
@@ -1033,33 +529,14 @@ export default function LoginPage() {
                 </motion && motion.div>;
               )}
               <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-=======
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   Email address
                 </label>
                 <div className="relative">
@@ -1091,35 +568,12 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <label
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   Password
                 </label>
                 <div className="relative">
@@ -1172,35 +626,12 @@ export default function LoginPage() {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                   />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <label
                     htmlFor="remember-me"
                     className="ml-2 block text-sm text-gray-900"
                   >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
                   <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     Remember me
                   </label>
                 </div>
@@ -1214,8 +645,6 @@ export default function LoginPage() {
                 </div>
               </div>
               <div>
-<<<<<<< HEAD
-=======
                 <button
                   type="submit"
                   disabled={isLoading}
@@ -1241,10 +670,6 @@ export default function LoginPage() {
                   <div className="w-full border-t border-gray-300" />
                 </div>
                 <div className="relative flex justify-center text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   />;
                   <label
                     htmlFor="remember-me"
@@ -1417,47 +842,11 @@ if ( {) {
                 </div>;
               </div>;
 
-<<<<<<< HEAD
-              <div>;
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">;
-                  {isLoading ? (;
-                    <div className="flex items-center">;
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>;
-                      Signing in...;
-                    </div>;
-                  ) : (;
-                    <div className="flex items-center">;
-                      Sign in;
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />;
-                    </div>;
-                  )}
-                </button>
-              </div>
-            </form>
-            <div className="mt-6">
-              <div className="relative">
-                <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-gray-300" />
-                </div>
-                <div className="relative flex justify-center text-sm">
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
+                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
                   <span className="px-2 bg-white text-gray-500">
                     Or continue with
                   </span>
-=======
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
->>>>>>> origin/automation-improvements-final
-=======
-                  <span className="px-2 bg-white text-gray-500">Or continue with</span>
-=======
-                  <span className="px-2 bg-white text-gray-500">
-                    Or continue with
-                  </span>
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
               </div>
               <div className="mt-6 grid grid-cols-2 gap-3">
@@ -1479,27 +868,8 @@ if ( {) {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p className="text-sm text-gray-600">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Don't have an account?{" "}
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-              Don't have an account?{" "}
               Don't have an account?{' '}
-<<<<<<< HEAD
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-              Don't have an account?{' '}
-=======
               Don't have an account?{" "}
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Link
                 href="/contact"
                 className="font-medium text-blue-600 hover:text-blue-500">;

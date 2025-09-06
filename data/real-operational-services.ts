@@ -1,87 +1,11 @@
-<<<<<<< HEAD
-export interface RealOperationalService {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface RealOperationalService {
-=======
 export interface RealOperationalService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-<<<<<<< HEAD
-  real_implementation: boolean;
-  contact_info: {
-    mobile: string;
-    email: string;
-
-    address: string;
-  }
-export const realOperationalServices: RealOperationalService[] = [
-  {
-    id: 'operational-intelligence'
-    name: 'Operational Intelligence Platform'
-    tagline: 'Real-time operational insights and optimization'
-    price: '$99/month'
-    description:
-      'Comprehensive operational intelligence platform for monitoring and optimizing business operations.'
-    features: [
-      'Real-time monitoring'
-      'Performance analytics'
-      'Operational insights'
-      'Optimization recommendations'
-      'Alert system'
-    ]
-    link: '/services/operational-intelligence'
-    category: 'Operational Services'
-    realImplementation: true
-    contactInfo: {
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
-];      mobile: "+1 302 464 0950";
-
-      email: "kleber@ziontechgroup.com";
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup && ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  }
-];
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-=======
   realImplementation: boolean;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-=======
 export interface RealOperationalService {;
-=======
     address: string;
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -97,11 +21,6 @@ export interface RealOperationalService {;
     address: string;
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export const realOperationalServices: RealOperationalService[] = [
   {
@@ -118,27 +37,8 @@ export const realOperationalServices: RealOperationalService[] = [
     link: "/services/operational-intelligence", category: "Operational Services",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

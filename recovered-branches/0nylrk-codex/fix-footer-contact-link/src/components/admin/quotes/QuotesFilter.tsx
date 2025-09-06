@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import {Calendar, RefreshCw} from "@/components/icons";
-import {Card, CardContent} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
-import {Button} from "@/components/ui/button";
-import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
-import {format} from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from "react",
 import { Calendar, RefreshCw } from "@/components/icons",
 import { Card, CardContent } from "@/components/ui/card",
@@ -25,25 +6,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { Button } from "@/components/ui/button",
 import { Calendar as CalendarComponent } from "@/components/ui/calendar",
-<<<<<<< HEAD
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-=======
-<<<<<<< HEAD
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
-=======
 import { format } from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface QuotesFilterProps {
 
   searchQuery: string
@@ -57,11 +22,6 @@ interface QuotesFilterProps {
 
   onReset: () => void
 }
-<<<<<<< HEAD
-export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-=======
-<<<<<<< HEAD
-=======
 
 interface QuotesFilterProps {;
   searchQuery: string,;
@@ -83,147 +43,11 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   archiveFilter;
   setArchiveFilter;
   dateRange;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
-<<<<<<< HEAD
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  searchQuery;
-import React from './react';
-import { Calendar, RefreshCw } from '@/components / icons';
-import { Card, CardContent } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components / ui / popover';
-import { Button } from '@/components / ui / button';
-import { Calendar, as, CalendarComponent } from '@/components / ui / calendar';
-import { format } from './date - fns';
-import type { DateRange } from "@/types / date_range";
-import type { QuoteStatus } from "@/types / quotes";
-interface QuotesFilterProps {
-  search_query: string,
-  setSearchQuery: (value: string) => void,
-  status_filter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archive_filter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void,
-  date_range: DateRange | undefined,
-  setDateRange: (range: DateRange | undefined) => void,
-  on_reset: () => void;
-}
-export const QuotesFilter: React.FC < QuotesFilterProps> = ({
-  search_query;
-  setSearchQuery;
-  status_filter;
-  setStatusFilter;
-  archive_filter;
-  setArchiveFilter;
-  dateRange;
-
-  setDateRange
-  onReset
-}) => {
-  setDateRange,;
-  onReset;
-}) => {;
-  return (
-    <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">;
-      <CardContent className="p-6">;
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">;
-          <div className="relative">;
-            <Input
-              placeholder="Search quotes..."
-              className="pl-10 bg-zion-blue border-zion-blue-light text-white"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-            />
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Status</p>
-            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Status" />
-              </SelectTrigger>
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectItem value="all">All Statuses</SelectItem>
-                <SelectItem value="new">New</SelectItem>
-                <SelectItem value="in_review">In Review</SelectItem>
-                <SelectItem value="responded">Responded</SelectItem>
-                <SelectItem value="accepted">Accepted</SelectItem>
-                <SelectItem value="closed">Closed</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-                <SelectValue placeholder="Archive Status" />
-              </SelectTrigger>
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">
-                <SelectItem value="active">Active Only</SelectItem>
-                <SelectItem value="archived">Archived Only</SelectItem>
-                <SelectItem value="all">All Quotes</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
-            <Popover>
-              <PopoverTrigger asChild>
-                <SelectItem value="all">All Statuses</SelectItem>;
-                <SelectItem value="new">New</SelectItem>;
-                <SelectItem value="in_review">In Review</SelectItem>;
-                <SelectItem value="responded">Responded</SelectItem>;
-                <SelectItem value="accepted">Accepted</SelectItem>;
-                <SelectItem value="closed">Closed</SelectItem>;
-              </SelectContent>;
-            </Select>;
-          </div>;
-
-          <div>;
-            <p className="text-zion-slate-light text-sm mb-2">Archive</p>;
-            <Select value={archiveFilter} onValueChange={(value: any) => setArchiveFilter(value)}>;
-              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
-                <SelectValue placeholder="Archive Status" />;
-              </SelectTrigger>;
-              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
-                <SelectItem value="active">Active Only</SelectItem>;
-                <SelectItem value="archived">Archived Only</SelectItem>;
-                <SelectItem value="all">All Quotes</SelectItem>;
-              </SelectContent>;
-            </Select>;
-          </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <div>;
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
             <Popover>;
               <PopoverTrigger asChild>;
-<<<<<<< HEAD
-                <Button
-                  variant="outline"
-                  className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white">;
-                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />;
-                  {dateRange?.from ? (;
-                    dateRange && dateRange.to ? (;
-                      <>;
-                        {format(dateRange && dateRange.from, "LLL dd, y")} -{" "}
-                        {format(dateRange && dateRange.to, "LLL dd, y")}
-                      </>;
-                    ) : (;
-                      format(dateRange && dateRange.from, "LLL dd, y");
-=======
                 <Button;
                   variant="outline";
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white";
@@ -237,29 +61,15 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                       </>;
                     ) : (;
                       format(dateRange.from, "LLL dd, y");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     );
                   ) : (;
                     <span>Date range</span>;
                   )}
-<<<<<<< HEAD
-                </Button>;
-              </PopoverTrigger>;
-              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
-                <CalendarComponent
-                  initialFocus
-=======
                 </Button>
               </PopoverTrigger>
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
@@ -282,53 +92,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-}
-
-                />;
-              </PopoverContent>;
-            </Popover>;
-          </div>;
-        </div>;
-
-        <div className="mt-4 flex justify-end">;
-          <Button
-            variant="outline" 
-            onClick={onReset}
-            className="border-zion-blue-light text-zion-slate-light">;
-            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-};
-        <div className="mt - 4 flex justify - end">;
-          <Button;
-            variant="outline";
-            on_click={on_reset}
-            className="border - zion - blue - light text - zion - slate - light";
-          >;
-            <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
-          </Button>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-=======
 
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

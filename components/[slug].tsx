@@ -25,17 +25,9 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-<<<<<<< HEAD
-export default function DynamicServicePage() {
-=======
-<<<<<<< HEAD
-export default function DynamicServicePage() {
-=======
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -385,21 +377,10 @@ function collectAllServices(): Svc[] {
     realMarketServices as Svc[]
     realVerifiedServices as unknown as Svc[]
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 // Static export support: generate root-level pages for service slugs;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Static export support: generate root-level pages for service slugs
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -435,16 +416,7 @@ function normalizeSlug(): any (value: string): string {;
     return null
   }
 }
-<<<<<<< HEAD
 export const getStaticPaths: GetStaticPaths = async () => {;
-export const getStaticPaths: GetStaticPaths = async () => {;
-=======
-<<<<<<< HEAD
-
-=======
-export const getStaticPaths: GetStaticPaths = async () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const services = collectAllServices();
   const candidateSlugs = new Set<string>()
   // Gather existing root-level page slugs to avoid conflicts
@@ -509,38 +481,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
-<<<<<<< HEAD
-      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
-    for (const entry of entries) {
-      if (&& /\.tsx?$/.test (entry.name)) {) {
-  $2
-}
-        const base = entry.name.replace (/\.(tsx | ts | jsx | js)$/i, '');
-        if () {) {
-  $2
-}
-          static_slugs.add (base.toLowerCase ());
-        }
-    }
-  } catch {}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
   return {
-<<<<<<< HEAD
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
-=======
-<<<<<<< HEAD
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
-=======
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -554,8 +500,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     fallback: true
   }
 }
@@ -571,61 +515,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
-<<<<<<< HEAD
-
-  return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
-    fallback: true;
-  }
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed, the component resolves the service client-side.;
-  return { props: {} }
-}
-
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter (
-    slug => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),
-    fallback: true,
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
-    fallback: true;
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
-}
-;
-=======
-<<<<<<< HEAD
-  return { props: {} }
-}
-
-=======
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   return { props: {} };
 };
-=======
 
 };
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

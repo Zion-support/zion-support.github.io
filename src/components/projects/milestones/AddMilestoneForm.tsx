@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 type MilestoneFormValues = z.infer<typeof formSchema>
 import React from 'react'
 import { useForm } from 'react-hook-form'
@@ -24,13 +16,8 @@ import {
   FormMessage} from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD
-  Popover
-  PopoverContent
-=======
   Popover;
   PopoverContent;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   PopoverTrigger} from '@/components/ui/popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator'
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator'
 const formSchema = z.object({
@@ -60,23 +47,10 @@ export function AddMilestoneForm({
   const form = useForm<MilestoneFormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      title: ''
-      description: ''
-      amount: 0}})
-  const handleSubmit = (values: MilestoneFormValues) => {
-<<<<<<< HEAD
-=======
-=======
       title: '',;
       description: '',;
       amount: 0}});
   const handleSubmit = (values: MilestoneFormValues) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onSubmit(values);    form.reset()
   }
   const handleAddMilestones = (milestones: GeneratedMilestone[],) => {
@@ -90,18 +64,6 @@ export function AddMilestoneForm({
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
         })
-<<<<<<< HEAD
-        return
-      }
-    }
-=======
-<<<<<<< HEAD
-        return
-      }
-    }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -171,13 +133,10 @@ export function AddMilestoneForm({;
           due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined,;
           amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         return;
       }
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -187,21 +146,11 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-<<<<<<< HEAD
-  }
-  const handleAddMilestone = (milestone: GeneratedMilestone,) => {
-=======
 
 
   },
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onSubmit({
       title: milestone.title
       description: milestone.description
@@ -306,30 +255,11 @@ export function AddMilestoneForm(): any ({;
   return (
     <div className="space-y-6">;
       {/* AI Milestone Generator */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      {projectScope && projectStartDate && (
-        <AIMilestoneGenerator
-          scope = {projectScope,}
-          startDate = {projectStartDate,}
-          endDate = {projectEndDate,}
-          projectType = {projectType,}
-          onAddMilestones = {handleAddMilestones,}
-          onAddMilestone = {handleAddMilestone,}
-        />
-<<<<<<< HEAD
-      )}
-=======
-=======
-=======
   },
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator
           scope = {projectScope,}
@@ -339,13 +269,6 @@ export function AddMilestoneForm(): any ({;
           onAddMilestones = {handleAddMilestones,}
           onAddMilestone = {handleAddMilestone,}
         />;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
@@ -369,40 +292,12 @@ export function AddMilestoneForm(): any ({;
       <Form {...form}>;
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
           <FormField;
-<<<<<<< HEAD
-            control = {form.control, }
-            name="title";
-            render={({ field }: { field: any }, ) => (
-              <FormItem>;
-                <FormLabel > Title</FormLabel>;
-                <FormControl>;
-                  <Input placeholder="Milestone title" {...field} />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-          />
-          <FormField
-            control = {form && form.control,}
-            name="description"
-            render={({ field }: { field: any },) => (;
-              <FormItem>;
-                <FormLabel>Description (optional)</FormLabel>;
-                <FormControl>;
-=======
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <Textarea
                     placeholder="Describe what needs to be delivered"
                     className="min-h-[100px]"
@@ -502,24 +397,14 @@ export function AddMilestoneForm(): any ({;
                 <FormItem>;
                   <FormLabel>Amount ($)</FormLabel>;
                   <FormControl>;
-<<<<<<< HEAD
-=======
-=======
             />;
             <FormField;
               control={form.control}
               name="amount"
               render={({ field }: { field: any }) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     <Input
                       type="number"
                       min="0"
@@ -556,14 +441,6 @@ export function AddMilestoneForm(): any ({;
                 disabled = {isSubmitting,}>;
                 Cancel;
               </Button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             )}
             <Button type="submit" disabled={isSubmitting}>;
               {isSubmitting ? (;
@@ -639,16 +516,5 @@ export function AddMilestoneForm(): any ({;
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
 }'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -3,48 +3,10 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Search
-  Filter
-  Star
-  CheckCircle
-  ArrowRight
-  Brain
-  Atom
-  Shield
-  Rocket
-  Target
-  Microscope
-  Phone
-  Mail
-  MapPin
-  TrendingUp
-  Users
-  Award
-  Zap
-  Globe
-  Cpu
-  Database
-  Lock
-  Cloud
-  Stethoscope
-  GraduationCap
-  Leaf
-  Truck;
-<<<<<<< HEAD
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight
 
-=======
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  Search, Filter, Star, CheckCircle, ArrowRight
-
-=======
   Search,
   Filter,
   Star,
@@ -75,8 +37,6 @@ import Layout from '../components/layout/Layout';import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   Search, Filter, Star, CheckCircle, ArrowRight, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Phone, Mail, MapPin, TrendingUp, Users, Award;
   Zap, Globe, Cpu, Database, Lock, Cloud;
@@ -96,12 +56,6 @@ import { innovativeITServices2025  } from '../data/2025-innovative-it-services';
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
 
 const contactInfo = {
-<<<<<<< HEAD
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -218,9 +172,6 @@ const serviceCategories = [
   },];    badge: 'Popular'
   }
 ];
-<<<<<<< HEAD
-export default function InnovativeServicesShowcase2025() {
-=======
   Search,
   Filter,
   Star,
@@ -272,7 +223,6 @@ const contact_info = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }  website: 'https://ziontechgroup.com';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 const serviceCategories = [
   {
@@ -469,19 +419,10 @@ const serviceCategories = [
     icon: Target,
     color: 'from - teal - 500 to - green - 500',
     services: [...realMicroSaasServices2025],
-<<<<<<< HEAD
-    gradient: 'from-teal-500/20 to-green-500/20',
-    badge: 'Popular'
-  }
-];
-export default function InnovativeServicesShowcase2025() {
-=======
 
 
 
 export default function InnovativeServicesShowcase2025() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
@@ -646,94 +587,11 @@ function InnovativeServicesShowcase2025() {
         />;
       </Head>;
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>;
-        <div className='absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black'></div>;
-
-        {/* Background Elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
-          <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
-          <div className='absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>;
-          <div className='absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500'></div>;
-        </div>;
-
-        <div className='relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto'>          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'      </Head>;
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">;
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-slate-900 to-black"></div>;
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">;
-          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>;
-          <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>;
-          <div className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>;
-        </div>;
-
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'>;
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6'>;
-              <Star className='w-4 h-4 mr-2' />;
-              Innovation Showcase 2025;
-            </div>;
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                Innovative Services;
-              </span>;
-              <br />;
-              <span className='text-white'>Showcase</span>;
-            </h1>;
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-              Discover our comprehensive collection of revolutionary micro SAAS,;
-              AI, healthcare, fintech, and emerging technology services that are;
-              transforming industries worldwide.            </p>          >;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">;
-              <Star className="w-4 h-4 mr-2" />;
-              Innovation Showcase 2025;
-            </div>;
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-                Innovative Services;
-              </span>;
-              <br />;
-              <span className="text-white">Showcase</span>;
-            </h1>;
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-              Discover our comprehensive collection of revolutionary micro SAAS, AI, healthcare, fintech, and emerging technology services that are transforming industries worldwide.;
-            </p>;
-          </motion && motion.div>;
-
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {/* Stats */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <div className='text-center'>
               <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -875,14 +733,6 @@ function InnovativeServicesShowcase2025() {
                 />;
               </div>;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Category Filter */}
               <div>;
                 <select
@@ -898,23 +748,12 @@ function InnovativeServicesShowcase2025() {
                       {category && category.title}
                     </option>;
                   ))}
-<<<<<<< HEAD
-                </select>
-              </div>
-=======
 
                 </select>;
               </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* Sort By */}
               <div>;
                 <select
@@ -1160,18 +999,8 @@ function InnovativeServicesShowcase2025() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-                className='group bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Service Header */}
                 <div className='mb-6'>
                   <div className='flex items-center justify-between mb-4'>
@@ -1257,20 +1086,12 @@ function InnovativeServicesShowcase2025() {
                   </h3>;
                   <p className="text - gray - 300 text - sm leading - relaxed">;
                     {service.description}
-<<<<<<< HEAD
-=======
 
 
                   <p className='text-gray-300 text-sm leading-relaxed'>                    {service.description}
 
                     {service.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   </p>
                 </div>
                 {/* Features */}
@@ -1313,15 +1134,7 @@ function InnovativeServicesShowcase2025() {
                 </div>
                 {/* Market Info */}
                 <div className='mb-6 grid grid-cols-2 gap-4 text-sm'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div>
                     <div className='text-gray-400'>Market Size</div>
                     <div className='text-white font-semibold'>
@@ -1369,18 +1182,6 @@ function InnovativeServicesShowcase2025() {
                     Learn More
                   </a>;
                   <a
-<<<<<<< HEAD
-                    href={`mailto:${service && service.contact.email}`}
-                    className='px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300'>;
-                    <Mail className='w-5 h-5' />                  </a>                    className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300";
-                  >;
-                    <Mail className="w-5 h-5" />;
-                  </a>;
-                </div>;
-              </motion && motion.div>;
-            ))}
-          </div>
-=======
 
                     href={`mailto:${service.contact.email}`}
                     className="px-4 py-3 border border-cyan-500/30 text-cyan-400 rounded-xl hover:bg-cyan-500/10 transition-all duration-300"
@@ -1390,12 +1191,6 @@ function InnovativeServicesShowcase2025() {
                 </div>
               </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -1411,65 +1206,35 @@ function InnovativeServicesShowcase2025() {
               <div className="text-gray-400 text-xl mb-4">No services found</div>;
               <div className="text-gray-500">Try adjusting your search or filter criteria</div>;
           )}
-<<<<<<< HEAD
-        </div>
-      </section>
-=======
 
         </div>;
       </section>;
 
 
-=======
 
 
           )}
         </div>
       </section>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Contact Section */}
       <section className='py-20 bg-gradient-to-b from-slate-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion && motion.div      <section className="py-20 bg-gradient-to-b from-slate-900 to-black">;
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
           <motion&& motion.div
-<<<<<<< HEAD
-=======
 
-=======
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='text-center mb-16'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
               Ready to Transform Your Business?
@@ -1510,33 +1275,14 @@ function InnovativeServicesShowcase2025() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             <motion&& motion.div
-<<<<<<< HEAD
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Phone className='w-8 h-8 text-white' />
@@ -1568,16 +1314,7 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center'
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             >
               <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -1609,216 +1346,7 @@ function InnovativeServicesShowcase2025() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
-                <MapPin className='w-8 h-8 text-white' />;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
-                <MapPin className="w-8 h-8 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-              <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
-}
-                  </p>;
-                </div>;
-                {/* Features */}
-                <div className='mb - 6'>;
-                  <h4 className='text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wide'>;
-                    Key Features;
-                  </h4>;
-                  <ul className='space - y-2'>;
-                    {service.features;
-                      .slice (0, 3);
-                      .map ((feature, feature_index) => (
-                        <li;
-                          key={feature_index}
-                          className='flex items - center text - sm text - gray - 300';
-                        >;
-                          <CheckCircle className='w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0' />;
-                          {feature}
-                        </li>))}
-                    {service.features.length > 3 && (
-                      <li className='text - sm text - cyan - 400'>                        +{service.features.length - 3} more features                <div className="mb - 6">;
-                  <h4 className="text - sm font - semibold text - gray - 400 mb - 3 uppercase tracking - wide">Key Features</h4>;
-                  <ul className="space - y-2">;
-                    {service.features.slice (0, 3).map ((feature, feature_index) => (
-                      <li key={feature_index} className="flex items - center text - sm text - gray - 300">;
-                        <CheckCircle className="w - 4 h - 4 text - cyan - 400 mr - 2 flex - shrink - 0" />;
-                        {feature}
-                      </li>))}
-                    {service.features.length > 3 && (
-                      <li className="text - sm text - cyan - 400">;
-                      </li>)}
-                  </ul>;
-                </div>;
-                {/* Market Info */}
-                <div className='mb - 6 grid grid - cols - 2 gap - 4 text - sm'>;
-                  <div>;
-                    <div className='text - gray - 400'>Market Size</div>;
-                    <div className='text - white font - semibold'>;
-                      {service.market_size}
-                    </div>;
-                  </div>;
-                  <div>;
-                    <div className='text - gray - 400'>Target Audience</div>;
-                    <div className='text - white font - semibold truncate'>;
-                      {service.target_audience}
-                    </div>                  </div>;
-                </div>;
-                {/* CTA */}
-                <div className='flex gap - 3'>;
-                  <a;
-                    href={service.website}
-                    className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300'                  >                  <div>;
-                    <div className="text - gray - 400">Market Size</div>;
-                    <div className="text - white font - semibold">{service.market_size}</div>;
-                  </div>;
-                  <div>;
-                    <div className="text - gray - 400">Target Audience</div>;
-                    <div className="text - white font - semibold truncate">{service.target_audience}</div>;
-                  </div>;
-                </div>;
-                {/* CTA */}
-                <div className='flex gap - 3'>;
-                  <a;
-                    href={service.website}
-                    className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300'                <div className="flex gap - 3">;
-                  <a;
-                    href={service.website}
-                    className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - xl text - center hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 300";
-                    Learn More;
-                  </a>;
-                  <a;
-                    href={`mailto:${service.contact.email}`}
-                    className='px - 4 py - 3 border border - cyan - 500 / 30 text - cyan - 400 rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300';
-                  >;
-                    <Mail className='w - 5 h - 5' />                  </a>                    className="px - 4 py - 3 border border - cyan - 500 / 30 text - cyan - 400 rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300";
-                  >;
-                    <Mail className="w - 5 h - 5" />;
-                  </a>;
-                </div>;
-              </motion.div>))}
-          </div>;
-          {sorted_services.length === 0 && (
-            <motion.div;
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className='text - center py - 20';
-            >;
-              <div className='text - gray - 400 text - xl mb - 4'>;
-                No services found;
-              </div>;
-              <div className='text - gray - 500'>;
-                Try adjusting your search or filter criteria;
-              </div>            </motion.div>              className="text - center py - 20";
-            >;
-              <div className="text - gray - 400 text - xl mb - 4">No services found</div>;
-              <div className="text - gray - 500">Try adjusting your search or filter criteria</div>)}
-        </div>;
-      </section>;
-      {/* Contact Section */}
-      <section className='py - 20 bg - gradient - to - b from - slate - 900 to - black'>;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Contact our team to learn more about how our innovative services;
-              can revolutionize your operations and drive growth.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Contact our team to learn more about how our innovative services can revolutionize your operations and drive growth.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Phone className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Mail className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <MapPin className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - blue - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>);
-}
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
@@ -1830,17 +1358,5 @@ function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-<<<<<<< HEAD
 }
-
-=======
-<<<<<<< HEAD
-}
-;
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

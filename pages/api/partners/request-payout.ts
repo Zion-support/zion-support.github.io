@@ -1,26 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-<<<<<<< HEAD
-=======
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
@@ -33,17 +16,8 @@ export default async function handler(
       return res && res.status(200).json({ ok: true, status: "queued", mock: true });
     }
     const supabase = getServerSupabase();
-<<<<<<< HEAD
-    const { error } = await supabase.from("payout_requests").insert({
-      partner_code: String(code).toLowerCase()
-      amount: Number(amount) |null
-      status: "requested"
-=======
 
   } catch (e: any) {
-<<<<<<< HEAD
-=======
-=======
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -78,16 +52,11 @@ export default async function handler(req, res) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     return res.status(200).json({ ok: true, status: 'requested' });
   } catch (error) {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return res.status(500).json({ error: e?.message });
-=======
     const { error } = await supabase.from('payout_requests').insert({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
       status: "requested",
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     });
     if (error) return res.status(500).json({ error: "Database error" });
     return res.status(200).json({ ok: true, status: "requested" });

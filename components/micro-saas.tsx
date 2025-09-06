@@ -1396,96 +1396,7 @@ export default function MicroSaasPage() {;
                 href="/pricing"
                 variant="outline"
                 size="lg"
-<<<<<<< HEAD
-                className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white"
-              >
-                View All 75 Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-            </div>
-          </div>
-        </section>
-        {/* Services Section */}
-        <section id="services" className="py-24 bg-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                Professional Micro SaaS Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Each service is designed to solve specific business problems with enterprise-grade quality and competitive pricing.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
-                <div key={index} className="bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/10">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-3xl">{service.icon}</span>
-                    {service.popular && (
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-500/30">
-                        Popular
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{service.tagline}</p>
-                  <div className="mb-4">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-gray-400">{service.period}</span>
-                  </div>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-sm text-gray-400">
-                          <Check className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mb-6 p-4 bg-gray-700/50 rounded-lg">
-                    <div className="text-sm text-gray-300 mb-2">
-                      <strong>Market Position:</strong> {service.marketPosition}
-                    </div>
-                    <div className="text-sm text-gray-300 mb-2">
-                      <strong>Target Audience:</strong> {service.targetAudience}
-                    </div>
-                    <div className="text-sm text-gray-300">
-                      <strong>Setup Time:</strong> {service.setupTime}
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-3">
-                    <a
-                      href={service && service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium py-3 px-4 rounded-lg text-center hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center">;
-                      Start Free Trial ({service && service.trialDays} days);
-                      <ExternalLink className="w-4 h-4 ml-2" />;
-                    </a>;
-                    <a
-                      href={service && service.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-400 text-sm text-center hover:text-green-300 transition-colors">;
-                      Visit {service && service.link.replace('https://', '')}
-                    </a>;
-                  </div>;
-                </div>;
-              ))}
-            </div>
-          </div>
-        </section>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -1512,53 +1423,7 @@ export default function MicroSaasPage() {;
                 href="/pricing"
                 variant="outline"
                 size="lg"
-<<<<<<< HEAD
-                className="border-white text-white hover:bg-white hover:text-green-600 shadow-2xl"
-              >
-                View All Pricing
-              </Button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {marketTrends.map((trend, index) => (
-                View All Pricing;
-              </Button>;
-            </div>;
-          </div>;
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            {marketTrends && marketTrends.map((trend, index) => (;
-              <Card
-                key={index}
-                className="border-gradient-blue hover:bg-gray-800/50 transition-all duration-300">;
-                <div className="flex items-start space-x-4">;
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400">;
-                    <TrendingUp className="w-6 h-6" />;
-                  </div>;
-                  <div className="flex-1">;
-                    <h3 className="text-xl font-bold text-white mb-3">{trend && trend.trend}</h3>;
-                    <p className="text-gray-400 mb-4">{trend && trend.description}</p>;
-                    <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4">;
-                      <h4 className="text-blue-400 font-semibold mb-2">Market Impact</h4>;
-                      <p className="text-gray-300 text-sm mb-3">{trend && trend.impact}</p>;
-                      <h4 className="text-green-400 font-semibold mb-2">Our Opportunity</h4>;
-                      <p className="text-gray-300 text-sm">{trend && trend.opportunity}</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </Card>;
-            ))}
-          </div>
-        </div>
-      </section>
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Competitive Advantages */}
       <section className="py-20 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1587,18 +1452,7 @@ export default function MicroSaasPage() {;
                 </div>;
               </Card>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1638,23 +1492,12 @@ export default function MicroSaasPage() {;
                           <span className="text-sm">{feature}</span>;
                         </li>;
                       ))}
-<<<<<<< HEAD
-                    </ul>
-                  </div>
-=======
 
                     </ul>;
                   </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {/* Pricing */}
                   <div>;
                     <h4 className="text-xl font-bold text-white mb-4 flex items-center">;
@@ -1678,18 +1521,7 @@ export default function MicroSaasPage() {;
                           </ul>;
                         </div>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </div>
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -1727,23 +1559,12 @@ export default function MicroSaasPage() {;
                         {useCase}
                       </span>;
                     ))}
-<<<<<<< HEAD
-                  </div>
-                </div>
-=======
 
                   </div>;
                 </div>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* CTA */}
                 <div className="mt-8 text-center">;
                   <Button
@@ -1756,25 +1577,13 @@ export default function MicroSaasPage() {;
                 </div>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
 
           </div>;
         </div>;
       </section>;
 
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">;
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0 && 0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />;
@@ -1806,28 +1615,8 @@ export default function MicroSaasPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
-);
-}
-              Contact Sales;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-    </>;
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-=======
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 }
     </>);

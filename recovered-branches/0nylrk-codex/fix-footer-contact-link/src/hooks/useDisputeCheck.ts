@@ -1,29 +1,10 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
-  const [disputeId, setDisputeId] = useState<string | null>(null),
-=======
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false);
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
   const [disputeId, setDisputeId] = useState<string | null>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
 
@@ -117,38 +98,15 @@ if ( {) {
         setIsLoading (false);
       }
     }
-<<<<<<< HEAD
-=======
 
-=======
         console.error("Error checking dispute status:", err),
         setIsUnderDispute(false),
         setDisputeStatus(null),
         setDisputeId(null)
       } finally {
         setIsLoading(false)
-<<<<<<< HEAD
-      }
-    }
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-    checkDispute()
-  }, [projectId, milestoneId]);
-  return {
-    isUnderDispute
-    disputeStatus
-<<<<<<< HEAD
     disputeId;
-    isLoading
-
-=======
-    disputeId;
-<<<<<<< HEAD
-    isLoading
-
-=======
     isLoading 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
@@ -198,11 +156,5 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     disputeStatus;
     disputeId;
     isLoading;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

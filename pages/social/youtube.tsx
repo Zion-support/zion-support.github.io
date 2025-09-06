@@ -1,13 +1,8 @@
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-<<<<<<< HEAD
-      window.location.replace('https: //youtube.com/@ziontechgroup')
-    }
-=======
       window.location.replace('https: //youtube.com/@ziontechgroup'),
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }, []);
   return (
     <>
@@ -31,11 +26,7 @@
     </>
   );
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default function YouTubeRedirect(req, res) {
   try {
 	useEffect(() => {;
@@ -74,51 +65,12 @@ if ( {) {
   return (
     <>;
       <Head>;
-<<<<<<< HEAD
-        <title>YouTube | Zion Tech Group</title>;
-        <link rel='canonical' href='https: //youtube && youtube.com/@ziontechgroup' />;
-        <meta
-          httpEquiv='refresh'
-          content='0,url=https://youtube && youtube.com/@ziontechgroup'
-        />;
-        <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
-      <div className='min-h-screen bg-black text-white flex items-center justify-center p-8'>;
-        <a
-          href='https: //youtube && youtube.com/@ziontechgroup'
-          className='text-cyan-400 underline'>;
-          Continue to YouTube;
-        </a>;
-      </div>;
-    </>;
-  );
-        <title > YouTube | Zion Tech Group</title>;
-        <link rel='canonical' href='https: //youtube.com/@ziontechgroup' />;
-        <meta;
-          http_equiv='refresh';
-          content='0, url = https://youtube.com/@ziontechgroup';
-        />;
-        <meta name='robots' content='noindex, nofollow' />;
-      </Head>;
-      <div className='min - h-screen bg - black text - white flex items - center justify - center p - 8'>;
-        <a;
-          href='https: //youtube.com/@ziontechgroup';
-          className='text - cyan - 400 underline';
-        >;
-          Continue to YouTube;
-        </a>;
-      </div>;
-    </>);
-;
-=======
 
-=======
 
 
 }
 
 
-=======
 export default function YouTubeRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -141,10 +93,5 @@ export default function YouTubeRedirect() {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

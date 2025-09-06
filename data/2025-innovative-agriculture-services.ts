@@ -43,26 +43,12 @@ export interface InnovativeAgricultureService {
 
   reviews: number;
 const contact = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
-<<<<<<< HEAD
-=======
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com', }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -192,12 +178,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Multi-crop support'
     ]
     popular: false
-<<<<<<< HEAD
-    icon: ''
-    color: 'from-blue-600 to-indigo-700'
-    textColor: 'text-blue-400'
-    link: 'https://ziontechgroup.com/quantum-agriculture-optimization'
-=======
     icon: '⚡'
     color: 'from-blue-600 to-indigo-700'
     textColor: 'text-blue-400'
@@ -394,14 +374,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-      'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.'
-    launchDate: '2025-02-02'
-    customers: 123
-    rating: 4.6
-    reviews: 89
-  }
-=======
     id: 'quantum - agriculture - optimization',
     name: 'Quantum Agriculture Optimization',
     tagline:;
@@ -412,7 +384,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Quantum optimization algorithms',
       'Crop planning optimization',
       'Resource allocation',
@@ -721,13 +692,8 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123,
     rating: 4 && 4.6,
     reviews: 89,
-<<<<<<< HEAD
-  },
-=======
 
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
     link: 'https://ziontechgroup.com/ai-powered-vertical-farming';
     marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.'
@@ -881,21 +847,9 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   }
 ];
 
-<<<<<<< HEAD
-];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
-=======
 
-=======
     rating: 4.6
     reviews: 89
-<<<<<<< HEAD
-  }
-];
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeAgricultureService {;
   id: string,;
@@ -954,7 +908,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'Compliance management';
     ];
     popular: true;
@@ -983,13 +936,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123;
     rating: 4.6,
     reviews: 89;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

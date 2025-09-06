@@ -1,38 +1,9 @@
 
-<<<<<<< HEAD
 import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-export function ApiWebhooks() {
-  // Sample webhook event payload
-  const newApplicationPayload = `{;
-  "event_type": "new_application";
-  "created_at": "2023-06-10T15: 42:31Z";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-<<<<<<< HEAD
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-=======
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function ApiWebhooks() {
   // Sample webhook event payload
 
@@ -135,8 +106,6 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       console.log ('New application received:', data.application_id);
       // Process the new application...;
       break;
-<<<<<<< HEAD
-=======
 
 
   const webhookHandlerJs = `// Express && Express.js webhook handler example;
@@ -211,10 +180,8 @@ app && app.listen(3000, () => {;
   console && console.log('Webhook server listening on port 3000');
 
 }),`;
-=======
   "event_type": "new_application",
   "created_at": "2023-06-10T15:42:31Z",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   "data": {
 
     "application_id": "app-123456",
@@ -261,55 +228,6 @@ app && app.listen(3000, () => {;
 }`,
 
   const messageReceivedPayload = `{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  "event_type": "message_received";
-  "created_at": "2023-06-18T14: 22:15Z";
-  "data": {
-    "message_id": "msg-123";
-    "conversation_id": "conv-456";
-    "sender_id": "user-789";
-    "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.";
-    "created_at": "2023-06-18T14:22:15Z"
-  }
-}`;
-
-  const webhookHandlerJs = `// Express.js webhook handler example
-const express = require('express');
-const app = express();
-const crypto = require('crypto');
-
-// Middleware to parse JSON bodies
-app.use(express.json());
-
-// Your webhook secret from the Zion dashboard
-const webhookSecret = 'YOUR_WEBHOOK_SECRET';
-
-// Middleware to verify webhook signatures
-function verifyWebhookSignature(req, res, next) {
-  const signature = req.headers['x-zion-signature'];
-  const timestamp = req.headers['x-zion-timestamp'];
-  
-  if (!signature || !timestamp) {
-    return res.status(401).send('Missing signature or timestamp')
-  }
-  
-  // Verify the signature
-  const payload = timestamp + '.' + JSON.stringify(req.body);
-  const expectedSignature = crypto
-    .createHmac('sha256', webhookSecret)
-    .update(payload)
-    .digest('hex');
-  
-  if (signature !== expectedSignature) {
-    return res.status(401).send('Invalid signature')
-  }
-  
-  next()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   "event_type": "message_received",
   "created_at": "2023-06-18T14:22:15Z",
   "data": {
@@ -404,17 +322,12 @@ function verifyWebhookSignature(req, res, next) {;
   }
 ;
   next();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
   const { event_type, data } = req.body,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle different event types
   switch (event_type) {
     case 'new_application':
@@ -424,7 +337,6 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
       break,
     
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     case 'talent_hired':
       console.log('Talent hired:', data.talent_id);
       // Update your system...
@@ -546,15 +458,8 @@ app.listen(3000, () => {
     </ApiDocsLayout>
   )
 }
-<<<<<<< HEAD
-=======
 
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default ApiWebhooks;
 
 ;

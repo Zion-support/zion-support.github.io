@@ -1,175 +1,14 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { useDisputes } from '@/hooks/useDisputes';
-import { logErrorToProduction } from '@/utils/productionLogger';import { useRouter } from 'next/router';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import React, { useState, useEffect } from "react";
-import { useRouter  } from 'next/router';
-import { useDisputes } from "@/hooks/useDisputes";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  Dispute
-  disputeReasonLabels
-  DisputeMessage
-  DisputeStatus
-  ResolutionType
-<<<<<<< HEAD
-=======
-=======
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
 import { logErrorToProduction } from '@/utils/productionLogger'; import { useRouter } from 'next/router'
 import { useDisputes } from "@/hooks/useDisputes"
 import {logErrorToProduction} from '@/utils/productionLogger'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Dispute,
   disputeReasonLabels,
   DisputeMessage,
   DisputeStatus,
-<<<<<<< HEAD
-  ResolutionType,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-} from '@/types/disputes'
-import { Button } from '@/components/ui/button'
-import { Textarea } from '@/components/ui/textarea'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Separator } from '@/components/ui/separator'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { format, formatDistanceToNow } from 'date-fns'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
-import { ArrowDown, Check, MessageSquare, Download } from 'lucide-react'
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "sonner";
-export function DisputeDetail() {
-
-  const router = useRouter()
-  const { disputeId } = router.query as { disputeId?: string }
-  const { user } = useAuth()
-  const {
-    getDisputeById
-    updateDisputeStatus
-    resolveDispute
-    getDisputeMessages
-    addDisputeMessage
-  } = useDisputes()
-  const [dispute, setDispute] = useState<Dispute | null>(null)
-  const [messages, setMessages] = useState<DisputeMessage[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const [message, setMessage] = useState('')
-  const [adminNote, setAdminNote] = useState('')
-  const [isSending, setIsSending] = useState(false)
-  const [resolution, setResolution] = useState<{
-    summary: string
-    resolution_type: ResolutionType
-  }>({
-    summary: ''
-    resolution_type: 'compromise'
-  })
-  const [activeTab, setActiveTab] = useState('overview')
-  // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === 'admin'
-  useEffect(() => {
-<<<<<<< HEAD
-    if (!disputeId) return
-    const loadDisputeData = async () => {
-      setIsLoading (true);
-      try {
-        const dispute_data = await getDisputeById (dispute_id);
-        // Check condition
-if ( {) {
-  $2
-}
-          toast.error ('Dispute not found');
-          router.push ('/dashboard / disputes');
-          return;
-        }
-        set_dispute (dispute_data);
-        const messages_data = await getDisputeMessages (dispute_id);
-        set_messages (messages_data);
-      } catch (error) {
-        logErrorToProduction ('Error loading dispute data:', { data: error });
-        toast.error ('Failed to load dispute');
-      } finally {
-        setIsLoading (false);
-      }
-    }
-    loadDisputeData ();
-  }, [dispute_id, getDisputeById, getDisputeMessages, router]);
-  const handleStatusChange = async (status: DisputeStatus) => {
-    // Check condition
-if (return) {
-  $2
-}
-    const success = await updateDisputeStatus (dispute_id, status);
-    // Check condition
-if ( {) {
-  $2
-}
-      // Update the dispute object with the new status;
-      set_dispute ({ ...dispute!, status: status });
-    } else {
-      toast.error ('Failed to update dispute status');
-    }
-  }
-  const handleResolveDispute = async () => {
-    // Check condition
-if (return) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      toast.error ('Please provide a resolution summary');
-      return;
-    }
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary
-      resolution_type:
-        (resolution.resolution_type as ResolutionType) |'compromise'
-    })
-    if (success && dispute) {
-      setDispute({
-        ...dispute
-        resolution_summary: resolution.summary
-        resolution_type: resolution.resolution_type
-        resolved_at: new Date().toISOString()
-      })
-    } else {
-      toast.error ('Failed to resolve dispute');
-    }
-  }
-  const handleSendMessage = async () => {
-    if (!disputeId |!message.trim()) return
-    setIsSending(true)
-    try {
-      const success = await addDisputeMessage (dispute_id, message, is_admin);
-      // Check condition
-if ( {) {
-  $2
-}
-        // Refresh messages;
-        const updated_messages = await getDisputeMessages (dispute_id);
-        set_messages (updated_messages);
-        set_message ('');
-=======
     if (!disputeId) return;
     const loadDisputeData = async () => {
       setIsLoading(true)
@@ -188,44 +27,13 @@ if ( {) {
         toast.error('Failed to load dispute')
       } finally {
         setIsLoading(false)
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       }
     }
-<<<<<<< HEAD
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='p - 8 text - center'>;
-        <div className='w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full'></div>;
-        <p > Loading dispute details...</p>;
-      </div>);
-  }
-  if (!dispute) {
-    return (
-      <div className='p-8 text-center'>;
-        <p>Dispute not found</p>;
-        <Button
-          onClick={() => router.push('/dashboard/disputes')}
-          className='mt-4'
-        >          Back to Disputes
-=======
     loadDisputeData()
   }, [disputeId, getDisputeById, getDisputeMessages, router])
   const handleStatusChange = async (status: DisputeStatus) => {
     if (!disputeId) return;
     const success = await updateDisputeStatus(disputeId, status)
-=======
-<<<<<<< HEAD
-import {
-  Dispute,
-  disputeReasonLabels,
-  DisputeMessage,
-  DisputeStatus,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ResolutionType,;
 } from '@/types/disputes';
 
@@ -301,27 +109,11 @@ export function DisputeDetail() {
     if (!disputeId) return,
 
     const success = await updateDisputeStatus(disputeId, status),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (success) {
       // Update the dispute object with the new status
       setDispute({ ...dispute!, status: status })
     } else {
-<<<<<<< HEAD
-      toast.error('Failed to update dispute status')
-    }
-  }
-  const handleResolveDispute = async () => {
-    if (!disputeId) return;
-    if (!resolution.summary) {
-      toast.error('Please provide a resolution summary')
-<<<<<<< HEAD
-=======
       return;
-=======
       toast.error("Failed to update dispute status")
     }
   },
@@ -331,50 +123,17 @@ export function DisputeDetail() {
     
     if (!resolution.summary) {
       toast.error("Please provide a resolution summary"),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     const success = await resolveDispute(disputeId, {
-<<<<<<< HEAD
-      summary: resolution.summary
-=======
       summary: resolution.summary,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      resolution_type:
-        (resolution.resolution_type as ResolutionType) |'compromise'
-    })
-<<<<<<< HEAD
-    if (success && dispute) {
-      setDispute({
-        ...dispute
-        resolution_summary: resolution.summary
-        resolution_type: resolution.resolution_type
-        resolved_at: new Date().toISOString()
-=======
-=======
       resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     if (success && dispute) {
       setDispute({
         ...dispute,
         resolution_summary: resolution.summary,
         resolution_type: resolution.resolution_type,
-<<<<<<< HEAD
-        resolved_at: new Date().toISOString(),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      })
-    } else {
-      toast.error('Failed to resolve dispute')
-    }
-  }
-  const handleSendMessage = async () => {
-<<<<<<< HEAD
-    if (!disputeId |!message.trim()) return
-=======
     if (!disputeId || !message.trim()) return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setIsSending(true)
     try {
       const success = await addDisputeMessage(disputeId, message, isAdmin)
@@ -390,30 +149,6 @@ export function DisputeDetail() {
       setIsSending(false)
     }
   }
-=======
-<<<<<<< HEAD
-      toast.error("Failed to update dispute status")
-    }
-  },
-
-  const handleResolveDispute = async () => {
-    if (!disputeId) return,
-    
-    if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
-      return
-    }
-    
-    const success = await resolveDispute(disputeId, {
-      summary: resolution.summary,
-      resolution_type: (resolution.resolution_type as ResolutionType) || "compromise"}),
-    if (success && dispute) {
-      setDispute({
-        ...dispute,
-        resolution_summary: resolution.summary,
-        resolution_type: resolution.resolution_type,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         resolved_at: new Date().toISOString()})
     } else {
       toast.error("Failed to resolve dispute")
@@ -564,11 +299,6 @@ export function DisputeDetail() {;
     }
   };
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (isLoading) {
 
     return (
@@ -580,7 +310,6 @@ export function DisputeDetail() {;
   }
 
   if (!dispute) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
       <div className="p-8 text-center">
@@ -588,86 +317,10 @@ export function DisputeDetail() {;
 
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </Button>
       </div>
     )
   }
-<<<<<<< HEAD
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {
-    switch (status) {
-      case 'open':
-        return 'default'
-      case 'under_review':
-        return 'secondary'
-      case 'resolved':
-        return 'outline'; // Changed from "success" to "outline"
-      case 'closed':
-        return 'outline'
-      default:
-        return 'default'
-      case 'open':;
-=======
-<<<<<<< HEAD
-  const getStatusBadgeVariant = (status: DisputeStatus,) => {
-    switch (status) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      case 'open':
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        return 'default';
-      case 'under_review':;
-        return 'secondary';
-      case 'resolved':;
-<<<<<<< HEAD
-        return 'outline'; // Changed from "success" to "outline";
-      case 'closed':;
-        return 'outline';
-      default:;
-        return 'default';
-    }
-  }
-  return (
-    <div className='container mx-auto p-4 space-y-6'>;
-      <div className='flex flex-wrap items-center justify-between gap-4'>;
-        <div>;
-          <div className='flex items-center gap-2'>;
-            <h1 className='text-2xl font-bold'>Dispute Case</h1>;
-            <Badge variant={getStatusBadgeVariant(dispute && dispute.status)}>;
-              {dispute && dispute.status.replace('_', ' ')}
-            </Badge>;
-          </div>;
-          <p className='text-muted-foreground'>;
-            Reported{' '}
-            {formatDistanceToNow(new Date(dispute?.created_at |''), {
-              addSuffix: true
-            })}
-          </p>
-        </div>
-        <div className='flex gap-2'>
-          <Button
-            variant='outline'
-            onClick={() => router && router.push('/dashboard/disputes')}
-          >;
-            Back to List;
-          </Button>;
-          {isAdmin && dispute?.status === 'open' && (;
-            <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
-            </Button>;
-          )}
-        </div>
-      </div>
-      {dispute.status === 'resolved' && dispute.resolution_summary && (
-        <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
-          <Check className='h-4 w-4' />
-=======
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
         return 'outline'
@@ -675,13 +328,6 @@ export function DisputeDetail() {;
         return 'default'
     }
   }
-=======
-<<<<<<< HEAD
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {
-    switch (status) {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
@@ -690,11 +336,6 @@ export function DisputeDetail() {;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -710,17 +351,6 @@ export function DisputeDetail() {;
             Reported {formatDistanceToNow(new Date(dispute?.created_at || ""), { addSuffix: true })}
           </p>
         </div>
-<<<<<<< HEAD
-        <div className='flex gap-2'>
-          <Button
-            variant='outline'
-            onClick={() => router.push('/dashboard/disputes')}
-          >
-            Back to List
-          </Button>
-          {isAdmin && dispute?.status === 'open' && (
-            <Button onClick={() => handleStatusChange('under_review')}>              Start Review
-=======
         
         <div className="flex gap-2">
           <Button variant="outline" onClick={() => router.push("/dashboard/disputes")}>
@@ -729,50 +359,26 @@ export function DisputeDetail() {;
           {isAdmin && dispute?.status === "open" && (
             <Button onClick={() => handleStatusChange("under_review")}>
               Start Review
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>
       </div>
-<<<<<<< HEAD
-      {dispute.status === 'resolved' && dispute.resolution_summary && (
-        <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
-          <Check className='h-4 w-4' />
-<<<<<<< HEAD
+
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
       )}
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
         <div className='lg:col-span-2'>
-=======
 
       {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          <AlertTitle>This dispute has been resolved</AlertTitle>
-          <AlertDescription>{dispute.resolution_summary}</AlertDescription>
-        </Alert>
-      )}
-      <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-        <div className='lg:col-span-2'>
-<<<<<<< HEAD
-=======
-=======
-
-      {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
-          <Check className="h-4 w-4" />
-          <AlertTitle>This dispute has been resolved</AlertTitle>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -841,12 +447,6 @@ export function DisputeDetail() {;
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Tabs value={activeTab} onValueChange={setActiveTab}>
             <TabsList className='mb-6'>
               <TabsTrigger value='overview'>Overview</TabsTrigger>
@@ -854,19 +454,10 @@ export function DisputeDetail() {;
               <TabsTrigger value='attachments'>Attachments</TabsTrigger>
               {isAdmin && <TabsTrigger value='admin'>Admin Notes</TabsTrigger>}
             </TabsList>
-<<<<<<< HEAD
-            <TabsContent value='overview' className='space-y-6'>
-=======
 
 
             
             <TabsContent value="overview" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
@@ -883,39 +474,12 @@ export function DisputeDetail() {;
                       ] ?? dispute.reason_code
                     }</p>
                   </div>
-<<<<<<< HEAD
-=======
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div>
                     <h3 className="font-medium">Description</h3>
                     <p className="whitespace-pre-wrap">{dispute.description}</p>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div>
-                    <h3 className='font-medium'>Project</h3>
-                    <p>{dispute.project?.title |'Unknown Project'}</p>
-                    <p className='text-sm text-muted-foreground'>
-                      {dispute.project?.scope_summary}
-                    </p>
-                  </div>
-<<<<<<< HEAD
-                  <div>
-                    <h3 className='font-medium'>Description</h3>
-                    <p className='whitespace-pre-wrap'>{dispute.description}</p>
-                  </div>
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div>
                     <h3 className='font-medium'>Project</h3>
                     <p>{dispute.project?.title |'Unknown Project'}</p>
@@ -923,16 +487,8 @@ export function DisputeDetail() {;
                       {dispute.project?.scope_summary}
                     </p>
                   </div>
-<<<<<<< HEAD
-=======
 
                   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   {dispute.milestone_id && (
                     <div>;
                       <h3 className='font - medium'>Related Milestone</h3>;
@@ -1006,18 +562,10 @@ export function DisputeDetail() {;
                   <CardContent>;
                     <p className='whitespace - pre - wrap'>;
                       {dispute.resolution_summary}
-<<<<<<< HEAD
-                    </p>
-=======
 
 
               
               {dispute.status === "resolved" && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -1026,12 +574,6 @@ export function DisputeDetail() {;
 
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {dispute.resolution_type && (
                       <div className='mt-4'>
                         <Badge>
@@ -1039,37 +581,18 @@ export function DisputeDetail() {;
                           {dispute && dispute.resolution_type.replace('_', ' ')}
                         </Badge>;
                       </div>;
-<<<<<<< HEAD
-=======
-=======
 
                           Resolution: {dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   </CardContent>;
                 </Card>;
               )}
-<<<<<<< HEAD
-            </TabsContent>
-            <TabsContent value='messages' className='space-y-6'>
-=======
 
 
             
             <TabsContent value="messages" className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
@@ -1119,17 +642,6 @@ export function DisputeDetail() {;
                                       new Date(msg.created_at)
                                       'MMM d, h:mm a'
                                     )}
-<<<<<<< HEAD
-                                  </span>
-                                </div>
-                                <p className='whitespace-pre-wrap'>
-                                  {msg.message}
-                                </p>
-                              </div>
-                            </div>
-                          )
-                        })
-=======
                                   </span>;
                                 </div>;
                                 <p className='whitespace-pre-wrap'>;
@@ -1139,12 +651,6 @@ export function DisputeDetail() {;
                             </div>;
                           );
                         });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     )}
                   </div>;
                 </CardContent>;
@@ -1153,17 +659,6 @@ export function DisputeDetail() {;
                     <Textarea
                       placeholder='Type your message here...'
                       value={message}
-<<<<<<< HEAD
-                      onChange={e => setMessage(e && e.target.value)}
-                      className='min-h-[100px]';
-                      disabled={isSending}                    />;
-                    <div className='flex justify-end'>;
-                      <Button
-                        onClick={handleSendMessage}
-                        disabled={isSending |!message.trim()}
-                      >
-                        {isSending ? 'Sending...' : 'Send Message'}
-=======
                       onChange={(e) => setMessage(e.target.value)}
                       className="min-h-[100px]";
                       disabled={isSending}
@@ -1171,31 +666,16 @@ export function DisputeDetail() {;
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       </Button>
                     </div>
                   </div>
                 </CardFooter>
               </Card>
             </TabsContent>
-<<<<<<< HEAD
-            <TabsContent value='attachments'>
-=======
 
 
             
             <TabsContent value="attachments">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
@@ -1213,17 +693,9 @@ export function DisputeDetail() {;
                 </CardContent>
               </Card>
             </TabsContent>
-<<<<<<< HEAD
-=======
 
 
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {isAdmin && (
               <TabsContent value='admin' className='space-y-6'>
                 <Card>
@@ -1272,19 +744,6 @@ export function DisputeDetail() {;
                       Handle this dispute as an administrator;
                     </CardDescription>;
                   </CardHeader>;
-<<<<<<< HEAD
-                  <CardContent className='space-y-6'>;
-                    <div>;
-                      <h3 className='font-medium mb-2'>Change Status</h3>;
-                      <div className='flex gap-2'>;
-                        <Button
-                          variant='outline'
-                          onClick={() => handleStatusChange('open')}
-                          disabled={dispute && dispute.status === 'open'}
-                        >;
-                          Mark as Open;
-                        </Button>;
-=======
 
 
                       <h3 className="font-medium mb-2">Change Status</h3>
@@ -1307,16 +766,9 @@ export function DisputeDetail() {;
                           variant="outline" 
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         >
                           Mark as Open
                         </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         <Button
                           variant='outline'
                           onClick={() => handleStatusChange('under_review')}
@@ -1339,25 +791,10 @@ export function DisputeDetail() {;
                           <Textarea;
                             placeholder='Enter resolution summary...';
                             value={resolution.summary}
-<<<<<<< HEAD
-                            onChange={e =>
-                              setResolution({
-                                ...resolution
-                                summary: e.target.value
-                              })
-                            }
-                            className='min-h-[100px]'                          />
-                          <div className='grid grid-cols-2 gap-4'>
-=======
 
 
                     
                     {dispute.status !== "resolved" && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
@@ -1370,53 +807,17 @@ export function DisputeDetail() {;
                           />
                           
                           <div className="grid grid-cols-2 gap-4">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
                                 Resolution Type
                               </label>
                               <select
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                                className='w-full p-2 border rounded'
-                                value={resolution.resolution_type |''}
-                                onChange={e =>
-                                  setResolution({
-                                    ...resolution
-                                    resolution_type: e.target
-                                      .value as ResolutionType
-                                  })
-                                }                              >
-                                <option value='client_favor'>
-                                  In Client's Favor
-                                </option>
-                                <option value='talent_favor'>
-                                  In Talent's Favor
-                                </option>
-                                <option value='compromise'>Compromise</option>
-                                <option value='dismissed'>Dismissed</option>
-<<<<<<< HEAD
-=======
                               </select>
                             </div>
                           </div>
                           <Button onClick={handleResolveDispute}>
                             Resolve Dispute
                           </Button>
-<<<<<<< HEAD
-                        </div>
-                      </div>
-                    )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
                                 onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
@@ -1425,7 +826,6 @@ export function DisputeDetail() {;
                                 <option value="talent_favor">In Talent's Favor</option>
                                 <option value="compromise">Compromise</option>
                                 <option value="dismissed">Dismissed</option>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               </select>
                             </div>
                           </div>
@@ -1462,41 +862,6 @@ export function DisputeDetail() {;
                       </div>;
                     )}
 
-<<<<<<< HEAD
-                    <div>;
-                      <h3 className='font-medium mb-2'>Admin Notes</h3>;
-                      <div className='space-y-4 max-h-[300px] overflow-y-auto p-2'>;
-                        {messages;
-                          .filter(msg => msg && msg.is_admin_note);
-                          .map(msg => (;
-                            <div
-                              key={msg && msg.id}
-                              className='bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900'>;
-                              <div className='flex items-center justify-between mb-2'>;
-                                <div className='flex items-center gap-2'>;
-                                  <Avatar className='h-6 w-6'>;
-                                    <AvatarImage
-                                      src={msg && msg.user_profile?.avatar_url}
-                                      alt={
-                                        msg.user_profile?.display_name |
-                                        'Admin avatar'
-                                      }
-                                    />
-                                    <AvatarFallback>
-                                      {msg.user_profile?.display_name?.[0] |
-                                        'A'}
-                                    </AvatarFallback>
-                                  </Avatar>
-                                  <span className='text-sm font-medium'>
-                                    {msg.user_profile?.display_name |'Admin'}
-                                  </span>
-                                </div>
-                                <span className='text-xs opacity-70'>
-                                  {format(
-                                    new Date(msg.created_at)
-                                    'MMM d, h:mm a'
-                                  )}                                </span>
-=======
                           .map((msg) => (
                           <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
                             <div className="flex items-center justify-between mb-2">
@@ -1510,12 +875,6 @@ export function DisputeDetail() {;
                                 <span className="text-sm font-medium">
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                               </div>
                               <p className='whitespace-pre-wrap text-sm'>
                                 {msg.message}
@@ -1534,13 +893,6 @@ export function DisputeDetail() {;
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
-<<<<<<< HEAD
-                        <Button
-                          variant='outline'
-                          onClick={() => {
-                            if (adminNote.trim()) {
-=======
-=======
 
                       
                       <Separator className="my-4" />
@@ -1551,57 +903,15 @@ export function DisputeDetail() {;
                           value={adminNote}
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <Button
                           variant="outline"
                           onClick={() => {
                             if (adminNote.trim()) {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-                              addDisputeMessage(
-                                disputeId!
-                                adminNote
-                                true
-                              ).then(() => {
-                                getDisputeMessages(disputeId!).then(
-                                  setMessages
-                                )
-                                setAdminNote('')
-                              }) }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-                          onClick={() => {;
-                            if (adminNote && adminNote.trim()) {;
-                              addDisputeMessage(;
-                                disputeId!,;
-                                adminNote,;
-                                true;
-                              ).then(() => {;
-                                getDisputeMessages(disputeId!).then(;
-                                  setMessages;
-                                );
-                                setAdminNote('');
-                              });                            }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                               addDisputeMessage(disputeId!, adminNote, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setAdminNote("")
                               })
                             }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           }}
                         >;
                           Add Admin Note;
@@ -1610,23 +920,10 @@ export function DisputeDetail() {;
                     </div>;
                   </CardContent>;
                 </Card>;
-<<<<<<< HEAD
-              </TabsContent>;
-            )}
-          </Tabs>
-        </div>
-        <div className='space-y-6'>
-=======
 
 
         
         <div className="space-y-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Card>
             <CardHeader>
               <CardTitle>Parties Involved</CardTitle>
@@ -1671,17 +968,9 @@ export function DisputeDetail() {;
               </div>
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
 
 
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           <Card>
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
@@ -2050,8 +1339,6 @@ container mx - auto p - 4 space - y-6" > <div className="flex flex - wrap items 
 }</span> </div> <div className="flex justify - between"> </div> </CardContent> </Card> </div> </div> </div>);
 }'"  );
 }
-<<<<<<< HEAD
-=======
 const handleResolveDispute = async () => {
   if (!disputeId) return;
 if (!resolution.summary) {
@@ -2067,15 +1354,10 @@ resolved at: new Date () .toISOString ()
 }else {
 }
 const handleSendMessage = async () => {
-<<<<<<< HEAD
-  if (!disputeId |!message.trim () ) return
-=======
 ;
 
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 try {
 }catch (error) {
   logErrorToProduction ('Error sending message:', {
@@ -2157,13 +1439,5 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>)
 }'"  )
 }
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

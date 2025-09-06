@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -13,21 +5,6 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -35,10 +12,6 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Table,
@@ -62,34 +35,16 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
   onRefresh: () => void
 }
-<<<<<<< HEAD
-export function ReviewsModerationTable({
-  reviews;
-  isLoading;
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export function ReviewsModerationTable({;
-  reviews;
-  isLoading;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ReviewsModerationTable({
   reviews,
   isLoading,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
@@ -143,8 +98,6 @@ export function ReviewsModerationTable({
   }
   if (isLoading) {
     return (
-<<<<<<< HEAD
-=======
       <div className="space-y-4">
         <div className="h-12 w-full bg-muted rounded animate-pulse" />
         <div className="h-16 w-full bg-muted rounded animate-pulse" />
@@ -210,12 +163,6 @@ export function ReviewsModerationTable({
                   <Avatar className="h-8 w-8">
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-<<<<<<< HEAD
-                        src={review.reviewer_profile.avatar_url}
-                        alt={review.reviewer_profile.display_name |""}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -269,7 +216,6 @@ export function ReviewsModerationTable(): any ({;
       const { error } = await supabase;
         .from("reviews");
         .update({ status });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
@@ -310,7 +256,6 @@ export function ReviewsModerationTable(): any ({;
   if (isLoading) {;
 
     return (
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
         <div className="h-16 w-full bg-muted rounded animate-pulse" />;
@@ -481,32 +426,9 @@ if ( {) {
       <Table>;
         <TableHeader>;
           <TableRow>;
-<<<<<<< HEAD
-            <TableHead>Reviewer</TableHead>;
-            <TableHead>Rating</TableHead>;
-            <TableHead>Date</TableHead>;
-            <TableHead>Status</TableHead>;
-            <TableHead>Reports</TableHead>;
-            <TableHead className="text-right">Actions</TableHead>;
-          </TableRow>;
-        </TableHeader>;
-        <TableBody>;
-          {reviews && reviews.map((review) => (;
-            <TableRow key={review && review.id}>;
-              <TableCell>;
-                <div className="flex items-center gap-2">;
-                  <Avatar className="h-8 w-8">;
-                    {review && review.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage
-=======
 
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -695,14 +617,6 @@ if ( {) {
                 </div>;
               </TableCell>;
             </TableRow>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </TableBody>
       </Table>

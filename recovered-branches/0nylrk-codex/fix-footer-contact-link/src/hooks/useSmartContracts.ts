@@ -1,26 +1,7 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast  } from 'sonner';
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts';
-import { TalentProfile  } from '@/types/talent';
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";
-export function useSmartContracts() {
-<<<<<<< HEAD
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
-=======
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-=======
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {supabase} from '@/integrations/supabase/client';
@@ -31,8 +12,6 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
   const generateSolidityContract = async (
     values: ContractFormValues
@@ -206,10 +185,6 @@ if ( {) {
     deploySmartContract;
     is_loading;
     deployment_status;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       setDeploymentStatus('deploying'),
       
@@ -239,23 +214,6 @@ if ( {) {
       
       return mockSmartContractInfo
     } catch (err: any) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      console.error("Error deploying smart contract:", err);
-      toast.error("Failed to deploy smart contract");
-      setDeploymentStatus('error');
-      return null
-    }
-  };
-  
-  return {
-    generateSolidityContract;
-    deploySmartContract;
-    isLoading;
-    deploymentStatus
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       console.error("Error deploying smart contract:", err),
       toast.error("Failed to deploy smart contract"),
       setDeploymentStatus('error'),
@@ -348,10 +306,5 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 }

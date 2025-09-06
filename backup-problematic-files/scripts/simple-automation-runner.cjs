@@ -1,33 +1,11 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
->>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -164,20 +142,12 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -265,34 +235,8 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-      this.generateReport();
-      this.log('✅ Automation completed successfully');
-    } catch (error) {
-      this.log(`❌ Automation failed: ${error.message}`);
-      this.results.status = 'failed';
-    }
-  }
-<<<<<<< HEAD
-=======
-=======
       
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       return size}}
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
     totalSize = getDirectorySize(buildDir);
     totalSize = getDirectorySize(buildDir);
 
@@ -320,41 +264,11 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 module.exports = SimpleAutomationRunner;
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 module.exports = SimpleAutomationRunner;
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-module.exports = { runSimpleAutomation }) {
-     {
-  runSimpleAutomation().catch(console.error)}
-=======
-=======
->>>>>>> origin/main
 
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -385,40 +299,10 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
-<<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         "status"
         "status"
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
         "status"
         "status"
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-        "status"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
-        "status"
-=======
-        "status"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
         "status"
         "status"
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
+        "status"

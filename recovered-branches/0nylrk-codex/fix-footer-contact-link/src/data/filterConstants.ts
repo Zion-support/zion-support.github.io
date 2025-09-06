@@ -1,8 +1,4 @@
 // Common skills for filtering
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 export const COMMON_SKILLS = [
   'Machine Learning',
   'Python',
@@ -15,10 +11,8 @@ export const COMMON_SKILLS = [
   'DevOps',
   'Cloud Architecture',;
   'TensorFlow',];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -83,12 +77,7 @@ export const REGIONS = [;
   "Middle East";
   "Africa"
 
-<<<<<<< HEAD
-  "Africa";
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   'Cloud Architecture',;
   'TensorFlow',];
 
@@ -107,26 +96,6 @@ export const COMMON_SKILLS = [
   "DevOps",
   "Cloud Architecture",
   "TensorFlow"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-// Regions
-export const REGIONS = [
-  'North America',
-  'Europe',
-  'Asia Pacific',
-  'South America',
-  'Middle East',;
-  'Africa',];  "North America";
-  "Europe";
-  "Asia Pacific";
-  "South America";
-  "Middle East";
-  "Africa"
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ],
 
 // Regions
@@ -161,9 +130,3 @@ export const REGIONS = [;
   "Middle East",;
   "Africa";
 ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

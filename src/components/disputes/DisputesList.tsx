@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react'
 import { Dispute, DisputeStatus } from '@/types/disputes'
 import { Button } from '@/components/ui/button'
@@ -61,25 +53,14 @@ import {
 import Skeleton from "@/components/ui/skeleton"
 import { formatDistanceToNow } from "date-fns"
 import Link from "next/link"
-<<<<<<< HEAD
-=======
 type DisputesListProps = {
-<<<<<<< HEAD
-  disputes: Dispute[]
-=======
   disputes: Dispute[],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   isLoading: boolean
 }
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all")
-<<<<<<< HEAD
-  const filteredDisputes = statusFilter === "all"
-    ? disputes
-=======
   const filteredDisputes = statusFilter === "all" 
     ? disputes 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     : disputes.filter(dispute => dispute.status === statusFilter)
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
@@ -92,8 +73,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "outline"
       default:
         return "default"
-<<<<<<< HEAD
-=======
     }
   }
   if (isLoading) {
@@ -111,15 +90,12 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 TableBody,
   TableCell,
   TableHead,
   TableHeader,
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from 'react';
 import { Dispute, DisputeStatus } from '@/types/disputes';
 import { Button } from '@/components/ui/button';
@@ -209,8 +185,6 @@ function DisputesList() {
       case "under_review":;
         return "secondary";
       case "resolved":;
-<<<<<<< HEAD
-=======
 
         return "outline", // Changed from './success'; to "outline";
 
@@ -242,11 +216,6 @@ function DisputesList() {
             <Skeleton key={status} className="h-10 w-24" />
           ))}
         </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="border rounded-md">
           <Table>
             <TableHeader>
@@ -259,11 +228,6 @@ function DisputesList() {
 
 
                 <TableHead className="text-right">Actions</TableHead>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -275,33 +239,6 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
-<<<<<<< HEAD
-              ))}
-            </TableBody>
-          </Table>
-        </div>
-      </div>
-    ) }
-  if (disputes.length === 0) {
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    )
-<<<<<<< HEAD
-  }
-  if (disputes.length === 0) {
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-        <h3 className="text-xl font-medium">No disputes found</h3>
-        <p className="text-muted-foreground mt-2">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 </TableRow>
 import React, { useState } from "react",;
 import { Dispute, DisputeStatus } from "@/types/disputes",;
@@ -333,7 +270,6 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
       case "under_review":;
         return "secondary",;
       case "resolved":;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         return "outline", // Changed from "success" to "outline";
       case "closed":;
         return "outline";
@@ -407,322 +343,27 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
           </Table>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    );  }
-
-  if (disputes && disputes.length === 0) {;
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>;
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
-        <h3 className='text-xl font-medium'>No disputes found</h3>;
-        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
-  }
-
-  if (disputes && disputes.length === 0) {;
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>;
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
-        <h3 className='text-xl font-medium'>No disputes found</h3>;
-        <p className='text-muted-foreground mt-2'>          No active disputes match the selected filter    );
-  }
-  if (disputes.length === 0) {
-    return (
-=======
 
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
   if (disputes.length === 0) {
     return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      <div className='text-center py-12 border rounded-md bg-muted/20'>
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
-        <h3 className='text-xl font-medium'>No disputes found</h3>
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">
-<<<<<<< HEAD
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
-        </p>
-      </div>
-    )
-=======
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
-        <h3 className="text-xl font-medium">No disputes found</h3>
-        <p className="text-muted-foreground mt-2">
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="text-center py-12 border rounded-md bg-muted/20">
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
           No active disputes match the selected filter
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </p>
       </div>
     )
   }
-<<<<<<< HEAD
-  return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    <div className='space-y-4'>
-      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>
-        <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('all')}
-          size='sm'        >
-          All
-        </Button>
-        <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('open')}
-          size='sm'        >
-          Open
-        </Button>
-        <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('under_review')}
-          size='sm'        >
-          Under Review
-        </Button>
-        <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('resolved')}
-          size='sm'        >
-          Resolved
-        </Button>
-        <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('closed')}
-          size='sm'        >    <div className="space-y-4">
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-  if (disputes && disputes.length === 0) {;
-    return (
-      <div className='text-center py-12 border rounded-md bg-muted/20'>;
-        <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;
-        <h3 className='text-xl font-medium'>No disputes found</h3>;
-        <p className='text-muted-foreground mt-2'>      <div className="text-center py-12 border rounded-md bg-muted/20">;
-        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-        <h3 className="text-xl font-medium">No disputes found</h3>;
-        <p className="text-muted-foreground mt-2">;
-        </p>;
-      </div>;
-    );
-  }
-  return (
-    <div className='space-y-4'>;
-      <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>;
-        <Button
-          variant={statusFilter === 'all' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('all')}
-          size='sm'        >;
-          All;
-        </Button>;
-        <Button
-          variant={statusFilter === 'open' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('open')}
-          size='sm'        >;
-          Open;
-        </Button>;
-        <Button
-          variant={statusFilter === 'under_review' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('under_review')}
-          size='sm'        >;
-          Under Review;
-        </Button>;
-        <Button
-          variant={statusFilter === 'resolved' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('resolved')}
-          size='sm'        >;
-          Resolved;
-        </Button>;
-        <Button
-          variant={statusFilter === 'closed' ? 'default' : 'outline'}
-          onClick={() => setStatusFilter('closed')}
-          size='sm'        >    <div className="space-y-4">;
-      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">;
-        <Button
-          variant={statusFilter === "all" ? "default" : "outline"}
-          onClick={() => setStatusFilter("all")}
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='space - y-4'>;
-        <div className='flex gap - 2 mb - 4'>;
-          {['All', 'Open', 'Under Review', 'Resolved', 'Closed'].map (status => (
-            <Skeleton key={status} className='h - 10 w - 24' />          ))}
-        </div>;
-        <div className='border rounded - md'>          <Table>;
-        <div className="border rounded - md">;
-      <div className="space - y-4">;
-        <div className="flex gap - 2 mb - 4">;
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map ((status) => (
-            <Skeleton key={status} className="h - 10 w - 24" />))}
-        </div>;
-        <div className="border rounded - md">;
-          <Table>;
-            <TableHeader>;
-              <TableRow>;
-                <TableHead > Case ID</TableHead>;
-                <TableHead > Project</TableHead>;
-                <TableHead > Parties</TableHead>;
-                <TableHead > Created</TableHead>;
-                <TableHead > Status</TableHead>;
-                <TableHead className='text - right'>Actions</TableHead>              </TableRow>                <TableHead className="text - right">Actions</TableHead>;
-              </TableRow>;
-            </TableHeader>;
-            <TableBody>;
-              {[...Array (5)].map ((_, i, ) => (
-                <TableRow key={i}>;
-                  <TableCell>;
-                    <Skeleton className='h - 4 w - 24' />;
-                  </TableCell>;
-                  <TableCell>;
-                    <Skeleton className='h - 4 w - 40' />;
-                  </TableCell>;
-                  <TableCell>;
-                    <Skeleton className='h - 4 w - 32' />;
-                  </TableCell>;
-                  <TableCell>;
-                    <Skeleton className='h - 4 w - 24' />;
-                  </TableCell>;
-                  <TableCell>;
-                    <Skeleton className='h - 6 w - 20' />;
-                  </TableCell>;
-                  <TableCell className='text - right'>;
-                    <Skeleton className='h - 9 w - 20 ml - auto' />;
-                  </TableCell>                </TableRow>                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;
-                  <TableCell><Skeleton className="h - 4 w - 40" /></TableCell>;
-                  <TableCell><Skeleton className="h - 4 w - 32" /></TableCell>;
-                  <TableCell><Skeleton className="h - 4 w - 24" /></TableCell>;
-                  <TableCell><Skeleton className="h - 6 w - 20" /></TableCell>;
-                  <TableCell className="text - right"><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell>))}
-            </TableBody>;
-          </Table>;
-        </div>;
-      </div>) }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='text - center py - 12 border rounded - md bg - muted / 20'>;
-        <ShieldAlert className='mx - auto h - 12 w - 12 text - muted - foreground mb - 4' />;
-        <h3 className='text - xl font - medium'>No disputes found</h3>;
-        <p className='text - muted - foreground mt - 2'>          No active disputes match the selected filter    );
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className='text - center py - 12 border rounded - md bg - muted / 20'>;
-        <ShieldAlert className='mx - auto h - 12 w - 12 text - muted - foreground mb - 4' />;
-        <h3 className='text - xl font - medium'>No disputes found</h3>;
-        <p className='text - muted - foreground mt - 2'>      <div className="text - center py - 12 border rounded - md bg - muted / 20">;
-        <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
-        <h3 className="text - xl font - medium">No disputes found</h3>;
-        <p className="text - muted - foreground mt - 2">;
-        </p>;
-      </div>);
-  }
-  return (
-    <div className='space - y-4'>;
-      <div className='flex gap - 2 mb - 4 overflow - x-auto pb - 2'>;
-        <Button;
-          variant={status_filter === 'all' ? 'default' : 'outline'}
-          on_click={() => setStatusFilter ('all')}
-          size='sm'        >;
-          All;
-        </Button>;
-        <Button;
-          variant={status_filter === 'open' ? 'default' : 'outline'}
-          on_click={() => setStatusFilter ('open')}
-          size='sm'        >;
-          Open;
-        </Button>;
-        <Button;
-          variant={status_filter === 'under_review' ? 'default' : 'outline'}
-          on_click={() => setStatusFilter ('under_review')}
-          size='sm'        >;
-          Under Review;
-        </Button>;
-        <Button;
-          variant={status_filter === 'resolved' ? 'default' : 'outline'}
-          on_click={() => setStatusFilter ('resolved')}
-          size='sm'        >;
-          Resolved;
-        </Button>;
-        <Button;
-          variant={status_filter === 'closed' ? 'default' : 'outline'}
-          on_click={() => setStatusFilter ('closed')}
-          size='sm'        >    <div className="space - y-4">;
-      <div className="flex gap - 2 mb - 4 overflow - x-auto pb - 2">;
-        <Button;
-          variant={status_filter === "all" ? "default" : "outline"}
-          on_click={() => setStatusFilter ("all")}
-          size="sm";
-        >;
-          All;
-        </Button>;
-        <Button
-          variant={statusFilter === "open" ? "default" : "outline"}
-          onClick={() => setStatusFilter("open")}
-          size="sm";
-          size="sm";
-        >;
-          Open;
-        </Button>;
-        <Button
-          variant={statusFilter === "under_review" ? "default" : "outline"}
-          onClick={() => setStatusFilter("under_review")}
-          size="sm";
-          size="sm";
-        >;
-          Under Review;
-        </Button>;
-        <Button
-          variant={statusFilter === "resolved" ? "default" : "outline"}
-          onClick={() => setStatusFilter("resolved")}
-          size="sm";
-          size="sm";
-        >;
-          Resolved;
-        </Button>;
-<<<<<<< HEAD
-        <Button
-          variant={statusFilter === "closed" ? "default" : "outline"}
-          onClick={() => setStatusFilter("closed")}
-          size="sm"
-=======
 
     <div className="space-y-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
     <div className="space-y-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
         <Button
           variant={statusFilter === "all" ? "default" : "outline"}
@@ -734,14 +375,6 @@ if ( {) {
         <Button
           variant={statusFilter === "open" ? "default" : "outline"}
           onClick={() => setStatusFilter("open")}
-<<<<<<< HEAD
-          size="sm"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           size="sm"
         >
           Open
@@ -749,14 +382,6 @@ if ( {) {
         <Button
           variant={statusFilter === "under_review" ? "default" : "outline"}
           onClick={() => setStatusFilter("under_review")}
-<<<<<<< HEAD
-          size="sm"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           size="sm"
         >
           Under Review
@@ -764,48 +389,21 @@ if ( {) {
         <Button
           variant={statusFilter === "resolved" ? "default" : "outline"}
           onClick={() => setStatusFilter("resolved")}
-<<<<<<< HEAD
-          size="sm"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           size="sm"
         >
           Resolved
         </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
-<<<<<<< HEAD
-          size="sm"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           size="sm"
         >
           Closed
         </Button>
       </div>
-<<<<<<< HEAD
-      <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
-=======
 
 
       <div className="border rounded-md overflow-hidden">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <Table>
           <TableHeader>
             <TableRow>
@@ -818,33 +416,13 @@ if ( {) {
             </TableRow>
           </TableHeader>
           <TableBody>
-<<<<<<< HEAD
-            {filteredDisputes.map(dispute => (            </TableRow>
-          </TableHeader>
-          <TableBody>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
                 <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD
-                  {dispute.project?.title |'Unknown Project'}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  {dispute.project?.title |'Unknown Project'}
-=======
                   {dispute.project?.title || 'Unknown Project'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </TableCell>
                 <TableCell>
                   <div className='flex flex-col text-sm'>
@@ -859,18 +437,8 @@ if ( {) {
                 </TableCell>
                 <TableCell>
                   {formatDistanceToNow(new Date(dispute.created_at), {
-<<<<<<< HEAD
-                    addSuffix: true
-                  })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
-=======
-<<<<<<< HEAD
-                    addSuffix: true
-                  })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
-=======
                     addSuffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
                   {dispute.project?.title || "Unknown Project"}
                 </TableCell>
@@ -881,12 +449,6 @@ if ( {) {
                     </span>
                     <span>
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     </span>
                   </div>
                 </TableCell>
@@ -899,10 +461,7 @@ if ( {) {
                 <TableCell>;
                   {formatDistanceToNow(new Date(dispute && dispute.created_at), {;
                     addSuffix: true,;
-<<<<<<< HEAD
-=======
                   })}                      Talent: {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-=======
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
@@ -951,13 +510,11 @@ if ( {) {
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
                   })}                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
 
-=======
                   {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
                 </TableCell>
                 <TableCell>
@@ -965,24 +522,16 @@ if ( {) {
                     {dispute.status.replace('_ ')}
                   </Badge>
                 </TableCell>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell className="text-right">
                   <Button asChild size="sm">
                     <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
                   </Button>
                 </TableCell>
               </TableRow>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
                   {formatDistanceToNow (new Date (dispute.created_at), {
                     add_suffix: true,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   })}
                 </TableCell>;
                 <TableCell>;
@@ -1031,49 +580,13 @@ if ( {") {
   dispute.id "
 }> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {
   formatDistanceToNow (new Date (dispute.created at), {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  addSuffix: true
-})
-}</TableCell> <TableCell> </Button> </TableCell> </TableRow>) )
-}</TableBody> </Table> </div> </div>)
-}"}
-<<<<<<< HEAD
-
-};
-if (isLoading) {";
-  return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {";
-  ["All", "Open", "Under Review",  "Resolved", "Closed" ].map ( (status) => (<Skeletonkey= {
-  status "
-}className="h-10 w-24" /> ";
-}</div> <div className="border rounded-md" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  [...Array (5) ].map ( (, i) => (<TableRowkey= {
-  i "
-}> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-4 w-40" /></TableCell> <TableCell><Skeleton className="h-4 w-32" /></TableCell> <TableCell><Skeleton className="h-4 w-24" /></TableCell> <TableCell><Skeleton className="h-6 w-20" /></TableCell> <TableCell className="text-right" ><Skeleton className="h-9 w-20 ml-auto" /></TableCell> </TableRow>) ) ;
-}</TableBody> </Table> </div> </div>) ";
-}> All </Button> <Button > Open </Button> <Button > Under Review </Button> <Button > Resolved </Button> <Button > Closed </Button> </div> <div className="border rounded-md overflow-hidden" > <Table> <TableHeader> <TableRow> <TableHead>Case ID</TableHead> <TableHead>Project</TableHead> <TableHead>Parties</TableHead> <TableHead>Created</TableHead> <TableHead>Status</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
-  filteredDisputes && filteredDisputes.map ( (dispute) => (<TableRowkey= {
-  dispute && dispute.id "
-}> </TableCell> <TableCell> <div className="flex flex-col text-sm" > <span> </span> </div> </TableCell> <TableCell> {;
-  formatDistanceToNow (new Date (dispute && dispute.created at), {;
-  addSuffix: true ;
-}) ;
-=======
-=======
   addSuffix: true 
 }) 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }"}
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </TableBody>;
         </Table>;
       </div>;
@@ -1081,8 +594,6 @@ if (isLoading) {";
   );
 
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   i ";
 }> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 4 w - 40" /></TableCell> <TableCell><Skeleton className="h - 4 w - 32" /></TableCell> <TableCell><Skeleton className="h - 4 w - 24" /></TableCell> <TableCell><Skeleton className="h - 6 w - 20" /></TableCell> <TableCell className="text - right" ><Skeleton className="h - 9 w - 20 ml - auto" /></TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>) ";
@@ -1096,16 +607,5 @@ if (isLoading) {";
 }</TableCell> <TableCell> </Button> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

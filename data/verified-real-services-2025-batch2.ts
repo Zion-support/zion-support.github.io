@@ -12,22 +12,11 @@ export interface VerifiedRealService2025Batch2 {
     mobile: string;
     email: string;
 
-<<<<<<< HEAD
-=======
 
     address: string;
   };
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     address: string;
   }
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
@@ -63,12 +52,8 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     },
   },
 ];      mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup && ziontechgroup.com";
-=======
 
 
-=======
 
     id: "ai-quality-assurance",
     name: "AI Quality Assurance Platform",
@@ -86,24 +71,8 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     category: "Verified Services 2025",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

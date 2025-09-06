@@ -1,43 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button'
-<<<<<<< HEAD
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { logErrorToProduction } from '@/utils/productionLogger'; import {
-=======
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger'; import {
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-<<<<<<< HEAD
-=======
-=======
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,;
   FormMessage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
 import { PortfolioProject } from '@/types/resume'
 import { usePortfolio } from '@/hooks/usePortfolio'
@@ -85,11 +59,7 @@ export function ProjectForm({
     }
   })
   const onSubmit = async (data: ProjectFormValues) => {
-<<<<<<< HEAD
-    if (!user) return
-=======
     if (!user) return;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     setIsLoading(true)
     try {
       const projectData: PortfolioProject = {
@@ -130,17 +100,9 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger';import {;
-<<<<<<< HEAD
-=======
-=======
       setIsLoading(false)
     }
   }
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -150,8 +112,6 @@ import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   Form,;
   FormControl,;
   FormField,;
@@ -246,16 +206,8 @@ export function ProjectForm(): any ({;
     }
   }
 
-<<<<<<< HEAD
-=======
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
@@ -333,28 +285,15 @@ export function ProjectForm(): any ({;
         <FormField;
           control={form.control}
           name='technologies';
-<<<<<<< HEAD
-=======
-=======
           control={form.control}
 
           name="title"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -372,11 +311,6 @@ export function ProjectForm(): any ({;
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
                   {...field} 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
               </FormControl>
               <FormMessage />
@@ -387,12 +321,6 @@ export function ProjectForm(): any ({;
         <FormField;
           control={form.control}
           name="technologies"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
@@ -409,96 +337,11 @@ export function ProjectForm(): any ({;
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            name='github_url'
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items-center gap-2'>;
-                  <Github className='h-4 w-4' />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input
-                    placeholder='https://github && github.com/yourusername/project'
-<<<<<<< HEAD
-            </FormItem>)}
-        />;
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-          <FormField;
-            control={form.control}
-            name='github_url';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items - center gap - 2'>;
-                  <Github className='h - 4 w - 4' />;
-                  GitHub URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input;
-                    placeholder='https://github.com / yourusername / project';
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <FormField;
-            control={form.control}
-            name='demo_url';
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items - center gap - 2'>;
-                  <Link className='h - 4 w - 4' />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input;
-                    placeholder='https://your - project - demo.com';
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-          />
-          <FormField
-            control={form && form.control}
-            name='demo_url'
-            render={({ field }: { field: any }) => (              <FormItem>;
-                <FormLabel className='flex items-center gap-2'>;
-                  <Link className='h-4 w-4' />;
-                  Demo URL;
-                </FormLabel>;
-                <FormControl>;
-                  <Input
-                    placeholder='https://your-project-demo && demo.com'
-                    {...field}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-          />
-        </div>
-=======
-=======
-<<<<<<< HEAD
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <FormField
-            control={form.control}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Github className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -516,11 +359,6 @@ export function ProjectForm(): any ({;
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -530,12 +368,9 @@ export function ProjectForm(): any ({;
               </FormItem>
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <FormField
           control={form && form.control}
           name='image_url'
@@ -552,33 +387,12 @@ export function ProjectForm(): any ({;
         </div>;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name='image_url';
-          render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel className='flex items - center gap - 2'>;
-                <FileImage className='h - 4 w - 4' />;
-                Screenshot URL;
-              </FormLabel>;
-              <FormControl>;
-                <Input;
-                  placeholder='https://example.com / screenshot.jpg';
-                  {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-            </FormItem>;
-=======
 
           name="image_url"
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -586,23 +400,12 @@ export function ProjectForm(): any ({;
               </FormControl>
               <FormMessage />
             </FormItem>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           )}
         />
         {/* Future file upload field would go here */}
-<<<<<<< HEAD
-        <div className='flex justify-end space-x-2 pt-4'>
-          <Button type='button' variant='outline' onClick={onCancel}>
-=======
         
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             Cancel
           </Button>
           <Button type='submit' disabled={isLoading}>
@@ -614,16 +417,7 @@ export function ProjectForm(): any ({;
     </Form>
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -640,11 +434,4 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -3,138 +3,6 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Menu
-  X
-  ChevronDown
-  Search
-  Phone
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Atom
-  Globe
-  Zap
-  Sparkles
-  Shield
-  Microscope
-  DollarSign
-  Home
-  Users
-  Briefcase
-  BookOpen
-  MessageCircle
-  Star
-  TrendingUp
-  Target
-  Layers
-  Cpu
-  Database
-  Cloud
-  Lock
-  ShieldCheck
-  Earth
-  Factory
-  Car
-  Building
-  GraduationCap
-  Scale
-  Palette
-  Camera
-  Video
-  Music
-  Gamepad2
-  Heart
-  Leaf
-  Sun
-  Moon
-  Wind
-  Droplets
-  Mountain
-  Code
-  Wrench
-  Smartphone
-  BarChart3
-  Eye
-  Infinity
-  Hexagon
-  Network;} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
-  Microscope, DollarSign, Home, Users, Briefcase
-
-<<<<<<< HEAD
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Rocket,;
-  Brain,;
-  Atom,;
-  Globe,;
-  Zap,;
-  Sparkles,;
-  Shield,;
-  Microscope,;
-  DollarSign,;
-  Home,;
-  Users,;
-  Briefcase,;
-  BookOpen,;
-  MessageCircle,;
-  Star,;
-  TrendingUp,;
-  Target,;
-  Layers,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Lock,;
-  ShieldCheck,;
-  Earth,;
-  Factory,;
-  Car,;
-  Building,;
-  GraduationCap,;
-  Scale,;
-  Palette,;
-  Camera,;
-  Video,;
-  Music,;
-  Gamepad2,;
-  Heart,;
-  Leaf,;
-  Sun,;
-  Moon,;
-  Wind,;
-  Droplets,;
-  Mountain,;
-  Code,;
-  Wrench,;
-  Smartphone,;
-  BarChart3,;
-  Eye,;
-  Infinity,;
-  Hexagon,;
-  Network,;} from 'lucide-react';import { ;
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, ;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-  Microscope, DollarSign, Home, Users, Briefcase, ;
-import { 
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
-  Microscope, DollarSign, Home, Users, Briefcase, 
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
   Menu,
   X,
@@ -190,21 +58,12 @@ import {
   BarChart3,
   Eye,
   Infinity,
-<<<<<<< HEAD
-  Hexagon,
-  Network,} from 'lucide-react';import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
-  Microscope, DollarSign, Home, Users, Briefcase,
-=======
 
   Hexagon,;
   Network,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -657,9 +516,6 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ];
   }
-<<<<<<< HEAD
-=======
-=======
         name: 'AI HR Management Suite 2030',
         href: '/ai-hr-management-suite-2030',
         description: 'Intelligent human resources management powered by AI',
@@ -672,19 +528,9 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]
   }
-<<<<<<< HEAD
 
 ];
-=======
-<<<<<<< HEAD
-=======
 
-];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -744,17 +590,9 @@ const quickLinks = [
   { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' }
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' }
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2030() {
-=======
-<<<<<<< HEAD
-export default function UltraFuturisticNavigation2030() {
-=======
 
 
 export default function UltraFuturisticNavigation2030() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -843,33 +681,7 @@ export default function UltraFuturisticNavigation2030() {;
   return (
     <>;
       {/* Top Contact Bar */}
-<<<<<<< HEAD
-      <div className='bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white py-2 px-4 text-sm'>;
-        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
-          <div className='flex items-center space-x-6'>;
-            <div className='flex items-center space-x-2'>;
-              <Phone className='w-4 h-4 text-cyan-400' />;
-              <span>{contactInfo && contactInfo.mobile}</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Mail className='w-4 h-4 text-cyan-400' />;
-              <span>{contactInfo && contactInfo.email}</span>;
-            </div>;
-          </div>;
-          <div className='flex items-center space-x-4'>;
-            <div className='flex items-center space-x-2'>;
-              <MapPin className='w-4 h-4 text-cyan-400' />;
-              <span>{contactInfo && contactInfo.address}</span>;
-            </div>;
-            <div className='flex items-center space-x-2'>;
-              <Globe className='w-4 h-4 text-cyan-400' />;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -884,8 +696,6 @@ export default function UltraFuturisticNavigation2030() {;
             </div>
             <div className='flex items-center space-x-2'>
               <Globe className='w-4 h-4 text-cyan-400' />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               <a
                 href={contactInfo.website}
                 className='hover:text-cyan-400 transition-colors'
@@ -1037,17 +847,6 @@ function UltraFuturisticNavigation2030() {
         </div>;
       </div>;
 
-<<<<<<< HEAD
-      {/* Main Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl'
-            : 'bg-gradient-to-r from-black/95 via-purple-900/95 to-black/95 backdrop-blur-sm'
-        }`}>;
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='flex items-center justify-between h-20'>;
-=======
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-purple-500/20 shadow-2xl' 
@@ -1056,18 +855,11 @@ function UltraFuturisticNavigation2030() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
 
-=======
         }`}
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* Logo */}
             <div className='flex items-center space-x-4'>;
               <Link href='/' className='flex items-center space-x-3 group'>;
@@ -1186,69 +978,16 @@ function UltraFuturisticNavigation2030() {
                             {category && category.services.map((service, serviceIndex) => (;
                               <Link
                                 key={serviceIndex}
-<<<<<<< HEAD
-                                href={service && service.href}
-                                className='block p-3 rounded-lg hover:bg-purple-500/10 transition-colors duration-200 group'>;
-                                <div className='flex items-center justify-between'>;
-                                  <div>;
-                                    <h4 className='text-sm font-medium text-white group-hover:text-purple-400 transition-colors'>;
-                                      {service && service.name}
-                                    </h4>;
-                                    <p className='text-xs text-gray-400'>;
-                                      {service && service.description}
-                                    </p>;
-                                  </div>;
-                                  <span className='text-xs font-mono text-purple-400'>;
-                                    {service && service.price}
-                                  </span>                                </div>                              >;
-                                <div className="flex items-center justify-between">;
-                                  <div>;
-                                    <h4 className="text-sm font-medium text-white group-hover:text-purple-400 transition-colors">;
-                                      {service && service.name}
-                                    </h4>;
-                                    <p className="text-xs text-gray-400">{service && service.description}</p>;
-                                  </div>;
-                                  <span className="text-xs font-mono text-purple-400">{service && service.price}</span>;
-                                </div>;
-                              </Link>;
-=======
                                 href={service.href}
 
                                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                               </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             ))}
                           </div>;
                         </div>;
                       ))}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
 
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>;
               <Link
@@ -1341,17 +1080,8 @@ function UltraFuturisticNavigation2030() {
           </div>;
         </div>;
 
-<<<<<<< HEAD
-=======
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1359,20 +1089,9 @@ function UltraFuturisticNavigation2030() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-              className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/20'>;
-              <div className='px-4 py-6 space-y-6'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <div className='px-4 py-6 space-y-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mobile Navigation Links */}
                 <div className='space-y-4'>;
                   {mainNavigation && mainNavigation.map(item => (                    <Link
@@ -1409,15 +1128,7 @@ function UltraFuturisticNavigation2030() {
                     </Link>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white px-3'>;
@@ -1436,19 +1147,8 @@ function UltraFuturisticNavigation2030() {
                             ? `bg-gradient-to-r ${link && link.color} text-white`;
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700';
                         }`}
-<<<<<<< HEAD
-                      >
-                        <link.icon className='w-6 h-6 mx-auto mb-2' />
-                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-')
-                            ? `bg-gradient-to-r ${link.color} text-white`
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         key={link.name}
                         href={link.href}
                         onClick={closeMenu}
@@ -1460,15 +1160,8 @@ function UltraFuturisticNavigation2030() {
                         }`}
                       >
                         <link.icon className='w-6 h-6 mx-auto mb-2' />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-')
-                            ? `bg-gradient-to-r ${link.color} text-white`
-=======
                         <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
                             ? `bg-gradient-to-r ${link.color} text-white` 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       >;
                         <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
@@ -1487,16 +1180,7 @@ function UltraFuturisticNavigation2030() {
                   </div>
                 </div>
                 {/* Mobile CTA */}
-<<<<<<< HEAD
-                <div className='space-y-3 pt-4 border-t border-purple-500/20'>;
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1589,35 +1273,12 @@ function UltraFuturisticNavigation2030() {
     </>;
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
   );
-<<<<<<< HEAD
-}
-            </motion.div>)}
-        </AnimatePresence>;
-      </nav>;
-      {/* Spacer for fixed navigation */}
-      <div className='h - 20'></div>;
-    </>);      <div className="h - 20"></div>;
-    </>);
-}
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

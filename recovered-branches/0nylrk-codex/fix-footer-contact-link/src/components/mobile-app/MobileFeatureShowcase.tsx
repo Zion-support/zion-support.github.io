@@ -1,54 +1,16 @@
 
-<<<<<<< HEAD
-import React from "react";
-
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-export const MobileFeatureShowcase: React.FC = () => {
-  const features = [;
-    {
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-      title: "Hire from Anywhere"
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
-    }
-=======
-<<<<<<< HEAD
-import React from "react";
-<<<<<<< HEAD
-=======
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
 
-<<<<<<< HEAD
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-export const MobileFeatureShowcase: React.FC = () => {
-  const features = [
-    {
-      icon: <Users className="h-8 w-8 text-zion-cyan" />
-      title: "Hire from Anywhere"
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-<<<<<<< HEAD
-      description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
-    };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
 
     },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -70,15 +32,10 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
   ];
-<<<<<<< HEAD
-=======
-=======
     }
 
   ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -92,8 +49,6 @@ export const MobileFeatureShowcase: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
-<<<<<<< HEAD
-=======
             <div
               key={index}
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
@@ -104,18 +59,6 @@ export const MobileFeatureShowcase: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -161,7 +104,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features && features.map((feature, index) => (;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <div
               key={index}
               className="bg-zion-blue-dark border border-zion-blue-light p-6 rounded-lg hover:border-zion-purple/50 transition-all duration-300"
@@ -173,26 +115,11 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </section>
-  )
-}
-
-=======
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";

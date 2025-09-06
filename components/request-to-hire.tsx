@@ -25,17 +25,8 @@ import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-export default function RequestToHirePage() {
-=======
-<<<<<<< HEAD
-export default function RequestToHirePage() {
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 export default function RequestToHirePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(

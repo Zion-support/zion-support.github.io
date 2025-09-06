@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useState  } from 'react';
-import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
-import { quoteRequestService  } from '@/services/quoteRequestService';
-import { useAuth  } from '@/hooks/useAuth';
-<<<<<<< HEAD
-=======
-=======
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
 import {useAuth} from '@/hooks/useAuth';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -41,10 +27,7 @@ export const useTalentQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
-<<<<<<< HEAD
-=======
 
-=======
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -73,12 +56,6 @@ export const useTalentQuotes = () => {;
     // Status filter;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -126,16 +103,7 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-<<<<<<< HEAD
-    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    }
-=======
     };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -144,8 +112,6 @@ export const useTalentQuotes = () => {;
       })
     }
   });
-<<<<<<< HEAD
-=======
   return {
     quotes: filteredQuotes;
     unreadCount;
@@ -159,10 +125,6 @@ export const useTalentQuotes = () => {;
       updateStatusMutation.mutate({ id, status: 'in_review' });
     markAsResponded: (id: string) =>
       updateStatusMutation.mutate({ id, status: 'responded' });
-<<<<<<< HEAD
-    toggleArchive: (id: string, isArchived: boolean) =>
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {useState} from 'react';
 import {use_query, use_mutation, useQueryClient} from '@tanstack / react - query';
 import {quoteRequestService} from '@/services / quoteRequestService';
@@ -275,20 +237,9 @@ if ( {) {
     error;
     status_filter;
     setStatusFilter;
-<<<<<<< HEAD
-    archiveFilter;
-    setArchiveFilter
-    markAsViewed: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'in_review' });
-    markAsResponded: (id: string) =>
-      updateStatusMutation.mutate({ id, status: 'responded' });
-    toggleArchive: (id: string, isArchived: boolean) =>
-=======
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     },
     onError: (error: Error) => {
       toast({
@@ -360,12 +311,6 @@ if ( {) {
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

@@ -2,157 +2,6 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 
 import {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Trophy
-  FlaskConical as FlaskIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon
-  Crown
-  Gem
-  Diamond;
-<<<<<<< HEAD
-import Head from 'next/head';
-import {;
-  Check,;
-  Star,;
-  Zap,;
-  Shield,;
-  Users,;
-  Globe,;
-  ArrowRight,;
-  ExternalLink,;
-  TrendingUp,;
-  Clock,;
-  Target,;
-  Building,;
-  Rocket,;
-  Award,;
-  DollarSign,;
-  ChartBar,;
-  Lock,;
-  Cpu,;
-  Database,;
-  Cloud,;
-  Smartphone,;
-  Palette,;
-  Search,;
-  MessageSquare,;
-  FileText,;
-  Calendar,;
-  CreditCard,;
-  BarChart3,;
-  Settings,;
-  Zap as ZapIcon,;
-  Code,;
-  BookOpen,;
-  Activity,;
-  Database as DatabaseIcon,;
-  Play,;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Filter,;
-  Grid,;
-  List,;
-  ChevronDown,;
-  ChevronUp,;
-  Sparkles,;
-  FlaskConical,;
-  Dna,;
-  Car,;
-  Leaf,;
-  Factory,;
-  Truck,;
-  Microscope,;
-  GraduationCap,;
-  ShieldCheck,;
-  Brain,;
-  Atom,;
-  Globe2,;
-  Bot,;
-  Eye,;
-  Trophy,;
-  FlaskConical as FlaskIcon,;
-  Dna as DnaIcon,;
-  Car as CarIcon,;
-  Leaf as LeafIcon,;
-  Factory as FactoryIcon,;
-  Truck as TruckIcon,;
-  Microscope as MicroscopeIcon,;
-  GraduationCap as GraduationCapIcon,;
-  ShieldCheck as ShieldCheckIcon,;
-  Crown,;
-  Gem,;
-  Diamond,;
-=======
-=======
   Check,
   Star,
   Zap,
@@ -224,25 +73,13 @@ import {;
   Crown,
   Gem,;
   Diamond,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import {
-<<<<<<< HEAD
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories;
-=======
-<<<<<<< HEAD
-  revolutionaryMicroSaasServices
-  revolutionaryServiceCategories;
-=======
   revolutionaryMicroSaasServices,;
   revolutionaryServiceCategories,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -431,34 +268,6 @@ export default function ComprehensivePricingPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-<<<<<<< HEAD
-    }
-  });
-;
-  const contact_info = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
-  // Pricing tiers
-  const pricingTiers = [
-    {
-      name: 'Starter'
-      price: '$49'
-      period: '/month'
-      description: 'Perfect for small businesses and startups'
-      features: [
-        'Basic service access'
-        'Email support'
-        'Standard features'
-        'Community forum access'
-        'Basic analytics'
-      ]
-      icon: <Star className="w-6 h-6" />
-      color: 'from-blue-500 to-cyan-600'
-=======
   // Pricing tiers
   const pricingTiers = [
     {
@@ -564,26 +373,14 @@ export default function ComprehensivePricingPage() {
     },      icon: <Shield className="w-6 h-6" />
     }
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      metric: '2000%+'
-      label: 'Average ROI'
-      description: 'Proven business value'
-      icon: <TrendingUp className='w-6 h-6' />
-    },      icon: <TrendingUp className="w-6 h-6" />
-    }
-=======
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
         'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
       icon: <Star className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-600',
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       popular: false
     },    {        'Basic service accessEmail supportStandard featuresCommunity forum accessBasic analytics'
       ];
@@ -727,14 +524,7 @@ export default function ComprehensivePricingPage() {
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
-<<<<<<< HEAD
-      icon: <TrendingUp className="w-6 h-6" />
-    }
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -929,26 +719,13 @@ export default function ComprehensivePricingPage() {
         duration: 0.5,
       },
     },
-<<<<<<< HEAD
-=======
-=======
 
         duration: 0.5,
       },
     },
 
-<<<<<<< HEAD
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-  };
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -1020,83 +797,16 @@ export default function ComprehensivePricingPage() {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-<<<<<<< HEAD
-=======
-=======
                 transition={{ duration: 0.8 }}
               >
 
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-<<<<<<< HEAD
-                Transparent pricing for all our revolutionary micro SaaS
-                services. Choose the perfect plan for your business with
-                guaranteed ROI and enterprise-grade reliability.
-              </motion.p>
-              {/* Market Stats */}
-              <motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion.p>
-              {/* Market Stats */}
-              <motion.div
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise-grade reliability.                  Comprehensive;
-                </span>;
-                <br />;
-                <span className="text-white">Pricing & Plans</span>;
-              </motion && motion.h1>;
-              <motion&& motion.p 
-                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-                Transparent pricing for all our revolutionary micro SaaS;
-                services. Choose the perfect plan for your business with;
-                guaranteed ROI and enterprise-grade reliability.;
-              </motion && motion.p>;
 
-              {/* Market Stats */}
-              <motion&& motion.div
-                className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'                initial={{ opacity: 0, y: 20 }}              </motion && motion.p>;
-
-              {/* Market Stats */}
-              <motion&& motion.div 
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
-                {marketStats && marketStats.map((stat, index) => (;
-                  <div key={index} className='text-center'>;
-                    <div className='text-3xl font-bold text-cyan-400 mb-2'>;
-                      {stat && stat.metric}
-                    </div>;
-                    <div className='text-gray-400 text-sm'>{stat && stat.label}</div>;
-                    <div className='text-gray-500 text-xs'>;
-                      {stat && stat.description}
-                    </div>                  </div>                  <div key={index} className="text-center">;
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat && stat.metric}</div>;
-                    <div className="text-gray-400 text-sm">{stat && stat.label}</div>;
-                    <div className="text-gray-500 text-xs">{stat && stat.description}</div>;
-                ))}
-              </motion.div>
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -1120,59 +830,16 @@ export default function ComprehensivePricingPage() {
                 ))}
               </motion.div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               {/* CTA Buttons */}
               <motion&& motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-              >              <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>;
-                <Button
-                  variant='primary'
-                  size='lg'
-                  onClick={() =>;
-                    document;
-                      .getElementById('pricing-tiers');
-                      ?.scrollIntoView({ behavior: 'smooth' });
-                  }
-                  View Pricing Tiers;
-                  <DollarSign className='ml-2 w-5 h-5' />;
-                </Button>;
-                <Button
-                  variant='futuristic'
-                  size='lg'
-                  onClick={() =>;
-                    document;
-                      .getElementById('services-pricing');
-                      ?.scrollIntoView({ behavior: 'smooth' });
-                  }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              >              <motion.div
-=======
 
               >              <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-=======
               >
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -1189,7 +856,6 @@ export default function ComprehensivePricingPage() {
                   variant="futuristic" 
                   size="lg"
                   onClick={() => document.getElementById('services-pricing')?.scrollIntoView({ behavior: 'smooth' })}
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 >
                   Browse All Services
                   <Search className='ml-2 w-5 h-5' />                </Button>                  <Search className="ml-2 w-5 h-5" />
@@ -1228,22 +894,9 @@ export default function ComprehensivePricingPage() {
           <div className="container mx-auto px-4">
             <motion.div
               className="text-center mb-16"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
               initial={{ opacity: 0, y: 20 }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
-              initial={{ opacity: 0, y: 20 }}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -1273,26 +926,8 @@ export default function ComprehensivePricingPage() {
                 Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <motion.div
-                </span>;
-                <br />;
-                <span className="text-white">for Every Business</span>;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Choose the perfect plan that scales with your business. All plans include our 21-day free trial and ROI guarantee.;
-              </p>;
-            </motion && motion.div>;
-
-            <motion&& motion.div 
-=======
-<<<<<<< HEAD
-            <motion.div
-=======
 
             <motion.div 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -1405,23 +1040,6 @@ export default function ComprehensivePricingPage() {
         <section id='services-pricing' className='py-20'>;
           <div className='container mx-auto px-4'>;
 
-<<<<<<< HEAD
-        {/* Services Pricing Grid */}
-        <section id="services-pricing" className="py-20">
-          <div className="container mx-auto px-4">
-            {/* Filters and Controls */}
-            <motion&& motion.div
-              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">;
-          <div className="container mx-auto px-4">;
-            {/* Filters and Controls */}
-            <motion.div
-              className="mb-8"
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
@@ -1432,12 +1050,6 @@ export default function ComprehensivePricingPage() {
 
               initial={{ opacity: 0, y: 20 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0 && 0.6 }}>;
@@ -1504,11 +1116,6 @@ export default function ComprehensivePricingPage() {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
-<<<<<<< HEAD
-                    >;
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     >
                       <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />
                     </button>
@@ -1516,149 +1123,8 @@ export default function ComprehensivePricingPage() {
                 </div>
               </div>
             </motion.div>
-<<<<<<< HEAD
-                    >;
-                      <List className='w-4 h-4' />                    </button>                      <List className="w-4 h-4" />;
-                      </div>;
-                      <div className='text - sm text - gray - 400'>{tier.period}</div>;
-                    </div>;
-                    <div className='space - y-3 mb - 8'>;
-                      {tier.features.map ((feature, idx) => (
-                        <div key={idx} className='flex items - center gap - 2'>;
-                          <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
-                          <span className='text - sm text - gray - 300'>;
-                            {feature}
-                          </span>                        </div>))}
-                    </div>;
-                        {tier.icon}
-                      </div>;
-                      <h3 className="text - 2xl font - bold text - white mb - 2">{tier.name}</h3>;
-                      <p className="text - gray - 300 text - sm mb - 4">{tier.description}</p>;
-                      <div className="text - 4xl font - bold text - cyan - 400 mb - 2">{tier.price}</div>;
-                      <div className="text - sm text - gray - 400">{tier.period}</div>;
-                    </div>;
-                    <div className="space - y-3 mb - 8">;
-                      {tier.features.map ((feature, idx) => (
-                        <div key={idx} className="flex items - center gap - 2">;
-                          <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                          <span className="text - sm text - gray - 300">{feature}</span>;
-                        </div>))}
-                    </div>;
-                    <div className='text - center'>;
-                      <Button;
-                        variant={tier.popular ? 'futuristic' : 'primary'}
-                        size='md';
-                        on_click={() =>;
-                          window.open (
-                            'https://ziontechgroup.com / contact',
-                            '_blank');
-                        }
-                        className='w - full';
-                      >;
-                        Get Started;
-                        <ArrowRight className='ml - 2 w - 4 h - 4' />                      </Button>                    <div className="text - center">;
-                                            <Button;
-                        variant={tier.popular ? 'futuristic' : 'primary'}
-                        size="md";
-                        on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
-                          className="w - full";
-                      >;
-                        Get Started;
-                        <ArrowRight className="ml - 2 w - 4 h - 4" />;
-                    </div>;
-                  </UltraFuturisticCard>;
-                </motion.div>))}
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Pricing Grid */}
-        <section id='services - pricing' className='py - 20'>;
-          <div className='container mx - auto px - 4'>;
-            {/* Filters and Controls */}
-            <motion.div;
-              className='mb - 8'              initial={{ opacity: 0, coordinate_y: 20 }}        <section id="services - pricing" className="py - 20">;
-          <div className="container mx - auto px - 4">;
-            {/* Filters and Controls */}
-            <motion.div;
-              className="mb - 8";
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >;
-              <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
-                <div className='flex flex - wrap gap - 4'>;
-                  <select;
-                    value={selected_category}
-                    on_change={e => setSelectedCategory (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - cyan - 400 / 30 rounded - lg text - white focus:outline - none focus:border - cyan - 400';
-                  >;
-                    <option value='All'>All Categories</option>;
-                    {revolutionaryServiceCategories.map (category => (
-                      <option key={category} value={category}>;
-                        {category}
-                      </option>))}
-                  </select>;
-                  <select;
-                    value={price_range}
-                    on_change={e => setPriceRange (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - purple - 400 / 30 rounded - lg text - white focus:outline - none focus:border - purple - 400';
-                  >;
-                    {price_ranges.map (range => (
-                      <option key={range.value} value={range.value}>;
-                        {range.label}
-                      </option>))}
-                  </select>;
-                  <select;
-                    value={sort_by}
-                    on_change={e => setSortBy (e.target.value)}
-                    className='px - 4 py - 2 bg - slate - 800 border border - green - 400 / 30 rounded - lg text - white focus:outline - none focus:border - green - 400';
-                  >;
-                    {sort_options.map (option => (
-                      <option key={option.value} value={option.value}>;
-                        {option.label}
-                      </option>))}
-                  </select>;
-                </div>;
-                <div className='flex items - center gap - 4'>;
-                  <div className='relative'>;
-                    <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - gray - 400' />;
-                    <input;
-                      type='text';
-                      placeholder='Search services...';
-                      value={search_query}
-                      on_change={e => setSearchQuery (e.target.value)}
-                      className='pl - 10 pr - 4 py - 2 bg - slate - 800 border border - gray - 600 rounded - lg text - white focus:outline - none focus:border - cyan - 400 w - 64';
-                    />;
-                  </div>;
-                  <div className='flex border border - gray - 600 rounded - lg overflow - hidden'>                    <button;
-                      on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <Grid className='w - 4 h - 4' />                    </button>;
-                  <div className="flex border border - gray - 600 rounded - lg overflow - hidden">;
-                    <button;
-                      on_click={() => setViewMode ('grid')}
-                      className={`px - 3 py - 2 ${view_mode === 'grid' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <Grid className='w - 4 h - 4' />                      <Grid className="w - 4 h - 4" />;
-                    </button>;
-                    <button;
-                      on_click={() => setViewMode ('list')}
-                      className={`px - 3 py - 2 ${view_mode === 'list' ? 'bg - cyan - 500 text - white' : 'bg - slate - 800 text - gray - 400'}`}
-                    >;
-                      <List className='w - 4 h - 4' />                    </button>                      <List className="w - 4 h - 4" />;
-                    </button>;
-                  </div>;
-                </div>;
-              </div>;
-            </motion && motion.div>;
-
-            {/* Services Display */}
-            <motion&& motion.div
-=======
             {/* Services Display */}
             <motion.div
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               className={
                 viewMode === 'grid'
                   ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
@@ -1666,81 +1132,28 @@ export default function ComprehensivePricingPage() {
               }
               variants={containerVariants}
               initial='hidden'
-<<<<<<< HEAD
-              whileInView='visible'              viewport={{ once: true }}            <motion && motion.div 
-            </motion && motion.div>;
-
-            {/* Services Display */}
-            <motion&& motion.div
-              className={
-                view_mode === 'grid';
-                  ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8';
-                  : 'space - y-6';
-              }
-              variants={containerVariants}
-              initial='hidden'
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-              className={viewMode === 'grid' 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              whileInView='visible'              viewport={{ once: true }}            <motion.div
-              className={viewMode === 'grid'
-=======
 
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
                 : "space-y-6"
               }
               variants={containerVariants}
               initial="hidden"
-<<<<<<< HEAD
-              whileInView="visible">;
-              {filteredServices && filteredServices.map((service, index) => (;
-                <motion&& motion.div
-                  key={service && service.id}
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
-                  <UltraFuturisticCard
-                  variants={itemVariants}
-                  whileHover={{ y: -5 }}>;
-                  <UltraFuturisticCard
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
-=======
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
-=======
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -2000,19 +1413,8 @@ export default function ComprehensivePricingPage() {
               <motion.div
                 className='text-center py-16'                initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6 }}
-              >              <motion.div
-                className="text-center py-16"
-=======
                 transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0 && 0.6 }}>;
@@ -2157,13 +1559,9 @@ export default function ComprehensivePricingPage() {
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
-<<<<<<< HEAD
-=======
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
@@ -2172,12 +1570,6 @@ export default function ComprehensivePricingPage() {
 
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </motion.div>
           </div>
@@ -2382,15 +1774,5 @@ export default function ComprehensivePricingPage() {
       </div>;
     </UltraFuturisticBackground>));
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

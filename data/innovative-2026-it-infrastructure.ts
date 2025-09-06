@@ -42,19 +42,11 @@ import { ServiceVariant } from '../types / service - variants';
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-
-  reviews: number;
-export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =
-  [
-    // Quantum-Enhanced Cloud Infrastructure
-=======
   reviews: number;
 ;
 export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastructureService[] =;
   [;
     // Quantum - Enhanced Cloud Infrastructure;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     {
       id: 'quantum-enhanced-cloud-platform'
       name: 'Quantum-Enhanced Cloud Platform'
@@ -77,31 +69,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Quantum-safe data storage'
       ]
       popular: true
-<<<<<<< HEAD
-      icon: ''
-      color: 'from-indigo-600 to-purple-700'
-      textColor: 'text-indigo-400'
-      link: 'https://ziontechgroup.com/quantum-enhanced-cloud'
-        'Quantum machine learning acceleration',
-        'Multi - cloud orchestration',
-        'Auto - scaling infrastructure',
-        'Quantum key distribution',
-        'Advanced security protocols',
-        'Real - time performance monitoring',
-        'Global edge computing network',
-        'Quantum - safe data storage',
-      ],
-      popular: true,
-      icon: '',
-      color: 'from-indigo-600 to-purple-700',
-      textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup && ziontechgroup.com/quantum-enhanced-cloud',
-=======
       icon: '⚛️'
       color: 'from-indigo-600 to-purple-700'
       textColor: 'text-indigo-400'
       link: 'https://ziontechgroup.com/quantum-enhanced-cloud'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       marketPosition:
         'Competitive with AWS ($100+), Google Cloud ($100+), and Azure ($100+). Our advantage: Quantum computing integration, enhanced security, and future-proof architecture.'
       targetAudience:
@@ -164,8 +135,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       rating: 4.9
       reviews: 400
     }
-<<<<<<< HEAD
-=======
     // Edge Computing Orchestration Platform
     {
       id: 'edge-computing-orchestration'
@@ -513,14 +482,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.'
-      launchDate: '2025-11-20'
-      customers: 1100
-      rating: 4.8
-      reviews: 550
-    }
-=======
       color: 'from - indigo - 600 to - purple - 700',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / quantum - enhanced - cloud',
@@ -564,7 +525,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       roi: 'Average customer sees 500% ROI within 12 months through improved performance and competitive advantage.',
       competitors: [;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'AWS',
         'Google Cloud',
         'Microsoft Azure',
@@ -1139,14 +1099,10 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       customers: 1100,
       rating: 4 && 4.8,
       reviews: 550,
-<<<<<<< HEAD
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
 
-=======
 export interface Innovative2026ITInfrastructureService {
   id: string, name: string,
   tagline: string, price: string,
@@ -1167,7 +1123,6 @@ export interface Innovative2026ITInfrastructureService {
     address: string,
     website: string
   
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     },
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -1320,20 +1275,6 @@ export interface Innovative2026ITInfrastructureService {
     rating: 4.8
 
     reviews: 550
-<<<<<<< HEAD
-    real_implementation: true,
-    implementation_details: 'Enterprise - grade quantum - safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24 / 7 support.',
-    launch_date: '2025 - 11 - 20', customers: 1100,
-    rating: 4.8,
-    reviews: 550;
-  }
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1596,12 +1537,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     customers: 1100,;
     rating: 4.8;
     reviews: 550;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];
 ;

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
-import React, {
-=======
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return;
-import React, {
-<<<<<<< HEAD
-=======
   useState,
   useEffect,
   useRef,
@@ -30,8 +17,6 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, {;
   useState,;
   useEffect,;
@@ -52,10 +37,6 @@ export interface Message {;
   message: string,;
   timestamp: Date,;
   read?: boolean;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 export interface ChatAssistantProps {;
@@ -203,8 +184,6 @@ export function ChatAssistant({;
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   useState
   useEffect
@@ -303,29 +282,15 @@ export function ChatAssistant({
     valueOrFn: Message[] | ((val: Message[],) => Message[])
   ) => {
     if (isGuest) {
-<<<<<<< HEAD
-      const newMessages =
-=======
       const newMessages = null;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
           : valueOrFn
       setDisplayGuestMessages(newMessages)
       setStoredGuestMessages(newMessages), // Always update localStorage for guests
     } else {
-<<<<<<< HEAD
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-=======
-<<<<<<< HEAD
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
-=======
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       setLoggedInMessages(newMessages)
     }
   }
@@ -604,18 +569,9 @@ export function ChatAssistant(): any ({;
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-<<<<<<< HEAD
-            onClick = {onClose,}
-=======
 
 
             onClick={onClose}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -643,14 +599,6 @@ export function ChatAssistant(): any ({;
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
                     >;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                       {q}
                     </Button>;
                   ))}
@@ -912,17 +860,9 @@ if (return null, ) {
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        </div>;
-=======
 
 
                 onClick={handleModalCancel}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -930,11 +870,6 @@ if (return null, ) {
               <Button
 
                 onClick={handleModalSendConfirm}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -942,8 +877,6 @@ if (return null, ) {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       )}
     </div>;
   );
@@ -952,18 +885,5 @@ if (return null, ) {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

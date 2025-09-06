@@ -4,16 +4,8 @@ interface User {
   email: string;
   name: string;
 }
-<<<<<<< HEAD
-export const useAuth = () => {
-=======
-<<<<<<< HEAD
-export const useAuth = () => {
-=======
 
 export const useAuth = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {

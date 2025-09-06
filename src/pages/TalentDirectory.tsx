@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-  const isAdmin = user?.userType === 'admin';
-  const paginatedTalents = filteredTalents;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import React, { useState, useEffect } from 'react',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import Link from 'next/link';
-import { useAuth  } from '@/hooks/useAuth';
-import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
-import { FilterSidebar  } from '@/components/talent/FilterSidebar';
-import { TalentResults  } from '@/components/talent/TalentResults';
-import { TalentSkeleton  } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner  } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary
-import { useTalentDirectory  } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS  } from '@/data/sortOptions';
-import { X } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import Image from 'next/image';
-import { TalentProfile } from '@/types/talent';
-import { Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious } from '@/components/ui/pagination';
-export default function TalentDirectory() {
-  const router = null;
-                            setCurrentPage(
-                              Math.min(totalPages, currentPage + 1)
-                            )
-<<<<<<< HEAD
-=======
-=======
   const isAdmin = user?.userType === 'admin'
   const paginatedTalents = filteredTalents
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`
@@ -43,8 +6,6 @@ export default function TalentDirectory() {
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -178,7 +139,6 @@ export default function TalentDirectory() {;
     initialized]), // Fixed dependencies
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                           }}
                         />
                       </PaginationItem>
@@ -242,11 +202,6 @@ export default function TalentDirectory() {;
 }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         </div>;
       </div>;
@@ -254,9 +209,3 @@ export default function TalentDirectory() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

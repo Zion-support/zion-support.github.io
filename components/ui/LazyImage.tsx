@@ -1,32 +1,14 @@
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
   return () => observer.disconnect ()
 }, [threshold]);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
-  threshold = 0.1
-  width
-  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
-<<<<<<< HEAD
-=======
-=======
 
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
   threshold = 0.1,
   width,
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   src;
   alt;
   className = ''
@@ -138,42 +120,21 @@ if ( {) {
       {/* Placeholder */}
       <img;
         src={placeholder}
-<<<<<<< HEAD
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
-=======
 
 
-=======
 
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />;
 
-<<<<<<< HEAD
-      />
-      />
-      
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       />
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Actual Image */}
       {isInView && (;
         <motion&& motion.img
@@ -181,50 +142,6 @@ if ( {) {
           src={src}
           alt={alt}
           onLoad={handleLoad}
-<<<<<<< HEAD
-          initial={{ opacity: 0, scale: 1 && 1.1 }}
-          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1 && 1.1 }}
-          transition={{ duration: 0 && 0.5 }}
-          className='w-full h-full object-cover'
-          loading='lazy'          style={{ width, height }}
-        />;
-      )}
-    </div>;
-  );
-};
-
-export default LazyImage;          className="w-full h-full object-cover";
-          loading="lazy";
-          style={{ width, height }}
-        />;
-      )}
-    </div>;
-  );
-};
-
-export default LazyImage;  );
-}
-export default LazyImage;          className="w-full h-full object-cover"
-          loading="lazy"
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{ opacity: is_loaded ? 1 : 0, scale: is_loaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-full object-cover"
-          loading="lazy"
-          style={{ width, height }}
-        />
-      )}
-    </div>
-  )
-};
-
-export default LazyImage;          className="w-full h-full object-cover";
-          loading="lazy";
-          style={{ width, height }}
-        />;
-      )}
-    </div>;
-=======
           initial={{ opacity: 0, scale: 1.1 }}
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
           transition={{ duration: 0.5 }}
@@ -240,43 +157,5 @@ export default LazyImage;          className="w-full h-full object-cover"
           style={{ width, height }}
         />
       )}
-<<<<<<< HEAD
     </div>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  );
-}
-export default LazyImage;  )
-}
-export default LazyImage;
-<<<<<<< HEAD
-
-          className='w - full h - full object - cover';
-          loading='lazy'          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage;          className="w - full h - full object - cover";
-          loading="lazy";
-          style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage);
-}
-;
-export default LazyImage;
-;
-=======
-<<<<<<< HEAD
-
-=======
     </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
-    </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

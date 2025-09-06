@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       const redirectTo = options?.redirectTo || '/login'
       const returnUrl = options?.returnUrl || router.asPath
           if (!requireAuth({ showToast: false })) return false,
 
-<<<<<<< HEAD
-=======
     const userRoles = user?.role ? [user.role] : []
     requireAuth
     requireRole
@@ -16,8 +11,6 @@
     isLoading}
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -32,9 +25,7 @@ interface AuthGuardProps {;
   showToast?: boolean,;
   allowGuest?: boolean;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
           if (!requireAuth({ showToast: false })) return false
@@ -58,16 +49,9 @@ interface AuthGuardProps {;
     user;
     isLoading}
 }
-<<<<<<< HEAD
-=======
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       const redirect_to = options?.redirect_to || '/login';
       const return_url = options?.return_url || router.as_path;
           if () return false, ) {
@@ -81,12 +65,5 @@ interface AuthGuardProps {;
     user;
     is_loading}
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -81,15 +81,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
           </span>;
         )}
       </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
@@ -111,14 +103,10 @@ const ContentCard: React.FC<ContentCardProps> = ({
       <div className='flex items-center justify-between'>
         <div className='inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300'>
           Read More
-<<<<<<< HEAD
-          <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300"></span>
-=======
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
             →
 
 
-=======
           </span>
 
 
@@ -155,11 +143,6 @@ export default ContentCard;    </Link>
   )
 }
 export default ContentCard;
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           </span>
 
         {description}
@@ -168,10 +151,8 @@ export default ContentCard;
       {/* Footer */}
       <div className="flex items-center justify-between">
         <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           Read More
           <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300">→</span>
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         </div>
         {date && (
           <span className='text-xs text-white/50 font-mono'>{date}</span>        </div>
@@ -204,27 +185,6 @@ export default ContentCard;
         )}
       </div>
       {/* Hover Effects */}
-<<<<<<< HEAD
-      <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
-    </Link>;
-  );
-}
-export default ContentCard;    </Link>
-  )
-}
-export default ContentCard;
-
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover: opacity-100 transition-opacity duration-500" />
-    </Link>
-  )
-};
-
-export default ContentCard;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       <div className='flex items - start justify - between mb - 6'>;
         <div;
           className={`w - 12 h - 12 bg - gradient - to - br ${color} rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300`}
@@ -279,11 +239,5 @@ export default ContentCard;    </Link>);
 ;
 export default ContentCard;
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

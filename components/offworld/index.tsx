@@ -260,62 +260,12 @@ function broadcast() {
     </div>
 );
 }
-<<<<<<< HEAD
-=======
     setStatus('Broadcasting manifesto...');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>;
   );
 }
-<<<<<<< HEAD
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Talent Profile Sync</h2>;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Name';
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          className='border p - 2 w - full';
-          placeholder='Skills (comma separated)';
-          value={skills}
-          on_change={e => set_skills (e.target.value)}
-        />;
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';
-          on_click={sync_profile}
-        >;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-      <section className='space - y-2'>;
-        <h2 className='font - semibold'>Broadcast Manifesto</h2>;
-        <button;
-          className='px - 3 py - 2 bg - indigo - 600 text - white rounded';
-          on_click={broadcast}
-        >;
-          Broadcast;
-        </button>;
-      </section>;
-      {status && <p className='text - sm text - gray - 700'>{status}</p>}
-    </div>);
-}
-=======
 
 
-=======
     setStatus('Broadcasting manifesto...');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

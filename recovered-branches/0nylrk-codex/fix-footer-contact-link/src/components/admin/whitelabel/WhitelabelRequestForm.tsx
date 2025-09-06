@@ -12,10 +12,7 @@ import { toast  } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 // Form schema
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const formSchema = z.object({
   brand_name: z.string().min(2, { message: 'Brand name must be at least 2 characters' })
   subdomain: z.string()
@@ -51,24 +48,11 @@ export function WhitelabelRequestForm() {
         primary_color: values.primary_color
         theme_preset: values.theme_preset
         landing_page_copy: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          headline: values.headline
-          subtitle: values.subtitle
-          cta: values.cta}
-      }
-<<<<<<< HEAD
-=======
-=======
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
       };
       
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -86,19 +70,10 @@ export function WhitelabelRequestForm() {
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
-<<<<<<< HEAD
     }
-  }
-=======
-    }
-<<<<<<< HEAD
-  }
-=======
     }
 
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -176,16 +151,9 @@ export function WhitelabelRequestForm() {;
         variant: 'destructive',;
         title: 'Error creating tenant',;
         description: error && error.message || 'Something went wrong'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <Card className="w-full max-w-2xl">;

@@ -345,8 +345,6 @@ if ( {) {
         <motion&& motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-<<<<<<< HEAD
-=======
           animate={{
             rotate: 360
             scale: [1, 1.1, 1];
@@ -373,12 +371,6 @@ if ( {) {
             scale: [1, 0.9, 1]
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 25
-            repeat: Infinity
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           background:;
             'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)',
         }}
@@ -422,96 +414,21 @@ if ( {) {
           transition={{
             duration: 20,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'linear',
-            duration: 20
-            repeat: Infinity
-            ease: 'linear'
-          }}
-        />
-        <motion.div
-          className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30'
-          style={{
-            clipPath:
-              'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-        />;
-        <motion.div;
-          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30';
-          style={{
-            clip_path:;
-              'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-          }}
-          animate={{
-            rotate: -360
-            scale: [1, 0.9, 1]
-            opacity: [0.3, 0.6, 0.3],          }}
-          transition={{
-            duration: 25
-            repeat: Infinity
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            ease: 'linear',          }}          }}
-        />
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
-          style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-        />;
-        <motion.div;
-          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 / 30";
-          style={{ clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
-          animate={{
-            rotate: -360
-            scale: [1, 0.9, 1];
-            opacity: [0.3, 0.6, 0.3]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-          }}
-          transition={{
-            duration: 25
-            repeat: Infinity
-            ease: 'linear',            ease: "linear"
-          }}
-        />
-<<<<<<< HEAD
-=======
-=======
             duration: 25,
             repeat: Infinity,
             ease: 'linear',          }}
 
-=======
-=======
             ease: 'linear',          }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
           transition={{
             duration: 25,
             repeat: Infinity,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            ease: 'linear',            ease: "linear"
-          }}
-        />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
@@ -590,41 +507,13 @@ if ( {) {
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
-<<<<<<< HEAD
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-        />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 10
-            repeat: Infinity
-=======
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />
-=======
-<<<<<<< HEAD
-            duration: 10,
-            repeat: Infinity,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
           }}
 
         />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -683,78 +572,29 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
           }}
           transition={{
-<<<<<<< HEAD
-            duration: 6,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />;
-=======
 
             duration: 6
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
-=======
           className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
           animate={{
             height: [24, 48, 24];
             opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
             duration: 8,
             repeat: Infinity,
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
         <motion&& motion.div
           className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
           animate={{
             height: [24, 48, 24],
             opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
-<<<<<<< HEAD
-          animate={{
-            height: [24, 48, 24]
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-          transition={{
+
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
-          animate={{
-            height: [24, 48, 24]
-            opacity: [0.3, 0.8, 0.3],          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
-          animate={{
-            height: [24, 48, 24]
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-            duration: 8,
-            repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
-=======
 
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         />
       </div>
       {/* Gradient Overlays */}
@@ -812,21 +652,11 @@ if ( {) {
             key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
-<<<<<<< HEAD
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-=======
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
 
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Top gradient */}
         <div className='absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent' />
         {/* Bottom gradient */}
@@ -845,15 +675,9 @@ if ( {) {
             key={i}
             className='absolute w-1 h-1 bg-cyan-400 rounded-full'
             style={{
-<<<<<<< HEAD
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-=======
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             }}
             animate={{
               y: [0, -100, 0]
@@ -921,103 +745,13 @@ if ( {) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-            transition={{
-              duration: Math.random() * 10 + 10
-              repeat: Infinity
-              delay: Math.random() * 10
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />;
-        ))}
-      </div>
-      {/* Neon Glow Effects */}
-      <div className='fixed inset-0 pointer-events-none z-25'>;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />;
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />;
-        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />;
-      </div>;
-    </div>;
-  );
-}
-export default UltraFuturisticBackground2030;      </div>
-    </div>
-  )
-}
-export default UltraFuturisticBackground2030;
-
-      </div>
-
-      {/* Neon Glow Effects */}
-      <div className="fixed inset-0 pointer-events-none z-25">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl" />
-      </div>
-    </div>
-  )
-};
-
-export default UltraFuturisticBackground2030;
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`;
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0];
-            }}
-            transition={{
-              duration: Math.random () * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random () * 10,
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />))}
-      </div>;
-      {/* Neon Glow Effects */}
-      <div className='fixed inset - 0 pointer - events - none z - 25'>;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl' />;
-        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl' />;
-        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl' />;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2030;      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2030;
-;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-=======
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
             transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />
-        ))}
-      </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ease: 'easeInOut',            }}
 
 
@@ -1025,48 +759,18 @@ export default UltraFuturisticBackground2030;
         ))}
       </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-      </div>
-    </div>
-  );
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export default UltraFuturisticBackground2030;      </div>
-    </div>
-  )
-}
 export default UltraFuturisticBackground2030;
 
-<<<<<<< HEAD
-=======
-export default UltraFuturisticBackground2030;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-
 }
-=======
 export default UltraFuturisticBackground2030;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

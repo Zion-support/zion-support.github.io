@@ -24,21 +24,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export interface TreeNode {;
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export interface TreeNode {;
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface TreeNode {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   name: string;
   path: string;
 
@@ -73,33 +60,10 @@ function NodeItem(): any ({;
   const copyPath = async () => {
     await navigator.clipboard.writeText(node.path);  }
 export interface TreeNode {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  name: string
-  path: string
-  type: "folder" | "file"
-
-<<<<<<< HEAD
-
-  const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
-  const toggle = () => setOpen(v => !v);
-
-  const copyPath = async () => {;
-    await navigator && navigator.clipboard.writeText(node && node.path);  };
-export interface TreeNode {;
-  name: string,;
-  path: string,;
-  type: "folder" | "file",;
-=======
-=======
 
   name: string,
   path: string,
   type: "folder" | "file",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -309,38 +273,6 @@ function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, 
     </div>;
   );
 
-<<<<<<< HEAD
-export function Tree(): any ({ nodes, onDeploy }: TreeProps) {;
-  return (
-    <div className='w-full'>;
-      {nodes && nodes.map(n => (        <NodeItem key={n && n.path} node={n} depth={0} onDeploy={onDeploy} />;
-      ))}
-    </div>;
-  );  );
-export function Tree({ nodes, onDeploy }: TreeProps) {
-            {open ? "" : ""}
-          </button>) : (
-          <span className="inline - block w - 4" />)}
-        <span className={`font - mono text - sm ${node.exists ? "text - green - 600" : "text - gray - 500"}`}>;
-          {node.path}
-        </span>
-        <div className="ml-auto flex gap-2">
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={copyPath} title="Copy path">Copy</button>
-          <button className="px-2 py-0.5 text-xs bg-gray-100 rounded" onClick={clonePath} title="Create template">Template</button>
-          <button className="px-2 py-0.5 text-xs bg-emerald-100 rounded" onClick={deploy} title="Auto-deploy">Deploy</button>
-        </div>
-      </div>
-      {hasChildren && open && (
-        <div className="ml-4 border-l pl-2">
-          {node.children!.map((child) => (
-            <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           ))}
         </div>
       )}
@@ -362,8 +294,6 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
       {nodes && nodes.map((n) => (;
       ))}
     </div>;
-<<<<<<< HEAD
-=======
   );  )
 }
 export function Tree({ nodes, onDeploy }: TreeProps) {
@@ -371,13 +301,8 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className="w-full">
       {nodes.map((n) => (
       ))}
-<<<<<<< HEAD
-    </div>
-=======
 
     </div>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   );
 
 export default Tree;
@@ -405,63 +330,17 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
-<<<<<<< HEAD
-  onDeploy
-}/>) )
-}</div>)
-=======
-<<<<<<< HEAD
-  onDeploy
-}/>) )
-}</div>)
-=======
   onDeploy 
 }/>) ) 
 }</div>) ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }export default Tree;}
 export default Tree;
-<<<<<<< HEAD
-
-=======
     <div className="w-full">
       {nodes.map((n) => (
-=======
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }export default Tree;}
 
 export default Tree;
-<<<<<<< HEAD
-  child.path;
-}node= {
-  child;
-}depth= {
-  depth + 1;
-}on_deploy= {
-  on_deploy;
-}/>) );
-}</div>);
-}</div>);
-}export /**
- * Tree - Function description
- */
-function Tree() {
-  return (<div className="w - full"> {
-  nodes.map ( (n) => (<NodeItem key= {
-  n.path;
-}node= {
-  n;
-}depth= {
-  0;
-}on_deploy= {
-  on_deploy;
-}/>) );
-}</div>);
-}export default Tree;}
-export default Tree;
-;
-=======
 
 
 
@@ -469,11 +348,5 @@ export default Tree;
       ))}
     </div>
   );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </div>
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

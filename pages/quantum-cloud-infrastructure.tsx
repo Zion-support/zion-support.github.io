@@ -21,34 +21,14 @@ export default function QuantumCloudInfrastructurePage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
-<<<<<<< HEAD
-              <p className="text-slate-300">Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliancedelivered as managed foundations.</p>
-            </div>
-            <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
-              <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $28,999<span >/month</span></div>
-              <div className="text-sm text-gray-400 mt-2">Trial: 30 days  Setup: 12 weeks</div>
-              <div className="mt-6 flex gap-3">
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
-                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
-=======
               <p className="text-slate-300">Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations.</p>
             </div>
             <div className="p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $28,999<span >/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
               <div className="mt-6 flex gap-3">
-<<<<<<< HEAD
-                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
-                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
-=======
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               </div>
             </div>
           </div>
@@ -95,16 +75,4 @@ function QuantumCloudInfrastructurePage() {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

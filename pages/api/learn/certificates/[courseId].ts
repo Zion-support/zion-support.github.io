@@ -1,40 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import PDFDocument from 'pdfkit';
-;
-const doc = new PDFDocument ({
-  size: 'A4', margin: 50
-});
-// Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
-doc.fill ('#ffffff');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'GET') {
-    res && res.setHeader('Allow', 'GET');
-    return res && res.status(405).end('Method Not Allowed');
-  }
-  const { courseId, userId = 'demo-user' } = req.query as {
-    courseId: string;
-    userId?: string;
-  };
-  try {
-    const users = readJson(usersPath);
-    const courses = readJson(coursesPath);
-    const course = courses && courses.find((c: any) => c && c.id === courseId);
-    const user = users[userId];
-    if (!course) return res.status(404).json({ error: 'Course not found' });
-    if (!user) return res.status(404).json({ error: 'User not found' });
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs',
-=======
 import fs from 'fs';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import path from 'path';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import PDFDocument from 'pdfkit';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
@@ -43,8 +9,6 @@ function readJson(p: string) {
 }
 
 
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader(
       'Content-Disposition'
@@ -97,19 +61,6 @@ function readJson(p: string) {
       .json({ error: e?.message ?? 'Failed to generate certificate' });
   }
 }
-<<<<<<< HEAD
-;
-export default /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-=======
-=======
-<<<<<<< HEAD
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ certificate: 'PDF certificate' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -186,16 +137,10 @@ export default function handler(req, res) {
     doc.moveDown(2),
     doc.fontSize(12).text(`Date: ${date}`, { align: 'center' }),
     doc.end()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
 
   }
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).end ('Method Not Allowed');
@@ -257,8 +202,6 @@ export default function handler(req, res) {
       .json ({ error: e?.message ?? 'Failed to generate certificate' });
   }
 }
-<<<<<<< HEAD
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -274,5 +217,3 @@ export default function handler(req, res) {
 
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

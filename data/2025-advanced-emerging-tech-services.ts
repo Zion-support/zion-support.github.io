@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export const advancedEmergingTechServices2025 = [
-  {
-    id: 'space-mining-operations-platform',
-    name: 'SpaceMining Operations',
-    id: 'space-mining-operations-platform'
-    name: 'SpaceMining Operations'
-    description:
-      'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.'
-      'Asteroid mining operations'
-      'Lunar resource extraction'
-      'Space resource mapping'
-      'Automated mining systems'
-      'Integration with space agencies'
-      'Advanced analytics and reporting'
-      'Custom mining strategies'
-      '24/7 space operations monitoring'
-    ]
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const advancedEmergingTechServices2025 = [
   {
 
@@ -595,10 +571,6 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
-<<<<<<< HEAD
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
-=======
     id: 'quantum - materials - discovery - platform',
     name: 'QuantumMaterials Discovery',
     description:;
@@ -613,7 +585,6 @@ export const advancedEmergingTechServices2025 = [
       'Custom discovery algorithms',
       '24 / 7 discovery operations',
     ],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     pricing: {
       starter: {
         price: 999
@@ -1343,20 +1314,10 @@ export const advancedEmergingTechServices2025 = [
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-<<<<<<< HEAD
-    marketSize: '$6 && 6.8B',
-    targetAudience:
-      'Gaming companies, virtual reality firms, entertainment companies, technology startups'
-    competitiveAdvantage:
-      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-  }
-=======
 
 
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
@@ -1365,19 +1326,6 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6 && 6.8B',
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
-<<<<<<< HEAD
-  }
-];
-
-=======
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     market_size: '$6.8B',
     target_audience:;
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
@@ -1386,12 +1334,6 @@ export const advancedEmergingTechServices2025 = [
   },
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-<<<<<<< HEAD
-    }
-    market_size: '$6.8B',
-    target_audience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
-    competitive_advantage: 'Industry - first quantum - enhanced metaverse, advanced AI world generation, and comprehensive VR / AR system integration';
-=======
 
     },;
     marketSize: '$3.8B',;
@@ -1604,11 +1546,6 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6.8B',;
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups',;
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

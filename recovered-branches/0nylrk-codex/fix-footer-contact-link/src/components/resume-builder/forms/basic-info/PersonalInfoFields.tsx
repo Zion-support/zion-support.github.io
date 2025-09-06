@@ -1,45 +1,16 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-
-import { Control } from "react-hook-form";
-import { BasicInfoFormData } from "./schema";
-<<<<<<< HEAD
-interface PersonalInfoFieldsProps {
-  control: Control < BasicInfoFormData>;
-=======
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 }
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
@@ -66,9 +37,6 @@ function PersonalInfoFields() {
               <Input placeholder="John Doe" {...field} />;
             </FormControl>;
             <FormMessage />;
-<<<<<<< HEAD
-          </FormItem>;
-=======
 
         render={({ field }) => (
           <FormItem>
@@ -78,12 +46,6 @@ function PersonalInfoFields() {
             </FormControl>
             <FormMessage />
           </FormItem>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         )}
       />
       <FormField
@@ -123,11 +85,6 @@ function PersonalInfoFields() {
       <FormField
         control={control}
         name="phone"
-<<<<<<< HEAD
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Phone</FormLabel>;
-=======
         render={({ field }) => (
           <FormItem>
             <FormLabel>Phone</FormLabel>
@@ -139,11 +96,6 @@ function PersonalInfoFields() {
         )}
       />
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           </FormItem>)}
       />;
       <FormField;
@@ -178,13 +130,7 @@ function PersonalInfoFields() {
       />;
     </div>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

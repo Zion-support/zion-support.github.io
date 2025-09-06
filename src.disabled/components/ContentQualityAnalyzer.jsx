@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:src.disabled/components/ContentQualityAnalyzer.jsx
-<<<<<<< HEAD
-import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
-const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";
 const { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState ("all") const [searchTerm,setSearchTerm] = useState (") "";"""";"""
 import { FileText,AlertTriangle,CheckCircle,Info,Search,Edit3,Eye,BarChart3,TrendingUp,Zap const ContentQualityAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [isAnalyzing,setIsAnalyzing] = useState (false) const [contentIssues,setContentIssues] = useState ([]) const [report,setReport] = useState (null) const [selectedFilter,setSelectedFilter] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') \'';\''\"";

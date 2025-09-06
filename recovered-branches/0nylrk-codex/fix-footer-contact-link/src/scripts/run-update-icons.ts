@@ -39,9 +39,6 @@ if ( {) {
     console.error (stderr);
   }
   console.log ('Icon imports updated successfully!');
-<<<<<<< HEAD
-=======
-=======
 
   
   // // // console.log(stdout),
@@ -49,12 +46,6 @@ if ( {) {
     console.error(stderr)
   }
   
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  console.log('Icon imports updated successfully!')
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log('Icon imports updated successfully!')
 }),
 // This is a simple script wrapper to execute our icon update script;
@@ -74,10 +65,5 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   }
 ;
   // // // console.log('Icon imports updated successfully!');
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 });
 ;

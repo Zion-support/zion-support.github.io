@@ -33,17 +33,9 @@ function updateIconImportsInFile(filePath) {
       console.log(` Updated imports in ${filePath}`)
 
       return true
-<<<<<<< HEAD
-=======
-=======
       fs.writeFileSync(filePath, updatedContent, 'utf8'),
       // // // console.log(`✅ Updated imports in ${filePath}`),
       return true
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /**;
  * Helper script to update icon imports across the codebase;
  *;
@@ -67,12 +59,6 @@ function updateIconImportsInFile(filePath) {;
       fs.writeFileSync(filePath, updatedContent, 'utf8'),;
       // // // console.log(`✅ Updated imports in ${filePath}`),;
       return true;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     return false
   } catch (err) {
@@ -93,12 +79,6 @@ files.forEach(file => {
 console.log(`\n Updated icon imports in ${updatedFiles} files`)
 console.log(`\n Make sure to run 'npm install glob' if needed to support this script`);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
  * updateIconImportsInFile - Function description
  */
 function updateIconImportsInFile() {
@@ -136,16 +116,10 @@ if (updated_files++) {
 console.log (`\n Updated icon imports in ${updated_files} files`),
 console.log (`\n Make sure to run 'npm install glob' if needed to support this script`),
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
@@ -158,9 +132,3 @@ files.forEach(file => {;
 }),;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
 // // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

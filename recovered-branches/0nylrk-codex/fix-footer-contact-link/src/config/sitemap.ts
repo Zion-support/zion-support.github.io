@@ -1,20 +1,7 @@
 
-<<<<<<< HEAD
-// Define the types for our sitemap structure
-
-export type SitemapItem = {
-=======
-<<<<<<< HEAD
-// Define the types for our sitemap structure
-<<<<<<< HEAD
-
-export type SitemapItem = {
-=======
 
 
 export type SitemapItem = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   path: string;
   label: string;
   description?: string;
@@ -444,10 +431,7 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
-<<<<<<< HEAD
-=======
 
-=======
 // Define the types for our sitemap structure;
 export type SitemapItem = {;
   path: string,;
@@ -748,12 +732,6 @@ export const getAccessibleRoutes = (;
     // Add role-specific routes;
     if (userType === 'creator' || userType === 'jobSeeker') {;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     if (userType === 'employer' |userType === 'buyer') {
       accessibleRoutes = [...accessibleRoutes, ...clientRoutes]
@@ -762,78 +740,9 @@ export const getAccessibleRoutes = (;
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  return accessibleRoutes
-}
-
-    required_auth: true;
-    required_roles: ['admin'];
-    priority: 0.8;
-    change_freq: 'daily',
-    lastmod: current_date}];
-;
-  return accessibleRoutes;
-=======
   
   return accessibleRoutes
-=======
 ;
-<<<<<<< HEAD
-// The complete sitemap;
-export const complete_sitemap: SitemapItem[] = [;
-  ...public_pages;
-  ...auth_pages;
-  ...talent_routes;
-  ...client_routes;
-  ...shared_routes;
-  ...admin_routes],
-// Helper function to get appropriate routes based on user role;
-export const getAccessibleRoutes = (
-  is_authenticated: boolean,
-  user_type?: 'creator' | 'job_seeker' | 'employer' | 'buyer' | 'admin' | null) =>: any {
-  // Public routes accessible to everyone;
-  let accessible_routes = [...public_pages, ...auth_pages];
-;
-  // Add authenticated - only routes;
-  // Check condition
-if ( {) {
-  $2
-}
-    accessible_routes = [...accessible_routes, ...shared_routes];
-;
-    // Add role - specific routes;
-    // Check condition
-if ( {) {
-  $2
-}
-      accessible_routes = [...accessible_routes, ...talent_routes];
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      accessible_routes = [...accessible_routes, ...client_routes];
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      accessible_routes = [...accessible_routes, ...talent_routes, ...client_routes, ...admin_routes];
-    }
-  }
-  return accessible_routes;
-}
-;
-=======
 
   return accessibleRoutes;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { CertificationFormValues } from "./types";
-
-interface CertificationFormFieldsProps {
-  form: UseFormReturn < CertificationFormValues>;
-}
-export function CertificationFormFields({
-  form
-}: CertificationFormFieldsProps) {
-<<<<<<< HEAD
-=======
-=======
 
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
@@ -33,23 +8,15 @@ import {CertificationFormValues} from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   return (
     <>;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -112,20 +79,8 @@ export function CertificationFormFields(): any ({ form }: CertificationFormField
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <FormField
-          control={form && form.control}
-          name="credential_id"
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel>Credential ID (Optional)</FormLabel>;
-=======
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="expiration_date"
@@ -146,11 +101,6 @@ export function CertificationFormFields(): any ({ form }: CertificationFormField
         />
       </div>
     </>
-<<<<<<< HEAD
-  );
-}
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 />;
               </FormControl>;
               <FormMessage />;
@@ -225,13 +175,7 @@ export function CertificationFormFields(): any ({ form }: CertificationFormField
       </div>;
     </>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

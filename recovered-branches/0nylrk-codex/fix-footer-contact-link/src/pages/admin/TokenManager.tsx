@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import { useEffect, useState  } from 'react';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import { TokenTransaction  } from '@/types/tokens';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
-import { useToast } from '@/hooks/use-toast';
-export default function TokenManager() {
-<<<<<<< HEAD
-=======
-=======
 
 
 import {useEffect, useState} from 'react';
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -35,10 +13,6 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -76,19 +50,10 @@ export default function TokenManager() {;
         description: err.error |'Failed'
         variant: 'destructive'
       })
-<<<<<<< HEAD
     }
-  }
-=======
-    }
-<<<<<<< HEAD
-  }
-=======
     }
 
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -141,14 +106,12 @@ export default function TokenManager() {;
         description: err && err.error || 'Failed',;
         variant: 'destructive';
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -173,7 +136,6 @@ export default function TokenManager() {;
             </Card>;
 
             <Tabs defaultValue="history">;
-=======
       const err = await res.json ();
       toast ({
         title: 'Error',
@@ -182,11 +144,6 @@ export default function TokenManager() {;
       });
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <ProtectedRoute admin_only>;
@@ -209,7 +166,6 @@ export default function TokenManager() {;
               </CardContent>;
             </Card>;
             <Tabs default_value="history">;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <ProtectedRoute adminOnly>

@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import { Quote } from 'lucide-react'
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react'
 import { Quote } from 'lucide-react'
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import {
 
   Carousel
@@ -59,27 +45,12 @@ export function EnterpriseTestimonials() {
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            See how enterprise teams are transforming their hiring process
           </p>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-        <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous."
-    author: "Elena Rodriguez"
-    title: "CTO"
-    company: "FutureTech Systems"
-    image: "/placeholder.svg"}]
-
-<<<<<<< HEAD
-=======
-=======
 
         <Carousel className='w-full'>    quote: "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",
     author: "Elena Rodriguez",
     title: "CTO",
     company: "FutureTech Systems",
     image: "/placeholder.svg"}],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export function EnterpriseTestimonials() {
   return (
     <section id="testimonials" className="py-20 px-4 md:px-6">
@@ -108,31 +79,7 @@ export function EnterpriseTestimonials() {
                   </blockquote>
                   <div className='flex items-center gap-4'>
                     <div className='h-12 w-12 rounded-full overflow-hidden bg-muted'>
-<<<<<<< HEAD
-=======
                       <img
-<<<<<<< HEAD
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        className='h-full w-full object-cover'
-                        loading='lazy'                      />
-                    </div>
-                    <div>
-                      <p className='font-bold'>{testimonial.author}</p>
-                      <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-<<<<<<< HEAD
-=======
             <CarouselNext />
           </div>
         </Carousel>
@@ -141,8 +88,6 @@ export function EnterpriseTestimonials() {
   );
 };
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
                       />
                     </div>
@@ -180,7 +125,6 @@ const testimonials = [
     company: "FutureTech Systems",
 
     image: "/placeholder.svg"}];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function EnterpriseTestimonials() {
   return (
@@ -208,7 +152,6 @@ export function EnterpriseTestimonials() {
                   </blockquote>
 
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import { Quote } from 'lucide-react';
 import {;
@@ -302,25 +245,6 @@ export function EnterpriseTestimonials() {;
                       <p className='font-bold'>{testimonial && testimonial.author}</p>;
                       <p className='text-sm text-muted-foreground'>                        {testimonial && testimonial.title}, {testimonial && testimonial.company}                      <p className="font-bold">{testimonial && testimonial.author}</p>;
                       <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-                        {testimonial && testimonial.title}, {testimonial && testimonial.company}
-                      </p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </CarouselItem>;
-            ))}
-          </CarouselContent>;
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">;
-          </CarouselContent>
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
             <CarouselNext />
           </div>
         </Carousel>
@@ -340,16 +264,6 @@ export function EnterpriseTestimonials() {;
 }
     </section>);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

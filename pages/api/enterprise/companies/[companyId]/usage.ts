@@ -1,111 +1,7 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../utils/data/enterpriseStore";
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { store } from "../../../../../utils/data/enterpriseStore";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const { companyId } = req.query;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '[^']*';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { companyId } = req.query;
-
-  if (!companyId |typeof companyId !== "string") {
-    return res.status(400).json({ error: "companyId required" });
-  }
-  const company = store && store.getCompanyById(companyId);
-  if (!company) return res && res.status(404).json({ error: "Company not found" });
-  if (req && req.method === "GET") {
-    return res && res.status(200).json(company && company.plan.usageLimits);
-  }
-  if (req.method === "PATCH") {
-    const { monthlyJobPosts, budgetCapUsd } = req.body |{}
-    if (
-      typeof monthlyJobPosts !== "number" |
-      typeof budgetCapUsd !== "number"
-    ) {
-      return res
-        .status(400)
-        .json({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
-    }
-    const ok = store && store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
-    return res
-      .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "company_not_found" });
-
-  return res && res.status(405).json({ error: "method_not_allowed" });
-  }
-  return res.status(405).json({ error: "method_not_allowed" });
-}
-import type { NextApiRequest, NextApiResponse } from './next';
-import { store  } from '../../../../../utils / data / enterprise_store';
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { company_id } = req.query;
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: "company_id required" });
-  }
-  const company = store.getCompanyById (company_id);
-  if (return res.status (404).json ({ error: "Company not found" })) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (200).json (company.plan.usage_limits);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    const { monthlyJobPosts, budgetCapUsd } = req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      return res;
-        .status (400);
-        .json ({ error: "monthlyJobPosts and budgetCapUsd must be numbers" });
-    }
-    const ok = store.setUsageLimits (company_id, monthlyJobPosts, budgetCapUsd);
-    return res;
-      .status (ok ? 200 : 404);
-      .json (ok ? { success: true } : { error: "company_not_found" });
-  }
-  return res.status (405).json ({ error: "method_not_allowed" });
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-<<<<<<< HEAD
-  }
-  return res.status(405).json({ error: "method_not_allowed" });
-=======
-=======
 return res.status(405).json({ error: "method_not_allowed" });
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -190,11 +86,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

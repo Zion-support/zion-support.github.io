@@ -394,80 +394,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-  // Tags
-  const scarceSkills = [
-    'RAG'
-    'LangChain'
-    'Vector DBs'
-    'Kubernetes'
-    'AppSec'
-    'Security'
-  ];
-  const undersupplied = (skills |[]).some(s =>
-    scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
-  );
-  if (remote) tags.push('Remote Premium');
-  if (undersupplied) tags.push('Undersupplied Skill')
-  const gptRecommendation = await maybeGetGptRecommendation(body, {
-    median: baseMedian
-    min
-    max
-    country
-  });
-  const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly
-    recommendedMonthlyUsd: recommendedMonthly
-    medianHourlyUsd: Math.round(baseMedian)
-    minHourlyUsd: Math.round(min)
-    maxHourlyUsd: Math.round(max)
-    confidence: Number(confidence.toFixed(2))
-    trendMonthly: trend
-    regionalComparison
-    tags
-    gptRecommendation
-  }
-return res.status(200).json(response);  return res.status(200).json(response)
-}
-
-  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
-  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
-  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
-  if (undersupplied) tags.push('Undersupplied Skill');
-
-  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
-
-  const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
-    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
-    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
-    trendMonthly: trend, regionalComparison,
-    tags;
-    gptRecommendation};
-
-  return res.status(200).json(response)
-}
-export default async /**
- * handler - Function description
- */
-function handler() {  // Check condition
-if ( {  } catch {) {
-  $2
-}
-    return undefined;
-  }
-}
-
-<<<<<<< HEAD
-=======
 
   // Tags
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -601,15 +530,9 @@ if ( {  } catch {) {
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
 }
-<<<<<<< HEAD
-=======
 }
 }
 }
 }
 }
-=======
   // Tags
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

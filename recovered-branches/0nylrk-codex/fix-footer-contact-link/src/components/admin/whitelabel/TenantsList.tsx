@@ -10,46 +10,25 @@ import {
   TableRow
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import {
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-=======
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger,;
 
-=======
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
-  TableRow,;
-=======
   TableRow,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
   DropdownMenuTrigger,
-=======
-<<<<<<< HEAD
-DropdownMenuTrigger,;
-=======
-  DropdownMenuTrigger,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -68,25 +47,11 @@ import { format } from "date-fns";
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   useEffect(() => {
     loadTenants();
   }, []);
 
-<<<<<<< HEAD
-  const loadTenants = async () => {;
-    try {;
-      setIsLoading(true);
-      const { data, error } = await supabase;
-        .from("whitelabel_tenants");
-        .select("*");
-        .order("created_at", { ascending: false });
-=======
   const loadTenants = async () => {
     try {
       setIsLoading(true);
@@ -95,22 +60,11 @@ export function TenantsList() {
         .select("*")
         .order("created_at", { ascending: false });
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       if (error) throw error;
       setTenants(data as WhitelabelTenant[]);
     } catch (error: any) {
       console.error("Error loading tenants:", error);
       toast({
-<<<<<<< HEAD
-        variant: "destructive"
-        title: "Failed to load tenants"
-        description: error.message
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-  }
-=======
         variant: "destructive",
         title: "Failed to load tenants",
         description: error.message,
@@ -120,7 +74,6 @@ export function TenantsList() {
     }
   };
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   const toggleTenantStatus = async (tenant: WhitelabelTenant) => {
     try {
       const { error } = await supabase
@@ -174,11 +127,7 @@ export function TenantsList() {
         description: error.message
       });
     }
-<<<<<<< HEAD
-  }
-=======
   };
-=======
   RefreshCcw,
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -186,7 +135,6 @@ export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {;
@@ -292,17 +240,10 @@ export function TenantsList() {;
         variant: "destructive",;
         title: "Failed to verify DNS",;
         description: error && error.message,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
 
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
   return (
     <div className="space-y-4">
@@ -680,14 +621,5 @@ if (throw error) {
       )}
     </div>;
   );
-<<<<<<< HEAD
-}
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

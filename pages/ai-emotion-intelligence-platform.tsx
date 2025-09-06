@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -56,9 +48,6 @@ const features = [
     icon: Shield,
     title: 'Real-time Alerts',
     description: 'Get instant notifications for negative emotions requiring immediate attention'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -195,11 +184,8 @@ const pricing = [
 ]
 ];
 
-<<<<<<< HEAD
-=======
 
 
-=======
 
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone,;
@@ -249,10 +235,6 @@ const features = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 ],;
@@ -321,9 +303,6 @@ const pricing = [;
   }
 }
 ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 export default function AIEmotionIntelligencePlatform() {
   return (
     <>
@@ -469,8 +448,6 @@ function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-=======
 
 
         {/* Hero Section */  } catch (error) {
@@ -503,21 +480,11 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
               </motion.div>
               <motion.h1
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-=======
 
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -530,22 +497,12 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
                 </span>
               </motion.h1>
               <motion.p
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-=======
 
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -558,20 +515,10 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
               <motion.p
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-=======
 
 
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
@@ -584,22 +531,10 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
             </motion.div>
-<<<<<<< HEAD
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-=======
 
 
             {/* CTA Buttons */  } catch (error) {
@@ -618,12 +553,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -659,14 +588,6 @@ function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Response Time</div>
               </div>
               <div className="text-center">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
                 <div className="text-gray-400 text-sm">Satisfaction Increase</div>
               </div>
@@ -680,9 +601,6 @@ function AIEmotionIntelligencePlatform() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
-=======
         {/* Features Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -706,12 +624,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -734,12 +646,6 @@ function AIEmotionIntelligencePlatform() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
-<<<<<<< HEAD
-                  key={index}
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -760,12 +666,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -787,15 +687,6 @@ function AIEmotionIntelligencePlatform() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-        {/* Use Cases Section */}
-        <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
         {/* Use Cases Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -819,12 +710,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -851,9 +736,6 @@ function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-=======
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -874,12 +756,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -901,15 +777,6 @@ function AIEmotionIntelligencePlatform() {
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD
-        {/* Pricing Section */}
-        <section id="pricing" className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-=======
         {/* Pricing Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -933,12 +800,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -979,28 +840,12 @@ function AIEmotionIntelligencePlatform() {
                         Most Popular
                       </span>
                     </div>
-<<<<<<< HEAD
-                  )}
 
-=======
-<<<<<<< HEAD
-                  )}
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
@@ -1054,9 +899,6 @@ function AIEmotionIntelligencePlatform() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Contact Section */}
-=======
 
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -1100,12 +942,6 @@ function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -1151,10 +987,6 @@ function AIEmotionIntelligencePlatform() {
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
                   <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
-<<<<<<< HEAD
-                    {contactInfo.mobile}
-                  </a>
-=======
 
 
                     {contactInfo.mobile  } catch (error) {
@@ -1163,21 +995,11 @@ function AIEmotionIntelligencePlatform() {
   }
 }
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
                   <span className="text-gray-300 text-sm">Email Us</span>
                   <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
-<<<<<<< HEAD
-                    {contactInfo.email}
-                  </a>
-=======
 
 
                     {contactInfo.email  } catch (error) {
@@ -1186,21 +1008,11 @@ function AIEmotionIntelligencePlatform() {
   }
 }
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
                   <span className="text-gray-300 text-sm">Visit Us</span>
                   <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
-<<<<<<< HEAD
-                    {contactInfo.website.replace('https://', '')}
-                  </a>
-=======
 
 
                     {contactInfo.website.replace('https://', '')  } catch (error) {
@@ -1209,12 +1021,6 @@ function AIEmotionIntelligencePlatform() {
   }
 }
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 </div>
               </div>
             </motion.div>
@@ -1223,80 +1029,9 @@ function AIEmotionIntelligencePlatform() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
-<<<<<<< HEAD
-  )
-}
-            >;
-              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
-                Ready to Get Started?;
-              </h2>;
-              <p className="text - xl text - gray - 400 mb - 8 max - w-3xl mx - auto">;
-                Join hundreds of companies already using our AI Emotion Intelligence Platform to transform their customer experience;
-              </p>;
-              <div className="flex flex - col sm:flex - row items - center justify - center gap - 6 mb - 12">;
-                <Link;
-                  href="/contact" className="group relative px - 8 py - 4 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white font - semibold rounded - 2xl text - lg hover:from - pink - 600 hover:to - purple - 600 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - pink - 500 / 25">;
-                  <span className="relative z - 10 flex items - center">;
-                    Start Free Trial;
-                    <ArrowRight className="ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 200" />;
-                  </span>;
-                  <div className="absolute inset - 0 bg - gradient - to - r from - pink - 600 to - purple - 600 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"></div>;
-                </Link>;
-                <Link;
-                  href="/contact" className="group px - 8 py - 4 border - 2 border - pink - 500 / 30 text - pink - 300 font - semibold rounded - 2xl text - lg hover:bg - pink - 500 / 10 hover:border - pink - 500 / 50 transition - all duration - 300 transform hover:scale - 105">;
-                  <span className="flex items - center">;
-                    Schedule Demo;
-                    <MessageCircle className="ml - 2 w - 5 h - 5 group - hover:scale - 110 transition - transform duration - 200" />;
-                  </span>;
-                </Link>;
-              </div>;
-              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-                <div className="flex flex - col items - center">;
-                  <Phone className="w - 8 h - 8 text - pink - 400 mb - 4" />;
-                  <span className="text - gray - 300 text - sm">Call Us</span>;
-                  <a href={`tel:${contact_info.mobile}`} className="text - white font - semibold hover:text - pink - 400 transition - colors">;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <Mail className="w - 8 h - 8 text - purple - 400 mb - 4" />;
-                  <span className="text - gray - 300 text - sm">Email Us</span>;
-                  <a href={`mailto:${contact_info.email}`} className="text - white font - semibold hover:text - purple - 400 transition - colors">;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className="flex flex - col items - center">;
-                  <Globe className="w - 8 h - 8 text - cyan - 400 mb - 4" />;
-                  <span className="text - gray - 300 text - sm">Visit Us</span>;
-                  <a href={contact_info.website} className="text - white font - semibold hover:text - cyan - 400 transition - colors">;
-                    {contact_info.website.replace ('https://', '')}
-                  </a>;
-                </div>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        <UltraFuturisticFooter2030 />;
-      </UltraFuturisticBackground2030>;
-    </>);
-}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  );
-};
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

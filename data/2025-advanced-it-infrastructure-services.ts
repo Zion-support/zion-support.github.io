@@ -708,8 +708,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4.9
       reviews: 12
     }
-<<<<<<< HEAD
-=======
     // New Advanced IT Infrastructure Services for 2025
     {
       id: 'quantum-cloud-infrastructure-platform'
@@ -1288,14 +1286,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
-        'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.'
-      launchDate: '2025-05-01'
-      customers: 32
-      rating: 4.7
-      reviews: 24
-    }
-=======
       color: 'from - purple - 600 to - pink - 600',
       text_color: 'text - purple - 400',
       link: 'https://ziontechgroup.com / quantum - networking - platform',
@@ -1320,7 +1310,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       ],
       use_cases: [;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
         'Secure communications, Network optimization, Quantum encryption, Government networks, Financial networks',
       ],
       roi: 'Organizations report 1000% ROI through unbreakable security, improved performance, and quantum optimization.',
@@ -2185,13 +2174,8 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       customers: 32,
       rating: 4 && 4.7,
       reviews: 24,
-<<<<<<< HEAD
-    },
-=======
 
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];    features: [
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2459,14 +2443,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
-];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -2546,7 +2522,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -2555,13 +2530,6 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;

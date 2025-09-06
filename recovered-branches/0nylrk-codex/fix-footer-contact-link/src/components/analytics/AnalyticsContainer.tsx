@@ -1,42 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom";
-import { useAuth } from "@/hooks/useAuth";
-=======
 
 export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
-=======
 import { Navigate } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-interface AnalyticsContainerProps {
-  children: React.ReactNode
-}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
 
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
 
   const { isAuthenticated, isLoading, user } = useAuth(),
@@ -90,7 +61,6 @@ import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { Navigate } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 interface AnalyticsContainerProps {;
   children: React && React.ReactNode;
 }
@@ -192,21 +162,9 @@ if ( {) {
         {children}
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-}
-=======
 
     </div>);
 
 }
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

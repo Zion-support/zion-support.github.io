@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -15,32 +7,6 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const {
-    user, setUser
-    isLoading, setIsLoading
-    onboardingStep, setOnboardingStep
-  } = useAuthState();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep);
-  const {
-    login: loginImpl
-    signup: signupImpl
-    logout;
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3;
-  } = useAuthOperations(setUser, setIsLoading);
-<<<<<<< HEAD
-=======
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
     return loginImpl({ email, password })
@@ -52,9 +18,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -64,10 +27,6 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -93,7 +52,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     loginWithWeb3
   } = useAuthOperations(setUser, setIsLoading),
 
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
     return loginImpl({ email, password })
@@ -130,22 +88,11 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           }
         } else {;
           setUser(null);
-<<<<<<< HEAD
-          // Show logout toast when user logs out
-          if (event === 'SIGNED_OUT') {
-            handleSignedOut()
-=======
 
 
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
           }
         }
         setIsLoading(false);
@@ -207,15 +154,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
       {children}
     </AuthContext.Provider>
   )
-<<<<<<< HEAD
-}
-
-=======
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   } = useAuthOperations (set_user, setIsLoading);
 ;
   // Wrapper for login to match the AuthContextType interface;
@@ -321,14 +259,8 @@ if ( {) {
     </AuthContext.Provider>);
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -361,9 +293,3 @@ if ( {) {
     </AuthContext.Provider>;
   );
 };
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

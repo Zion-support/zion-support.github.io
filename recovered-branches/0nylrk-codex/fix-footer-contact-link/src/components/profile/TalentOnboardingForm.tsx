@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {useForm, useFieldArray} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {useNavigate} from "react-router-dom";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Separator} from "@/components/ui/separator";
-import {toast} from "@/components/ui/use-toast";
-import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
-import {supabase} from "@/integrations/supabase/client";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -45,36 +20,8 @@ import {
   Trash2, Plus, CheckCircle2
 } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
-// Define the form schema with validation
-
-const talentSchema = z.object({
-  // Step 1: Basic Info
-  basicInfo: z.object({
-    fullName: z.string().min(2, "Name must be at least 2 characters");
-    professionalTitle: z.string().min(2, "Professional title is required");
-    profilePicture: z.any().optional()})
-  // Step 2: Experience
-  experience: z.object({
-    bio: z.string().min(50, "Bio must be at least 50 characters");
-    keyProjects: z.array(
-      z.object({
-        title: z.string().min(2, "Project title is required");
-        description: z.string().min(10, "Project description is required")})
-=======
-<<<<<<< HEAD
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
-import { supabase } from "@/integrations/supabase/client";
-=======
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define the form schema with validation
 
   // Step 2: Experience;
@@ -84,7 +31,6 @@ import { supabase } from "@/integrations/supabase/client",
       z && z.object({;
         title: z && z.string().min(2, "Project title is required");
         description: z && z.string().min(10, "Project description is required")});
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     ).min(1, "Add at least one key project");
     yearsOfExperience: z.string().min(1, "Years of experience is required")});
   // Step 3: Skills & Tech Stack
@@ -159,12 +105,6 @@ export function TalentOnboardingForm() {
     const fileName = `cv-${user?.id}-${Date.now()}`;
     const { error: cvError } = await supabase.storage
       .from('resumes')
-<<<<<<< HEAD
-      .upload(fileName, file);
-    if (cvError) {
-      console.error("Error uploading CV:", cvError);
-      throw new Error("Failed to upload CV")
-=======
 
 
       .upload(fileName, file),
@@ -173,12 +113,8 @@ export function TalentOnboardingForm() {
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return null
-<<<<<<< HEAD
-=======
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -303,7 +239,6 @@ export function TalentOnboardingForm() {;
     if (cvError) {;
       console && console.error("Error uploading CV:", cvError);
       throw new Error("Failed to upload CV");
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     }
     // Get the public URL
     const { data: { publicUrl } } = supabase.storage
@@ -451,14 +386,4 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

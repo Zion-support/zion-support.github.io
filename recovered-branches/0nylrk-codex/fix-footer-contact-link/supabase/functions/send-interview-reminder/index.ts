@@ -1,37 +1,12 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
 import {Resend} from "npm: resend@2.0.0";
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") |"";
-=======
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
-import {Resend} from "npm: resend@2.0.0";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -108,33 +83,13 @@ serve(async (req) => {
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          }
-        }
-        // Mark the interview as reminder sent
-        await supabase
-          .from('interviews')
-          .update({ reminder_sent: new Date().toISOString() })
-          .eq('id', interview.id)
-<<<<<<< HEAD
-      }
-    }
-<<<<<<< HEAD
-=======
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
               `}),
             
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Resend } from "npm: resend@2.0.0",;
@@ -224,14 +179,9 @@ serve(async (req) => {;
           .from('interviews');
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     return new Response(JSON.stringify({ success: true, results }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }
       status: 200})
@@ -274,17 +224,9 @@ serve(async (req) => {;
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
-=======
-=======
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -294,11 +236,6 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 });
 ;

@@ -1,135 +1,3 @@
-<<<<<<< HEAD
-
-import React, { useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import {
-  Bookmark
-  BookmarkCheck
-  ChevronRight
-  MapPin
-  Clock
-  DollarSign
-} from 'lucide-react'
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
-import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import {;
-  Bookmark,;
-  BookmarkCheck,;
-  ChevronRight,;
-  MapPin,;
-  Clock,;
-  DollarSign,;
-} from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-
-interface BrowseItem {;
-import React, { useState } from 'react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-=======
-<<<<<<< HEAD
-
-
-interface BrowseItem {;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Card, CardContent } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-import {
-  Bookmark,
-  BookmarkCheck,
-  ChevronRight,
-  MapPin,
-  Clock,
-  DollarSign,
-} from 'lucide-react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
-interface BrowseItem {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  location?: string;
-  badges: string[];
-  price?: string;
-  image?: string;
-  match?: number;
-  timePosted?: string
-interface BrowseCardsProps {
-  items: BrowseItem[];
-  type: "jobs" | "talents";
-  onViewDetails: (id: string) => void
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
-  const toggleSaved = null;
-  return (
-<<<<<<< HEAD
-    <div className='space-y-4 pb-24'>;
-      {items && items.map(item => (;
-        <Card key={item && item.id} className='overflow-hidden'>;
-          <CardContent className='p-0'>;
-            <div className='p-4'>;
-              <div className='flex justify-between'>;
-                <div className='flex items-center gap-3'>;
-                  {type === 'talents' ? (;
-                    <Avatar className='h-12 w-12'>        <Card key={item && item.id} className="overflow-hidden">;
-          <CardContent className="p-0">;
-            <div className="p-4">;
-              <div className="flex justify-between">;
-                <div className="flex items-center gap-3">;
-                  {type === "talents" ? (;
-                    <Avatar className="h-12 w-12">;
-                      <AvatarImage src={item && item.image} alt={item && item.title} />;
-                      <AvatarFallback>;
-                        {item && item.title.charAt(0).toUpperCase()}
-                      </AvatarFallback>;
-                    </Avatar>;
-                  ) : (;
-                    <div className='h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center'>;
-                      <span className='text-primary font-semibold'>JOB</span>;
-                    </div>;
-                  )}
-                  <div>
-                    <h3 className='font-medium'>{item.title}</h3>
-                    <p className='text-sm text-muted-foreground'>
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </div>
-                <button
-                  className='h-8 w-8 flex items-center justify-center'
-                  onClick={() => toggleSaved(item && item.id)}                >;
-                  {savedItems && savedItems.includes(item && item.id) ? (;
-                    <BookmarkCheck className='h-5 w-5 text-primary' />;
-                  ) : (;
-                    <Bookmark className='h-5 w-5 text-muted-foreground' />;
-                  )}
-                </button>
-              </div>
-              <div className='mt-3 flex flex-wrap gap-1'>
-                {item.badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant='outline'
-                    className='text-xs font-normal'>                      <AvatarImage src={item && item.image} alt={item && item.title} />;
-                      <AvatarFallback>{item && item.title.charAt(0).toUpperCase()}</AvatarFallback>;
-                    </Avatar>;
-                  ) : (;
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
-                      <span className="text-primary font-semibold">JOB</span>;
-                    </div>;
-=======
     <div className='space-y-4 pb-24'>
       {items.map(item => (
         <Card key={item.id} className='overflow-hidden'>
@@ -139,11 +7,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 <div className='flex items-center gap-3'>
                   {type === 'talents' ? (
                     <Avatar className='h-12 w-12'>        <Card key={item.id} className="overflow-hidden">
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -188,11 +52,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     <div className="space-y-4 pb-24">
       {items.map((item) => (
         <Card key={item.id} className="overflow-hidden">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <CardContent className="p-0">
             <div className="p-4">
               <div className="flex justify-between">
@@ -206,9 +65,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -217,33 +73,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </div>
                 <button
                   className="h-8 w-8 flex items-center justify-center"
-<<<<<<< HEAD
-                  onClick={() => toggleSaved(item && item.id)}
-                >;
-                  {savedItems && savedItems.includes(item && item.id) ? (;
-                    <BookmarkCheck className="h-5 w-5 text-primary" />;
-                  ) : (;
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />;
-                  )}
-                </button>
-              </div>
-              <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
-                  <Badge
-                    key = {index,}
-                    variant="outline"
-                    className="text-xs font-normal"
-                    {badge}
-                  </Badge>;
-                ))}
-=======
                   onClick={() => toggleSaved(item.id)}
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {savedItems.includes(item.id) ? (
                     <BookmarkCheck className="h-5 w-5 text-primary" />
                   ) : (
@@ -251,21 +82,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
-<<<<<<< HEAD
-              <div className='mt-3 flex flex-wrap gap-1'>
-                {item.badges.map((badge, index) => (
-                  <Badge
-                    key={index}
-                    variant='outline'
-                    className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
-                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
-                    </Avatar>
-                  ) : (
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary font-semibold">JOB</span>
-                    </div>
-<<<<<<< HEAD
-=======
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -283,21 +99,13 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge, index) => (
                   <Badge 
                     key={index} 
                     variant="outline" 
                     className="text-xs font-normal"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   >
 import React, { useState } from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -350,7 +158,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   )}
                   <div>
                     <h3 className="font-medium">{item.title}</h3>
@@ -376,36 +183,14 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                     {badge}
                   </Badge>;
                 ))}
               </div>
-<<<<<<< HEAD
-              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
-              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               
               <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
               
               <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 {item.location && (
                   <div className='flex items-center gap-1'>
                     <MapPin className='h-3 w-3' />
@@ -443,44 +228,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     <span>{item.timePosted}</span>
                   </div>
                 )}
-<<<<<<< HEAD
-                {item.match && (
-=======
-<<<<<<< HEAD
-                {item.match && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-3 w-3" />
-                    <span>{item.location}</span>
-                  </div>
-                )}
-                {item.price && (
-                  <div className="flex items-center gap-1">
-                    <DollarSign className="h-3 w-3" />
-                    <span>{item.price}</span>
-                  </div>
-                )}
-                {item.timePosted && (
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    <span>{item.timePosted}</span>
-                  </div>
-                )}
-                {item.match && (
-=======
                 
                 {item.match && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
                   </div>
@@ -566,14 +315,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
                 onClick={() => onViewDetails(item.id)}
                 className="gap-1"
               >
@@ -582,178 +323,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
       ))}
-    </div>
-  );
-}
-  time_posted?: string;
-interface BrowseCardsProps {
-  items: BrowseItem[];
-  type: 'jobs' | 'talents';
-  onViewDetails: (id: string) => void;
-export /**
- * BrowseCards - Function description
- */
-function BrowseCards() {
-  const [saved_items, setSavedItems] = useState < string[]>([]);
-  const toggle_saved = (id: string) =>: any {
-    setSavedItems (prev =>;
-      prev.includes (id) ? prev.filter (item_id => item_id !== id) : [...prev, id]);
-  }
-  return (
-    <div className='space - y-4 pb - 24'>;
-      {items.map (item => (
-        <Card key={item.id} className='overflow - hidden'>;
-          <CardContent className='p - 0'>;
-            <div className='p - 4'>;
-              <div className='flex justify - between'>;
-                <div className='flex items - center gap - 3'>;
-                  {type === 'talents' ? (
-                    <Avatar className='h - 12 w - 12'>        <Card key={item.id} className="overflow - hidden">;
-          <CardContent className="p - 0">;
-            <div className="p - 4">;
-              <div className="flex justify - between">;
-                <div className="flex items - center gap - 3">;
-                  {type === "talents" ? (
-                    <Avatar className="h - 12 w - 12">;
-                      <AvatarImage src={item.image} alt={item.title} />;
-                      <AvatarFallback>;
-                        {item.title.char_at (0).toUpperCase ()}
-                      </AvatarFallback>;
-                    </Avatar>) : (
-                    <div className='h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center'>;
-                      <span className='text - primary font - semibold'>JOB</span>;
-                    </div>)}
-                  <div>;
-                    <h3 className='font - medium'>{item.title}</h3>;
-                    <p className='text - sm text - muted - foreground'>;
-                      {item.subtitle}
-                    </p>;
-                  </div>;
-                </div>;
-                <button;
-                  className='h - 8 w - 8 flex items - center justify - center';
-                  on_click={() => toggle_saved (item.id)}                >;
-                  {saved_items.includes (item.id) ? (
-                    <BookmarkCheck className='h - 5 w - 5 text - primary' />) : (
-                    <Bookmark className='h - 5 w - 5 text - muted - foreground' />)}
-                </button>;
-              </div>;
-              <div className='mt - 3 flex flex - wrap gap - 1'>;
-                {item.badges.map ((badge, index) => (
-                  <Badge;
-                    key={index}
-                    variant='outline';
-                    className='text - xs font - normal'                  >                      <AvatarImage src={item.image} alt={item.title} />;
-                      <AvatarFallback>{item.title.char_at (0).toUpperCase ()}</AvatarFallback>;
-                    </Avatar>) : (
-                    <div className="h - 12 w - 12 rounded - md bg - primary / 10 flex items - center justify - center">;
-                      <span className="text - primary font - semibold">JOB</span>;
-                    </div>)}
-                  <div>;
-                    <h3 className="font - medium">{item.title}</h3>;
-                    <p className="text - sm text - muted - foreground">{item.subtitle}</p>;
-                  </div>;
-                </div>;
-                <button;
-                  className="h - 8 w - 8 flex items - center justify - center";
-                  on_click={() => toggle_saved (item.id)}
-                >;
-                  {saved_items.includes (item.id) ? (
-                    <BookmarkCheck className="h - 5 w - 5 text - primary" />) : (
-                    <Bookmark className="h - 5 w - 5 text - muted - foreground" />)}
-                </button>;
-              </div>;
-              <div className="mt - 3 flex flex - wrap gap - 1">;
-                {item.badges.map ((badge, index) => (
-                  <Badge;
-                    key = {index, }
-                    variant="outline";
-                    className="text - xs font - normal";
-                    {badge}
-                  </Badge>))}
-              </div>;
-              <p className='mt - 3 text - sm line - clamp - 2'>{item.description}</p>;
-              <div className='mt - 3 flex flex - wrap gap - 3 text - xs text - muted - foreground'>;
-                {item.location && (
-                  <div className='flex items - center gap - 1'>;
-                    <MapPin className='h - 3 w - 3' />;
-                    <span>{item.location}</span>;
-                  </div>)}
-                {item.price && (
-                  <div className='flex items - center gap - 1'>;
-                    <DollarSign className='h - 3 w - 3' />;
-                    <span>{item.price}</span>;
-                  </div>)}
-                {item.time_posted && (
-                  <div className='flex items - center gap - 1'>;
-                    <Clock className='h - 3 w - 3' />;
-                    <span>{item.time_posted}</span>;
-                  </div>)}
-                {item.match && (
-                  <div className='ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5'>                    {item.match}% match                {item.location && (
-                  <div className="flex items - center gap - 1">;
-                    <MapPin className="h - 3 w - 3" />;
-                    <span>{item.location}</span>;
-                  </div>)}
-                {item.price && (
-                  <div className="flex items - center gap - 1">;
-                    <DollarSign className="h - 3 w - 3" />;
-                    <span>{item.price}</span>;
-                  </div>)}
-                {item.time_posted && (
-                  <div className="flex items - center gap - 1">;
-                    <Clock className="h - 3 w - 3" />;
-                    <span>{item.time_posted}</span>;
-                  </div>)}
-                {item.match && (
-                  <div className="ml - auto bg - primary / 10 text - primary rounded - full px - 2 py - 0.5">;
-                    {item.match}% match;
-                  </div>)}
-              </div>;
-            </div>;
-            <div className='border - t border - border p - 3 flex justify - end'>;
-              <Button;
-                size='sm';
-                on_click={() => onViewDetails (item.id)}
-                className='gap - 1'              >;
-                View Details <ChevronRight className='h - 4 w - 4' />              </Button>;
-                View Details <ChevronRight className="h - 4 w - 4" />;
-                on_click={() => onViewDetails (item.id)}
-                className="gap - 1";
-              >;
-                View Details <ChevronRight className="h - 4 w - 4" />;
-              </Button>;
-            </div>;
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
-=======
-<<<<<<< HEAD
-      ))};
-=======
-      ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  )
-}
-
-=======
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </div>;
   );
 };
 }
 
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5

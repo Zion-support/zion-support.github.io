@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const cuttingEdgeITServices2025 = [
   {
-    id: 'quantum-cloud-infrastructure-platform',
-    name: 'Quantum Cloud Infrastructure Platform',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-export const cuttingEdgeITServices2025 = [
-  {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     description:
@@ -72,21 +60,6 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$22.1B'
-<<<<<<< HEAD
-      'Quantum Computing',
-      'Cloud Infrastructure',
-      'Security',
-      'Performance',
-      'Scalability',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$22 && 22.1B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions'
     competitiveAdvantage:
@@ -170,21 +143,6 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$18.7B'
-<<<<<<< HEAD
-      'Edge Computing',
-      'Orchestration',
-      'Real - time Processing',
-      'AI Deployment',
-      'Low Latency',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$18 && 18.7B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers'
     competitiveAdvantage:
@@ -271,21 +229,6 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$31.2B'
-<<<<<<< HEAD
-      'Zero Trust',
-      'Security',
-      'Authentication',
-      'IAM',
-      'Threat Detection',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$31 && 31.2B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions'
     competitiveAdvantage:
@@ -369,21 +312,6 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$19.9B'
-<<<<<<< HEAD
-      'Blockchain',
-      'Smart Contracts',
-      'Distributed Ledger',
-      'Enterprise',
-      'Automation',
-    ],
-    website: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$19 && 19.9B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies'
     competitiveAdvantage:
@@ -464,24 +392,6 @@ export const cuttingEdgeITServices2025 = [
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$25.6B'
-<<<<<<< HEAD
-          'Full AI DevOps platform',
-          'Custom development',
-          'Dedicated specialists',
-          '24 / 7 support',
-        ],
-      },
-    },
-    category: 'DevOps',
-    tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
-    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
-    contact: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-    },
-    marketSize: '$25 && 25.6B',
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     targetAudience:
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies'
     competitiveAdvantage:
@@ -504,72 +414,15 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'DevOps Best Practices'
-      'Security Standards'
-      'Quality Assurance Protocols'
-    ]
-  }
-<<<<<<< HEAD
-];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
-    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
-    description: 'Next-generation cloud infrastructure that leverages quantum computing principles for enhanced security, performance, and scalability across distributed systems.',
-    features: [
-      'Quantum-enhanced security protocolsDistributed quantum computing nodesReal-time infrastructure optimizationQuantum-resistant encryptionAdvanced load balancing algorithmsPredictive scaling capabilitiesMulti-cloud quantum orchestrationReal-time performance monitoring';
-      'Quantum-enhanced data processingAutomated infrastructure management'
-    market_size: '$25.6B',
-    target_audience:;
-      'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
-    competitive_advantage:;
-      'AI - powered DevOps automation, predictive monitoring, intelligent incident response',
-    use_cases: [;
-      'Software development automation',
-      'Continuous deployment pipelines',
-      'Performance monitoring and optimization',
-      'Incident response automation',
-      'Quality assurance automation',
-    ],
-    integrations: [;
-      'GitHub',
-      'GitLab',
-      'Jenkins',
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'Azure',
-      'Google Cloud',
-    ],
-    compliance: [;
-=======
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
-<<<<<<< HEAD
-  },
-=======
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-<<<<<<< HEAD
-    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-=======
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-<<<<<<< HEAD
-  }
-];
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -775,11 +628,6 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 

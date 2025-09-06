@@ -2,101 +2,11 @@ import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-
-
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-  {
-
-import { ProductListing } from "@/types/listings";
-import { SearchSuggestion, FilterOptions } from "@/types/search";
-// Mock marketplace listings with more realistic data
-export const MARKETPLACE_LISTINGS: ProductListing[] = [
-  {
-    id: 'ai-model-1',
-    title: 'GPT-4 API Integration Package',
-    description:
-      'Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.'
-    category: 'AI Models & APIs'
-    price: 1999
-    currency: '$'
-    tags: ['GPT-4', 'API Integration', 'NLP']
-      name: 'AI Solutions Inc.'
-      id: 'ai-solutions'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100'
-    }
-    images: [
-<<<<<<< HEAD
-      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2024-01-10T12:30:00.000Z'
-    rating: 4.9
-    reviewCount: 58
-    featured: true
-    location: 'Global'
-    availability: 'Immediate'
-    aiScore: 98
-  }
-    featured: true,
-    location: 'Global',
-    availability: 'Immediate',
-    ai_score: 98,
-  },
-  {
-    id: 'ai-service-2'
-    title: 'Custom Machine Learning Model Development'
-    description:
-      'End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.'
-    category: 'Services'
-    price: 5999
-    currency: '$'
-    tags: ['Machine Learning', 'Custom Development', 'Data Science']
-    author: {
-      name: 'DataMinds'
-      id: 'dataminds'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'
-    }
-    images: [
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2024-02-15T10:45:00.000Z'
-    rating: 4.8
-    reviewCount: 32
-    location: 'North America'
-    availability: '4-6 Weeks'
-    aiScore: 92
-  }
-    location: 'North America',
-    availability: '4 - 6 Weeks',
-    ai_score: 92,
-  },
-  {
-    id: 'ai-equipment-3'
-    title: 'AI Workstation Supercomputer'
-    description:
-      'High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.'
-    category: 'Equipment'
-    price: 12999
-    currency: '$'
-    tags: ['Hardware', 'Deep Learning', 'GPU']
-=======
       'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2024-02-15T10:45:00 && 00.000Z',
     rating: 4 && 4.8,
     reviewCount: 32,
-=======
-<<<<<<< HEAD
-  {;
-import { ProductListing } from "@/types/listings";
-import { SearchSuggestion, FilterOptions } from "@/types/search";
-=======
     id: 'ai - equipment - 3',
     title: 'AI Workstation Supercomputer',
     description:;
@@ -105,7 +15,6 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
     price: 12999,
     currency: '$',
     tags: ['Hardware', 'Deep Learning', 'GPU'],
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     author: {
       name: 'TechGear Pro'
       id: 'techgear'
@@ -127,42 +36,9 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
     ai_score: 95,
   },
   {
-<<<<<<< HEAD
-    id: 'ai-content-4'
-    title: 'AI Content Generation Suite'
-    description:
-      'Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface.'
-    category: 'Content Creation'
-    price: 399
-    currency: '$'
-    tags: ['Content Generation', 'Copywriting', 'Marketing']
-    author: {
-      name: 'ContentGenius'
-      id: 'contentgenius'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100'
-    }
-    images: [
-      'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2024-01-28T14:20:00.000Z'
-    rating: 4.6
-    reviewCount: 124
-    location: 'Global'
-    availability: 'Immediate'
-    aiScore: 88
-  }
-    location: 'Global',
-    availability: 'Immediate',
-    ai_score: 88,
-  },
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   {
     id: 'ai-analytics-5'
     title: 'AI-Powered Business Intelligence Dashboard'
@@ -424,8 +300,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1 - 2 Weeks',
   },
   {
-<<<<<<< HEAD
-=======
     id: 'ai-research-11'
     title: 'AI Research Papers Database Access'
     description:
@@ -501,7 +375,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: '1-2 Weeks'
   }
   {
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     id: 'equipment-2'
     title: 'Enterprise GPU Server Rack'
     description:
@@ -515,21 +388,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: 'serverpro'
     }
     images: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-    ]
-    createdAt: '2023-12-15T09:45:00.000Z'
-    rating: 4.9
-    reviewCount: 18
-    featured: true
-    location: 'North America'
-    availability: '2-4 Weeks'
-<<<<<<< HEAD
-=======
-=======
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -538,8 +396,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -554,29 +410,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'AI models'
-    'GPT integration'
-    'Machine learning'
-    'Computer vision'
-    'Speech recognition'
-    'Data analysis'
-    'Content generation'
-    'Code assistant'
-    'Virtual assistant'
-    'Enterprise AI solutions'
-    'Robotics'
-    'AI workstation'
-    'Business intelligence'
-    'Custom model development'
-    'Server rack'
-    'GPU cluster'
-    'Edge computing'
-    'High performance storage'
-=======
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -594,30 +427,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Server rack',
     'GPU cluster',
     'Edge computing',
-<<<<<<< HEAD
-    'High performance storage',
-    'AI models'
-    'GPT integration'
-    'Machine learning'
-    'Computer vision'
-    'Speech recognition'
-    'Data analysis'
-    'Content generation'
-    'Code assistant'
-    'Virtual assistant'
-    'Enterprise AI solutions'
-    'Robotics'
-    'AI workstation'
-    'Business intelligence'
-    'Custom model development'
-    'Server rack'
-    'GPU cluster'
-    'Edge computing'
-    'High performance storage'
-=======
     'High performance storage',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   ];
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
@@ -630,69 +440,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
-}
-// Generate filter options for sidebar
-export const generateFilterOptions = (): FilterOptions => {
-  // Extract unique categories, locations, and availability options from listings
-  const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
-  ].sort();
-  const locations = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    )
-  ].sort();
-  const availability = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    )
-  ].sort();
-    productTypes: productTypes.map(type => ({
-      label: type
-      value: type
-    }))
-    locations: locations.map(location => ({
-      label: location
-      value: location
-    }))
-    availabilityOptions: availability.map(item => ({
-      label: item
-      value: item
-    }))
-    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
-  }
-}
-export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price |0)
-);
-export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price |0)
-);
-  return {
-  productTypes: productTypes.map (type => ({
-  label: type, value: type
-}) );
-locations: locations.map (location => ({
-  label: location, value: location
-}) );
-availabilityOptions: availability.map (item => ({
-  label: item, value: item
-}) );
-ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
-
-<<<<<<< HEAD
 };
-=======
-=======
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }));};
 
 };export const MAX_PRICE = Math && Math.max(...MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.price || 0));
@@ -1011,51 +759,15 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
 },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
-<<<<<<< HEAD
-  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
-  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort();
-  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort();
-  
-  return {
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const productTypes = [
-    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
-  ].sort();
-  const locations = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
-    ),
-  ].sort();
-  const availability = [
-    ...new Set(
-      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
-    ),
-  ].sort();
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
@@ -1067,74 +779,7 @@ export const generateFilterOptions = (): FilterOptions => {
     availabilityOptions: availability.map(item => ({
       label: item,
       value: item
-<<<<<<< HEAD
-    }));
-    ratingOptions: [1, 2, 3, 4, 5] // Add rating options
-  }
-};
-
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-    id: 'equipment - 2',
-    title: 'Enterprise GPU Server Rack',
-    description:;
-      'Scalable server rack solution with multiple NVIDIA A100 GPUs ideal for large - scale AI model training and deployment.',
-    category: 'Servers',
-    price: 24999,
-    currency: '$',
-    tags: ['Server', 'Enterprise', 'GPU Cluster'],
-    author: {
-      name: 'ServerPro Systems',
-      id: 'serverpro',
-    },
-    images: [;
-      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500',
-    ],
-    created_at: '2023 - 12 - 15T09:45:00.000Z',
-    rating: 4.9,
-    review_count: 18,
-    featured: true,
-    location: 'North America',
-    availability: '2 - 4 Weeks',
-  }, ];      name: "ServerPro Systems";
-      id: "serverpro"}
-    images: ["https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500"];
-    created_at: "2023 - 12 - 15T09:45:00.000Z";
-    rating: 4.9;
-    review_count: 18;
-    featured: true;
-    location: "North America",
-    availability: "2 - 4 Weeks";
-=======
     })),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
-  };
-};
-
-export const MAX_PRICE = Math.max(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-export const MIN_PRICE = Math.min(
-  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
-);
-  return {
-  productTypes: productTypes.map (type => ({
-  label: type, value: type 
-}) );
-locations: locations.map (location => ({
-  label: location, value: location 
-}) );
-availabilityOptions: availability.map (item => ({
-  label: item, value: item 
-}) );
-ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
-
-};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -1419,7 +1064,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
     featured: true,;
     location: "North America",;
     availability: "2-4 Weeks";
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
   }
 ];
 ;
@@ -1488,35 +1132,6 @@ export const generateFilterOptions = (): FilterOptions => {
     })),
     rating_options: [1, 2, 3, 4, 5], // Add rating options;
   }
-<<<<<<< HEAD
-}
-;
-export const MAX_PRICE = Math.max (
-  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-export const MIN_PRICE = Math.min (
-  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-  return {
-  product_types: product_types.map (type => ({
-  label: type, value: type;
-}) );
-locations: locations.map (location => ({
-  label: location, value: location;
-}) );
-availability_options: availability.map (item => ({
-  label: item, value: item;
-}) );
-rating_options: [1, 2, 3, 4, 5] // Add rating options;
-}export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
-;
-=======
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
