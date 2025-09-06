@@ -1,10 +1,12 @@
 
+
 import Link from 'next/link';
 
 export const metadata = {
 
   title: 'Services | Zion Tech Group',
   description: 'Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.',
+
 
 
 };
@@ -32,8 +34,10 @@ export default function ServicesOverviewPage() {
           description="Complete micro SaaS development from concept to scale with proven revenue models"
           bullets={[
 
+
             "AI-powered tools",
             "Billing & subscriptions", 
+
             "Growth analytics",
             "Market validation"
 
@@ -60,12 +64,14 @@ export default function ServicesOverviewPage() {
 
           title="IT Services"
 
+
           description="Cloud migration, DevOps, and infrastructure management"
           bullets={[
             'Cloud migration & strategy',
             'DevOps & CI/CD',
             'Infrastructure management'
           ]}
+
 
           icon="⚙️"
         />
@@ -123,6 +129,7 @@ export default function ServicesOverviewPage() {
           icon="⛓️"
         />
         <ServiceCard
+
           href="/services/email-automation-suite"
           title="Email Automation Suite"
           description="AI-powered email marketing with advanced segmentation and personalization"
@@ -219,10 +226,12 @@ export default function ServicesOverviewPage() {
           description="Intelligent marketing automation with AI personalization and campaign optimization"
           bullets={["AI campaigns", "Customer segmentation", "Predictive analytics", "ROI optimization"]}
           icon="📧"
+
         />
         <ServiceCard
           href="/services/ai-document-processor"
           title="AI Document Processor"
+
           description="Intelligent document processing with OCR, data extraction, and automated workflows"
           bullets={["OCR & text extraction", "Data processing", "Workflow automation", "99% accuracy"]}
           icon="📄"
@@ -247,6 +256,7 @@ export default function ServicesOverviewPage() {
           description="Intelligent human resources with AI recruitment and employee analytics"
           bullets={["AI recruitment", "Employee analytics", "Performance tracking", "Retention analysis"]}
           icon="👥"
+
         />
       </div>
       <CTA />
@@ -254,6 +264,7 @@ export default function ServicesOverviewPage() {
     </div>
   );
 }
+
 
 
 function ServiceCard({ 
@@ -269,13 +280,16 @@ function ServiceCard({
   bullets: string[]; 
 
 
+
   icon: string;
 }) {
   return (
     <Link
       href={href}
 
+
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
@@ -344,5 +358,7 @@ function CTA() {
       </div>
     </div>
   );
+
+
 
 }
